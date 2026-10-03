@@ -106,10 +106,17 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 
 ## Base de CI
 
-- Base actual: `.github/workflows/ci.yml`.
+- Base actual: `.github/workflows/ci.yml` y `.github/workflows/migrate.yml`.
 - Jobs típicos planificados: Lint + Format + Build, ShellCheck, Unit Tests, Integration Tests, i18n Key Validation y Migraciones Drizzle contra Neon.
-- `migrate.yml` queda diferido a la Fase 1.7. Se dispara cuando cambian `packages/db/src/schema.ts` o `packages/db/drizzle/**` y ejecuta `pnpm turbo db:migrate --filter=@tricking/db` con el secret `DATABASE_URL`.
+- `migrate.yml` se creó en la Fase 1.7. Se dispara en `push` a `main` (nunca en `pull_request`, para no migrar la base antes del merge) o por `workflow_dispatch`, cuando cambian `packages/db/src/schema.ts` o `packages/db/drizzle/**`. Ejecuta `pnpm turbo db:migrate --filter=@tricking/db` (tarea declarada en `turbo.json`) con los secrets `DATABASE_URL` y `DATABASE_URL_UNPOOLED`; la migración usa la conexión directa.
 - Esta decisión puede ajustarse si el usuario lo pide.
+
+## Migraciones
+
+- Modo: manual con drizzle-kit (`db:generate` y `db:migrate`). No hay migraciones automáticas al desplegar.
+- Las migraciones se versionan en `packages/db/drizzle/` (artefactos generados, excluidos de Prettier).
+- drizzle-kit no genera migraciones de reversión. Para revertir se restaura el branch de Neon a un punto anterior o se aplica el SQL inverso a mano.
+- La base de datos es el branch por defecto del proyecto de Neon, que Neon nombra `production`; es el único branch y no se crea `dev` (ver "Ramas y flujo de trabajo").
 
 ## Notas sobre decisiones no aplicables
 

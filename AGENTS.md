@@ -368,7 +368,7 @@ El detalle va en `docs/docs-agents/reglas-ci.md`.
 - Jobs típicos: Lint + Format + Build, ShellCheck, Unit Tests, Integration Tests, i18n Key Validation, y Migraciones Drizzle contra Neon.
 - Acciones oficiales versionadas. Caché de dependencias habilitada.
 - Workflow de migraciones: se dispara cuando cambian `packages/db/src/schema.ts` o `packages/db/drizzle/**`. Ejecuta `pnpm turbo db:migrate --filter=@tricking/db` con el secret `DATABASE_URL`.
-- Base actual de CI: `ci.yml` en `.github/workflows/`. `migrate.yml` queda diferido a la Fase 1.7.
+- Base actual de CI: `ci.yml` y `migrate.yml` en `.github/workflows/`. `migrate.yml` se creó en la Fase 1.7 y aplica migraciones solo en `push` a `main` (nunca en PR) o por `workflow_dispatch`.
 
 ## 17. Validación al cierre (subagentes)
 

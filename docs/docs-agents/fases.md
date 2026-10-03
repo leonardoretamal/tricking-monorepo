@@ -37,7 +37,7 @@ Criterio de cierre: repositorio instalable con `pnpm install`, build vacío corr
 
 ## Fase 1: Modelo de datos y semilla
 
-Estado: pendiente.
+Estado: completada.
 
 - 1.1. Crear `packages/db` con Drizzle + Neon.
 - 1.2. Definir schema inicial: `tricks`, `categories`, `stances`, `variations`, `transitions`, `videos`, `tutorials`, `gaze_tips`.

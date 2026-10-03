@@ -38,12 +38,17 @@ function loadEnvFile(path: string): void {
 
 loadEnvFile('./.env');
 
+const databaseUrl = process.env.DATABASE_URL_UNPOOLED || process.env.DATABASE_URL;
+if (!databaseUrl) {
+  throw new Error('Falta DATABASE_URL_UNPOOLED o DATABASE_URL para ejecutar drizzle-kit');
+}
+
 export default defineConfig({
   schema: './src/schema.ts',
   out: './drizzle',
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.DATABASE_URL_UNPOOLED ?? process.env.DATABASE_URL ?? '',
+    url: databaseUrl,
   },
   strict: true,
   verbose: true,

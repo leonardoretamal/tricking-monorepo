@@ -11,6 +11,10 @@
     },
     "test": {},
     "format": {},
+    "db:migrate": {
+      "cache": false,
+      "env": ["DATABASE_URL", "DATABASE_URL_UNPOOLED"]
+    },
     "dev": {
       "cache": false,
       "persistent": true

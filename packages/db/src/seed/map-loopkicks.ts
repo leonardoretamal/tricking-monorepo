@@ -97,26 +97,39 @@ function normalizeKey(value: string): string {
     .replace(/[^a-z0-9]/g, '');
 }
 
-function selectMatch(candidates: TrickRow[], loopkicksName: string): TrickRow | null {
+function selectMatch(
+  candidates: TrickRow[],
+  loopkicksSlug: string,
+  loopkicksName: string,
+): TrickRow | null {
   if (candidates.length === 0) {
     return null;
   }
+
+  // Determinista: cuando varios trucos normalizan a la misma clave, se elige siempre el
+  // mismo por id ascendente. Asi la asignacion de un slug unico no cambia entre corridas.
+  const key = normalizeKey(loopkicksSlug);
+  const byId = candidates
+    .filter((candidate) => normalizeKey(candidate.id) === key)
+    .sort((a, b) => a.id.localeCompare(b.id, 'en'));
+  if (byId.length > 0) {
+    return byId[0] ?? null;
+  }
+
   if (candidates.length === 1) {
     return candidates[0] ?? null;
   }
 
   const normalizedName = normalizeKey(loopkicksName);
-  const byName = candidates.find((candidate) => normalizeKey(candidate.name) === normalizedName);
-  if (byName) {
-    return byName;
+  const byName = candidates
+    .filter((candidate) => normalizeKey(candidate.name) === normalizedName)
+    .sort((a, b) => a.id.localeCompare(b.id, 'en'));
+  if (byName.length === 1) {
+    return byName[0] ?? null;
   }
 
-  const exactName = candidates.find((candidate) => candidate.name === loopkicksName);
-  if (exactName) {
-    return exactName;
-  }
-
-  return candidates[0] ?? null;
+  // Ambiguedad sin desempate claro: se reporta como sin match en vez de adivinar.
+  return null;
 }
 
 async function main(): Promise<void> {
@@ -151,16 +164,22 @@ async function main(): Promise<void> {
 
   let mapped = 0;
   const unmatched: string[] = [];
+  const assignedTrickIds = new Set<string>();
 
   for (const loopkicks of loopkicksTricks) {
     const key = normalizeKey(loopkicks.slug);
-    const candidates = byKey.get(key);
-    const match = selectMatch(candidates ?? [], loopkicks.name);
+    const candidates = byKey.get(key) ?? [];
+    const available = candidates.filter(
+      (candidate) => candidate.loopkicksSlug === null || candidate.loopkicksSlug === loopkicks.slug,
+    );
+    const match = selectMatch(available, loopkicks.slug, loopkicks.name);
 
-    if (!match) {
+    if (!match || assignedTrickIds.has(match.id)) {
       unmatched.push(loopkicks.slug);
       continue;
     }
+
+    assignedTrickIds.add(match.id);
 
     if (match.loopkicksSlug === loopkicks.slug) {
       mapped += 1;
@@ -171,6 +190,7 @@ async function main(): Promise<void> {
       .update(tricks)
       .set({ loopkicksSlug: loopkicks.slug, updatedAt: new Date() })
       .where(eq(tricks.id, match.id));
+    match.loopkicksSlug = loopkicks.slug;
     mapped += 1;
   }
 

@@ -44,3 +44,22 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: se separan `DATABASE_URL` (pooled, runtime) y `DATABASE_URL_UNPOOLED` (directa, migraciones); las variables de fases futuras quedan como comentarios en `.env.example` hasta que su fase las active; la rama de trabajo es `main` y no hay zona de producción en Git.
 - Pendientes y riesgos: `neon login` y la creación del branch de desarrollo de Neon siguen pendientes; el comando `neon link --branch production` requiere confirmación explícita por tocar producción.
 - Referencias: `docs/docs-agents/reglas-git.md`, `docs/docs-agents/deteccion-stack.md`, `docs/docs-agents/stack-tecnico.md`, `AGENTS.md` secciones 5 y 15.
+
+## Fase 1: Modelo de datos y semilla (2026-10-03)
+
+- Issue: no aplica (trabajo de fase, sin issue asociado).
+- Título: Modelo de datos y semilla (subfases 1.1 a 1.7).
+- Qué pedía: crear `packages/db` con Drizzle y Neon, definir el schema inicial, generar y aplicar la migración, sembrar la data de TrickingAPI, scrapear la lista de trucos de Loopkicks, mapearlos con `loopkicks_slug` y configurar la GitHub Action de `db:migrate`.
+- Fecha de inicio: 2026-10-03.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Acciones: se creó `packages/db` (cliente Drizzle sobre Neon, `drizzle.config.ts`, schema con `tricks`, `categories`, `trick_categories`, `stances`, `variations`, `transitions`, `videos`, `tutorials` y `gaze_tips`); se generó y aplicó la migración `0000`; se sembraron 558 trucos, 14 categorías y 672 relaciones; el scraper extrajo 556 trucos de Loopkicks; el mapeo dejó 556 trucos con `loopkicks_slug` (0 sin match); se creó `.github/workflows/migrate.yml`.
+- Subagentes: 7 en paralelo, uno por subfase, con propiedad de archivos disjunta y barreras por archivo para la cadena de base de datos.
+- Validación de cierre: `reviewer`, `security-auditor` y `tester` sobre el diff. `i18n-checker` no aplica (la fase no tiene textos de interfaz).
+- Correcciones tras la validación: se hizo determinista e idempotente el mapeo (ambigüedad `backTuck`/`backtuck`); se declaró la tarea `db:migrate` en `turbo.json`; `migrate.yml` ya no migra en `pull_request`; se pasan `DATABASE_URL` y `DATABASE_URL_UNPOOLED`; el config falla si falta la URL; soft delete en `categories`, `transitions`, `videos` y `tutorials`; índices en las FKs de `videos`.
+- Archivos tocados: `packages/db/**`, `apps/scraper/**`, `.github/workflows/migrate.yml`, `turbo.json`, `.prettierignore`, `.env.example`, `AGENTS.md`, `docs/docs-agents/fases.md`, `docs/docs-agents/stack-tecnico.md`, `BITACORA.md`.
+- Comandos relevantes: `pnpm --filter @tricking/db db:generate`, `db:migrate`, `db:seed`, `db:map`; `pnpm --filter @tricking/scraper scrape:loopkicks`; `pnpm typecheck`; `pnpm build`; `pnpm exec prettier --check .`.
+- Pruebas: typecheck 6/6, build de producción 6/6 en verde; semilla y mapeo idempotentes (dos corridas con el mismo resultado); scraper reejecutable.
+- Decisiones: base de datos en el branch por defecto de Neon (llamado `production` por Neon, único); migraciones manuales con drizzle-kit; `migrate.yml` solo en `push` a `main` y `workflow_dispatch`; el repo trabaja directo sobre `main`.
+- Pendientes y riesgos: drizzle-kit no genera reversión (rollback por restauración del branch de Neon o SQL inverso manual); el workflow usa Node 20 mientras el desarrollo local usa Node 22; `prereqs` y `next_tricks` viven como arreglos de texto sin integridad referencial (se normalizan en una fase posterior).
+- Referencias: `docs/docs-agents/fases.md`, `docs/docs-agents/stack-tecnico.md`, commits `eeae9f4`, `89f7150`.

@@ -7,12 +7,6 @@ on:
     paths:
       - packages/db/src/schema.ts
       - packages/db/drizzle/**
-  pull_request:
-    branches:
-      - main
-    paths:
-      - packages/db/src/schema.ts
-      - packages/db/drizzle/**
   workflow_dispatch:
 
 permissions:
@@ -44,3 +38,4 @@ jobs:
         run: pnpm turbo db:migrate --filter=@tricking/db
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_URL_UNPOOLED: ${{ secrets.DATABASE_URL_UNPOOLED }}

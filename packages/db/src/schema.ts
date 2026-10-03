@@ -21,6 +21,7 @@ export const categories = pgTable('categories', {
   slug: text('slug').notNull().unique(),
   name: text('name').notNull(),
   source: text('source').notNull().default('trickingapi'),
+  deletedAt: timestamp('deleted_at', { withTimezone: true }),
   ...timestamps,
 });
 
@@ -32,6 +33,7 @@ export const tutorials = pgTable('tutorials', {
   locale: text('locale').notNull().default('es'),
   permalink: text('permalink'),
   postedAt: timestamp('posted_at', { withTimezone: true }),
+  deletedAt: timestamp('deleted_at', { withTimezone: true }),
   ...timestamps,
 });
 
@@ -95,21 +97,30 @@ export const transitions = pgTable('transitions', {
   originTrickId: text('origin_trick_id').references(() => tricks.id),
   destinationTrickId: text('destination_trick_id').references(() => tricks.id),
   loopkicksSlug: text('loopkicks_slug').unique(),
+  deletedAt: timestamp('deleted_at', { withTimezone: true }),
   ...timestamps,
 });
 
-export const videos = pgTable('videos', {
-  id: serial('id').primaryKey(),
-  trickId: text('trick_id').references(() => tricks.id),
-  tutorialId: integer('tutorial_id').references(() => tutorials.id),
-  r2Key: text('r2_key'),
-  url: text('url'),
-  mime: text('mime'),
-  sizeBytes: bigint('size_bytes', { mode: 'number' }),
-  durationSeconds: integer('duration_seconds'),
-  status: text('status').notNull().default('pending'),
-  ...timestamps,
-});
+export const videos = pgTable(
+  'videos',
+  {
+    id: serial('id').primaryKey(),
+    trickId: text('trick_id').references(() => tricks.id),
+    tutorialId: integer('tutorial_id').references(() => tutorials.id),
+    r2Key: text('r2_key'),
+    url: text('url'),
+    mime: text('mime'),
+    sizeBytes: bigint('size_bytes', { mode: 'number' }),
+    durationSeconds: integer('duration_seconds'),
+    status: text('status').notNull().default('pending'),
+    deletedAt: timestamp('deleted_at', { withTimezone: true }),
+    ...timestamps,
+  },
+  (table) => [
+    index('videos_trick_id_idx').on(table.trickId),
+    index('videos_tutorial_id_idx').on(table.tutorialId),
+  ],
+);
 
 export const gazeTips = pgTable('gaze_tips', {
   id: serial('id').primaryKey(),

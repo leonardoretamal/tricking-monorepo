@@ -8,6 +8,13 @@
       "when": 1791057318445,
       "tag": "0000_normal_blade",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791058054942,
+      "tag": "0001_typical_bug",
+      "breakpoints": true
     }
   ]
 }
