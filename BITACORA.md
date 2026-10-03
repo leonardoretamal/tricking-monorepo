@@ -168,12 +168,13 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Título: Alinear CI a Node 22 y evitar el rojo por falta de secretos.
 - Qué pedía: que los runs de CI del push de las fases 3 a 6 quedaran en verde.
 - Fecha de inicio: 2026-10-03.
-- Estado actual: completada (con una acción pendiente del usuario).
+- Estado actual: completada.
 - Autor del registro: Leonardo Retamal.
 - Diagnóstico: el job de pruebas unitarias fallaba con `TypeError: webidl.util.markAsUncloneable is not a function` porque `jsdom@30` resuelve `undici@8.11.2`, que exige Node >= 22.19, y el CI usaba Node 20. Los jobs de migraciones y E2E fallaban porque los secretos `DATABASE_URL` y `DATABASE_URL_UNPOOLED` no están configurados en el repositorio (el log de migraciones dice "Falta DATABASE_URL_UNPOOLED o DATABASE_URL"). Ninguna de las dos causas era del código de la fase.
 - Acciones: se subió Node de 20 a 22 en `ci.yml` (los cuatro jobs) y en `migrate.yml`; se ajustó `engines` del `package.json` raíz a `>=22.19.0`; el job `e2e` ahora omite con aviso las pruebas que dependen de la base cuando falta `DATABASE_URL` y ejecuta solo las de layout; se documentó en `stack-tecnico.md`.
 - Archivos tocados: `.github/workflows/ci.yml`, `.github/workflows/migrate.yml`, `package.json`, `docs/docs-agents/stack-tecnico.md`, `BITACORA.md`.
 - Pruebas: reproducción local del fallo de jsdom/undici (Node 22 pasa, Node 20 no); verificación de que el build de producción y las suites locales siguen verdes.
 - Decisiones: CI se alinea a Node 22; el E2E que consulta la base queda condicionado a la existencia del secreto en vez de fallar por infraestructura ausente.
-- Pendientes y riesgos (acción del usuario): configurar los secrets del repositorio `DATABASE_URL` y `DATABASE_URL_UNPOOLED` (por ejemplo con `gh secret set DATABASE_URL < valor`) para que `migrate.yml` y el E2E completo corran. Sin ellos, las migraciones por cambio de esquema fallarán y el E2E solo correrá las pruebas de layout.
+- Resolución de los secretos: se verificó con `gh api repos/leonardoretamal/tricking-monorepo/actions/secrets` que el repositorio tenía `total_count: 0` (por eso `migrate.yml` fallaba desde la Fase 1 con "Falta DATABASE_URL_UNPOOLED o DATABASE_URL"). Se configuraron los secretos `DATABASE_URL` y `DATABASE_URL_UNPOOLED` a nivel de repositorio (los valores se tomaron del `.env` local de desarrollo, sin imprimirlos). Se relanzó solo el job fallido de Migraciones (`gh run rerun 37160305544 --failed`) y quedó en verde.
+- Pendientes y riesgos: el E2E completo en CI queda verificado en el siguiente push (con el secreto ya disponible corre las pruebas que dependen de la base). `migrate.yml` sigue usando Node 22; las anotaciones de "Node.js 20 is deprecated" son de las acciones de GitHub, no del job.
 - Referencias: `.github/workflows/ci.yml`, `.github/workflows/migrate.yml`, `docs/docs-agents/stack-tecnico.md`.
