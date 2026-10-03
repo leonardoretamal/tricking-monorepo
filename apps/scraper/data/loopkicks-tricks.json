@@ -1,0 +1,2782 @@
+[
+  {
+    "slug": "arabian",
+    "name": "Arabian",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-axe",
+    "name": "Arabian Axe",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-half",
+    "name": "Arabian Half",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-pike-snapu",
+    "name": "Arabian Pike Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-scissor",
+    "name": "Arabian Scissor",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-scissor-half",
+    "name": "Arabian Scissor Half",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-scissor-hyperhook",
+    "name": "Arabian Scissor Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-scissor-round",
+    "name": "Arabian Scissor Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-unhalf-in-back-out",
+    "name": "Arabian Unhalf-In Back-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "arabian-x-out",
+    "name": "Arabian X-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "back-handspring",
+    "name": "Back Handspring",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "back-pike",
+    "name": "Back Pike",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "back-tuck",
+    "name": "Back Tuck",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "back-in-rocketboi-out",
+    "name": "Back-In Rocketboi-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "back-in-squirrel-out",
+    "name": "Back-In Squirrel-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "back-in-x-out",
+    "name": "Back-In X-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "boxcutter",
+    "name": "Boxcutter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "boxcutter-turbo",
+    "name": "Boxcutter Turbo",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "broken-full",
+    "name": "Broken Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew",
+    "name": "Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-crowd-awakener",
+    "name": "Corkscrew Crowd Awakener",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-crowd-awakener-hyper",
+    "name": "Corkscrew Crowd Awakener Hyper",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-crowd-awakener-knife",
+    "name": "Corkscrew Crowd Awakener Knife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-crowd-awakener-round",
+    "name": "Corkscrew Crowd Awakener Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-doubleleg",
+    "name": "Corkscrew Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-doubleleg-hyperhook",
+    "name": "Corkscrew Doubleleg Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-doubleleg-late-round",
+    "name": "Corkscrew Doubleleg Late Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-doubleleg-twist",
+    "name": "Corkscrew Doubleleg Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-feilong",
+    "name": "Corkscrew Feilong",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-feilong-knife",
+    "name": "Corkscrew Feilong Knife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-kyro",
+    "name": "Corkscrew Kyro",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-mcdirty",
+    "name": "Corkscrew McDirty",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-round",
+    "name": "Corkscrew Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-shuriken",
+    "name": "Corkscrew Shuriken",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-shuriken-kyro",
+    "name": "Corkscrew Shuriken Kyro",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-sidewinder",
+    "name": "Corkscrew Sidewinder",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-skullsnapper",
+    "name": "Corkscrew Skullsnapper",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-snapu",
+    "name": "Corkscrew Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-snapu-hyper",
+    "name": "Corkscrew Snapu Hyper",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-swipe",
+    "name": "Corkscrew Swipe",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-swipe-late-round",
+    "name": "Corkscrew Swipe Late Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-swipe-late-swipe",
+    "name": "Corkscrew Swipe Late Swipe",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-swipeknife",
+    "name": "Corkscrew Swipeknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "corkscrew-wackknife",
+    "name": "Corkscrew Wackknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "crashmoon",
+    "name": "Crashmoon",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "donut-boy",
+    "name": "Donut Boy",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "donut-boy-hyperhook",
+    "name": "Donut Boy Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-arabian",
+    "name": "Double Arabian",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-back-tuck",
+    "name": "Double Back Tuck",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-corkscrew",
+    "name": "Double Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-corkscrew-doubleleg",
+    "name": "Double Corkscrew Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-corkscrew-doubleleg-twist",
+    "name": "Double Corkscrew Doubleleg Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-corkscrew-round",
+    "name": "Double Corkscrew Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-corkscrew-shuriken",
+    "name": "Double Corkscrew Shuriken",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-corkscrew-shuriken-cutter",
+    "name": "Double Corkscrew Shuriken Cutter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-corkscrew-snapu",
+    "name": "Double Corkscrew Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-corkscrew-wackknife",
+    "name": "Double Corkscrew Wackknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full",
+    "name": "Double Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-crowd-awakener",
+    "name": "Double Full Crowd Awakener",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-doubleleg",
+    "name": "Double Full Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-doubleleg-double-twist",
+    "name": "Double Full Doubleleg Double Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-doubleleg-twist",
+    "name": "Double Full Doubleleg Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-hyperhook",
+    "name": "Double Full Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-mcdirty",
+    "name": "Double Full McDirty",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-round",
+    "name": "Double Full Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-shurikane",
+    "name": "Double Full Shurikane",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-shuriken-hyperhook",
+    "name": "Double Full Shuriken Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-shuriken-hyperhook-turbo",
+    "name": "Double Full Shuriken Hyperhook Turbo",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-snapu",
+    "name": "Double Full Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-snapu-twist",
+    "name": "Double Full Snapu Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-swipe",
+    "name": "Double Full Swipe",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-swipeknife",
+    "name": "Double Full Swipeknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-full-in-back-out",
+    "name": "Double Full-In Back-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-gainer",
+    "name": "Double Gainer",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-layout",
+    "name": "Double Layout",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "double-nike",
+    "name": "Double Nike",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-boxcutter",
+    "name": "Dragonfly Boxcutter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-corkscrew",
+    "name": "Dragonfly Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-corkscrew-doubleleg",
+    "name": "Dragonfly Corkscrew Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-corkscrew-feilong-knife",
+    "name": "Dragonfly Corkscrew Feilong Knife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-corkscrew-round",
+    "name": "Dragonfly Corkscrew Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-corkscrew-sidewinder-late-round",
+    "name": "Dragonfly Corkscrew Sidewinder Late Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-corkscrew-swipeknife",
+    "name": "Dragonfly Corkscrew Swipeknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-double-corkscrew",
+    "name": "Dragonfly Double Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-double-corkscrew-hyperhook",
+    "name": "Dragonfly Double Corkscrew Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-double-corkscrew-round",
+    "name": "Dragonfly Double Corkscrew Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-hyperhook",
+    "name": "Dragonfly Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-moonkick",
+    "name": "Dragonfly Moonkick",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-shuriken-cutter",
+    "name": "Dragonfly Shuriken Cutter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "dragonfly-triple-corkscrew",
+    "name": "Dragonfly Triple Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "filipino",
+    "name": "Filipino",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "flash-helicoptero",
+    "name": "Flash Helicoptero",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "flash-kick",
+    "name": "Flash Kick",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "flash-knife",
+    "name": "Flash Knife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "frappe",
+    "name": "Frappe",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-cobra",
+    "name": "Full Cobra",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-cobra-twist",
+    "name": "Full Cobra Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-crowd-awakener",
+    "name": "Full Crowd Awakener",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-crowd-awakener-snapu",
+    "name": "Full Crowd Awakener Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-doubleleg",
+    "name": "Full Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-doubleleg-double-twist",
+    "name": "Full Doubleleg Double Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-doubleleg-hawkeye",
+    "name": "Full Doubleleg Hawkeye",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-doubleleg-hyperhook",
+    "name": "Full Doubleleg Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-doubleleg-twist",
+    "name": "Full Doubleleg Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-doubleleg-twist-doubleleg",
+    "name": "Full Doubleleg Twist Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-down",
+    "name": "Full Down",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-elbow-gumbi",
+    "name": "Full Elbow Gumbi",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-feilong",
+    "name": "Full Feilong",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-feilong-double",
+    "name": "Full Feilong Double",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-feilong-knife",
+    "name": "Full Feilong Knife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-feilong-late-swipeknife",
+    "name": "Full Feilong Late Swipeknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-gumbi",
+    "name": "Full Gumbi",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-hyper",
+    "name": "Full Hyper",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-hyperhook",
+    "name": "Full Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-hyperhook-turbo",
+    "name": "Full Hyperhook Turbo",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-kyro",
+    "name": "Full Kyro",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-late-round",
+    "name": "Full Late Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-mcdirty",
+    "name": "Full McDirty",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-pike",
+    "name": "Full Pike",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-pike-round",
+    "name": "Full Pike Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-rocketboi",
+    "name": "Full Rocketboi",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-round",
+    "name": "Full Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-scissor",
+    "name": "Full Scissor",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-shurikane",
+    "name": "Full Shurikane",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-shuriken",
+    "name": "Full Shuriken",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-shuriken-hyperhook",
+    "name": "Full Shuriken Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu",
+    "name": "Full Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu-doubleleg",
+    "name": "Full Snapu Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu-hyper",
+    "name": "Full Snapu Hyper",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu-hyperhook",
+    "name": "Full Snapu Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu-round",
+    "name": "Full Snapu Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu-snapu",
+    "name": "Full Snapu Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu-swipe",
+    "name": "Full Snapu Swipe",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu-twist",
+    "name": "Full Snapu Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-snapu-in-back-out",
+    "name": "Full Snapu-In Back-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-swipe",
+    "name": "Full Swipe",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-swipe-late-round",
+    "name": "Full Swipe Late Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-swipeknife",
+    "name": "Full Swipeknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-tai-fighter",
+    "name": "Full Tai Fighter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-tai-fighter-knife",
+    "name": "Full Tai Fighter Knife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-tai-fighter-hyperhook",
+    "name": "Full Tai-Fighter Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-terada-grab",
+    "name": "Full Terada Grab",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-twist",
+    "name": "Full Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-up",
+    "name": "Full Up",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-up-crowd-awakener",
+    "name": "Full Up Crowd Awakener",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-up-doubleleg",
+    "name": "Full Up Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-up-hyperhook",
+    "name": "Full Up Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-up-rocketboi-twist",
+    "name": "Full Up Rocketboi Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-up-twist",
+    "name": "Full Up Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-wackknife",
+    "name": "Full Wackknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-wackknife-hyperhook",
+    "name": "Full Wackknife Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-wackknife-round",
+    "name": "Full Wackknife Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-in-back-out",
+    "name": "Full-In Back-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-in-back-out-hyper",
+    "name": "Full-In Back-Out Hyper",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "full-in-full-out",
+    "name": "Full-In Full-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-arabian",
+    "name": "Gainer Arabian",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-arabian-grab-crowd-awakener",
+    "name": "Gainer Arabian Grab Crowd Awakener",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-figure-4",
+    "name": "Gainer Figure 4",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-figure-4-sidekick",
+    "name": "Gainer Figure 4 Sidekick",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-flash",
+    "name": "Gainer Flash",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-helicoptero",
+    "name": "Gainer Helicoptero",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-hook",
+    "name": "Gainer Hook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-late-round",
+    "name": "Gainer Late Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-rocketboi",
+    "name": "Gainer Rocketboi",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-scissor",
+    "name": "Gainer Scissor",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-scissor-late-round",
+    "name": "Gainer Scissor Late Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-scissor-round",
+    "name": "Gainer Scissor Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-scissor-swipe",
+    "name": "Gainer Scissor Swipe",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-scissor-twist",
+    "name": "Gainer Scissor Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-sidewinder",
+    "name": "Gainer Sidewinder",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-switch",
+    "name": "Gainer Switch",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-switch-half",
+    "name": "Gainer Switch Half",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-switch-hawkeye",
+    "name": "Gainer Switch Hawkeye",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-switch-hyperhook",
+    "name": "Gainer Switch Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-triple",
+    "name": "Gainer Triple",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-tuck",
+    "name": "Gainer Tuck",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-wackknife",
+    "name": "Gainer Wackknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-x-out",
+    "name": "Gainer X-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "gainer-in-shant-out",
+    "name": "Gainer-In Shant-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "handcuff-corkscrew",
+    "name": "Handcuff Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "ironman-full-snapu",
+    "name": "Ironman Full Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "kick-double-full",
+    "name": "Kick Double Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "kick-full",
+    "name": "Kick Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "kick-full-doubleleg",
+    "name": "Kick Full Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "kick-full-snapu",
+    "name": "Kick Full Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "lonestar",
+    "name": "Lonestar",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "lonestar-hyperhook",
+    "name": "Lonestar Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "lonestar-scissor",
+    "name": "Lonestar Scissor",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "lonestar-twist",
+    "name": "Lonestar Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "outstretched-boxcutter",
+    "name": "Outstretched Boxcutter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "outstretched-corkscrew",
+    "name": "Outstretched Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "peter-pan-double-corkscrew",
+    "name": "Peter Pan Double Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "pop-donut-boy",
+    "name": "Pop Donut Boy",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "pop-donut-boy-round",
+    "name": "Pop Donut Boy Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "popcorn",
+    "name": "Popcorn",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "popcorn-hyper",
+    "name": "Popcorn Hyper",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "quad-corkscrew",
+    "name": "Quad Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "quad-full",
+    "name": "Quad Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rocketboi",
+    "name": "Rocketboi",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rocketboi-full-doubleleg-rocketboi",
+    "name": "Rocketboi Full Doubleleg Rocketboi",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rocketboi-round",
+    "name": "Rocketboi Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rocketboi-scissor-snapu",
+    "name": "Rocketboi Scissor Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rocketboi-scissor-switch",
+    "name": "Rocketboi Scissor Switch",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-backflip",
+    "name": "Rodeo Backflip",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-backflip-full-down",
+    "name": "Rodeo Backflip Full Down",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-boxcutter",
+    "name": "Rodeo Boxcutter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-corkscrew",
+    "name": "Rodeo Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-corkscrew-shuriken-cutter",
+    "name": "Rodeo Corkscrew Shuriken Cutter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-corkscrew-snapu",
+    "name": "Rodeo Corkscrew Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-corkscrew-twist",
+    "name": "Rodeo Corkscrew Twist",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-full",
+    "name": "Rodeo Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-full-doubleleg",
+    "name": "Rodeo Full Doubleleg",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-full-hyperhook",
+    "name": "Rodeo Full Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-full-round",
+    "name": "Rodeo Full Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-full-shuriken",
+    "name": "Rodeo Full Shuriken",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-full-snapu",
+    "name": "Rodeo Full Snapu",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-full-wackknife",
+    "name": "Rodeo Full Wackknife",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "rodeo-gainer-switch",
+    "name": "Rodeo Gainer Switch",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "shattermoon",
+    "name": "Shattermoon",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "sheep-shearer",
+    "name": "Sheep Shearer",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "shurikane",
+    "name": "Shurikane",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "shurikane-late-hook",
+    "name": "Shurikane Late Hook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "shuriken-cutter",
+    "name": "Shuriken Cutter",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "shuriken-cutter-scissor",
+    "name": "Shuriken Cutter Scissor",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "slice",
+    "name": "Slice",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "snatch-cannon",
+    "name": "Snatch Cannon",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "straddle-corkscrew",
+    "name": "Straddle Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "terada-full",
+    "name": "Terada Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "terada-grab",
+    "name": "Terada Grab",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "terada-grab-in-shant-out",
+    "name": "Terada Grab In Shant Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "touchdown-corkscrew",
+    "name": "Touchdown Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "touchdown-full",
+    "name": "Touchdown Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "touchdown-quat",
+    "name": "Touchdown Quat",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "triple-corkscrew",
+    "name": "Triple Corkscrew",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "triple-corkscrew-round",
+    "name": "Triple Corkscrew Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "triple-flash-kick-full",
+    "name": "Triple Flash Kick Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "triple-full",
+    "name": "Triple Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "triple-full-hyper",
+    "name": "Triple Full Hyper",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "triple-full-hyperhook",
+    "name": "Triple Full Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "triple-full-round",
+    "name": "Triple Full Round",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "triple-full-shuriken-hyperhook",
+    "name": "Triple Full Shuriken Hyperhook",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "valdez",
+    "name": "Valdez",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "x-out",
+    "name": "X-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "x-out-full",
+    "name": "X-Out Full",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "x-out-in-back-out",
+    "name": "X-Out-In Back-Out",
+    "section": "backward-tricks"
+  },
+  {
+    "slug": "360-cartwheel-twist",
+    "name": "360 Cartwheel Twist",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "dive-roll",
+    "name": "Dive Roll",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "front-axe",
+    "name": "Front Axe",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "front-half",
+    "name": "Front Half",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "front-handspring",
+    "name": "Front Handspring",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "front-pike",
+    "name": "Front Pike",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "front-tuck",
+    "name": "Front Tuck",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "front-x-out",
+    "name": "Front X-Out",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "handcuff-360-dive-roll",
+    "name": "Handcuff 360 Dive Roll",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "janitor-flip",
+    "name": "Janitor Flip",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "janitor-scissor-twist",
+    "name": "Janitor Scissor Twist",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "janitor-twist",
+    "name": "Janitor Twist",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "rodeo-janitor-twist",
+    "name": "Rodeo Janitor Twist",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "russian-front",
+    "name": "Russian Front",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "superman-front",
+    "name": "Superman Front",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "webster",
+    "name": "Webster",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "webster-axe",
+    "name": "Webster Axe",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "webster-half",
+    "name": "Webster Half",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "webster-hyperhook",
+    "name": "Webster Hyperhook",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "webster-x-out",
+    "name": "Webster X-Out",
+    "section": "forward-tricks"
+  },
+  {
+    "slug": "aerial",
+    "name": "Aerial",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-helicoptero",
+    "name": "Aerial Helicoptero",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-hook",
+    "name": "Aerial Hook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-mega",
+    "name": "Aerial Mega",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-scissor",
+    "name": "Aerial Scissor",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-sidewinder",
+    "name": "Aerial Sidewinder",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-twist",
+    "name": "Aerial Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-twist-doubleleg",
+    "name": "Aerial Twist Doubleleg",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-twist-gumbi",
+    "name": "Aerial Twist Gumbi",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "aerial-twist-gumbi-helicoptero",
+    "name": "Aerial Twist Gumbi Helicoptero",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "blasterscoot",
+    "name": "Blasterscoot",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butter-knife",
+    "name": "Butter Knife",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-kick",
+    "name": "Butterfly Kick",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-kick-helicoptero",
+    "name": "Butterfly Kick Helicoptero",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-kick-helicoptero-round",
+    "name": "Butterfly Kick Helicoptero Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-kick-late-hook",
+    "name": "Butterfly Kick Late Hook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-kick-scissor",
+    "name": "Butterfly Kick Scissor",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-kick-switch",
+    "name": "Butterfly Kick Switch",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-kick-switch-hyperhook",
+    "name": "Butterfly Kick Switch Hyperhook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-kick-terada-grab",
+    "name": "Butterfly Kick Terada Grab",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist",
+    "name": "Butterfly Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-axe",
+    "name": "Butterfly Twist Axe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-double-round",
+    "name": "Butterfly Twist Double Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-doubleleg",
+    "name": "Butterfly Twist Doubleleg",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-doubleleg-twist",
+    "name": "Butterfly Twist Doubleleg Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-feilong-swipe",
+    "name": "Butterfly Twist Feilong Swipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-hawkeye",
+    "name": "Butterfly Twist Hawkeye",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-hyper",
+    "name": "Butterfly Twist Hyper",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-hyperhook",
+    "name": "Butterfly Twist Hyperhook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-knife",
+    "name": "Butterfly Twist Knife",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-round",
+    "name": "Butterfly Twist Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-round-late-round",
+    "name": "Butterfly Twist Round Late Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-shurikane",
+    "name": "Butterfly Twist Shurikane",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-shuriken",
+    "name": "Butterfly Twist Shuriken",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-shuriken-hyperhook",
+    "name": "Butterfly Twist Shuriken Hyperhook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-shuriken-twist",
+    "name": "Butterfly Twist Shuriken Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-snapu",
+    "name": "Butterfly Twist Snapu",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-swipe",
+    "name": "Butterfly Twist Swipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-twist-kick",
+    "name": "Butterfly Twist Twist-Kick",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-wackknife",
+    "name": "Butterfly Twist Wackknife",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "butterfly-twist-in",
+    "name": "Butterfly Twist-In",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "cartwheel",
+    "name": "Cartwheel",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "cartwheel-late-swipe",
+    "name": "Cartwheel Late Swipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "cartwheel-twist",
+    "name": "Cartwheel Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "double-aerial-twist",
+    "name": "Double Aerial Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "double-butterfly-twist",
+    "name": "Double Butterfly Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "double-butterfly-twist-hyper",
+    "name": "Double Butterfly Twist Hyper",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "double-butterfly-twist-round",
+    "name": "Double Butterfly Twist Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "double-butterfly-twist-snapu",
+    "name": "Double Butterfly Twist Snapu",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "double-peter-pan-butterfly-twist",
+    "name": "Double Peter Pan Butterfly Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "grand-master-arabian",
+    "name": "Grand Master Arabian",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "grand-master-rocketboi",
+    "name": "Grand Master Rocketboi",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "grand-master-scissor",
+    "name": "Grand Master Scissor",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "grand-master-scoot",
+    "name": "Grand Master Scoot",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "grand-master-swipe",
+    "name": "Grand Master Swipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "grand-master-swipeknife",
+    "name": "Grand Master Swipeknife",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "grand-master-twist",
+    "name": "Grand Master Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "grand-master-twist-doubleleg",
+    "name": "Grand Master Twist Doubleleg",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "helicoptero",
+    "name": "Helicoptero",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "helicoptero-e-kick",
+    "name": "Helicoptero E-Kick",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "illusion-twist",
+    "name": "Illusion Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "inward-360-dive-roll",
+    "name": "Inward 360 Dive Roll",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "kaydem",
+    "name": "Kaydem",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "macaron",
+    "name": "Macaron",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "masterscoot",
+    "name": "Masterscoot",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "masterscoot-twist",
+    "name": "Masterscoot Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "masterswipe",
+    "name": "Masterswipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "masterswipe-helicoptero",
+    "name": "Masterswipe Helicoptero",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "one-elbow-cartwheel-twist",
+    "name": "One-Elbow Cartwheel Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "one-handed-cartwheel",
+    "name": "One-Handed Cartwheel",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "one-handed-cartwheel-twist",
+    "name": "One-Handed Cartwheel Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "palmkick",
+    "name": "Palmkick",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "palmkick-kyro",
+    "name": "Palmkick Kyro",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "palmkick-scissor-swipe",
+    "name": "Palmkick Scissor Swipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "rodeo-grand-master-swipe",
+    "name": "Rodeo Grand Master Swipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "roundoff",
+    "name": "Roundoff",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "scoot",
+    "name": "Scoot",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "scoot-hyper",
+    "name": "Scoot Hyper",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "scoot-twist",
+    "name": "Scoot Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "sidewinder",
+    "name": "Sidewinder",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "sketchdown-raiz",
+    "name": "Sketchdown Raiz",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-double-full",
+    "name": "Tak Double Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-double-full-hyper",
+    "name": "Tak Double Full Hyper",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-double-full-hyperhook",
+    "name": "Tak Double Full Hyperhook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-double-full-round",
+    "name": "Tak Double Full Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-double-full-touchdown",
+    "name": "Tak Double Full Touchdown",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-full",
+    "name": "Tak Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-full-hyperhook",
+    "name": "Tak Full Hyperhook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-full-kyro",
+    "name": "Tak Full Kyro",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-full-pizzaboy",
+    "name": "Tak Full Pizzaboy",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-full-round",
+    "name": "Tak Full Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-full-shuriken-hyperhook",
+    "name": "Tak Full Shuriken Hyperhook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-full-swipe",
+    "name": "Tak Full Swipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-full-wackknife",
+    "name": "Tak Full Wackknife",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-rodeo-full",
+    "name": "Tak Rodeo Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "tak-triple-full",
+    "name": "Tak Triple Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "takuraba",
+    "name": "Takuraba",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "takuraba-scissor",
+    "name": "Takuraba Scissor",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "touchdown-aerial-twist",
+    "name": "Touchdown Aerial Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "touchdown-butterfly-twist",
+    "name": "Touchdown Butterfly Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "touchdown-tak-full",
+    "name": "Touchdown Tak Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "touchdown-wrap-full",
+    "name": "Touchdown Wrap Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "touchup-double-butterfly-twist",
+    "name": "Touchup Double Butterfly Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "triple-aerial-twist",
+    "name": "Triple Aerial Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "triple-butterfly-twist",
+    "name": "Triple Butterfly Twist",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-arabian",
+    "name": "Wrap Arabian",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-arabian-scissor",
+    "name": "Wrap Arabian Scissor",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-double-full",
+    "name": "Wrap Double Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-double-full-mega",
+    "name": "Wrap Double Full Mega",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-double-full-snapu",
+    "name": "Wrap Double Full Snapu",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full",
+    "name": "Wrap Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-doubleleg",
+    "name": "Wrap Full Doubleleg",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-hyper",
+    "name": "Wrap Full Hyper",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-hyperhook",
+    "name": "Wrap Full Hyperhook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-late-round",
+    "name": "Wrap Full Late Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-pike",
+    "name": "Wrap Full Pike",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-round",
+    "name": "Wrap Full Round",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-shurikane",
+    "name": "Wrap Full Shurikane",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-shuriken-hyperhook",
+    "name": "Wrap Full Shuriken Hyperhook",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-snapu",
+    "name": "Wrap Full Snapu",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-swipe",
+    "name": "Wrap Full Swipe",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-full-swipeknife",
+    "name": "Wrap Full Swipeknife",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "wrap-triple-full",
+    "name": "Wrap Triple Full",
+    "section": "inside-tricks"
+  },
+  {
+    "slug": "broken-scrubba",
+    "name": "Broken Scrubba",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "cali-roll",
+    "name": "Cali Roll",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "cheat-720-twist",
+    "name": "Cheat 720 Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "cheat-720-twist-broken",
+    "name": "Cheat 720 Twist Broken",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "cheat-720-twist-hyperhook",
+    "name": "Cheat 720 Twist Hyperhook",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "cheat-720-twist-round",
+    "name": "Cheat 720 Twist Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "crackknife",
+    "name": "Crackknife",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "double-doubleleg",
+    "name": "Double Doubleleg",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "double-sideflip",
+    "name": "Double Sideflip",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "doubleleg",
+    "name": "Doubleleg",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "doubleleg-double-twist",
+    "name": "Doubleleg Double Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "doubleleg-rodeo",
+    "name": "Doubleleg Rodeo",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "doubleleg-sidekick",
+    "name": "Doubleleg Sidekick",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "doubleleg-twist",
+    "name": "Doubleleg Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "doubleleg-twist-round",
+    "name": "Doubleleg Twist Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "doubleleg-x-out",
+    "name": "Doubleleg X-Out",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "doubleleg-x-out-hyperhook",
+    "name": "Doubleleg X-Out Hyperhook",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "e-kick",
+    "name": "E-Kick",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "envergado",
+    "name": "Envergado",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "envergado-double-twist",
+    "name": "Envergado Double Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "envergado-twist",
+    "name": "Envergado Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "feilong-snapu",
+    "name": "Feilong Snapu",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "gumbi",
+    "name": "Gumbi",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "lotus-crowd-awakener",
+    "name": "Lotus Crowd Awakener",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "lotus-doubleleg",
+    "name": "Lotus Doubleleg",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "lotus-doubleleg-hyperhook",
+    "name": "Lotus Doubleleg Hyperhook",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "lotus-late-round",
+    "name": "Lotus Late Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "lotus-rodeo",
+    "name": "Lotus Rodeo",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "lotus-shuriken",
+    "name": "Lotus Shuriken",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "machine",
+    "name": "Machine",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "pop-snapu",
+    "name": "Pop Snapu",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "pop-swipeknife",
+    "name": "Pop Swipeknife",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "pop-tai-fighter",
+    "name": "Pop Tai Fighter",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "raiz",
+    "name": "Raiz",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "raiz-hyperhook",
+    "name": "Raiz Hyperhook",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "raiz-hyperhook-turbo",
+    "name": "Raiz Hyperhook Turbo",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "raiz-reversao",
+    "name": "Raiz Reversao",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "raiz-shurikane",
+    "name": "Raiz Shurikane",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "raiz-in",
+    "name": "Raiz-In",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "reversao",
+    "name": "Reversao",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "rodeo-snapu",
+    "name": "Rodeo Snapu",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-gumbi",
+    "name": "Sailor Gumbi",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon",
+    "name": "Sailor Moon",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-doubleleg",
+    "name": "Sailor Moon Doubleleg",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-doubleleg-twist",
+    "name": "Sailor Moon Doubleleg Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-hawkeye",
+    "name": "Sailor Moon Hawkeye",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-hyperhook",
+    "name": "Sailor Moon Hyperhook",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-late-round",
+    "name": "Sailor Moon Late Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-reversao",
+    "name": "Sailor Moon Reversao",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-round",
+    "name": "Sailor Moon Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-snapu",
+    "name": "Sailor Moon Snapu",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-twist",
+    "name": "Sailor Moon Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sailor-moon-wackknife",
+    "name": "Sailor Moon Wackknife",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "scrubba",
+    "name": "Scrubba",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sideflip",
+    "name": "Sideflip",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sideflip-round",
+    "name": "Sideflip Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sideswipe",
+    "name": "Sideswipe",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sideswipe-late-round",
+    "name": "Sideswipe Late Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "sideswipe-late-swipe",
+    "name": "Sideswipe Late Swipe",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "snapu",
+    "name": "Snapu",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "snapu-doubleleg",
+    "name": "Snapu Doubleleg",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "snapu-hyperhook",
+    "name": "Snapu Hyperhook",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "snapu-round",
+    "name": "Snapu Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "snapu-twist",
+    "name": "Snapu Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "spyder",
+    "name": "Spyder",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "spyder-twist",
+    "name": "Spyder Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "spyder-twist-round",
+    "name": "Spyder Twist Round",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "swipeknife",
+    "name": "Swipeknife",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "swipeknife-turbo",
+    "name": "Swipeknife Turbo",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "touchdown-raiz",
+    "name": "Touchdown Raiz",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "touchdown-raiz-roll",
+    "name": "Touchdown Raiz Roll",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "touchdown-raiz-twist",
+    "name": "Touchdown Raiz Twist",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "touchdown-swipe",
+    "name": "Touchdown Swipe",
+    "section": "outside-tricks"
+  },
+  {
+    "slug": "540",
+    "name": "540",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "540-gyro",
+    "name": "540 Gyro",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "540-gyroknife",
+    "name": "540 Gyroknife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1080",
+    "name": "Backside 1080",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1080-shuriken",
+    "name": "Backside 1080 Shuriken",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1260",
+    "name": "Backside 1260",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1260-feilong",
+    "name": "Backside 1260 Feilong",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1260-feilong-knife",
+    "name": "Backside 1260 Feilong Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1260-knife",
+    "name": "Backside 1260 Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1260-wackknife",
+    "name": "Backside 1260 Wackknife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1440",
+    "name": "Backside 1440",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-1620",
+    "name": "Backside 1620",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-720",
+    "name": "Backside 720",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-900",
+    "name": "Backside 900",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-900-feilong",
+    "name": "Backside 900 Feilong",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-900-gyro",
+    "name": "Backside 900 Gyro",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-900-hyper",
+    "name": "Backside 900 Hyper",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-900-knife",
+    "name": "Backside 900 Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "backside-900-sidekick",
+    "name": "Backside 900 Sidekick",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1080",
+    "name": "Cheat 1080",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1080-double",
+    "name": "Cheat 1080 Double",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1080-shuriken",
+    "name": "Cheat 1080 Shuriken",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1260",
+    "name": "Cheat 1260",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1260-double",
+    "name": "Cheat 1260 Double",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1260-doubleleg",
+    "name": "Cheat 1260 Doubleleg",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1260-hyper",
+    "name": "Cheat 1260 Hyper",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1440",
+    "name": "Cheat 1440",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-1620",
+    "name": "Cheat 1620",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-720",
+    "name": "Cheat 720",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-720-double",
+    "name": "Cheat 720 Double",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-720-shuriken",
+    "name": "Cheat 720 Shuriken",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-720-turbo",
+    "name": "Cheat 720 Turbo",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900",
+    "name": "Cheat 900",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-crowd-awakener",
+    "name": "Cheat 900 Crowd Awakener",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-crowd-awakener-knife",
+    "name": "Cheat 900 Crowd Awakener Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-double",
+    "name": "Cheat 900 Double",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-double-hyper",
+    "name": "Cheat 900 Double Hyper",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-double-knife",
+    "name": "Cheat 900 Double Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-double-tai-fighter",
+    "name": "Cheat 900 Double Tai Fighter",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-doubleleg",
+    "name": "Cheat 900 Doubleleg",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-doubleleg-twist",
+    "name": "Cheat 900 Doubleleg Twist",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-feilong",
+    "name": "Cheat 900 Feilong",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-gyro",
+    "name": "Cheat 900 Gyro",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-hyper",
+    "name": "Cheat 900 Hyper",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-knife",
+    "name": "Cheat 900 Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-paraknife",
+    "name": "Cheat 900 Paraknife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-rodeo",
+    "name": "Cheat 900 Rodeo",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-900-sidekick",
+    "name": "Cheat 900 Sidekick",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-double-hook",
+    "name": "Cheat Double Hook",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "cheat-feilong",
+    "name": "Cheat Feilong",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "crowd-awakener",
+    "name": "Crowd Awakener",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "crowd-awakener-knife",
+    "name": "Crowd Awakener Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "hurricane-kick",
+    "name": "Hurricane Kick",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "jackknife",
+    "name": "Jackknife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "jackknife-1080",
+    "name": "Jackknife 1080",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "jackknife-shuriken",
+    "name": "Jackknife Shuriken",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "jackknife-turbo",
+    "name": "Jackknife Turbo",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "parafuso",
+    "name": "Parafuso",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "parafuso-gyro",
+    "name": "Parafuso Gyro",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "parafuso-hawkeye",
+    "name": "Parafuso Hawkeye",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "parafuso-twist-kick",
+    "name": "Parafuso Twist-Kick",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "paraknife",
+    "name": "Paraknife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-1080",
+    "name": "Pop 1080",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-1260",
+    "name": "Pop 1260",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-1440",
+    "name": "Pop 1440",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-360",
+    "name": "Pop 360",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-360-gyro",
+    "name": "Pop 360 Gyro",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-360-gyro-doubleleg",
+    "name": "Pop 360 Gyro Doubleleg",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-360-gyro-round",
+    "name": "Pop 360 Gyro Round",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-360-shuriken",
+    "name": "Pop 360 Shuriken",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-540",
+    "name": "Pop 540",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-720",
+    "name": "Pop 720",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-720-double",
+    "name": "Pop 720 Double",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-900",
+    "name": "Pop 900",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-900-hyper",
+    "name": "Pop 900 Hyper",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-feilong",
+    "name": "Pop Feilong",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-feilong-knife",
+    "name": "Pop Feilong Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "pop-tornado",
+    "name": "Pop Tornado",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "skip-hook",
+    "name": "Skip Hook",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "swing-1080",
+    "name": "Swing 1080",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "swing-1260",
+    "name": "Swing 1260",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "swing-360",
+    "name": "Swing 360",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "swing-900",
+    "name": "Swing 900",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "swing-900-knife",
+    "name": "Swing 900 Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "swing-900-sidekick",
+    "name": "Swing 900 Sidekick",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "tornado",
+    "name": "Tornado",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "tornado-double",
+    "name": "Tornado Double",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "tornado-hawkeye",
+    "name": "Tornado Hawkeye",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "tornado-sidekick",
+    "name": "Tornado Sidekick",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "twist-knife",
+    "name": "Twist Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "wackest-knife",
+    "name": "Wackest Knife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "wackknife",
+    "name": "Wackknife",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "wackknife-doubleleg",
+    "name": "Wackknife Doubleleg",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "wackknife-round",
+    "name": "Wackknife Round",
+    "section": "vertical-kicks"
+  },
+  {
+    "slug": "wackknife-turbo",
+    "name": "Wackknife Turbo",
+    "section": "vertical-kicks"
+  }
+]

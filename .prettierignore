@@ -12,3 +12,4 @@ docs/docs-agents/prompt-arranque.md
 .opencode
 .agents
 .husky/_/
+packages/db/drizzle

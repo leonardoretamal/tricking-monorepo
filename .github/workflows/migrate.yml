@@ -1,0 +1,46 @@
+name: Migraciones
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - packages/db/src/schema.ts
+      - packages/db/drizzle/**
+  pull_request:
+    branches:
+      - main
+    paths:
+      - packages/db/src/schema.ts
+      - packages/db/drizzle/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  migrate:
+    # Aplica las migraciones pendientes de Drizzle sobre Neon cuando cambia el esquema.
+    name: Aplicar migraciones
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Instalar pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+
+      - name: Aplicar migraciones
+        run: pnpm turbo db:migrate --filter=@tricking/db
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
