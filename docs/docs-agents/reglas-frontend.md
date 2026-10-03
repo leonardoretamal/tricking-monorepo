@@ -22,6 +22,13 @@ Propósito: definir los estándares de interfaz, listados, imágenes, rendimient
 - Los errores de validación se muestran debajo del input, con aria-describedby, aria-invalid y role="alert". La validación ocurre en onBlur y al enviar, mostrando todos los errores a la vez.
 - Consultar siempre docs/docs-agents/design.md antes de tocar la interfaz.
 
+## Carga inicial y esqueletos
+
+- Si la app tiene inicio de sesión o una carga inicial pesada, se muestra una pantalla visual atractiva y coherente con el design system mientras los datos cargan en segundo plano. No bloquea, entretiene. Al terminar, transición suave a la vista final. Prohibidas las pantallas de "cargando" vacías o con spinner seco cuando se puede mostrar algo visualmente agradable.
+- Al cambiar de sección o vista que carga datos, se usan loadings de esqueleto (skeleton screens) en lugar de spinners genéricos. El esqueleto refleja la estructura aproximada del contenido (tarjetas, listas, tablas, bloques de texto) y se reutiliza el componente de skeleton existente antes de crear uno nuevo.
+- El esqueleto se muestra hasta que llegan los datos, con un timeout máximo para no quedar colgado. No se usa skeleton para acciones puntuales (guardar, eliminar): para esas se usa loading en el botón.
+- La app es asíncrona: nada bloquea la interfaz y toda petición tiene estado de carga.
+
 ## Listados
 
 - Todo listado es paginable y admite búsqueda, filtros y ordenamiento.

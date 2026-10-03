@@ -90,6 +90,27 @@ Aplica cuando el proyecto tenga registro de usuarios.
 - Reenvío: rate limiting estricto, generar un código nuevo e invalidar el anterior, y devolver respuesta exitosa sin confirmar si el identificador existe.
 - Seguridad: el código nunca se devuelve ni se registra en logs; el token se almacena hasheado; los intentos con código incorrecto se limitan; el login devuelve 403 mientras la cuenta no esté validada; la eliminación respeta la política de soft delete o hard delete.
 
+## Login, recuperación de contraseña y sesiones
+
+Aplica cuando el proyecto tenga registro de usuarios.
+
+- Login: email o teléfono y contraseña, rate limiting, 403 si la cuenta no está validada, comparación contra el hashing del repositorio, emisión de sesión o token según el mecanismo del repositorio y logs sin credenciales.
+- Recuperar contraseña: token con expiración de 15 a 60 minutos, almacenado hasheado, enviado por el canal, con respuesta que no revela si el identificador existe y con rate limiting.
+- Reset: validar el token y su expiración, validar la contraseña nueva, actualizar el hash, invalidar el token usado, invalidar las sesiones activas y notificar por correo.
+- Logout: invalidar el token o la lista negra según el mecanismo del repositorio.
+- Gestión de sesiones: listado con dispositivo, IP y fechas, cierre individual y cierre de todas.
+
+## Eliminación de cuenta
+
+Aplica cuando el proyecto tenga registro de usuarios.
+
+- Doble confirmación (correo, contraseña o código).
+- Aviso de qué se borra y qué no se recupera, con opción de exportar los datos antes.
+- Cascada: se borran todos los datos asociados (perfil, preferencias, contenido, relaciones, tokens, sesiones, notificaciones y archivos).
+- Hard delete para los datos personales; los datos que la ley obliga a conservar quedan anonimizados o seudonimizados con base legal.
+- Idempotente: repetir la eliminación no falla ni duplica efectos.
+- Log de la eliminación sin datos personales.
+
 ## Reglas transversales relacionadas
 
 - Seguridad: docs/docs-agents/reglas-seguridad.md.

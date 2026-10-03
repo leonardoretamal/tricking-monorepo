@@ -96,3 +96,18 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: la regla de build es transversal y vive en la skill `orquestar` (plantilla del líder y compuerta) además de `AGENTS.md`; Maildrop es el buzón de respaldo cuando el repositorio no trae uno propio.
 - Pendientes y riesgos: ninguno.
 - Referencias: `AGENTS.md` sección 18, `docs/docs-agents/reglas-validacion.md`, skill `orquestar`.
+
+## Integración del setup global de IA (2026-10-03)
+
+- Issue: no aplica (trabajo de reglas).
+- Título: Incorporación de las reglas faltantes del documento "SETUP PARA PROGRAMAR ALGO CON IA".
+- Qué pedía: revisar el documento maestro de setup (14 secciones numeradas, de la 0 a la 13) e incorporar al repositorio todo lo que faltara.
+- Fecha de inicio: 2026-10-03.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Acciones: se agregaron al repositorio las reglas que no existían. En `AGENTS.md`: el umbral de longitud de `AGENTS.md` sube a 500 o 600 líneas; la regla de build con el detalle de que el gancho borra la carpeta de build al terminar; las capturas de Playwright pasan a tomarse solo cuando aportan valor; la bitácora se redacta siempre en español y suma los subagentes al contenido; los correos de prueba quedan con mail.tm (automatizado) y Maildrop (manual); y se agrega el archivo de faltantes al adoptar un repositorio existente. En `docs/docs-agents/reglas-frontend.md`: carga inicial y loadings de esqueleto. En `reglas-git.md`: los ganchos con el build en pre-push y la prohibición de saltarlos. En `reglas-validacion.md`: una corrida de subagentes por tarea sin repetir por merge local, y capturas solo cuando aportan. En `reglas-backend.md`: login, recuperación de contraseña, sesiones y eliminación de cuenta (condicionales a que exista autenticación). Se reflejaron los mismos cambios en `docs/docs-agents/prompt-arranque.md`.
+- Archivos tocados: `AGENTS.md`, `docs/docs-agents/reglas-frontend.md`, `docs/docs-agents/reglas-git.md`, `docs/docs-agents/reglas-validacion.md`, `docs/docs-agents/reglas-backend.md`, `docs/docs-agents/prompt-arranque.md`, `BITACORA.md`.
+- Pruebas: verificación de formato del repositorio y de que no queden contradicciones con las reglas anteriores.
+- Decisiones: las reglas de autenticación y eliminación de cuenta quedan marcadas como condicionales (no aplican mientras el producto no tenga login); el umbral de `AGENTS.md` se sube a 500 o 600 líneas.
+- Pendientes y riesgos: el repositorio no usa autenticación, así que las reglas de login y eliminación de cuenta quedan documentadas pero inactivas.
+- Referencias: `AGENTS.md`, `docs/docs-agents/`.

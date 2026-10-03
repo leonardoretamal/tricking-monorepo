@@ -882,20 +882,20 @@ Reglas generales: los subagentes se ejecutan al cierre, no son opcionales. Si al
 
 Antes de entregar cualquier tarea, antes de proponer `git add`, commit, push, PR o merge:
 
-- Detener el empaquetador de desarrollo.
-- Ejecutar el build de producción correspondiente.
-- Verificar que el build termine sin errores ni advertencias bloqueantes.
-- Si falla, corregir antes de dar la tarea por cerrada.
-- Una vez comprobado, borrar la carpeta generada.
-- Confirmar que la carpeta esté en `.gitignore` antes de borrarla.
-- Reporte: "Build de producción verificado y carpeta de build eliminada" o el detalle del fallo.
+- Si el repositorio tiene el build de producción en un gancho (pre-commit o pre-push), el agente NO lo ejecuta manualmente: confía en el gancho y lo deja anotado en el reporte. El gancho pre-push borra la carpeta de build al terminar, para no dejarla cacheada ni ocupar espacio; solo se conserva si el usuario pide lo contrario.
+- Si el repositorio no tiene el build en ningún gancho, el agente lo ejecuta manualmente antes de proponer `git add`, commit, push, PR o merge, y borra la carpeta al terminar.
+- Verificar que el build termine sin errores ni advertencias bloqueantes. Si falla, corregir antes de dar la tarea por cerrada.
+- Confirmar que la carpeta de build está en `.gitignore` antes de borrarla.
+- Reporte: "Build de producción verificado y carpeta de build eliminada", "Build delegado al gancho pre-push" o el detalle del fallo.
 
 ### Capturas con Playwright
 
-- Capturar todo lo inspeccionado: pantallas, componentes, estados, flujos.
+- Se activan solo si el repositorio usa Playwright y las capturas aportan valor. No son obligatorias en cada tarea.
+- Se toman solo cuando el cambio toca diseño o interfaz visual y hace falta evidencia, cuando el agente necesita ver algo específico para verificar, o cuando el usuario las pide. Los snapshots siguen el mismo criterio.
 - Ubicación: carpeta temporal fuera del repositorio o ignorada por Git.
-- Limpieza al cierre.
+- Limpieza al cierre: todas las capturas y snapshots se borran al terminar la tarea. Excepción: si el usuario pide conservarlas, se avisa dónde quedaron.
 - Viewport móvil: 390x600. Prohibido 390x844. Página completa con `fullPage: true`.
+- Reporte: "Capturas eliminadas" o "Capturas conservadas en <ruta> a pedido del usuario".
 
 ### Pruebas de infraestructura y servicios antes del cierre
 
@@ -925,7 +925,7 @@ Estas reglas describen cómo se usa la bitácora. No se escriben dentro de `BITA
 - Contenido de cada entrada: acciones, decisiones, archivos tocados, comandos relevantes, pruebas, bloqueos, pendientes, riesgos, referencias.
 - Se documentan hitos y decisiones, no cada línea de código.
 - Sin secretos, sin datos personales, sin valores reales.
-- Sin emojis, sin marcas de IA, en el idioma del repositorio.
+- Sin emojis, sin marcas de IA. La redacción es en español siempre, sin importar el idioma del repositorio.
 - El agente no cierra el issue: documenta, deja el comentario resumen con enlace a la bitácora, y el cierre queda al usuario.
 - Si el archivo crece mucho con el tiempo, se puede dividir por año o trimestre, pero cada división sigue siendo un archivo plano de bitácora, no una estructura de referenciados.
 - Lectura completa del contexto de un issue: prohibido truncar comentarios. Se leen completos, incluidos PRs cerrados o mergeados, referencias cruzadas, issues relacionados, historial de estado. Si la herramienta trunca automáticamente, el agente lo declara y pide autorización para continuar con información parcial.
@@ -1208,8 +1208,8 @@ No forman parte del bloque de reglas que se hereda a otros prompts, son notas op
 - Copiar `bin/lupe-start` desde buybolivia en todo repositorio.
 - Usar ruflo y graphify si OpenCode lo permite.
 - Playwright con navegador visible en ventana normal del escritorio (WSLg en WSL), sobre Chrome en Windows, no en WSL. El navegador no se cierra solo.
-- Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance. Maildrop puede pedir CAPTCHA.
-- Usar correos de prueba con Maildrop (maildrop.cc). Parar cuando pida captcha, resolverlo manualmente, retomar.
+- Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance.
+- Correos de prueba sin captcha: mail.tm (API, recomendado para flujos automatizados) y Maildrop (maildrop.cc, para pruebas manuales rápidas). Si el buzón pide captcha, parar, avisar al usuario, resolverlo manualmente y retomar.
 - Tener en VSCode las extensiones justas y necesarias.
 - Revisar el tema de cuando la IA intenta enviar más de 1500 cambios por API.
 - Revisar de vez en cuando el repositorio buscando rastros de IA y limpiarlos.

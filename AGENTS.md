@@ -74,6 +74,7 @@ Si se detectan marcas preexistentes no relacionadas con la tarea, se reportan pe
 - Autocorrección previa a la entrega: si la propuesta viola alguna regla, se corrige antes de mostrar el código final.
 - Cada vez que se toca una variable de entorno en el código, se actualiza el `.env.example` correspondiente en la misma tarea.
 - Registro obligatorio en bitácora.
+- Al adoptar un repositorio existente, si detecta cosas faltantes (archivos, reglas, configuraciones, ganchos, templates, variables de entorno, dependencias, documentación, carpetas, skills, agentes), no las crea ni las modifica por su cuenta: crea un archivo `.md` con una lista de checkboxes, agrupada por categoría y con una nota breve de por qué falta cada ítem (por ejemplo `faltantes.md` en la carpeta de docs del agente), lo entrega al usuario y no actúa sobre él sin autorización explícita.
 - Autorización para levantar infraestructura local de prueba, limitada a entornos locales, con datos de prueba y limpieza al cierre. Prohibido conectar a entornos compartidos, staging o producción.
 - Autorización permanente para crear o modificar `.env.example`, con alcance limitado a nombres, comentarios y valores de ejemplo no reales.
 - Autorización para escribir secretos por CLI o API, limitada al entorno dev y solo si el gestor está confirmado en este archivo o en `docs/docs-agents/stack-tecnico.md`.
@@ -135,7 +136,7 @@ Reglas asociadas:
 
 Antes de escribir contenido nuevo en `AGENTS.md`, se revisa si corresponde o si va a un documento referenciado:
 
-- Criterio orientativo: si `AGENTS.md` supera las 300 o 400 líneas, o si la regla nueva es específica de un tema que ya tiene documento propio, no se escribe en `AGENTS.md`.
+- Criterio orientativo: si `AGENTS.md` supera las 500 o 600 líneas, o si la regla nueva es específica de un tema que ya tiene documento propio, no se escribe en `AGENTS.md`.
 - Si el tema ya tiene un archivo en `docs/docs-agents/`, se edita ese archivo. Si la regla encaja en una sección existente, se agrega ahí; si requiere una sección nueva, se agrega la sección.
 - Si el tema no tiene archivo en `docs/docs-agents/`, se crea uno nuevo con nombre descriptivo en el idioma del repositorio y se agrega la referencia en `AGENTS.md`.
 - Lo único que se escribe directamente en `AGENTS.md` es: el índice maestro (visión general, resumen del stack, tabla de documentos referenciados), las reglas transversales que no tienen documento temático propio, las reglas de conducta del agente, las reglas de Git y automatización, el formato de reporte final de tarea y las reglas de la bitácora.
@@ -389,18 +390,20 @@ Reglas generales: los subagentes se ejecutan al cierre, no son opcionales. Si al
 
 Antes de entregar cualquier tarea, antes de proponer `git add`, commit, push, PR o merge:
 
-- Si el repositorio tiene el build de producción en un gancho (pre-commit o pre-push), el agente NO lo ejecuta manualmente: confía en el gancho y lo deja anotado en el reporte.
-- Si el repositorio no tiene el build en ningún gancho, el agente lo ejecuta manualmente antes de proponer `git add`, commit, push, PR o merge.
+- Si el repositorio tiene el build de producción en un gancho (pre-commit o pre-push), el agente NO lo ejecuta manualmente: confía en el gancho y lo deja anotado en el reporte. El gancho pre-push borra la carpeta de build al terminar, para no dejarla cacheada ni ocupar espacio; solo se conserva si el usuario pide lo contrario.
+- Si el repositorio no tiene el build en ningún gancho, el agente lo ejecuta manualmente antes de proponer `git add`, commit, push, PR o merge, y borra la carpeta al terminar.
 - Verificar que el build termine sin errores ni advertencias bloqueantes. Si falla, corregir antes de dar la tarea por cerrada.
-- En ambos casos, si se generó una carpeta de build, borrarla para no dejarla cacheada ni ocupar espacio, y confirmar que está en `.gitignore`.
-- Reporte: "Build de producción verificado (por el gancho o manualmente) y carpeta de build eliminada" o el detalle del fallo.
+- Confirmar que la carpeta de build está en `.gitignore` antes de borrarla.
+- Reporte: "Build de producción verificado y carpeta de build eliminada", "Build delegado al gancho pre-push" o el detalle del fallo.
 
 Capturas con Playwright:
 
-- Capturar todo lo inspeccionado: pantallas, componentes, estados y flujos.
+- Se activan solo si el repositorio usa Playwright y las capturas aportan valor. No son obligatorias en cada tarea: consumen tiempo y espacio.
+- Se toman solo cuando el cambio toca diseño o interfaz visual y hace falta evidencia, cuando el agente necesita ver algo específico para verificar, o cuando el usuario las pide. Los snapshots siguen el mismo criterio.
 - Ubicación: carpeta temporal fuera del repositorio o ignorada por Git.
-- Limpieza al cierre.
+- Limpieza al cierre: todas las capturas y snapshots se borran al terminar la tarea. Excepción: si el usuario pide conservarlas, se avisa dónde quedaron.
 - Viewport móvil: 390x600. Prohibido 390x844. Página completa con `fullPage: true`.
+- Reporte: "Capturas eliminadas" o "Capturas conservadas en <ruta> a pedido del usuario".
 
 Pruebas de infraestructura y servicios antes del cierre:
 
@@ -419,10 +422,10 @@ Estas reglas describen cómo se usa la bitácora. No se escriben dentro de `BITA
 - Verificación previa obligatoria antes de escribir: revisar si el monorepo ya tiene bitácora, changelog o registro. Si existe, escribir ahí. Si hay más de uno, reportar ambigüedad.
 - Todas las entradas van al mismo archivo, en orden cronológico, separadas por encabezados con número de issue y fecha.
 - Campos mínimos del encabezado de cada entrada: número de issue, título, qué pedía el issue, fecha de inicio (ISO 8601), estado actual y autor del registro.
-- Contenido de cada entrada: acciones, decisiones, archivos tocados, comandos relevantes, pruebas, bloqueos, pendientes, riesgos y referencias.
+- Contenido de cada entrada: acciones, decisiones, archivos tocados, comandos relevantes, pruebas, bloqueos, pendientes, riesgos, referencias y subagentes que corrieron con su resultado y momento.
 - Se documentan hitos y decisiones, no cada línea de código.
 - Sin secretos, sin datos personales, sin valores reales.
-- Sin emojis, sin marcas de IA, en el idioma del repositorio.
+- Sin emojis, sin marcas de IA. La redacción es en español siempre, sin importar el idioma del repositorio.
 - El agente no cierra el issue: documenta, deja el comentario resumen con enlace a la bitácora, y el cierre queda al usuario.
 - Si el archivo crece mucho con el tiempo, se puede dividir por año o trimestre, pero cada división sigue siendo un archivo plano de bitácora, no una estructura de referenciados.
 - Lectura completa del contexto de un issue: prohibido truncar comentarios. Se leen completos, incluidos PRs cerrados o mergeados, referencias cruzadas, issues relacionados e historial de estado. Si la herramienta trunca automáticamente, el agente lo declara y pide autorización para continuar con información parcial.
@@ -514,8 +517,8 @@ Estas son notas operativas del usuario, no forman parte del bloque de reglas que
 - Copiar `bin/lupe-start` desde buybolivia en todo repositorio.
 - Usar ruflo y graphify si OpenCode lo permite.
 - Playwright con navegador visible en ventana normal del escritorio (WSLg en WSL), sobre Chrome en Windows, no en WSL. El navegador no se cierra solo.
-- Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance. Maildrop puede pedir CAPTCHA.
-- Usar correos de prueba con Maildrop (maildrop.cc). Parar cuando pida captcha, resolverlo manualmente y retomar.
+- Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance.
+- Correos de prueba sin captcha: mail.tm (API, recomendado para flujos automatizados) y Maildrop (maildrop.cc, para pruebas manuales rápidas). Si el buzón pide captcha, parar, avisar al usuario, resolverlo manualmente y retomar.
 - Tener en VS Code las extensiones justas y necesarias.
 - Revisar el tema de cuando la IA intenta enviar más de 1500 cambios por API.
 - Revisar de vez en cuando el repositorio buscando rastros de IA y limpiarlos.

@@ -100,6 +100,7 @@ El detalle está en reglas-i18n.md.
 ## Reglas generales de cierre
 
 - Los subagentes se ejecutan al cierre y no son opcionales.
+- Se ejecutan una sola vez por tarea. Si la tarea ya tuvo su corrida al cierre y luego se mergea localmente a otra rama, no se repiten: el merge local no genera código nuevo, solo integra lo que ya fue validado. Si después del merge se agrega código nuevo, esa tarea nueva ejecuta sus propios subagentes. Antes de ejecutar, el agente verifica si la tarea ya tuvo su corrida y no repite.
 - Si alguno detecta un problema, el trabajo no se cierra hasta resolverlo o documentarlo como pendiente con justificación.
 - El reporte final incluye el resultado de cada subagente.
 - Prohibido marcar una subfase como cerrada sin build de producción verificado y subagentes pasados.
@@ -123,11 +124,13 @@ Antes de entregar cualquier tarea, antes de proponer git add, commit, push, PR o
 
 ## Capturas con Playwright
 
-- Capturar todo lo inspeccionado: pantallas, componentes, estados y flujos.
+- Se activan solo si el repositorio usa Playwright y las capturas aportan valor. No son obligatorias en cada tarea: consumen tiempo y espacio.
+- Se toman solo cuando el cambio toca diseño o interfaz visual y hace falta evidencia, cuando el agente necesita ver algo específico para verificar, o cuando el usuario las pide. Los snapshots siguen el mismo criterio.
 - Ubicación: carpeta temporal fuera del repositorio o ignorada por Git.
-- Limpieza al cierre.
+- Limpieza al cierre: todas las capturas y snapshots se borran al terminar la tarea. Excepción: si el usuario pide conservarlas, se avisa dónde quedaron.
 - Viewport móvil: 390x600. Prohibido 390x844. Página completa con fullPage: true.
 - Limitaciones conocidas: Playwright no cubre Lighthouse ni trazas de performance.
+- Reporte: "Capturas eliminadas" o "Capturas conservadas en <ruta> a pedido del usuario".
 
 ## Pruebas de infraestructura y servicios antes del cierre
 
