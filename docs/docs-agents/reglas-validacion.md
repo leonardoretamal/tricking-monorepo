@@ -113,13 +113,13 @@ El detalle está en reglas-i18n.md.
 
 Antes de entregar cualquier tarea, antes de proponer git add, commit, push, PR o merge:
 
-1. Detener el empaquetador de desarrollo.
-2. Ejecutar el build de producción correspondiente.
+1. Si el repositorio tiene el build de producción en un gancho (pre-commit o pre-push), no se ejecuta manualmente: se confía en el gancho y se deja anotado en el reporte.
+2. Si el repositorio no tiene el build en ningún gancho, se ejecuta manualmente antes de proponer git add, commit, push, PR o merge.
 3. Verificar que el build termine sin errores ni advertencias bloqueantes.
 4. Si falla, corregir antes de dar la tarea por cerrada.
-5. Una vez comprobado, borrar la carpeta generada.
+5. En ambos casos, si se generó una carpeta de build, borrarla para no dejarla cacheada ni ocupar espacio.
 6. Confirmar que la carpeta esté en .gitignore antes de borrarla.
-7. Reportar "Build de producción verificado y carpeta de build eliminada" o el detalle del fallo.
+7. Reportar "Build de producción verificado (por el gancho o manualmente) y carpeta de build eliminada" o el detalle del fallo.
 
 ## Capturas con Playwright
 

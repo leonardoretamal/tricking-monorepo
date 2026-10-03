@@ -1208,8 +1208,8 @@ No forman parte del bloque de reglas que se hereda a otros prompts, son notas op
 - Copiar `bin/lupe-start` desde buybolivia en todo repositorio.
 - Usar ruflo y graphify si OpenCode lo permite.
 - Playwright con navegador visible en ventana normal del escritorio (WSLg en WSL), sobre Chrome en Windows, no en WSL. El navegador no se cierra solo.
-- Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance. Yopmail puede pedir CAPTCHA.
-- Usar correos de prueba con yopmail. Parar cuando pida captcha, resolverlo manualmente, retomar.
+- Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance. Maildrop puede pedir CAPTCHA.
+- Usar correos de prueba con Maildrop (maildrop.cc). Parar cuando pida captcha, resolverlo manualmente, retomar.
 - Tener en VSCode las extensiones justas y necesarias.
 - Revisar el tema de cuando la IA intenta enviar más de 1500 cambios por API.
 - Revisar de vez en cuando el repositorio buscando rastros de IA y limpiarlos.

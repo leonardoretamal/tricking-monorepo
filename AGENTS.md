@@ -389,13 +389,11 @@ Reglas generales: los subagentes se ejecutan al cierre, no son opcionales. Si al
 
 Antes de entregar cualquier tarea, antes de proponer `git add`, commit, push, PR o merge:
 
-- Detener el empaquetador de desarrollo.
-- Ejecutar el build de producción correspondiente.
-- Verificar que el build termine sin errores ni advertencias bloqueantes.
-- Si falla, corregir antes de dar la tarea por cerrada.
-- Una vez comprobado, borrar la carpeta generada.
-- Confirmar que la carpeta esté en `.gitignore` antes de borrarla.
-- Reporte: "Build de producción verificado y carpeta de build eliminada" o el detalle del fallo.
+- Si el repositorio tiene el build de producción en un gancho (pre-commit o pre-push), el agente NO lo ejecuta manualmente: confía en el gancho y lo deja anotado en el reporte.
+- Si el repositorio no tiene el build en ningún gancho, el agente lo ejecuta manualmente antes de proponer `git add`, commit, push, PR o merge.
+- Verificar que el build termine sin errores ni advertencias bloqueantes. Si falla, corregir antes de dar la tarea por cerrada.
+- En ambos casos, si se generó una carpeta de build, borrarla para no dejarla cacheada ni ocupar espacio, y confirmar que está en `.gitignore`.
+- Reporte: "Build de producción verificado (por el gancho o manualmente) y carpeta de build eliminada" o el detalle del fallo.
 
 Capturas con Playwright:
 
@@ -516,8 +514,8 @@ Estas son notas operativas del usuario, no forman parte del bloque de reglas que
 - Copiar `bin/lupe-start` desde buybolivia en todo repositorio.
 - Usar ruflo y graphify si OpenCode lo permite.
 - Playwright con navegador visible en ventana normal del escritorio (WSLg en WSL), sobre Chrome en Windows, no en WSL. El navegador no se cierra solo.
-- Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance. Yopmail puede pedir CAPTCHA.
-- Usar correos de prueba con yopmail. Parar cuando pida captcha, resolverlo manualmente y retomar.
+- Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance. Maildrop puede pedir CAPTCHA.
+- Usar correos de prueba con Maildrop (maildrop.cc). Parar cuando pida captcha, resolverlo manualmente y retomar.
 - Tener en VS Code las extensiones justas y necesarias.
 - Revisar el tema de cuando la IA intenta enviar más de 1500 cambios por API.
 - Revisar de vez en cuando el repositorio buscando rastros de IA y limpiarlos.

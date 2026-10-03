@@ -81,3 +81,18 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: sin gitflow, commits y push directos a `main`; el layout raíz es `[locale]/layout.tsx` y el middleware de locale es `src/proxy.ts` (convención de Next 16); `localeDetection` en `false`; sin `loading.tsx` de ruta global para preservar el estado 404; paquetes compartidos como fuente TS con `transpilePackages`.
 - Pendientes y riesgos: contraste del primario en tema claro (3.41:1) a revisar en la Fase 17; avisos de `pnpm audit` en dependencias de desarrollo; el `<script>` anti-flash genera un aviso de React en desarrollo (permitido por `design.md`); los enlaces del submenú de "Trucos" apuntan a `/tricks` hasta las Fases 3 a 7.
 - Referencias: `docs/docs-agents/fases.md`, `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/design.md`, `AGENTS.md`.
+
+## Reglas: build en gancho y correo de prueba con Maildrop (2026-10-03)
+
+- Issue: no aplica (trabajo de reglas).
+- Título: Verificación del build según el gancho y cambio de yopmail a Maildrop.
+- Qué pedía: que la verificación del build de producción dependa de si el repositorio lo corre en un gancho (pre-commit o pre-push), y reemplazar yopmail por Maildrop en todo lo que lo referencie.
+- Fecha de inicio: 2026-10-03.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Acciones: se actualizó la sección 18 de `AGENTS.md` y la sección "Verificación de build de producción antes del cierre" de `docs/docs-agents/reglas-validacion.md` con la regla condicional (si el build está en un gancho, no se ejecuta a mano, se confía en el gancho; si no está en ningún gancho, se ejecuta antes de proponer `git add`, commit, push, PR o merge; en ambos casos se borra la carpeta de build y se confirma que está en `.gitignore`); se reemplazó yopmail por Maildrop en `AGENTS.md` y `docs/docs-agents/prompt-arranque.md`. Fuera del repositorio se actualizaron la skill `orquestar` (`SKILL.md`, `templates/subagente-ticket.md`, `references/compuerta.md`, `references/navegador.md`, `references/captcha.md`, `profiles/buybolivia.md`), las skills `prompt-creator` y `prompt-creator-global`, y las memorias de los proyectos que citaban yopmail.
+- Archivos tocados (repo): `AGENTS.md`, `docs/docs-agents/reglas-validacion.md`, `docs/docs-agents/prompt-arranque.md`, `BITACORA.md`.
+- Pruebas: revisión de que no queden referencias a yopmail en skills, documentos ni memoria; verificación de formato del repositorio.
+- Decisiones: la regla de build es transversal y vive en la skill `orquestar` (plantilla del líder y compuerta) además de `AGENTS.md`; Maildrop es el buzón de respaldo cuando el repositorio no trae uno propio.
+- Pendientes y riesgos: ninguno.
+- Referencias: `AGENTS.md` sección 18, `docs/docs-agents/reglas-validacion.md`, skill `orquestar`.
