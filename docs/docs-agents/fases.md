@@ -1,0 +1,284 @@
+# Fases del proyecto
+
+Estado de las fases y subfases del monorepo. Este documento es el lugar donde vive el estado de las fases.
+
+El proyecto se organiza por secciones de contenido, no por capas técnicas. Cada sección de Loopkicks es una fase. Cada fase se cierra con build de producción verificado, subagentes de validación ejecutados y actualización de este documento.
+
+Última actualización: 2026-10-03.
+
+## Reglas de fases
+
+- Se declara al inicio de cada tarea en qué fase y subfase se está trabajando.
+- No se adelanta trabajo de fases posteriores sin autorización explícita.
+- No se modifica trabajo de fases cerradas sin abrir una subfase de corrección.
+- Al cerrar cada subfase se ejecutan los subagentes de validación.
+- Al cerrar cada fase completa se actualiza `docs/docs-agents/stack-tecnico.md`, `BITACORA.md` y se genera un resumen en `AGENTS.md`.
+- Prohibido marcar una subfase como cerrada sin build de producción verificado y subagentes pasados.
+- Las fases de contenido (3 a 10, 13 y 16) comparten plantilla. Si un componente se duplica entre dos fases, se refactoriza a `packages/ui` antes de cerrar la siguiente.
+- Las fases que tocan la misma tabla documentan en este archivo qué campos usan y cuáles quedan pendientes.
+
+Estados usados: pendiente, en curso, completada, bloqueada.
+
+## Fase 0: Fundaciones
+
+Estado general: en curso.
+
+| Subfase | Descripción                                                                                                                                                                | Estado     |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| 0.1     | Crear monorepo con Turborepo + pnpm                                                                                                                                        | Completada |
+| 0.2     | Configurar TypeScript estricto, ESLint, Prettier, Husky, lint-staged, commitlint                                                                                           | Completada |
+| 0.3     | Crear documentación base: `AGENTS.md`, `README.md`, `BITACORA.md` y dentro de `docs/docs-agents/`: `stack-tecnico.md`, `recomendaciones-stack.md`, `fases.md`, `design.md` | En curso   |
+| 0.4     | Fragmentar reglas en `docs/docs-agents/reglas-*.md`                                                                                                                        | En curso   |
+| 0.5     | Templates de PR e issues en `.github/`                                                                                                                                     | En curso   |
+| 0.6     | Copiar `bin/lupe-start` desde buybolivia                                                                                                                                   | En curso   |
+| 0.7     | Configurar Playwright para E2E con viewport móvil 390x600                                                                                                                  | En curso   |
+
+Criterio de cierre: repositorio instalable con `pnpm install`, build vacío corriendo y CI pasando con el job mínimo.
+
+## Fase 1: Modelo de datos y semilla
+
+Estado: pendiente.
+
+- 1.1. Crear `packages/db` con Drizzle + Neon.
+- 1.2. Definir schema inicial: `tricks`, `categories`, `stances`, `variations`, `transitions`, `videos`, `tutorials`, `gaze_tips`.
+- 1.3. Generar migración inicial y aplicarla con `drizzle-kit migrate`.
+- 1.4. Importar `@trickingapi/tricks-core-data` como semilla base.
+- 1.5. Script de scraping de Loopkicks para extraer la lista de trucos por sección (sin vídeos todavía).
+- 1.6. Mapear trucos de Loopkicks a IDs de TrickingAPI, dejando un campo `loopkicks_slug`.
+- 1.7. Configurar GitHub Action de `db:migrate`.
+
+Criterio de cierre: base de datos poblada con trucos de TrickingAPI y con el mapeo a Loopkicks listo. Sin frontend todavía.
+
+## Fase 2: Frontend base
+
+Estado: pendiente.
+
+- 2.1. Crear `apps/web` con Next.js (App Router).
+- 2.2. Configurar Tailwind CSS + DaisyUI con los dos temas.
+- 2.3. Configurar next-intl con defaultLocale `es` y estructura por módulos.
+- 2.4. Configurar `packages/shared` con wrapper de localStorage, Zod y utilidades de formato.
+- 2.5. Layout base: navbar con toggle de tema, footer, breadcrumbs y estados de carga, error y vacío.
+- 2.6. Sistema de rutas: `/es/tricks`, `/es/variations`, `/es/transitions`, `/es/stances`, `/es/tips`, `/es/explore`, `/es/search`.
+- 2.7. Componente de tarjeta de truco reutilizable.
+
+Criterio de cierre: la web arranca, el tema respeta al usuario, i18n funciona y existe la estructura de navegación aunque las secciones estén vacías.
+
+## Fase 3: Vertical Kicks
+
+Estado: pendiente.
+
+- 3.1. Endpoint `/api/tricks?category=vertical-kicks` con paginación, filtros y orden en la base de datos.
+- 3.2. Vista de listado con virtualización (TanStack Virtual).
+- 3.3. Vista de detalle de truco con relaciones (prereqs, next tricks, descripción).
+- 3.4. Cache en localStorage con TTL para catálogo y detalle.
+- 3.5. i18n en español e inglés.
+- 3.6. Colores por dificultad (badge con escala verde a púrpura).
+- 3.7. Colores por categoría (badge azul para Kicks).
+
+Criterio de cierre: sección completa, navegable, responsive y accesible, con datos reales de TrickingAPI cruzados con Loopkicks. Esta fase establece el patrón para las siguientes cuatro secciones de trucos.
+
+## Fase 4: Backward Tricks
+
+Estado: pendiente.
+
+- 4.1. Endpoint `/api/tricks?direction=backward`.
+- 4.2. Reutilizar componentes de la Fase 3.
+- 4.3. Ajustar i18n y badges.
+- 4.4. Verificar que el mapeo de Loopkicks a TrickingAPI esté correcto para esta sección.
+
+Criterio de cierre: sección completa sin reescribir componentes. Si algo se duplica, se refactoriza a `packages/ui`.
+
+## Fase 5: Forward Tricks
+
+Estado: pendiente.
+
+- 5.1. Endpoint `/api/tricks?direction=forward`.
+- 5.2. Reutilizar componentes.
+- 5.3. Ajustar i18n y badges.
+
+Criterio de cierre: igual que Fase 4.
+
+## Fase 6: Inside Tricks
+
+Estado: pendiente.
+
+- 6.1. Endpoint `/api/tricks?direction=inside`.
+- 6.2. Reutilizar componentes.
+- 6.3. Ajustar i18n y badges.
+
+Criterio de cierre: igual que Fase 4.
+
+## Fase 7: Outside Tricks
+
+Estado: pendiente.
+
+- 7.1. Endpoint `/api/tricks?direction=outside`.
+- 7.2. Reutilizar componentes.
+- 7.3. Ajustar i18n y badges.
+
+Criterio de cierre: igual que Fase 4. Con esto se cierran las cinco secciones de trucos principales.
+
+## Fase 8: Variations
+
+Estado: pendiente.
+
+- 8.1. Modelar variaciones: cada variación referencia un truco base.
+- 8.2. Endpoint `/api/variations` con filtros por truco base.
+- 8.3. Vista de listado agrupada por truco base.
+- 8.4. Vista de detalle con relación a variaciones hermanas.
+- 8.5. i18n y badges.
+- 8.6. Integrar con Loopkicks.
+
+Criterio de cierre: sección completa, con relación clara entre truco base y variación.
+
+## Fase 9: Transitions
+
+Estado: pendiente.
+
+- 9.1. Modelar transiciones: cada transición conecta dos trucos (origen y destino).
+- 9.2. Endpoint `/api/transitions`.
+- 9.3. Vista de listado con filtros por truco de origen y destino.
+- 9.4. Vista de detalle con diagrama simple de flujo.
+- 9.5. i18n y badges.
+- 9.6. Integrar con Loopkicks.
+
+Criterio de cierre: sección completa, con la relación bidireccional bien modelada.
+
+## Fase 10: Stances
+
+Estado: pendiente.
+
+- 10.1. Modelar stances.
+- 10.2. Endpoint `/api/stances`.
+- 10.3. Vista de listado.
+- 10.4. Vista de detalle con trucos que aterrizan en ese stance.
+- 10.5. i18n y badges.
+- 10.6. Integrar con Loopkicks.
+
+Criterio de cierre: sección completa, con la relación entre stance y trucos bien poblada.
+
+## Fase 11: Explore Page
+
+Estado: pendiente.
+
+- 11.1. Definir qué es la Explore Page: propuesta por defecto, un grafo navegable de trucos donde los nodos son trucos y las aristas son transiciones o prereqs.
+- 11.2. Elegir librería de visualización: react-flow, d3-force o cytoscape.js. Requiere autorización.
+- 11.3. Endpoint `/api/graph`.
+- 11.4. Vista con filtros por categoría, dificultad y stance.
+- 11.5. Interacción: clic en nodo abre el detalle lateral sin cambiar de ruta.
+- 11.6. Cache agresivo en localStorage.
+
+Criterio de cierre: vista funcional, navegable con teclado, con performance medida y cache en cliente.
+
+## Fase 12: Búsqueda global
+
+Estado: pendiente.
+
+- 12.1. Endpoint `/api/search?q=` con búsqueda full-text resuelta en la base de datos.
+- 12.2. Componente de búsqueda con debounce de 300 a 500 ms.
+- 12.3. Cache de resultados en localStorage con TTL de 10 minutos.
+- 12.4. Búsqueda en navbar y en página dedicada `/es/search`.
+- 12.5. i18n en resultados.
+- 12.6. Resaltado de coincidencias.
+
+Criterio de cierre: búsqueda funcional desde cualquier página, con cache y sin sobrecargar al servidor.
+
+## Fase 13: Tutoriales de Kojo
+
+Estado: pendiente.
+
+- 13.1. Worker en `apps/scraper` con insta-fetcher y cola Upstash.
+- 13.2. Extracción de captions y guardado en la tabla `tutorials`.
+- 13.3. Componente acordeón con DaisyUI collapse: versión simple y expandida.
+- 13.4. Accesibilidad del acordeón: `aria-expanded`, `aria-controls`, `role="region"` y teclado.
+- 13.5. Virtualización si el listado supera 100 ítems.
+- 13.6. Persistencia del estado expandido en localStorage con TTL de 7 días.
+- 13.7. Rate limiting y respeto por `robots.txt` de Instagram.
+- 13.8. i18n: el contenido de Kojo queda en español fijo si no se traduce.
+
+Criterio de cierre: acordeón funcional y accesible, con contenido real extraído de Instagram.
+
+## Fase 14: Almacenamiento de vídeos (R2)
+
+Estado: pendiente.
+
+- 14.1. Configurar bucket R2 y credenciales.
+- 14.2. Script de descarga y subida de vídeos de Loopkicks.
+- 14.3. Reproductor en la vista de detalle con URL firmada o pública.
+- 14.4. Cache de URLs en localStorage con TTL.
+- 14.5. Optimización: compresión H.264/H.265 y resolución moderada para no pasar de 10 GB.
+
+Criterio de cierre: vídeos servidos desde R2, con reproducción fluida en móvil y sin superar el free tier.
+
+## Fase 15: Enlaces cruzados entre secciones
+
+Estado: pendiente.
+
+- 15.1. Cada truco del catálogo enlaza a sus variaciones, transiciones y stance relacionado.
+- 15.2. Cada variación y transición enlaza de vuelta al truco base.
+- 15.3. Cada tip de mirada enlaza a los tipos de truco que aplican.
+- 15.4. Cada tutorial de Kojo enlaza al truco que enseña.
+- 15.5. Componente de "relacionados" reutilizable en todas las vistas de detalle.
+- 15.6. Cache de relaciones en localStorage con TTL de 1 día.
+
+Criterio de cierre: navegación cruzada funcional y coherente, sin enlaces rotos.
+
+## Fase 16: Tips de mirada
+
+Estado: pendiente.
+
+Sección dedicada a tips técnicos sobre hacia dónde mirar en cada momento del truco. El contenido es curado por el usuario y se carga manualmente en la base de datos, no se scrapea de ninguna fuente externa.
+
+Subfases:
+
+- 16.1. Modelar tabla `gaze_tips` con campos: `id`, `trick_type` (patadas, giros, side flip, mortales, horizontales, aerial), `phase` (inicio, durante, caida), `instruction`, `warning` opcional, `order`, `locale`, `created_at`, `updated_at`.
+- 16.2. Modelar tabla `gaze_tip_summaries` para la idea clave, la regla de oro y el resumen corto, con campos: `id`, `kind` (idea_clave, regla_de_oro, resumen_corto), `content`, `locale`, `order`.
+- 16.3. Endpoint `/api/tips` con filtros por tipo de truco y por fase.
+- 16.4. Endpoint `/api/tips/summaries` para los bloques destacados.
+- 16.5. Vista de listado `/es/tips` con tarjetas agrupadas por tipo de truco.
+- 16.6. Vista de detalle `/es/tips/[trickType]` con todas las fases del tipo de truco.
+- 16.7. Componente de tarjeta destacada para la idea clave, con estilo visual propio.
+- 16.8. Componente de tarjeta destacada para la regla de oro, con ícono de advertencia y color de énfasis.
+- 16.9. Componente de resumen corto al final de la página, tipo tarjeta compacta.
+- 16.10. Componente de navegación entre tipos de truco con tabs o pills, con estado activo y accesibilidad.
+- 16.11. Colores por tipo de truco reutilizando los colores de categoría definidos en `docs/docs-agents/design.md`: patadas y kicks azul, giros y twists púrpura, side flip y mortales naranja, horizontales y aerial cian.
+- 16.12. i18n en español e inglés. El contenido técnico se traduce, pero los nombres de trucos en inglés se mantienen (b-twist, aerial, raiz, cheat kick) porque son términos estándar del deporte.
+- 16.13. Cache en localStorage con TTL largo (30 días) porque los tips cambian poco.
+- 16.14. Sección de Tips en la navbar principal, con ícono propio (por ejemplo un ojo de lucide-react).
+- 16.15. Enlaces desde cada tip a los tipos de truco del catálogo que aplican.
+- 16.16. El usuario puede proponer más tips a futuro. La estructura de datos debe soportar agregar nuevos tipos de truco y nuevas fases sin migración destructiva.
+
+Contenido inicial que debe cargarse como semilla de esta sección:
+
+- Idea clave: mirar al frente no significa mirar un solo punto todo el tiempo. Significa mirar hacia donde vas, hacia donde giras o hacia donde vas a caer, según el momento. Al caer, al frente es el horizonte, nunca el suelo.
+- Reglas por tipo de truco: patadas, giros (b-twist, twist), side flip, mortales (atrás, adelante, de lado), horizontales (raiz) y aerial. Cada tipo describe el inicio, el durante y la caída.
+- Regla de oro para no quedar con pecho abajo: al caer, nunca mirar al suelo; mirar al frente o al horizonte; mantener el pecho arriba y apretar el estómago; si miras los pies o el suelo, el pecho se cae.
+- Resumen corto: patadas al objetivo; giros y b-twist inicio frente, durante sobre el hombro, final frente; mortales y side flip inicio delante o arriba, durante no abajo, final horizonte; horizontales y aerial horizonte, nunca suelo; al caer, siempre frente u horizonte, nunca suelo.
+
+Campos que esta fase usa y que conviene vigilar: `gaze_tips` y `gaze_tip_summaries`. La Fase 15 usa las relaciones de los tips con los tipos de truco del catálogo.
+
+Criterio de cierre: sección completa, navegable, responsive y accesible, con todo el contenido inicial cargado en español e inglés, y con la idea clave, la regla de oro y el resumen corto destacados visualmente.
+
+## Fase 17: Pulido y validación final
+
+Estado: pendiente.
+
+- 17.1. Subagentes de validación (reviewer, security, tester, i18n-checker).
+- 17.2. Verificación de build de producción.
+- 17.3. Lighthouse y performance.
+- 17.4. Revisión de accesibilidad (WCAG AA).
+- 17.5. Checklist de lanzamiento completo (los 20 ítems).
+- 17.6. Limpieza de rastros de IA y capturas de Playwright.
+- 17.7. Actualización final de `AGENTS.md`, `stack-tecnico.md` y `BITACORA.md`.
+
+Criterio de cierre: proyecto listo para producción, con todos los subagentes en verde y el checklist de lanzamiento completo.
+
+## Fases sugeridas fuera de la numeración principal
+
+Estas fases no forman parte de la numeración principal y solo se abren con autorización explícita del usuario, cuando se active el skill tree y el generador de combos descritos en la sección 28.3 de `AGENTS.md`.
+
+- Fase A: autenticación y tabla de progreso.
+- Fase B: skill tree visual y marcado de trucos.
+- Fase C: generador de combos aleatorios.
+- Fase D: editor y guardado de combos.
+- Fase E: logros, estadísticas y compartición.
