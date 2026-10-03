@@ -47,6 +47,49 @@ Propósito: definir los estándares de validación, manejo de errores, consultas
 
 - Arquitectura asíncrona con async/await y try/catch.
 
+## Variantes de paginación por motor
+
+- SQL relacional (PostgreSQL en Neon): SELECT con WHERE, ORDER BY, LIMIT y OFFSET dentro de la sentencia. Cuando el conjunto es grande, paginación por cursores con WHERE (columna, id) < (valor, id) ORDER BY columna, id LIMIT n.
+- ORM y query builder: usar los métodos nativos que se traducen a la sentencia. Con Drizzle: .where(), .orderBy(), .limit(), .offset() y el conteo con count(). Prohibido cargar la colección completa y filtrar, ordenar o paginar en código de aplicación.
+- MongoDB (si algún servicio lo usa): aggregation pipeline con $match, $sort, $skip y $limit, y $facet cuando se necesita el total y la página en una sola pasada.
+
+## Metadatos de paginación y cursores
+
+- La respuesta paginada incluye el total de registros, la página actual, el tamaño de página y el total de páginas, o el cursor siguiente y anterior.
+- El tamaño de página tiene un máximo configurable; el cliente no puede pedir más registros que ese máximo.
+- La paginación por cursores se prefiere cuando el conjunto es grande, cambia con frecuencia o se ordena por columnas no únicas.
+- Cuando el conjunto es muy grande y el COUNT(*) exacto es costoso, se permite un total aproximado o un "hay más resultados" con cursor siguiente; la decisión se documenta y se justifica.
+
+## Borrado: verificaciones previas
+
+Antes de eliminar un recurso, el backend verifica en este orden:
+
+- Existencia (404).
+- Autorización (403).
+- Integridad referencial (409 o cascada autorizada).
+- Estado e idempotencia.
+- El backend nunca confía en la confirmación del frontend como sustituto de sus validaciones.
+
+## Datos simulados y datos de prueba
+
+- Prohibido insertar respuestas simuladas o datos estáticos para evadir fallas de infraestructura local.
+- La prohibición anterior no aplica a los datos de prueba controlados (fixtures, seeds, mocks) usados para verificar un cambio. La diferencia es la intención: si el agente no puede levantar la base de datos y en su lugar hardcodea la respuesta del endpoint, está prohibido; si levanta la base de datos, la llena con datos de prueba y verifica el endpoint, está permitido.
+
+## Arquitectura modular
+
+- Un módulo, servicio o carpeta de backend con demasiadas responsabilidades se divide en submódulos o subcarpetas por dominio.
+- No se acumulan controladores, servicios y modelos de dominios distintos en un mismo archivo.
+
+## Registro y validación de cuenta
+
+Aplica cuando el proyecto tenga registro de usuarios.
+
+- Todo registro se valida por al menos un canal antes de habilitar la cuenta.
+- Flujo: recibir y validar estrictamente los datos, verificar duplicado (409), crear la cuenta no validada, generar un token con expiración y almacenarlo hasheado, enviar el código por el canal y devolver una respuesta exitosa sin revelar si el correo ya existía.
+- Verificación: recibir identificador y código, validar contra el hash, marcar la cuenta como validada y devolver 400 genérico si falla.
+- Reenvío: rate limiting estricto, generar un código nuevo e invalidar el anterior, y devolver respuesta exitosa sin confirmar si el identificador existe.
+- Seguridad: el código nunca se devuelve ni se registra en logs; el token se almacena hasheado; los intentos con código incorrecto se limitan; el login devuelve 403 mientras la cuenta no esté validada; la eliminación respeta la política de soft delete o hard delete.
+
 ## Reglas transversales relacionadas
 
 - Seguridad: docs/docs-agents/reglas-seguridad.md.

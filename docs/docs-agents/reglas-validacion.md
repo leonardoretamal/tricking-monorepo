@@ -69,6 +69,10 @@ Alcance:
 - Contraste.
 - Compresión de imágenes.
 - Una sola llamada a la acción por pantalla.
+- Que la paginación, la búsqueda, los filtros y el ordenamiento se resuelvan en la sentencia de la base de datos.
+- Que el total de resultados se calcule en la base de datos.
+- Que no haya .filter(), .sort(), .slice() ni un equivalente sobre colecciones completas del recurso, ni en el backend ni en el frontend.
+- Que el borrado se comporte según la política (soft delete o hard delete) y con las verificaciones previas.
 
 ### i18n-checker
 
@@ -79,13 +83,19 @@ Alcance:
 - Placeholders.
 - Formateo.
 - Textos hardcodeados.
+- Número de claves consistente, interpolación consistente y plurales.
+- Estructura de carpetas de traducción.
+
+Herramientas sugeridas: i18next-parser, i18next-lint, eslint-plugin-i18n-json, @lingui/cli, vue-i18n-extract, ngx-translate-extract, intl_utils o un script propio. El test corre en CI.
 
 El detalle está en reglas-i18n.md.
 
 ## Instalación de skills
 
-- La instalación se hace con npx skills add <owner>/<repo> y npx autoskills.
-- Se priorizan las skills con más estrellas y las fuentes oficiales.
+- Al iniciar un proyecto nuevo, o al detectar que el repositorio no tiene skills de validación instaladas, se instalan las skills de reviewer, security, tester e i18n-checker.
+- La instalación se hace con npx skills add <owner>/<repo> (y la variante con -a claude-code -a opencode) y npx autoskills.
+- Se priorizan las skills con más estrellas y más instalaciones, de fuentes oficiales o reconocidas, actualizadas y con buenos resultados de escaneo de seguridad. Si ya hay una instalada, se usa esa.
+- Fuentes de ranking: skills.sh, https://github.com/LinklyAI/best-skills y https://github.com/jaychempan/Agent-Leaderboard.
 
 ## Reglas generales de cierre
 

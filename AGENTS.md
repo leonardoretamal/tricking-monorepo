@@ -89,6 +89,7 @@ Documentos que viven en `docs/docs-agents/`:
 - `docs/docs-agents/prompt-arranque.md`: el prompt de arranque del monorepo.
 - `docs/docs-agents/stack-tecnico.md`: inventario y decisiones cerradas del stack.
 - `docs/docs-agents/recomendaciones-stack.md`: catálogo de opciones por categoría con justificación y cuándo elegir cada una.
+- `docs/docs-agents/deteccion-stack.md`: qué detectar y registrar antes de completar la documentación base.
 - `docs/docs-agents/fases.md`: estado de las fases del proyecto y subfases.
 - `docs/docs-agents/design.md`: decisiones visuales (temas, paletas, colores por dificultad, categoría y tips).
 - `docs/docs-agents/reglas-frontend.md`: estándares de frontend.
@@ -103,6 +104,7 @@ Documentos que viven en `docs/docs-agents/`:
 - `docs/docs-agents/reglas-cookies.md`: cookies y consentimiento.
 - `docs/docs-agents/reglas-legal.md`: legal y cumplimiento.
 - `docs/docs-agents/reglas-seo.md`: SEO técnico.
+- `docs/docs-agents/reglas-ia.md`: seguridad y uso de IA en el producto y en el desarrollo.
 - `docs/docs-agents/checklist-lanzamiento.md`: checklist de lanzamiento con los 20 ítems.
 
 Fuera de esa carpeta, en la raíz, se quedan:
@@ -464,7 +466,7 @@ Cada ítem lleva estado (pendiente, en progreso, listo, no aplica) y una nota br
 
 Cualquier prompt que referencie AGENTS.md hereda automáticamente estas reglas. El agente debe:
 
-- Detectar el stack, dependencias, infraestructura, uso de IA, skills, agentes, i18n e idioma del repositorio.
+- Detectar el stack, dependencias, infraestructura, uso de IA, skills, agentes, i18n e idioma del repositorio. El detalle de qué detectar y registrar está en `docs/docs-agents/deteccion-stack.md`.
 - Leer AGENTS.md completo antes de tocar cualquier archivo.
 - Leer los documentos referenciados relevantes.
 - Cargar las skills relevantes.

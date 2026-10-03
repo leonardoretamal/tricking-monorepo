@@ -7,6 +7,15 @@ Propósito: definir la herramienta de logging y qué información se debe mostra
 - La herramienta de logging es Pino.
 - Alternativas consideradas: Winston y la consola estructurada de Next.js.
 - Motivo: alto rendimiento, formato JSON nativo e integración con cualquier destino.
+- Si el repositorio ya tiene una librería de logging configurada, se usa esa.
+
+## Herramienta según stack
+
+- Node.js (el stack del monorepo): Pino, Winston o Bunyan. En este repositorio, Pino.
+- Python: logging estructurado o structlog.
+- Go: zap, logrus o slog.
+- Laravel: los canales nativos.
+- En todos los casos, si el repositorio ya tiene una librería de logging configurada, se usa esa.
 
 ## Qué deben mostrar los logs
 

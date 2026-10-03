@@ -108,6 +108,90 @@ Reglas:
 - Los datos rehidratados se validan contra su esquema.
 - No se guardan secretos, tokens ni datos sensibles en el almacenamiento del navegador.
 
+## Ciclo de vida y limpieza de efectos
+
+Todo efecto secundario (temporizadores, escuchas de eventos, suscripciones, observadores) se limpia en el desmontaje. La forma depende del framework:
+
+- React: retornar la función de limpieza desde useEffect.
+- Vue: usar onUnmounted o el hook equivalente.
+- Angular: implementar OnDestroy y desuscribirse con takeUntil o Subscription.unsubscribe.
+- Svelte: retornar la función de limpieza desde onMount.
+- Flutter: cancelar StreamSubscription y Timer en dispose.
+
+Las peticiones HTTP lanzadas desde componentes con alta probabilidad de desmontaje incorporan un abortador:
+
+- JavaScript nativo: AbortController.
+- Axios: la señal signal con AbortController.
+- Angular: HttpClient ya cancela suscripciones; se usa takeUntil para las composiciones.
+
+## Campos de contraseña
+
+- Todo campo de contraseña lleva un ícono de ojo al final del input para alternar entre mostrar y ocultar.
+- El estado por defecto es oculto (type="password"). Cada clic alterna entre oculto y visible (type="text").
+- El ícono refleja el estado actual: ojo abierto cuando el valor está visible, ojo cerrado o tachado cuando está oculto.
+- El ícono es accesible: aria-label descriptivo, operable por teclado y con área de clic suficiente.
+- El cambio de visibilidad no altera el valor del campo ni dispara validaciones adicionales.
+- En formularios con más de un campo de contraseña, cada campo tiene su propio toggle independiente.
+
+## Navegación y subsecciones
+
+- La navegación principal se organiza en secciones de primer nivel. La profundidad máxima es de dos niveles (sección y subsección). Si hace falta un tercer nivel, se replantea la arquitectura de la interfaz.
+- Cuando un módulo acumula muchas funcionalidades, vistas o campos, se divide en subsecciones. Criterio orientativo: más de cinco o seis ítems de primer nivel o scroll excesivo.
+- Las subsecciones se muestran de forma consistente en todo el proyecto (tabs, sidebar secundario, menú desplegable o breadcrumbs), según lo que ya use el repositorio. No se mezclan patrones.
+- El ítem activo se marca con las utilidades del router (NavLink en React Router, routerLinkActive en Angular, useRoute en Vue Router, active-class en Nuxt), no comparando la URL a mano.
+- El estado activo se distingue por más de un atributo visual (color, peso de fuente, borde, fondo o ícono) e incluye aria-current="page".
+- En móvil la navegación se colapsa en menú hamburguesa o barra inferior, según el patrón del repositorio, y el estado activo sigue visible.
+- La navegación es operable con teclado, con foco visible, y los íconos sin texto llevan aria-label descriptivo.
+
+## Modularidad de componentes
+
+- Los componentes no se llenan de cientos o miles de líneas.
+- Se usa una arquitectura de componente padre, componentes hijos y nietos, con responsabilidades atómicas.
+
+## Errores de validación en formularios
+
+- Todo error de validación se muestra al usuario; nunca se oculta ni se silencia.
+- Ubicación: debajo del input correspondiente. Nunca en un bloque genérico al final del formulario, nunca solo en un toast, nunca en una alerta nativa.
+- Apariencia: color de error del design system, con el borde del input también en color de error mientras el campo sea inválido y contraste WCAG AA.
+- Momento: se valida el campo al salir (onBlur); al enviar se validan todos y se muestran todos los errores a la vez; mientras se escribe (onChange) se limpia el error del campo cuando el valor deja de ser inválido.
+- Mensajes específicos por tipo de error (requerido, formato, longitud, confirmación que no coincide, fuera de rango), no genéricos.
+- Accesibilidad: aria-describedby apuntando al id del mensaje, aria-invalid="true" mientras esté inválido y anuncio con role="alert" o aria-live. El color no es el único indicador.
+- No se desplaza el layout al aparecer el mensaje.
+- Si el backend devuelve errores por campo, se muestran igual que los del cliente.
+- Prohibido alert, confirm y prompt nativos; prohibido usar solo un toast para errores de campo; prohibido exponer mensajes técnicos crudos.
+- Los mensajes y las reglas del frontend coinciden con los del backend.
+
+## Registro y validación de cuenta
+
+Aplica cuando el proyecto tenga registro de usuarios.
+
+- El formulario de registro indica de forma clara y previa el canal de validación (correo electrónico o número telefónico).
+- Tras enviar el registro, se muestra una pantalla o mensaje que pide revisar el canal elegido.
+- La pantalla de validación incluye el campo para el código, un botón de reenvío con espera de 30 a 60 segundos y un enlace para corregir el correo o el número.
+- Mientras la cuenta no esté validada, se muestra un aviso persistente y se evita el acceso a funcionalidades restringidas.
+- Nunca se muestra en la interfaz el código de validación ni los detalles del token.
+- Los campos de contraseña del registro cumplen la regla de campos de contraseña.
+
+## Seguridad en el cliente
+
+- Nunca se exponen URLs sensibles en el frontend ni se hardcodean tokens, claves, secretos o endpoints privados.
+- Las variables de entorno públicas usan process.env.NEXT_PUBLIC_ en Next.js. El detalle está en reglas-secretos.md.
+- Prohibido inyectar HTML sin sanitización previa (innerHTML, dangerouslySetInnerHTML, v-html, bypassSecurityTrustHtml) sin una librería dedicada.
+- La validación del cliente es para experiencia de usuario y nunca sustituye la validación del servidor.
+- Prohibido guardar tokens, credenciales, contraseñas, llaves privadas o datos personales sensibles en localStorage, sessionStorage o IndexedDB.
+- El frontend consume datos reales de la base de datos a través del backend. Prohibido mostrar datos simulados o hardcodeados en producción como sustituto de una integración no terminada.
+
+## Persistencia y SSR
+
+- El gestor de estado del repositorio (TanStack Query) es la fuente única de verdad durante la sesión. El almacenamiento del navegador es solo la copia de respaldo que sobrevive al cierre.
+- Prohibido guardar el mismo dato en dos lugares a la vez.
+- Excepciones justificadas para usar localStorage directo: datos que no requieren reactividad y se leen una sola vez al iniciar, o preferencias que una librería externa lee directamente. En todos los casos, con try/catch y validación del dato leído.
+- Al rehidratar, se valida el contenido contra un esquema (Zod) y se maneja el dato ausente, corrupto, de versión antigua o manipulado. Los gestores con versionado y migrate lo usan.
+- El estado derivado, el estado transitorio de UI (modales, loaders) y los datos recalculables no se persisten.
+- Los datos que superan el límite práctico de localStorage (cerca de 5 MB por origen) o que requieren lectura y escritura frecuente van a IndexedDB.
+- SSR: nunca se lee almacenamiento del navegador a nivel de módulo ni durante el renderizado del servidor. Las lecturas van dentro de useEffect, de un inicializador perezoso o del mecanismo del gestor de estado.
+- Toda escritura en almacenamiento se envuelve en try/catch y se degrada con gracia (modo privado, iframes, cuota superada).
+
 ## Reglas transversales relacionadas
 
 - Cookies y consentimiento: docs/docs-agents/reglas-cookies.md.
