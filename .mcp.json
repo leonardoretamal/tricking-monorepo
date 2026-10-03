@@ -2,10 +2,7 @@
   "mcpServers": {
     "claude-flow": {
       "command": "/home/b0nfire/.nvm/versions/node/v22.23.1/bin/ruflo",
-      "args": [
-        "mcp",
-        "start"
-      ],
+      "args": ["mcp", "start"],
       "env": {
         "npm_config_update_notifier": "false",
         "CLAUDE_FLOW_MODE": "v3",
