@@ -1,6 +1,13 @@
 #!/usr/bin/env sh
 set -e
 
-pnpm exec lint-staged
+start=$(date +%s)
+
+pnpm exec lint-staged --concurrent false
 pnpm typecheck
-shellcheck bin/lupe-start
+pnpm exec prettier --check .
+node scripts/check-env-example.mjs
+shellcheck bin/lupe-start .husky/pre-commit .husky/pre-push .husky/commit-msg
+
+end=$(date +%s)
+echo "pre-commit OK en $((end - start))s"

@@ -17,6 +17,7 @@
     "test:e2e:mobile": "playwright test --project=mobile",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "env:check": "node scripts/check-env-example.mjs",
     "prepare": "husky"
   },
   "devDependencies": {

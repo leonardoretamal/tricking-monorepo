@@ -120,6 +120,13 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 - No hay `loading.tsx` de ruta global a propósito: su boundary de Suspense hacía que las rutas desconocidas respondieran HTTP 200. El estado de carga se resuelve con el componente `LoadingState` en las fases con carga de datos.
 - Estado del servidor (TanStack Query) y el consumo de la base de datos arrancan en la Fase 3; la Fase 2 no cablea datos.
 
+## Ganchos de Git
+
+- pre-commit: lint-staged con `--concurrent false`, `pnpm typecheck`, formato en modo verificación, chequeo de `.env.example` sincronizado (`scripts/check-env-example.mjs`) y shellcheck sobre `bin/lupe-start` y los ganchos. Imprime su duración.
+- pre-push: `pnpm test`, validación de claves i18n y build de producción; borra `apps/web/.next` al terminar. Imprime su duración.
+- El build de producción vive en pre-push, así que el agente no lo ejecuta a mano (ver AGENTS.md sección 18).
+- `apps/web/next-env.d.ts` está en `.gitignore` y no se versiona: Next lo regenera en cada dev o build y cambiaba entre `.next/dev` y `.next`.
+
 ## Migraciones
 
 - Modo: manual con drizzle-kit (`db:generate` y `db:migrate`). No hay migraciones automáticas al desplegar.

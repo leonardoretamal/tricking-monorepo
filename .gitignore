@@ -8,6 +8,8 @@ dist/
 out/
 build/
 *.tsbuildinfo
+# Generado por Next en cada dev o build (cambia entre .next/dev y .next); no se versiona
+apps/web/next-env.d.ts
 
 # Entorno
 .env

@@ -36,9 +36,10 @@ Antes de cualquier operación que toque ramas, entornos o despliegues, el agente
 
 ## Hooks
 
-- pre-commit: typecheck, lint, shellcheck y prettier. Corre rápido, en cada commit.
-- pre-push: test e integridad de servicios. Corre más lento, en cada push.
-- Si el repositorio configura el build de producción en pre-push (o pre-commit), el gancho lo ejecuta y borra la carpeta de build al terminar, para no dejarla cacheada ni ocupar espacio. En este repositorio el build NO está en ningún gancho: se ejecuta a mano antes de proponer git add, commit, push, PR o merge (ver AGENTS.md sección 18).
+- pre-commit: lint-staged con `--concurrent false`, typecheck, formato en modo verificación (`prettier --check .`), chequeo de `.env.example` sincronizado (`scripts/check-env-example.mjs`) y shellcheck sobre `bin/lupe-start` y los ganchos. Corre rápido, en cada commit.
+- pre-push: tests, validación de claves i18n y build de producción. El gancho borra la carpeta de build (`apps/web/.next`) al terminar, para no dejarla cacheada ni ocupar espacio. Corre más lento, en cada push.
+- Ambos ganchos imprimen su duración al final, para medir que no frenen el trabajo.
+- En este repositorio el build de producción está en pre-push: el agente NO lo ejecuta a mano, lo delega al gancho y lo anota en el reporte (ver AGENTS.md sección 18).
 - Los ganchos nunca se saltan: ni `--no-verify`, ni variables como `HUSKY=0` o `LEFTHOOK=0`, ni tocar `core.hooksPath`.
 
 ## Commits

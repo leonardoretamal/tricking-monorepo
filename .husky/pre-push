@@ -1,4 +1,12 @@
 #!/usr/bin/env sh
 set -e
 
+start=$(date +%s)
+
 pnpm test
+pnpm --filter @tricking/web i18n:check
+pnpm build
+rm -rf apps/web/.next
+
+end=$(date +%s)
+echo "pre-push OK en $((end - start))s"

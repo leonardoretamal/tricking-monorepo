@@ -353,8 +353,8 @@ El detalle va en `docs/docs-agents/reglas-git.md`.
 
 - El agente opera sobre la rama de trabajo del repositorio (`main` en este repositorio, ver `docs/docs-agents/stack-tecnico.md`). Puede hacer commit y push a la rama de trabajo con autorización del usuario. Las ramas de producción (`production`, `prod`, `release/*`) son zona prohibida.
 - Detección de ramas y confirmación previa para operaciones que tocan producción: ver `docs/docs-agents/reglas-git.md`.
-- pre-commit: typecheck, lint, shellcheck, prettier.
-- pre-push: test, integridad de servicios.
+- pre-commit: lint-staged (con `--concurrent false`), typecheck, formato en modo verificación, chequeo de `.env.example` sincronizado y shellcheck.
+- pre-push: tests, validación de claves i18n y build de producción; el gancho borra la carpeta de build al terminar.
 - Conventional Commits: feat, fix, chore, docs, refactor, test, style, perf, ci, build, revert.
 - Templates de PR e issues en español. Las palabras clave de GitHub (close, fixes, resolves, Co-authored-by, BREAKING CHANGE) nunca se traducen.
 - Sección "Variables de entorno" en el body del PR cuando el PR agrega, renombra o elimina variables. Incluye nombre, propósito, dónde configurarla, y si es obligatoria u opcional.
@@ -395,6 +395,8 @@ Antes de entregar cualquier tarea, antes de proponer `git add`, commit, push, PR
 - Verificar que el build termine sin errores ni advertencias bloqueantes. Si falla, corregir antes de dar la tarea por cerrada.
 - Confirmar que la carpeta de build está en `.gitignore` antes de borrarla.
 - Reporte: "Build de producción verificado y carpeta de build eliminada", "Build delegado al gancho pre-push" o el detalle del fallo.
+
+En este repositorio el build de producción está en el gancho pre-push: el agente no lo ejecuta a mano, lo reporta como "Build delegado al gancho pre-push".
 
 Capturas con Playwright:
 
@@ -626,8 +628,6 @@ Requiere autorización explícita del usuario antes de empezar a construir cualq
 ### 28.4 Funcionalidades pendientes sugeridas por el usuario
 
 Las que el usuario agregue durante el desarrollo, registradas con fecha y motivo.
-
-- Endurecer los ganchos de pre-commit y pre-push (2026-10-03, sugerido por el usuario). Los ganchos actuales son mínimos: pre-commit corre `lint-staged`, `pnpm typecheck` y `shellcheck`; pre-push corre solo `pnpm test`. Se quiere mejorar en una fase futura (candidata: la Fase 17 o una subfase propia, a decidir). Propuesta de partida para esa fase: sumar al pre-commit el chequeo de formato en modo verificación y la sincronización de `.env.example` cuando se tocan variables de entorno; sumar al pre-push el build de producción y la validación de claves i18n, o delegar el build al pre-push para que el agente no lo ejecute a mano (ver la sección 18 y `docs/docs-agents/reglas-git.md`); evaluar `lint-staged` con `--concurrent false` para evitar choques sobre el mismo archivo; y medir el tiempo de cada gancho para que no frene el trabajo. No se implementa sin autorización explícita del usuario.
 
 ### 28.5 Recomendaciones adicionales sugeridas por el agente
 

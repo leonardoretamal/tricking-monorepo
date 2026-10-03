@@ -271,6 +271,7 @@ Criterio de cierre: sección completa, navegable, responsive y accesible, con to
 
 Estado: pendiente.
 
+- 17.0. Endurecer los ganchos de pre-commit y pre-push (adelantado y completado el 2026-10-03).
 - 17.1. Subagentes de validación (reviewer, security, tester, i18n-checker).
 - 17.2. Verificación de build de producción.
 - 17.3. Lighthouse y performance.

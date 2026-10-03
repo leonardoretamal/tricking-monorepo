@@ -111,3 +111,18 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: las reglas de autenticación y eliminación de cuenta quedan marcadas como condicionales (no aplican mientras el producto no tenga login); el umbral de `AGENTS.md` se sube a 500 o 600 líneas.
 - Pendientes y riesgos: el repositorio no usa autenticación, así que las reglas de login y eliminación de cuenta quedan documentadas pero inactivas.
 - Referencias: `AGENTS.md`, `docs/docs-agents/`.
+
+## Ganchos de Git endurecidos (2026-10-03)
+
+- Issue: no aplica (trabajo de reglas y tooling).
+- Título: Endurecer los ganchos de pre-commit y pre-push.
+- Qué pedía: implementar el pendiente registrado en `AGENTS.md` sección 28.4: sumar formato en modo verificación y chequeo de `.env.example` al pre-commit, sumar build de producción y validación i18n al pre-push, `lint-staged` con `--concurrent false` y medir la duración de cada gancho.
+- Fecha de inicio: 2026-10-03.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Acciones: se reescribió `.husky/pre-commit` (lint-staged con `--concurrent false`, `pnpm typecheck`, `prettier --check .`, `scripts/check-env-example.mjs` y shellcheck sobre `bin/lupe-start` y los ganchos, con duración al final); se reescribió `.husky/pre-push` (`pnpm test`, `pnpm --filter @tricking/web i18n:check`, `pnpm build` y borrado de `apps/web/.next`, con duración al final); se creó `scripts/check-env-example.mjs` (detecta variables de entorno nuevas en los cambios preparados que no estén declaradas en `.env.example`); se agregó el script `env:check` al `package.json` raíz; se agregó `apps/web/next-env.d.ts` a `.gitignore` y se dejó de versionar (generaba churn entre la variante de dev y la de build). Se actualizó `docs/docs-agents/reglas-git.md`, `AGENTS.md` (secciones 15, 18 y 28.4), `docs/docs-agents/stack-tecnico.md` y `docs/docs-agents/fases.md` (subfase 17.0).
+- Archivos tocados: `.husky/pre-commit`, `.husky/pre-push`, `scripts/check-env-example.mjs`, `package.json`, `.gitignore`, `apps/web/next-env.d.ts` (destrackeado), `docs/docs-agents/reglas-git.md`, `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/fases.md`, `AGENTS.md`, `BITACORA.md`.
+- Pruebas: el chequeo de `.env.example` falla con una variable nueva sin declarar y pasa en el caso normal; shellcheck sin hallazgos en `bin/lupe-start` y los ganchos; typecheck de la web en verde sin `next-env.d.ts`.
+- Decisiones: el build de producción pasa al gancho pre-push, así que el agente deja de ejecutarlo a mano (sección 18); `next-env.d.ts` deja de versionarse para eliminar el churn.
+- Pendientes y riesgos: el pre-push ahora corre el build, lo que alarga el push; ambos ganchos imprimen su duración para vigilarlo.
+- Referencias: `AGENTS.md` sección 28.4, `docs/docs-agents/reglas-git.md`, `docs/docs-agents/fases.md`.
