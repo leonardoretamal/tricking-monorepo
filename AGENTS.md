@@ -627,6 +627,8 @@ Requiere autorización explícita del usuario antes de empezar a construir cualq
 
 Las que el usuario agregue durante el desarrollo, registradas con fecha y motivo.
 
+- Endurecer los ganchos de pre-commit y pre-push (2026-10-03, sugerido por el usuario). Los ganchos actuales son mínimos: pre-commit corre `lint-staged`, `pnpm typecheck` y `shellcheck`; pre-push corre solo `pnpm test`. Se quiere mejorar en una fase futura (candidata: la Fase 17 o una subfase propia, a decidir). Propuesta de partida para esa fase: sumar al pre-commit el chequeo de formato en modo verificación y la sincronización de `.env.example` cuando se tocan variables de entorno; sumar al pre-push el build de producción y la validación de claves i18n, o delegar el build al pre-push para que el agente no lo ejecute a mano (ver la sección 18 y `docs/docs-agents/reglas-git.md`); evaluar `lint-staged` con `--concurrent false` para evitar choques sobre el mismo archivo; y medir el tiempo de cada gancho para que no frene el trabajo. No se implementa sin autorización explícita del usuario.
+
 ### 28.5 Recomendaciones adicionales sugeridas por el agente
 
 Estas son propuestas, no compromisos. El usuario decide cuáles se activan.
