@@ -30,3 +30,14 @@ pnpm-debug.log*
 
 # Turbo
 .turbo/
+
+# Herramientas locales de agentes (ruflo, graphify)
+.claude-flow/
+.swarm/
+ruvector.db
+
+# Playwright
+playwright-report/
+test-results/
+.playwright/
+blob-report/

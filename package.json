@@ -2,6 +2,7 @@
   "name": "tricking-monorepo",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@10.33.4",
   "engines": {
     "node": ">=20"
@@ -9,13 +10,27 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "lint": "eslint . --no-error-on-unmatched-pattern",
     "typecheck": "turbo run typecheck",
-    "test": "turbo run test",
-    "format": "turbo run format"
+    "test": "vitest run --passWithNoTests",
+    "test:e2e": "playwright test",
+    "test:e2e:mobile": "playwright test --project=mobile",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.39.5",
+    "@playwright/test": "^1.63.0",
+    "eslint": "^9.39.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.9.9",
     "turbo": "^2.11.7",
-    "typescript": "^5.6.0"
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^3.2.7"
   }
 }
