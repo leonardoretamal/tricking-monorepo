@@ -11,6 +11,11 @@
         "/home/b0nfire/.cache/playwright-mcp"
       ],
       "enabled": true
+    },
+    "Neon": {
+      "type": "remote",
+      "url": "https://mcp.neon.tech/mcp",
+      "enabled": true
     }
   },
   "plugin": ["@warp-dot-dev/opencode-warp"]
