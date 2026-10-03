@@ -96,32 +96,38 @@ Criterio de cierre: sección completa, navegable, responsive y accesible, con da
 
 ## Fase 4: Backward Tricks
 
-Estado: pendiente.
+Estado: completada.
 
-- 4.1. Endpoint `/api/tricks?direction=backward`.
+- 4.1. Endpoint `/api/tricks?section=backward`.
 - 4.2. Reutilizar componentes de la Fase 3.
 - 4.3. Ajustar i18n y badges.
 - 4.4. Verificar que el mapeo de Loopkicks a TrickingAPI esté correcto para esta sección.
+
+Notas de cierre: se reutilizó la fundación de la Fase 3 sin reescribir componentes (mismo endpoint con `section=backward`, misma ruta `/es/tricks/backward`). Conteo: 245 trucos, mapeo Loopkicks a TrickingAPI verificado 245/245. Dificultad curada para los 245. i18n y colores de badge ya cubiertos por el patrón. E2E propio en `e2e/tricks-backward.spec.ts`.
 
 Criterio de cierre: sección completa sin reescribir componentes. Si algo se duplica, se refactoriza a `packages/ui`.
 
 ## Fase 5: Forward Tricks
 
-Estado: pendiente.
+Estado: completada.
 
-- 5.1. Endpoint `/api/tricks?direction=forward`.
+- 5.1. Endpoint `/api/tricks?section=forward`.
 - 5.2. Reutilizar componentes.
 - 5.3. Ajustar i18n y badges.
+
+Notas de cierre: reutiliza la fundación de la Fase 3 sin reescribir componentes. Conteo: 20 trucos, dificultad curada 20/20, mapeo verificado 20/20. La sección entra en una sola página, por eso el E2E verifica la ausencia de controles de paginación. E2E propio en `e2e/tricks-forward.spec.ts`.
 
 Criterio de cierre: igual que Fase 4.
 
 ## Fase 6: Inside Tricks
 
-Estado: pendiente.
+Estado: completada.
 
-- 6.1. Endpoint `/api/tricks?direction=inside`.
+- 6.1. Endpoint `/api/tricks?section=inside`.
 - 6.2. Reutilizar componentes.
 - 6.3. Ajustar i18n y badges.
+
+Notas de cierre: reutiliza la fundación de la Fase 3 sin reescribir componentes. Conteo: 123 trucos, dificultad curada 123/123, mapeo verificado 123/123. E2E propio en `e2e/tricks-inside.spec.ts`.
 
 Criterio de cierre: igual que Fase 4.
 

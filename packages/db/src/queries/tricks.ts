@@ -1,4 +1,4 @@
-import { and, asc, count, desc, eq, ilike, inArray, isNull, or } from 'drizzle-orm';
+import { and, asc, count, desc, eq, ilike, inArray, isNull, or, sql } from 'drizzle-orm';
 
 import { getDb } from '../client';
 import { categories, trickCategories, tricks } from '../schema';
@@ -66,9 +66,9 @@ function orderBy(sort: TrickSort) {
     case 'name-desc':
       return desc(tricks.name);
     case 'difficulty-asc':
-      return asc(tricks.difficulty);
+      return sql`${tricks.difficulty} asc nulls last`;
     case 'difficulty-desc':
-      return desc(tricks.difficulty);
+      return sql`${tricks.difficulty} desc nulls last`;
     case 'name-asc':
     default:
       return asc(tricks.name);

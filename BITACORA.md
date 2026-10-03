@@ -143,3 +143,21 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Pendientes y riesgos: la dificultad de backward, forward e inside queda por curar (lo hacen las fases 4 a 6); las secciones no tienen video (Fase 14); la búsqueda full-text es de la Fase 12 y aquí `q` usa `ilike`; el build de producción se delega al gancho pre-push.
 - Subagentes: la ronda de validación de las fases 3 a 6 se ejecuta como parte de esta tarea, con un subagente por fase.
 - Referencias: `docs/docs-agents/fases.md`, `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/design.md`, `AGENTS.md` secciones 12 y 17.
+
+## Fases 4, 5 y 6: Backward, Forward e Inside (2026-10-03)
+
+- Issue: no aplica (trabajo de fases, sin issue asociado).
+- Título: Backward (Fase 4), Forward (Fase 5) e Inside (Fase 6) sobre la fundación de la Fase 3.
+- Qué pedía: cada sección con su endpoint, reutilizando los componentes de la Fase 3, con i18n y badges ajustados y el mapeo de Loopkicks verificado.
+- Fecha de inicio: 2026-10-03.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Acciones: las tres secciones se resolvieron con la fundación genérica de la Fase 3 (endpoint `GET /api/tricks?section=...`, rutas `/es/tricks/[section]` y detalle, componentes en `packages/ui`), sin reescribir componentes. Se curó la dificultad de cada sección en su archivo de `packages/db/src/seed/difficulty/` (backward 245, forward 20, inside 123) y se aplicó a la base. Se agregaron E2E por sección. Se corrigieron hallazgos de la validación: consistencia de la sección en el detalle (404 si el truco no pertenece a la sección de la URL), validación con Zod del `id` de `GET /api/tricks/[id]`, orden de dificultad con `nulls last`, y limpieza de código muerto.
+- Subagentes: 4 en paralelo, uno por fase (3, 4, 5 y 6), con propiedad de archivos disjunta (un archivo de dificultad y un E2E por sección); el orquestador hizo la integración, la aplicación de la dificultad, las correcciones transversales, la documentación y el commit.
+- Validación de cierre: cada subagente actuó como reviewer, security, tester e i18n-checker sobre su fase. Hallazgos aplicados por el orquestador: los 4 corregibles listados arriba. Pendientes documentados: la dificultad es una propuesta inicial ajustable por el usuario (por ejemplo `jackknife1080`, `shurikane` frente a `shuriken`, `touchdownQuat`); el job `e2e` de CI depende del secreto `DATABASE_URL` (no disponible en PRs de forks, irrelevante mientras se trabaje directo sobre `main`); `loadEnvFile` está duplicado en cuatro scripts del backend.
+- Archivos tocados: `packages/db/src/seed/difficulty/{backward,forward,inside,vertical-kicks}.ts`, `packages/db/src/queries/tricks.ts`, `apps/web/src/app/[locale]/tricks/[section]/[id]/page.tsx`, `apps/web/src/app/api/tricks/[id]/route.ts`, `apps/web/src/lib/{api-schemas,sections}.ts`, `e2e/tricks-{vertical-kicks,backward,forward,inside}.spec.ts`, `docs/docs-agents/fases.md`, `BITACORA.md`.
+- Comandos relevantes: `pnpm --filter @tricking/db db:difficulty`; `pnpm typecheck`; `pnpm lint`; `pnpm test`; `pnpm test:e2e`; verificación de cobertura de dificultad por sección contra la base.
+- Pruebas: typecheck y lint en verde; 32 tests unitarios; cobertura de dificultad 100% en las cuatro secciones (483 trucos); 52 pruebas E2E en verde (chromium y mobile) contra datos reales.
+- Decisiones: el parámetro de la API es `section` (no `direction`); la dificultad se cura por sección en archivos separados para no chocar entre fases; la consistencia entre sección de la URL y truco es un 404.
+- Pendientes y riesgos: dificultad inicial sujeta a ajuste; la sección Outside (Fase 7) queda sin curar; videos y búsqueda full-text son de fases posteriores; el build de producción se delega al gancho pre-push.
+- Referencias: `docs/docs-agents/fases.md`, `docs/docs-agents/stack-tecnico.md`, `AGENTS.md` secciones 12 y 17.

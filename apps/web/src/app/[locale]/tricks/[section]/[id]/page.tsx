@@ -37,6 +37,9 @@ export default async function TrickDetailPage({ params }: TrickDetailPageProps) 
   if (!trick) {
     notFound();
   }
+  if (trick.section !== null && trick.section !== section) {
+    notFound();
+  }
 
   const t = await getTranslations('tricks');
 

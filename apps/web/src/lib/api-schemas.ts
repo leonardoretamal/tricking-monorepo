@@ -12,4 +12,6 @@ export const tricksQuerySchema = z.object({
   pageSize: z.coerce.number().int().min(1).max(MAX_PAGE_SIZE).default(DEFAULT_PAGE_SIZE),
 });
 
+export const trickIdSchema = z.string().trim().min(1).max(120);
+
 export type TricksQuery = z.infer<typeof tricksQuerySchema>;
