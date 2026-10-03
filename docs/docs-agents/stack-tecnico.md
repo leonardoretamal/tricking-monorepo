@@ -43,7 +43,7 @@ turbo, pnpm, typescript, eslint, `@typescript-eslint/*`, prettier, husky, lint-s
 
 ## Dependencias aprobadas del frontend
 
-next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-virtual`, date-fns, date-fns-tz.
+next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, date-fns, date-fns-tz.
 
 ## Dependencias aprobadas del backend y datos
 
@@ -119,6 +119,16 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 - `packages/ui` y `packages/shared` se consumen como fuente TypeScript (`exports` a `src/index.ts`) con `transpilePackages` en `next.config.ts`, sin paso de build a `dist`.
 - No hay `loading.tsx` de ruta global a propósito: su boundary de Suspense hacía que las rutas desconocidas respondieran HTTP 200. El estado de carga se resuelve con el componente `LoadingState` en las fases con carga de datos.
 - Estado del servidor (TanStack Query) y el consumo de la base de datos arrancan en la Fase 3; la Fase 2 no cablea datos.
+
+## Trucos y API (Fase 3)
+
+- La sección de Loopkicks se modela con la columna `section` en `tricks`. Valores: `vertical-kicks`, `backward`, `forward`, `inside`, `outside`.
+- La capa de consulta vive en `packages/db/src/queries/tricks.ts` (`listTricks`, `getTrickById`) con paginación, filtros, búsqueda y orden resueltos en SQL y el total calculado en la base de datos.
+- Endpoints: `GET /api/tricks` (valida query con Zod, whitelist de orden y tope de `pageSize` en 100) y `GET /api/tricks/[id]`. Runtime Node; el detalle es `force-dynamic`.
+- El frontend usa TanStack Query con persistencia en localStorage a través de un `Persister` propio (`apps/web/src/lib/query-persister.ts`) que pasa por el wrapper `packages/shared/src/storage.ts`. TTL del cache: 1 día.
+- La dificultad (0 a 5) se cura a mano en `packages/db/src/seed/difficulty/` (un archivo por sección) y se aplica con `db:difficulty`; ni TrickingAPI ni Loopkicks la publican.
+- `@tricking/db` se consume desde `apps/web` como fuente TS con `transpilePackages`. El `.env` de la raíz se carga en `apps/web/next.config.ts` para el runtime de desarrollo (no-op si no existe; en producción las variables vienen del entorno).
+- `pino` se usa para el logging del backend (route handlers); no se registran datos sensibles ni errores crudos.
 
 ## Ganchos de Git
 

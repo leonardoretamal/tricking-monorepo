@@ -11,6 +11,7 @@ export const THEME_KEY = 'theme';
 export const MINUTE_MS = 60_000;
 export const FIVE_MINUTES_MS = 5 * MINUTE_MS;
 export const TEN_MINUTES_MS = 10 * MINUTE_MS;
+export const ONE_DAY_MS = 24 * 60 * MINUTE_MS;
 export const SEVEN_DAYS_MS = 7 * 24 * 60 * MINUTE_MS;
 export const THIRTY_DAYS_MS = 30 * 24 * 60 * MINUTE_MS;
 export const ONE_YEAR_MS = 365 * 24 * 60 * MINUTE_MS;

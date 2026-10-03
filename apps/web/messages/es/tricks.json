@@ -1,6 +1,85 @@
 {
   "tricks": {
     "title": "Trucos",
-    "description": "Catálogo de trucos de tricking con su información técnica y de ejecución."
+    "description": "Catálogo de trucos de tricking con su información técnica y de ejecución.",
+    "sections": {
+      "vertical-kicks": {
+        "title": "Vertical kicks",
+        "description": "Patadas con giro vertical donde la pierna pasa por encima de la cabeza: 540, cheat 720, tornado y sus variantes."
+      },
+      "backward": {
+        "title": "Backward",
+        "description": "Trucos que giran hacia atrás y aterrizan de espaldas o encadenan desde ahí."
+      },
+      "forward": {
+        "title": "Forward",
+        "description": "Trucos que giran hacia adelante, como el aerial y el raiz."
+      },
+      "inside": {
+        "title": "Inside",
+        "description": "Trucos con giro hacia adentro, desde el lado interno del cuerpo."
+      },
+      "outside": {
+        "title": "Outside",
+        "description": "Trucos con giro hacia afuera, desde el lado externo del cuerpo."
+      }
+    },
+    "filters": {
+      "searchLabel": "Buscar",
+      "searchPlaceholder": "Nombre del truco",
+      "difficultyLabel": "Dificultad",
+      "allDifficulties": "Todas",
+      "sortLabel": "Ordenar por",
+      "pageSizeLabel": "Por página",
+      "pageSizeOption": "{count} por página"
+    },
+    "sort": {
+      "nameAsc": "Nombre (A a Z)",
+      "nameDesc": "Nombre (Z a A)",
+      "difficultyAsc": "Dificultad (menor a mayor)",
+      "difficultyDesc": "Dificultad (mayor a menor)"
+    },
+    "results": {
+      "none": "No hay trucos para mostrar.",
+      "range": "Mostrando {start} a {end} de {total} trucos.",
+      "filtered": "Filtros activos."
+    },
+    "states": {
+      "errorTitle": "No pudimos cargar los trucos",
+      "errorDescription": "Hubo un problema al pedir el catálogo. Intenta de nuevo.",
+      "retry": "Reintentar",
+      "emptyTitle": "Todavía no hay trucos en esta sección",
+      "emptyDescription": "El contenido se completará pronto.",
+      "emptyFilteredTitle": "Sin resultados",
+      "emptyFilteredDescription": "No hay trucos que coincidan con los filtros elegidos."
+    },
+    "pagination": {
+      "label": "Paginación de trucos",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "status": "Página {page} de {totalPages}"
+    },
+    "difficulty": {
+      "0": "Básico",
+      "1": "Fácil",
+      "2": "Intermedio",
+      "3": "Avanzado",
+      "4": "Experto",
+      "5": "Élite"
+    },
+    "categories": {
+      "VERT_KICK": "Vertical kick",
+      "TWIST": "Twist",
+      "FLIP": "Flip",
+      "GROUNDWORK": "Suelo",
+      "VARIATION": "Variación"
+    },
+    "detail": {
+      "description": "Descripción",
+      "noDescription": "Este truco todavía no tiene descripción.",
+      "difficultyLabel": "Dificultad",
+      "prereqs": "Prerrequisitos",
+      "nextTricks": "Siguientes trucos"
+    }
   }
 }

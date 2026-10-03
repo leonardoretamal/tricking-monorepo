@@ -8,6 +8,7 @@ import type { ReactNode } from 'react';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
+import { Providers } from '@/components/providers';
 import { routing } from '@/i18n/routing';
 
 // Aplica el tema persistido (o el del sistema) antes del primer paint para evitar el destello de tema incorrecto. Es la unica excepcion de dangerouslySetInnerHTML permitida por las reglas del repositorio.
@@ -40,10 +41,12 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       </head>
       <body className="min-h-screen bg-base-100 text-base-content">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          <Breadcrumbs />
-          <main className="mx-auto w-full max-w-6xl px-4 py-6">{children}</main>
-          <Footer />
+          <Providers>
+            <Navbar />
+            <Breadcrumbs />
+            <main className="mx-auto w-full max-w-6xl px-4 py-6">{children}</main>
+            <Footer />
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

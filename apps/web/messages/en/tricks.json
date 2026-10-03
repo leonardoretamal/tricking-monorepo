@@ -1,6 +1,85 @@
 {
   "tricks": {
     "title": "Tricks",
-    "description": "Catalog of tricking tricks with their technical and execution information."
+    "description": "Tricking catalog with its technical and execution information.",
+    "sections": {
+      "vertical-kicks": {
+        "title": "Vertical kicks",
+        "description": "Vertical spinning kicks where the leg passes over the head: 540, cheat 720, tornado and their variations."
+      },
+      "backward": {
+        "title": "Backward",
+        "description": "Tricks that spin backward and land on the back or chain from there."
+      },
+      "forward": {
+        "title": "Forward",
+        "description": "Tricks that spin forward, such as the aerial and the raiz."
+      },
+      "inside": {
+        "title": "Inside",
+        "description": "Tricks that spin inward, from the inner side of the body."
+      },
+      "outside": {
+        "title": "Outside",
+        "description": "Tricks that spin outward, from the outer side of the body."
+      }
+    },
+    "filters": {
+      "searchLabel": "Search",
+      "searchPlaceholder": "Trick name",
+      "difficultyLabel": "Difficulty",
+      "allDifficulties": "All",
+      "sortLabel": "Sort by",
+      "pageSizeLabel": "Per page",
+      "pageSizeOption": "{count} per page"
+    },
+    "sort": {
+      "nameAsc": "Name (A to Z)",
+      "nameDesc": "Name (Z to A)",
+      "difficultyAsc": "Difficulty (low to high)",
+      "difficultyDesc": "Difficulty (high to low)"
+    },
+    "results": {
+      "none": "There are no tricks to show.",
+      "range": "Showing {start} to {end} of {total} tricks.",
+      "filtered": "Active filters."
+    },
+    "states": {
+      "errorTitle": "We could not load the tricks",
+      "errorDescription": "There was a problem fetching the catalog. Try again.",
+      "retry": "Retry",
+      "emptyTitle": "There are no tricks in this section yet",
+      "emptyDescription": "The content will be completed soon.",
+      "emptyFilteredTitle": "No results",
+      "emptyFilteredDescription": "No tricks match the selected filters."
+    },
+    "pagination": {
+      "label": "Trick pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {totalPages}"
+    },
+    "difficulty": {
+      "0": "Basic",
+      "1": "Easy",
+      "2": "Intermediate",
+      "3": "Advanced",
+      "4": "Expert",
+      "5": "Elite"
+    },
+    "categories": {
+      "VERT_KICK": "Vertical kick",
+      "TWIST": "Twist",
+      "FLIP": "Flip",
+      "GROUNDWORK": "Groundwork",
+      "VARIATION": "Variation"
+    },
+    "detail": {
+      "description": "Description",
+      "noDescription": "This trick does not have a description yet.",
+      "difficultyLabel": "Difficulty",
+      "prereqs": "Prerequisites",
+      "nextTricks": "Next tricks"
+    }
   }
 }

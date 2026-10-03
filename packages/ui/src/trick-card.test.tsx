@@ -25,4 +25,18 @@ describe('TrickCard', () => {
     const link = screen.getByRole('link', { name: 'B-Twist' });
     expect(link.getAttribute('href')).toBe('/trucos/b-twist');
   });
+
+  it('colorea el badge de dificultad segun el nivel', () => {
+    render(<TrickCard name="Tornado" difficulty={3} difficultyLabel="Avanzado" />);
+
+    const badge = screen.getByText('3');
+    expect(badge.className).toContain('tb-difficulty-3');
+    expect(badge.getAttribute('aria-label')).toBe('Avanzado');
+  });
+
+  it('colorea los badges de categoria', () => {
+    render(<TrickCard name="Tornado" categories={[{ label: 'Vertical kick', color: 'kicks' }]} />);
+
+    expect(screen.getByText('Vertical kick').className).toContain('tb-cat-kicks');
+  });
 });

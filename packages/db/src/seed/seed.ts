@@ -2,8 +2,8 @@ import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { inArray, sql } from 'drizzle-orm';
-import { getDb } from '../client.js';
-import { categories, trickCategories, tricks } from '../schema.js';
+import { getDb } from '../client';
+import { categories, trickCategories, tricks } from '../schema';
 
 // El paquete @trickingapi/tricks-core-data publica solo fuentes .ts y data/tricks.json.
 // Su campo main (index.js) no existe, por eso no se importa como modulo normal y en su

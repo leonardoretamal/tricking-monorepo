@@ -73,7 +73,76 @@
   --border: 1px;
 }
 
+:root,
+:root[data-theme='tricking-light'] {
+  --difficulty-0: #059669;
+  --difficulty-1: #65a30d;
+  --difficulty-2: #d97706;
+  --difficulty-3: #ea580c;
+  --difficulty-4: #dc2626;
+  --difficulty-5: #9333ea;
+  --cat-kicks: #2563eb;
+  --cat-flips: #ea580c;
+  --cat-twists: #9333ea;
+  --cat-transitions: #0891b2;
+  --cat-basics: #059669;
+}
+
 :root[data-theme='tricking-dark'] {
   --color-border: #2a3344;
   --color-muted: #94a3b8;
+
+  --difficulty-0: #10b981;
+  --difficulty-1: #84cc16;
+  --difficulty-2: #f59e0b;
+  --difficulty-3: #f97316;
+  --difficulty-4: #ef4444;
+  --difficulty-5: #a855f7;
+  --cat-kicks: #3b82f6;
+  --cat-flips: #f97316;
+  --cat-twists: #a855f7;
+  --cat-transitions: #22d3ee;
+  --cat-basics: #10b981;
+}
+
+/* Badges con color de tema. El texto y el fondo salen de currentColor (la variable
+   de dificultad o categoria), por eso no hay hex en los componentes. */
+.tb-badge {
+  border-color: color-mix(in srgb, currentColor 45%, transparent);
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.tb-difficulty-0 {
+  color: var(--difficulty-0);
+}
+.tb-difficulty-1 {
+  color: var(--difficulty-1);
+}
+.tb-difficulty-2 {
+  color: var(--difficulty-2);
+}
+.tb-difficulty-3 {
+  color: var(--difficulty-3);
+}
+.tb-difficulty-4 {
+  color: var(--difficulty-4);
+}
+.tb-difficulty-5 {
+  color: var(--difficulty-5);
+}
+
+.tb-cat-kicks {
+  color: var(--cat-kicks);
+}
+.tb-cat-flips {
+  color: var(--cat-flips);
+}
+.tb-cat-twists {
+  color: var(--cat-twists);
+}
+.tb-cat-transitions {
+  color: var(--cat-transitions);
+}
+.tb-cat-basics {
+  color: var(--cat-basics);
 }

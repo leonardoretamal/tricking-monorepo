@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "eslint . --no-error-on-unmatched-pattern",
@@ -12,7 +17,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:seed": "tsx src/seed/seed.ts",
-    "db:map": "tsx src/seed/map-loopkicks.ts"
+    "db:map": "tsx src/seed/map-loopkicks.ts",
+    "db:difficulty": "tsx src/seed/apply-difficulty.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

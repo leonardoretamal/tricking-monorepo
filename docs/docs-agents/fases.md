@@ -73,15 +73,24 @@ Notas de cierre:
 
 ## Fase 3: Vertical Kicks
 
-Estado: pendiente.
+Estado: completada.
 
-- 3.1. Endpoint `/api/tricks?category=vertical-kicks` con paginación, filtros y orden en la base de datos.
-- 3.2. Vista de listado con virtualización (TanStack Virtual).
-- 3.3. Vista de detalle de truco con relaciones (prereqs, next tricks, descripción).
-- 3.4. Cache en localStorage con TTL para catálogo y detalle.
+- 3.1. Endpoint `/api/tricks` con paginación, filtros (sección, categoría, dificultad, búsqueda) y orden resueltos en la base de datos.
+- 3.2. Vista de listado con virtualización (TanStack Virtual, con carriles para la grilla) cuando supera los 100 ítems.
+- 3.3. Vista de detalle de truco con relaciones (prereqs, next tricks, descripción y categorías).
+- 3.4. Cache del catálogo y el detalle en localStorage con TTL de 1 día, vía TanStack Query y el wrapper de storage.
 - 3.5. i18n en español e inglés.
 - 3.6. Colores por dificultad (badge con escala verde a púrpura).
 - 3.7. Colores por categoría (badge azul para Kicks).
+
+Notas de cierre:
+
+- La sección de Loopkicks se modeló como columna `section` en `tricks` (migración `0002`), poblada desde `apps/scraper/data/loopkicks-tricks.json`. Conteos por sección: vertical-kicks 95, backward 245, forward 20, inside 123, outside 73; 2 trucos de TrickingAPI sin match en Loopkicks quedan con `section` NULL y no se listan.
+- La spec original decía `?category=vertical-kicks` (3.1) y `?direction=backward` (4.1); se unificó al parámetro `section` con los slugs vertical-kicks, backward, forward, inside y outside.
+- Rutas: `/es/tricks` redirige a `/es/tricks/vertical-kicks`; el listado es `/es/tricks/[section]` y el detalle `/es/tricks/[section]/[id]`. El submenú del navbar apunta a cada sección.
+- Dificultad curada a mano en `packages/db/src/seed/difficulty/`, un archivo por sección; se aplica con `pnpm --filter @tricking/db db:difficulty`. TrickingAPI y Loopkicks no publican dificultad.
+- Dependencias nuevas: `@tricking/db` en `apps/web`, `@tanstack/react-query`, `@tanstack/react-query-persist-client` y `@tanstack/react-virtual`, y `pino` para el logging del backend.
+- El `webServer` de Playwright reutiliza el dev server local; en CI el job `e2e` recibe `DATABASE_URL` (solo lectura) para las consultas reales.
 
 Criterio de cierre: sección completa, navegable, responsive y accesible, con datos reales de TrickingAPI cruzados con Loopkicks. Esta fase establece el patrón para las siguientes cuatro secciones de trucos.
 

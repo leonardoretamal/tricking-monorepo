@@ -1,1 +1,3 @@
-export * from './client.js';
+export * from './client';
+export * from './schema';
+export * from './queries/tricks';

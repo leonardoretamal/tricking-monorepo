@@ -4,8 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 import { eq } from 'drizzle-orm';
 
-import { getDb } from '../client.js';
-import { tricks } from '../schema.js';
+import { getDb } from '../client';
+import { tricks } from '../schema';
 
 const LOOPKICKS_JSON_URL = new URL(
   '../../../../apps/scraper/data/loopkicks-tricks.json',
@@ -24,6 +24,21 @@ interface TrickRow {
   id: string;
   name: string;
   loopkicksSlug: string | null;
+  section: string | null;
+}
+
+// La seccion de Loopkicks es la clasificacion primaria del contenido. Se normaliza
+// al slug canonico que usa la web (sin el sufijo "-tricks").
+const LOOPKICKS_SECTION_MAP: Record<string, string> = {
+  'vertical-kicks': 'vertical-kicks',
+  'backward-tricks': 'backward',
+  'forward-tricks': 'forward',
+  'inside-tricks': 'inside',
+  'outside-tricks': 'outside',
+};
+
+function normalizeSection(section: string): string | null {
+  return LOOPKICKS_SECTION_MAP[section] ?? null;
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -141,7 +156,12 @@ async function main(): Promise<void> {
 
   const db = getDb();
   const trickRows: TrickRow[] = await db
-    .select({ id: tricks.id, name: tricks.name, loopkicksSlug: tricks.loopkicksSlug })
+    .select({
+      id: tricks.id,
+      name: tricks.name,
+      loopkicksSlug: tricks.loopkicksSlug,
+      section: tricks.section,
+    })
     .from(tricks);
 
   const byKey = new Map<string, TrickRow[]>();
@@ -181,16 +201,19 @@ async function main(): Promise<void> {
 
     assignedTrickIds.add(match.id);
 
-    if (match.loopkicksSlug === loopkicks.slug) {
+    const section = normalizeSection(loopkicks.section);
+
+    if (match.loopkicksSlug === loopkicks.slug && match.section === section) {
       mapped += 1;
       continue;
     }
 
     await db
       .update(tricks)
-      .set({ loopkicksSlug: loopkicks.slug, updatedAt: new Date() })
+      .set({ loopkicksSlug: loopkicks.slug, section, updatedAt: new Date() })
       .where(eq(tricks.id, match.id));
     match.loopkicksSlug = loopkicks.slug;
+    match.section = section;
     mapped += 1;
   }
 

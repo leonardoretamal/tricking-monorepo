@@ -44,6 +44,7 @@ export const tricks = pgTable(
     name: text('name').notNull(),
     description: text('description'),
     difficulty: smallint('difficulty'),
+    section: text('section'),
     loopkicksSlug: text('loopkicks_slug').unique(),
     prereqs: text('prereqs').array().notNull().default([]),
     nextTricks: text('next_tricks').array().notNull().default([]),
@@ -51,7 +52,10 @@ export const tricks = pgTable(
     deletedAt: timestamp('deleted_at', { withTimezone: true }),
     ...timestamps,
   },
-  (table) => [index('tricks_name_idx').on(table.name)],
+  (table) => [
+    index('tricks_name_idx').on(table.name),
+    index('tricks_section_idx').on(table.section),
+  ],
 );
 
 export const trickCategories = pgTable(

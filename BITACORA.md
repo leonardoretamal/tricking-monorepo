@@ -126,3 +126,20 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: el build de producción pasa al gancho pre-push, así que el agente deja de ejecutarlo a mano (sección 18); `next-env.d.ts` deja de versionarse para eliminar el churn.
 - Pendientes y riesgos: el pre-push ahora corre el build, lo que alarga el push; ambos ganchos imprimen su duración para vigilarlo.
 - Referencias: `AGENTS.md` sección 28.4, `docs/docs-agents/reglas-git.md`, `docs/docs-agents/fases.md`.
+
+## Fase 3: Vertical Kicks (2026-10-03)
+
+- Issue: no aplica (trabajo de fase, sin issue asociado).
+- Título: Vertical Kicks (subfases 3.1 a 3.7) y fundación de datos de trucos para las fases 4 a 7.
+- Qué pedía: endpoint de listado con paginación, filtros y orden en la base de datos; vista de listado con virtualización; vista de detalle con relaciones; cache en localStorage; i18n es/en; y colores por dificultad y por categoría.
+- Fecha de inicio: 2026-10-03.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Acciones: se agregó la columna `section` a `tricks` (migración `0002`) y se pobló desde `apps/scraper/data/loopkicks-tricks.json` (conteos: vertical-kicks 95, backward 245, forward 20, inside 123, outside 73); se agregó la curaduría de dificultad por sección en `packages/db/src/seed/difficulty/`; la capa de consulta `listTricks` y `getTrickById` en `packages/db/src/queries/tricks.ts`; los endpoints `GET /api/tricks` y `GET /api/tricks/[id]` con Zod y Pino; el proveedor de TanStack Query con persistencia propia sobre el wrapper de storage; los componentes de badge (dificultad y categoría) y el esqueleto en `packages/ui`; el navegador de trucos con filtros en la URL, paginación y virtualización por carriles; las rutas `/es/tricks/[section]` y `/es/tricks/[section]/[id]` con redirección de `/es/tricks` a vertical-kicks; el submenú del navbar con las rutas reales; y los textos i18n es/en.
+- Archivos tocados: `packages/db/**`, `apps/web/**`, `packages/ui/**`, `packages/shared/src/storage.ts`, `e2e/tricks.spec.ts`, `.github/workflows/ci.yml`, `docs/docs-agents/fases.md`, `docs/docs-agents/stack-tecnico.md`, `BITACORA.md`.
+- Comandos relevantes: `pnpm --filter @tricking/db db:generate`, `db:migrate`, `db:map`, `db:difficulty`; `pnpm install`; `pnpm typecheck`; `pnpm lint`; `pnpm test`; `pnpm --filter @tricking/web i18n:check`; `pnpm exec playwright test`; consultas HTTP contra `next dev`.
+- Pruebas: typecheck 8/8 y lint en verde; 32 tests unitarios; `i18n:check` con paridad es/en; 24 pruebas E2E en verde (chromium y mobile, viewport 390x600) contra datos reales; verificación de conteos por sección y de los endpoints (200, 400 de query inválida y 404).
+- Decisiones: la sección de Loopkicks es la clasificación primaria y el parámetro de la API es `section` (se unificaron `category`/`direction` de la spec); la dificultad se cura a mano por sección; las rutas son anidadas; el cache persistido pasa por el wrapper de storage; en CI el job `e2e` recibe `DATABASE_URL` (solo lectura).
+- Pendientes y riesgos: la dificultad de backward, forward e inside queda por curar (lo hacen las fases 4 a 6); las secciones no tienen video (Fase 14); la búsqueda full-text es de la Fase 12 y aquí `q` usa `ilike`; el build de producción se delega al gancho pre-push.
+- Subagentes: la ronda de validación de las fases 3 a 6 se ejecuta como parte de esta tarea, con un subagente por fase.
+- Referencias: `docs/docs-agents/fases.md`, `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/design.md`, `AGENTS.md` secciones 12 y 17.

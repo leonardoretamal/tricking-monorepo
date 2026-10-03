@@ -1,0 +1,52 @@
+import { getTrickById } from '@tricking/db';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+
+import { TrickDetailView } from '@/components/trick-detail-view';
+import { isSection } from '@/lib/sections';
+
+// El detalle lee la base de datos en cada peticion; no se prerrenderiza en el build.
+export const dynamic = 'force-dynamic';
+
+type TrickDetailPageProps = {
+  params: Promise<{ locale: string; section: string; id: string }>;
+};
+
+export async function generateMetadata({ params }: TrickDetailPageProps) {
+  const { id } = await params;
+  const trick = await getTrickById(id);
+  if (!trick) {
+    return {};
+  }
+  return {
+    title: trick.name,
+    description: trick.description ?? undefined,
+  };
+}
+
+export default async function TrickDetailPage({ params }: TrickDetailPageProps) {
+  const { locale, section, id } = await params;
+
+  if (!isSection(section)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const trick = await getTrickById(id);
+  if (!trick) {
+    notFound();
+  }
+
+  const t = await getTranslations('tricks');
+
+  return (
+    <article className="flex flex-col gap-6 py-6">
+      <TrickDetailView
+        trick={trick}
+        section={section}
+        sectionTitle={t(`sections.${section}.title`)}
+      />
+    </article>
+  );
+}
