@@ -21,17 +21,17 @@ Estados usados: pendiente, en curso, completada, bloqueada.
 
 ## Fase 0: Fundaciones
 
-Estado general: en curso.
+Estado general: completada.
 
 | Subfase | Descripción                                                                                                                                                                | Estado     |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | 0.1     | Crear monorepo con Turborepo + pnpm                                                                                                                                        | Completada |
 | 0.2     | Configurar TypeScript estricto, ESLint, Prettier, Husky, lint-staged, commitlint                                                                                           | Completada |
-| 0.3     | Crear documentación base: `AGENTS.md`, `README.md`, `BITACORA.md` y dentro de `docs/docs-agents/`: `stack-tecnico.md`, `recomendaciones-stack.md`, `fases.md`, `design.md` | En curso   |
-| 0.4     | Fragmentar reglas en `docs/docs-agents/reglas-*.md`                                                                                                                        | En curso   |
-| 0.5     | Templates de PR e issues en `.github/`                                                                                                                                     | En curso   |
-| 0.6     | Copiar `bin/lupe-start` desde buybolivia                                                                                                                                   | En curso   |
-| 0.7     | Configurar Playwright para E2E con viewport móvil 390x600                                                                                                                  | En curso   |
+| 0.3     | Crear documentación base: `AGENTS.md`, `README.md`, `BITACORA.md` y dentro de `docs/docs-agents/`: `stack-tecnico.md`, `recomendaciones-stack.md`, `fases.md`, `design.md` | Completada |
+| 0.4     | Fragmentar reglas en `docs/docs-agents/reglas-*.md`                                                                                                                        | Completada |
+| 0.5     | Templates de PR e issues en `.github/`                                                                                                                                     | Completada |
+| 0.6     | Copiar `bin/lupe-start` desde buybolivia                                                                                                                                   | Completada |
+| 0.7     | Configurar Playwright para E2E con viewport móvil 390x600                                                                                                                  | Completada |
 
 Criterio de cierre: repositorio instalable con `pnpm install`, build vacío corriendo y CI pasando con el job mínimo.
 
@@ -272,6 +272,32 @@ Estado: pendiente.
 - 17.7. Actualización final de `AGENTS.md`, `stack-tecnico.md` y `BITACORA.md`.
 
 Criterio de cierre: proyecto listo para producción, con todos los subagentes en verde y el checklist de lanzamiento completo.
+
+## Fase 18: Feedback de usuarios
+
+Estado: pendiente.
+
+Sección que permite a los usuarios enviar feedback (sugerencias, reportes de error o de contenido), consultarlo en un panel mínimo de administración y recibir un aviso por correo en una dirección configurable. Es la parte accionable de los pendientes "Contribuciones de usuarios", "Notificaciones por correo" y "Comunidad ligera" de la sección 28.5 de `AGENTS.md`. Esta fase activa el proveedor de correo (Resend), que hasta ahora estaba marcado como "no aplica".
+
+Subfases:
+
+- 18.1. Modelar la tabla `feedback` con campos: `id`, `type` (sugerencia, error, contenido, otro), `name` opcional, `email` opcional, `message`, `page` opcional (ruta o contexto), `locale` opcional, `user_agent` opcional, `status` (nuevo, leído, respondido, archivado), `created_at`, `updated_at` y `deleted_at`. Soft delete por defecto.
+- 18.2. Endpoint `POST /api/feedback` con validación del cuerpo con Zod, rate limiting, honeypot, validación de tiempo mínimo de llenado y captcha o Turnstile en producción resuelto en el servidor. El feedback se guarda aunque falle el correo.
+- 18.3. Endpoint `GET /api/feedback` con paginación, filtros por estado y tipo, y ordenamiento resueltos en la base de datos (total calculado en la base de datos). Protegido: prohibido dejarlo público.
+- 18.4. Panel mínimo (mini dashboard) en `/es/admin/feedback` con filtros, paginación y acciones de marcar como leído, respondido o archivado, y soft delete con modal de confirmación. Reutiliza el patrón de listados (estado en la URL, indicador de filtros activos, estado vacío que diferencia entre "no hay datos" y "sin resultados").
+- 18.5. Protección del panel: requiere autenticación de administrador. Si Auth.js todavía no está activo (fases A a E del skill tree), se protege con un token de administración por variable de entorno y sin enlaces públicos al panel, y se migra a Auth.js cuando exista. La decisión se toma al implementar.
+- 18.6. Formulario de feedback en el frontend (página `/es/feedback` y enlace en el footer), accesible, con estados de carga, error y éxito, errores debajo del input, todos los errores a la vez y una sola llamada a la acción por pantalla.
+- 18.7. Aviso por correo con Resend a una dirección configurable por variable de entorno por cada feedback nuevo. El envío se hace en el servidor, tolerante a fallos, sin exponer la dirección ni la API key, con `trace_id` en los logs y sin volcar el contenido del mensaje ni el correo en los logs.
+- 18.8. Variables de entorno nuevas: `RESEND_API_KEY`, `FEEDBACK_NOTIFY_EMAIL` y `FEEDBACK_FROM_EMAIL` (o el remitente que defina el proveedor), y el token del panel si aplica. Se reflejan en el `.env.example` correspondiente y en `docs/docs-agents/stack-tecnico.md`, donde Resend pasa de "no aplica" a activo en esta fase, con su mini-guía de configuración.
+- 18.9. i18n en español e inglés de todo el texto visible (formulario, panel, mensajes de confirmación y de error, y plantilla del correo).
+- 18.10. El feedback es estado de servidor en tiempo real: no se cachea en localStorage y las escrituras se deshabilitan y muestran estado de carga mientras están en curso.
+- 18.11. Rate limiting y sanitización del mensaje. Logs con `trace_id` y sin datos personales completos.
+
+Dependencias: requiere base de datos (Fase 1) y frontend base (Fase 2). No requiere autenticación de usuario final; el panel administrativo se resuelve con token o con Auth.js según disponibilidad.
+
+Orden sugerido: se puede ejecutar después de la Fase 16 y antes de la Fase 17, o como Fase 18 tras el lanzamiento. El usuario decide.
+
+Criterio de cierre: formulario de feedback funcionando, feedback guardado en la base de datos, aviso por correo recibido en la dirección configurable, panel de administración listo para ver y gestionar los feedbacks, accesible, responsive, con i18n es/en, con la ronda de subagentes de validación ejecutada y con el build de producción verificado.
 
 ## Fases sugeridas fuera de la numeración principal
 

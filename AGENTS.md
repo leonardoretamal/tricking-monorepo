@@ -599,6 +599,8 @@ Las que el usuario agregue durante el desarrollo, registradas con fecha y motivo
 
 Estas son propuestas, no compromisos. El usuario decide cuáles se activan.
 
+El feedback de usuarios (formulario, mini dashboard y aviso por correo) dejó de ser un pendiente: se programó como Fase 18 en `docs/docs-agents/fases.md`. Las entradas de abajo que lo rozan quedan como referencia, no como pendientes duplicados.
+
 - Autenticación de usuarios: Auth.js (NextAuth) con adaptador de Drizzle y Neon. Habilitaría favoritos, progreso personal y contribuciones. Es requisito para el skill tree y los combos.
 - Sistema de progreso del usuario: marcar trucos como "quiero aprender", "en progreso" o "aprendido". Persistir en base de datos, no en localStorage. Es la base del skill tree.
 - Favoritos y colecciones: agrupar trucos en listas personalizadas, exportables.
@@ -606,7 +608,7 @@ Estas son propuestas, no compromisos. El usuario decide cuáles se activan.
 - Comparación de trucos side by side: dos trucos en paralelo con sus vídeos y diferencias técnicas resaltadas.
 - Modo entrenamiento o rutinas: generar sesiones de práctica según el nivel y los objetivos del usuario, incorporando tips de mirada relevantes.
 - Contribuciones de usuarios: permitir subir clips propios de trucos, con moderación previa antes de publicarse.
-- Notificaciones por correo: Resend o SendGrid. Solo si se activa autenticación.
+- Notificaciones por correo: Resend o SendGrid. Su primera activación es el aviso de feedback nuevo de la Fase 18; otras notificaciones siguen condicionadas a la autenticación.
 - Notificaciones push: Web Push API para recordatorios de práctica.
 - PWA: manifest, service worker y funcionamiento offline básico con cache del catálogo y de los tips.
 - Analítica: Umami (self-hosted o cloud free tier) o PostHog (free tier generoso). Sin cookies de terceros ni trackers invasivos.
@@ -615,7 +617,7 @@ Estas son propuestas, no compromisos. El usuario decide cuáles se activan.
 - Modo presentación o kiosk: vista a pantalla completa para gimnasios o eventos.
 - Exportar rutinas a calendario: formato ICS para integración con Google Calendar o similares.
 - API pública para terceros: exponer endpoints de solo lectura con rate limiting y API keys.
-- Comunidad ligera: comentarios por truco con moderación y antispam (Akismet o similar).
+- Comunidad ligera: comentarios por truco con moderación y antispam (Akismet o similar). La parte de feedback de usuarios se cubre en la Fase 18.
 - Traducción automática de captions de Kojo: si el usuario decide soportar más idiomas en el contenido del scraper.
 - Modo contraste para vídeos claros: overlay automático cuando el vídeo tiene fondo blanco y el modo del sitio es oscuro.
 
