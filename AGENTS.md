@@ -122,6 +122,31 @@ Reglas asociadas:
 - Si el usuario prefiere otra ubicación (por ejemplo `.agents/`, `documentacion-agente/`, `reglas/`), se respeta. Lo importante es que sea una sola carpeta y que AGENTS.md la referencie.
 - Si el repositorio ya tiene una carpeta `docs/` con documentación de usuario o de producto, la carpeta de docs del agente va adentro de `docs/`, no compite con ella.
 
+### Lectura obligatoria de los documentos referenciados
+
+- Todos los archivos referenciados en `AGENTS.md` que viven en `docs/docs-agents/` son de lectura obligatoria para el agente.
+- La lectura obligatoria aplica cuando la tarea toca el área temática del documento. Por ejemplo: si la tarea toca frontend, se lee `docs/docs-agents/reglas-frontend.md`; si toca secretos, se lee `docs/docs-agents/reglas-secretos.md`; si toca cookies, se lee `docs/docs-agents/reglas-cookies.md`.
+- El agente no puede ejecutar una tarea sin haber leído los documentos referenciados que le aplican. Si no los leyó, no empieza.
+- Al inicio de la tarea, el agente declara qué documentos referenciados va a leer y por qué. Si alguno aplica y no lo leyó, lo reporta como incumplimiento.
+- Los documentos que no aplican a la tarea no se leen completos, pero el agente sabe que existen y dónde están porque están listados en `AGENTS.md`.
+
+### Longitud de AGENTS.md y derivación de reglas nuevas
+
+Antes de escribir contenido nuevo en `AGENTS.md`, se revisa si corresponde o si va a un documento referenciado:
+
+- Criterio orientativo: si `AGENTS.md` supera las 300 o 400 líneas, o si la regla nueva es específica de un tema que ya tiene documento propio, no se escribe en `AGENTS.md`.
+- Si el tema ya tiene un archivo en `docs/docs-agents/`, se edita ese archivo. Si la regla encaja en una sección existente, se agrega ahí; si requiere una sección nueva, se agrega la sección.
+- Si el tema no tiene archivo en `docs/docs-agents/`, se crea uno nuevo con nombre descriptivo en el idioma del repositorio y se agrega la referencia en `AGENTS.md`.
+- Lo único que se escribe directamente en `AGENTS.md` es: el índice maestro (visión general, resumen del stack, tabla de documentos referenciados), las reglas transversales que no tienen documento temático propio, las reglas de conducta del agente, las reglas de Git y automatización, el formato de reporte final de tarea y las reglas de la bitácora.
+- Prohibido usar `AGENTS.md` como cajón de sastre. Si la regla tiene tema, va a su documento.
+- Si hay duda entre `AGENTS.md` y un documento referenciado, la regla se escribe en el documento referenciado y se deja la referencia en `AGENTS.md`. Es más fácil mover después que saturar el índice.
+
+### Documentos que crecen demasiado
+
+- Si un documento referenciado supera las 500 o 600 líneas, se divide en subdocumentos por tema y se actualiza el índice en `AGENTS.md`.
+- El nombre del subdocumento refleja su contenido (por ejemplo `reglas-frontend-formularios.md`, `reglas-frontend-accesibilidad.md`).
+- La bitácora no se fragmenta en documentos referenciados. Si crece mucho, se divide por año o trimestre, pero cada división sigue siendo un archivo plano de bitácora.
+
 ## 7. Stack técnico resumido
 
 El detalle cerrado está en `docs/docs-agents/stack-tecnico.md` y las opciones comparadas en `docs/docs-agents/recomendaciones-stack.md`.
@@ -468,11 +493,12 @@ Cualquier prompt que referencie AGENTS.md hereda automáticamente estas reglas. 
 
 - Detectar el stack, dependencias, infraestructura, uso de IA, skills, agentes, i18n e idioma del repositorio. El detalle de qué detectar y registrar está en `docs/docs-agents/deteccion-stack.md`.
 - Leer AGENTS.md completo antes de tocar cualquier archivo.
-- Leer los documentos referenciados relevantes.
+- Leer los documentos referenciados que apliquen a la tarea. Los que viven en `docs/docs-agents/` son de lectura obligatoria cuando aplican, y al inicio de la tarea se declara cuáles se van a leer y por qué.
 - Cargar las skills relevantes.
 - Aplicar reglas condicionales activas y todas las transversales.
 - Usar librerías ya presentes antes de proponer nuevas.
 - Ejecutar subagentes de validación al cierre.
+- Al agregar una regla nueva, revisar primero si `AGENTS.md` está demasiado largo o si el tema ya tiene documento propio en `docs/docs-agents/`. Si lo tiene, editar ese documento; si no, crear uno nuevo en esa carpeta y referenciarlo desde `AGENTS.md`. No usar `AGENTS.md` como cajón de sastre.
 
 AGENTS.md es la fuente única de verdad del monorepo. Cualquier documento nuevo se referencia en él. Cualquier regla nueva se declara primero en su documento referenciado antes de usarse en un prompt.
 
