@@ -45,6 +45,15 @@ Propósito: definir qué debe detectar y registrar el agente antes de crear o co
 - Archivos .env y .env.example: ubicación, variantes por entorno, si están cubiertos por .gitignore, si .env.example está versionado y sincronizado.
 - HTTPS forzado en servidor o CDN, dominio y certificados.
 
+## Ramas y flujo de trabajo
+
+- Rama principal del repositorio (`main`, `master`).
+- Rama de desarrollo (`dev`, `developer`, `develop`) si existe.
+- Ramas de entorno (`staging`, `production`, `release/*`) si existen.
+- Flujo de trabajo: si trabaja directo sobre `main`, si promueve desde `dev`, o si usa ramas por issue.
+- Convención de nombres de ramas por issue (`feature/issue-123-descripcion`, `fix/issue-456-descripcion`, etc.).
+- El resultado se registra en `docs/docs-agents/stack-tecnico.md`.
+
 ## Uso de IA
 
 - En el producto: si el repositorio integra IA, proveedor, librerías de integración, modelos y para qué funcionalidad, si hay RAG, embeddings o vector store, y políticas de retención de datos del proveedor. Las reglas viven en docs/docs-agents/reglas-ia.md.

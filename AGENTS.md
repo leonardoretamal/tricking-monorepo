@@ -78,6 +78,7 @@ Si se detectan marcas preexistentes no relacionadas con la tarea, se reportan pe
 - Autorización permanente para crear o modificar `.env.example`, con alcance limitado a nombres, comentarios y valores de ejemplo no reales.
 - Autorización para escribir secretos por CLI o API, limitada al entorno dev y solo si el gestor está confirmado en este archivo o en `docs/docs-agents/stack-tecnico.md`.
 - Instalar o actualizar herramientas del entorno (navegadores, runtimes globales) requiere autorización previa.
+- Antes de ejecutar cualquier comando que toque ramas, entornos o despliegues, el agente confirma en qué rama está y a qué entorno apunta. Si el comando toca producción, frena y pide confirmación explícita, aunque el usuario haya dado permiso general para operar. El detalle vive en `docs/docs-agents/reglas-git.md`.
 - Todos los comandos deben ser compatibles con bash de Linux en WSL. Si algo requiere permisos elevados, se usa `sudo` explícito.
 
 ## 6. Ubicación de los documentos (docs/docs-agents/)
@@ -348,7 +349,8 @@ Los logs nunca deben mostrar: contraseñas, tokens, claves, credenciales, datos 
 
 El detalle va en `docs/docs-agents/reglas-git.md`.
 
-- El agente no hace commit, push, PR ni merge. Sí puede hacer `git add` y merge local.
+- El agente opera sobre la rama de trabajo del repositorio (`main` en este repositorio, ver `docs/docs-agents/stack-tecnico.md`). Puede hacer commit y push a la rama de trabajo con autorización del usuario. Las ramas de producción (`production`, `prod`, `release/*`) son zona prohibida.
+- Detección de ramas y confirmación previa para operaciones que tocan producción: ver `docs/docs-agents/reglas-git.md`.
 - pre-commit: typecheck, lint, shellcheck, prettier.
 - pre-push: test, integridad de servicios.
 - Conventional Commits: feat, fix, chore, docs, refactor, test, style, perf, ci, build, revert.

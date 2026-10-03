@@ -4,10 +4,29 @@ Propósito: definir qué operaciones de Git puede ejecutar el agente, los hooks 
 
 ## Operaciones permitidas y prohibidas
 
-- El agente no hace commit, push, PR ni merge.
-- El agente sí puede hacer git add y merge local.
+- El agente opera sobre la rama de trabajo del repositorio. En este repositorio la rama de trabajo es `main` (ver la convención de ramas en `docs/docs-agents/stack-tecnico.md`).
+- El agente puede hacer `git add`, commit y push a la rama de trabajo cuando el usuario lo autoriza. No crea ramas ni PRs si el repositorio no los usa.
+- Las ramas de producción (`production`, `prod`, `release/*`) son zona prohibida para operaciones del agente.
 - Prohibido modificar archivos de bloqueo (por ejemplo pnpm-lock.yaml) sin una instalación autorizada.
 - Prohibido cambiar versiones de dependencias sin autorización.
+
+## Detección de ramas del repositorio
+
+Antes de cualquier operación que toque ramas, entornos o despliegues, el agente:
+
+- Detecta las ramas del repositorio y su propósito: la principal (`main`, `master`), la de desarrollo (`dev`, `developer`, `develop`) y las de entorno (`staging`, `production`, `release/*`).
+- Detecta el flujo de trabajo: si se trabaja directo sobre `main`, si se promueve desde `dev`, o si se usan ramas por issue con merge a `dev`. La convención se registra en `docs/docs-agents/stack-tecnico.md`.
+- Si el repositorio no tiene rama `dev` o equivalente y trabaja directo sobre `main`, registra esa convención y trata `main` como rama de trabajo, salvo que exista una rama de producción separada.
+- Si el repositorio tiene una rama de producción explícita (`production`, `prod`, `release/*`), la marca como zona prohibida para operaciones del agente.
+- Antes de cualquier comando que toque un entorno (deploy, migración, secretos, configuración), confirma en qué rama está y a qué entorno apunta el comando.
+- Si el comando toca producción (por nombre de rama, por variable de entorno, por bandera `--env=production`, `--branch production`, `deploy to production` o equivalentes), frena y pide confirmación explícita al usuario antes de ejecutarlo. No asume.
+
+## Operaciones que requieren confirmación previa
+
+- Cualquier comando que apunte a producción (deploy, migración, secretos, cambios de configuración) requiere confirmación explícita del usuario, aunque el comando parezca inocuo o el usuario haya dado permiso general para operar.
+- El agente no ejecuta comandos con banderas `--branch production`, `--env=prod`, `--environment=production` o equivalentes sin confirmación.
+- Si el agente detecta que el comando que iba a ejecutar toca producción, lo reporta antes de correrlo, explica el impacto y espera la confirmación. Si el usuario no responde y el agente está en modo autónomo, no ejecuta el comando productivo: lo deja pendiente y registra la decisión.
+- La regla de escritura de secretos solo en dev (ver `docs/docs-agents/reglas-secretos.md`) se extiende a los comandos de deploy, migración y cambios de configuración.
 
 ## Verificación previa antes de proponer operaciones
 

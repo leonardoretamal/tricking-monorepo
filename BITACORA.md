@@ -30,3 +30,17 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: el aviso por correo usa Resend y se activa en esta fase; el panel administrativo se protege con token o con Auth.js según disponibilidad.
 - Pendientes y riesgos: la protección del panel y el orden respecto de la Fase 17 se deciden al implementar.
 - Referencias: `docs/docs-agents/fases.md`, `AGENTS.md` sección 28.5.
+
+## Reglas de ramas y confirmación previa, y archivos de entorno (2026-10-03)
+
+- Issue: no aplica (trabajo de reglas y preparación de entorno).
+- Título: Detección de ramas, confirmación previa de operaciones en producción y creación de `.env` y `.env.example`.
+- Qué pedía: eliminar la prohibición de commit, push, PR y merge; agregar la detección de ramas del repositorio; exigir confirmación explícita para comandos que tocan producción; registrar el inventario de ramas y el flujo de trabajo; y crear los archivos de entorno con las variables de la Fase 1.
+- Fecha de inicio: 2026-10-03.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Acciones: se reescribió la sección de operaciones permitidas en `reglas-git.md` (ahora el agente opera sobre la rama de trabajo con autorización y las ramas de producción quedan prohibidas); se agregaron las secciones "Detección de ramas del repositorio" y "Operaciones que requieren confirmación previa"; se agregó "Ramas y flujo de trabajo" a `deteccion-stack.md`; se registró la convención del repositorio (directo sobre `main`, sin `dev` y sin rama de producción) y los archivos de entorno en `stack-tecnico.md`; se agregó el refuerzo de conducta en la sección 5 de `AGENTS.md` y se actualizó la sección 15; se creó `.env.example` versionado y `.env` no versionado con `DATABASE_URL` y `DATABASE_URL_UNPOOLED`.
+- Archivos tocados: `docs/docs-agents/reglas-git.md`, `docs/docs-agents/deteccion-stack.md`, `docs/docs-agents/stack-tecnico.md`, `AGENTS.md`, `.env.example`, `.env`.
+- Decisiones: se separan `DATABASE_URL` (pooled, runtime) y `DATABASE_URL_UNPOOLED` (directa, migraciones); las variables de fases futuras quedan como comentarios en `.env.example` hasta que su fase las active; la rama de trabajo es `main` y no hay zona de producción en Git.
+- Pendientes y riesgos: `neon login` y la creación del branch de desarrollo de Neon siguen pendientes; el comando `neon link --branch production` requiere confirmación explícita por tocar producción.
+- Referencias: `docs/docs-agents/reglas-git.md`, `docs/docs-agents/deteccion-stack.md`, `docs/docs-agents/stack-tecnico.md`, `AGENTS.md` secciones 5 y 15.

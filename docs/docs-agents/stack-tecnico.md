@@ -72,6 +72,21 @@ Agregar cualquiera de estas dependencias requiere autorización explícita del u
 - Carpeta de docs del agente: `docs/docs-agents/`. Es una sola carpeta, se versiona con Git y no se excluye.
 - Bitácora: `BITACORA.md`, único archivo en la raíz, versionado, sin fragmentar. Las reglas de uso viven en la sección 19 de `AGENTS.md`.
 
+## Ramas y flujo de trabajo
+
+- Rama principal y de trabajo: `main`.
+- No existe rama de desarrollo (`dev`, `developer`, `develop`).
+- No existe rama de producción separada (`production`, `prod`, `release/*`). Si se crea en el futuro, queda como zona prohibida para operaciones del agente.
+- Flujo de trabajo: directo sobre `main`, sin ramas por issue y sin PRs. Los commits y el push van a `main` con autorización del usuario.
+- Convención de nombres de ramas por issue: no aplica mientras se trabaje directo sobre `main`.
+- Esta convención puede ajustarse si el usuario lo pide.
+
+## Archivos de entorno
+
+- `.env.example` en la raíz, versionado, creado en la Fase 1 con la primera variable (`DATABASE_URL`).
+- `.env` en la raíz, no versionado (cubierto por `.gitignore`), con los valores reales de desarrollo.
+- Las variables de fases futuras se listan como comentarios en `.env.example` hasta que su fase las active.
+
 ## Nomenclatura de paquetes del workspace
 
 Nombres resueltos con el scope `@tricking/`:
