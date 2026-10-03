@@ -166,6 +166,7 @@ Resumen de las decisiones por defecto:
 - UI: Tailwind CSS + DaisyUI.
 - Iconos: lucide-react.
 - Estado del servidor: TanStack Query.
+- Estado del cliente: Zustand + localStorage.
 - Virtualización: TanStack Virtual.
 - Formularios: react-hook-form + @hookform/resolvers.
 - Toasts: sonner.
@@ -175,7 +176,7 @@ Resumen de las decisiones por defecto:
 - Scraping web general: cheerio.
 - Semilla de trucos: @trickingapi/tricks-core-data + @trickingapi/tricking-ts.
 - Testing: Vitest + Testing Library + Playwright.
-- Autenticación: Auth.js (NextAuth) con adaptador de Drizzle y Neon. No aplica en Fase 0.
+- Autenticación: no aplica; el contenido es público y no requiere login. Si se activa el skill tree (sección 28.3), se reevalúa.
 - CI/CD: GitHub Actions.
 - Gestión de secretos: variables de entorno en GitHub Actions y Cloudflare.
 - Correo: Resend. No aplica en Fase 0.
@@ -184,7 +185,7 @@ Resumen de las decisiones por defecto:
 
 Dependencias aprobadas del monorepo: turbo, pnpm, typescript, eslint, `@typescript-eslint/*`, prettier, husky, lint-staged, `@commitlint/cli`, `@commitlint/config-conventional`.
 
-Dependencias aprobadas del frontend: next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, `@tanstack/react-query`, `@tanstack/react-virtual`, date-fns, date-fns-tz.
+Dependencias aprobadas del frontend: next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-virtual`, date-fns, date-fns-tz.
 
 Dependencias aprobadas del backend y datos: drizzle-orm, drizzle-kit, `@neondatabase/serverless`, pino, pino-pretty, insta-fetcher, `@trickingapi/tricks-core-data`, `@trickingapi/tricking-ts`, `@upstash/redis`, `@upstash/qstash`, `@aws-sdk/client-s3`, cheerio.
 
@@ -282,7 +283,7 @@ Reglas:
 - Prohibido guardar tokens, contraseñas o datos personales.
 - Escrituras con debounce mínimo de 300 ms.
 - Si el dato está fresco, no se dispara la petición. Si está vencido, se sirve el cacheado primero (stale-while-revalidate) y se actualiza en background.
-- Se usa el gestor de estado del repositorio (TanStack Query) con su mecanismo de persistencia. Prohibido acceder a localStorage, sessionStorage o IndexedDB directamente para estado de la aplicación; el wrapper de cacheo es la única puerta de entrada.
+- El estado del servidor se maneja con TanStack Query y el estado del cliente con Zustand; la persistencia pasa por el wrapper de cacheo. Prohibido acceder a localStorage, sessionStorage o IndexedDB directamente para estado de la aplicación; el wrapper de cacheo es la única puerta de entrada.
 - Validar datos rehidratados contra esquema.
 - No guardar secretos, tokens ni datos sensibles en almacenamiento del navegador.
 

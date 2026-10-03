@@ -36,6 +36,9 @@ pnpm-debug.log*
 .swarm/
 ruvector.db
 
+# Neon CLI (contexto local de proyecto enlazado)
+.neon
+
 # Playwright
 playwright-report/
 test-results/
