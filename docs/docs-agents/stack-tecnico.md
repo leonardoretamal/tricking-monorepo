@@ -108,6 +108,8 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 
 - Base actual: `.github/workflows/ci.yml` y `.github/workflows/migrate.yml`.
 - `ci.yml` corre los jobs: Lint + formato + build, Pruebas unitarias (`pnpm test`), Validación de claves i18n (`pnpm --filter @tricking/web i18n:check`) y Pruebas E2E (`pnpm exec playwright test`, con instalación previa de Chromium). ShellCheck, Integration Tests y Migraciones Drizzle contra Neon se agregan cuando apliquen.
+- CI usa Node 22 (el mismo que el entorno de desarrollo); `undici@8` (vía `jsdom`) exige Node >= 22.19 y fallaba en Node 20. El `engines` del `package.json` raíz es `>=22.19.0`.
+- El job `e2e` recibe `DATABASE_URL` (secreto, solo lectura) para las pruebas de trucos; si el secreto no está configurado, omite esas pruebas con un aviso y ejecuta solo las de layout. `migrate.yml` sí requiere los secretos `DATABASE_URL` y `DATABASE_URL_UNPOOLED` para aplicar migraciones.
 - `migrate.yml` se creó en la Fase 1.7. Se dispara en `push` a `main` (nunca en `pull_request`, para no migrar la base antes del merge) o por `workflow_dispatch`, cuando cambian `packages/db/src/schema.ts` o `packages/db/drizzle/**`. Ejecuta `pnpm turbo db:migrate --filter=@tricking/db` (tarea declarada en `turbo.json`) con los secrets `DATABASE_URL` y `DATABASE_URL_UNPOOLED`; la migración usa la conexión directa.
 - Esta decisión puede ajustarse si el usuario lo pide.
 

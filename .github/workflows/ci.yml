@@ -26,7 +26,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Instalar dependencias
@@ -58,7 +58,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Instalar dependencias
@@ -81,7 +81,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Instalar dependencias
@@ -106,7 +106,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Instalar dependencias
@@ -115,5 +115,14 @@ jobs:
       - name: Instalar navegador de Playwright
         run: pnpm exec playwright install --with-deps chromium
 
+      # Las pruebas de trucos consultan la base en tiempo real. Si el secreto
+      # DATABASE_URL no esta configurado, solo se ejecutan las pruebas de layout que
+      # no dependen de la base, y se avisa en el log.
       - name: Ejecutar pruebas E2E
-        run: pnpm exec playwright test
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::warning::Sin DATABASE_URL configurado: se omiten las pruebas E2E que dependen de la base y se ejecutan solo las de layout."
+            pnpm exec playwright test e2e/base.spec.ts
+          else
+            pnpm exec playwright test
+          fi
