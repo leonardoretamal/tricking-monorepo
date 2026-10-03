@@ -51,7 +51,7 @@ Criterio de cierre: base de datos poblada con trucos de TrickingAPI y con el map
 
 ## Fase 2: Frontend base
 
-Estado: pendiente.
+Estado: completada.
 
 - 2.1. Crear `apps/web` con Next.js (App Router).
 - 2.2. Configurar Tailwind CSS + DaisyUI con los dos temas.
@@ -62,6 +62,14 @@ Estado: pendiente.
 - 2.7. Componente de tarjeta de truco reutilizable.
 
 Criterio de cierre: la web arranca, el tema respeta al usuario, i18n funciona y existe la estructura de navegación aunque las secciones estén vacías.
+
+Notas de cierre:
+
+- Stack implementado: Next.js 16.3.8 + React 19.3.0, next-intl 4.14.9, Tailwind CSS 4.3.3 + DaisyUI 5.7.47, Zod 4.6.5. `packages/ui` y `packages/shared` se consumen como fuente TS con `transpilePackages`.
+- El layout raíz vive en `apps/web/src/app/[locale]/layout.tsx` (patrón de next-intl) y el middleware de locale se declara en `apps/web/src/proxy.ts` (convención de Next 16).
+- `localeDetection` queda en `false`: la raíz va siempre a `/es` y el idioma se cambia con el selector, coherente con el idioma base del proyecto.
+- No se incluye un `loading.tsx` de ruta global a propósito: su boundary de Suspense hacía que las rutas desconocidas respondieran HTTP 200 (soft 404). El componente `LoadingState` existe en `packages/ui` para las fases con carga de datos.
+- CI ampliado con jobs `test`, `i18n` (paridad de claves) y `e2e` (Playwright).
 
 ## Fase 3: Vertical Kicks
 

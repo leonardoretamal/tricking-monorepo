@@ -13,3 +13,4 @@ docs/docs-agents/prompt-arranque.md
 .agents
 .husky/_/
 packages/db/drizzle
+apps/web/next-env.d.ts

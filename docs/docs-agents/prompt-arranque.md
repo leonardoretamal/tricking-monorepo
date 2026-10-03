@@ -19,12 +19,12 @@ El estado canónico vive en `docs/docs-agents/fases.md`; aquí se muestra un res
 | 0.7 | Completada |
 | Fase 0 (completa) | Cerrada |
 
-Las siete subfases de la Fase 0 se completaron el 2026-10-03. Las Fases 1 a 18 quedan pendientes:
+Las Fases 0, 1 y 2 se completaron el 2026-10-03. Las Fases 3 a 18 quedan pendientes:
 
 | Fase | Nombre | Estado |
 | --- | --- | --- |
-| 1 | Modelo de datos y semilla | Pendiente |
-| 2 | Frontend base | Pendiente |
+| 1 | Modelo de datos y semilla | Completada |
+| 2 | Frontend base | Completada |
 | 3 | Vertical Kicks | Pendiente |
 | 4 | Backward Tricks | Pendiente |
 | 5 | Forward Tricks | Pendiente |

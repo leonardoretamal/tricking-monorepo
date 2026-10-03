@@ -1,0 +1,45 @@
+{
+  "app": {
+    "name": "Tricking",
+    "tagline": "Tricks, variations and transitions"
+  },
+  "nav": {
+    "home": "Home",
+    "tricks": "Tricks",
+    "verticalKicks": "Vertical kicks",
+    "backward": "Backward",
+    "forward": "Forward",
+    "inside": "Inside",
+    "outside": "Outside",
+    "variations": "Variations",
+    "transitions": "Transitions",
+    "stances": "Stances",
+    "tips": "Tips",
+    "explore": "Explore",
+    "search": "Search"
+  },
+  "actions": {
+    "search": "Search",
+    "toggleTheme": "Toggle theme",
+    "switchLanguage": "Switch language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "retry": "Retry"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "navigation": "Navigation"
+  },
+  "states": {
+    "loading": "Loading",
+    "errorTitle": "Something went wrong",
+    "errorDescription": "We could not load the content. Please try again.",
+    "emptyTitle": "No content yet",
+    "emptyDescription": "This section will be completed soon."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "backHome": "Back to home"
+  }
+}

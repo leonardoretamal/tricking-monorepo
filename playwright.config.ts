@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 // URL base configurable por variable de entorno. El valor por defecto apunta al
-// puerto de desarrollo habitual; se ajustara cuando exista apps/web en la Fase 2.
+// puerto de desarrollo de apps/web (Fase 2).
 const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? 'http://localhost:3000';
 
 export default defineConfig({
@@ -35,5 +35,10 @@ export default defineConfig({
       },
     },
   ],
-  // El webServer se agrega en la Fase 2, cuando exista apps/web.
+  webServer: {
+    command: 'pnpm --filter @tricking/web dev',
+    url: `${baseURL}/es`,
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
+  },
 });

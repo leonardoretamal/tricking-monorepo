@@ -155,7 +155,7 @@ El detalle cerrado está en `docs/docs-agents/stack-tecnico.md` y las opciones c
 Resumen de las decisiones por defecto:
 
 - Monorepo: Turborepo + pnpm workspaces.
-- Frontend: Next.js (App Router) + TypeScript estricto.
+- Frontend: Next.js (App Router) + TypeScript estricto. Implementado en `apps/web` en la Fase 2 (Next 16, React 19, Tailwind v4 CSS-first + DaisyUI v5).
 - Hosting web: Cloudflare Pages.
 - Base de datos: Neon (PostgreSQL serverless).
 - ORM y migraciones: Drizzle ORM + drizzle-kit.

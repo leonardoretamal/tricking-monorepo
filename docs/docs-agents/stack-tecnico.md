@@ -107,9 +107,18 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 ## Base de CI
 
 - Base actual: `.github/workflows/ci.yml` y `.github/workflows/migrate.yml`.
-- Jobs típicos planificados: Lint + Format + Build, ShellCheck, Unit Tests, Integration Tests, i18n Key Validation y Migraciones Drizzle contra Neon.
+- `ci.yml` corre los jobs: Lint + formato + build, Pruebas unitarias (`pnpm test`), Validación de claves i18n (`pnpm --filter @tricking/web i18n:check`) y Pruebas E2E (`pnpm exec playwright test`, con instalación previa de Chromium). ShellCheck, Integration Tests y Migraciones Drizzle contra Neon se agregan cuando apliquen.
 - `migrate.yml` se creó en la Fase 1.7. Se dispara en `push` a `main` (nunca en `pull_request`, para no migrar la base antes del merge) o por `workflow_dispatch`, cuando cambian `packages/db/src/schema.ts` o `packages/db/drizzle/**`. Ejecuta `pnpm turbo db:migrate --filter=@tricking/db` (tarea declarada en `turbo.json`) con los secrets `DATABASE_URL` y `DATABASE_URL_UNPOOLED`; la migración usa la conexión directa.
 - Esta decisión puede ajustarse si el usuario lo pide.
+
+## Frontend implementado (Fase 2)
+
+- `apps/web` usa Next.js 16.3.8 + React 19.3.0 (App Router). `params` y `searchParams` se manejan como `Promise` (Next 16).
+- UI con Tailwind CSS 4.3.3 en modo CSS-first (sin `tailwind.config.js`) y DaisyUI 5.7.47. Los temas `tricking-light` (default) y `tricking-dark` (prefersdark) se declaran en `apps/web/src/app/globals.css`; los colores viven solo ahí.
+- i18n con next-intl 4.14.9: `locales ['es','en']`, `defaultLocale 'es'`, `localePrefix 'always'` y `localeDetection false` (la raíz va siempre a `/es`). El layout raíz es `apps/web/src/app/[locale]/layout.tsx` y el middleware de locale es `apps/web/src/proxy.ts` (convención de Next 16). Los mensajes se organizan por módulo en `apps/web/messages/{es,en}/`.
+- `packages/ui` y `packages/shared` se consumen como fuente TypeScript (`exports` a `src/index.ts`) con `transpilePackages` en `next.config.ts`, sin paso de build a `dist`.
+- No hay `loading.tsx` de ruta global a propósito: su boundary de Suspense hacía que las rutas desconocidas respondieran HTTP 200. El estado de carga se resuelve con el componente `LoadingState` en las fases con carga de datos.
+- Estado del servidor (TanStack Query) y el consumo de la base de datos arrancan en la Fase 3; la Fase 2 no cablea datos.
 
 ## Migraciones
 
