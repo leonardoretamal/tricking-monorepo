@@ -133,17 +133,19 @@ Criterio de cierre: igual que Fase 4.
 
 ## Fase 7: Outside Tricks
 
-Estado: pendiente.
+Estado: completada.
 
-- 7.1. Endpoint `/api/tricks?direction=outside`.
+- 7.1. Endpoint `/api/tricks?section=outside` (la spec decía `direction`; se unificó a `section` en la Fase 3).
 - 7.2. Reutilizar componentes.
 - 7.3. Ajustar i18n y badges.
 
-Criterio de cierre: igual que Fase 4. Con esto se cierran las cinco secciones de trucos principales.
+Notas de cierre: reutiliza la fundación de la Fase 3 sin reescribir componentes. Conteo: 73 trucos, dificultad curada 73/73 en `packages/db/src/seed/difficulty/outside.ts`, mapeo Loopkicks a TrickingAPI verificado 73/73. i18n y colores de badge ya cubiertos por el patrón. E2E propio en `e2e/tricks-outside.spec.ts`. Con esto se cierran las cinco secciones de trucos principales.
+
+Criterio de cierre: igual que Fase 4.
 
 ## Fase 8: Variations
 
-Estado: pendiente.
+Estado: completada.
 
 - 8.1. Modelar variaciones: cada variación referencia un truco base.
 - 8.2. Endpoint `/api/variations` con filtros por truco base.
@@ -152,11 +154,13 @@ Estado: pendiente.
 - 8.5. i18n y badges.
 - 8.6. Integrar con Loopkicks.
 
+Notas de cierre: se adoptó el modelo de dos ejes. Eje 1, familias conceptuales de Loopkicks (`variations.kind='family'`, 19, con trucos de ejemplo en la tabla `variation_examples`). Eje 2, variaciones concretas de TrickingAPI (`kind='concrete'`, 37, los trucos con categoría VARIATION) con `baseTrickId` derivado de los prereqs (36/37) y `familyId` derivado por alias del nombre (heurística). La spec 8.3 decía "agrupada por truco base"; el listado real agrupa por eje (familias/concretas) y muestra el truco base en cada concreta. Endpoints `GET /api/variations` y `GET /api/variations/[slug]`; rutas `/es/variations` y `/es/variations/[slug]`. El listado expone `examples` resueltos en la base en una sola consulta. i18n en `messages/{es,en}/variations.json`. E2E en `e2e/variations.spec.ts`.
+
 Criterio de cierre: sección completa, con relación clara entre truco base y variación.
 
 ## Fase 9: Transitions
 
-Estado: pendiente.
+Estado: completada.
 
 - 9.1. Modelar transiciones: cada transición conecta dos trucos (origen y destino).
 - 9.2. Endpoint `/api/transitions`.
@@ -165,11 +169,13 @@ Estado: pendiente.
 - 9.5. i18n y badges.
 - 9.6. Integrar con Loopkicks.
 
+Notas de cierre: las fuentes (Loopkicks y TrickingAPI) modelan la transición como tipo conceptual con ejemplos, no como par origen-destino. Se implementó el modelo conceptual: columna `transitions.group` (unified/singular/sequential) y tabla `transition_examples`. Las columnas `originTrickId`/`destinationTrickId` quedan sin uso (documentadas, reservadas). Se sembraron 16 tipos (13 de Loopkicks + Back Swing, Front Swing y Swing de TrickingAPI, con `group` NULL) y 35 ejemplos; el detalle muestra los ejemplos y enlaza el truco cuando se resuelve por nombre. La spec 9.3/9.4 se adaptó: filtro por grupo y un diagrama del grupo (SVG accesible) en vez de flujo origen-destino. Endpoints `GET /api/transitions` y `GET /api/transitions/[slug]`; rutas `/es/transitions` y `/es/transitions/[slug]`. i18n en `messages/{es,en}/transitions.json`. E2E en `e2e/transitions.spec.ts`.
+
 Criterio de cierre: sección completa, con la relación bidireccional bien modelada.
 
 ## Fase 10: Stances
 
-Estado: pendiente.
+Estado: completada.
 
 - 10.1. Modelar stances.
 - 10.2. Endpoint `/api/stances`.
@@ -178,7 +184,13 @@ Estado: pendiente.
 - 10.5. i18n y badges.
 - 10.6. Integrar con Loopkicks.
 
+Notas de cierre: se sembraron las 6 stances de Loopkicks (backside, frontside, complete, hyper, mega, semi); las 4 últimas con descripción de Loopkicks y las 2 primeras con descripción curada. La relación truco-stance vive en la tabla `trick_stances(trick_id, stance_id, kind)`; la curación inicial es parcial a propósito (14 enlaces tomados de los ejemplos de combo de Loopkicks, 2 sin resolver porque "Wrap 900" y "Hook" no existen como trucos con ese nombre exacto). El detalle resuelve "trucos que aterrizan" con un join en la base y calcula el contador con `count()`. Endpoints `GET /api/stances` y `GET /api/stances/[slug]`; rutas `/es/stances` y `/es/stances/[slug]`. i18n en `messages/{es,en}/stances.json`. E2E en `e2e/stances.spec.ts`.
+
 Criterio de cierre: sección completa, con la relación entre stance y trucos bien poblada.
+
+Campos y migraciones de las Fases 8-10: una sola migración `0003_lying_proemial_gods.sql` agrega `variations.kind/trick_id/family_id`, `transitions.group`, y las tablas `variation_examples`, `transition_examples` y `trick_stances`. La dificultad de outside se sumó a `DIFFICULTY_BY_TRICK`.
+
+Pendientes detectados (no bloquean, para futuras subfases): (1) bug preexistente de la Fase 3: `prereqs`/`nextTricks` de la semilla guardan nombres, no ids, y `getTrickById` los resuelve por id, por lo que las listas de "prerrequisitos" y "siguientes trucos" del detalle salen casi vacías (4 de 777 coincidencias); (2) la cobertura de `trick_stances` es parcial y se amplía a mano; (3) `transitions.originTrickId/destinationTrickId` quedan sin uso hasta que exista una fuente de pares.
 
 ## Fase 11: Explore Page
 
