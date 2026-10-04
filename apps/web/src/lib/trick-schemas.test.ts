@@ -6,6 +6,7 @@ const listItem = {
   id: 'tornado',
   name: 'Tornado',
   description: null,
+  descriptionEs: null,
   difficulty: 3,
   section: 'vertical-kicks',
   loopkicksSlug: 'tornado',
