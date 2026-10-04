@@ -1,6 +1,61 @@
 {
   "explore": {
     "title": "Explorar",
-    "description": "Recorre todo el catálogo y descubre trucos por categoría, dificultad o estado."
+    "description": "Recorre el catálogo como un grafo: los nodos son trucos y las aristas muestran requisitos, continuaciones, posturas y variaciones compartidas.",
+    "filters": {
+      "sectionLabel": "Sección",
+      "allSections": "Todas",
+      "categoryLabel": "Categoría",
+      "allCategories": "Todas",
+      "difficultyLabel": "Dificultad",
+      "allDifficulties": "Todas",
+      "stanceLabel": "Postura",
+      "allStances": "Todas",
+      "clear": "Limpiar filtros"
+    },
+    "results": {
+      "none": "No hay trucos para mostrar con estos filtros.",
+      "range": "Mostrando {shown} de {total} trucos en el grafo.",
+      "truncated": "Se alcanzó el tope de {max} nodos. Ajusta los filtros para ver un conjunto más chico."
+    },
+    "states": {
+      "loading": "Cargando el grafo",
+      "errorTitle": "No pudimos cargar el grafo",
+      "errorDescription": "Hubo un problema al pedir las relaciones entre trucos. Intenta de nuevo.",
+      "retry": "Reintentar",
+      "emptyTitle": "Todavía no hay trucos en el grafo",
+      "emptyDescription": "El contenido se completará pronto.",
+      "emptyFilteredTitle": "Sin resultados",
+      "emptyFilteredDescription": "No hay trucos que coincidan con los filtros elegidos."
+    },
+    "legend": {
+      "prereq": "Requisito",
+      "next": "Continuación",
+      "stance": "Postura compartida",
+      "variation": "Variación compartida"
+    },
+    "graph": {
+      "label": "Grafo de trucos",
+      "hint": "Usa Tab para recorrer los nodos, las flechas para moverte entre ellos, Enter para abrir el resumen y Escape para cerrarlo."
+    },
+    "panel": {
+      "close": "Cerrar panel",
+      "section": "Sección",
+      "difficulty": "Dificultad",
+      "categories": "Categorías",
+      "stances": "Posturas",
+      "noCategories": "Sin categorías",
+      "noStances": "Sin posturas registradas",
+      "openDetail": "Ver detalle del truco",
+      "unknownSection": "Sin sección"
+    },
+    "stances": {
+      "backside": "Backside",
+      "frontside": "Frontside",
+      "complete": "Complete",
+      "hyper": "Hyper",
+      "mega": "Mega",
+      "semi": "Semi"
+    }
   }
 }

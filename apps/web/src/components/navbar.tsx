@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import type { KeyboardEvent } from 'react';
-import { ChevronDown, Menu, Search, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { LocaleSwitcher } from '@/components/locale-switcher';
+import { NavSearch } from '@/components/nav-search';
 import { ThemeToggle } from '@/components/theme-toggle';
 
 type NavSubItem = {
@@ -55,6 +56,7 @@ export function Navbar() {
     { href: '/variations', label: t('variations') },
     { href: '/transitions', label: t('transitions') },
     { href: '/stances', label: t('stances') },
+    { href: '/tutorials', label: t('tutorials') },
     { href: '/tips', label: t('tips') },
     { href: '/explore', label: t('explore') },
   ];
@@ -133,13 +135,7 @@ export function Navbar() {
         </div>
 
         <div className="navbar-end gap-1">
-          <Link
-            href="/search"
-            aria-label={tActions('search')}
-            className="btn btn-ghost btn-square btn-sm"
-          >
-            <Search aria-hidden="true" className="size-5" />
-          </Link>
+          <NavSearch />
           <ThemeToggle />
           <LocaleSwitcher />
           <button

@@ -5,6 +5,7 @@ import { categoryBadgeColor } from '@tricking/ui';
 import { ArrowLeft } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
+import { TrickVideoPlayer } from '@/components/trick-video-player';
 import { Link } from '@/i18n/navigation';
 import { pickDescription } from '@/lib/description';
 import { fetchTrick } from '@/lib/trick-api';
@@ -78,6 +79,8 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
           ))}
         </div>
       </header>
+
+      <TrickVideoPlayer trickId={data.id} trickName={data.name} />
 
       <section className="flex flex-col gap-2">
         <h2 className="text-lg font-semibold text-base-content">{t('detail.description')}</h2>

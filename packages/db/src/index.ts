@@ -4,3 +4,7 @@ export * from './queries/tricks';
 export * from './queries/variations';
 export * from './queries/transitions';
 export * from './queries/stances';
+export * from './queries/graph';
+export * from './queries/search';
+export * from './queries/tutorials';
+export * from './queries/videos';

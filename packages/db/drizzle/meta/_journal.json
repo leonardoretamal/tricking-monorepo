@@ -36,6 +36,13 @@
       "when": 1791076249434,
       "tag": "0004_graceful_gamma_corps",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1791141621181,
+      "tag": "0005_skinny_quicksilver",
+      "breakpoints": true
     }
   ]
 }

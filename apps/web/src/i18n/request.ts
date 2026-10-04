@@ -9,6 +9,7 @@ const modules = [
   'variations',
   'transitions',
   'stances',
+  'tutorials',
   'tips',
   'explore',
   'search',

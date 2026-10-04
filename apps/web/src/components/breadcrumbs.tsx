@@ -39,6 +39,8 @@ export function Breadcrumbs() {
         return t('transitions');
       case 'stances':
         return t('stances');
+      case 'tutorials':
+        return t('tutorials');
       case 'tips':
         return t('tips');
       case 'explore':

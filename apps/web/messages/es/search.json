@@ -1,6 +1,33 @@
 {
   "search": {
     "title": "Buscar",
-    "description": "Busca trucos por nombre, categoría o descripción."
+    "description": "Busca trucos, variaciones, transiciones y posturas por nombre o descripción.",
+    "inputLabel": "Buscar en el catálogo",
+    "inputPlaceholder": "Busca un truco, variación, transición o postura",
+    "results": {
+      "none": "Sin resultados.",
+      "range": "Mostrando {start} a {end} de {total} resultados"
+    },
+    "groups": {
+      "trick": "Trucos",
+      "variation": "Variaciones",
+      "transition": "Transiciones",
+      "stance": "Posturas"
+    },
+    "pagination": {
+      "label": "Paginación de resultados",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "status": "Página {page} de {totalPages}"
+    },
+    "states": {
+      "errorTitle": "No pudimos completar la búsqueda",
+      "errorDescription": "Ocurrió un problema al buscar. Intenta de nuevo.",
+      "retry": "Reintentar",
+      "emptyQueryTitle": "Empieza a escribir",
+      "emptyQueryDescription": "Ingresa al menos dos caracteres para buscar en el catálogo.",
+      "emptyFilteredTitle": "Sin resultados para \"{query}\"",
+      "emptyFilteredDescription": "No encontramos coincidencias. Prueba con otras palabras."
+    }
   }
 }

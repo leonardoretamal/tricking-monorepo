@@ -1,7 +1,7 @@
 import { and, asc, count, desc, eq, ilike, inArray, isNull, or, sql } from 'drizzle-orm';
 
 import { getDb } from '../client';
-import { categories, trickCategories, tricks } from '../schema';
+import { categories, trickCategories, trickRelations, tricks } from '../schema';
 
 // Consultas de trucos con paginacion, filtros, busqueda y orden resueltos en la base de
 // datos (regla de listados). La API valida los parametros con Zod antes de llegar aqui.
@@ -180,8 +180,6 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
       difficulty: tricks.difficulty,
       section: tricks.section,
       loopkicksSlug: tricks.loopkicksSlug,
-      prereqs: tricks.prereqs,
-      nextTricks: tricks.nextTricks,
     })
     .from(tricks)
     .where(and(eq(tricks.id, id), isNull(tricks.deletedAt)))
@@ -191,27 +189,36 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     return null;
   }
 
-  const relatedIds = [...new Set([...trick.prereqs, ...trick.nextTricks])];
-  const relatedRows =
-    relatedIds.length === 0
-      ? []
-      : await db
-          .select({
-            id: tricks.id,
-            name: tricks.name,
-            difficulty: tricks.difficulty,
-            section: tricks.section,
-          })
-          .from(tricks)
-          .where(inArray(tricks.id, relatedIds));
+  // Los prereqs y siguientes se resuelven desde `trick_relations` (nombres ya resueltos
+  // a ids en el seed de relaciones), no desde las columnas de texto de la semilla.
+  const relatedRows = await db
+    .select({
+      id: tricks.id,
+      name: tricks.name,
+      difficulty: tricks.difficulty,
+      section: tricks.section,
+      kind: trickRelations.kind,
+    })
+    .from(trickRelations)
+    .innerJoin(tricks, eq(trickRelations.relatedId, tricks.id))
+    .where(eq(trickRelations.trickId, trick.id))
+    .orderBy(asc(tricks.name));
 
-  const relatedById = new Map<string, TrickRelated>();
+  const prereqs: TrickRelated[] = [];
+  const nextTricks: TrickRelated[] = [];
   for (const row of relatedRows) {
-    relatedById.set(row.id, row);
+    const item: TrickRelated = {
+      id: row.id,
+      name: row.name,
+      difficulty: row.difficulty,
+      section: row.section,
+    };
+    if (row.kind === 'next') {
+      nextTricks.push(item);
+    } else {
+      prereqs.push(item);
+    }
   }
-
-  const toRelated = (ids: string[]): TrickRelated[] =>
-    ids.map((relatedId) => relatedById.get(relatedId)).filter((row): row is TrickRelated => !!row);
 
   const map = await categoryMapFor([trick.id]);
 
@@ -224,7 +231,7 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     section: trick.section,
     loopkicksSlug: trick.loopkicksSlug,
     categories: map.get(trick.id) ?? [],
-    prereqs: toRelated(trick.prereqs),
-    nextTricks: toRelated(trick.nextTricks),
+    prereqs,
+    nextTricks,
   };
 }

@@ -1,0 +1,44 @@
+{
+  "tutorials": {
+    "title": "Tutoriales de Kojo",
+    "description": "Tutoriales de Kojo's Trick Lab, con su enlace original y la fecha de publicación.",
+    "contentNote": "Los tutoriales están en inglés y se muestran tal como los publica Kojo.",
+    "filters": {
+      "searchLabel": "Buscar",
+      "searchPlaceholder": "Título del tutorial",
+      "sortLabel": "Ordenar por",
+      "pageSizeLabel": "Por página",
+      "pageSizeOption": "{count} por página"
+    },
+    "sort": {
+      "dateDesc": "Más recientes primero",
+      "dateAsc": "Más antiguos primero",
+      "titleAsc": "Título (A a Z)",
+      "titleDesc": "Título (Z a A)"
+    },
+    "results": {
+      "none": "No hay tutoriales para mostrar.",
+      "range": "Mostrando {start} a {end} de {total} tutoriales.",
+      "filtered": "Filtros activos."
+    },
+    "states": {
+      "errorTitle": "No pudimos cargar los tutoriales",
+      "errorDescription": "Hubo un problema al pedir los tutoriales. Intenta de nuevo.",
+      "retry": "Reintentar",
+      "emptyTitle": "Todavía no hay tutoriales",
+      "emptyDescription": "El contenido se completará pronto.",
+      "emptyFilteredTitle": "Sin resultados",
+      "emptyFilteredDescription": "No hay tutoriales que coincidan con los filtros elegidos."
+    },
+    "pagination": {
+      "label": "Paginación de tutoriales",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "status": "Página {page} de {totalPages}"
+    },
+    "untitled": "Tutorial sin título",
+    "openOnSite": "Ver en Kojo's Trick Lab",
+    "expand": "Mostrar detalles",
+    "collapse": "Ocultar detalles"
+  }
+}

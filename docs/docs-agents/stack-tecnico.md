@@ -43,7 +43,7 @@ turbo, pnpm, typescript, eslint, `@typescript-eslint/*`, prettier, husky, lint-s
 
 ## Dependencias aprobadas del frontend
 
-next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, date-fns, date-fns-tz.
+next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, `@xyflow/react`, date-fns, date-fns-tz.
 
 ## Dependencias aprobadas del backend y datos
 
@@ -145,6 +145,15 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 - Las migraciones se versionan en `packages/db/drizzle/` (artefactos generados, excluidos de Prettier).
 - drizzle-kit no genera migraciones de reversión. Para revertir se restaura el branch de Neon a un punto anterior o se aplica el SQL inverso a mano.
 - La base de datos es el branch por defecto del proyecto de Neon, que Neon nombra `production`; es el único branch y no se crea `dev` (ver "Ramas y flujo de trabajo").
+
+## Fases 11 a 14 (Explore, busqueda, tutoriales de Kojo, videos en R2)
+
+- Fase 11 (Explore Page): grafo con `@xyflow/react` (dependencia aprobada del frontend). Sin variables de entorno. Endpoint `GET /api/graph`.
+- Correccion de la Fase 3 (subfase de correccion): la tabla `trick_relations(trick_id, related_id, kind)` resuelve `prereqs`/`nextTricks` (que la semilla guarda como nombres) a ids; se puebla con `pnpm --filter @tricking/db db:relations` y `getTrickById` lee de ahi. Migracion `0005`, junto con la busqueda full-text.
+- Fase 12 (busqueda global): columna generada `tricks.search_vector` (tsvector) con indice GIN; la consulta usa `websearch_to_tsquery` y `ts_rank` en SQL. Sin variables nuevas.
+- Fase 13 (tutoriales de Kojo): fuente primaria el sitio web `kojostricklab.com` con cheerio; respaldo Instagram con `insta-fetcher` y cola Upstash. Variables `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, `QSTASH_TOKEN`, `KOJO_WORKER_URL`; la fuente web no requiere credenciales. Si nada responde, el contenido se carga a mano en `tutorials`.
+- Fase 14 (videos en R2): `@aws-sdk/client-s3` contra el endpoint S3 de R2. Variables `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_PUBLIC_URL`. Compresion H.264/H.265 con `ffmpeg` (binario del sistema, ruta opcional en `FFMPEG_PATH`).
+- Mini-guia de cada variable: queda en el bloque correspondiente de `.env.example`. Son opcionales para build y typecheck; sin ellas las fases 13 y 14 degradan (tutoriales por carga manual, videos sin subir) sin romper el resto.
 
 ## Notas sobre decisiones no aplicables
 

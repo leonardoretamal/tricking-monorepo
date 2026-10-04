@@ -1,8 +1,11 @@
-import { EmptyState } from '@tricking/ui';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+
+import { SearchResults } from '@/components/search-results';
+import { parseSearchParams } from '@/lib/search-schemas';
 
 type SearchPageProps = {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 export async function generateMetadata({ params }: SearchPageProps) {
@@ -15,12 +18,12 @@ export async function generateMetadata({ params }: SearchPageProps) {
   };
 }
 
-export default async function SearchPage({ params }: SearchPageProps) {
+export default async function SearchPage({ params, searchParams }: SearchPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations('search');
-  const tStates = await getTranslations('states');
+  const initial = parseSearchParams(await searchParams);
 
   return (
     <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-12 sm:px-6 lg:px-8">
@@ -30,7 +33,7 @@ export default async function SearchPage({ params }: SearchPageProps) {
         </h1>
         <p className="max-w-2xl text-base text-base-content/70">{t('description')}</p>
       </header>
-      <EmptyState title={tStates('emptyTitle')} description={tStates('emptyDescription')} />
+      <SearchResults initial={initial} />
     </section>
   );
 }

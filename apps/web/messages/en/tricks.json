@@ -79,7 +79,17 @@
       "noDescription": "This trick does not have a description yet.",
       "difficultyLabel": "Difficulty",
       "prereqs": "Prerequisites",
-      "nextTricks": "Next tricks"
+      "nextTricks": "Next tricks",
+      "video": {
+        "heading": "Demo video",
+        "loading": "Loading the video...",
+        "error": "The video could not be loaded.",
+        "retry": "Retry",
+        "emptyTitle": "No video",
+        "emptyDescription": "This trick does not have a video yet.",
+        "label": "Demo video of {name}",
+        "fallback": "Your browser does not support video playback."
+      }
     }
   }
 }

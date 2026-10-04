@@ -1,6 +1,61 @@
 {
   "explore": {
     "title": "Explore",
-    "description": "Browse the whole catalog and discover tricks by category, difficulty or status."
+    "description": "Browse the catalog as a graph: nodes are tricks and edges show requirements, follow-ups, shared stances and shared variations.",
+    "filters": {
+      "sectionLabel": "Section",
+      "allSections": "All",
+      "categoryLabel": "Category",
+      "allCategories": "All",
+      "difficultyLabel": "Difficulty",
+      "allDifficulties": "All",
+      "stanceLabel": "Stance",
+      "allStances": "All",
+      "clear": "Clear filters"
+    },
+    "results": {
+      "none": "There are no tricks to show with these filters.",
+      "range": "Showing {shown} of {total} tricks in the graph.",
+      "truncated": "The {max} node limit was reached. Narrow the filters to see a smaller set."
+    },
+    "states": {
+      "loading": "Loading the graph",
+      "errorTitle": "We could not load the graph",
+      "errorDescription": "There was a problem requesting the relationships between tricks. Try again.",
+      "retry": "Retry",
+      "emptyTitle": "There are no tricks in the graph yet",
+      "emptyDescription": "The content will be completed soon.",
+      "emptyFilteredTitle": "No results",
+      "emptyFilteredDescription": "No tricks match the selected filters."
+    },
+    "legend": {
+      "prereq": "Requirement",
+      "next": "Follow-up",
+      "stance": "Shared stance",
+      "variation": "Shared variation"
+    },
+    "graph": {
+      "label": "Trick graph",
+      "hint": "Use Tab to move through the nodes, the arrow keys to jump between them, Enter to open the summary and Escape to close it."
+    },
+    "panel": {
+      "close": "Close panel",
+      "section": "Section",
+      "difficulty": "Difficulty",
+      "categories": "Categories",
+      "stances": "Stances",
+      "noCategories": "No categories",
+      "noStances": "No stances recorded",
+      "openDetail": "View trick details",
+      "unknownSection": "No section"
+    },
+    "stances": {
+      "backside": "Backside",
+      "frontside": "Frontside",
+      "complete": "Complete",
+      "hyper": "Hyper",
+      "mega": "Mega",
+      "semi": "Semi"
+    }
   }
 }

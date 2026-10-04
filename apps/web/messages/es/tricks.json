@@ -79,7 +79,17 @@
       "noDescription": "Este truco todavía no tiene descripción.",
       "difficultyLabel": "Dificultad",
       "prereqs": "Prerrequisitos",
-      "nextTricks": "Siguientes trucos"
+      "nextTricks": "Siguientes trucos",
+      "video": {
+        "heading": "Video demostrativo",
+        "loading": "Cargando el video...",
+        "error": "No se pudo cargar el video.",
+        "retry": "Reintentar",
+        "emptyTitle": "Sin video",
+        "emptyDescription": "Este truco todavía no tiene video.",
+        "label": "Video demostrativo de {name}",
+        "fallback": "Tu navegador no soporta la reproducción de video."
+      }
     }
   }
 }

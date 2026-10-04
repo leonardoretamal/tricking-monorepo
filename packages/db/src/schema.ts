@@ -1,7 +1,8 @@
-import { relations } from 'drizzle-orm';
+import { relations, sql } from 'drizzle-orm';
 import {
   type AnyPgColumn,
   bigint,
+  customType,
   index,
   integer,
   pgTable,
@@ -16,6 +17,14 @@ const timestamps = {
   createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
 };
+
+// Tipo de Postgres para la busqueda full-text (Fase 12). La columna generada y su
+// indice GIN viven en `tricks`.
+const tsvector = customType<{ data: string }>({
+  dataType() {
+    return 'tsvector';
+  },
+});
 
 export const categories = pgTable('categories', {
   id: serial('id').primaryKey(),
@@ -52,11 +61,16 @@ export const tricks = pgTable(
     nextTricks: text('next_tricks').array().notNull().default([]),
     source: text('source').notNull().default('trickingapi'),
     deletedAt: timestamp('deleted_at', { withTimezone: true }),
+    // Columna generada para la busqueda full-text (Fase 12). Se indexa con GIN mas abajo.
+    searchVector: tsvector('search_vector').generatedAlwaysAs(
+      sql`to_tsvector('simple', coalesce(name, '') || ' ' || coalesce(description, '') || ' ' || coalesce(description_es, ''))`,
+    ),
     ...timestamps,
   },
   (table) => [
     index('tricks_name_idx').on(table.name),
     index('tricks_section_idx').on(table.section),
+    index('tricks_search_vector_idx').using('gin', table.searchVector),
   ],
 );
 
@@ -73,6 +87,27 @@ export const trickCategories = pgTable(
   (table) => [
     primaryKey({ columns: [table.trickId, table.categoryId] }),
     index('trick_categories_category_id_idx').on(table.categoryId),
+  ],
+);
+
+// Relacion truco-truco que corrige el bug de la Fase 3: `prereqs`/`nextTricks` de la
+// semilla vienen como nombres, no como ids. Esta tabla los resuelve a ids y los deja
+// consultables en SQL; la usan el detalle de truco y el grafo de Explore (Fase 11).
+// `kind` vale 'prereq' o 'next'.
+export const trickRelations = pgTable(
+  'trick_relations',
+  {
+    trickId: text('trick_id')
+      .notNull()
+      .references(() => tricks.id, { onDelete: 'cascade' }),
+    relatedId: text('related_id')
+      .notNull()
+      .references(() => tricks.id, { onDelete: 'cascade' }),
+    kind: text('kind').notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.trickId, table.relatedId, table.kind] }),
+    index('trick_relations_related_id_idx').on(table.relatedId),
   ],
 );
 
@@ -206,6 +241,7 @@ export const categoriesRelations = relations(categories, ({ many }) => ({
 
 export const tricksRelations = relations(tricks, ({ many }) => ({
   trickCategories: many(trickCategories),
+  trickRelations: many(trickRelations),
   trickStances: many(trickStances),
   variationsAsBase: many(variations, { relationName: 'variations_base' }),
   variationsAsTrick: many(variations, { relationName: 'variations_trick' }),
@@ -319,6 +355,8 @@ export type Trick = typeof tricks.$inferSelect;
 export type NewTrick = typeof tricks.$inferInsert;
 export type TrickCategory = typeof trickCategories.$inferSelect;
 export type NewTrickCategory = typeof trickCategories.$inferInsert;
+export type TrickRelation = typeof trickRelations.$inferSelect;
+export type NewTrickRelation = typeof trickRelations.$inferInsert;
 export type Stance = typeof stances.$inferSelect;
 export type NewStance = typeof stances.$inferInsert;
 export type Variation = typeof variations.$inferSelect;

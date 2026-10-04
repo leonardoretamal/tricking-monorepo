@@ -1,6 +1,33 @@
 {
   "search": {
     "title": "Search",
-    "description": "Search tricks by name, category or description."
+    "description": "Search tricks, variations, transitions and stances by name or description.",
+    "inputLabel": "Search the catalog",
+    "inputPlaceholder": "Search for a trick, variation, transition or stance",
+    "results": {
+      "none": "No results.",
+      "range": "Showing {start} to {end} of {total} results"
+    },
+    "groups": {
+      "trick": "Tricks",
+      "variation": "Variations",
+      "transition": "Transitions",
+      "stance": "Stances"
+    },
+    "pagination": {
+      "label": "Results pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {totalPages}"
+    },
+    "states": {
+      "errorTitle": "We could not complete the search",
+      "errorDescription": "Something went wrong while searching. Please try again.",
+      "retry": "Retry",
+      "emptyQueryTitle": "Start typing",
+      "emptyQueryDescription": "Enter at least two characters to search the catalog.",
+      "emptyFilteredTitle": "No results for \"{query}\"",
+      "emptyFilteredDescription": "We found no matches. Try different words."
+    }
   }
 }
