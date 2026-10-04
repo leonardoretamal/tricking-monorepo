@@ -132,6 +132,15 @@ Antes de entregar cualquier tarea, antes de proponer git add, commit, push, PR o
 - Limitaciones conocidas: Playwright no cubre Lighthouse ni trazas de performance.
 - Reporte: "Capturas eliminadas" o "Capturas conservadas en <ruta> a pedido del usuario".
 
+## Prueba de UI en el navegador real
+
+- Toda verificación de interfaz o de flujo se hace con la herramienta de navegador de la sesión (Playwright MCP, herramientas `playwright_browser_*`), con ventana visible, no solo con el runner de Playwright por CLI en modo headless. El runner CLI corre las suites E2E; el navegador real verifica la interfaz y el flujo.
+- Es parte del cierre de la tarea, no opcional. Si el ticket no tiene superficie de UI (backend, CLI, migración), se verifica por su superficie real (curl, tests) y se declara qué se probó.
+- La funcionalidad se verifica con comprobaciones livianas (`browser_evaluate`, `browser_find`, `browser_wait_for`, `browser_network_requests`, `browser_console_messages`), sin capturas. Las capturas y los snapshots quedan para cambios de diseño o evidencia visual.
+- Un solo navegador a la vez, en fila. La verificación móvil (`browser_resize` a 390x600) va al final y se vuelve a la normalidad con `browser_close`, nunca con otro `browser_resize`.
+- Limpieza al cierre: se borran las capturas y los logs de la sesión de navegador; nunca quedan dentro del repositorio.
+- El detalle operativo vive en la skill `orquestar` (`references/navegador.md`).
+
 ## Pruebas de infraestructura y servicios antes del cierre
 
 - Autorización para levantar contenedores, bases de datos, servicios, colas y caché con datos de prueba.

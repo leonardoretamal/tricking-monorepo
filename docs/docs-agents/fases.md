@@ -192,6 +192,8 @@ Campos y migraciones de las Fases 8-10: una sola migración `0003_lying_proemial
 
 Pendientes detectados (no bloquean, para futuras subfases): (1) bug preexistente de la Fase 3: `prereqs`/`nextTricks` de la semilla guardan nombres, no ids, y `getTrickById` los resuelve por id, por lo que las listas de "prerrequisitos" y "siguientes trucos" del detalle salen casi vacías (4 de 777 coincidencias); (2) la cobertura de `trick_stances` es parcial y se amplía a mano; (3) `transitions.originTrickId/destinationTrickId` quedan sin uso hasta que exista una fuente de pares.
 
+Traducción al español de etiquetas y contenido (2026-10-04): las etiquetas de UI se tradujeron al español (secciones, categorías y grupos de transiciones). El contenido técnico de las fuentes viene en inglés; se agregó `description_es` a `tricks`, `variations`, `transitions` y `stances` (migración `0004`), la API devuelve `description` y `descriptionEs`, y el frontend elige por locale. Las traducciones se hicieron a mano y viven en `packages/db/src/seed/translations/es-*.json`, aplicadas con `pnpm --filter @tricking/db db:translations`. Cubre 558 trucos, 19 familias de variaciones, 16 transiciones y 6 stances. Los nombres de trucos se mantienen en inglés.
+
 ## Fase 11: Explore Page
 
 Estado: pendiente.

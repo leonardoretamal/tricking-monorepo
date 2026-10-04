@@ -407,6 +407,15 @@ Capturas con Playwright:
 - Viewport móvil: 390x600. Prohibido 390x844. Página completa con `fullPage: true`.
 - Reporte: "Capturas eliminadas" o "Capturas conservadas en <ruta> a pedido del usuario".
 
+Prueba de UI y flujos en el navegador real:
+
+- Toda verificación de interfaz o de flujo se hace con la herramienta de navegador de la sesión (Playwright MCP, herramientas `playwright_browser_*`), con ventana visible, no solo con el runner de Playwright por CLI en modo headless. El runner CLI corre las suites E2E; el navegador real verifica la interfaz y el flujo.
+- Es parte del cierre de la tarea, no opcional. Si el ticket no tiene superficie de UI (backend, CLI, migración), se verifica por su superficie real (curl, tests) y se declara qué se probó.
+- La funcionalidad se verifica con comprobaciones livianas (`browser_evaluate`, `browser_find`, `browser_wait_for`, `browser_network_requests`, `browser_console_messages`), sin capturas. Las capturas y los snapshots quedan para cambios de diseño o evidencia visual.
+- Un solo navegador a la vez, en fila. La verificación móvil (`browser_resize` a 390x600) va al final y se vuelve a la normalidad con `browser_close`, nunca con otro `browser_resize`.
+- Limpieza al cierre: se borran las capturas y los logs de la sesión de navegador; nunca quedan dentro del repositorio.
+- El detalle operativo vive en la skill `orquestar` (`references/navegador.md`).
+
 Pruebas de infraestructura y servicios antes del cierre:
 
 - Autorización para levantar contenedores, bases de datos, servicios, colas y caché con datos de prueba.
@@ -518,7 +527,7 @@ Estas son notas operativas del usuario, no forman parte del bloque de reglas que
 
 - Copiar `bin/lupe-start` desde buybolivia en todo repositorio.
 - Usar ruflo y graphify si OpenCode lo permite.
-- Playwright con navegador visible en ventana normal del escritorio (WSLg en WSL), sobre Chrome en Windows, no en WSL. El navegador no se cierra solo.
+- Prueba de UI y flujos en el navegador real: toda verificación de interfaz o de flujo se hace con la herramienta de navegador de la sesión (Playwright MCP, herramientas `playwright_browser_*`), con ventana visible en el escritorio (WSLg en WSL, sobre Chrome en Windows, no en WSL), no con el runner de Playwright por CLI en modo headless. El runner CLI corre las suites E2E; el navegador real verifica la interfaz y el flujo. Es parte del cierre de la tarea, no opcional (el detalle está en la sección 18 y en `docs/docs-agents/reglas-validacion.md`; el operativo, en la skill `orquestar`, `references/navegador.md`). El navegador no se cierra solo.
 - Limitaciones de Playwright: no cubre Lighthouse ni trazas de performance.
 - Correos de prueba sin captcha: mail.tm (API, recomendado para flujos automatizados) y Maildrop (maildrop.cc, para pruebas manuales rápidas). Si el buzón pide captcha, parar, avisar al usuario, resolverlo manualmente y retomar.
 - Tener en VS Code las extensiones justas y necesarias.
