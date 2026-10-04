@@ -18,7 +18,11 @@
     "db:push": "drizzle-kit push",
     "db:seed": "tsx src/seed/seed.ts",
     "db:map": "tsx src/seed/map-loopkicks.ts",
-    "db:difficulty": "tsx src/seed/apply-difficulty.ts"
+    "db:difficulty": "tsx src/seed/apply-difficulty.ts",
+    "db:variations": "tsx src/seed/variations.ts",
+    "db:transitions": "tsx src/seed/transitions.ts",
+    "db:stances": "tsx src/seed/stances.ts",
+    "db:stance-links": "tsx src/seed/stance-links.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

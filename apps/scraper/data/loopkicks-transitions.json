@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "punch",
+    "name": "Punch",
+    "group": "Unified",
+    "description": "The Punch can be described as a unified (two-foot) landing followed by a unified takeoff. The punch is traditionally utilized within gymnastics and tumbling and is characterized by an immediate takeoff without absorbing the impact of the landing.",
+    "examples": ["Roundoff (punch) Back Tuck", "Envergado (punch) Backside 900"]
+  },
+  {
+    "slug": "pop",
+    "name": "Pop",
+    "group": "Unified",
+    "description": "The Pop can be described as a sequential (one foot at a time) landing followed by a unified (two-foot) takeoff. It is differentiated by the punch by the timing and power absorption throughout the transition.",
+    "examples": ["Cartwheel (pop) Full Twist", "Scoot (pop) Full Twist"]
+  },
+  {
+    "slug": "reverse-pop",
+    "name": "Reverse-Pop",
+    "group": "Unified",
+    "description": "The Reverse-Pop can be described as a unified (two-foot) landing followed by a sequential (one foot at a time) takeoff. Basically the literal opposite of the Pop transition.",
+    "examples": ["Parafuso (reverse-pop) Aerial", "Parafuso (reverse-pop) GMS"]
+  },
+  {
+    "slug": "bound",
+    "name": "Bound",
+    "group": "Unified",
+    "description": "The Bound can be described as an extension or modification of any of the previous three unified transition. That is, any unified transition that has an adjustment step on the ground before takeoff. Can be thought of as the unified equivalent to the \"carrythrough\". Definitely the most underutilized of the Unified transitions.",
+    "examples": ["Scoot (bound) Full Twist", "Aerial (bound) Pop 360"]
+  },
+  {
+    "slug": "swingthrough",
+    "name": "Swingthrough",
+    "group": "Singular",
+    "description": "The Swingthrough (aka Swing) occurs when the in-air leg continues on a linear, unbroken path past the base leg, creating or maintaining momentum from the previous trick to the next. Frontswings, Backswings, Lotus Swings, Masterswings, and arguably Wrapthroughs are all examples of the swingthrough.",
+    "examples": [
+      "Raiz (backswing) Gainer Flash",
+      "Aerial [Semi] (frontswing) Raiz",
+      "Aerial [Mega] (frontswing) Aerial",
+      "Aerial (masterswing) GMS"
+    ]
+  },
+  {
+    "slug": "wrapthrough",
+    "name": "Wrapthrough",
+    "group": "Singular",
+    "description": "The Wrapthrough (aka wrap) can be seen as a type of swingthrough. It occurs when the outside leg \"wraps\" behind the base leg into an inside flip. In Vert Kicking, it is often used to name tricks that use the cheat takeoff that leave \"overcheated\" or in frontside.",
+    "examples": ["Cartwheel (wrap) Wrap Full", "540 (wrap) Wrap 900"]
+  },
+  {
+    "slug": "missleg",
+    "name": "Missleg",
+    "group": "Singular",
+    "description": "The Missleg occurs when the in-air leg travels towards the ground as if it were going to land, but chnages it's path by rebounding into the takeoff of the next trick, therefore \"missing\" the ground entirely.",
+    "examples": ["Sideswipe (missleg) Sideswipe", "Tornado (missleg) Swing 360"]
+  },
+  {
+    "slug": "rapid",
+    "name": "Rapid",
+    "group": "Singular",
+    "description": "The Rapid is a one-footed punch - or an instant jump off of one foot without absorbing the landing energy.",
+    "examples": ["Cheat 720 (rapid) Round", "Cartwheel Switch (rapid) Boneless Double Corkscrew"]
+  },
+  {
+    "slug": "carrythrough",
+    "name": "Carrythrough",
+    "group": "Singular",
+    "description": "The Carrythrough can be described as any of the previous singular transitions, but with a pivot / adjustment step during the transition. Can be seen as the singular equivalent of the \"bound\". This transition is often mistaken with the Frontswing.",
+    "examples": ["Aerial (carrythrough) Raiz", "Tornado (carrythrough) Gainer"]
+  },
+  {
+    "slug": "vanish",
+    "name": "Vanish",
+    "group": "Sequential",
+    "description": "The Vanish transition occurs when a sequential landing is followed by another sequential takeoff in the same order. (e.g. Left-Right, Left-Right or Right-Left, Right-Left)",
+    "examples": ["Butterfly Twist (vanish) Cheat 900", "540 (vanish) Aerial"]
+  },
+  {
+    "slug": "reversal",
+    "name": "Reversal",
+    "group": "Sequential",
+    "description": "The Reversal transition occurs when a sequential landing is followed by another sequential takeoff in the reverse order. (e.g Left-Right, Right-Left or Right-Left, Left-Right)",
+    "examples": ["Scoot (reversal) Aerial", "Cartwheel (reversal) GMS"]
+  },
+  {
+    "slug": "redirect",
+    "name": "Redirect",
+    "group": "Sequential",
+    "description": "The Redirect transition occurs when a sequential landing is followed by an adjustment step and then another sequential takeoff. Could be thought of as a reversal with an extra step in between landing and takeoff.",
+    "examples": ["Sideswipe (redirect) Raiz", "Tornado (redirect) Swing 360"]
+  },
+  {
+    "slug": "skip",
+    "name": "Skip",
+    "group": "Sequential",
+    "description": "The Skip can be thought of as a vanish with an extra hop in-between the two tricks without ever having both feet touch at the same time.",
+    "examples": ["Scoot (skip) Raiz", "Aerial (skip) Butterfly Twist"]
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "slug": "round",
+    "name": "Round",
+    "description": "An inside-leg kick. It is differentiated from the inside crescent kick by the hip turnover and the chamber & snap of the kick. Typically finishes in complete stance or mega stance.",
+    "examples": ["Corkscrew Round"]
+  },
+  {
+    "slug": "hook-hyperhook",
+    "name": "Hook / Hyperhook",
+    "description": "An outside-leg kick. Tends to refer to either a traditional \"hook\" kick or an \"outside crescent\" kick. Typically lands in hyper stance.",
+    "examples": ["Corkscrew Hyperhook (Boxcutter)"]
+  },
+  {
+    "slug": "axe",
+    "name": "Axe",
+    "description": "A kick that travels from 12 o'clock to 6 o'clock from above the head towards the ground like an axe. Similar to the frontswing motion.",
+    "examples": ["Butterfly Twist Axe"]
+  },
+  {
+    "slug": "swipe",
+    "name": "Swipe",
+    "description": "A round kick landed on the kicking leg and in hyper stance. Usually done in a vertical descent motion towards the ground. The term \"swipe\" tends to refer to some level of inversion.",
+    "examples": ["Corkscrew Swipe"]
+  },
+  {
+    "slug": "shuriken",
+    "name": "Shuriken",
+    "description": "An outside crescent kick where you land on the kicking leg. Tends to land in complete or mega stance. Previously referred to as \"singleleg\" or a\"hypered crescent\".",
+    "examples": ["Corkscrew Shuriken"]
+  },
+  {
+    "slug": "illusion",
+    "name": "Illusion",
+    "description": "Similar to the shuriken, but lands on both feet (turbo) typically in frontside.",
+    "examples": ["Illusion Twist"]
+  },
+  {
+    "slug": "jackknife-swipeknife",
+    "name": "Jackknife / Swipeknife",
+    "description": "An inside leg kick followed by an outside hyper hook. The term \"Jackknife\" is used to refer to vertical kicks, whereas the term \"Swipeknife\" is used to refer to off-axis tricks. Typically the variation is shortened to just \"knife\".",
+    "examples": ["Corkscrew Swipeknife"]
+  },
+  {
+    "slug": "feilong",
+    "name": "Feilong",
+    "description": "An outside leg kick (typically crescent) followed by an inside leg kick (typically a round, inside crescent, or front kick). Named after the Street Fighter character \"Fei Long\".",
+    "examples": ["Full Feilong"]
+  },
+  {
+    "slug": "hawkeye",
+    "name": "Hawkeye",
+    "description": "A hook kick done with the round-kicking leg going against the rotation of the base trick.",
+    "examples": ["Butterfly Twist Hawkeye"]
+  },
+  {
+    "slug": "twist-kick",
+    "name": "Twist Kick",
+    "description": "A round kick aimed back the way it came from. Sometimes referred to as an \"inside round\" kick. It is commonly seen in the Scissor variation.",
+    "examples": ["Butterfly Twist Twist-Kick"]
+  },
+  {
+    "slug": "doubleleg-pike",
+    "name": "Doubleleg / Pike",
+    "description": "A windshield wiper motion with your lower half with both feet piked together. Originating from Capoeira. \"Doubleleg\" usually refers to off-axis tricks, \"Pike\" usually refers to on-axis (backwards / forwards) tricks, and \"Parafuso\" usually refers to vertical kicks.",
+    "examples": ["Corkscrew Doubleleg"]
+  },
+  {
+    "slug": "wackknife",
+    "name": "Wackknife",
+    "description": "Originally the Wackknife was a vertical kick with 2 or 3 (depends on how you count it) kicks that lands in semi with an outside crescent kick. However, most trickers do the Wackknife variation landing in Turbo stance on both feet.",
+    "examples": ["Butterfly Twist Wackknife"]
+  },
+  {
+    "slug": "rocketboi",
+    "name": "Rocketboi",
+    "description": "A vertical pike with one arm grabbing the opposite ankle and the other arm extending away from the body. Typically done with a \"late\" flip to emphasize the shape.",
+    "examples": ["Rocketboi"]
+  },
+  {
+    "slug": "scissor",
+    "name": "Scissor",
+    "description": "A twist kick that is done while flipping away from the kick in a \"scissoring\" motion. Typically lands in mega but it can sometimes overrotate into complete stance.",
+    "examples": ["Gainer Scissor"]
+  },
+  {
+    "slug": "sidewinder",
+    "name": "Sidewinder",
+    "description": "A shape where the emphasis is on the back arch and the travel of the outside leg. Originally it was defined by being \"a Sideswipe done in reverse\" and was a Butterfly Kick variation, but as a variation, it can be applied to many other tricks.",
+    "examples": ["Gainer Sidewinder"]
+  },
+  {
+    "slug": "crowd-awakener-x-out",
+    "name": "Crowd Awakener / X-Out",
+    "description": "A mid-air split kick directed at the audience. \"X-Out' tends to refer to on-axis (backward or forwards) flips, whereas \"Crowd Awakener\" is more of a general term that applies to more off-axis or vertical tricks. But both generally have a similar aesthetic and target.",
+    "examples": ["Corkscrew Crowd Awakener"]
+  },
+  {
+    "slug": "rodeo-squirrel",
+    "name": "Rodeo / Squirrel",
+    "description": "An arched back position with a leg grab. Some people differentiate \"squirrel\" to mean grabbing both legs with both arms and \"rodeo\" to mean just one arm grabbing.",
+    "examples": ["Rodeo Corkscrew"]
+  },
+  {
+    "slug": "switch",
+    "name": "Switch",
+    "description": "When a leg passes the other leg mid-air and lands.",
+    "examples": ["Gainer Switch"]
+  },
+  {
+    "slug": "dragonfly",
+    "name": "Dragonfly",
+    "description": "A swing into a side kick. Similar concept to a kick full / flash full, but with a sidekick.",
+    "examples": ["Dragonfly Corkscrew"]
+  }
+]

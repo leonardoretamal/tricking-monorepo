@@ -1,5 +1,6 @@
 import { relations } from 'drizzle-orm';
 import {
+  type AnyPgColumn,
   bigint,
   index,
   integer,
@@ -82,9 +83,34 @@ export const stances = pgTable('stances', {
   ...timestamps,
 });
 
+// Relacion truco-stance. `kind` distingue el aterrizaje del despegue; la Fase 10 usa
+// 'landing' para "trucos que aterrizan en ese stance".
+export const trickStances = pgTable(
+  'trick_stances',
+  {
+    trickId: text('trick_id')
+      .notNull()
+      .references(() => tricks.id, { onDelete: 'cascade' }),
+    stanceId: integer('stance_id')
+      .notNull()
+      .references(() => stances.id, { onDelete: 'cascade' }),
+    kind: text('kind').notNull().default('landing'),
+  },
+  (table) => [
+    primaryKey({ columns: [table.trickId, table.stanceId, table.kind] }),
+    index('trick_stances_stance_id_idx').on(table.stanceId),
+  ],
+);
+
+// `kind` separa las familias conceptuales de Loopkicks ('family') de las variaciones
+// concretas de TrickingAPI ('concrete'). En las concretas, `trickId` apunta al truco del
+// catalogo que materializa la variacion y `familyId` a su familia conceptual.
 export const variations = pgTable('variations', {
   id: serial('id').primaryKey(),
+  kind: text('kind').notNull().default('family'),
   baseTrickId: text('base_trick_id').references(() => tricks.id),
+  trickId: text('trick_id').references(() => tricks.id),
+  familyId: integer('family_id').references((): AnyPgColumn => variations.id),
   slug: text('slug').notNull().unique(),
   name: text('name').notNull(),
   description: text('description'),
@@ -93,17 +119,50 @@ export const variations = pgTable('variations', {
   ...timestamps,
 });
 
+export const variationExamples = pgTable(
+  'variation_examples',
+  {
+    variationId: integer('variation_id')
+      .notNull()
+      .references(() => variations.id, { onDelete: 'cascade' }),
+    trickId: text('trick_id')
+      .notNull()
+      .references(() => tricks.id, { onDelete: 'cascade' }),
+  },
+  (table) => [
+    primaryKey({ columns: [table.variationId, table.trickId] }),
+    index('variation_examples_trick_id_idx').on(table.trickId),
+  ],
+);
+
+// `group` refleja la taxonomia de Loopkicks (unified / sequential). `originTrickId` y
+// `destinationTrickId` quedan sin uso: las fuentes modelan la transicion como concepto
+// con ejemplos, no como par de trucos (ver docs/docs-agents/fases.md, Fase 9).
 export const transitions = pgTable('transitions', {
   id: serial('id').primaryKey(),
   slug: text('slug').notNull().unique(),
   name: text('name').notNull(),
   description: text('description'),
+  group: text('group'),
   originTrickId: text('origin_trick_id').references(() => tricks.id),
   destinationTrickId: text('destination_trick_id').references(() => tricks.id),
   loopkicksSlug: text('loopkicks_slug').unique(),
   deletedAt: timestamp('deleted_at', { withTimezone: true }),
   ...timestamps,
 });
+
+export const transitionExamples = pgTable(
+  'transition_examples',
+  {
+    id: serial('id').primaryKey(),
+    transitionId: integer('transition_id')
+      .notNull()
+      .references(() => transitions.id, { onDelete: 'cascade' }),
+    label: text('label').notNull(),
+    trickId: text('trick_id').references(() => tricks.id),
+  },
+  (table) => [index('transition_examples_transition_id_idx').on(table.transitionId)],
+);
 
 export const videos = pgTable(
   'videos',
@@ -143,10 +202,29 @@ export const categoriesRelations = relations(categories, ({ many }) => ({
 
 export const tricksRelations = relations(tricks, ({ many }) => ({
   trickCategories: many(trickCategories),
-  variations: many(variations),
+  trickStances: many(trickStances),
+  variationsAsBase: many(variations, { relationName: 'variations_base' }),
+  variationsAsTrick: many(variations, { relationName: 'variations_trick' }),
+  variationExamples: many(variationExamples),
+  transitionExamples: many(transitionExamples),
   videos: many(videos),
   transitionsAsOrigin: many(transitions, { relationName: 'transitions_origin' }),
   transitionsAsDestination: many(transitions, { relationName: 'transitions_destination' }),
+}));
+
+export const stancesRelations = relations(stances, ({ many }) => ({
+  trickStances: many(trickStances),
+}));
+
+export const trickStancesRelations = relations(trickStances, ({ one }) => ({
+  trick: one(tricks, {
+    fields: [trickStances.trickId],
+    references: [tricks.id],
+  }),
+  stance: one(stances, {
+    fields: [trickStances.stanceId],
+    references: [stances.id],
+  }),
 }));
 
 export const trickCategoriesRelations = relations(trickCategories, ({ one }) => ({
@@ -160,14 +238,38 @@ export const trickCategoriesRelations = relations(trickCategories, ({ one }) => 
   }),
 }));
 
-export const variationsRelations = relations(variations, ({ one }) => ({
+export const variationsRelations = relations(variations, ({ one, many }) => ({
   baseTrick: one(tricks, {
     fields: [variations.baseTrickId],
+    references: [tricks.id],
+    relationName: 'variations_base',
+  }),
+  trick: one(tricks, {
+    fields: [variations.trickId],
+    references: [tricks.id],
+    relationName: 'variations_trick',
+  }),
+  family: one(variations, {
+    fields: [variations.familyId],
+    references: [variations.id],
+    relationName: 'variations_family',
+  }),
+  inFamily: many(variations, { relationName: 'variations_family' }),
+  examples: many(variationExamples),
+}));
+
+export const variationExamplesRelations = relations(variationExamples, ({ one }) => ({
+  variation: one(variations, {
+    fields: [variationExamples.variationId],
+    references: [variations.id],
+  }),
+  trick: one(tricks, {
+    fields: [variationExamples.trickId],
     references: [tricks.id],
   }),
 }));
 
-export const transitionsRelations = relations(transitions, ({ one }) => ({
+export const transitionsRelations = relations(transitions, ({ one, many }) => ({
   originTrick: one(tricks, {
     fields: [transitions.originTrickId],
     references: [tricks.id],
@@ -177,6 +279,18 @@ export const transitionsRelations = relations(transitions, ({ one }) => ({
     fields: [transitions.destinationTrickId],
     references: [tricks.id],
     relationName: 'transitions_destination',
+  }),
+  examples: many(transitionExamples),
+}));
+
+export const transitionExamplesRelations = relations(transitionExamples, ({ one }) => ({
+  transition: one(transitions, {
+    fields: [transitionExamples.transitionId],
+    references: [transitions.id],
+  }),
+  trick: one(tricks, {
+    fields: [transitionExamples.trickId],
+    references: [tricks.id],
   }),
 }));
 
@@ -205,8 +319,14 @@ export type Stance = typeof stances.$inferSelect;
 export type NewStance = typeof stances.$inferInsert;
 export type Variation = typeof variations.$inferSelect;
 export type NewVariation = typeof variations.$inferInsert;
+export type VariationExample = typeof variationExamples.$inferSelect;
+export type NewVariationExample = typeof variationExamples.$inferInsert;
 export type Transition = typeof transitions.$inferSelect;
 export type NewTransition = typeof transitions.$inferInsert;
+export type TransitionExample = typeof transitionExamples.$inferSelect;
+export type NewTransitionExample = typeof transitionExamples.$inferInsert;
+export type TrickStance = typeof trickStances.$inferSelect;
+export type NewTrickStance = typeof trickStances.$inferInsert;
 export type Video = typeof videos.$inferSelect;
 export type NewVideo = typeof videos.$inferInsert;
 export type Tutorial = typeof tutorials.$inferSelect;

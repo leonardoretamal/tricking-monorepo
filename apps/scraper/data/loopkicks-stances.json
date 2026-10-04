@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "complete",
+    "name": "Complete",
+    "description": "The \"default\" landing for many of the base tricks (eg. Full Twist, Corkscrew, Butterfly Twist all land in complete by default). This landing marks the single, double, triple etc. rotations in tricking. Defined by landing on the outside kicking leg (left leg if you spin left, right leg if you spin right) in approximately Backside Stance. If you landed in Complete Stance and wanted to swing, you would do a backswing (eg. gainer, corkscrew). The mid-air position that you would land in right before you hit Complete is also known as \"the eagle\". (video credit Ethan Turner - @eaton_tdr)",
+    "examples": ["Round, Shuriken"]
+  },
+  {
+    "slug": "hyper",
+    "name": "Hyper",
+    "description": "The secondary \"default\" landing for many base tricks (eg. Aerial, Butterfly Kick, Gainer Flash) Defined by landing on the inside kicking leg (right leg if you spin left, left leg if you spin right) anywhere from Backside to Inside Stance. If you landed in Hyper Stance and wanted to swing, you would do a masterswing or wrap (eg. GMS or Wrap Full respectively). (video credit Ethan Turner - @eaton_tdr)",
+    "examples": ["Swipe, Hyperhook"]
+  },
+  {
+    "slug": "mega",
+    "name": "Mega",
+    "description": "Defined by landing on the outside kicking leg (left leg if you spin left, right leg if you spin right) in approximately Frontside Stance. If you landed in Mega Stance and wanted to swing, you would frontswing (eg. Aerial or Butterfly Kick) (video credit Ethan Turner - @eaton_tdr)",
+    "examples": ["Scissor, Late Round"]
+  },
+  {
+    "slug": "semi",
+    "name": "Semi",
+    "description": "Defined by landing on the inside kicking leg (right leg if you spin left, left leg if you spin right) in approximately Frontside Stance. If you landed in Semi Stance and wanted to swing, you would frontswing (eg. Raiz, Sideswipe) (video credit Ethan Turner - @eaton_tdr)",
+    "examples": ["Wackknife (OG style)"]
+  }
+]
