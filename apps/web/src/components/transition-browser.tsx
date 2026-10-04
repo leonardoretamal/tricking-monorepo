@@ -3,11 +3,12 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { EmptyState, ErrorState, TrickListSkeleton } from '@tricking/ui';
 import { Search } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 import { TransitionBadge } from '@/components/transition-badge';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import { fetchTransitions } from '@/lib/semantic-api';
 import {
   TRANSITION_GROUPS,
@@ -32,6 +33,7 @@ interface TransitionBrowserProps {
 
 export function TransitionBrowser({ initial }: TransitionBrowserProps) {
   const t = useTranslations('transitions');
+  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [qInput, setQInput] = useState(initial.q ?? '');
@@ -217,9 +219,9 @@ export function TransitionBrowser({ initial }: TransitionBrowserProps) {
                   <article className="card h-full border border-base-300 bg-base-100 shadow-sm">
                     <div className="card-body gap-3">
                       <h3 className="card-title">{item.name}</h3>
-                      {item.description ? (
+                      {pickDescription(locale, item.description, item.descriptionEs) ? (
                         <p className="line-clamp-3 text-sm text-base-content/70">
-                          {item.description}
+                          {pickDescription(locale, item.description, item.descriptionEs)}
                         </p>
                       ) : null}
                       <div className="card-actions">

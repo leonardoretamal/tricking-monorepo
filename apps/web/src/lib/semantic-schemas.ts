@@ -14,6 +14,7 @@ export const variationListItemSchema = z.object({
   slug: z.string(),
   name: z.string(),
   description: z.string().nullable(),
+  descriptionEs: z.string().nullable(),
   kind: z.string(),
   baseTrick: trickRefSchema.nullable(),
   examples: z.array(trickRefSchema),
@@ -43,6 +44,7 @@ export const transitionListItemSchema = z.object({
   slug: z.string(),
   name: z.string(),
   description: z.string().nullable(),
+  descriptionEs: z.string().nullable(),
   group: z.string().nullable(),
 });
 
@@ -68,6 +70,7 @@ export const stanceListItemSchema = z.object({
   slug: z.string(),
   name: z.string(),
   description: z.string().nullable(),
+  descriptionEs: z.string().nullable(),
   landingTrickCount: z.number(),
 });
 

@@ -35,6 +35,7 @@ export interface TrickListItem {
   id: string;
   name: string;
   description: string | null;
+  descriptionEs: string | null;
   difficulty: number | null;
   section: string | null;
   loopkicksSlug: string | null;
@@ -141,6 +142,7 @@ export async function listTricks(params: ListTricksParams): Promise<PaginatedTri
       id: tricks.id,
       name: tricks.name,
       description: tricks.description,
+      descriptionEs: tricks.descriptionEs,
       difficulty: tricks.difficulty,
       section: tricks.section,
       loopkicksSlug: tricks.loopkicksSlug,
@@ -174,6 +176,7 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
       id: tricks.id,
       name: tricks.name,
       description: tricks.description,
+      descriptionEs: tricks.descriptionEs,
       difficulty: tricks.difficulty,
       section: tricks.section,
       loopkicksSlug: tricks.loopkicksSlug,
@@ -216,6 +219,7 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     id: trick.id,
     name: trick.name,
     description: trick.description,
+    descriptionEs: trick.descriptionEs,
     difficulty: trick.difficulty,
     section: trick.section,
     loopkicksSlug: trick.loopkicksSlug,

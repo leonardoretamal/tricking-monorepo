@@ -1,8 +1,9 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import type { VariationListItem } from '@/lib/semantic-schemas';
 import { VariationTrickRef } from './variation-trick-ref';
 
@@ -12,6 +13,7 @@ interface VariationCardProps {
 
 export function VariationCard({ variation }: VariationCardProps) {
   const t = useTranslations('variations');
+  const locale = useLocale();
   const isFamily = variation.kind === 'family';
   const badgeClass = isFamily ? 'tb-cat-basics' : 'tb-cat-transitions';
 
@@ -31,7 +33,8 @@ export function VariationCard({ variation }: VariationCardProps) {
         </div>
 
         <p className="text-sm text-base-content/70">
-          {variation.description ?? t('card.noDescription')}
+          {pickDescription(locale, variation.description, variation.descriptionEs) ??
+            t('card.noDescription')}
         </p>
 
         {isFamily ? (

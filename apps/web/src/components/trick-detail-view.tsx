@@ -3,9 +3,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { categoryBadgeColor } from '@tricking/ui';
 import { ArrowLeft } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import { fetchTrick } from '@/lib/trick-api';
 import type { TrickDetail, TrickRelated } from '@/lib/trick-schemas';
 import type { Section } from '@/lib/sections';
@@ -18,6 +19,7 @@ interface TrickDetailViewProps {
 
 export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailViewProps) {
   const t = useTranslations('tricks');
+  const locale = useLocale();
 
   const query = useQuery({
     queryKey: ['trick', trick.id],
@@ -80,7 +82,8 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
       <section className="flex flex-col gap-2">
         <h2 className="text-lg font-semibold text-base-content">{t('detail.description')}</h2>
         <p className="text-base text-base-content/80">
-          {data.description ?? t('detail.noDescription')}
+          {pickDescription(locale, data.description, data.descriptionEs) ??
+            t('detail.noDescription')}
         </p>
       </section>
 

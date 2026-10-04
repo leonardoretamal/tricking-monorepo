@@ -2,11 +2,12 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { ArrowLeft } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { TransitionBadge } from '@/components/transition-badge';
 import { TransitionGroupDiagram } from '@/components/transition-group-diagram';
 import { Link } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import { fetchTransition } from '@/lib/semantic-api';
 import type { TransitionDetail } from '@/lib/semantic-schemas';
 import { normalizeTransitionGroup } from '@/lib/transition-groups';
@@ -17,6 +18,7 @@ interface TransitionDetailViewProps {
 
 export function TransitionDetailView({ transition }: TransitionDetailViewProps) {
   const t = useTranslations('transitions');
+  const locale = useLocale();
   const query = useQuery({
     queryKey: ['transition', transition.slug],
     queryFn: ({ signal }) => fetchTransition(transition.slug, signal),
@@ -48,7 +50,8 @@ export function TransitionDetailView({ transition }: TransitionDetailViewProps) 
       <section className="flex flex-col gap-2">
         <h2 className="text-lg font-semibold text-base-content">{t('detail.description')}</h2>
         <p className="text-base text-base-content/80">
-          {data.description ?? t('detail.noDescription')}
+          {pickDescription(locale, data.description, data.descriptionEs) ??
+            t('detail.noDescription')}
         </p>
       </section>
 

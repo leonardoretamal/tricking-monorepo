@@ -2,9 +2,10 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { ArrowLeft } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import { fetchVariation } from '@/lib/semantic-api';
 import type { VariationDetail } from '@/lib/semantic-schemas';
 import { VariationTrickRef } from './variation-trick-ref';
@@ -15,6 +16,7 @@ interface VariationDetailViewProps {
 
 export function VariationDetailView({ variation }: VariationDetailViewProps) {
   const t = useTranslations('variations');
+  const locale = useLocale();
 
   const query = useQuery({
     queryKey: ['variation', variation.slug],
@@ -47,7 +49,8 @@ export function VariationDetailView({ variation }: VariationDetailViewProps) {
       <section className="flex flex-col gap-2">
         <h2 className="text-lg font-semibold text-base-content">{t('detail.description')}</h2>
         <p className="text-base text-base-content/80">
-          {data.description ?? t('detail.noDescription')}
+          {pickDescription(locale, data.description, data.descriptionEs) ??
+            t('detail.noDescription')}
         </p>
       </section>
 

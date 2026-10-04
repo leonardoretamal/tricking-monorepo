@@ -44,6 +44,7 @@ export const tricks = pgTable(
     id: text('id').primaryKey(),
     name: text('name').notNull(),
     description: text('description'),
+    descriptionEs: text('description_es'),
     difficulty: smallint('difficulty'),
     section: text('section'),
     loopkicksSlug: text('loopkicks_slug').unique(),
@@ -80,6 +81,7 @@ export const stances = pgTable('stances', {
   slug: text('slug').notNull().unique(),
   name: text('name').notNull(),
   description: text('description'),
+  descriptionEs: text('description_es'),
   ...timestamps,
 });
 
@@ -114,6 +116,7 @@ export const variations = pgTable('variations', {
   slug: text('slug').notNull().unique(),
   name: text('name').notNull(),
   description: text('description'),
+  descriptionEs: text('description_es'),
   loopkicksSlug: text('loopkicks_slug').unique(),
   deletedAt: timestamp('deleted_at', { withTimezone: true }),
   ...timestamps,
@@ -143,6 +146,7 @@ export const transitions = pgTable('transitions', {
   slug: text('slug').notNull().unique(),
   name: text('name').notNull(),
   description: text('description'),
+  descriptionEs: text('description_es'),
   group: text('group'),
   originTrickId: text('origin_trick_id').references(() => tricks.id),
   destinationTrickId: text('destination_trick_id').references(() => tricks.id),

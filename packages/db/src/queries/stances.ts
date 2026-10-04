@@ -15,6 +15,7 @@ export interface StanceListItem {
   slug: string;
   name: string;
   description: string | null;
+  descriptionEs: string | null;
   landingTrickCount: number;
 }
 
@@ -70,6 +71,7 @@ export async function listStances(params: ListStancesParams): Promise<PaginatedS
       slug: stances.slug,
       name: stances.name,
       description: stances.description,
+      descriptionEs: stances.descriptionEs,
     })
     .from(stances)
     .orderBy(asc(stances.name))
@@ -100,6 +102,7 @@ export async function getStanceBySlug(slug: string): Promise<StanceDetail | null
       slug: stances.slug,
       name: stances.name,
       description: stances.description,
+      descriptionEs: stances.descriptionEs,
     })
     .from(stances)
     .where(eq(stances.slug, slug))

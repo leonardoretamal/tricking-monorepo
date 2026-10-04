@@ -7,6 +7,7 @@ export const trickListItemSchema = z.object({
   id: z.string(),
   name: z.string(),
   description: z.string().nullable(),
+  descriptionEs: z.string().nullable(),
   difficulty: z.number().nullable(),
   section: z.string().nullable(),
   loopkicksSlug: z.string().nullable(),

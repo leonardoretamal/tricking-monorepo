@@ -2,9 +2,10 @@
 
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { EmptyState, ErrorState, TrickCard, TrickListSkeleton } from '@tricking/ui';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import { fetchStances } from '@/lib/semantic-api';
 
 const PAGE_SIZE = 24;
@@ -15,6 +16,7 @@ interface StanceBrowserProps {
 
 export function StanceBrowser({ initialPage }: StanceBrowserProps) {
   const t = useTranslations('stances');
+  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -79,7 +81,9 @@ export function StanceBrowser({ initialPage }: StanceBrowserProps) {
             >
               <TrickCard
                 name={item.name}
-                description={item.description ?? undefined}
+                description={
+                  pickDescription(locale, item.description, item.descriptionEs) ?? undefined
+                }
                 categories={[{ label: t('landingCount', { count: item.landingTrickCount }) }]}
               />
             </Link>

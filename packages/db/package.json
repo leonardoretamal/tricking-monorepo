@@ -22,7 +22,8 @@
     "db:variations": "tsx src/seed/variations.ts",
     "db:transitions": "tsx src/seed/transitions.ts",
     "db:stances": "tsx src/seed/stances.ts",
-    "db:stance-links": "tsx src/seed/stance-links.ts"
+    "db:stance-links": "tsx src/seed/stance-links.ts",
+    "db:translations": "tsx src/seed/apply-translations.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

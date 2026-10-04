@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { cache } from 'react';
 
 import { VariationDetailView } from '@/components/variation-detail-view';
+import { pickDescription } from '@/lib/description';
 
 // El detalle lee la base de datos en cada peticion; no se prerrenderiza en el build.
 export const dynamic = 'force-dynamic';
@@ -25,7 +26,8 @@ export async function generateMetadata({ params }: VariationDetailPageProps) {
   const t = await getTranslations({ locale, namespace: 'variations' });
   return {
     title: variation.name,
-    description: variation.description ?? t('description'),
+    description:
+      pickDescription(locale, variation.description, variation.descriptionEs) ?? t('description'),
   };
 }
 

@@ -21,6 +21,7 @@ export interface TransitionListItem {
   slug: string;
   name: string;
   description: string | null;
+  descriptionEs: string | null;
   group: string | null;
 }
 
@@ -88,6 +89,7 @@ export async function listTransitions(
       slug: transitions.slug,
       name: transitions.name,
       description: transitions.description,
+      descriptionEs: transitions.descriptionEs,
       group: transitions.group,
     })
     .from(transitions)
@@ -114,6 +116,7 @@ export async function getTransitionBySlug(slug: string): Promise<TransitionDetai
       slug: transitions.slug,
       name: transitions.name,
       description: transitions.description,
+      descriptionEs: transitions.descriptionEs,
       group: transitions.group,
     })
     .from(transitions)

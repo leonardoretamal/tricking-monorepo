@@ -11,10 +11,11 @@ import {
   type TrickCardCategory,
 } from '@tricking/ui';
 import { Search } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useRef, useState, type RefObject } from 'react';
 
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import { fetchTricks } from '@/lib/trick-api';
 import type { TrickListItem } from '@/lib/trick-schemas';
 import { type Section } from '@/lib/sections';
@@ -58,6 +59,7 @@ function useGridColumns(ref: RefObject<HTMLDivElement | null>): number {
 
 export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   const t = useTranslations('tricks');
+  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [qInput, setQInput] = useState(initial.q ?? '');
@@ -134,7 +136,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     >
       <TrickCard
         name={item.name}
-        description={item.description ?? undefined}
+        description={pickDescription(locale, item.description, item.descriptionEs) ?? undefined}
         difficulty={item.difficulty ?? undefined}
         difficultyLabel={item.difficulty !== null ? tDifficulty(item.difficulty) : undefined}
         categories={toCardCategories(item)}

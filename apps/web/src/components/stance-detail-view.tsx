@@ -3,9 +3,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { EmptyState } from '@tricking/ui';
 import { ArrowLeft } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import { fetchStance } from '@/lib/semantic-api';
 import type { StanceDetail } from '@/lib/semantic-schemas';
 
@@ -15,6 +16,7 @@ interface StanceDetailViewProps {
 
 export function StanceDetailView({ stance }: StanceDetailViewProps) {
   const t = useTranslations('stances');
+  const locale = useLocale();
 
   const query = useQuery({
     queryKey: ['stance', stance.slug],
@@ -46,7 +48,8 @@ export function StanceDetailView({ stance }: StanceDetailViewProps) {
       <section className="flex flex-col gap-2">
         <h2 className="text-lg font-semibold text-base-content">{t('detail.description')}</h2>
         <p className="text-base text-base-content/80">
-          {data.description ?? t('detail.noDescription')}
+          {pickDescription(locale, data.description, data.descriptionEs) ??
+            t('detail.noDescription')}
         </p>
       </section>
 

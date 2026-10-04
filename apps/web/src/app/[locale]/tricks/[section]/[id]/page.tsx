@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 import { TrickDetailView } from '@/components/trick-detail-view';
+import { pickDescription } from '@/lib/description';
 import { isSection } from '@/lib/sections';
 
 // El detalle lee la base de datos en cada peticion; no se prerrenderiza en el build.
@@ -13,14 +14,14 @@ type TrickDetailPageProps = {
 };
 
 export async function generateMetadata({ params }: TrickDetailPageProps) {
-  const { id } = await params;
+  const { locale, id } = await params;
   const trick = await getTrickById(id);
   if (!trick) {
     return {};
   }
   return {
     title: trick.name,
-    description: trick.description ?? undefined,
+    description: pickDescription(locale, trick.description, trick.descriptionEs) ?? undefined,
   };
 }
 

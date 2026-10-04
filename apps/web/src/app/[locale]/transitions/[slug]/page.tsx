@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { cache } from 'react';
 
 import { TransitionDetailView } from '@/components/transition-detail-view';
+import { pickDescription } from '@/lib/description';
 
 // El detalle lee la base de datos en cada peticion; no se prerrenderiza en el build.
 export const dynamic = 'force-dynamic';
@@ -16,14 +17,15 @@ type TransitionDetailPageProps = {
 };
 
 export async function generateMetadata({ params }: TransitionDetailPageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const transition = await getTransition(slug);
   if (!transition) {
     return {};
   }
   return {
     title: transition.name,
-    description: transition.description ?? undefined,
+    description:
+      pickDescription(locale, transition.description, transition.descriptionEs) ?? undefined,
   };
 }
 

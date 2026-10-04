@@ -27,6 +27,7 @@ export interface VariationListItem {
   slug: string;
   name: string;
   description: string | null;
+  descriptionEs: string | null;
   kind: string;
   baseTrick: TrickRef | null;
   examples: TrickRef[];
@@ -112,6 +113,7 @@ export async function listVariations(params: ListVariationsParams): Promise<Pagi
       slug: variations.slug,
       name: variations.name,
       description: variations.description,
+      descriptionEs: variations.descriptionEs,
       kind: variations.kind,
       baseTrickId: variations.baseTrickId,
     })
@@ -131,6 +133,7 @@ export async function listVariations(params: ListVariationsParams): Promise<Pagi
     slug: row.slug,
     name: row.name,
     description: row.description,
+    descriptionEs: row.descriptionEs,
     kind: row.kind,
     baseTrick: row.baseTrickId ? (baseMap.get(row.baseTrickId) ?? null) : null,
     examples: examplesMap.get(row.id) ?? [],
@@ -182,6 +185,7 @@ export async function getVariationBySlug(slug: string): Promise<VariationDetail 
       slug: variations.slug,
       name: variations.name,
       description: variations.description,
+      descriptionEs: variations.descriptionEs,
       kind: variations.kind,
       baseTrickId: variations.baseTrickId,
       familyId: variations.familyId,
@@ -229,6 +233,7 @@ export async function getVariationBySlug(slug: string): Promise<VariationDetail 
     slug: row.slug,
     name: row.name,
     description: row.description,
+    descriptionEs: row.descriptionEs,
     kind: row.kind,
     baseTrick: row.baseTrickId ? (baseMap.get(row.baseTrickId) ?? null) : null,
     family,
