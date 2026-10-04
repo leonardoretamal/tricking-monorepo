@@ -1,4 +1,5 @@
 import { spawnSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
@@ -56,6 +57,49 @@ const REQUIRED_ENV = [
 
 function describeError(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
+}
+
+function loadEnvFile(path: string): void {
+  let content: string;
+  try {
+    content = readFileSync(path, 'utf8');
+  } catch {
+    return;
+  }
+  for (const rawLine of content.split('\n')) {
+    const line = rawLine.trim();
+    if (line === '' || line.startsWith('#')) {
+      continue;
+    }
+    const separator = line.indexOf('=');
+    if (separator === -1) {
+      continue;
+    }
+    const key = line.slice(0, separator).trim();
+    let value = line.slice(separator + 1).trim();
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+    if (key !== '' && process.env[key] === undefined) {
+      process.env[key] = value;
+    }
+  }
+}
+
+// Carga el .env del monorepo desde las ubicaciones tipicas segun desde donde se invoque el
+// script (raiz, apps/scraper o el directorio actual). No pisa variables ya definidas.
+function loadEnv(): void {
+  const candidates = [
+    join(process.cwd(), '.env'),
+    join(process.cwd(), '..', '.env'),
+    join(process.cwd(), '..', '..', '.env'),
+  ];
+  for (const candidate of candidates) {
+    loadEnvFile(candidate);
+  }
 }
 
 function parseOption(name: string): string | null {
@@ -201,6 +245,7 @@ async function download(url: string, destination: string): Promise<void> {
 }
 
 async function main(): Promise<void> {
+  loadEnv();
   const missing = REQUIRED_ENV.filter((name) => {
     const value = process.env[name];
     return value === undefined || value.trim() === '';

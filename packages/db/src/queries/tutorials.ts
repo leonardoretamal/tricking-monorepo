@@ -39,14 +39,14 @@ export interface PaginatedTutorials {
 function orderBy(sort: TutorialSort) {
   switch (sort) {
     case 'date-asc':
-      return sql`${tutorials.postedAt} asc nulls last`;
+      return [sql`${tutorials.postedAt} asc nulls last`, asc(tutorials.id)];
     case 'title-asc':
-      return asc(tutorials.caption);
+      return [asc(tutorials.caption), asc(tutorials.id)];
     case 'title-desc':
-      return desc(tutorials.caption);
+      return [desc(tutorials.caption), asc(tutorials.id)];
     case 'date-desc':
     default:
-      return sql`${tutorials.postedAt} desc nulls last`;
+      return [sql`${tutorials.postedAt} desc nulls last`, asc(tutorials.id)];
   }
 }
 
@@ -80,7 +80,7 @@ export async function listTutorials(params: ListTutorialsParams): Promise<Pagina
     })
     .from(tutorials)
     .where(where)
-    .orderBy(orderBy(params.sort ?? 'date-desc'))
+    .orderBy(...orderBy(params.sort ?? 'date-desc'))
     .limit(pageSize)
     .offset((currentPage - 1) * pageSize);
 

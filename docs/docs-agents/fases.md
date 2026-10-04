@@ -4,7 +4,7 @@ Estado de las fases y subfases del monorepo. Este documento es el lugar donde vi
 
 El proyecto se organiza por secciones de contenido, no por capas técnicas. Cada sección de Loopkicks es una fase. Cada fase se cierra con build de producción verificado, subagentes de validación ejecutados y actualización de este documento.
 
-Última actualización: 2026-10-03.
+Última actualización: 2026-10-04.
 
 ## Reglas de fases
 
@@ -190,13 +190,13 @@ Criterio de cierre: sección completa, con la relación entre stance y trucos bi
 
 Campos y migraciones de las Fases 8-10: una sola migración `0003_lying_proemial_gods.sql` agrega `variations.kind/trick_id/family_id`, `transitions.group`, y las tablas `variation_examples`, `transition_examples` y `trick_stances`. La dificultad de outside se sumó a `DIFFICULTY_BY_TRICK`.
 
-Pendientes detectados (no bloquean, para futuras subfases): (1) bug preexistente de la Fase 3: `prereqs`/`nextTricks` de la semilla guardan nombres, no ids, y `getTrickById` los resuelve por id, por lo que las listas de "prerrequisitos" y "siguientes trucos" del detalle salen casi vacías (4 de 777 coincidencias); (2) la cobertura de `trick_stances` es parcial y se amplía a mano; (3) `transitions.originTrickId/destinationTrickId` quedan sin uso hasta que exista una fuente de pares.
+Pendientes detectados (no bloquean, para futuras subfases): (1) RESUELTO en las Fases 11-14: el bug de la Fase 3 (`prereqs`/`nextTricks` guardados como nombres y resueltos por id) se corrigió con la tabla `trick_relations`, poblada resolviendo el nombre normalizado a id (1500 relaciones, 547 trucos con relaciones; `getTrickById` lee de ahí); (2) la cobertura de `trick_stances` es parcial y se amplía a mano; (3) `transitions.originTrickId/destinationTrickId` quedan sin uso hasta que exista una fuente de pares.
 
 Traducción al español de etiquetas y contenido (2026-10-04): las etiquetas de UI se tradujeron al español (secciones, categorías y grupos de transiciones). El contenido técnico de las fuentes viene en inglés; se agregó `description_es` a `tricks`, `variations`, `transitions` y `stances` (migración `0004`), la API devuelve `description` y `descriptionEs`, y el frontend elige por locale. Las traducciones se hicieron a mano y viven en `packages/db/src/seed/translations/es-*.json`, aplicadas con `pnpm --filter @tricking/db db:translations`. Cubre 558 trucos, 19 familias de variaciones, 16 transiciones y 6 stances. Los nombres de trucos se mantienen en inglés.
 
 ## Fase 11: Explore Page
 
-Estado: pendiente.
+Estado: completada.
 
 - 11.1. Definir qué es la Explore Page: propuesta por defecto, un grafo navegable de trucos donde los nodos son trucos y las aristas son transiciones o prereqs.
 - 11.2. Elegir librería de visualización: react-flow, d3-force o cytoscape.js. Requiere autorización.
@@ -207,9 +207,11 @@ Estado: pendiente.
 
 Criterio de cierre: vista funcional, navegable con teclado, con performance medida y cache en cliente.
 
+Notas de cierre: grafo con `@xyflow/react` (dependencia aprobada). Endpoint `GET /api/graph` con filtros por sección, categoría, dificultad y stance, y tope de nodos, todo resuelto en SQL. Nodos = trucos; aristas desde `trick_relations` (prereq/next), stances compartidos y variaciones. Panel lateral accesible (role dialog, foco al abrir, Escape para cerrar) que enlaza al detalle sin cambiar de ruta. Cache agresivo del grafo en localStorage vía TanStack Query. Verificado en navegador real (nodos, panel, selección por teclado, móvil 390x600). E2E en `e2e/explore.spec.ts`.
+
 ## Fase 12: Búsqueda global
 
-Estado: pendiente.
+Estado: completada.
 
 - 12.1. Endpoint `/api/search?q=` con búsqueda full-text resuelta en la base de datos.
 - 12.2. Componente de búsqueda con debounce de 300 a 500 ms.
@@ -220,9 +222,11 @@ Estado: pendiente.
 
 Criterio de cierre: búsqueda funcional desde cualquier página, con cache y sin sobrecargar al servidor.
 
+Notas de cierre: columna generada `tricks.search_vector` (tsvector) con índice GIN en la migración `0005`; el endpoint `GET /api/search` usa `websearch_to_tsquery('simple', q)` y `ts_rank`, y cubre trucos, variaciones, transiciones y posturas con `count()` y paginación en SQL. Input en la navbar con debounce que navega a `/es/search?q=` y página dedicada con resultados agrupados por tipo y resaltado con `<mark>`. Cache de 10 min vía TanStack Query. Verificado en navegador real (17 resultados para "aerial", agrupados y resaltados). E2E en `e2e/search.spec.ts`.
+
 ## Fase 13: Tutoriales de Kojo
 
-Estado: pendiente.
+Estado: completada.
 
 - 13.1. Worker en `apps/scraper` con insta-fetcher y cola Upstash.
 - 13.2. Extracción de captions y guardado en la tabla `tutorials`.
@@ -235,9 +239,11 @@ Estado: pendiente.
 
 Criterio de cierre: acordeón funcional y accesible, con contenido real extraído de Instagram.
 
+Notas de cierre: el sitio `kojostricklab.com` es una SPA de Vue (el HTML inicial es una cáscara vacía), así que la fuente real fue su API pública `GET /api/user/get-more-recent-videos` con cheerio como respaldo inerte. Se extrajeron y sembraron 417 tutoriales de la categoría "Trick Tutorials" con permalink y fecha (`externalId` estable). El acordeón (`packages/ui/src/accordion.tsx`) es accesible y el estado expandido se persiste 7 días en localStorage. Virtualización al superar 100. Instagram con insta-fetcher y la cola Upstash quedan como respaldo opcional, sin ejecutar por falta de credenciales. E2E en `e2e/tutorials.spec.ts`.
+
 ## Fase 14: Almacenamiento de vídeos (R2)
 
-Estado: pendiente.
+Estado: completada.
 
 - 14.1. Configurar bucket R2 y credenciales.
 - 14.2. Script de descarga y subida de vídeos de Loopkicks.
@@ -246,6 +252,8 @@ Estado: pendiente.
 - 14.5. Optimización: compresión H.264/H.265 y resolución moderada para no pasar de 10 GB.
 
 Criterio de cierre: vídeos servidos desde R2, con reproducción fluida en móvil y sin superar el free tier.
+
+Notas de cierre: se extrajeron 556 vídeos reales de Loopkicks (una URL por truco) y se sembraron en `videos` con `status='external'` y la URL original, por lo que el reproductor funciona hoy. La tubería de R2 (`apps/scraper/src/upload-videos.ts`, con transcode opcional 720p H.264 vía `ffmpeg`) queda lista: al existir credenciales de R2 y `R2_PUBLIC_URL`, sube y la semilla pasa a `status='ready'` con `r2Key`. El reproductor (`trick-video-player.tsx`) vive en el detalle de truco con cache de URL de 5 min. Pendientes de entorno: no hay credenciales de R2 en `.env` y `ffmpeg` no está instalado, así que no se pudo subir ni transcodificar todavía. E2E en `e2e/trick-video.spec.ts`.
 
 ## Fase 15: Enlaces cruzados entre secciones
 

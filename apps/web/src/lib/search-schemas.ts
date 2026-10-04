@@ -1,17 +1,19 @@
-import {
-  DEFAULT_SEARCH_PAGE_SIZE,
-  MAX_SEARCH_PAGE_SIZE,
-  SEARCH_TYPES,
-  isSearchType,
-  type SearchType,
-} from '@tricking/db';
 import { z } from 'zod';
 
 // Esquemas de la busqueda global (Fase 12): validacion de la query del endpoint,
 // contrato de la respuesta y normalizacion de los filtros que viven en la URL.
+//
+// Las constantes se declaran aqui (y no se importan de @tricking/db) para que este modulo
+// sea cliente-seguro: el paquete db reexporta el cliente de Neon y arrastraria el driver al
+// bundle del navegador. Deben coincidir con las de packages/db/src/queries/search.ts.
+export const SEARCH_TYPES = ['trick', 'variation', 'transition', 'stance'] as const;
+export type SearchType = (typeof SEARCH_TYPES)[number];
+export const DEFAULT_SEARCH_PAGE_SIZE = 20;
+export const MAX_SEARCH_PAGE_SIZE = 50;
 
-export { DEFAULT_SEARCH_PAGE_SIZE, MAX_SEARCH_PAGE_SIZE, SEARCH_TYPES, isSearchType };
-export type { SearchType };
+export function isSearchType(value: string | undefined): value is SearchType {
+  return value !== undefined && (SEARCH_TYPES as readonly string[]).includes(value);
+}
 
 export const searchQuerySchema = z.object({
   q: z.string().trim().min(2, 'minimo dos caracteres').max(100),

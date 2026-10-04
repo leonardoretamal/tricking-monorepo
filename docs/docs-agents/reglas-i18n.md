@@ -26,7 +26,7 @@ Propósito: definir la librería de i18n, los idiomas soportados, la organizaci�
 
 - El contenido técnico se traduce.
 - Los nombres de trucos en inglés se mantienen porque son términos estándar del deporte (por ejemplo b-twist, aerial, raiz, cheat kick).
-- El contenido de Kojo queda en español fijo si no se traduce.
+- El contenido de Kojo se conserva en su idioma original (ingles) cuando no se traduce; la interfaz si se traduce a es/en.
 - Los textos de cookies se traducen con i18n si aplica.
 
 ## Validación
