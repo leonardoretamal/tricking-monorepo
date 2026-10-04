@@ -4,23 +4,23 @@
     "description": "Catálogo de trucos de tricking con su información técnica y de ejecución.",
     "sections": {
       "vertical-kicks": {
-        "title": "Vertical kicks",
+        "title": "Patadas verticales",
         "description": "Patadas con giro vertical donde la pierna pasa por encima de la cabeza: 540, cheat 720, tornado y sus variantes."
       },
       "backward": {
-        "title": "Backward",
+        "title": "Hacia atrás",
         "description": "Trucos que giran hacia atrás y aterrizan de espaldas o encadenan desde ahí."
       },
       "forward": {
-        "title": "Forward",
+        "title": "Hacia adelante",
         "description": "Trucos que giran hacia adelante, como el aerial y el raiz."
       },
       "inside": {
-        "title": "Inside",
+        "title": "Interior",
         "description": "Trucos con giro hacia adentro, desde el lado interno del cuerpo."
       },
       "outside": {
-        "title": "Outside",
+        "title": "Exterior",
         "description": "Trucos con giro hacia afuera, desde el lado externo del cuerpo."
       }
     },
@@ -68,9 +68,9 @@
       "5": "Élite"
     },
     "categories": {
-      "VERT_KICK": "Vertical kick",
-      "TWIST": "Twist",
-      "FLIP": "Flip",
+      "VERT_KICK": "Patada vertical",
+      "TWIST": "Giro",
+      "FLIP": "Mortal",
       "GROUNDWORK": "Suelo",
       "VARIATION": "Variación"
     },

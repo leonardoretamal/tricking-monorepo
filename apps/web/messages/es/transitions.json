@@ -4,9 +4,9 @@
     "description": "Transiciones entre trucos para encadenar combos fluidos.",
     "badgeAria": "Grupo {group}",
     "groups": {
-      "unified": "Unified",
+      "unified": "Unificado",
       "singular": "Singular",
-      "sequential": "Sequential",
+      "sequential": "Secuencial",
       "other": "Otras"
     },
     "filters": {

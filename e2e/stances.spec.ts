@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test.describe('seccion stances', () => {
   test('lista los 6 stances con su titulo', async ({ page }) => {
     await page.goto('/es/stances');
-    await expect(page.getByRole('heading', { level: 1, name: 'Stances' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Posturas' })).toBeVisible();
     await expect(page.locator('a[href*="/stances/"]')).toHaveCount(6);
   });
 

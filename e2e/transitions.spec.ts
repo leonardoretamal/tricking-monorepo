@@ -4,7 +4,7 @@ test.describe('seccion transitions', () => {
   test('lista las transiciones agrupadas por grupo', async ({ page }) => {
     await page.goto('/es/transitions');
     await expect(page.getByRole('heading', { level: 1, name: 'Transiciones' })).toBeVisible();
-    await expect(page.getByRole('heading', { level: 2, name: 'Unified' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 2, name: 'Unificado' })).toBeVisible();
     await expect(page.getByRole('heading', { level: 2, name: 'Singular' })).toBeVisible();
     await expect(page.locator('a[href*="/transitions/"]').first()).toBeVisible();
   });

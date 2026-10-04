@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test.describe('seccion vertical kicks', () => {
   test('lista los trucos vertical kicks con su titulo y tarjetas', async ({ page }) => {
     await page.goto('/es/tricks/vertical-kicks');
-    await expect(page.getByRole('heading', { level: 1, name: 'Vertical kicks' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Patadas verticales' })).toBeVisible();
     await expect(page.locator('a[href*="/tricks/vertical-kicks/"]').first()).toBeVisible();
   });
 

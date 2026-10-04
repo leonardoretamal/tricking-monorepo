@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test.describe('seccion outside', () => {
   test('lista los trucos outside con su titulo y tarjetas', async ({ page }) => {
     await page.goto('/es/tricks/outside');
-    await expect(page.getByRole('heading', { level: 1, name: 'Outside' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Exterior' })).toBeVisible();
     await expect(page.locator('a[href*="/tricks/outside/"]').first()).toBeVisible();
   });
 

@@ -14,7 +14,7 @@ test.describe('seccion de trucos', () => {
 
   test('vertical kicks lista trucos y muestra badges de dificultad', async ({ page }) => {
     await page.goto('/es/tricks/vertical-kicks');
-    await expect(page.getByRole('heading', { level: 1, name: 'Vertical kicks' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Patadas verticales' })).toBeVisible();
     await expect(page.locator('a[href*="/tricks/vertical-kicks/"]').first()).toBeVisible();
     await expect(page.locator('.tb-difficulty-3').first()).toBeVisible();
   });

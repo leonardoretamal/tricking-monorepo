@@ -12,7 +12,7 @@ test.describe('seccion backward', () => {
 
   test('backward lista trucos y muestra la paginacion', async ({ page }) => {
     await page.goto('/es/tricks/backward');
-    await expect(page.getByRole('heading', { level: 1, name: 'Backward' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Hacia atrás' })).toBeVisible();
     await expect(page.locator('a[href*="/tricks/backward/"]').first()).toBeVisible();
     await expect(page.getByRole('button', { name: 'Siguiente' })).toBeVisible();
   });

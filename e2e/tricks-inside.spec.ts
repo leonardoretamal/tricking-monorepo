@@ -12,7 +12,7 @@ test.describe('seccion inside', () => {
 
   test('inside lista trucos y muestra la paginacion', async ({ page }) => {
     await page.goto('/es/tricks/inside');
-    await expect(page.getByRole('heading', { level: 1, name: 'Inside' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Interior' })).toBeVisible();
     await expect(page.locator('a[href*="/tricks/inside/"]').first()).toBeVisible();
     await expect(page.getByRole('button', { name: 'Siguiente' })).toBeVisible();
   });

@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test.describe('seccion forward', () => {
   test('lista los trucos forward con su titulo y tarjetas', async ({ page }) => {
     await page.goto('/es/tricks/forward');
-    await expect(page.getByRole('heading', { level: 1, name: 'Forward' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Hacia adelante' })).toBeVisible();
     await expect(page.locator('a[href*="/tricks/forward/"]').first()).toBeVisible();
   });
 
