@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 import { usePathname, useRouter } from '@/i18n/navigation';
-import { fetchTutorials } from '@/lib/tutorial-api';
+import { fetchTechniqueGeneral, fetchTutorials } from '@/lib/tutorial-api';
 import {
   DEFAULT_TUTORIAL_PAGE_SIZE,
   TUTORIAL_PAGE_SIZES,
@@ -79,6 +79,11 @@ export function TutorialBrowser({ initial }: TutorialBrowserProps) {
     placeholderData: keepPreviousData,
   });
 
+  const generalQuery = useQuery({
+    queryKey: ['techniques', 'general', locale],
+    queryFn: ({ signal }) => fetchTechniqueGeneral(locale, signal),
+  });
+
   const data = query.data;
   const items = data?.items ?? [];
   const shouldVirtualize = (data?.total ?? 0) > VIRTUALIZE_THRESHOLD;
@@ -90,6 +95,15 @@ export function TutorialBrowser({ initial }: TutorialBrowserProps) {
 
   return (
     <div className="flex flex-col gap-6">
+      {generalQuery.data?.content ? (
+        <section className="rounded-box border border-info/30 bg-info/10 px-4 py-3">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-base-content/70">
+            {t('generalHeading')}
+          </h2>
+          <p className="mt-1 text-sm text-base-content/85">{generalQuery.data.content}</p>
+        </section>
+      ) : null}
+
       <div className="flex flex-col gap-4 rounded-box border border-border bg-base-300/40 p-4 sm:flex-row sm:flex-wrap sm:items-end">
         <label className="flex flex-1 flex-col gap-1 text-sm font-medium">
           <span>{t('filters.searchLabel')}</span>

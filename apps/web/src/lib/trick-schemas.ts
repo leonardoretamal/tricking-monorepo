@@ -29,12 +29,26 @@ export const paginatedTricksSchema = z.object({
   totalPages: z.number(),
 });
 
+export const kojoTechniqueSchema = z.object({
+  id: z.number(),
+  title: z.string().nullable(),
+  level: z.string().nullable(),
+  tips: z.string().nullable(),
+  tipsEs: z.string().nullable(),
+  permalink: z.string().nullable(),
+  author: z.string().nullable(),
+});
+
 export const trickDetailSchema = trickListItemSchema.extend({
   howTo: z.string().nullable(),
   howToEs: z.string().nullable(),
+  loopkicksNotes: z.string().nullable(),
+  kojoTechniques: z.array(kojoTechniqueSchema),
   prereqs: z.array(trickRelatedSchema),
   nextTricks: z.array(trickRelatedSchema),
 });
+
+export type KojoTechnique = z.infer<typeof kojoTechniqueSchema>;
 
 export type TrickListItem = z.infer<typeof trickListItemSchema>;
 export type TrickRelated = z.infer<typeof trickRelatedSchema>;

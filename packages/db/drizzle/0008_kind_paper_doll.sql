@@ -1,0 +1,1 @@
+ALTER TABLE "tricks" ADD COLUMN "loopkicks_notes" text;

@@ -10,14 +10,24 @@ export type TutorialSort = (typeof TUTORIAL_SORTS)[number];
 export const TUTORIAL_PAGE_SIZES = [25, 50, 100] as const;
 export const DEFAULT_TUTORIAL_PAGE_SIZE = 25;
 
+export const tutorialTrickSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  section: z.string().nullable(),
+});
+
 export const tutorialListItemSchema = z.object({
   id: z.number(),
   externalId: z.string(),
   caption: z.string().nullable(),
   author: z.string().nullable(),
   vimeoId: z.string().nullable(),
+  level: z.string().nullable(),
+  tips: z.string().nullable(),
+  tipsEs: z.string().nullable(),
   permalink: z.string().nullable(),
   postedAt: z.string().nullable(),
+  tricks: z.array(tutorialTrickSchema),
 });
 
 export const paginatedTutorialsSchema = z.object({
@@ -28,8 +38,16 @@ export const paginatedTutorialsSchema = z.object({
   totalPages: z.number(),
 });
 
+export const techniqueGeneralSchema = z.object({
+  key: z.string(),
+  locale: z.string(),
+  content: z.string().nullable(),
+});
+
+export type TutorialTrickRef = z.infer<typeof tutorialTrickSchema>;
 export type TutorialListItem = z.infer<typeof tutorialListItemSchema>;
 export type PaginatedTutorials = z.infer<typeof paginatedTutorialsSchema>;
+export type TechniqueGeneral = z.infer<typeof techniqueGeneralSchema>;
 
 export interface TutorialFilters {
   q?: string;

@@ -1,11 +1,11 @@
-import { and, asc, count, desc, ilike, isNull, sql } from 'drizzle-orm';
+import { and, asc, count, desc, eq, ilike, inArray, isNull, sql } from 'drizzle-orm';
 
 import { getDb } from '../client';
-import { tutorials } from '../schema';
+import { contentBlocks, tricks, tutorialTricks, tutorials } from '../schema';
 
-// Tutoriales de Kojo (Fase 13). Listado paginado con busqueda y orden resueltos en la
-// base de datos (regla de listados). La API valida los parametros con Zod antes de
-// llegar aqui. El contenido viene en ingles y se sirve tal cual.
+// Tecnicas de Kojo (Fase 13, rediseno). Listado paginado con busqueda y orden resueltos
+// en la base de datos (regla de listados). Cada tecnica trae sus tips propios y los
+// trucos del catalogo con los que se emparejo. El bloque general vive en content_blocks.
 
 export const TUTORIAL_SORTS = ['date-desc', 'date-asc', 'title-asc', 'title-desc'] as const;
 export type TutorialSort = (typeof TUTORIAL_SORTS)[number];
@@ -20,14 +20,24 @@ export interface ListTutorialsParams {
   pageSize?: number;
 }
 
+export interface TutorialTrickRef {
+  id: string;
+  name: string;
+  section: string | null;
+}
+
 export interface TutorialListItem {
   id: number;
   externalId: string;
   caption: string | null;
   author: string | null;
   vimeoId: string | null;
+  level: string | null;
+  tips: string | null;
+  tipsEs: string | null;
   permalink: string | null;
   postedAt: Date | null;
+  tricks: TutorialTrickRef[];
 }
 
 export interface PaginatedTutorials {
@@ -52,6 +62,36 @@ function orderBy(sort: TutorialSort) {
   }
 }
 
+async function tricksFor(tutorialIds: number[]): Promise<Map<number, TutorialTrickRef[]>> {
+  const map = new Map<number, TutorialTrickRef[]>();
+  if (tutorialIds.length === 0) {
+    return map;
+  }
+  const db = getDb();
+  const rows = await db
+    .select({
+      tutorialId: tutorialTricks.tutorialId,
+      id: tricks.id,
+      name: tricks.name,
+      section: tricks.section,
+    })
+    .from(tutorialTricks)
+    .innerJoin(tricks, eq(tutorialTricks.trickId, tricks.id))
+    .where(inArray(tutorialTricks.tutorialId, tutorialIds))
+    .orderBy(asc(tricks.name));
+
+  for (const row of rows) {
+    const item: TutorialTrickRef = { id: row.id, name: row.name, section: row.section };
+    const bucket = map.get(row.tutorialId);
+    if (bucket) {
+      bucket.push(item);
+    } else {
+      map.set(row.tutorialId, [item]);
+    }
+  }
+  return map;
+}
+
 export async function listTutorials(params: ListTutorialsParams): Promise<PaginatedTutorials> {
   const db = getDb();
   const page = Math.max(1, params.page ?? 1);
@@ -72,13 +112,16 @@ export async function listTutorials(params: ListTutorialsParams): Promise<Pagina
   const totalPages = total === 0 ? 0 : Math.ceil(total / pageSize);
   const currentPage = totalPages === 0 ? 1 : Math.min(page, totalPages);
 
-  const items = await db
+  const rows = await db
     .select({
       id: tutorials.id,
       externalId: tutorials.externalId,
       caption: tutorials.caption,
       author: tutorials.author,
       vimeoId: tutorials.vimeoId,
+      level: tutorials.level,
+      tips: tutorials.tips,
+      tipsEs: tutorials.tipsEs,
       permalink: tutorials.permalink,
       postedAt: tutorials.postedAt,
     })
@@ -88,6 +131,12 @@ export async function listTutorials(params: ListTutorialsParams): Promise<Pagina
     .limit(pageSize)
     .offset((currentPage - 1) * pageSize);
 
+  const tricksMap = await tricksFor(rows.map((row) => row.id));
+  const items: TutorialListItem[] = rows.map((row) => ({
+    ...row,
+    tricks: tricksMap.get(row.id) ?? [],
+  }));
+
   return {
     items,
     total,
@@ -95,4 +144,14 @@ export async function listTutorials(params: ListTutorialsParams): Promise<Pagina
     pageSize,
     totalPages,
   };
+}
+
+export async function getContentBlock(key: string, locale: string): Promise<string | null> {
+  const db = getDb();
+  const [row] = await db
+    .select({ content: contentBlocks.content })
+    .from(contentBlocks)
+    .where(and(eq(contentBlocks.key, key), eq(contentBlocks.locale, locale)))
+    .limit(1);
+  return row?.content ?? null;
 }

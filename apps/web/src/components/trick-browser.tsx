@@ -18,13 +18,14 @@ import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { pickDescription } from '@/lib/description';
 import { fetchTricks } from '@/lib/trick-api';
 import type { TrickListItem } from '@/lib/trick-schemas';
-import { type Section } from '@/lib/sections';
+import { DEFAULT_SECTION, SECTIONS, type Section } from '@/lib/sections';
 
 const PAGE_SIZES = [24, 48, 100];
 const VIRTUALIZE_THRESHOLD = 60;
 
 export interface TrickFilters {
   q?: string;
+  section?: Section;
   difficulty?: number;
   sort: string;
   page: number;
@@ -32,7 +33,7 @@ export interface TrickFilters {
 }
 
 interface TrickBrowserProps {
-  section: Section;
+  section?: Section;
   initial: TrickFilters;
 }
 
@@ -66,11 +67,14 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
 
   const filters: TrickFilters = {
     q: initial.q,
+    section: initial.section ?? section,
     difficulty: initial.difficulty,
     sort: initial.sort,
     page: initial.page,
     pageSize: initial.pageSize,
   };
+
+  const activeSection = filters.section;
 
   const applyFilter = (patch: Partial<TrickFilters>) => {
     const next: TrickFilters = { ...filters, ...patch };
@@ -79,6 +83,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     }
     const params = new URLSearchParams();
     if (next.q) params.set('q', next.q);
+    if (next.section) params.set('section', next.section);
     if (next.difficulty !== undefined) params.set('difficulty', String(next.difficulty));
     if (next.sort && next.sort !== 'name-asc') params.set('sort', next.sort);
     if (next.page > 1) params.set('page', String(next.page));
@@ -99,8 +104,8 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   }, [qInput, initial.q]);
 
   const query = useQuery({
-    queryKey: ['tricks', section, filters],
-    queryFn: ({ signal }) => fetchTricks({ section, ...filters }, signal),
+    queryKey: ['tricks', activeSection ?? 'all', filters],
+    queryFn: ({ signal }) => fetchTricks(filters, signal),
     placeholderData: keepPreviousData,
   });
 
@@ -119,7 +124,10 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   });
 
   const hasActiveFilters =
-    Boolean(filters.q) || filters.difficulty !== undefined || filters.sort !== 'name-asc';
+    Boolean(filters.q) ||
+    initial.section !== undefined ||
+    filters.difficulty !== undefined ||
+    filters.sort !== 'name-asc';
 
   const tDifficulty = (level: number) => t(`difficulty.${level}`);
 
@@ -131,7 +139,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
 
   const renderCard = (item: TrickListItem) => (
     <Link
-      href={`/tricks/${section}/${item.id}`}
+      href={`/tricks/${item.section ?? activeSection ?? DEFAULT_SECTION}/${item.id}`}
       className="block rounded-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
       <TrickCard
@@ -166,6 +174,28 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
             />
           </span>
         </label>
+
+        {section === undefined ? (
+          <label className="flex flex-col gap-1 text-sm font-medium">
+            <span>{t('filters.sectionLabel')}</span>
+            <select
+              className="select select-bordered"
+              value={filters.section ?? ''}
+              onChange={(event) =>
+                applyFilter({
+                  section: event.target.value === '' ? undefined : (event.target.value as Section),
+                })
+              }
+            >
+              <option value="">{t('filters.allSections')}</option>
+              {SECTIONS.map((candidate) => (
+                <option key={candidate} value={candidate}>
+                  {t(`sections.${candidate}.title`)}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null}
 
         <label className="flex flex-col gap-1 text-sm font-medium">
           <span>{t('filters.difficultyLabel')}</span>

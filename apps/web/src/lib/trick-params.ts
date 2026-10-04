@@ -1,4 +1,5 @@
 import type { TrickFilters } from '@/components/trick-browser';
+import { isSection } from './sections';
 
 const SORTS = ['name-asc', 'name-desc', 'difficulty-asc', 'difficulty-desc'] as const;
 const PAGE_SIZES = [24, 48, 100];
@@ -30,12 +31,14 @@ export function parseTrickFilters(
   searchParams: Record<string, string | string[] | undefined>,
 ): TrickFilters {
   const qRaw = first(searchParams.q)?.trim();
+  const sectionRaw = first(searchParams.section);
   const difficultyRaw = first(searchParams.difficulty);
   const sortRaw = first(searchParams.sort);
   const pageSizeRaw = parseIntInRange(first(searchParams.pageSize), 1, 100, DEFAULT_PAGE_SIZE);
 
   return {
     q: qRaw && qRaw !== '' ? qRaw : undefined,
+    section: sectionRaw !== undefined && isSection(sectionRaw) ? sectionRaw : undefined,
     difficulty:
       difficultyRaw !== undefined && /^[0-5]$/.test(difficultyRaw)
         ? Number(difficultyRaw)

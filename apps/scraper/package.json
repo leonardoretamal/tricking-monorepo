@@ -11,6 +11,7 @@
     "scrape:loopkicks": "tsx src/scrape-loopkicks.ts",
     "scrape:loopkicks:semantics": "tsx src/scrape-loopkicks-semantics.ts",
     "scrape:kojo": "tsx src/scrape-kojo.ts",
+    "scrape:notes": "tsx src/scrape-loopkicks-notes.ts",
     "scrape:videos": "tsx src/scrape-loopkicks-videos.ts",
     "upload:videos": "tsx src/upload-videos.ts"
   },

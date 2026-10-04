@@ -1,8 +1,8 @@
 {
   "tutorials": {
-    "title": "Tutoriales de Kojo",
-    "description": "Tutoriales de Kojo's Trick Lab, con su enlace original y la fecha de publicación.",
-    "contentNote": "Los tutoriales están en inglés; se muestran con su título, autor y enlace al original. El contenido es de Kojo's Trick Lab y sus autores.",
+    "title": "Técnicas de Kojo",
+    "description": "Las técnicas y los tips que enseña Kojo's Trick Lab, con los trucos del catálogo relacionados y crédito al original.",
+    "contentNote": "Los tips son contenido propio del sitio; los nombres de las técnicas y los tutoriales son de Kojo's Trick Lab, con enlace a su página original.",
     "filters": {
       "searchLabel": "Buscar",
       "searchPlaceholder": "Título del tutorial",
@@ -40,6 +40,15 @@
     "author": "Autor: {name}",
     "openOnSite": "Ver en Kojo's Trick Lab",
     "expand": "Mostrar detalles",
-    "collapse": "Ocultar detalles"
+    "collapse": "Ocultar detalles",
+    "generalHeading": "Técnica general",
+    "relatedTricks": "Trucos relacionados",
+    "tipsEmpty": "Aún no hay tips propios para esta técnica.",
+    "levels": {
+      "Beginner": "Principiante",
+      "Intermediate": "Intermedio",
+      "Advanced": "Avanzado",
+      "Elite": "Élite"
+    }
   }
 }

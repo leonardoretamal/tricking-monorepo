@@ -1,0 +1,4450 @@
+[
+  {
+    "slug": "360-cartwheel-twist",
+    "name": "360 Cartwheel Twist",
+    "section": "forward-tricks",
+    "description": "A 360 Cartwheel with another twist executed before landing.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "540",
+    "name": "540",
+    "section": "vertical-kicks",
+    "description": "A Tornado that lands in hyper (extra 180°) on the inside kicking leg.",
+    "otherNames": "Cheat 360 Katana (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "540-gyro",
+    "name": "540 Gyro",
+    "section": "vertical-kicks",
+    "description": "A 540 with an extra twist, landing back in Complete stance.",
+    "otherNames": "Cheat 360 Katana Gyro (TKT)",
+    "tricker": "Grant Stevens"
+  },
+  {
+    "slug": "540-gyroknife",
+    "name": "540 Gyroknife",
+    "section": "vertical-kicks",
+    "description": "A 540 Gyro that finishes with a hyperhook. Could be thought of as a vertical Snapu Hyperhook.",
+    "otherNames": "Cheat 360 Katana Gyroknife (TKT)",
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "aerial",
+    "name": "Aerial",
+    "section": "inside-tricks",
+    "description": "A Cartwheel with no-hands. Unlike the gymnast version of the Aerial, the Tricker/Butterfly Aerial goes side to side.",
+    "otherNames": null,
+    "tricker": "Julia Moreci"
+  },
+  {
+    "slug": "aerial-helicoptero",
+    "name": "Aerial Helicoptero",
+    "section": "inside-tricks",
+    "description": "A no-handed helicoptero.",
+    "otherNames": null,
+    "tricker": "Sam \"Kojo\" Plummer"
+  },
+  {
+    "slug": "aerial-hook",
+    "name": "Aerial Hook",
+    "section": "inside-tricks",
+    "description": "An Aerial that finishes with a hook.",
+    "otherNames": null,
+    "tricker": "Brendyn \"Bubba\" Crispell"
+  },
+  {
+    "slug": "aerial-mega",
+    "name": "Aerial Mega",
+    "section": "inside-tricks",
+    "description": "An Aerial that lands in mega, or the opposite leg with a slight extra rotation. Previously called hyper aerial.",
+    "otherNames": null,
+    "tricker": "Rasmus Ott"
+  },
+  {
+    "slug": "aerial-scissor",
+    "name": "Aerial Scissor",
+    "section": "inside-tricks",
+    "description": "An Aerial with a scissor executed at the peak of the flip.",
+    "otherNames": null,
+    "tricker": "Sam \"Kojo\" Plummer"
+  },
+  {
+    "slug": "aerial-sidewinder",
+    "name": "Aerial Sidewinder",
+    "section": "inside-tricks",
+    "description": "An Aerial where the outside leg initiates an extra twist while in an outstretched, arched position, making this an Aerial Twist variation.",
+    "otherNames": null,
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "aerial-twist",
+    "name": "Aerial Twist",
+    "section": "inside-tricks",
+    "description": "An Aerial with a twist, landing in complete. Can be thought of as an inverted Butterfly Twist.",
+    "otherNames": null,
+    "tricker": "Brendan Morrison"
+  },
+  {
+    "slug": "aerial-twist-doubleleg",
+    "name": "Aerial Twist Doubleleg",
+    "section": "inside-tricks",
+    "description": "An Aerial Twist that finishes with a Doubleleg.",
+    "otherNames": null,
+    "tricker": "Micah Karns"
+  },
+  {
+    "slug": "aerial-twist-gumbi",
+    "name": "Aerial Twist Gumbi",
+    "section": "inside-tricks",
+    "description": "An Aerial Twist combined with a Gumbi.",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "aerial-twist-gumbi-helicoptero",
+    "name": "Aerial Twist Gumbi Helicoptero",
+    "section": "inside-tricks",
+    "description": "An Aerial Twist Gumbi that finishes with a helicoptero.",
+    "otherNames": null,
+    "tricker": "Andrew Kohrt"
+  },
+  {
+    "slug": "arabian",
+    "name": "Arabian",
+    "section": "backward-tricks",
+    "description": "An Arabian starts out with a backflip into a half twist that begins immediately after takeoff, and then continues into a front flip.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "arabian-axe",
+    "name": "Arabian Axe",
+    "section": "backward-tricks",
+    "description": "An Arabian that finishes with an axe kick / step-out.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "arabian-half",
+    "name": "Arabian Half",
+    "section": "backward-tricks",
+    "description": "An Arabian with a half turn, making this a full variation.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "arabian-pike-snapu",
+    "name": "Arabian Pike Snapu",
+    "section": "backward-tricks",
+    "description": "An Arabian Pike that finishes with a snapu, making this a double full variation.",
+    "otherNames": null,
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "arabian-scissor",
+    "name": "Arabian Scissor",
+    "section": "backward-tricks",
+    "description": "An Arabian with a scissor executed before landing.",
+    "otherNames": null,
+    "tricker": "Rasmus Ott"
+  },
+  {
+    "slug": "arabian-scissor-half",
+    "name": "Arabian Scissor Half",
+    "section": "backward-tricks",
+    "description": "An Arabian Scissor with an extra half turn - making this a full variation.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "arabian-scissor-hyperhook",
+    "name": "Arabian Scissor Hyperhook",
+    "section": "backward-tricks",
+    "description": "An Arabian Scissor that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "arabian-scissor-round",
+    "name": "Arabian Scissor Round",
+    "section": "backward-tricks",
+    "description": "A Full Round with a scissor grab in the middle.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "arabian-unhalf-in-back-out",
+    "name": "Arabian Unhalf-In Back-Out",
+    "section": "backward-tricks",
+    "description": "An Arabian which unwinds back in the opposite direction + a backflip.",
+    "otherNames": "Arabian Unwind-In Back-Out",
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "arabian-x-out",
+    "name": "Arabian X-Out",
+    "section": "backward-tricks",
+    "description": "An Arabian that finishes with an X-Out / Straddle.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "back-handspring",
+    "name": "Back Handspring",
+    "section": "backward-tricks",
+    "description": "The Back Handspring is a gymnastics, tumbling move that takes off of two feet, jumps backward onto the hands and lands on both feet. Used to gain and build momentum for bigger tricks.",
+    "otherNames": null,
+    "tricker": "Brandon Daugherty"
+  },
+  {
+    "slug": "back-in-rocketboi-out",
+    "name": "Back-In Rocketboi-Out",
+    "section": "backward-tricks",
+    "description": "A Back Tuck followed by a Rocketboi (two flips).",
+    "otherNames": null,
+    "tricker": "Jaxon Wong"
+  },
+  {
+    "slug": "back-in-squirrel-out",
+    "name": "Back-In Squirrel-Out",
+    "section": "backward-tricks",
+    "description": "A Back Tuck followed by a Squirrel Backflip (two flips).",
+    "otherNames": null,
+    "tricker": "Jaxon Wong"
+  },
+  {
+    "slug": "back-in-x-out",
+    "name": "Back-In X-Out",
+    "section": "backward-tricks",
+    "description": "A Back Tuck followed by a Rocketboi (two flips).",
+    "otherNames": null,
+    "tricker": "Jaxon Wong"
+  },
+  {
+    "slug": "back-pike",
+    "name": "Back Pike",
+    "section": "backward-tricks",
+    "description": "A Backflip with the “pike” position.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "back-tuck",
+    "name": "Back Tuck",
+    "section": "backward-tricks",
+    "description": "The Back Tuck (dubbed “back flip” by most) is the most fundamental and crucial move that a tricker can learn. Mastery of the backflip is an important fundamental building block – it teach air awareness and builds comfort-ability with flipping upside down.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "backside-1080",
+    "name": "Backside 1080",
+    "section": "vertical-kicks",
+    "description": "The Backside 1080 starts in Backside stance, leaves the ground off of both feet, rotates 720° in the air, then lands and finishes with a hook kick towards the target.",
+    "otherNames": "Pop 720 Hook (TKT)",
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "backside-1080-shuriken",
+    "name": "Backside 1080 Shuriken",
+    "section": "vertical-kicks",
+    "description": "A Backside 1080 with an outside crescent kick that lands on the kicking foot, landing in complete stance.",
+    "otherNames": "Pop 720 Shuriken (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "backside-1260",
+    "name": "Backside 1260",
+    "section": "vertical-kicks",
+    "description": "The Backside 1260 starts in Backside stance, leaves the ground off of both feet, rotates 900° in the air, then lands and finishes with a round kick towards the target.",
+    "otherNames": "Pop 900 Round (TKT)",
+    "tricker": "RJay Phillips"
+  },
+  {
+    "slug": "backside-1260-feilong",
+    "name": "Backside 1260 Feilong",
+    "section": "vertical-kicks",
+    "description": "The Backside 1260 starts in Backside stance, leaves the ground off of both feet, rotates 900° in the air, then lands and finishes with an outside kick and an inside kick at its target.",
+    "otherNames": "Pop 900 Feilong",
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "backside-1260-feilong-knife",
+    "name": "Backside 1260 Feilong Knife",
+    "section": "vertical-kicks",
+    "description": "A Backside 1260 Feilong that finishes with a hyperhook.",
+    "otherNames": "Pop 900 Feilong Knife",
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "backside-1260-knife",
+    "name": "Backside 1260 Knife",
+    "section": "vertical-kicks",
+    "description": "A Backside 1260 that finishes with a jackknife.",
+    "otherNames": "Pop 900 Knife (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "backside-1260-wackknife",
+    "name": "Backside 1260 Wackknife",
+    "section": "vertical-kicks",
+    "description": "A Backside 1260 that finishes with a wackknife.",
+    "otherNames": "Pop 900 Wackknife (TKT)",
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "backside-1440",
+    "name": "Backside 1440",
+    "section": "vertical-kicks",
+    "description": "The Backside 1440 starts in Backside stance, leaves the ground off of both feet, rotates 1080° in the air, then lands and finishes with a hook kick towards the target. Could be thought of as a vertical double full hyperhook.",
+    "otherNames": "Pop 1080 Hook (TKT)",
+    "tricker": "Donovan Sheehan"
+  },
+  {
+    "slug": "backside-1620",
+    "name": "Backside 1620",
+    "section": "vertical-kicks",
+    "description": "A vertical kick which initiates from backside stance, pops up, spins 3.5 times in the air, and round kicks at the end. Jordan Okubo first landed this trick on May 11, 2015.",
+    "otherNames": "Pop 1260 Round (TKT)",
+    "tricker": "Jordon Okubo"
+  },
+  {
+    "slug": "backside-720",
+    "name": "Backside 720",
+    "section": "vertical-kicks",
+    "description": "The Backside 720 starts in Backside stance, rotates 180° in the air, then finishes with a hook kick. Could be thought of as a Skip Hook off of two feet.",
+    "otherNames": "Pop 360 Hook (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "backside-900",
+    "name": "Backside 900",
+    "section": "vertical-kicks",
+    "description": "The Backside 900 starts in Backside stance, leaves the ground off of both feet, rotates 540° in the air, then lands and finishes with a round kick towards the target. The Backside 900 is very important for learning similar tricks like the Cheat 900 and the Swing 900, as they have the same amount of rotation, but different take off.",
+    "otherNames": "Pop 540 Round (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "backside-900-feilong",
+    "name": "Backside 900 Feilong",
+    "section": "vertical-kicks",
+    "description": "A Backside 900 that finishes with a Feilong.",
+    "otherNames": "Pop 540 Feilong (TKT), Backside 720 Feilong",
+    "tricker": "Johannes Anttila"
+  },
+  {
+    "slug": "backside-900-gyro",
+    "name": "Backside 900 Gyro",
+    "section": "vertical-kicks",
+    "description": "A Backside 900 Gyro is a Backside 900 with a an extra 360° executed before landing. Can be thought of as a vertical Full Snapu.",
+    "otherNames": "Pop 540 Round Gyro (TKT)",
+    "tricker": "Rasmus Ott"
+  },
+  {
+    "slug": "backside-900-hyper",
+    "name": "Backside 900 Hyper",
+    "section": "vertical-kicks",
+    "description": "The Backside 900 Hyper starts in Backside stance, leaves the ground off of both feet, rotates 540° in the air, then lands and finishes round kick and lands on that kicking foot in hyper stance.",
+    "otherNames": "Pop 540 Katana (TKT)",
+    "tricker": "Rasmus Ott"
+  },
+  {
+    "slug": "backside-900-knife",
+    "name": "Backside 900 Knife",
+    "section": "vertical-kicks",
+    "description": "A Backside 900 Knife is a Backside 900 with a Jackknife executed, making it a Backside 1080 variation. Can be thought of as a vertical, non-flipped Full Swipeknife.",
+    "otherNames": "Pop 540 Round Knife (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "backside-900-sidekick",
+    "name": "Backside 900 Sidekick",
+    "section": "vertical-kicks",
+    "description": "A Backside 900 that finishes with a sidekick instead of a round kick.",
+    "otherNames": "Pop 540 Sidekick (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "blasterscoot",
+    "name": "Blasterscoot",
+    "section": "inside-tricks",
+    "description": "An inverted roundkick with a handplant (opposite hand of kicking leg). A whole 360° is done on the floor.",
+    "otherNames": null,
+    "tricker": "RJay Phillips"
+  },
+  {
+    "slug": "boxcutter",
+    "name": "Boxcutter",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a hyperhook.",
+    "otherNames": "Corkscrew Hyperhook",
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "boxcutter-turbo",
+    "name": "Boxcutter Turbo",
+    "section": "backward-tricks",
+    "description": "A Boxcutter that lands on both feet in frontside.",
+    "otherNames": null,
+    "tricker": "Donovan Sheehan"
+  },
+  {
+    "slug": "broken-full",
+    "name": "Broken Full",
+    "section": "backward-tricks",
+    "description": "A Full Twist that finishes like a Broken Touchdown Raiz.",
+    "otherNames": null,
+    "tricker": "Nyall Hayford"
+  },
+  {
+    "slug": "broken-scrubba",
+    "name": "Broken Scrubba",
+    "section": "outside-tricks",
+    "description": "A Scrubba with another hand-plant switch that lands in hyper, creating the “broken” visual.",
+    "otherNames": null,
+    "tricker": "Cody Sanders"
+  },
+  {
+    "slug": "butter-knife",
+    "name": "Butter Knife",
+    "section": "inside-tricks",
+    "description": "A Butterfly Kick that finishes with a hook kick while maintaining the flat-spin axis.",
+    "otherNames": null,
+    "tricker": "Micah Karns"
+  },
+  {
+    "slug": "butterfly-kick",
+    "name": "Butterfly Kick",
+    "section": "inside-tricks",
+    "description": "A move with Wushu origins. The Butterfly Kick forms the basis of the Butterfly Twist and all the variations that follow.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "butterfly-kick-helicoptero",
+    "name": "Butterfly Kick Helicoptero",
+    "section": "inside-tricks",
+    "description": "A Butterfly Kick with a Helicoptero executed mid-way through the trick.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "butterfly-kick-helicoptero-round",
+    "name": "Butterfly Kick Helicoptero Round",
+    "section": "inside-tricks",
+    "description": "A Butterfly Kick Helicoptero with an extra round kick.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "butterfly-kick-late-hook",
+    "name": "Butterfly Kick Late Hook",
+    "section": "inside-tricks",
+    "description": "A Butterfly-Kick that lands in semi (landing position) with a hook executed at the end.",
+    "otherNames": null,
+    "tricker": "Micah Karns"
+  },
+  {
+    "slug": "butterfly-kick-scissor",
+    "name": "Butterfly Kick Scissor",
+    "section": "inside-tricks",
+    "description": "A Butterfly Kick with a scissor.",
+    "otherNames": null,
+    "tricker": "Cody Wilson"
+  },
+  {
+    "slug": "butterfly-kick-switch",
+    "name": "Butterfly Kick Switch",
+    "section": "inside-tricks",
+    "description": "A Butterfly Kick with a leg switch, landing on the opposite leg in complete.",
+    "otherNames": null,
+    "tricker": "Cody Wilson"
+  },
+  {
+    "slug": "butterfly-kick-switch-hyperhook",
+    "name": "Butterfly Kick Switch Hyperhook",
+    "section": "inside-tricks",
+    "description": "A Butterfly Switch that lands in hyperhook.",
+    "otherNames": null,
+    "tricker": "Cody Wilson"
+  },
+  {
+    "slug": "butterfly-kick-terada-grab",
+    "name": "Butterfly Kick Terada Grab",
+    "section": "inside-tricks",
+    "description": "A Butter Knife where the hook kick leg is grabbed before kicking.",
+    "otherNames": null,
+    "tricker": "Cody Wilson"
+  },
+  {
+    "slug": "butterfly-twist",
+    "name": "Butterfly Twist",
+    "section": "inside-tricks",
+    "description": "A Butterfly Kick with an extra 360° rotation done in the air before landing on the horizontal axis.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "butterfly-twist-axe",
+    "name": "Butterfly Twist Axe",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with an axe kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "butterfly-twist-double-round",
+    "name": "Butterfly Twist Double Round",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with two round kicks executed before landing.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "butterfly-twist-doubleleg",
+    "name": "Butterfly Twist Doubleleg",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with a Doubleleg executed before landing.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "butterfly-twist-doubleleg-twist",
+    "name": "Butterfly Twist Doubleleg Twist",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist Doubleleg with an extra twist executed after the Doubleleg before landing.",
+    "otherNames": null,
+    "tricker": "Rasmus Ott"
+  },
+  {
+    "slug": "butterfly-twist-feilong-swipe",
+    "name": "Butterfly Twist Feilong Swipe",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist Feilong that finishes with a swipe.",
+    "otherNames": null,
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "butterfly-twist-hawkeye",
+    "name": "Butterfly Twist Hawkeye",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist that executes a hawkeye (inside leg executing a hook kick against the DOM)",
+    "otherNames": null,
+    "tricker": "Brendyn \"Bubba\" Crispell"
+  },
+  {
+    "slug": "butterfly-twist-hyper",
+    "name": "Butterfly Twist Hyper",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist that lands in hyper.",
+    "otherNames": null,
+    "tricker": "Austin Guanzon"
+  },
+  {
+    "slug": "butterfly-twist-hyperhook",
+    "name": "Butterfly Twist Hyperhook",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "butterfly-twist-in",
+    "name": "Butterfly Twist-In",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with an extra “backflip” executed before landing.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "butterfly-twist-knife",
+    "name": "Butterfly Twist Knife",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist that finishes with a knife (round kick + hook kick)",
+    "otherNames": "Butterfly Twist Jackknife, Butterfly Twist Swipeknife",
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "butterfly-twist-round",
+    "name": "Butterfly Twist Round",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Austin Guanzon"
+  },
+  {
+    "slug": "butterfly-twist-round-late-round",
+    "name": "Butterfly Twist Round Late Round",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist Round that rotates extra and executes another round kick.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "butterfly-twist-shurikane",
+    "name": "Butterfly Twist Shurikane",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist combined with a Shurikane.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "butterfly-twist-shuriken",
+    "name": "Butterfly Twist Shuriken",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with an outside crescent kick (shuriken) executed before landing in complete stance.",
+    "otherNames": null,
+    "tricker": "Austin Guanzon"
+  },
+  {
+    "slug": "butterfly-twist-shuriken-hyperhook",
+    "name": "Butterfly Twist Shuriken Hyperhook",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist Shuriken / Illusion Twist that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "butterfly-twist-shuriken-twist",
+    "name": "Butterfly Twist Shuriken Twist",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist Shuriken with an extra spin that makes the trick finish in complete.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "butterfly-twist-snapu",
+    "name": "Butterfly Twist Snapu",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with a Snapu executed before landing. This completes two full rotations, therefore making it a Double Butterfly Twist variation.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "butterfly-twist-swipe",
+    "name": "Butterfly Twist Swipe",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist Round that kicks all the way through into hyper.",
+    "otherNames": null,
+    "tricker": "Gary Ip"
+  },
+  {
+    "slug": "butterfly-twist-twist-kick",
+    "name": "Butterfly Twist Twist-Kick",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with a twist-kick (round kick going against DOM) executed before landing.",
+    "otherNames": null,
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "butterfly-twist-wackknife",
+    "name": "Butterfly Twist Wackknife",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with a Wackknife executed before landing.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "cali-roll",
+    "name": "Cali Roll",
+    "section": "outside-tricks",
+    "description": "A Raiz with an extra 2 spins rotated before landing. First landed by Dan Pitlock.",
+    "otherNames": "Cheat 1080 Twist",
+    "tricker": "Dan Pitlock"
+  },
+  {
+    "slug": "cartwheel",
+    "name": "Cartwheel",
+    "section": "inside-tricks",
+    "description": "While the “gymnastics cartwheel” has a 180° stance change from start to finish, the “tricker cartwheel” goes completely side-to-side. Trickers tend to use the side-to-side cartwheel because of how the cartwheel sets for side-fulls, wraps, and masterswings.",
+    "otherNames": null,
+    "tricker": "Julia Moreci"
+  },
+  {
+    "slug": "cartwheel-late-swipe",
+    "name": "Cartwheel Late Swipe",
+    "section": "inside-tricks",
+    "description": "A Cartwheel that finishes with a late swipe.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "cartwheel-twist",
+    "name": "Cartwheel Twist",
+    "section": "inside-tricks",
+    "description": "A Cartwheel with an extra twist, landing in complete.",
+    "otherNames": null,
+    "tricker": "Alex Kerwood"
+  },
+  {
+    "slug": "cheat-1080",
+    "name": "Cheat 1080",
+    "section": "vertical-kicks",
+    "description": "A cheat kick which leaves the ground in (approximately) backside stance, completes (roughly) 720° in-air rotation, and finishes with an outside kick (hook or crescent) at the target.",
+    "otherNames": "Cheat 900 Hook (TKT)",
+    "tricker": "In-Gun Yoo"
+  },
+  {
+    "slug": "cheat-1080-double",
+    "name": "Cheat 1080 Double",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 that lands in hyper and executes a jackknife before landing.",
+    "otherNames": "Cheat 900 Cyclone (TKT)",
+    "tricker": "In-Gun Yoo"
+  },
+  {
+    "slug": "cheat-1080-shuriken",
+    "name": "Cheat 1080 Shuriken",
+    "section": "vertical-kicks",
+    "description": "A Cheat 1080 that finishes with a shuriken instead of a hook. This has the same rotational value as a Cheat 1260.",
+    "otherNames": "Cheat 900 Shuriken (TKT), Cheat 1080 \"Hyper\"",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "cheat-1260",
+    "name": "Cheat 1260",
+    "section": "vertical-kicks",
+    "description": "The Cheat 1260 is a Cheat vert kick that leaves the ground in (approximately) Backside stance, completes (roughly) 1080° in-air rotation, finishing with a round kick towards the target.",
+    "otherNames": "Cheat 1080 Round",
+    "tricker": "Tecoyah \"Tiki\" Wu"
+  },
+  {
+    "slug": "cheat-1260-double",
+    "name": "Cheat 1260 Double",
+    "section": "vertical-kicks",
+    "description": "A Cheat 1260 with 2 inside kicks.",
+    "otherNames": "Cheat 1080 Typhoon (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "cheat-1260-doubleleg",
+    "name": "Cheat 1260 Doubleleg",
+    "section": "vertical-kicks",
+    "description": "A Cheat 1260 that finishes with a parafuso/doubleleg.",
+    "otherNames": "Cheat 1080 Parafuso (TKT), Cheat 1260 Parafuso",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "cheat-1260-hyper",
+    "name": "Cheat 1260 Hyper",
+    "section": "vertical-kicks",
+    "description": "A Cheat 1260 that lands on the kicking leg (inside leg) in Hyper.",
+    "otherNames": "Cheat 1080 Katana (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "cheat-1440",
+    "name": "Cheat 1440",
+    "section": "vertical-kicks",
+    "description": "The Cheat 1440 is a Cheat vert kick that leaves the ground in (approximately) Backside stance, completes (roughly) 1080° in-air rotation, finishing with an outside kick towards the target.",
+    "otherNames": "Cheat 1260 Hook (TKT)",
+    "tricker": "Tecoyah \"Tiki\" Wu"
+  },
+  {
+    "slug": "cheat-1620",
+    "name": "Cheat 1620",
+    "section": "vertical-kicks",
+    "description": "The Cheat 1620 is a Cheat vert kick that leaves the ground in (approximately) Backside stance, completes (roughly) 1260° in-air rotation, finishing with an inside kick towards the target.",
+    "otherNames": "Cheat 1440 Round (TKT)",
+    "tricker": "Tecoyah \"Tiki\" Wu"
+  },
+  {
+    "slug": "cheat-720",
+    "name": "Cheat 720",
+    "section": "vertical-kicks",
+    "description": "A cheat vert kick that takes off in (roughly) backside stance, spins 360° and finishes with an outside (hook or crescent) at the target.",
+    "otherNames": "Cheat 540 Hook (TKT)",
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "cheat-720-double",
+    "name": "Cheat 720 Double",
+    "section": "vertical-kicks",
+    "description": "A Cheat 720 with two “kicks”, where the first kick is just a straightened chamber.",
+    "otherNames": "Cheat 540 Cyclone (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "cheat-720-shuriken",
+    "name": "Cheat 720 Shuriken",
+    "section": "vertical-kicks",
+    "description": "A Cheat 720 that lands on the kicking leg in true hyper (TKT) / mega stance.",
+    "otherNames": "Cheat 540 Shuriken (TKT), Cheat 720 \"Hyper\"",
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "cheat-720-turbo",
+    "name": "Cheat 720 Turbo",
+    "section": "vertical-kicks",
+    "description": "A Cheat 720 that lands on both legs (turbo) with an outside crescent kick.",
+    "otherNames": "Cheat 540 Hook True-Hyper (TKT)",
+    "tricker": "Andrew Franklin"
+  },
+  {
+    "slug": "cheat-720-twist",
+    "name": "Cheat 720 Twist",
+    "section": "outside-tricks",
+    "description": "A Raiz with an extra twist. There is some debate whether “raiz twist” and “cheat 7 twist” are the same thing, but if they differ, they differ in shape and timing, but the axis is relatively the same. Originally created by “cheating” a Double Butterly Twist. Despite its name, this move has no relation to the Cheat 720 kick.",
+    "otherNames": "Raiz Twist",
+    "tricker": "Alex Kerwood"
+  },
+  {
+    "slug": "cheat-720-twist-broken",
+    "name": "Cheat 720 Twist Broken",
+    "section": "outside-tricks",
+    "description": "A Cheat 720 Twist that finishes with a broken. Usually lands in hyper or semi stance.",
+    "otherNames": "Graham Cracker Broken",
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "cheat-720-twist-hyperhook",
+    "name": "Cheat 720 Twist Hyperhook",
+    "section": "outside-tricks",
+    "description": "A Cheat 720 Twist landed in hyper with a hook executed at the end. Can be thought of as a “laid back” Cheat 1080.",
+    "otherNames": "Graham Cracker, Raiz Twist Hyperhook",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "cheat-720-twist-round",
+    "name": "Cheat 720 Twist Round",
+    "section": "outside-tricks",
+    "description": "A Cheat 720 Twist with a round kick executed before landing. Can be thought of as a “laid back” Cheat 900.",
+    "otherNames": "Raiz Twist Round",
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "cheat-900",
+    "name": "Cheat 900",
+    "section": "vertical-kicks",
+    "description": "The Cheat 900 is a Cheat vert kick that leaves the ground in Backside stance, completes (approximately) 540° in-air rotation, finishing with a round kick towards the target.",
+    "otherNames": "Cheat 720 Round (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "cheat-900-crowd-awakener",
+    "name": "Cheat 900 Crowd Awakener",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 with a Crowd Awakener / straddle / split kick executed before landing.",
+    "otherNames": "Cheat 720 Crowd Awakener (TKT)",
+    "tricker": "Grant Stevens"
+  },
+  {
+    "slug": "cheat-900-crowd-awakener-knife",
+    "name": "Cheat 900 Crowd Awakener Knife",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 Crowd Awakener that lands in a hyperhook.",
+    "otherNames": "Cheat 720 Crowd Awakener Knife (TKT)",
+    "tricker": "In-Gun Yoo"
+  },
+  {
+    "slug": "cheat-900-double",
+    "name": "Cheat 900 Double",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 with two inside kicks. Like a 540 late Round.",
+    "otherNames": "Cheat 720 Typhoon (TKT)",
+    "tricker": "Ilya Vtorin"
+  },
+  {
+    "slug": "cheat-900-double-hyper",
+    "name": "Cheat 900 Double Hyper",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 Double that lands on the inside leg in hyper.",
+    "otherNames": "H-Bomb, Cheat 720 Typhoon Katana (TKT)",
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "cheat-900-double-knife",
+    "name": "Cheat 900 Double Knife",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 Double that finishes with a hyperhook.",
+    "otherNames": "Cheat 720 Typhoon Knife (TKT)",
+    "tricker": "In-Gun Yoo"
+  },
+  {
+    "slug": "cheat-900-double-tai-fighter",
+    "name": "Cheat 900 Double Tai Fighter",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 with a leg grab in between both kicks.",
+    "otherNames": "Cheat 720 Tai-Fighter (TKT)",
+    "tricker": "Ilya Vtorin"
+  },
+  {
+    "slug": "cheat-900-doubleleg",
+    "name": "Cheat 900 Doubleleg",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 that finishes with a parafuso/doubleleg instead of a round kick.",
+    "otherNames": "Cheat 720 Doubleleg (TKT), Cheat 900 Parafuso",
+    "tricker": "RJay Phillips"
+  },
+  {
+    "slug": "cheat-900-doubleleg-twist",
+    "name": "Cheat 900 Doubleleg Twist",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 Doubleleg with an extra twist, landing back in complete stance.",
+    "otherNames": "Cheat 720 Doubleleg Twist (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "cheat-900-feilong",
+    "name": "Cheat 900 Feilong",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 with a Feilong executed before landing.",
+    "otherNames": "Cheat 720 Feilong (TKT)",
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "cheat-900-gyro",
+    "name": "Cheat 900 Gyro",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 with an extra rotation, landing back in complete stance.",
+    "otherNames": "Cheat 720 Katana Gyro(TKT), Cheat 900 Snapu",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "cheat-900-hyper",
+    "name": "Cheat 900 Hyper",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 that lands on the kicking (inside) leg in hyper.",
+    "otherNames": "Cheat 720 Katana (TKT)",
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "cheat-900-knife",
+    "name": "Cheat 900 Knife",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 Crowd Awakener that lands in a hyperhook.",
+    "otherNames": "Cheat 720 Knife (TKT)",
+    "tricker": "In-Gun Yoo"
+  },
+  {
+    "slug": "cheat-900-paraknife",
+    "name": "Cheat 900 Paraknife",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 Parafuso that finishes with a knife.",
+    "otherNames": "Cheat 720 Paraknife (TKT), Cheat 900 Switchblade",
+    "tricker": "In-Gun Yoo"
+  },
+  {
+    "slug": "cheat-900-rodeo",
+    "name": "Cheat 900 Rodeo",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 with a leg grab.",
+    "otherNames": "Cheat 720 Rodeo (TKT)",
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "cheat-900-sidekick",
+    "name": "Cheat 900 Sidekick",
+    "section": "vertical-kicks",
+    "description": "A Cheat 900 with a sidekick rather than a round kick.",
+    "otherNames": "Cheat 720 Sidekick (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "cheat-double-hook",
+    "name": "Cheat Double Hook",
+    "section": "vertical-kicks",
+    "description": "An upright Spyder with an extra hook. Could be thought of as a precursor to the Wackknife.",
+    "otherNames": "Spyder Hook",
+    "tricker": "Nevin Hall"
+  },
+  {
+    "slug": "cheat-feilong",
+    "name": "Cheat Feilong",
+    "section": "vertical-kicks",
+    "description": "A Tornado where the outside (pumped, non-kicking) leg kicks like a crescent, resulting in 2 kicks.",
+    "otherNames": "Cheat 360 Feilong (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "corkscrew",
+    "name": "Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Gainer Flash with an extra rotation before landing – or a Back Full off of one leg.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "corkscrew-crowd-awakener",
+    "name": "Corkscrew Crowd Awakener",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with a split kick / straddle.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "corkscrew-crowd-awakener-hyper",
+    "name": "Corkscrew Crowd Awakener Hyper",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Crowd Awakener that lands in hyper.",
+    "otherNames": null,
+    "tricker": "Jacob Pinto"
+  },
+  {
+    "slug": "corkscrew-crowd-awakener-knife",
+    "name": "Corkscrew Crowd Awakener Knife",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Crowd Awakener that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Aidan Kennedy"
+  },
+  {
+    "slug": "corkscrew-crowd-awakener-round",
+    "name": "Corkscrew Crowd Awakener Round",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Crowd Awakener with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "corkscrew-doubleleg",
+    "name": "Corkscrew Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a Doubleleg.",
+    "otherNames": null,
+    "tricker": "Keenan Carr"
+  },
+  {
+    "slug": "corkscrew-doubleleg-hyperhook",
+    "name": "Corkscrew Doubleleg Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Doubleleg that finishes with a hyperhook.",
+    "otherNames": "Corkscrew Switchblade",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "corkscrew-doubleleg-late-round",
+    "name": "Corkscrew Doubleleg Late Round",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Doubleleg that at finishes with a late round.",
+    "otherNames": "Corkscrew Doubleleg Late9, Corkscrew Doubleleg Mega Round",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "corkscrew-doubleleg-twist",
+    "name": "Corkscrew Doubleleg Twist",
+    "section": "backward-tricks",
+    "description": "A Corkcrew Doubleleg that finishes with an extra twist – making this a double corkscrew variation.",
+    "otherNames": "Horwing-Whacker",
+    "tricker": "Ilya Vtorin"
+  },
+  {
+    "slug": "corkscrew-feilong",
+    "name": "Corkscrew Feilong",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a Feilong (outside kick followed by an inside kick).",
+    "otherNames": null,
+    "tricker": "Johannes Anttila"
+  },
+  {
+    "slug": "corkscrew-feilong-knife",
+    "name": "Corkscrew Feilong Knife",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Feilong that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "corkscrew-kyro",
+    "name": "Corkscrew Kyro",
+    "section": "backward-tricks",
+    "description": "A Boxcutter with an extra twist, landing back in complete stance.",
+    "otherNames": "Boxcutter Gyro",
+    "tricker": "Jacob Pinto"
+  },
+  {
+    "slug": "corkscrew-mcdirty",
+    "name": "Corkscrew McDirty",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Feilong that finishes with a twist.",
+    "otherNames": "Corkscrew Feilong Snapu",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "corkscrew-round",
+    "name": "Corkscrew Round",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a round kick before landing. Could be thought of as an inverted Swing 900.",
+    "otherNames": null,
+    "tricker": "Keenan Carr"
+  },
+  {
+    "slug": "corkscrew-shuriken",
+    "name": "Corkscrew Shuriken",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with a Shuriken (outside crescent kick landing in complete stance).",
+    "otherNames": null,
+    "tricker": "Micah Karns"
+  },
+  {
+    "slug": "corkscrew-shuriken-kyro",
+    "name": "Corkscrew Shuriken Kyro",
+    "section": "backward-tricks",
+    "description": "A Cork Shuiken Cutter with an extra half turn landing on both feet in backside.",
+    "otherNames": "Shuriken Cutter Kyro",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "corkscrew-sidewinder",
+    "name": "Corkscrew Sidewinder",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a Sidewinder, making this a double corkscrew variation.",
+    "otherNames": "Border Slicer, Boxcutter Sidewinder",
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "corkscrew-skullsnapper",
+    "name": "Corkscrew Skullsnapper",
+    "section": "backward-tricks",
+    "description": "A Tucked Corkscrew with an extra twist.",
+    "otherNames": null,
+    "tricker": "Vellu Saarela"
+  },
+  {
+    "slug": "corkscrew-snapu",
+    "name": "Corkscrew Snapu",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a snapu. Making this a double corkscrew variation.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "corkscrew-snapu-hyper",
+    "name": "Corkscrew Snapu Hyper",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Snapu that lands in hyper stance.",
+    "otherNames": null,
+    "tricker": "Tyler \"Kite\" Wilson"
+  },
+  {
+    "slug": "corkscrew-swipe",
+    "name": "Corkscrew Swipe",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a swipe (round kick that lands in hyper).",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "corkscrew-swipe-late-round",
+    "name": "Corkscrew Swipe Late Round",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Swipe that finishes with a late / mega round.",
+    "otherNames": null,
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "corkscrew-swipe-late-swipe",
+    "name": "Corkscrew Swipe Late Swipe",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Swipe that finishes with a late swipe on the pseudo-flip axis.",
+    "otherNames": "Corkscrew Frappe",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "corkscrew-swipeknife",
+    "name": "Corkscrew Swipeknife",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a Swipeknife.",
+    "otherNames": "Cork Knife",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "corkscrew-wackknife",
+    "name": "Corkscrew Wackknife",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a Wackknife.",
+    "otherNames": null,
+    "tricker": "Kyle Cordova"
+  },
+  {
+    "slug": "crackknife",
+    "name": "Crackknife",
+    "section": "outside-tricks",
+    "description": "A Wackknife on the Raiz axis.",
+    "otherNames": "Sideswipe Wackknife",
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "crashmoon",
+    "name": "Crashmoon",
+    "section": "backward-tricks",
+    "description": "A Gainer Hook that lands in mega with a late/mega hook. Similar to a Shuriken Cutter but without the twist.",
+    "otherNames": "Gainer Hook Late Hook, Moonkick Late7",
+    "tricker": "Mason Rowley"
+  },
+  {
+    "slug": "crowd-awakener",
+    "name": "Crowd Awakener",
+    "section": "vertical-kicks",
+    "description": "A Tornado with a split kick / straddle.",
+    "otherNames": "Cheat 360 Crowd Awakener (TKT)",
+    "tricker": "Julia Moreci"
+  },
+  {
+    "slug": "crowd-awakener-knife",
+    "name": "Crowd Awakener Knife",
+    "section": "vertical-kicks",
+    "description": "A Crowd Awakener that finishes with a hyperhook.",
+    "otherNames": "Crowd Awakener Level 3, Cheat 360 Crowd Awakener Knife (TKT)",
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "dive-roll",
+    "name": "Dive Roll",
+    "section": "forward-tricks",
+    "description": "The Dive Roll is a crucial pre-requisite to all forward flipping techniques, and a good skill to have for bailing safety.",
+    "otherNames": null,
+    "tricker": "Braeden McPherson"
+  },
+  {
+    "slug": "donut-boy",
+    "name": "Donut Boy",
+    "section": "backward-tricks",
+    "description": "Could be thought of as a Corkscrew Lonestar.",
+    "otherNames": null,
+    "tricker": "Ruben Fritz"
+  },
+  {
+    "slug": "donut-boy-hyperhook",
+    "name": "Donut Boy Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Donut Boy that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "double-aerial-twist",
+    "name": "Double Aerial Twist",
+    "section": "inside-tricks",
+    "description": "An Aerial Twist with an extra twist, landing in complete stance.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "double-arabian",
+    "name": "Double Arabian",
+    "section": "backward-tricks",
+    "description": "An Arabian with another frontflip before landing.",
+    "otherNames": null,
+    "tricker": "Taka Enomoto"
+  },
+  {
+    "slug": "double-back-tuck",
+    "name": "Double Back Tuck",
+    "section": "backward-tricks",
+    "description": "A Back Tuck with two rotations.",
+    "otherNames": null,
+    "tricker": "Aaron Michael Cook"
+  },
+  {
+    "slug": "double-butterfly-twist",
+    "name": "Double Butterfly Twist",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with another spin executed before landing.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "double-butterfly-twist-hyper",
+    "name": "Double Butterfly Twist Hyper",
+    "section": "inside-tricks",
+    "description": "A Double Butterfly Twist that lands in hyper.",
+    "otherNames": null,
+    "tricker": null
+  },
+  {
+    "slug": "double-butterfly-twist-round",
+    "name": "Double Butterfly Twist Round",
+    "section": "inside-tricks",
+    "description": "A Double Buterfly Twist with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Jefferson Lewis"
+  },
+  {
+    "slug": "double-butterfly-twist-snapu",
+    "name": "Double Butterfly Twist Snapu",
+    "section": "inside-tricks",
+    "description": "A Double Butterfly Twist that finishes with a Snapu, making this a Triple Butterfly Twist variation.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-corkscrew",
+    "name": "Double Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with two rotations. Could be thought of as a double full off of one foot.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "double-corkscrew-doubleleg",
+    "name": "Double Corkscrew Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew that finishes with a doubleleg.",
+    "otherNames": null,
+    "tricker": "Hezekiah Ramirez"
+  },
+  {
+    "slug": "double-corkscrew-doubleleg-twist",
+    "name": "Double Corkscrew Doubleleg Twist",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew Doubleleg that finishes with an extra twist, making this a Triple Corkscrew variation.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-corkscrew-round",
+    "name": "Double Corkscrew Round",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew that finishes with a round kick.",
+    "otherNames": null,
+    "tricker": "Chris Afonso"
+  },
+  {
+    "slug": "double-corkscrew-shuriken",
+    "name": "Double Corkscrew Shuriken",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew that finishes with a shuriken (outside crescent) in complete stance.",
+    "otherNames": null,
+    "tricker": "Donovan Sheehan"
+  },
+  {
+    "slug": "double-corkscrew-shuriken-cutter",
+    "name": "Double Corkscrew Shuriken Cutter",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew that finishes with a shuriken hyperhook.",
+    "otherNames": null,
+    "tricker": "Fuju Honjo"
+  },
+  {
+    "slug": "double-corkscrew-snapu",
+    "name": "Double Corkscrew Snapu",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew that finishes with a snapu, making this a triple corkscrew variation.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "double-corkscrew-wackknife",
+    "name": "Double Corkscrew Wackknife",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew that finishes with a wackknife.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "double-doubleleg",
+    "name": "Double Doubleleg",
+    "section": "outside-tricks",
+    "description": "A Doubleleg with two flips. First landed by Zen Kajihara on June 5, 2020.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "double-full",
+    "name": "Double Full",
+    "section": "backward-tricks",
+    "description": "A Full Twist with an extra rotation before landing.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "double-full-crowd-awakener",
+    "name": "Double Full Crowd Awakener",
+    "section": "backward-tricks",
+    "description": "A Double Full that finishes with a Crowd Awakener / split kick.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-full-doubleleg",
+    "name": "Double Full Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Double Full that finishes with a Doubleleg.",
+    "otherNames": null,
+    "tricker": "Hezekiah Ramirez"
+  },
+  {
+    "slug": "double-full-doubleleg-double-twist",
+    "name": "Double Full Doubleleg Double Twist",
+    "section": "backward-tricks",
+    "description": "A Double Full Doubleleg with two extra twists executed before landing",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-full-doubleleg-twist",
+    "name": "Double Full Doubleleg Twist",
+    "section": "backward-tricks",
+    "description": "A Full Doubleleg Twist with an extra rotation before landing.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "double-full-hyperhook",
+    "name": "Double Full Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Double Full that finishes with a hyperhook. Could be thought of as an inverted Backside 1440.",
+    "otherNames": null,
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "double-full-in-back-out",
+    "name": "Double Full-In Back-Out",
+    "section": "backward-tricks",
+    "description": "A Double Full with a backflip before landing.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-full-mcdirty",
+    "name": "Double Full McDirty",
+    "section": "backward-tricks",
+    "description": "A Double Full that finishes with a Feilong Snapu (aka McDirty), making this a triple full variation.",
+    "otherNames": "Double Full Feilong Snapu",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "double-full-round",
+    "name": "Double Full Round",
+    "section": "backward-tricks",
+    "description": "A Double Full with a round kick executed before landing. Could be thought of as a Backside 1260 with some inversion.",
+    "otherNames": null,
+    "tricker": "Johannes Anttila"
+  },
+  {
+    "slug": "double-full-shurikane",
+    "name": "Double Full Shurikane",
+    "section": "backward-tricks",
+    "description": "A Double Full Shuriken Hyperhook that finishes with another late hook.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-full-shuriken-hyperhook",
+    "name": "Double Full Shuriken Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Double Full Shuriken that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-full-shuriken-hyperhook-turbo",
+    "name": "Double Full Shuriken Hyperhook Turbo",
+    "section": "backward-tricks",
+    "description": "A Double Full Shuriken Hyperhook that lands in turbo (frontside that lands on both feet).",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-full-snapu",
+    "name": "Double Full Snapu",
+    "section": "backward-tricks",
+    "description": "A Double Full that finishes with a Snapu.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "double-full-snapu-twist",
+    "name": "Double Full Snapu Twist",
+    "section": "backward-tricks",
+    "description": "A Double Full Snapu with an extra twist executed before landing.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "double-full-swipe",
+    "name": "Double Full Swipe",
+    "section": "backward-tricks",
+    "description": "A Double Full that finishes with a Swipe. Could be considered an inverted Backside 1260 Hyper.",
+    "otherNames": null,
+    "tricker": "Donovan Sheehan"
+  },
+  {
+    "slug": "double-full-swipeknife",
+    "name": "Double Full Swipeknife",
+    "section": "backward-tricks",
+    "description": "A Double Full that finishes with a Swipeknife. Could be thought of as an inverted Backside 1260 Knife.",
+    "otherNames": null,
+    "tricker": "Carson Crawford"
+  },
+  {
+    "slug": "double-gainer",
+    "name": "Double Gainer",
+    "section": "backward-tricks",
+    "description": "A Gainer Tuck with two flips. First landed by Vellu in February, 2011.",
+    "otherNames": null,
+    "tricker": "Vellu Saarela"
+  },
+  {
+    "slug": "double-layout",
+    "name": "Double Layout",
+    "section": "backward-tricks",
+    "description": "A Layout with 2 flips.",
+    "otherNames": null,
+    "tricker": "Dominique Lewis"
+  },
+  {
+    "slug": "double-nike",
+    "name": "Double Nike",
+    "section": "backward-tricks",
+    "description": "An off-axis double backflip with body in a position resembling the Nike logo.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "double-peter-pan-butterfly-twist",
+    "name": "Double Peter Pan Butterfly Twist",
+    "section": "inside-tricks",
+    "description": "A Double Butterfly Twist with both hands at the hips.",
+    "otherNames": null,
+    "tricker": "Moe Alafrangy"
+  },
+  {
+    "slug": "double-sideflip",
+    "name": "Double Sideflip",
+    "section": "outside-tricks",
+    "description": "A sideflip with two flips.",
+    "otherNames": null,
+    "tricker": "Ejik"
+  },
+  {
+    "slug": "doubleleg",
+    "name": "Doubleleg",
+    "section": "outside-tricks",
+    "description": "An outside flip that takes off of two feet and with piked legs and has varying degrees of rotation. Not to be confused with a piked sideflip – the hips never rise over the chest in a doubleleg.",
+    "otherNames": "Armada Dupla (Capoeira)",
+    "tricker": "Everett Castro"
+  },
+  {
+    "slug": "doubleleg-double-twist",
+    "name": "Doubleleg Double Twist",
+    "section": "outside-tricks",
+    "description": "A Doubleleg with two extra spins executed before landing.",
+    "otherNames": null,
+    "tricker": "Nick Fry"
+  },
+  {
+    "slug": "doubleleg-rodeo",
+    "name": "Doubleleg Rodeo",
+    "section": "outside-tricks",
+    "description": "A Doubleleg variation that initiates exactly like the base move, but then flips backwards with the same aesthetic of a Rodeo Backflip.",
+    "otherNames": "Rodeo Kim Do Kick",
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "doubleleg-sidekick",
+    "name": "Doubleleg Sidekick",
+    "section": "outside-tricks",
+    "description": "A Doubleleg that finishes with a sidekick.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "doubleleg-twist",
+    "name": "Doubleleg Twist",
+    "section": "outside-tricks",
+    "description": "A Doubleleg with an extra twist executed, landing the trick in complete.",
+    "otherNames": null,
+    "tricker": "Tim Farley"
+  },
+  {
+    "slug": "doubleleg-twist-round",
+    "name": "Doubleleg Twist Round",
+    "section": "outside-tricks",
+    "description": "A Doubleleg Twist that executes a round kick before landing.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "doubleleg-x-out",
+    "name": "Doubleleg X-Out",
+    "section": "outside-tricks",
+    "description": "A Doubleleg that executed an X-Out at the peak of the jump. Created by Kim Do Nguyen.",
+    "otherNames": "Kim Do Kick",
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "doubleleg-x-out-hyperhook",
+    "name": "Doubleleg X-Out Hyperhook",
+    "section": "outside-tricks",
+    "description": "A Doubleleg X-Out that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "dragonfly-boxcutter",
+    "name": "Dragonfly Boxcutter",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Corkscrew that finishes with a hyperhook.",
+    "otherNames": "Dragonfly Corkscrew Hyperhook",
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "dragonfly-corkscrew",
+    "name": "Dragonfly Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with a sidekick executed before the twist.",
+    "otherNames": null,
+    "tricker": "Hezekiah Ramirez"
+  },
+  {
+    "slug": "dragonfly-corkscrew-doubleleg",
+    "name": "Dragonfly Corkscrew Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Corkscrew that finishes with a Doubleleg.",
+    "otherNames": null,
+    "tricker": "Hezekiah Ramirez"
+  },
+  {
+    "slug": "dragonfly-corkscrew-feilong-knife",
+    "name": "Dragonfly Corkscrew Feilong Knife",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Corkscrew that finishes with a Feilong Knife (outside kick, inside kick, inside kick) for a total of 4 kicks.",
+    "otherNames": "Slaughtermelon",
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "dragonfly-corkscrew-round",
+    "name": "Dragonfly Corkscrew Round",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Corkscrew that finishes with a round kick.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "dragonfly-corkscrew-sidewinder-late-round",
+    "name": "Dragonfly Corkscrew Sidewinder Late Round",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Corkscrew / Gainer Sidewinder that finishes with a late round.",
+    "otherNames": "Dragonfly Gainer Sidewinder Late Round",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "dragonfly-corkscrew-swipeknife",
+    "name": "Dragonfly Corkscrew Swipeknife",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Corkscrew that finishes with a Swipeknife.",
+    "otherNames": "Dragonfly Corkscrew Knife",
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "dragonfly-double-corkscrew",
+    "name": "Dragonfly Double Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew that initiates with a dragonfly / sidekick.",
+    "otherNames": null,
+    "tricker": "Fuju Honjo"
+  },
+  {
+    "slug": "dragonfly-double-corkscrew-hyperhook",
+    "name": "Dragonfly Double Corkscrew Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Double Corkscrew that finishes with a hyperhook.",
+    "otherNames": "Dragonfly Sheep Shearer",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "dragonfly-double-corkscrew-round",
+    "name": "Dragonfly Double Corkscrew Round",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Double Corkscrew with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Hezekiah Ramirez"
+  },
+  {
+    "slug": "dragonfly-hyperhook",
+    "name": "Dragonfly Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Flash Knife with a sidekick for the first kick.",
+    "otherNames": "Dragonfly Flash Knife",
+    "tricker": "Kyle Cordova"
+  },
+  {
+    "slug": "dragonfly-moonkick",
+    "name": "Dragonfly Moonkick",
+    "section": "backward-tricks",
+    "description": "A Moonkick that initiates with a sidekick.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "dragonfly-shuriken-cutter",
+    "name": "Dragonfly Shuriken Cutter",
+    "section": "backward-tricks",
+    "description": "A Dragonfly Corkscrew that finishes with a Shuriken Hyperhook.",
+    "otherNames": "Dragonfly Corkscrew Shuriken Hyperhook",
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "dragonfly-triple-corkscrew",
+    "name": "Dragonfly Triple Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Triple Corkscrew that initiates with a dragonfly / sidekick.",
+    "otherNames": null,
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "e-kick",
+    "name": "E-Kick",
+    "section": "outside-tricks",
+    "description": "A Compasso (touchdown hook) with a switch executed before the hook.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "envergado",
+    "name": "Envergado",
+    "section": "outside-tricks",
+    "description": "A Raiz that executes a Doubleleg at the peak of the jump and lands on both feet.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "envergado-double-twist",
+    "name": "Envergado Double Twist",
+    "section": "outside-tricks",
+    "description": "An Envergado with an extra two spins before landing.",
+    "otherNames": null,
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "envergado-twist",
+    "name": "Envergado Twist",
+    "section": "outside-tricks",
+    "description": "An Envergado with an extra twist executed before landing. Can be thought of as an inverted Parafuso Gyro.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "feilong-snapu",
+    "name": "Feilong Snapu",
+    "section": "outside-tricks",
+    "description": "An inverted Cheat Feilong with an extra 360° twist before landing.",
+    "otherNames": "McDirty",
+    "tricker": "Donovan Sheehan"
+  },
+  {
+    "slug": "filipino",
+    "name": "Filipino",
+    "section": "backward-tricks",
+    "description": "A Full with 1.5 twist and finishes with a front flip. Could be thought of as an Arabian with an extra spin before flipping.",
+    "otherNames": null,
+    "tricker": "Kyle Mclean"
+  },
+  {
+    "slug": "flash-helicoptero",
+    "name": "Flash Helicoptero",
+    "section": "backward-tricks",
+    "description": "A Flashkick that finishes with a Helicoptero.",
+    "otherNames": null,
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "flash-kick",
+    "name": "Flash Kick",
+    "section": "backward-tricks",
+    "description": "The Flashkick is a backflip executed with a kick at the peak of the flip.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "flash-knife",
+    "name": "Flash Knife",
+    "section": "backward-tricks",
+    "description": "A Flashkick that finishes with a hyperhook. Can be thought of as a pop moonkick.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "frappe",
+    "name": "Frappe",
+    "section": "backward-tricks",
+    "description": "A Full Late Round that swipes / pseudo-flips into hyper stance.",
+    "otherNames": "Full Late Swipe",
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "front-axe",
+    "name": "Front Axe",
+    "section": "forward-tricks",
+    "description": "A Frontflip that finishes with a step-out / axe kick.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "front-half",
+    "name": "Front Half",
+    "section": "forward-tricks",
+    "description": "A Front Flip with a half turn.",
+    "otherNames": "Barahni, Brandy",
+    "tricker": "Braeden McPherson"
+  },
+  {
+    "slug": "front-handspring",
+    "name": "Front Handspring",
+    "section": "forward-tricks",
+    "description": "A forward flipping tumbling skill which uses your hands to propel and flip you over.",
+    "otherNames": null,
+    "tricker": "Braeden McPherson"
+  },
+  {
+    "slug": "front-pike",
+    "name": "Front Pike",
+    "section": "forward-tricks",
+    "description": "A Frontflip that holds a “piked” position.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "front-tuck",
+    "name": "Front Tuck",
+    "section": "forward-tricks",
+    "description": "A forward flipping trick with a tuck – the most “basic” form of the front flip.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "front-x-out",
+    "name": "Front X-Out",
+    "section": "forward-tricks",
+    "description": "A Frontflip with a split kick / straddle.",
+    "otherNames": null,
+    "tricker": "Alex Tofini"
+  },
+  {
+    "slug": "full-cobra",
+    "name": "Full Cobra",
+    "section": "backward-tricks",
+    "description": "A Full Twist that finishes with an arched position.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "full-cobra-twist",
+    "name": "Full Cobra Twist",
+    "section": "backward-tricks",
+    "description": "A Full Cobra with another rotation executed before landing – making this a double full variation.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "full-crowd-awakener",
+    "name": "Full Crowd Awakener",
+    "section": "backward-tricks",
+    "description": "A Full Twist with a Crowd Awakener / Straddle before landing.",
+    "otherNames": null,
+    "tricker": "Jacob Pinto"
+  },
+  {
+    "slug": "full-crowd-awakener-snapu",
+    "name": "Full Crowd Awakener Snapu",
+    "section": "backward-tricks",
+    "description": "A Full Crowd Awakener with an extra twist before landing.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-doubleleg",
+    "name": "Full Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Full Twist with a Doubleleg executed before landing.",
+    "otherNames": null,
+    "tricker": "Keenan Carr"
+  },
+  {
+    "slug": "full-doubleleg-double-twist",
+    "name": "Full Doubleleg Double Twist",
+    "section": "backward-tricks",
+    "description": "A Double Full Doubleleg with an extra rotation.",
+    "otherNames": null,
+    "tricker": "Tyler \"Kite\" Wilson"
+  },
+  {
+    "slug": "full-doubleleg-hawkeye",
+    "name": "Full Doubleleg Hawkeye",
+    "section": "backward-tricks",
+    "description": "A Full Doubleleg that finishes with a hawkeye (inside leg executing a hook kick against the DOM).",
+    "otherNames": null,
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "full-doubleleg-hyperhook",
+    "name": "Full Doubleleg Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Full Doubleleg that finishes with a hyperhook.",
+    "otherNames": "Full Switchblade",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-doubleleg-twist",
+    "name": "Full Doubleleg Twist",
+    "section": "backward-tricks",
+    "description": "A Full Doubleleg with an extra twist executed before landing.",
+    "otherNames": null,
+    "tricker": "Malik Shepherd"
+  },
+  {
+    "slug": "full-doubleleg-twist-doubleleg",
+    "name": "Full Doubleleg Twist Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Full Doubleleg Twist that finishes with a Doubleleg.",
+    "otherNames": null,
+    "tricker": "Jacob Huntington"
+  },
+  {
+    "slug": "full-down",
+    "name": "Full Down",
+    "section": "backward-tricks",
+    "description": "A Back Tuck with a late twist, making this a full variation.",
+    "otherNames": null,
+    "tricker": "Jimmy Xiong"
+  },
+  {
+    "slug": "full-elbow-gumbi",
+    "name": "Full Elbow Gumbi",
+    "section": "backward-tricks",
+    "description": "A Full Gumbi that uses elbows rather than hands.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "full-feilong",
+    "name": "Full Feilong",
+    "section": "backward-tricks",
+    "description": "A Full Twist with a Feilong (outside kick + inside kick).",
+    "otherNames": null,
+    "tricker": "Keenan Carr"
+  },
+  {
+    "slug": "full-feilong-double",
+    "name": "Full Feilong Double",
+    "section": "backward-tricks",
+    "description": "A Full Feilong with an extra kick, landing in mega stance.",
+    "otherNames": "Full Feilong Late Round, Full Feilong Late9",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-feilong-knife",
+    "name": "Full Feilong Knife",
+    "section": "backward-tricks",
+    "description": "A Full Feilong that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "full-feilong-late-swipeknife",
+    "name": "Full Feilong Late Swipeknife",
+    "section": "backward-tricks",
+    "description": "A Full Feilong that finishes with a late swipe + hook kick.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "full-gumbi",
+    "name": "Full Gumbi",
+    "section": "backward-tricks",
+    "description": "A Full Twist that finishes with a Gumbi. Closely related to a 360 Backhandspring.",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "full-hyper",
+    "name": "Full Hyper",
+    "section": "backward-tricks",
+    "description": "A Full Twist that lands in hyper stance.",
+    "otherNames": null,
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "full-hyperhook",
+    "name": "Full Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Full that finishes with a hyperhook. Could be considered a Backside 1080 with inversion.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-hyperhook-turbo",
+    "name": "Full Hyperhook Turbo",
+    "section": "backward-tricks",
+    "description": "A Full Hyperhook that finishes in turbo (on both feet in frontside).",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-in-back-out",
+    "name": "Full-In Back-Out",
+    "section": "backward-tricks",
+    "description": "A Full with another backflip before landing.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "full-in-back-out-hyper",
+    "name": "Full-In Back-Out Hyper",
+    "section": "backward-tricks",
+    "description": "A Full-In Back-Out that lands in hyper. Could be thought of as an \"on-axis\" Frappe.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "full-in-full-out",
+    "name": "Full-In Full-Out",
+    "section": "backward-tricks",
+    "description": "A Full with another full before landing - a double flipping, double twisting move.",
+    "otherNames": null,
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "full-kyro",
+    "name": "Full Kyro",
+    "section": "backward-tricks",
+    "description": "A Full Hyperhook with an extra half rotation, landing in complete stance.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-late-round",
+    "name": "Full Late Round",
+    "section": "backward-tricks",
+    "description": "A Full that finishes with a mega round / late round.",
+    "otherNames": "Full Late9, Full Mega Round",
+    "tricker": "Chris Bostock"
+  },
+  {
+    "slug": "full-mcdirty",
+    "name": "Full McDirty",
+    "section": "backward-tricks",
+    "description": "A Full Feilong with an extra twist before landing.",
+    "otherNames": "Full Feilong Snapu",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-pike",
+    "name": "Full Pike",
+    "section": "backward-tricks",
+    "description": "A Full that finishes with a Front Pike.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "full-pike-round",
+    "name": "Full Pike Round",
+    "section": "backward-tricks",
+    "description": "A Full Pike that finishes with a round kick.",
+    "otherNames": null,
+    "tricker": "Kyle Mclean"
+  },
+  {
+    "slug": "full-rocketboi",
+    "name": "Full Rocketboi",
+    "section": "backward-tricks",
+    "description": "A Full that finishes with a Rocketboi.",
+    "otherNames": null,
+    "tricker": "Kyle Mclean"
+  },
+  {
+    "slug": "full-round",
+    "name": "Full Round",
+    "section": "backward-tricks",
+    "description": "A Full Twist with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Keenan Carr"
+  },
+  {
+    "slug": "full-scissor",
+    "name": "Full Scissor",
+    "section": "backward-tricks",
+    "description": "A Full that finishes with a scissor, landing in mega.",
+    "otherNames": null,
+    "tricker": "Carson Crawford"
+  },
+  {
+    "slug": "full-shurikane",
+    "name": "Full Shurikane",
+    "section": "backward-tricks",
+    "description": "A Shurikane from full.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "full-shuriken",
+    "name": "Full Shuriken",
+    "section": "backward-tricks",
+    "description": "A Full Twist with a shuriken executed before landing.",
+    "otherNames": null,
+    "tricker": "Johannes Anttila"
+  },
+  {
+    "slug": "full-shuriken-hyperhook",
+    "name": "Full Shuriken Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Full Shuriken that finishes with a hyperhook.",
+    "otherNames": "Full Shuriken Cutter",
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "full-snapu",
+    "name": "Full Snapu",
+    "section": "backward-tricks",
+    "description": "A Full with a snapu executed before landing – making this a double full variation.",
+    "otherNames": null,
+    "tricker": "Ilya Vtorin"
+  },
+  {
+    "slug": "full-snapu-doubleleg",
+    "name": "Full Snapu Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Full Snapu that finishes with a Doubleleg.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-snapu-hyper",
+    "name": "Full Snapu Hyper",
+    "section": "backward-tricks",
+    "description": "A Full Snapu that lands in hyper.",
+    "otherNames": null,
+    "tricker": "Vellu Saarela"
+  },
+  {
+    "slug": "full-snapu-hyperhook",
+    "name": "Full Snapu Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Full Snapu that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Jacob Pinto"
+  },
+  {
+    "slug": "full-snapu-in-back-out",
+    "name": "Full Snapu-In Back-Out",
+    "section": "backward-tricks",
+    "description": "A Full Snapu that finishes with another backflip, making this a double full-in, back-out variation.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "full-snapu-round",
+    "name": "Full Snapu Round",
+    "section": "backward-tricks",
+    "description": "A Full Snapu that finishes with a round kick before landing.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-snapu-snapu",
+    "name": "Full Snapu Snapu",
+    "section": "backward-tricks",
+    "description": "A Full Snapu with another Snapu executed before landing.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-snapu-swipe",
+    "name": "Full Snapu Swipe",
+    "section": "backward-tricks",
+    "description": "A Full Snapu that finishes with a swipe.",
+    "otherNames": null,
+    "tricker": "Vellu Saarela"
+  },
+  {
+    "slug": "full-snapu-twist",
+    "name": "Full Snapu Twist",
+    "section": "backward-tricks",
+    "description": "A Full Snapu with an extra rotation executed before landing.",
+    "otherNames": null,
+    "tricker": "Jacob Pinto"
+  },
+  {
+    "slug": "full-swipe",
+    "name": "Full Swipe",
+    "section": "backward-tricks",
+    "description": "A Full Twist that finishes with a swipe (round kick that lands in hyper).",
+    "otherNames": null,
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "full-swipe-late-round",
+    "name": "Full Swipe Late Round",
+    "section": "backward-tricks",
+    "description": "A Full Swipe that finishes with a late round.",
+    "otherNames": null,
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "full-swipeknife",
+    "name": "Full Swipeknife",
+    "section": "backward-tricks",
+    "description": "A Full that finishes with a Swipeknife.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-tai-fighter",
+    "name": "Full Tai Fighter",
+    "section": "backward-tricks",
+    "description": "A Full Twist with a Tai-Fighter.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-tai-fighter-hyperhook",
+    "name": "Full Tai-Fighter Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Full Hyperhook with a Tai-Fighter leg grab.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "full-tai-fighter-knife",
+    "name": "Full Tai Fighter Knife",
+    "section": "backward-tricks",
+    "description": "A Full Tai Fighter that finishes with a hyperhook.",
+    "otherNames": "Full Tai Fighter Hyperhook",
+    "tricker": "Akatsuki Tricking"
+  },
+  {
+    "slug": "full-terada-grab",
+    "name": "Full Terada Grab",
+    "section": "backward-tricks",
+    "description": "A Full that finishes with a Terada Grab.",
+    "otherNames": null,
+    "tricker": "Kyle Mclean"
+  },
+  {
+    "slug": "full-twist",
+    "name": "Full Twist",
+    "section": "backward-tricks",
+    "description": "Traditionally a Backflip with a full rotation. However, the tricker-style full of the cartwheel-full is more off axis and under rotated rather than the tumbling-back full.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "full-up",
+    "name": "Full Up",
+    "section": "backward-tricks",
+    "description": "A Full Twist that stalls on the way up (usually in the \"Ironman\" hand position).",
+    "otherNames": "Ironman Full",
+    "tricker": "Jimmy Xiong"
+  },
+  {
+    "slug": "full-up-crowd-awakener",
+    "name": "Full Up Crowd Awakener",
+    "section": "backward-tricks",
+    "description": "An Ironman Full that finishes with a crowd awakener / split kick.",
+    "otherNames": "Ironman Full Crowd Awakener",
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "full-up-doubleleg",
+    "name": "Full Up Doubleleg",
+    "section": "backward-tricks",
+    "description": "An Ironman Full / Full Up with a Doubleleg executed before landing.",
+    "otherNames": "Ironman Full Doubleelg",
+    "tricker": "Alex Omidvar"
+  },
+  {
+    "slug": "full-up-hyperhook",
+    "name": "Full Up Hyperhook",
+    "section": "backward-tricks",
+    "description": "An Iron Man Full that finishes with a hyperhook.",
+    "otherNames": "Ironman Full Hyperhook",
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "full-up-rocketboi-twist",
+    "name": "Full Up Rocketboi Twist",
+    "section": "backward-tricks",
+    "description": "An Ironman Full Rocketboi with an extra twist.",
+    "otherNames": "Ironman Full Rocketboi Twist",
+    "tricker": "Rudy Meadows"
+  },
+  {
+    "slug": "full-up-twist",
+    "name": "Full Up Twist",
+    "section": "backward-tricks",
+    "description": "A Full-Up with an extra twist on the way down.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "full-wackknife",
+    "name": "Full Wackknife",
+    "section": "backward-tricks",
+    "description": "A Full that finishes with a Wackknife.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "full-wackknife-hyperhook",
+    "name": "Full Wackknife Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Full Wackknife that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "full-wackknife-round",
+    "name": "Full Wackknife Round",
+    "section": "backward-tricks",
+    "description": "A Full Wackknife that finishes with a round kick.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "gainer-arabian",
+    "name": "Gainer Arabian",
+    "section": "backward-tricks",
+    "description": "An Arabian from a swing/gainer takeoff.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "gainer-arabian-grab-crowd-awakener",
+    "name": "Gainer Arabian Grab Crowd Awakener",
+    "section": "backward-tricks",
+    "description": "A Gainer Arabian with a grab that finishes with a Crowd Awakener.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "gainer-figure-4",
+    "name": "Gainer Figure 4",
+    "section": "backward-tricks",
+    "description": "A Gainer with a “figure-4” position.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "gainer-figure-4-sidekick",
+    "name": "Gainer Figure 4 Sidekick",
+    "section": "backward-tricks",
+    "description": "A Gainer Figure-4 with a sidekick. Not totally flipped, but more on the Flick Flack axis.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "gainer-flash",
+    "name": "Gainer Flash",
+    "section": "backward-tricks",
+    "description": "The Gainer Flash (often referred to just as “gainer”) is the fundamental trick on which all backswing tricks are built upon. It flips on almost a completely inverted axis, but a bit of leeway is allowed.",
+    "otherNames": "Gainer, Slant Gainer, Cheat Gainer, Kick the Moon",
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "gainer-helicoptero",
+    "name": "Gainer Helicoptero",
+    "section": "backward-tricks",
+    "description": "A Gainer that finishes with a helicoptero.",
+    "otherNames": null,
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "gainer-hook",
+    "name": "Gainer Hook",
+    "section": "backward-tricks",
+    "description": "A Gainer Flash that finishes with an outside kick. Could be thought of as an inverted Skip Hook.",
+    "otherNames": "Moonkick, Gainer Hyperook",
+    "tricker": "Julian Bui"
+  },
+  {
+    "slug": "gainer-in-shant-out",
+    "name": "Gainer-In Shant-Out",
+    "section": "backward-tricks",
+    "description": "An off-axis double flip that initiates from a gainer. Could be thought of as a more off-axis double gainer.",
+    "otherNames": "Swing Double Shant, Gainer Late Shant",
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "gainer-late-round",
+    "name": "Gainer Late Round",
+    "section": "backward-tricks",
+    "description": "A Gainer that finishes with a late round.",
+    "otherNames": null,
+    "tricker": "Alex Omidvar"
+  },
+  {
+    "slug": "gainer-rocketboi",
+    "name": "Gainer Rocketboi",
+    "section": "backward-tricks",
+    "description": "A Gainer with a Rocketboi executed at the peak of the flip.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "gainer-scissor",
+    "name": "Gainer Scissor",
+    "section": "backward-tricks",
+    "description": "A Gainer Arabian with a scissor (grabbing the inside kicking leg in a semi-piked position) executed at the peak of the flip.",
+    "otherNames": null,
+    "tricker": "Chris Bostock"
+  },
+  {
+    "slug": "gainer-scissor-late-round",
+    "name": "Gainer Scissor Late Round",
+    "section": "backward-tricks",
+    "description": "A Gainer Scissor that rotates extra into a late round.",
+    "otherNames": null,
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "gainer-scissor-round",
+    "name": "Gainer Scissor Round",
+    "section": "backward-tricks",
+    "description": "A Gainer Scissor that executes a round kick before landing.",
+    "otherNames": null,
+    "tricker": "Carson Crawford"
+  },
+  {
+    "slug": "gainer-scissor-swipe",
+    "name": "Gainer Scissor Swipe",
+    "section": "backward-tricks",
+    "description": "A Gainer Scissor that lands in hyper on the kicking leg.",
+    "otherNames": null,
+    "tricker": "Fuju Honjo"
+  },
+  {
+    "slug": "gainer-scissor-twist",
+    "name": "Gainer Scissor Twist",
+    "section": "backward-tricks",
+    "description": "A Gainer Scissor with with an extra rotation that finishes in complete - making this a double corkscrew variation. Similar to a Corkscrew Snapu but with the kick occuring earlier.",
+    "otherNames": "Gainer Scissor Snapu",
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "gainer-sidewinder",
+    "name": "Gainer Sidewinder",
+    "section": "backward-tricks",
+    "description": "A Gainer with a Sidewinder – this pulls it all the way back to complete, making this a corkscrew variation.",
+    "otherNames": null,
+    "tricker": "Nick Fry"
+  },
+  {
+    "slug": "gainer-switch",
+    "name": "Gainer Switch",
+    "section": "backward-tricks",
+    "description": "A Gainer Flash that switches legs and lands on the plant leg again. The current Gainer Switch record is held by Ilya Vtorin at 25 Gainer Switches.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "gainer-switch-half",
+    "name": "Gainer Switch Half",
+    "section": "backward-tricks",
+    "description": "A Gainer Switch that rotates an extra 180° before landing.",
+    "otherNames": null,
+    "tricker": "Alex Omidvar"
+  },
+  {
+    "slug": "gainer-switch-hawkeye",
+    "name": "Gainer Switch Hawkeye",
+    "section": "backward-tricks",
+    "description": "A Gainer Switch with a hawkeye (inside leg executing a hook kick against the DOM).",
+    "otherNames": null,
+    "tricker": "Nick Fry"
+  },
+  {
+    "slug": "gainer-switch-hyperhook",
+    "name": "Gainer Switch Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Gainer Switch that finishes with a hyperhook.",
+    "otherNames": "Moonkick Triple",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "gainer-triple",
+    "name": "Gainer Triple",
+    "section": "backward-tricks",
+    "description": "A Gainer Flash with two switches, landing on the swing (inside) leg.",
+    "otherNames": "Gainer Switch Switch",
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "gainer-tuck",
+    "name": "Gainer Tuck",
+    "section": "backward-tricks",
+    "description": "A Back Tuck that takes off of one foot (swing), and usually travels forward (“gains” ground).",
+    "otherNames": "True Gainer, Parkour Gainer",
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "gainer-wackknife",
+    "name": "Gainer Wackknife",
+    "section": "backward-tricks",
+    "description": "A Gainer with a Wackknife executed at the peak of the flip.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "gainer-x-out",
+    "name": "Gainer X-Out",
+    "section": "backward-tricks",
+    "description": "A Gainer with an X-Out / straddle.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "grand-master-arabian",
+    "name": "Grand Master Arabian",
+    "section": "inside-tricks",
+    "description": "A GMS that finishes with a front flip.",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "grand-master-rocketboi",
+    "name": "Grand Master Rocketboi",
+    "section": "inside-tricks",
+    "description": "A GMS with a Rocketboi executed before landing.",
+    "otherNames": null,
+    "tricker": "Hunter Stewart"
+  },
+  {
+    "slug": "grand-master-scissor",
+    "name": "Grand Master Scissor",
+    "section": "inside-tricks",
+    "description": "A GMS that finishes with a scissor.",
+    "otherNames": null,
+    "tricker": "Nick Fry"
+  },
+  {
+    "slug": "grand-master-scoot",
+    "name": "Grand Master Scoot",
+    "section": "inside-tricks",
+    "description": "A Masterscoot with no hands. Could be thought of as a darkside gainer switch.",
+    "otherNames": null,
+    "tricker": "Connor Guzikowski"
+  },
+  {
+    "slug": "grand-master-swipe",
+    "name": "Grand Master Swipe",
+    "section": "inside-tricks",
+    "description": "A Masterswipe with no hands – could be thought of as an aerial that takes off of the “wrong” leg.",
+    "otherNames": null,
+    "tricker": "Kyle Cordova"
+  },
+  {
+    "slug": "grand-master-swipeknife",
+    "name": "Grand Master Swipeknife",
+    "section": "inside-tricks",
+    "description": "A GMS that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Cody Wilson"
+  },
+  {
+    "slug": "grand-master-twist",
+    "name": "Grand Master Twist",
+    "section": "inside-tricks",
+    "description": "A GMS with with an extra rotation, landing in complete stance. Very similar to a Kroc (reversed corkscrew).",
+    "otherNames": "GMT",
+    "tricker": "Jacob Pinto"
+  },
+  {
+    "slug": "grand-master-twist-doubleleg",
+    "name": "Grand Master Twist Doubleleg",
+    "section": "inside-tricks",
+    "description": "A GMT that finishes with a doubleleg.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "gumbi",
+    "name": "Gumbi",
+    "section": "outside-tricks",
+    "description": "The base for all Raiz-type of tricks. Can be thought of as an arched, opposite-side cartwheel.",
+    "otherNames": "Meia Lua De Compasso (Capoeira)",
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "handcuff-360-dive-roll",
+    "name": "Handcuff 360 Dive Roll",
+    "section": "forward-tricks",
+    "description": "A 360 Dive Roll with the hands in the \"handcuff\" position.",
+    "otherNames": null,
+    "tricker": "Cody Jones"
+  },
+  {
+    "slug": "handcuff-corkscrew",
+    "name": "Handcuff Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with a “handcuff” hand position.",
+    "otherNames": null,
+    "tricker": "Micah Karns"
+  },
+  {
+    "slug": "helicoptero",
+    "name": "Helicoptero",
+    "section": "inside-tricks",
+    "description": "A Cartwheel with a leg circle, originating from the martial art, Capoeira. Landing in mega stance.",
+    "otherNames": null,
+    "tricker": "Eurico Senna"
+  },
+  {
+    "slug": "helicoptero-e-kick",
+    "name": "Helicoptero E-Kick",
+    "section": "inside-tricks",
+    "description": "A Cartwheel Helicoptero that finishes with an E-Kick.",
+    "otherNames": null,
+    "tricker": "Malik Shepherd"
+  },
+  {
+    "slug": "hurricane-kick",
+    "name": "Hurricane Kick",
+    "section": "vertical-kicks",
+    "description": "A Cheat 1080 with 3 outside kicks.",
+    "otherNames": "Cheat 1080 Triple",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "illusion-twist",
+    "name": "Illusion Twist",
+    "section": "inside-tricks",
+    "description": "Basically a Pop 360 from a Butterfly-Kick setup. A lot of people see this as a Butterfly Twist variation, but there is actually no twist happening, hence the name “illusion”.",
+    "otherNames": null,
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "inward-360-dive-roll",
+    "name": "Inward 360 Dive Roll",
+    "section": "inside-tricks",
+    "description": "A \"masterswing-ing\" variation of the 360 Dive Roll.",
+    "otherNames": null,
+    "tricker": "Bob Reese"
+  },
+  {
+    "slug": "ironman-full-snapu",
+    "name": "Ironman Full Snapu",
+    "section": "backward-tricks",
+    "description": "An Ironman Full that finishes with a Snapu.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "jackknife",
+    "name": "Jackknife",
+    "section": "vertical-kicks",
+    "description": "A Cheat 720 with a round kick executed before the hook kick or a 540 that finishes with a hook kick. Could be thought of as a Narabong all executed in the air.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "jackknife-1080",
+    "name": "Jackknife 1080",
+    "section": "vertical-kicks",
+    "description": "A Cheat 1080 that starts with a Jackknife.",
+    "otherNames": "Jack10, Cheat 1080 Triple",
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "jackknife-shuriken",
+    "name": "Jackknife Shuriken",
+    "section": "vertical-kicks",
+    "description": "A Jackknife that lands on the outside leg with a shuriken-style kick.",
+    "otherNames": "\"Hyper\" Jackknife",
+    "tricker": "Donovan Sheehan"
+  },
+  {
+    "slug": "jackknife-turbo",
+    "name": "Jackknife Turbo",
+    "section": "vertical-kicks",
+    "description": "A Jackknife that lands back in frontside on both feet like an Illusion Twist. This landing is known as “hyper” in TKT and “turbo” in mainstream.",
+    "otherNames": null,
+    "tricker": "Donovan Sheehan"
+  },
+  {
+    "slug": "janitor-flip",
+    "name": "Janitor Flip",
+    "section": "forward-tricks",
+    "description": "A Spyder that takes off of two-feet. Or a front half / Barahni that happens on the flat-spin axis.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "janitor-scissor-twist",
+    "name": "Janitor Scissor Twist",
+    "section": "forward-tricks",
+    "description": "A Janitor Twist with a scissor executed before the twist is initiated.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "janitor-twist",
+    "name": "Janitor Twist",
+    "section": "forward-tricks",
+    "description": "A Janitor Flip with an extra spin before landing. Can be considered a “punched” butterfly twist.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "kaydem",
+    "name": "Kaydem",
+    "section": "inside-tricks",
+    "description": "A Blasterscoot with no hands.",
+    "otherNames": null,
+    "tricker": "RJay Phillips"
+  },
+  {
+    "slug": "kick-double-full",
+    "name": "Kick Double Full",
+    "section": "backward-tricks",
+    "description": "A Flash Kick with two rotations executed before landing.",
+    "otherNames": null,
+    "tricker": "Aidan Kennedy"
+  },
+  {
+    "slug": "kick-full",
+    "name": "Kick Full",
+    "section": "backward-tricks",
+    "description": "A Flash Kick with an extra twist executed before landing.",
+    "otherNames": "Flashkick Full",
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "kick-full-doubleleg",
+    "name": "Kick Full Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Kick Full that finishes with a doubleleg.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "kick-full-snapu",
+    "name": "Kick Full Snapu",
+    "section": "backward-tricks",
+    "description": "A Kick Full that finishes with a snapu.",
+    "otherNames": null,
+    "tricker": "Kris Breadie"
+  },
+  {
+    "slug": "lonestar",
+    "name": "Lonestar",
+    "section": "backward-tricks",
+    "description": "An Arabian with a Pike that flips over the side.",
+    "otherNames": null,
+    "tricker": "Matthew LaJudice"
+  },
+  {
+    "slug": "lonestar-hyperhook",
+    "name": "Lonestar Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Lonestar that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Matthew LaJudice"
+  },
+  {
+    "slug": "lonestar-scissor",
+    "name": "Lonestar Scissor",
+    "section": "backward-tricks",
+    "description": "A Lonestar that finishes with a scissor.",
+    "otherNames": null,
+    "tricker": "Matthew LaJudice"
+  },
+  {
+    "slug": "lonestar-twist",
+    "name": "Lonestar Twist",
+    "section": "backward-tricks",
+    "description": "A Lonestar with an extra half rotation, finishing in complete.",
+    "otherNames": null,
+    "tricker": "Matthew LaJudice"
+  },
+  {
+    "slug": "lotus-crowd-awakener",
+    "name": "Lotus Crowd Awakener",
+    "section": "outside-tricks",
+    "description": "A Lotus Flip with a split kick.",
+    "otherNames": null,
+    "tricker": "Alex Omidvar"
+  },
+  {
+    "slug": "lotus-doubleleg",
+    "name": "Lotus Doubleleg",
+    "section": "outside-tricks",
+    "description": "The Lotus is a swingthrough that doesn’t quite swing backwards, but is similar to to masterswing, but with the inside kicking leg and flips on the Raiz/Vert axis. The lotus swing/axis is very similar a tunnel flip.",
+    "otherNames": null,
+    "tricker": "Kyle Cordova"
+  },
+  {
+    "slug": "lotus-doubleleg-hyperhook",
+    "name": "Lotus Doubleleg Hyperhook",
+    "section": "outside-tricks",
+    "description": "A Lotus Doubleleg that lands in a hyperhook.",
+    "otherNames": "Lotus Switchblade",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "lotus-late-round",
+    "name": "Lotus Late Round",
+    "section": "outside-tricks",
+    "description": "A Lotus Doubleleg that lands in mega and executes round kick.",
+    "otherNames": null,
+    "tricker": "Alex Omidvar"
+  },
+  {
+    "slug": "lotus-rodeo",
+    "name": "Lotus Rodeo",
+    "section": "outside-tricks",
+    "description": "A Lotus flip with a grab.",
+    "otherNames": null,
+    "tricker": "Alex Omidvar"
+  },
+  {
+    "slug": "lotus-shuriken",
+    "name": "Lotus Shuriken",
+    "section": "outside-tricks",
+    "description": "A Lotus Doubleleg that executes a shuriken (outside kick).",
+    "otherNames": null,
+    "tricker": "Alex Omidvar"
+  },
+  {
+    "slug": "macaron",
+    "name": "Macaron",
+    "section": "inside-tricks",
+    "description": "A tucked Aerial that with another pseudo-flip that lands with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "machine",
+    "name": "Machine",
+    "section": "outside-tricks",
+    "description": "A Spyder with hands.",
+    "otherNames": null,
+    "tricker": "Julia Moreci"
+  },
+  {
+    "slug": "masterscoot",
+    "name": "Masterscoot",
+    "section": "inside-tricks",
+    "description": "A Scoot with both hands with more emphasis on the masterswing. The Masterscoot also tends to be more inverted than the scoot, similar to a Cartwheel.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "masterscoot-twist",
+    "name": "Masterscoot Twist",
+    "section": "inside-tricks",
+    "description": "A Masterscoot with an extra twist executed before landing.",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "masterswipe",
+    "name": "Masterswipe",
+    "section": "inside-tricks",
+    "description": "A Masterscoot that swipes over and lands in hyper, almost like a Cartwheel that takes off of the other foot.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "masterswipe-helicoptero",
+    "name": "Masterswipe Helicoptero",
+    "section": "inside-tricks",
+    "description": "A Masterswipe that executes a Helicoptero before landing.",
+    "otherNames": "Master Helicoptero",
+    "tricker": "Chris Bostock"
+  },
+  {
+    "slug": "one-elbow-cartwheel-twist",
+    "name": "One-Elbow Cartwheel Twist",
+    "section": "inside-tricks",
+    "description": "A One-Handed Cartwheel Twist but off of an elbow.",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "one-handed-cartwheel",
+    "name": "One-Handed Cartwheel",
+    "section": "inside-tricks",
+    "description": "A Cartwheel using the hand that’s closest to the ground.",
+    "otherNames": null,
+    "tricker": "Julia Moreci"
+  },
+  {
+    "slug": "one-handed-cartwheel-twist",
+    "name": "One-Handed Cartwheel Twist",
+    "section": "inside-tricks",
+    "description": "A One-Handed Cartwheel with an extra twist, landing in complete.",
+    "otherNames": null,
+    "tricker": "Austin Guanzon"
+  },
+  {
+    "slug": "outstretched-boxcutter",
+    "name": "Outstretched Boxcutter",
+    "section": "backward-tricks",
+    "description": "A Boxcutter with outstretched arms.",
+    "otherNames": "Star Boxcutter",
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "outstretched-corkscrew",
+    "name": "Outstretched Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew in an outstretched pose.",
+    "otherNames": "Star Cork",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "palmkick",
+    "name": "Palmkick",
+    "section": "inside-tricks",
+    "description": "Can be thought of as a Cartwheel while only planting the hand that’s farthest from the floor and hook kicking. Like a “grounded” Skip Hook.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "palmkick-kyro",
+    "name": "Palmkick Kyro",
+    "section": "inside-tricks",
+    "description": "A Palmkick with a half twist, landing in complete.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "palmkick-scissor-swipe",
+    "name": "Palmkick Scissor Swipe",
+    "section": "inside-tricks",
+    "description": "A Palmkick Kyro with a scissor and then landing on the kicking leg.",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "parafuso",
+    "name": "Parafuso",
+    "section": "vertical-kicks",
+    "description": "A cheat set-up into a vertical Doubleleg. The earlier the legs get together for the doubleleg, the better the aesthetic.",
+    "otherNames": null,
+    "tricker": "Brendyn \"Bubba\" Crispell"
+  },
+  {
+    "slug": "parafuso-gyro",
+    "name": "Parafuso Gyro",
+    "section": "vertical-kicks",
+    "description": "A Parafuso with an extra twist, landing back in Complete. Could be thought of as a vertical Envergado Twist.",
+    "otherNames": "Para Gyro",
+    "tricker": "Alex Patterson"
+  },
+  {
+    "slug": "parafuso-hawkeye",
+    "name": "Parafuso Hawkeye",
+    "section": "vertical-kicks",
+    "description": "A Parafuso with a hawkeye executed after the doubleleg portion of the move. A hawkeye occurs when the inside (round-kicking) leg executes a hawkeye (hook kick going against the DOM).",
+    "otherNames": null,
+    "tricker": "Brendyn \"Bubba\" Crispell"
+  },
+  {
+    "slug": "parafuso-twist-kick",
+    "name": "Parafuso Twist-Kick",
+    "section": "vertical-kicks",
+    "description": "A Parafuso with a Twist-Kick (round kicking going against DOM).",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "paraknife",
+    "name": "Paraknife",
+    "section": "vertical-kicks",
+    "description": "A Parafuso that finishes with a hyperhook.",
+    "otherNames": "Switchblade",
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "peter-pan-double-corkscrew",
+    "name": "Peter Pan Double Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew with both hands at the hip.",
+    "otherNames": null,
+    "tricker": "Moe Alafrangy"
+  },
+  {
+    "slug": "pop-1080",
+    "name": "Pop 1080",
+    "section": "vertical-kicks",
+    "description": "The Pop 1080 starts in Frontside stance, leaves the ground off of both feet, rotates 900° in the air, then lands and finishes with a hook towards the target.",
+    "otherNames": "Pop 900 Hook (TKT)",
+    "tricker": "Mikael Mantis"
+  },
+  {
+    "slug": "pop-1260",
+    "name": "Pop 1260",
+    "section": "vertical-kicks",
+    "description": "The Pop 1260 starts in Frontside stance, leaves the ground off of both feet, rotates 1080° in the air, then lands and finishes with a round kick towards the target.",
+    "otherNames": "Pop 900 Round (TKT)",
+    "tricker": "Gary Ip"
+  },
+  {
+    "slug": "pop-1440",
+    "name": "Pop 1440",
+    "section": "vertical-kicks",
+    "description": "The Pop 1440 starts in Frontside stance, leaves the ground off of both feet, rotates 1080° in the air, then lands and finishes with a round kick towards the target.",
+    "otherNames": "Pop 1260 Hook (TKT)",
+    "tricker": "Mikael Mantis"
+  },
+  {
+    "slug": "pop-360",
+    "name": "Pop 360",
+    "section": "vertical-kicks",
+    "description": "The Pop 360 starts in Frontside stance, leaves the ground off of both feet, rotates 180° in the air, then lands and finishes with an outside crescent kick towards the target and lands in turbo (both feet). This trick is also a hyper, because Pop 180 Hook (TKT) is not often used in tricking. This trick is vitally important for Illusion Twist and other similar tricks that end in turbo.",
+    "otherNames": "Pop 180 Shuriken (TKT)",
+    "tricker": "Austin Guanzon"
+  },
+  {
+    "slug": "pop-360-gyro",
+    "name": "Pop 360 Gyro",
+    "section": "vertical-kicks",
+    "description": "A Pop 360 with an extra 360° spin (aka gyro/kyro)before landing, landing back in Frontside.",
+    "otherNames": "Pop 180 Shuriken Gyro (TKT)",
+    "tricker": "Gary Ip"
+  },
+  {
+    "slug": "pop-360-gyro-doubleleg",
+    "name": "Pop 360 Gyro Doubleleg",
+    "section": "vertical-kicks",
+    "description": "A Pop 360 Gyro where a Doubleleg is executed before landing, thus adding an extra 180° to the original move.",
+    "otherNames": "Pop 180 Shuriken Gyro Doubleleg (TKT)",
+    "tricker": "Nick Fry"
+  },
+  {
+    "slug": "pop-360-gyro-round",
+    "name": "Pop 360 Gyro Round",
+    "section": "vertical-kicks",
+    "description": "A Pop 360 Gyro where a round kick is executed before landing, thus adding an extra 180° to the original move. The Pop 360 Gyro Round has the same amount of rotation as a Pop 900.",
+    "otherNames": "Pop 180 Whirlwind (TKT)",
+    "tricker": "Vellu Saarela"
+  },
+  {
+    "slug": "pop-360-shuriken",
+    "name": "Pop 360 Shuriken",
+    "section": "vertical-kicks",
+    "description": "The Pop 360 Hyper starts in Frontside stance, leaves the ground off of both feet, rotates 180° in the air, then lands and finishes with an outside cresecent kick towards the target and lands in complete stance. This move is often the first Shuriken that trickers learn, and is vitally important for future shuriken variations.",
+    "otherNames": "Pop 180 Shuriken (TKT)",
+    "tricker": "Dandy Bien"
+  },
+  {
+    "slug": "pop-540",
+    "name": "Pop 540",
+    "section": "vertical-kicks",
+    "description": "A Pop Tornado that lands in hyper stance and on the kicking leg.",
+    "otherNames": "Pop 180 Katana (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "pop-720",
+    "name": "Pop 720",
+    "section": "vertical-kicks",
+    "description": "The Pop 720 starts in Frontside stance, leaves the ground off of both feet, rotates 540° in the air, then lands and finishes with a hook kick towards the target.",
+    "otherNames": "Pop 540 Hook (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "pop-720-double",
+    "name": "Pop 720 Double",
+    "section": "vertical-kicks",
+    "description": "A Pop 720 with two outside kicks. Can be thought of as a Pop 360 that rotates extra and finishes in a hyperhook.",
+    "otherNames": "Pop 540 Cyclone (TKT)",
+    "tricker": "Gary Ip"
+  },
+  {
+    "slug": "pop-900",
+    "name": "Pop 900",
+    "section": "vertical-kicks",
+    "description": "The Pop 900 starts in Frontside stance, leaves the ground off of both feet, rotates 720° in the air, then lands and finishes with a round kick towards the target.",
+    "otherNames": "Pop 720 Round (TKT)",
+    "tricker": "Austin Guanzon"
+  },
+  {
+    "slug": "pop-900-hyper",
+    "name": "Pop 900 Hyper",
+    "section": "vertical-kicks",
+    "description": "The Pop 900 Hyper starts in Frontside stance, leaves the ground off of both feet, rotates 720° in the air, then lands and finishes with a hyper’d round kick towards the target and lands on that kicking foot.",
+    "otherNames": "Pop 720 Katana (TKT)",
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "pop-donut-boy",
+    "name": "Pop Donut Boy",
+    "section": "backward-tricks",
+    "description": "A Full Pike with no inversion. The original Donut Boy comes from a swing setup.",
+    "otherNames": null,
+    "tricker": "Daisuke Takahashi"
+  },
+  {
+    "slug": "pop-donut-boy-round",
+    "name": "Pop Donut Boy Round",
+    "section": "backward-tricks",
+    "description": "A Punch Donut Boy that finishes with a round kick.",
+    "otherNames": null,
+    "tricker": "Benjamin \"Towels\" Atkins"
+  },
+  {
+    "slug": "pop-feilong",
+    "name": "Pop Feilong",
+    "section": "vertical-kicks",
+    "description": "The Pop Feilong starts off like a Pop 360 and finishes with an inside kick.",
+    "otherNames": "Pop 180 Feilong",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "pop-feilong-knife",
+    "name": "Pop Feilong Knife",
+    "section": "vertical-kicks",
+    "description": "A Pop Feilong that finishes with a knife.",
+    "otherNames": null,
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "pop-snapu",
+    "name": "Pop Snapu",
+    "section": "outside-tricks",
+    "description": "A Pop Swipe with an extra twist. Or a Snapu that initiates from a frontside pop rather than a cheat setup.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "pop-swipeknife",
+    "name": "Pop Swipeknife",
+    "section": "outside-tricks",
+    "description": "A Swipeknife that takes off in frontside pop.",
+    "otherNames": null,
+    "tricker": "Anis Cheurfa"
+  },
+  {
+    "slug": "pop-tai-fighter",
+    "name": "Pop Tai Fighter",
+    "section": "outside-tricks",
+    "description": "A Tai-Fighter is a Feilong with the round foot grabbed before the kick is released and is executed on the Doubleleg axis.",
+    "otherNames": null,
+    "tricker": "Sean Ellis"
+  },
+  {
+    "slug": "pop-tornado",
+    "name": "Pop Tornado",
+    "section": "vertical-kicks",
+    "description": "The most basic of pop kicks. The Pop Tornado starts in Frontside stance, leaves the ground off of both feet, rotates 180° in the air, then lands and finishes with a round kick towards the target.",
+    "otherNames": "Pop 180 Round (TKT)",
+    "tricker": "Julia Moreci"
+  },
+  {
+    "slug": "popcorn",
+    "name": "Popcorn",
+    "section": "backward-tricks",
+    "description": "A Full Doubleleg that is executed in a piked position the entire way.",
+    "otherNames": null,
+    "tricker": "Daisuke Takahashi"
+  },
+  {
+    "slug": "popcorn-hyper",
+    "name": "Popcorn Hyper",
+    "section": "backward-tricks",
+    "description": "The Popcorn that lands in hyper stance.",
+    "otherNames": null,
+    "tricker": "Daisuke Takahashi"
+  },
+  {
+    "slug": "quad-corkscrew",
+    "name": "Quad Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with four rotations. First landed by Michael Guthrie on January 11, 2016.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "quad-full",
+    "name": "Quad Full",
+    "section": "backward-tricks",
+    "description": "A backflip with four rotations executed before landing.",
+    "otherNames": null,
+    "tricker": "Ilya Vtorin"
+  },
+  {
+    "slug": "raiz",
+    "name": "Raiz",
+    "section": "outside-tricks",
+    "description": "The Raiz can be thought of as a “no-handed” Gumbi or a laid-back / arched Tornado. Can be pronounced “rise” or “raise” or “high-eeze” (Portuguese)",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "raiz-hyperhook",
+    "name": "Raiz Hyperhook",
+    "section": "outside-tricks",
+    "description": "A Raiz that finishes with a hyperhook. Could be thought of as an inverted Cheat 720.",
+    "otherNames": "Windex",
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "raiz-hyperhook-turbo",
+    "name": "Raiz Hyperhook Turbo",
+    "section": "outside-tricks",
+    "description": "A laid back Cheat 720 that finishes with an outside crescent kick and lands in the \"turbo\"/frontside stance.",
+    "otherNames": "Windex Turbo, Cheat 720 Illusion",
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "raiz-in",
+    "name": "Raiz-In",
+    "section": "outside-tricks",
+    "description": "A Raiz with an extra “backflip” executed before landing. Note: The execution of this move is more like a raiz-in-shant-out.",
+    "otherNames": "Raisin",
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "raiz-reversao",
+    "name": "Raiz Reversao",
+    "section": "outside-tricks",
+    "description": "A Raiz with a reversao (or scissor) executed at the peak.",
+    "otherNames": "Raiz Scissor",
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "raiz-shurikane",
+    "name": "Raiz Shurikane",
+    "section": "outside-tricks",
+    "description": "A laid back Hurricane kick.",
+    "otherNames": null,
+    "tricker": "Taka Enomoto"
+  },
+  {
+    "slug": "reversao",
+    "name": "Reversao",
+    "section": "outside-tricks",
+    "description": "The Reversao is similar to a front walkover, but on the raiz axis. Originates from Capoeira.",
+    "otherNames": null,
+    "tricker": "Mike Pinto"
+  },
+  {
+    "slug": "rocketboi",
+    "name": "Rocketboi",
+    "section": "backward-tricks",
+    "description": "A Backflip Pike with one hand reaching across the legs and the other hand reaching behind.",
+    "otherNames": null,
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "rocketboi-full-doubleleg-rocketboi",
+    "name": "Rocketboi Full Doubleleg Rocketboi",
+    "section": "backward-tricks",
+    "description": "Has the visuals of a rocketboi on the way up and a rocketboi on the way down.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "rocketboi-round",
+    "name": "Rocketboi Round",
+    "section": "backward-tricks",
+    "description": "A Rocketboi with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "rocketboi-scissor-snapu",
+    "name": "Rocketboi Scissor Snapu",
+    "section": "backward-tricks",
+    "description": "A rocketboi scissor with a snapu executed before landing, making this a double full variation.",
+    "otherNames": null,
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "rocketboi-scissor-switch",
+    "name": "Rocketboi Scissor Switch",
+    "section": "backward-tricks",
+    "description": "A Rocketboi with a scissor and another switch.",
+    "otherNames": null,
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "rodeo-backflip",
+    "name": "Rodeo Backflip",
+    "section": "backward-tricks",
+    "description": "A Backflip with both arms grabbing the ankles and the back in an arched position.",
+    "otherNames": "Squirrel Backflip",
+    "tricker": "Johannes Anttila"
+  },
+  {
+    "slug": "rodeo-backflip-full-down",
+    "name": "Rodeo Backflip Full Down",
+    "section": "backward-tricks",
+    "description": "A Rodeo Backflip with a twist before landing.",
+    "otherNames": null,
+    "tricker": null
+  },
+  {
+    "slug": "rodeo-boxcutter",
+    "name": "Rodeo Boxcutter",
+    "section": "backward-tricks",
+    "description": "A Boxcutter with a rodeo leg grab.",
+    "otherNames": "Rodeo Corkscrew Hyperhook",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "rodeo-corkscrew",
+    "name": "Rodeo Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with a leg grab and an arched back.",
+    "otherNames": null,
+    "tricker": "Nevin Hall"
+  },
+  {
+    "slug": "rodeo-corkscrew-shuriken-cutter",
+    "name": "Rodeo Corkscrew Shuriken Cutter",
+    "section": "backward-tricks",
+    "description": "A Shuriken Cutter with a Rodeo leg grab.",
+    "otherNames": null,
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "rodeo-corkscrew-snapu",
+    "name": "Rodeo Corkscrew Snapu",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Snapu with a rodeo leg grab before the snapu.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "rodeo-corkscrew-twist",
+    "name": "Rodeo Corkscrew Twist",
+    "section": "backward-tricks",
+    "description": "A Rodeo Corkscrew with an extra twist.",
+    "otherNames": null,
+    "tricker": "Nevin Hall"
+  },
+  {
+    "slug": "rodeo-full",
+    "name": "Rodeo Full",
+    "section": "backward-tricks",
+    "description": "A Full Twist with a leg grab",
+    "otherNames": "Squirrel Full",
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "rodeo-full-doubleleg",
+    "name": "Rodeo Full Doubleleg",
+    "section": "backward-tricks",
+    "description": "A Full Doubleleg with a rodeo leg grab.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "rodeo-full-hyperhook",
+    "name": "Rodeo Full Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Full Hyperhook with a rodeo leg grab.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "rodeo-full-round",
+    "name": "Rodeo Full Round",
+    "section": "backward-tricks",
+    "description": "A Full Round with a rodeo grab.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "rodeo-full-shuriken",
+    "name": "Rodeo Full Shuriken",
+    "section": "backward-tricks",
+    "description": "A Full Shuriken with a rodeo leg grab.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "rodeo-full-snapu",
+    "name": "Rodeo Full Snapu",
+    "section": "backward-tricks",
+    "description": "A Full Snapu with a rodeo leg grab before the snapu.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "rodeo-full-wackknife",
+    "name": "Rodeo Full Wackknife",
+    "section": "backward-tricks",
+    "description": "A Full Wackknife with a rodeo grab.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "rodeo-gainer-switch",
+    "name": "Rodeo Gainer Switch",
+    "section": "backward-tricks",
+    "description": "A Gainer Switch with a leg grab.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "rodeo-grand-master-swipe",
+    "name": "Rodeo Grand Master Swipe",
+    "section": "inside-tricks",
+    "description": "A GMS with a leg grab.",
+    "otherNames": null,
+    "tricker": "Fuju Honjo"
+  },
+  {
+    "slug": "rodeo-janitor-twist",
+    "name": "Rodeo Janitor Twist",
+    "section": "forward-tricks",
+    "description": "A Janitor Twist with a rodeo grab before the twist.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "rodeo-snapu",
+    "name": "Rodeo Snapu",
+    "section": "outside-tricks",
+    "description": "A Snapu with a leg grab.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "roundoff",
+    "name": "Roundoff",
+    "section": "inside-tricks",
+    "description": "A Cartwheel that lands on two feet facing the way you came from.",
+    "otherNames": null,
+    "tricker": "Julia Moreci"
+  },
+  {
+    "slug": "russian-front",
+    "name": "Russian Front",
+    "section": "forward-tricks",
+    "description": "A Front Tuck where the arms set behind, rather than in front.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "sailor-gumbi",
+    "name": "Sailor Gumbi",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon where the planted hand does not leave the ground. Can be thought of as a Gumbi with the right hand (assuming spinning to the left) instead of both.",
+    "otherNames": null,
+    "tricker": "Alex Tofini"
+  },
+  {
+    "slug": "sailor-moon",
+    "name": "Sailor Moon",
+    "section": "outside-tricks",
+    "description": "A Raiz where the right hand (assuming left twisting) is planted right before take-off. Like a Touchdown Raiz with the other hand.",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "sailor-moon-doubleleg",
+    "name": "Sailor Moon Doubleleg",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon that finishes with a Doubleleg.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "sailor-moon-doubleleg-twist",
+    "name": "Sailor Moon Doubleleg Twist",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon Doubleleg with an extra twist executed before landing.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "sailor-moon-hawkeye",
+    "name": "Sailor Moon Hawkeye",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon that finishes with a hawkeye (hook kick executed with the round leg).",
+    "otherNames": null,
+    "tricker": "RJay Phillips"
+  },
+  {
+    "slug": "sailor-moon-hyperhook",
+    "name": "Sailor Moon Hyperhook",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon that finishes with a hyperhook.",
+    "otherNames": "Sailor 7",
+    "tricker": "Micah Karns"
+  },
+  {
+    "slug": "sailor-moon-late-round",
+    "name": "Sailor Moon Late Round",
+    "section": "outside-tricks",
+    "description": "A Sailormoon that lands in a late/mega round.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "sailor-moon-reversao",
+    "name": "Sailor Moon Reversao",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon with a Reversao.",
+    "otherNames": null,
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "sailor-moon-round",
+    "name": "Sailor Moon Round",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "sailor-moon-snapu",
+    "name": "Sailor Moon Snapu",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon with a Snapu executed before landing.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "sailor-moon-twist",
+    "name": "Sailor Moon Twist",
+    "section": "outside-tricks",
+    "description": "Sailor Moon with an extra twist executed before landing.",
+    "otherNames": null,
+    "tricker": "William Coneys"
+  },
+  {
+    "slug": "sailor-moon-wackknife",
+    "name": "Sailor Moon Wackknife",
+    "section": "outside-tricks",
+    "description": "A Sailor Moon that is combined with a Wackknife.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "scoot",
+    "name": "Scoot",
+    "section": "inside-tricks",
+    "description": "The Scoot is one of the easiest “setup” moves to learn – it is one of the first learned by beginners.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "scoot-hyper",
+    "name": "Scoot Hyper",
+    "section": "inside-tricks",
+    "description": "A Scoot that lands in hyper.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "scoot-twist",
+    "name": "Scoot Twist",
+    "section": "inside-tricks",
+    "description": "A Scoot with an extra twist executed before landing",
+    "otherNames": "Scapuswipe, Egg Roll",
+    "tricker": "Alex Hunter"
+  },
+  {
+    "slug": "scrubba",
+    "name": "Scrubba",
+    "section": "outside-tricks",
+    "description": "A Gumbi where the hands are placed down at separate times.",
+    "otherNames": "Cactus",
+    "tricker": "Jordon Alexander"
+  },
+  {
+    "slug": "shattermoon",
+    "name": "Shattermoon",
+    "section": "backward-tricks",
+    "description": "A Crashmoon with another late hook.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "sheep-shearer",
+    "name": "Sheep Shearer",
+    "section": "backward-tricks",
+    "description": "A Double Corkscrew that finishes with a hyperhook.",
+    "otherNames": "Double Corkscrew Hyperhook",
+    "tricker": "Jacob Pinto"
+  },
+  {
+    "slug": "shurikane",
+    "name": "Shurikane",
+    "section": "backward-tricks",
+    "description": "A Shuriken Cutter that finishes with another hyperhook. Or a Sheep Shearer with 3 outside kicks.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "shurikane-late-hook",
+    "name": "Shurikane Late Hook",
+    "section": "backward-tricks",
+    "description": "A Shurikane with an extra rotation and a late hook kick.",
+    "otherNames": "Shurikane-Z",
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "shuriken-cutter",
+    "name": "Shuriken Cutter",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Shuriken that finishes with a hyperhook.",
+    "otherNames": "Corksrew Shuriken Hyperhook",
+    "tricker": "Jacob Pinto"
+  },
+  {
+    "slug": "shuriken-cutter-scissor",
+    "name": "Shuriken Cutter Scissor",
+    "section": "backward-tricks",
+    "description": "A Corkscrew Shuriken Cutter that finishes with a scissor, landing in mega stance.",
+    "otherNames": "Shuriken Cutter Feilong",
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "sideflip",
+    "name": "Sideflip",
+    "section": "outside-tricks",
+    "description": "A tucked flip that goes side to side.",
+    "otherNames": null,
+    "tricker": "Christopher Tung"
+  },
+  {
+    "slug": "sideflip-round",
+    "name": "Sideflip Round",
+    "section": "outside-tricks",
+    "description": "A sideflip with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Matthew LaJudice"
+  },
+  {
+    "slug": "sideswipe",
+    "name": "Sideswipe",
+    "section": "outside-tricks",
+    "description": "An inverted 540 kick, or a Raiz with a swipe.",
+    "otherNames": null,
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "sideswipe-late-round",
+    "name": "Sideswipe Late Round",
+    "section": "outside-tricks",
+    "description": "A Sideswipe that lands in mega and executes another round before landing.",
+    "otherNames": "Shadowswipe, Sideswipe Late9, Sideswipe Mega Round",
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "sideswipe-late-swipe",
+    "name": "Sideswipe Late Swipe",
+    "section": "outside-tricks",
+    "description": "A Sideswipe that finishes with a late swipe on the pseudo axis.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "sidewinder",
+    "name": "Sidewinder",
+    "section": "inside-tricks",
+    "description": "A Butterfly Kick where the outside leg initiates an extra twist while in an outstretched, arched position.",
+    "otherNames": null,
+    "tricker": "Von Simmons"
+  },
+  {
+    "slug": "sketchdown-raiz",
+    "name": "Sketchdown Raiz",
+    "section": "inside-tricks",
+    "description": "A Masterswing Valdez that looks similar to the Touchdown Raiz",
+    "otherNames": "Masterswing Valdez",
+    "tricker": "Brandon Schwerin"
+  },
+  {
+    "slug": "skip-hook",
+    "name": "Skip Hook",
+    "section": "vertical-kicks",
+    "description": "The skip hook is an important, fundamental move to master. All vert kicks of higher rotation that end in hook or any hyperhook variations all have the same muscle-memory as a skip hook. How your skip hook looks will determine how all your other hook kicks will look like, so master it until it looks exactly how you want it to look.",
+    "otherNames": "Tsunami (TKT), Stepover Hook",
+    "tricker": "Khang Vu"
+  },
+  {
+    "slug": "slice",
+    "name": "Slice",
+    "section": "backward-tricks",
+    "description": "A mix of a Back Pike with a Doubleleg.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "snapu",
+    "name": "Snapu",
+    "section": "outside-tricks",
+    "description": "A sideswipe with an extra twist before landing. Invented by Steve Terada.",
+    "otherNames": null,
+    "tricker": "Alex Patterson"
+  },
+  {
+    "slug": "snapu-doubleleg",
+    "name": "Snapu Doubleleg",
+    "section": "outside-tricks",
+    "description": "A Snapu with a doubleleg executed at the end.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "snapu-hyperhook",
+    "name": "Snapu Hyperhook",
+    "section": "outside-tricks",
+    "description": "A Snapu that lands in a hyperhook. Can be thought of as a laid back / inverted 540 Gyroknife.",
+    "otherNames": null,
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "snapu-round",
+    "name": "Snapu Round",
+    "section": "outside-tricks",
+    "description": "A Snapu with a round kick executed at the end.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "snapu-twist",
+    "name": "Snapu Twist",
+    "section": "outside-tricks",
+    "description": "A sideswipe with two extra twists before landing. First landed by Michael Guthrie.",
+    "otherNames": "Snapu Double",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "snatch-cannon",
+    "name": "Snatch Cannon",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with an extra flip. First landed by Tim Farley on February 25, 2014.",
+    "otherNames": "Cork-In Back-Out",
+    "tricker": "Tim Farley"
+  },
+  {
+    "slug": "spyder",
+    "name": "Spyder",
+    "section": "outside-tricks",
+    "description": "The Spyder initiates very similar to how a Raiz would, but instead of flipping over the top, the Spyder flatspins around very similar to a Butterfly Kick.",
+    "otherNames": "Snowbubble",
+    "tricker": "Cody Wilson"
+  },
+  {
+    "slug": "spyder-twist",
+    "name": "Spyder Twist",
+    "section": "outside-tricks",
+    "description": "A Spyder with an extra in-air spin executed before landing.",
+    "otherNames": "Snowbubble",
+    "tricker": "Brendan Morrison"
+  },
+  {
+    "slug": "spyder-twist-round",
+    "name": "Spyder Twist Round",
+    "section": "outside-tricks",
+    "description": "A Spyder Twist that executes a round kick before landing.",
+    "otherNames": null,
+    "tricker": "Brendan Morrison"
+  },
+  {
+    "slug": "straddle-corkscrew",
+    "name": "Straddle Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with a “straddle” position.",
+    "otherNames": null,
+    "tricker": "Mogwai"
+  },
+  {
+    "slug": "superman-front",
+    "name": "Superman Front",
+    "section": "forward-tricks",
+    "description": "A Frontflip that hits a “Superman” pose at the peak of the flip.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "swing-1080",
+    "name": "Swing 1080",
+    "section": "vertical-kicks",
+    "description": "A vert kick that swings and leaves the ground in (roughly) backside, spins (roughly) 720° and executes an outside kick. Could be thought of as a vertical Boxcutter.",
+    "otherNames": "Swing 900 Hook",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "swing-1260",
+    "name": "Swing 1260",
+    "section": "vertical-kicks",
+    "description": "A vert kick that swings and leaves the ground in (roughly) backside, spins (roughly) 900° and executes an inside kick. Could be thought of as a vertical Double Corkscrew Round.",
+    "otherNames": "Swing 1080 Round",
+    "tricker": "Mikael Mantis"
+  },
+  {
+    "slug": "swing-360",
+    "name": "Swing 360",
+    "section": "vertical-kicks",
+    "description": "A turbo’d skip hook basically, or a Pop 360 from a swing.",
+    "otherNames": "Tsunami Hyper (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "swing-900",
+    "name": "Swing 900",
+    "section": "vertical-kicks",
+    "description": "A vert kick that swings and leaves the ground in (roughly) backside, spins (roughly) 540° and executes an inside kick. Could be thought of as a vertical Corkscrew Round.",
+    "otherNames": "Swing 720 Round (TKT)",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "swing-900-knife",
+    "name": "Swing 900 Knife",
+    "section": "vertical-kicks",
+    "description": "A vert kick that swings and leaves the ground in (roughly) backside, spins (roughly) 540° and executes a knife.",
+    "otherNames": "Swing 720 Knife (TKT)",
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "swing-900-sidekick",
+    "name": "Swing 900 Sidekick",
+    "section": "vertical-kicks",
+    "description": "A Swing 900 with a sidekick executed instead of a round kick.",
+    "otherNames": "Swing 720 Sidekick",
+    "tricker": "Micah Karns"
+  },
+  {
+    "slug": "swipeknife",
+    "name": "Swipeknife",
+    "section": "outside-tricks",
+    "description": "An inverted Jackknife, or a Sideswipe that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Brendyn \"Bubba\" Crispell"
+  },
+  {
+    "slug": "swipeknife-turbo",
+    "name": "Swipeknife Turbo",
+    "section": "outside-tricks",
+    "description": "A Swipeknife that lands in hyper/turbo (frontside on both feet)",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "tak-double-full",
+    "name": "Tak Double Full",
+    "section": "inside-tricks",
+    "description": "A Tak Full with an extra rotation.",
+    "otherNames": null,
+    "tricker": "Jacob Huntington"
+  },
+  {
+    "slug": "tak-double-full-hyper",
+    "name": "Tak Double Full Hyper",
+    "section": "inside-tricks",
+    "description": "A Tak Double Full that lands in hyper.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "tak-double-full-hyperhook",
+    "name": "Tak Double Full Hyperhook",
+    "section": "inside-tricks",
+    "description": "A Tak Double Full that finishes with a hyperhook. Could be thought of as a Cheat 1440 on the Tak axis.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "tak-double-full-round",
+    "name": "Tak Double Full Round",
+    "section": "inside-tricks",
+    "description": "A Tak Double Full with a round kick executed before landing. Could be thought of as a laid-back Cheat 1260.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "tak-double-full-touchdown",
+    "name": "Tak Double Full Touchdown",
+    "section": "inside-tricks",
+    "description": "A Tak Double Full that touches down like a Touchdown Raiz at the end.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "tak-full",
+    "name": "Tak Full",
+    "section": "inside-tricks",
+    "description": "The Tak Full is a cheat setup into a Wrap Full. Tak Fulls from a cheat takeoff rarely reach a high degree of inversion, and tend to be closer to the horizontal plane.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "tak-full-hyperhook",
+    "name": "Tak Full Hyperhook",
+    "section": "inside-tricks",
+    "description": "A Tak Full that finishes with a hyperhook.",
+    "otherNames": "Tak10",
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "tak-full-kyro",
+    "name": "Tak Full Kyro",
+    "section": "inside-tricks",
+    "description": "A Tak Full Hyperhook with an extra half rotation, making this a Tak Double Full variation.",
+    "otherNames": null,
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "tak-full-pizzaboy",
+    "name": "Tak Full Pizzaboy",
+    "section": "inside-tricks",
+    "description": "A Tak Full Swipe + Scissor (aka Pizzaboy).",
+    "otherNames": "Tak Full Swipe Scissor",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "tak-full-round",
+    "name": "Tak Full Round",
+    "section": "inside-tricks",
+    "description": "A Tak Full that finishes with a round. Can be thought of as a Cheat 900 with more inversion.",
+    "otherNames": "Tak9",
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "tak-full-shuriken-hyperhook",
+    "name": "Tak Full Shuriken Hyperhook",
+    "section": "inside-tricks",
+    "description": "A Tak Full that finishes with a shuriken hyperhook.",
+    "otherNames": "Tak Full Shuriken Cutter",
+    "tricker": "Daisuke Takahashi"
+  },
+  {
+    "slug": "tak-full-swipe",
+    "name": "Tak Full Swipe",
+    "section": "inside-tricks",
+    "description": "A Tak Full that finishes with a swipe, landing in hyper.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "tak-full-wackknife",
+    "name": "Tak Full Wackknife",
+    "section": "inside-tricks",
+    "description": "A Tak Full with a Wackknife executed before landing.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "tak-rodeo-full",
+    "name": "Tak Rodeo Full",
+    "section": "inside-tricks",
+    "description": "A Tak Full with a leg grab mid-flip.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "tak-triple-full",
+    "name": "Tak Triple Full",
+    "section": "inside-tricks",
+    "description": "A Tak Full with an extra two rotations.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "takuraba",
+    "name": "Takuraba",
+    "section": "inside-tricks",
+    "description": "A Frontflip that initiates from a cheat setup. Could be considered a Wrap Front from cheat setup.",
+    "otherNames": "Tak Arabian, Tak Front",
+    "tricker": "Sean Ellis"
+  },
+  {
+    "slug": "takuraba-scissor",
+    "name": "Takuraba Scissor",
+    "section": "inside-tricks",
+    "description": "A Takuraba with a Scissor executed at the peak of the flip.",
+    "otherNames": "Tak Arabian Scissor",
+    "tricker": "Ethan Turner"
+  },
+  {
+    "slug": "terada-full",
+    "name": "Terada Full",
+    "section": "backward-tricks",
+    "description": "A Terada Grab with an extra twist, landing in complete.",
+    "otherNames": null,
+    "tricker": "Josh Durbin"
+  },
+  {
+    "slug": "terada-grab",
+    "name": "Terada Grab",
+    "section": "backward-tricks",
+    "description": "The Terada Grab can be done either as an Arabian variation or as a Sideflip variation. At the peak of the flip, the hook kick leg is grabbed with both hands and an axe/hook kick is executed from the peak of the flip to the landing. Created by Steve Terada",
+    "otherNames": null,
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "terada-grab-in-shant-out",
+    "name": "Terada Grab In Shant Out",
+    "section": "backward-tricks",
+    "description": "A Terada Grab with an extra pseudo flip / shant.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "tornado",
+    "name": "Tornado",
+    "section": "vertical-kicks",
+    "description": "The Tornado is the most basic cheat kick and one of the first moves a tricker will learn. It forms the basis of all cheat kicks after.",
+    "otherNames": "Cheat 360 Round (TKT)",
+    "tricker": "Julia Moreci"
+  },
+  {
+    "slug": "tornado-double",
+    "name": "Tornado Double",
+    "section": "vertical-kicks",
+    "description": "A Tornado with two round kicks executed before landing.",
+    "otherNames": "Cheat 360 Double Round (TKT)",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "tornado-hawkeye",
+    "name": "Tornado Hawkeye",
+    "section": "vertical-kicks",
+    "description": "A Tornado with a hawkeye (inside leg executing a hook kick against the DOM)",
+    "otherNames": "Cheat 360 Hawkeye (TKT)",
+    "tricker": "Brendyn \"Bubba\" Crispell"
+  },
+  {
+    "slug": "tornado-sidekick",
+    "name": "Tornado Sidekick",
+    "section": "vertical-kicks",
+    "description": "A Tornado with a sidekick instead of a round kick.",
+    "otherNames": "Cheat 360 Sidekick (TKT)",
+    "tricker": "Josh Elkins"
+  },
+  {
+    "slug": "touchdown-aerial-twist",
+    "name": "Touchdown Aerial Twist",
+    "section": "inside-tricks",
+    "description": "An Aerial Twist combined with a Touchdown Raiz.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "touchdown-butterfly-twist",
+    "name": "Touchdown Butterfly Twist",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist combined with a Touchdown Raiz. The hand should reach for the floor after the twist is initiated, and weight should be put on the hand similar to a Touchdown Raiz to give power for the next move.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "touchdown-corkscrew",
+    "name": "Touchdown Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew that finishes with a Touchdown Raiz, landing in Complete.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "touchdown-full",
+    "name": "Touchdown Full",
+    "section": "backward-tricks",
+    "description": "A Full Twist that finishes with a Touchdown Raiz, landing in complete.",
+    "otherNames": null,
+    "tricker": "Nyall Hayford"
+  },
+  {
+    "slug": "touchdown-quat",
+    "name": "Touchdown Quat",
+    "section": "backward-tricks",
+    "description": "A Gainer Arabian with an arm touching down before landing.",
+    "otherNames": "Gainer Arabian Touchdown",
+    "tricker": "Cameron Sharma"
+  },
+  {
+    "slug": "touchdown-raiz",
+    "name": "Touchdown Raiz",
+    "section": "outside-tricks",
+    "description": "The Touchdown Raiz is part of the Raiz family of tricks. It utilizes the opposite hand that touches the ground as the Sailor Moon. It is also one of the most popular of set-ups for trickers.",
+    "otherNames": null,
+    "tricker": "Dandy Bien"
+  },
+  {
+    "slug": "touchdown-raiz-roll",
+    "name": "Touchdown Raiz Roll",
+    "section": "outside-tricks",
+    "description": "A shoulder roll that initiates from a Touchdown Raiz.",
+    "otherNames": null,
+    "tricker": "Will Cowden"
+  },
+  {
+    "slug": "touchdown-raiz-twist",
+    "name": "Touchdown Raiz Twist",
+    "section": "outside-tricks",
+    "description": "A Touchdown Raiz with an extra twist, landing in complete.",
+    "otherNames": null,
+    "tricker": "Jeremy Marinas"
+  },
+  {
+    "slug": "touchdown-swipe",
+    "name": "Touchdown Swipe",
+    "section": "outside-tricks",
+    "description": "A Touchdown Raiz that swipes and lands on the opposite leg.",
+    "otherNames": "Touchdown Sideswipe",
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "touchdown-tak-full",
+    "name": "Touchdown Tak Full",
+    "section": "inside-tricks",
+    "description": "A Tak Full that finishes like a touchdown raiz.",
+    "otherNames": null,
+    "tricker": "Nyall Hayford"
+  },
+  {
+    "slug": "touchdown-wrap-full",
+    "name": "Touchdown Wrap Full",
+    "section": "inside-tricks",
+    "description": "A Wrap Full that finishes in a Touchdown Raiz.",
+    "otherNames": null,
+    "tricker": "Hunter Stewart"
+  },
+  {
+    "slug": "touchup-double-butterfly-twist",
+    "name": "Touchup Double Butterfly Twist",
+    "section": "inside-tricks",
+    "description": "A Double Butterfly Twist where the inside hand touches the ground on takeoff.",
+    "otherNames": null,
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "triple-aerial-twist",
+    "name": "Triple Aerial Twist",
+    "section": "inside-tricks",
+    "description": "An Aerial Twist with an extra two twists.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "triple-butterfly-twist",
+    "name": "Triple Butterfly Twist",
+    "section": "inside-tricks",
+    "description": "A Butterfly Twist with three twists. First landed by John Vanek in July, 2013.",
+    "otherNames": null,
+    "tricker": "John Vanek"
+  },
+  {
+    "slug": "triple-corkscrew",
+    "name": "Triple Corkscrew",
+    "section": "backward-tricks",
+    "description": "A Corkscrew with three rotations. First landed by Scotty Skelton on May 25, 2009.",
+    "otherNames": null,
+    "tricker": "Scotty Skelton"
+  },
+  {
+    "slug": "triple-corkscrew-round",
+    "name": "Triple Corkscrew Round",
+    "section": "backward-tricks",
+    "description": "A Triple Corkscrew that finishes with a round kick.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "triple-flash-kick-full",
+    "name": "Triple Flash Kick Full",
+    "section": "backward-tricks",
+    "description": "A Triple Flash Kick with a twist before landing.",
+    "otherNames": null,
+    "tricker": "Sean Ellis"
+  },
+  {
+    "slug": "triple-full",
+    "name": "Triple Full",
+    "section": "backward-tricks",
+    "description": "A Full Twist with an extra two rotations.",
+    "otherNames": null,
+    "tricker": null
+  },
+  {
+    "slug": "triple-full-hyper",
+    "name": "Triple Full Hyper",
+    "section": "backward-tricks",
+    "description": "A Triple Full that lands in hyper stance.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "triple-full-hyperhook",
+    "name": "Triple Full Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Triple Full that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "triple-full-round",
+    "name": "Triple Full Round",
+    "section": "backward-tricks",
+    "description": "A Triple Full with a round kick executed before landing. Could be thought of as an inverted Backside 1620.",
+    "otherNames": null,
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "triple-full-shuriken-hyperhook",
+    "name": "Triple Full Shuriken Hyperhook",
+    "section": "backward-tricks",
+    "description": "A Triple Full that finishes with a shuriken hyperhook.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "twist-knife",
+    "name": "Twist Knife",
+    "section": "vertical-kicks",
+    "description": "A Jackknife with a Twist-Kick (round kicking going against DOM) instead of a round kick.",
+    "otherNames": "Tornado Twist Kick Knife",
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "valdez",
+    "name": "Valdez",
+    "section": "backward-tricks",
+    "description": "A One-Handed Back Handspring, usually slightly off-axis.",
+    "otherNames": null,
+    "tricker": null
+  },
+  {
+    "slug": "wackest-knife",
+    "name": "Wackest Knife",
+    "section": "vertical-kicks",
+    "description": "A Wackknife with an extra hyperhook.",
+    "otherNames": "Wackknife Hyperhook",
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "wackknife",
+    "name": "Wackknife",
+    "section": "vertical-kicks",
+    "description": "The Wackknife a cheat kick that has roughly 180° of in-air rotation, with 2-3 kicks (depending on how you count it). Basically a jackknife with no rotation.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "wackknife-doubleleg",
+    "name": "Wackknife Doubleleg",
+    "section": "vertical-kicks",
+    "description": "A Wackknife that finishes with a Doubleleg.",
+    "otherNames": "Wackknife Parafuso",
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "wackknife-round",
+    "name": "Wackknife Round",
+    "section": "vertical-kicks",
+    "description": "A Wackknife with a round kick executed before landing.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "wackknife-turbo",
+    "name": "Wackknife Turbo",
+    "section": "vertical-kicks",
+    "description": "A Wackknife that lands in frontside on both legs (turbo).",
+    "otherNames": "Wackknife \"Hyper\"",
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "webster",
+    "name": "Webster",
+    "section": "forward-tricks",
+    "description": "A Front Flip off of one foot, taking off with a swing through.",
+    "otherNames": null,
+    "tricker": "RJay Phillips"
+  },
+  {
+    "slug": "webster-axe",
+    "name": "Webster Axe",
+    "section": "forward-tricks",
+    "description": "A Webster with an axe kick / step-out.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "webster-half",
+    "name": "Webster Half",
+    "section": "forward-tricks",
+    "description": "A Webster with a half turn.",
+    "otherNames": null,
+    "tricker": "RJay Phillips"
+  },
+  {
+    "slug": "webster-hyperhook",
+    "name": "Webster Hyperhook",
+    "section": "forward-tricks",
+    "description": "A Webster that finishes with a hyperhook.",
+    "otherNames": null,
+    "tricker": "Eduardo Ruvalcaba"
+  },
+  {
+    "slug": "webster-x-out",
+    "name": "Webster X-Out",
+    "section": "forward-tricks",
+    "description": "A Webster with an x-out / straddle.",
+    "otherNames": null,
+    "tricker": "Yuri Levin"
+  },
+  {
+    "slug": "wrap-arabian",
+    "name": "Wrap Arabian",
+    "section": "inside-tricks",
+    "description": "A Cart Arabian that takes off from a wrap-transition or a Takuraba from wrap takeoff.",
+    "otherNames": null,
+    "tricker": "Rasmus Ott"
+  },
+  {
+    "slug": "wrap-arabian-scissor",
+    "name": "Wrap Arabian Scissor",
+    "section": "inside-tricks",
+    "description": "A Wrap Arabian with a scissor / step-out.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "wrap-double-full",
+    "name": "Wrap Double Full",
+    "section": "inside-tricks",
+    "description": "A Wrap Full with an extra rotation.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "wrap-double-full-mega",
+    "name": "Wrap Double Full Mega",
+    "section": "inside-tricks",
+    "description": "A Wrap Double Full that lands in mega stance.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "wrap-double-full-snapu",
+    "name": "Wrap Double Full Snapu",
+    "section": "inside-tricks",
+    "description": "A Wrap Double Full that finishes with a Snapu, making this a Wrap Triple Full variation.",
+    "otherNames": null,
+    "tricker": "Zen Kajihara"
+  },
+  {
+    "slug": "wrap-full",
+    "name": "Wrap Full",
+    "section": "inside-tricks",
+    "description": "A Wrap Full is a Full Twist that takes off of one foot, where the other foot (left foot if left-spinner) is “wrapped” behind the other foot (right foot if left-spinner). Closely related to the Tak Full.",
+    "otherNames": null,
+    "tricker": "Hezekiah Ramirez"
+  },
+  {
+    "slug": "wrap-full-doubleleg",
+    "name": "Wrap Full Doubleleg",
+    "section": "inside-tricks",
+    "description": "A Wrap Full with a doubleleg executed at the peak.",
+    "otherNames": null,
+    "tricker": "Ben Lim"
+  },
+  {
+    "slug": "wrap-full-hyper",
+    "name": "Wrap Full Hyper",
+    "section": "inside-tricks",
+    "description": "A Wrap Full that lands in hyper.",
+    "otherNames": null,
+    "tricker": "Hezekiah Ramirez"
+  },
+  {
+    "slug": "wrap-full-hyperhook",
+    "name": "Wrap Full Hyperhook",
+    "section": "inside-tricks",
+    "description": "A Wrap Full that finishes with a hyperhook.",
+    "otherNames": "Wraptorcutter",
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "wrap-full-late-round",
+    "name": "Wrap Full Late Round",
+    "section": "inside-tricks",
+    "description": "A Wrap Full that finishes in mega stance with a late round kick.",
+    "otherNames": "Wrap Full Late9, Wrap Full Mega Round",
+    "tricker": "Haruki Sadasue"
+  },
+  {
+    "slug": "wrap-full-pike",
+    "name": "Wrap Full Pike",
+    "section": "inside-tricks",
+    "description": "A Wrap Full with a Pike - similar to a Wrap Full Doubleleg but flipping on a slightly different axis.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "wrap-full-round",
+    "name": "Wrap Full Round",
+    "section": "inside-tricks",
+    "description": "A Wrap Full that executes a round kick before landing.",
+    "otherNames": null,
+    "tricker": "Nelson Zuniga"
+  },
+  {
+    "slug": "wrap-full-shurikane",
+    "name": "Wrap Full Shurikane",
+    "section": "inside-tricks",
+    "description": "A Wrap Full combined with a Shurikane.",
+    "otherNames": null,
+    "tricker": "Shosei Iwamoto"
+  },
+  {
+    "slug": "wrap-full-shuriken-hyperhook",
+    "name": "Wrap Full Shuriken Hyperhook",
+    "section": "inside-tricks",
+    "description": "A Wrap Full that finishes with a Shuriken + Hyperhook.",
+    "otherNames": "Wrap Shuriken Cutter",
+    "tricker": "Aidan Kennedy"
+  },
+  {
+    "slug": "wrap-full-snapu",
+    "name": "Wrap Full Snapu",
+    "section": "inside-tricks",
+    "description": "A Wrap Full with a Snapu executed at before landing, making this a Wrap Double Full variation.",
+    "otherNames": null,
+    "tricker": "Tyler \"Kite\" Wilson"
+  },
+  {
+    "slug": "wrap-full-swipe",
+    "name": "Wrap Full Swipe",
+    "section": "inside-tricks",
+    "description": "A Wrap Full that finishes with a swipe, landing in hyper.",
+    "otherNames": null,
+    "tricker": "Hezekiah Ramirez"
+  },
+  {
+    "slug": "wrap-full-swipeknife",
+    "name": "Wrap Full Swipeknife",
+    "section": "inside-tricks",
+    "description": "A Wrap Full that finishes with a Swipeknife.",
+    "otherNames": null,
+    "tricker": "Andy Le"
+  },
+  {
+    "slug": "wrap-triple-full",
+    "name": "Wrap Triple Full",
+    "section": "inside-tricks",
+    "description": "A Wrap Full with two extra rotations.",
+    "otherNames": null,
+    "tricker": "Michael Guthrie"
+  },
+  {
+    "slug": "x-out",
+    "name": "X-Out",
+    "section": "backward-tricks",
+    "description": "A Back Tuck with a straddle / split-kick.",
+    "otherNames": null,
+    "tricker": "Mark Rusmantijo"
+  },
+  {
+    "slug": "x-out-full",
+    "name": "X-Out Full",
+    "section": "backward-tricks",
+    "description": "An X-Out with an extra twist.",
+    "otherNames": null,
+    "tricker": "Vaios Skretas"
+  },
+  {
+    "slug": "x-out-in-back-out",
+    "name": "X-Out-In Back-Out",
+    "section": "backward-tricks",
+    "description": "A X-Out followed by a Back Tuck (two flips).",
+    "otherNames": null,
+    "tricker": "Jaxon Wong"
+  }
+]

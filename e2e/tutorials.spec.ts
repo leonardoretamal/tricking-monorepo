@@ -1,10 +1,15 @@
 import { expect, test } from '@playwright/test';
 
-test.describe('seccion tutorials', () => {
-  test('muestra el listado de tutoriales de Kojo', async ({ page }) => {
+test.describe('seccion tecnicas de Kojo', () => {
+  test('muestra el listado de tecnicas de Kojo', async ({ page }) => {
     await page.goto('/es/tutorials');
-    await expect(page.getByRole('heading', { level: 1, name: 'Tutoriales de Kojo' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Técnicas de Kojo' })).toBeVisible();
     await expect(page.getByRole('main').getByRole('button').first()).toBeVisible();
+  });
+
+  test('muestra el bloque general de tecnica', async ({ page }) => {
+    await page.goto('/es/tutorials');
+    await expect(page.getByRole('heading', { name: 'Técnica general' })).toBeVisible();
   });
 
   test('el API de tutorials responde 200 con items paginados', async ({ request }) => {

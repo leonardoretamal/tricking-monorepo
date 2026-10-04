@@ -1,6 +1,11 @@
-import { paginatedTutorialsSchema, type PaginatedTutorials } from './tutorial-schemas';
+import {
+  paginatedTutorialsSchema,
+  techniqueGeneralSchema,
+  type PaginatedTutorials,
+  type TechniqueGeneral,
+} from './tutorial-schemas';
 
-// Cliente del listado de tutoriales. Valida con Zod la respuesta del backend.
+// Cliente del listado de tecnicas. Valida con Zod la respuesta del backend.
 
 export interface TutorialsQuery {
   q?: string;
@@ -26,4 +31,17 @@ export async function fetchTutorials(
   }
 
   return paginatedTutorialsSchema.parse(await response.json());
+}
+
+export async function fetchTechniqueGeneral(
+  locale: string,
+  signal?: AbortSignal,
+): Promise<TechniqueGeneral> {
+  const response = await fetch(`/api/tutorials/general?locale=${encodeURIComponent(locale)}`, {
+    signal,
+  });
+  if (!response.ok) {
+    throw new Error(`technique_general_request_failed_${response.status}`);
+  }
+  return techniqueGeneralSchema.parse(await response.json());
 }

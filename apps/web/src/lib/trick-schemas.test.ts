@@ -37,6 +37,8 @@ describe('trickSchemas', () => {
       ...listItem,
       howTo: null,
       howToEs: 'Paso el peso y giro.',
+      loopkicksNotes: 'An Arabian starts with a backflip.',
+      kojoTechniques: [],
       prereqs: [{ id: 'tornado', name: 'Tornado', difficulty: 3, section: 'vertical-kicks' }],
       nextTricks: [],
     });

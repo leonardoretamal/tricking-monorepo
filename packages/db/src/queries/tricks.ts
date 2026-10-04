@@ -1,7 +1,14 @@
 import { and, asc, count, desc, eq, ilike, inArray, isNull, or, sql } from 'drizzle-orm';
 
 import { getDb } from '../client';
-import { categories, trickCategories, trickRelations, tricks } from '../schema';
+import {
+  categories,
+  trickCategories,
+  trickRelations,
+  tricks,
+  tutorialTricks,
+  tutorials,
+} from '../schema';
 
 // Consultas de trucos con paginacion, filtros, busqueda y orden resueltos en la base de
 // datos (regla de listados). La API valida los parametros con Zod antes de llegar aqui.
@@ -57,9 +64,21 @@ export interface TrickRelated {
   section: string | null;
 }
 
+export interface KojoTechnique {
+  id: number;
+  title: string | null;
+  level: string | null;
+  tips: string | null;
+  tipsEs: string | null;
+  permalink: string | null;
+  author: string | null;
+}
+
 export interface TrickDetail extends TrickListItem {
   howTo: string | null;
   howToEs: string | null;
+  loopkicksNotes: string | null;
+  kojoTechniques: KojoTechnique[];
   prereqs: TrickRelated[];
   nextTricks: TrickRelated[];
 }
@@ -184,6 +203,7 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
       difficulty: tricks.difficulty,
       section: tricks.section,
       loopkicksSlug: tricks.loopkicksSlug,
+      loopkicksNotes: tricks.loopkicksNotes,
     })
     .from(tricks)
     .where(and(eq(tricks.id, id), isNull(tricks.deletedAt)))
@@ -226,6 +246,22 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
 
   const map = await categoryMapFor([trick.id]);
 
+  // Tecnicas de Kojo emparejadas con este truco (tips propios + credito).
+  const kojoRows = await db
+    .select({
+      id: tutorials.id,
+      title: tutorials.caption,
+      level: tutorials.level,
+      tips: tutorials.tips,
+      tipsEs: tutorials.tipsEs,
+      permalink: tutorials.permalink,
+      author: tutorials.author,
+    })
+    .from(tutorialTricks)
+    .innerJoin(tutorials, eq(tutorialTricks.tutorialId, tutorials.id))
+    .where(and(eq(tutorialTricks.trickId, trick.id), isNull(tutorials.deletedAt)))
+    .orderBy(asc(tutorials.caption));
+
   return {
     id: trick.id,
     name: trick.name,
@@ -236,6 +272,8 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     difficulty: trick.difficulty,
     section: trick.section,
     loopkicksSlug: trick.loopkicksSlug,
+    loopkicksNotes: trick.loopkicksNotes,
+    kojoTechniques: kojoRows,
     categories: map.get(trick.id) ?? [],
     prereqs,
     nextTricks,

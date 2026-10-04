@@ -6,7 +6,7 @@ import {
 } from './trick-schemas';
 
 export interface TricksQuery {
-  section: string;
+  section?: string;
   q?: string;
   category?: string;
   difficulty?: number;

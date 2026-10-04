@@ -99,6 +99,9 @@ export const tricks = pgTable(
     difficulty: smallint('difficulty'),
     section: text('section'),
     loopkicksSlug: text('loopkicks_slug').unique(),
+    // Descripcion tecnica publicada por Loopkicks en su ficha de truco (texto de ellos).
+    // Se muestra citada, con credito y enlace a su ficha; no se traduce.
+    loopkicksNotes: text('loopkicks_notes'),
     prereqs: text('prereqs').array().notNull().default([]),
     nextTricks: text('next_tricks').array().notNull().default([]),
     source: text('source').notNull().default('trickingapi'),

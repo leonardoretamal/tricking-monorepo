@@ -8,11 +8,14 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
 import { z } from 'zod';
 
+import { Link } from '@/i18n/navigation';
+import { pickDescription } from '@/lib/description';
 import type { TutorialListItem } from '@/lib/tutorial-schemas';
 
-// Acordeon del listado de tutoriales. Persiste el estado expandido en localStorage con
-// TTL de 7 dias a traves del wrapper de storage (validado con Zod al leer) y virtualiza
-// cuando el listado es grande. El contenido de Kojo se muestra tal cual (viene en ingles).
+// Acordeon de tecnicas de Kojo (sin video). Por tecnica muestra el nivel, los tips
+// PROPIOS del proyecto, los trucos del catalogo emparejados y el credito con enlace al
+// tutorial original. El estado expandido se persiste 7 dias y se virtualiza si el listado
+// es grande.
 
 const EXPANDED_KEY = 'tutorials:expanded';
 const expandedSchema = z.array(z.string());
@@ -45,16 +48,53 @@ export function TutorialAccordion({ items, locale, virtualize }: TutorialAccordi
     const postedAt = tutorial.postedAt
       ? formatDate(tutorial.postedAt, locale, { dateStyle: 'medium' })
       : null;
+    const tips = pickDescription(locale, tutorial.tips, tutorial.tipsEs);
+    const level = tutorial.level ? t(`levels.${tutorial.level}`) : null;
+    const tricks = tutorial.tricks ?? [];
 
     return {
       id: String(tutorial.id),
-      header: <span className="break-words">{tutorial.caption ?? t('untitled')}</span>,
+      header: (
+        <span className="flex flex-wrap items-center gap-2">
+          <span className="break-words">{tutorial.caption ?? t('untitled')}</span>
+          {level ? (
+            <span className="badge badge-sm tb-badge border border-border bg-base-300 text-base-content/80">
+              {level}
+            </span>
+          ) : null}
+        </span>
+      ),
       content: (
         <div className="flex flex-col gap-3">
+          <p className="text-sm text-base-content/80">
+            {tips ?? <span className="text-base-content/60">{t('tipsEmpty')}</span>}
+          </p>
+
+          {tricks.length > 0 ? (
+            <div className="flex flex-col gap-1">
+              <span className="text-xs font-semibold uppercase tracking-wide text-base-content/60">
+                {t('relatedTricks')}
+              </span>
+              <ul className="flex flex-wrap gap-2">
+                {tricks.map((trick) => (
+                  <li key={trick.id}>
+                    <Link
+                      href={`/tricks/${trick.section ?? 'vertical-kicks'}/${trick.id}`}
+                      className="link link-hover rounded text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      {trick.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-base-content/60">
             {tutorial.author ? <span>{t('author', { name: tutorial.author })}</span> : null}
             {postedAt ? <span>{postedAt}</span> : null}
           </div>
+
           {tutorial.permalink ? (
             <a
               href={tutorial.permalink}
@@ -74,7 +114,7 @@ export function TutorialAccordion({ items, locale, virtualize }: TutorialAccordi
   const virtualizer = useVirtualizer({
     count: virtualize ? items.length : 0,
     getScrollElement: () => scrollRef.current,
-    estimateSize: () => 56,
+    estimateSize: () => 64,
     overscan: 6,
   });
 
