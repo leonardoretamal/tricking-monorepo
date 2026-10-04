@@ -1,6 +1,31 @@
 {
   "stances": {
     "title": "Stances",
-    "description": "Posturas de salida y llegada que definen cada truco."
+    "description": "Posturas de salida y llegada que definen cada truco.",
+    "results": {
+      "range": "Mostrando {start} a {end} de {total} stances."
+    },
+    "landingCount": "Trucos: {count}",
+    "states": {
+      "errorTitle": "No pudimos cargar los stances",
+      "errorDescription": "Hubo un problema al pedir el listado. Intenta de nuevo.",
+      "retry": "Reintentar",
+      "emptyTitle": "Todavía no hay stances",
+      "emptyDescription": "El contenido se completará pronto."
+    },
+    "pagination": {
+      "label": "Paginación de stances",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "status": "Página {page} de {totalPages}"
+    },
+    "detail": {
+      "back": "Volver a stances",
+      "description": "Descripción",
+      "noDescription": "Este stance todavía no tiene descripción.",
+      "landingTitle": "Trucos que aterrizan en este stance",
+      "landingEmptyTitle": "Todavía no hay trucos curados",
+      "landingEmptyDescription": "Aún no se curaron trucos que aterricen en este stance."
+    }
   }
 }

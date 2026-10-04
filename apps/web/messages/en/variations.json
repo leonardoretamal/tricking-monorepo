@@ -1,6 +1,64 @@
 {
   "variations": {
     "title": "Variations",
-    "description": "Variations of the base tricks and how their execution changes."
+    "description": "Variations of the base tricks and how their execution changes.",
+    "kindFilterLabel": "Variation type",
+    "kinds": {
+      "family": "Families",
+      "concrete": "Concrete"
+    },
+    "badges": {
+      "family": "Family",
+      "concrete": "Concrete"
+    },
+    "filters": {
+      "searchLabel": "Search",
+      "searchPlaceholder": "Variation name",
+      "sortLabel": "Sort by",
+      "pageSizeLabel": "Per page",
+      "pageSizeOption": "{count} per page"
+    },
+    "sort": {
+      "nameAsc": "Name (A to Z)",
+      "nameDesc": "Name (Z to A)"
+    },
+    "results": {
+      "none": "No variations to show.",
+      "range": "Showing {start} to {end} of {total} variations.",
+      "filtered": "Active filters."
+    },
+    "states": {
+      "errorTitle": "We could not load the variations",
+      "errorDescription": "There was a problem requesting the variations. Try again.",
+      "retry": "Retry",
+      "emptyTitle": "There are no variations yet",
+      "emptyDescription": "The content will be completed soon.",
+      "emptyFilteredTitle": "No results",
+      "emptyFilteredDescription": "No variations match the selected filters."
+    },
+    "pagination": {
+      "label": "Variations pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {totalPages}"
+    },
+    "card": {
+      "examples": "Example tricks",
+      "noExamples": "No example tricks.",
+      "baseTrick": "Base trick",
+      "noDescription": "This variation does not have a description yet."
+    },
+    "detail": {
+      "back": "Back to variations",
+      "type": "Variation type",
+      "description": "Description",
+      "noDescription": "This variation does not have a description yet.",
+      "baseTrick": "Base trick",
+      "family": "Family",
+      "examples": "Example tricks",
+      "siblings": "Sibling variations",
+      "noExamples": "No example tricks.",
+      "noSiblings": "No sibling variations."
+    }
   }
 }

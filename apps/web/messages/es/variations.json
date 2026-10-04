@@ -1,6 +1,64 @@
 {
   "variations": {
     "title": "Variaciones",
-    "description": "Variaciones de los trucos base y cómo cambia su ejecución."
+    "description": "Variaciones de los trucos base y cómo cambia su ejecución.",
+    "kindFilterLabel": "Tipo de variación",
+    "kinds": {
+      "family": "Familias",
+      "concrete": "Concretas"
+    },
+    "badges": {
+      "family": "Familia",
+      "concrete": "Concreta"
+    },
+    "filters": {
+      "searchLabel": "Buscar",
+      "searchPlaceholder": "Nombre de la variación",
+      "sortLabel": "Ordenar por",
+      "pageSizeLabel": "Por página",
+      "pageSizeOption": "{count} por página"
+    },
+    "sort": {
+      "nameAsc": "Nombre (A a Z)",
+      "nameDesc": "Nombre (Z a A)"
+    },
+    "results": {
+      "none": "No hay variaciones para mostrar.",
+      "range": "Mostrando {start} a {end} de {total} variaciones.",
+      "filtered": "Filtros activos."
+    },
+    "states": {
+      "errorTitle": "No pudimos cargar las variaciones",
+      "errorDescription": "Hubo un problema al pedir las variaciones. Intenta de nuevo.",
+      "retry": "Reintentar",
+      "emptyTitle": "Todavía no hay variaciones",
+      "emptyDescription": "El contenido se completará pronto.",
+      "emptyFilteredTitle": "Sin resultados",
+      "emptyFilteredDescription": "No hay variaciones que coincidan con los filtros elegidos."
+    },
+    "pagination": {
+      "label": "Paginación de variaciones",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "status": "Página {page} de {totalPages}"
+    },
+    "card": {
+      "examples": "Trucos de ejemplo",
+      "noExamples": "Sin trucos de ejemplo.",
+      "baseTrick": "Truco base",
+      "noDescription": "Esta variación todavía no tiene descripción."
+    },
+    "detail": {
+      "back": "Volver a variaciones",
+      "type": "Tipo de variación",
+      "description": "Descripción",
+      "noDescription": "Esta variación todavía no tiene descripción.",
+      "baseTrick": "Truco base",
+      "family": "Familia",
+      "examples": "Trucos de ejemplo",
+      "siblings": "Variaciones hermanas",
+      "noExamples": "Sin trucos de ejemplo.",
+      "noSiblings": "Sin variaciones hermanas."
+    }
   }
 }

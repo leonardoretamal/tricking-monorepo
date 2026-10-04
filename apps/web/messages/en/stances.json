@@ -1,6 +1,31 @@
 {
   "stances": {
     "title": "Stances",
-    "description": "Take-off and landing stances that define each trick."
+    "description": "Take-off and landing stances that define each trick.",
+    "results": {
+      "range": "Showing {start} to {end} of {total} stances."
+    },
+    "landingCount": "Tricks: {count}",
+    "states": {
+      "errorTitle": "We could not load the stances",
+      "errorDescription": "There was a problem loading the list. Try again.",
+      "retry": "Retry",
+      "emptyTitle": "No stances yet",
+      "emptyDescription": "This content will be completed soon."
+    },
+    "pagination": {
+      "label": "Stance pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {totalPages}"
+    },
+    "detail": {
+      "back": "Back to stances",
+      "description": "Description",
+      "noDescription": "This stance does not have a description yet.",
+      "landingTitle": "Tricks that land in this stance",
+      "landingEmptyTitle": "No curated tricks yet",
+      "landingEmptyDescription": "No tricks that land in this stance have been curated yet."
+    }
   }
 }

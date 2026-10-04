@@ -1,6 +1,60 @@
 {
   "transitions": {
     "title": "Transitions",
-    "description": "Transitions between tricks to chain fluid combos."
+    "description": "Transitions between tricks to chain fluid combos.",
+    "badgeAria": "Group {group}",
+    "groups": {
+      "unified": "Unified",
+      "singular": "Singular",
+      "sequential": "Sequential",
+      "other": "Other"
+    },
+    "filters": {
+      "searchLabel": "Search",
+      "searchPlaceholder": "Transition name",
+      "groupLabel": "Group",
+      "allGroups": "All",
+      "sortLabel": "Sort by",
+      "pageSizeLabel": "Per page",
+      "pageSizeOption": "{count} per page"
+    },
+    "sort": {
+      "nameAsc": "Name (A to Z)",
+      "nameDesc": "Name (Z to A)"
+    },
+    "results": {
+      "none": "No transitions to show.",
+      "range": "Showing {start} to {end} of {total} transitions.",
+      "filtered": "Active filters."
+    },
+    "states": {
+      "errorTitle": "We could not load the transitions",
+      "errorDescription": "There was a problem requesting the catalog. Try again.",
+      "retry": "Retry",
+      "emptyTitle": "There are no transitions yet",
+      "emptyDescription": "The content will be completed soon.",
+      "emptyFilteredTitle": "No results",
+      "emptyFilteredDescription": "No transitions match the selected filters."
+    },
+    "pagination": {
+      "label": "Transitions pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "status": "Page {page} of {totalPages}"
+    },
+    "detail": {
+      "description": "Description",
+      "noDescription": "This transition does not have a description yet.",
+      "examples": "Examples",
+      "noExamples": "This transition does not have examples yet.",
+      "openTrick": "View {name} in the trick catalog",
+      "diagramAria": "Diagram of the {group} group",
+      "diagram": {
+        "unified": "Two-foot landing and two-foot takeoff.",
+        "singular": "Single-foot landing and takeoff.",
+        "sequential": "One foot at a time, then the other.",
+        "other": "Transition without a defined group."
+      }
+    }
   }
 }

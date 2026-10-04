@@ -8,6 +8,11 @@ import { queryPersister } from '@/lib/query-persister';
 
 const MAX_AGE_MS = 24 * 60 * 60 * 1000;
 
+// Version del contrato de las respuestas cacheadas. Se sube cuando cambia la forma de
+// una respuesta cacheada para que la cache persistida vieja se descarte en vez de
+// rehidratarse con una forma obsoleta (regla de validar datos rehidratados).
+const CACHE_BUSTER = '2026-10-03-fase-8';
+
 export function Providers({ children }: { children: ReactNode }) {
   const [queryClient] = useState(
     () =>
@@ -26,7 +31,7 @@ export function Providers({ children }: { children: ReactNode }) {
   return (
     <PersistQueryClientProvider
       client={queryClient}
-      persistOptions={{ persister: queryPersister, maxAge: MAX_AGE_MS }}
+      persistOptions={{ persister: queryPersister, maxAge: MAX_AGE_MS, buster: CACHE_BUSTER }}
     >
       {children}
     </PersistQueryClientProvider>

@@ -1,6 +1,60 @@
 {
   "transitions": {
     "title": "Transiciones",
-    "description": "Transiciones entre trucos para encadenar combos fluidos."
+    "description": "Transiciones entre trucos para encadenar combos fluidos.",
+    "badgeAria": "Grupo {group}",
+    "groups": {
+      "unified": "Unified",
+      "singular": "Singular",
+      "sequential": "Sequential",
+      "other": "Otras"
+    },
+    "filters": {
+      "searchLabel": "Buscar",
+      "searchPlaceholder": "Nombre de la transición",
+      "groupLabel": "Grupo",
+      "allGroups": "Todos",
+      "sortLabel": "Ordenar por",
+      "pageSizeLabel": "Por página",
+      "pageSizeOption": "{count} por página"
+    },
+    "sort": {
+      "nameAsc": "Nombre (A a Z)",
+      "nameDesc": "Nombre (Z a A)"
+    },
+    "results": {
+      "none": "No hay transiciones para mostrar.",
+      "range": "Mostrando {start} a {end} de {total} transiciones.",
+      "filtered": "Filtros activos."
+    },
+    "states": {
+      "errorTitle": "No pudimos cargar las transiciones",
+      "errorDescription": "Hubo un problema al pedir el catálogo. Intenta de nuevo.",
+      "retry": "Reintentar",
+      "emptyTitle": "Todavía no hay transiciones",
+      "emptyDescription": "El contenido se completará pronto.",
+      "emptyFilteredTitle": "Sin resultados",
+      "emptyFilteredDescription": "No hay transiciones que coincidan con los filtros elegidos."
+    },
+    "pagination": {
+      "label": "Paginación de transiciones",
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "status": "Página {page} de {totalPages}"
+    },
+    "detail": {
+      "description": "Descripción",
+      "noDescription": "Esta transición todavía no tiene descripción.",
+      "examples": "Ejemplos",
+      "noExamples": "Esta transición todavía no tiene ejemplos.",
+      "openTrick": "Ver {name} en el catálogo de trucos",
+      "diagramAria": "Diagrama del grupo {group}",
+      "diagram": {
+        "unified": "Aterrizaje a dos pies y despegue a dos pies.",
+        "singular": "Aterrizaje y despegue con un solo pie.",
+        "sequential": "Un pie a la vez, primero uno y después el otro.",
+        "other": "Transición sin grupo definido."
+      }
+    }
   }
 }

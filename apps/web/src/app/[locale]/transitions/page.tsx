@@ -1,8 +1,14 @@
-import { EmptyState } from '@tricking/ui';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+
+import { TransitionBrowser } from '@/components/transition-browser';
+import { parseTransitionFilters } from '@/lib/transition-params';
+
+// El listado se renderiza por peticion (filtros en la URL); no se prerrenderiza en el build.
+export const dynamic = 'force-dynamic';
 
 type TransitionsPageProps = {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 export async function generateMetadata({ params }: TransitionsPageProps) {
@@ -15,22 +21,22 @@ export async function generateMetadata({ params }: TransitionsPageProps) {
   };
 }
 
-export default async function TransitionsPage({ params }: TransitionsPageProps) {
+export default async function TransitionsPage({ params, searchParams }: TransitionsPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations('transitions');
-  const tStates = await getTranslations('states');
+  const filters = parseTransitionFilters(await searchParams);
 
   return (
-    <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-12 sm:px-6 lg:px-8">
+    <section className="flex flex-col gap-6 py-6">
       <header className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-4xl">
           {t('title')}
         </h1>
         <p className="max-w-2xl text-base text-base-content/70">{t('description')}</p>
       </header>
-      <EmptyState title={tStates('emptyTitle')} description={tStates('emptyDescription')} />
+      <TransitionBrowser initial={filters} />
     </section>
   );
 }
