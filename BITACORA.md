@@ -261,3 +261,18 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: sección "Técnicas de Kojo" en acordeón; tips de técnica PROPIOS curados; emparejamiento automático de títulos con trucos del catálogo más revisión curada; bloque "General" redactado por el agente y aprobado por el usuario.
 - Pendientes y riesgos: generar y aplicar la migración `0007`; seeds de tips, emparejamientos y general; rehacer el frontend del acordeón; E2E y verificación en navegador; reemplazar "contáctanos" del footer por una dirección real.
 - Referencias: `docs/docs-agents/fases.md` (Fase 13), `docs/docs-agents/reglas-legal.md`, `AGENTS.md` secciones 1 y 7.
+
+## Detalle del truco con Loopkicks y Kojo (2026-10-04)
+
+- Issue: no aplica (diseño pedido por el usuario).
+- Título: Lista común de trucos y detalle con vídeo, "cómo se hace" y versiones de Loopkicks y Kojo.
+- Qué pedía: todos los trucos en un lugar común; al hacer clic, vídeo a la izquierda, "cómo se hace" a la derecha y, debajo, un acordeón de Loopkicks y otro de Kojo.
+- Fecha de inicio: 2026-10-04.
+- Estado actual: completada (el "cómo se hace" propio queda casi vacío, pendiente de contenido).
+- Autor del registro: Leonardo Retamal.
+- Acciones: `/tricks` pasó a ser una sola lista con los 558 trucos y filtro por sección; el detalle se reordenó en dos columnas (vídeo izquierda, "cómo se hace" derecha) con acordeones "Loopkicks" y "Kojo" debajo. Se scrapearon las descripciones reales de Loopkicks (556 trucos) a `tricks.loopkicks_notes` (migración `0008`; `scrape:notes` y `db:loopkicks-notes`). El acordeón de Kojo usa el emparejamiento `tutorial_tricks` con los tips propios y crédito. Se agregó el bloque general de técnicas y la sección `/tutorials`.
+- Diagnóstico de datos: la API pública de Kojo no expone texto de técnica (las descripciones están tras login de suscriptor; `programme-video-data` responde `Unauthorized`), así que de la "versión gratuita" solo hay título, autor y nivel. Loopkicks sí publica una descripción por truco.
+- Archivos tocados: `apps/scraper/src/scrape-loopkicks-notes.ts`, `packages/db/src/seed/loopkicks-notes.ts`, `packages/db/src/schema.ts`, `drizzle/0008_kind_paper_doll.sql`, `queries/tricks.ts`, `trick-detail-view.tsx`, `trick-browser.tsx`, `trick-params.ts`, `app/[locale]/tricks/page.tsx`, `trick-schemas.ts`, mensajes i18n, `providers.tsx` (CACHE_BUSTER).
+- Pruebas: typecheck, lint, formato, i18n, `env:check` y Vitest 32/32 en verde; E2E chromium 60 passed + 1 skipped; navegador real (lista común, detalle con dos columnas y acordeones, móvil 390x600).
+- Pendientes y riesgos: cargar el "cómo se hace" propio (solo aerial y btwist de ejemplo) con `db:how-to`; decidir si la sección `/tutorials` se mantiene o se fusiona con el detalle; reemplazar "contáctanos" del footer.
+- Referencias: `docs/docs-agents/fases.md` (Fases 13 y 14), `docs/docs-agents/stack-tecnico.md`.

@@ -241,7 +241,7 @@ Objetivo: de Kojo's Trick Lab NO se toman los vídeos. Se toma su conocimiento d
 
 Criterio de cierre: acordeón de técnicas propio y accesible, sin vídeos de Kojo, con tips curados, trucos del catálogo relacionados y crédito al original.
 
-Notas: la API pública de Kojo (`GET /api/user/get-more-recent-videos`) solo entrega título, autor, nivel (Beginner/Intermediate/Advanced/Elite), fecha y `vimeo_id`; no trae texto de técnica, por eso los tips son propios. Vimeo bloquea el embed en dominios de terceros (403) y sus vídeos no se usan. El diseño anterior (listado de tutoriales con enlace a su vídeo) se descartó: la sección pasa a ser "Técnicas de Kojo". Migración `0007`: `tutorials.level/tips/tips_es`, tablas `tutorial_tricks` y `content_blocks`.
+Notas: la API pública de Kojo (`GET /api/user/get-more-recent-videos`) solo entrega título, autor, nivel (Beginner/Intermediate/Advanced/Elite), fecha y `vimeo_id`; no trae texto de técnica, por eso los tips son propios. Vimeo bloquea el embed en dominios de terceros (403) y sus vídeos no se usan. El diseño anterior (listado de tutoriales con enlace a su vídeo) se descartó: la sección pasa a ser "Técnicas de Kojo". Migración `0007`: `tutorials.level/tips/tips_es`, tablas `tutorial_tricks` y `content_blocks`. Además, las técnicas de Kojo se muestran dentro del detalle de cada truco (acordeón "Kojo"), usando el emparejamiento `tutorial_tricks`.
 
 ## Fase 14: Vídeos de trucos (Loopkicks, sin re-hospedar)
 
@@ -256,6 +256,8 @@ Estado: completada.
 Criterio de cierre: vídeos reproducidos desde la fuente original de Loopkicks (contenido gratuito), con crédito, sin almacenar copias.
 
 Notas de cierre: se extrajeron 556 vídeos reales de Loopkicks (una URL por truco) y se sembraron en `videos` con `status='external'` y la URL original; el reproductor funciona desde ahí. Política de terceros: no se re-hospedan; el vídeo de prueba que se había subido a R2 se borró y el uploader se niega a correr salvo `--confirm-rights`. R2 queda reservado a contenido propio o con licencia. Se agregó `tricks.how_to`/`how_to_es` para la descripción propia ("cómo se hace") en `packages/db/src/seed/how-to/` (script `db:how-to`), visible en el detalle. El pie de página lleva el aviso de "no afiliado" y el crédito a las fuentes. E2E en `e2e/trick-video.spec.ts`.
+
+Diseño final del catálogo (2026-10-04): `/tricks` es una sola lista con todos los trucos (filtro por sección en la URL). El detalle del truco se reordena: vídeo a la izquierda, "cómo se hace" a la derecha, y debajo los acordeones "Loopkicks" y "Kojo" uno bajo el otro. El acordeón de Loopkicks muestra la descripción real de su ficha, scrapeada a `tricks.loopkicks_notes` (`apps/scraper/src/scrape-loopkicks-notes.ts`, 556 trucos, migración `0008`) con crédito y enlace. El de Kojo muestra las técnicas emparejadas con los tips propios y crédito. El "cómo se hace" propio sigue vacío en la mayoría de los trucos (solo aerial y btwist de ejemplo); se cargará después con `db:how-to`.
 
 ## Fase 15: Enlaces cruzados entre secciones
 
