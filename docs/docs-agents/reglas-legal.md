@@ -29,11 +29,12 @@ Propósito: definir las páginas legales exigibles, los enlaces obligatorios, el
 
 Política del proyecto (decidida por el usuario el 2026-10-04):
 
-- Los vídeos y tutoriales de Loopkicks y de Kojo's Trick Lab son de sus autores. NO se re-hospedan copias: se muestran con atribución y enlace al original (Loopkicks) o con el reproductor oficial embebido (Vimeo de Kojo).
+- Los vídeos de Loopkicks son contenido gratuito: se muestran desde su URL original (hotlink), con crédito y enlace, pero NUNCA se descargan ni se almacenan (nada de Loopkicks sube a R2).
+- De Kojo's Trick Lab se toma solo su conocimiento de técnica (nombres de trucos/técnicas y tips), NO sus vídeos. Las entradas de técnica llevan tips PROPIOS del proyecto, con crédito y enlace a la página original del tutorial; los vídeos de Kojo no se embeben (Vimeo responde 403 en dominios de terceros) ni se almacenan.
 - El bucket de Cloudflare R2 queda reservado para contenido propio o con licencia. El script de subida se niega a correr salvo que se confirme que se tienen derechos (`--confirm-rights`).
 - Cada truco lleva una descripción propia de "cómo se hace" escrita por el proyecto; no se copia ni se parafrasea de cerca el texto de las fuentes.
 - El pie de página incluye un aviso de "no afiliado" y el crédito a las fuentes.
-- Mecanismo de retiro: ante el pedido de un titular se retira el contenido de inmediato (soft delete del vídeo o del tutorial por su id). El mecanismo es rápido y no requiere despliegue.
+- Mecanismo de retiro: ante el pedido de un titular se retira el contenido de inmediato (soft delete del vídeo o de la técnica por su id). El mecanismo es rápido y no requiere despliegue.
 
 ## Reglas transversales relacionadas
 

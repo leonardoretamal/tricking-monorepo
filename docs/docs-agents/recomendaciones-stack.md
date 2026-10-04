@@ -128,7 +128,7 @@ Las recomendaciones son una propuesta, no una imposición. El usuario elige. Si 
 - Opción principal: insta-fetcher.
 - Alternativa: @aduptive/instagram-scraper.
 - Motivo: extrae captions, posts y reels con rate limiting controlado.
-- Cuándo elegirla: insta-fetcher si se necesita extraer captions de Kojo. La alternativa si la principal deja de funcionar.
+- Cuándo elegirla: insta-fetcher como respaldo de Instagram para el índice de técnicas de Kojo. La alternativa si la principal deja de funcionar.
 
 ## Scraping web general
 

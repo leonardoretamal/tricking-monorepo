@@ -247,3 +247,17 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: sin re-hospedaje de terceros; R2 reservado para contenido propio o con licencia; Kojo con embed oficial de Vimeo; descripción propia en `tricks` (visible en detalle); retiro inmediato por soft delete; la atribución no se trata como defensa legal, se pide permiso antes de cualquier re-hospedaje futuro.
 - Pendientes y riesgos: reemplazar "contáctanos" del footer por una dirección real cuando exista; ampliar las descripciones propias; el vídeo de prueba ya se borró de R2.
 - Referencias: `docs/docs-agents/fases.md` (Fases 13 y 14), `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/reglas-legal.md`.
+
+## Rediseno de la Fase 13 (tecnicas de Kojo) y consolidacion de documentos (2026-10-04)
+
+- Issue: no aplica (corrección de diseño pedida por el usuario).
+- Título: De Kojo se toma el conocimiento de técnica, no sus vídeos; se alinean todos los documentos y la memoria.
+- Qué pedía: el usuario aclaró que de Kojo quería las técnicas (nombres y tips), no sus vídeos, y pidió modificar todos los documentos y la memoria para evitar problemas a futuro.
+- Fecha de inicio: 2026-10-04.
+- Estado actual: en curso.
+- Autor del registro: Leonardo Retamal.
+- Diagnóstico: la Fase 13 se había construido como listado de tutoriales con enlace a los vídeos de Kojo, cuando el usuario quería un acordeón de técnicas (conocimiento), no vídeos. La documentación describía a Kojo como "tutoriales largos vía Instagram" y los vídeos de Loopkicks como "se descargan y suben a R2"; ambas cosas quedaron incorrectas.
+- Acciones: se actualizaron `AGENTS.md` (contexto, fuentes, características del producto, cache, RAG y pendientes), `docs/docs-agents/fases.md` (Fases 13 y 14 y el punto 15.4), `stack-tecnico.md`, `reglas-legal.md`, `reglas-i18n.md`, `reglas-frontend.md`, `recomendaciones-stack.md` y `prompt-arranque.md`. Política final: los vídeos de Loopkicks (gratuitos) se muestran desde su URL original, sin almacenar; de Kojo solo se toma el conocimiento de técnica (tips propios) con crédito; R2 reservado a contenido propio o con licencia. En código se inició el rediseño con `tutorials.level`/`tips`/`tips_es` y las tablas `tutorial_tricks` y `content_blocks` (migración `0007`, pendiente de generar).
+- Decisiones: sección "Técnicas de Kojo" en acordeón; tips de técnica PROPIOS curados; emparejamiento automático de títulos con trucos del catálogo más revisión curada; bloque "General" redactado por el agente y aprobado por el usuario.
+- Pendientes y riesgos: generar y aplicar la migración `0007`; seeds de tips, emparejamientos y general; rehacer el frontend del acordeón; E2E y verificación en navegador; reemplazar "contáctanos" del footer por una dirección real.
+- Referencias: `docs/docs-agents/fases.md` (Fase 13), `docs/docs-agents/reglas-legal.md`, `AGENTS.md` secciones 1 y 7.

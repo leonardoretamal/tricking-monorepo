@@ -8,22 +8,22 @@ Si una regla nueva aparece, primero se declara en su documento referenciado y de
 
 Tricking Monorepo es un sitio web de tricking que reúne:
 
-- Los trucos de Loopkicks (loopkickstricking.com): vertical kicks, backward, forward, inside, outside, variations, transitions, stances y la explore page. Es la fuente primaria del contenido y de la clasificación de trucos, y se obtiene por scraping. Los vídeos se descargan y se suben a Cloudflare R2.
-- Los tutoriales de Kojo's Trick Lab: tutoriales largos que se obtienen por scraping de Instagram con insta-fetcher y, si hace falta, scraping web con cheerio.
+- Los trucos de Loopkicks (loopkickstricking.com): vertical kicks, backward, forward, inside, outside, variations, transitions, stances y la explore page. Es la fuente primaria del contenido y de la clasificación de trucos, y se obtiene por scraping. Sus vídeos son contenido gratuito: se muestran desde su URL original, sin descargarlos ni almacenarlos.
+- El conocimiento de técnica de Kojo's Trick Lab: los nombres de trucos/técnicas que enseña y sus tips. Se obtiene de la API pública de `kojostricklab.com` (el sitio es una SPA; scraping web con cheerio como respaldo, Instagram con insta-fetcher como respaldo opcional). De Kojo NO se usan sus vídeos.
 - Una sección de tips técnicos sobre mirada y ejecución, contenido propio curado por el usuario y cargado manualmente en la base de datos en la Fase 16.
 
 Fuentes de datos:
 
-- Loopkicks: fuente primaria del contenido y la clasificación. Scraping. Los vídeos se descargan y se suben a R2.
+- Loopkicks: fuente primaria del contenido y la clasificación. Scraping. Sus vídeos se muestran desde el original, sin re-hospedar.
 - TrickingAPI: fuente complementaria. Provee IDs estandarizados, categorías, prereqs, next tricks y descripciones. No es la API de Loopkicks; son proyectos independientes. Se usa como semilla mediante el paquete `@trickingapi/tricks-core-data` y el cliente tipado `@trickingapi/tricking-ts`.
-- Kojo's Trick Lab: fuente de tutoriales largos vía scraping de Instagram con insta-fetcher y, si hace falta, cheerio.
+- Kojo's Trick Lab: fuente del conocimiento de técnica (nombres y tips), vía la API pública de su sitio; cheerio e insta-fetcher quedan como respaldo. Sus vídeos no se usan.
 - Tips técnicos: contenido propio, carga manual, sin scraping.
 
 Características obligatorias del producto:
 
 - i18n con idioma por defecto en español.
 - Dos modos de tema (claro y oscuro) que respetan la preferencia del usuario.
-- Almacenamiento de vídeos en Cloudflare R2.
+- Almacenamiento en Cloudflare R2 reservado a vídeos propios o con licencia (de terceros no se almacena nada). Ver `docs/docs-agents/reglas-legal.md`.
 - Base de datos en Neon con Drizzle ORM.
 
 Idioma base del repositorio: español neutro latinoamericano.
@@ -160,7 +160,7 @@ Resumen de las decisiones por defecto:
 - Hosting web: Cloudflare Pages.
 - Base de datos: Neon (PostgreSQL serverless).
 - ORM y migraciones: Drizzle ORM + drizzle-kit.
-- Almacenamiento de vídeos: Cloudflare R2.
+- Almacenamiento de vídeos: Cloudflare R2, reservado a contenido propio o con licencia (los vídeos de terceros, como los de Loopkicks, se enlazan a su original; no se almacenan).
 - Cola y caché: Upstash Redis + Upstash QStash.
 - Validación: Zod v4.
 - i18n: next-intl (defaultLocale `es`).
@@ -272,7 +272,7 @@ Resumen: dos temas, `tricking-light` (default) y `tricking-dark` (prefersdark). 
 
 Para reducir peticiones y ahorrar CPU time en Cloudflare Pages, se cachea en localStorage lo que no sea sensible. El wrapper vive en `packages/shared/src/storage.ts` y valida al leer con Zod.
 
-Qué se cachea: catálogo de trucos, descripciones largas de Kojo, preferencia de idioma, última posición del scroll y filtros, URLs de vídeos R2 con TTL corto, resultados de búsqueda con TTL de 5 a 15 minutos, estado expandido del acordeón con TTL de 7 días, tema con TTL de 1 año, y tips de mirada con TTL de 30 días.
+Qué se cachea: catálogo de trucos, tips de técnica de Kojo, preferencia de idioma, última posición del scroll y filtros, URLs de vídeos R2 con TTL corto, resultados de búsqueda con TTL de 5 a 15 minutos, estado expandido del acordeón con TTL de 7 días, tema con TTL de 1 año, y tips de mirada con TTL de 30 días.
 
 Qué no se cachea: tokens de sesión (usar cookie httpOnly), datos sensibles de usuario y estado del servidor en tiempo real.
 
@@ -543,7 +543,7 @@ Esta sección no contiene reglas activas. Contiene lo que queda fuera del alcanc
 
 - Chatbot conversacional que responda preguntas sobre trucos: cómo se hace un b-twist, qué aprender después de un 540 kick, diferencia entre aerial y b-kick, entre otras.
 - También debería responder preguntas sobre tips de mirada, usando la sección de Tips de la Fase 16 como base de conocimiento.
-- RAG sobre las descripciones de TrickingAPI, los captions de Kojo, las notas extraídas de Loopkicks y los tips de mirada.
+- RAG sobre las descripciones de TrickingAPI, los tips de técnica de Kojo, las notas extraídas de Loopkicks y los tips de mirada.
 - Vector store recomendado: pgvector dentro del propio Neon (aprovecha el free tier, evita proveedores externos como Pinecone o Weaviate).
 - Embeddings sugeridos: OpenAI text-embedding-3-small o Voyage AI voyage-3-lite (bajo costo).
 - Modelo de generación sugerido: GPT-4o mini, Claude Haiku o Gemini Flash (baja latencia, bajo costo).
@@ -661,7 +661,7 @@ El feedback de usuarios (formulario, mini dashboard y aviso por correo) dejó de
 - Exportar rutinas a calendario: formato ICS para integración con Google Calendar o similares.
 - API pública para terceros: exponer endpoints de solo lectura con rate limiting y API keys.
 - Comunidad ligera: comentarios por truco con moderación y antispam (Akismet o similar). La parte de feedback de usuarios se cubre en la Fase 18.
-- Traducción automática de captions de Kojo: si el usuario decide soportar más idiomas en el contenido del scraper.
+- Traducción automática de los tips de técnica de Kojo: si el usuario decide soportar más idiomas en el contenido del scraper.
 - Modo contraste para vídeos claros: overlay automático cuando el vídeo tiene fondo blanco y el modo del sitio es oscuro.
 
 ### 28.6 Cosas que explícitamente NO se hacen por ahora

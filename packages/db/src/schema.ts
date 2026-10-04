@@ -42,12 +42,48 @@ export const tutorials = pgTable('tutorials', {
   caption: text('caption'),
   author: text('author'),
   vimeoId: text('vimeo_id'),
+  // Nivel del tutorial de Kojo (Beginner / Intermediate / Advanced / Elite).
+  level: text('level'),
+  // Tips de tecnica PROPIOS (contenido original, no de Kojo) que acompanan a la tecnica.
+  tips: text('tips'),
+  tipsEs: text('tips_es'),
   locale: text('locale').notNull().default('es'),
   permalink: text('permalink'),
   postedAt: timestamp('posted_at', { withTimezone: true }),
   deletedAt: timestamp('deleted_at', { withTimezone: true }),
   ...timestamps,
 });
+
+// Relacion tecnica de Kojo -> truco del catalogo (Loopkicks/TrickingAPI). Se puebla por
+// emparejamiento automatico de nombres mas revision curada.
+export const tutorialTricks = pgTable(
+  'tutorial_tricks',
+  {
+    tutorialId: integer('tutorial_id')
+      .notNull()
+      .references(() => tutorials.id, { onDelete: 'cascade' }),
+    trickId: text('trick_id')
+      .notNull()
+      .references(() => tricks.id, { onDelete: 'cascade' }),
+  },
+  (table) => [
+    primaryKey({ columns: [table.tutorialId, table.trickId] }),
+    index('tutorial_tricks_trick_id_idx').on(table.trickId),
+  ],
+);
+
+// Bloques de contenido curados por clave y locale (por ejemplo el resumen general de
+// tecnicas). El texto lo escribe el proyecto y se aprueba antes de publicarse.
+export const contentBlocks = pgTable(
+  'content_blocks',
+  {
+    key: text('key').notNull(),
+    locale: text('locale').notNull().default('es'),
+    content: text('content').notNull(),
+    ...timestamps,
+  },
+  (table) => [primaryKey({ columns: [table.key, table.locale] })],
+);
 
 export const tricks = pgTable(
   'tricks',
@@ -379,5 +415,9 @@ export type Video = typeof videos.$inferSelect;
 export type NewVideo = typeof videos.$inferInsert;
 export type Tutorial = typeof tutorials.$inferSelect;
 export type NewTutorial = typeof tutorials.$inferInsert;
+export type TutorialTrick = typeof tutorialTricks.$inferSelect;
+export type NewTutorialTrick = typeof tutorialTricks.$inferInsert;
+export type ContentBlock = typeof contentBlocks.$inferSelect;
+export type NewContentBlock = typeof contentBlocks.$inferInsert;
 export type GazeTip = typeof gazeTips.$inferSelect;
 export type NewGazeTip = typeof gazeTips.$inferInsert;

@@ -87,7 +87,7 @@ Para reducir peticiones y ahorrar CPU time en Cloudflare Pages, se cachea en loc
 Qué se cachea:
 
 - Catálogo de trucos.
-- Descripciones largas de Kojo.
+- Tips de técnica de Kojo.
 - Preferencia de idioma.
 - Última posición del scroll y filtros.
 - URLs de vídeos de R2 con TTL corto.

@@ -224,38 +224,38 @@ Criterio de cierre: búsqueda funcional desde cualquier página, con cache y sin
 
 Notas de cierre: columna generada `tricks.search_vector` (tsvector) con índice GIN en la migración `0005`; el endpoint `GET /api/search` usa `websearch_to_tsquery('simple', q)` y `ts_rank`, y cubre trucos, variaciones, transiciones y posturas con `count()` y paginación en SQL. Input en la navbar con debounce que navega a `/es/search?q=` y página dedicada con resultados agrupados por tipo y resaltado con `<mark>`. Cache de 10 min vía TanStack Query. Verificado en navegador real (17 resultados para "aerial", agrupados y resaltados). E2E en `e2e/search.spec.ts`.
 
-## Fase 13: Tutoriales de Kojo
+## Fase 13: Técnicas de Kojo
+
+Estado: en curso (rediseño).
+
+Objetivo: de Kojo's Trick Lab NO se toman los vídeos. Se toma su conocimiento de técnica: los nombres de trucos/técnicas que enseña y sus tips. Se presenta en un acordeón junto a los trucos de Loopkicks/TrickingAPI.
+
+- 13.1. Extraer de la API pública de `kojostricklab.com` el índice de técnicas (título, autor, nivel, fecha, permalink). El scraping web con cheerio y el de Instagram con insta-fetcher quedan como respaldo; la cola Upstash, reservada.
+- 13.2. Guardar el índice en `tutorials` (título, autor, nivel, fecha, `vimeo_id` como dato, permalink).
+- 13.3. Emparejar cada técnica con los trucos del catálogo (tabla `tutorial_tricks`): automático por nombre normalizado más revisión curada.
+- 13.4. Tips de técnica PROPIOS (contenido original del proyecto) por técnica, en `tutorials.tips`/`tips_es`, curados en `packages/db/src/seed/kojo/tips.json`.
+- 13.5. Bloque "General" (resumen propio) en `content_blocks` (clave `techniques_general`), redactado por el agente y aprobado por el usuario.
+- 13.6. Acordeón accesible (`aria-expanded`, `aria-controls`, `role="region"`, teclado): por técnica muestra título, nivel, tips, trucos relacionados (Loopkicks) y crédito con enlace al tutorial original de Kojo. Sin vídeo.
+- 13.7. Estado expandido en localStorage con TTL de 7 días; virtualización si supera 100.
+- 13.8. i18n es/en de la interfaz; los nombres de técnicas se mantienen (términos del deporte) y los tips son contenido propio traducido.
+
+Criterio de cierre: acordeón de técnicas propio y accesible, sin vídeos de Kojo, con tips curados, trucos del catálogo relacionados y crédito al original.
+
+Notas: la API pública de Kojo (`GET /api/user/get-more-recent-videos`) solo entrega título, autor, nivel (Beginner/Intermediate/Advanced/Elite), fecha y `vimeo_id`; no trae texto de técnica, por eso los tips son propios. Vimeo bloquea el embed en dominios de terceros (403) y sus vídeos no se usan. El diseño anterior (listado de tutoriales con enlace a su vídeo) se descartó: la sección pasa a ser "Técnicas de Kojo". Migración `0007`: `tutorials.level/tips/tips_es`, tablas `tutorial_tricks` y `content_blocks`.
+
+## Fase 14: Vídeos de trucos (Loopkicks, sin re-hospedar)
 
 Estado: completada.
 
-- 13.1. Worker en `apps/scraper` con insta-fetcher y cola Upstash.
-- 13.2. Extracción de captions y guardado en la tabla `tutorials`.
-- 13.3. Componente acordeón con DaisyUI collapse: versión simple y expandida.
-- 13.4. Accesibilidad del acordeón: `aria-expanded`, `aria-controls`, `role="region"` y teclado.
-- 13.5. Virtualización si el listado supera 100 ítems.
-- 13.6. Persistencia del estado expandido en localStorage con TTL de 7 días.
-- 13.7. Rate limiting y respeto por `robots.txt` de Instagram.
-- 13.8. i18n: el contenido de Kojo queda en español fijo si no se traduce.
+- 14.1. Extraer las URLs de vídeo por truco desde Loopkicks (`apps/scraper/src/scrape-loopkicks-videos.ts`).
+- 14.2. Guardar en `videos` la URL original de Loopkicks (`status='external'`) y mostrarla en el detalle de truco.
+- 14.3. Reproductor en el detalle (`trick-video-player.tsx`), con crédito y enlace a Loopkicks.
+- 14.4. Cache de URLs en localStorage con TTL corto.
+- 14.5. R2 reservado a vídeos propios o con licencia; el uploader (`apps/scraper/src/upload-videos.ts`) exige `--confirm-rights`.
 
-Criterio de cierre: acordeón funcional y accesible, con contenido real extraído de Instagram.
+Criterio de cierre: vídeos reproducidos desde la fuente original de Loopkicks (contenido gratuito), con crédito, sin almacenar copias.
 
-Notas de cierre: el sitio `kojostricklab.com` es una SPA de Vue (el HTML inicial es una cáscara vacía), así que la fuente real fue su API pública `GET /api/user/get-more-recent-videos` con cheerio como respaldo inerte. Se extrajeron y sembraron 417 tutoriales de la categoría "Trick Tutorials" con permalink y fecha (`externalId` estable). El acordeón (`packages/ui/src/accordion.tsx`) es accesible y el estado expandido se persiste 7 días en localStorage. Virtualización al superar 100. Instagram con insta-fetcher y la cola Upstash quedan como respaldo opcional, sin ejecutar por falta de credenciales. Cada tutorial se muestra con título, autor, fecha y enlace al original; Vimeo bloquea el embed en dominios de terceros (403), así que no se embebe ni se aloja el vídeo. E2E en `e2e/tutorials.spec.ts`.
-
-## Fase 14: Almacenamiento de vídeos (R2)
-
-Estado: completada.
-
-- 14.1. Configurar bucket R2 y credenciales.
-- 14.2. Script de descarga y subida de vídeos de Loopkicks.
-- 14.3. Reproductor en la vista de detalle con URL firmada o pública.
-- 14.4. Cache de URLs en localStorage con TTL.
-- 14.5. Optimización: compresión H.264/H.265 y resolución moderada para no pasar de 10 GB.
-
-Criterio de cierre: vídeos servidos desde R2, con reproducción fluida en móvil y sin superar el free tier.
-
-Notas de cierre: se extrajeron 556 vídeos reales de Loopkicks (una URL por truco) y se sembraron en `videos` con `status='external'` y la URL original, por lo que el reproductor funciona hoy. La tubería de R2 (`apps/scraper/src/upload-videos.ts`, con transcode opcional 720p H.264 vía `ffmpeg`) queda lista: al existir credenciales de R2 y `R2_PUBLIC_URL`, sube y la semilla pasa a `status='ready'` con `r2Key`. El reproductor (`trick-video-player.tsx`) vive en el detalle de truco con cache de URL de 5 min. Pendientes de entorno: no hay credenciales de R2 en `.env` y `ffmpeg` no está instalado, así que no se pudo subir ni transcodificar todavía. E2E en `e2e/trick-video.spec.ts`.
-
-Política de contenido de terceros (2026-10-04): los vídeos de Loopkicks NO se re-hospedan. Cada truco guarda la URL original y el reproductor la enlaza; el vídeo de prueba que se había subido a R2 se borró. R2 queda reservado para contenido propio o con licencia (el uploader exige `--confirm-rights`). Se agregó la columna `tricks.how_to`/`how_to_es` para la descripción propia de "cómo se hace" (curada en `packages/db/src/seed/how-to/`, script `db:how-to`, con dos ejemplos), visible en el detalle. El pie de página lleva el aviso de "no afiliado" y el crédito a las fuentes.
+Notas de cierre: se extrajeron 556 vídeos reales de Loopkicks (una URL por truco) y se sembraron en `videos` con `status='external'` y la URL original; el reproductor funciona desde ahí. Política de terceros: no se re-hospedan; el vídeo de prueba que se había subido a R2 se borró y el uploader se niega a correr salvo `--confirm-rights`. R2 queda reservado a contenido propio o con licencia. Se agregó `tricks.how_to`/`how_to_es` para la descripción propia ("cómo se hace") en `packages/db/src/seed/how-to/` (script `db:how-to`), visible en el detalle. El pie de página lleva el aviso de "no afiliado" y el crédito a las fuentes. E2E en `e2e/trick-video.spec.ts`.
 
 ## Fase 15: Enlaces cruzados entre secciones
 
@@ -264,7 +264,7 @@ Estado: pendiente.
 - 15.1. Cada truco del catálogo enlaza a sus variaciones, transiciones y stance relacionado.
 - 15.2. Cada variación y transición enlaza de vuelta al truco base.
 - 15.3. Cada tip de mirada enlaza a los tipos de truco que aplican.
-- 15.4. Cada tutorial de Kojo enlaza al truco que enseña.
+- 15.4. Cada técnica de Kojo enlaza al truco del catálogo que enseña.
 - 15.5. Componente de "relacionados" reutilizable en todas las vistas de detalle.
 - 15.6. Cache de relaciones en localStorage con TTL de 1 día.
 

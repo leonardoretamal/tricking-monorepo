@@ -35,8 +35,8 @@ Las Fases 0, 1 y 2 se completaron el 2026-10-03. Las Fases 3 a 18 quedan pendien
 | 10 | Stances | Pendiente |
 | 11 | Explore Page | Pendiente |
 | 12 | Búsqueda global | Pendiente |
-| 13 | Tutoriales de Kojo | Pendiente |
-| 14 | Almacenamiento de vídeos (R2) | Pendiente |
+| 13 | Técnicas de Kojo | Pendiente |
+| 14 | Vídeos de trucos (Loopkicks, sin re-hospedar) | Pendiente |
 | 15 | Enlaces cruzados entre secciones | Pendiente |
 | 16 | Tips de mirada | Pendiente |
 | 17 | Pulido y validación final | Pendiente |
@@ -46,13 +46,13 @@ Las Fases 0, 1 y 2 se completaron el 2026-10-03. Las Fases 3 a 18 quedan pendien
 
 **Proyecto:** Tricking Monorepo.
 
-Es un sitio web de tricking que reúne los trucos de Loopkicks (vertical kicks, backward, forward, inside, outside, variations, transitions, stances y explore page), los tutoriales de Kojo's Trick Lab, y una sección de tips técnicos sobre mirada y ejecución. Debe tener i18n por defecto en español, dos modos de tema (claro y oscuro) que respetan la preferencia del usuario, almacenamiento de vídeos en Cloudflare R2, y una base de datos en Neon con Drizzle ORM.
+Es un sitio web de tricking que reúne los trucos de Loopkicks (vertical kicks, backward, forward, inside, outside, variations, transitions, stances y explore page), el conocimiento de técnica de Kojo's Trick Lab, y una sección de tips técnicos sobre mirada y ejecución. Debe tener i18n por defecto en español, dos modos de tema (claro y oscuro) que respetan la preferencia del usuario, almacenamiento de vídeos en Cloudflare R2 reservado a contenido propio o con licencia, y una base de datos en Neon con Drizzle ORM.
 
 **Fuentes de datos:**
 
-- **Loopkicks** (loopkickstricking.com): fuente primaria del contenido y la clasificación de trucos. Se obtiene por scraping. Los vídeos se descargan y suben a R2.
+- **Loopkicks** (loopkickstricking.com): fuente primaria del contenido y la clasificación de trucos. Se obtiene por scraping. Sus vídeos son contenido gratuito: se muestran desde su URL original, sin descargarlos ni almacenarlos.
 - **TrickingAPI**: fuente complementaria. Provee IDs estandarizados, categorías, prereqs, next tricks y descripciones. No es la API de Loopkicks, son proyectos independientes. Se usa como semilla mediante el paquete `@trickingapi/tricks-core-data` y el cliente tipado `@trickingapi/tricking-ts`.
-- **Kojo's Trick Lab**: fuente de tutoriales largos. Se obtiene por scraping de Instagram con insta-fetcher y, si hace falta, scraping web con cheerio.
+- **Kojo's Trick Lab**: fuente del conocimiento de técnica (nombres de trucos/técnicas y tips), obtenida de la API pública de su sitio; el scraping web con cheerio y el de Instagram con insta-fetcher quedan como respaldo. Sus vídeos no se usan.
 - **Tips técnicos**: contenido propio curado por el usuario, cargado manualmente en la base de datos en la Fase 16.
 
 Idioma base del repositorio: español neutro latinoamericano.
@@ -514,35 +514,37 @@ El proyecto se organiza por secciones de contenido, no por capas técnicas. Cada
 
 **Criterio de cierre:** búsqueda funcional desde cualquier página, con cache y sin sobrecargar al servidor.
 
-### Fase 13: Tutoriales de Kojo
+### Fase 13: Técnicas de Kojo
 
-- 13.1. Worker en `apps/scraper` con insta-fetcher y cola Upstash.
-- 13.2. Extracción de captions y guardado en tabla tutorials.
-- 13.3. Componente acordeón con DaisyUI collapse: versión simple y expandida.
-- 13.4. Accesibilidad del acordeón: `aria-expanded`, `aria-controls`, `role="region"`, teclado.
-- 13.5. Virtualización si el listado supera 100 ítems.
-- 13.6. Persistencia del estado expandido en localStorage con TTL de 7 días.
-- 13.7. Rate limiting y respeto por robots.txt de Instagram.
-- 13.8. i18n: el contenido de Kojo queda en español fijo si no se traduce.
+De Kojo NO se toman los vídeos: se toma su conocimiento de técnica (nombres de trucos/técnicas y tips) y se presenta en un acordeón junto a los trucos de Loopkicks/TrickingAPI.
 
-**Criterio de cierre:** acordeón funcional, accesible, con contenido real extraído de Instagram.
+- 13.1. Extraer el índice de técnicas de la API pública de `kojostricklab.com` (título, autor, nivel, fecha, permalink). Cheerio e Instagram (insta-fetcher) quedan como respaldo; Upstash, reservada.
+- 13.2. Guardar el índice en `tutorials` (título, autor, nivel, fecha, `vimeo_id` como dato, permalink).
+- 13.3. Emparejar cada técnica con trucos del catálogo (`tutorial_tricks`): automático por nombre más revisión curada.
+- 13.4. Tips de técnica PROPIOS (`tutorials.tips`/`tips_es`), curados en `packages/db/src/seed/kojo/tips.json`.
+- 13.5. Bloque "General" en `content_blocks` (clave `techniques_general`), redactado por el agente y aprobado por el usuario.
+- 13.6. Acordeón accesible: título, nivel, tips, trucos relacionados y crédito con enlace al original. Sin vídeo.
+- 13.7. Estado expandido en localStorage con TTL de 7 días; virtualización si supera 100.
+- 13.8. i18n es/en de la interfaz; los nombres de técnicas se mantienen y los tips propios se traducen.
 
-### Fase 14: Almacenamiento de vídeos (R2)
+**Criterio de cierre:** acordeón de técnicas propio y accesible, sin vídeos de Kojo, con tips curados, trucos relacionados y crédito.
 
-- 14.1. Configurar bucket R2 y credenciales.
-- 14.2. Script de descarga y subida de vídeos de Loopkicks.
-- 14.3. Reproductor en la vista de detalle con URL firmada o pública.
-- 14.4. Cache de URLs en localStorage con TTL.
-- 14.5. Optimización: compresión H.264/H.265, resolución moderada para no pasar de 10 GB.
+### Fase 14: Vídeos de trucos (Loopkicks, sin re-hospedar)
 
-**Criterio de cierre:** vídeos servidos desde R2, con reproducción fluida en móvil y sin superar el free tier.
+- 14.1. Extraer las URLs de vídeo por truco desde Loopkicks.
+- 14.2. Guardar en `videos` la URL original de Loopkicks (`status='external'`) y mostrarla en el detalle.
+- 14.3. Reproductor en el detalle, con crédito y enlace a Loopkicks.
+- 14.4. Cache de URLs en localStorage con TTL corto.
+- 14.5. R2 reservado a vídeos propios o con licencia; el uploader exige `--confirm-rights`.
+
+**Criterio de cierre:** vídeos reproducidos desde la fuente original de Loopkicks, con crédito y sin almacenar copias.
 
 ### Fase 15: Enlaces cruzados entre secciones
 
 - 15.1. Cada truco del catálogo enlaza a sus variaciones, transiciones y stance relacionado.
 - 15.2. Cada variación y transición enlaza de vuelta al truco base.
 - 15.3. Cada tip de mirada enlaza a los tipos de truco que aplican.
-- 15.4. Cada tutorial de Kojo enlaza al truco que enseña.
+- 15.4. Cada técnica de Kojo enlaza al truco del catálogo que enseña.
 - 15.5. Componente de "relacionados" reutilizable en todas las vistas de detalle.
 - 15.6. Cache de relaciones en localStorage con TTL de 1 día.
 
@@ -736,7 +738,7 @@ Colores propios de los bloques destacados de Tips:
 
 Para reducir peticiones y ahorrar CPU time en Cloudflare Pages, se cachea en localStorage lo que no sea sensible.
 
-**Qué se cachea:** catálogo de trucos, descripciones largas de Kojo, preferencia de idioma, última posición del scroll y filtros, URLs de vídeos R2 con TTL corto, resultados de búsqueda con TTL de 5 a 15 minutos, estado expandido del acordeón con TTL de 7 días, tema con TTL de 1 año, tips de mirada con TTL de 30 días.
+**Qué se cachea:** catálogo de trucos, tips de técnica de Kojo, preferencia de idioma, última posición del scroll y filtros, URLs de vídeos R2 con TTL corto, resultados de búsqueda con TTL de 5 a 15 minutos, estado expandido del acordeón con TTL de 7 días, tema con TTL de 1 año, tips de mirada con TTL de 30 días.
 
 **Qué no se cachea:** tokens de sesión (usar cookie httpOnly), datos sensibles de usuario, estado del servidor en tiempo real.
 
@@ -1059,7 +1061,7 @@ Debe quedar escrito con este contenido mínimo:
 
 - Chatbot conversacional que responda preguntas sobre trucos: cómo se hace un b-twist, qué aprender después de un 540 kick, diferencia entre aerial y b-kick, etc.
 - También debería responder preguntas sobre tips de mirada, usando la sección de Tips de la Fase 16 como base de conocimiento.
-- RAG sobre las descripciones de TrickingAPI, los captions de Kojo, las notas extraídas de Loopkicks y los tips de mirada.
+- RAG sobre las descripciones de TrickingAPI, los tips de técnica de Kojo, las notas extraídas de Loopkicks y los tips de mirada.
 - Vector store recomendado: pgvector dentro del propio Neon (aprovecha el free tier, evita proveedores externos como Pinecone o Weaviate).
 - Embeddings sugeridos: OpenAI text-embedding-3-small o Voyage AI voyage-3-lite (bajo costo).
 - Modelo de generación sugerido: GPT-4o mini, Claude Haiku o Gemini Flash (baja latencia, bajo costo).
@@ -1180,7 +1182,7 @@ Estas son propuestas, no compromisos. El usuario decide cuáles se activan.
 - Exportar rutinas a calendario: formato ICS para integración con Google Calendar o similares.
 - API pública para terceros: exponer endpoints de solo lectura con rate limiting y API keys.
 - Comunidad ligera: comentarios por truco con moderación y antispam (Akismet o similar).
-- Traducción automática de captions de Kojo: si el usuario decide soportar más idiomas en el contenido del scraper.
+- Traducción automática de los tips de técnica de Kojo: si el usuario decide soportar más idiomas en el contenido del scraper.
 - Modo contraste para vídeos claros: overlay automático cuando el vídeo tiene fondo blanco y el modo del sitio es oscuro.
 
 ### Cosas que explícitamente NO se hacen por ahora
