@@ -1,6 +1,7 @@
 import { backward } from './backward';
 import { forward } from './forward';
 import { inside } from './inside';
+import { outside } from './outside';
 import type { SectionDifficulty } from './types';
 import { verticalKicks } from './vertical-kicks';
 
@@ -11,4 +12,5 @@ export const DIFFICULTY_BY_TRICK: SectionDifficulty = {
   ...backward,
   ...forward,
   ...inside,
+  ...outside,
 };
