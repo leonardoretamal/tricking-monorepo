@@ -24,6 +24,8 @@ export interface TutorialListItem {
   id: number;
   externalId: string;
   caption: string | null;
+  author: string | null;
+  vimeoId: string | null;
   permalink: string | null;
   postedAt: Date | null;
 }
@@ -75,6 +77,8 @@ export async function listTutorials(params: ListTutorialsParams): Promise<Pagina
       id: tutorials.id,
       externalId: tutorials.externalId,
       caption: tutorials.caption,
+      author: tutorials.author,
+      vimeoId: tutorials.vimeoId,
       permalink: tutorials.permalink,
       postedAt: tutorials.postedAt,
     })

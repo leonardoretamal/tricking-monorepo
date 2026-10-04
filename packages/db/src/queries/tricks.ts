@@ -58,6 +58,8 @@ export interface TrickRelated {
 }
 
 export interface TrickDetail extends TrickListItem {
+  howTo: string | null;
+  howToEs: string | null;
   prereqs: TrickRelated[];
   nextTricks: TrickRelated[];
 }
@@ -177,6 +179,8 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
       name: tricks.name,
       description: tricks.description,
       descriptionEs: tricks.descriptionEs,
+      howTo: tricks.howTo,
+      howToEs: tricks.howToEs,
       difficulty: tricks.difficulty,
       section: tricks.section,
       loopkicksSlug: tricks.loopkicksSlug,
@@ -227,6 +231,8 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     name: trick.name,
     description: trick.description,
     descriptionEs: trick.descriptionEs,
+    howTo: trick.howTo,
+    howToEs: trick.howToEs,
     difficulty: trick.difficulty,
     section: trick.section,
     loopkicksSlug: trick.loopkicksSlug,

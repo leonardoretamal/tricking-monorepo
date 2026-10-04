@@ -14,6 +14,8 @@ export const tutorialListItemSchema = z.object({
   id: z.number(),
   externalId: z.string(),
   caption: z.string().nullable(),
+  author: z.string().nullable(),
+  vimeoId: z.string().nullable(),
   permalink: z.string().nullable(),
   postedAt: z.string().nullable(),
 });

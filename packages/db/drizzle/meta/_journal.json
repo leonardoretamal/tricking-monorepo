@@ -43,6 +43,13 @@
       "when": 1791141621181,
       "tag": "0005_skinny_quicksilver",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1791147437467,
+      "tag": "0006_freezing_deadpool",
+      "breakpoints": true
     }
   ]
 }

@@ -15,6 +15,8 @@ import { loadEnvFile } from './load-env';
 interface ScrapedTutorial {
   externalId: string;
   title: string;
+  author: string | null;
+  vimeoId: string | null;
   permalink: string | null;
   postedAt: Date | null;
 }
@@ -46,7 +48,7 @@ function parseTutorials(raw: unknown): ScrapedTutorial[] {
     if (!isRecord(entry)) {
       continue;
     }
-    const { externalId, title, permalink, postedAt } = entry;
+    const { externalId, title, permalink, postedAt, author, vimeoId } = entry;
     if (typeof externalId !== 'string' || externalId.trim() === '') {
       continue;
     }
@@ -56,6 +58,8 @@ function parseTutorials(raw: unknown): ScrapedTutorial[] {
     result.push({
       externalId,
       title,
+      author: typeof author === 'string' && author.trim() !== '' ? author : null,
+      vimeoId: typeof vimeoId === 'string' && vimeoId.trim() !== '' ? vimeoId : null,
       permalink: typeof permalink === 'string' && permalink.trim() !== '' ? permalink : null,
       postedAt: parsePostedAt(postedAt),
     });
@@ -85,6 +89,8 @@ async function main(): Promise<void> {
         source: 'kojostricklab',
         externalId: tutorial.externalId,
         caption: tutorial.title,
+        author: tutorial.author,
+        vimeoId: tutorial.vimeoId,
         locale: 'en',
         permalink: tutorial.permalink,
         postedAt: tutorial.postedAt,
@@ -93,6 +99,8 @@ async function main(): Promise<void> {
         target: tutorials.externalId,
         set: {
           caption: tutorial.title,
+          author: tutorial.author,
+          vimeoId: tutorial.vimeoId,
           permalink: tutorial.permalink,
           postedAt: tutorial.postedAt,
           deletedAt: null,

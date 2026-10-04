@@ -2,7 +2,7 @@
   "tutorials": {
     "title": "Kojo Tutorials",
     "description": "Tutorials from Kojo's Trick Lab, with their original link and publish date.",
-    "contentNote": "The tutorials are in English and are shown as Kojo publishes them.",
+    "contentNote": "The tutorials are in English; they are shown with their title, author and a link to the original. The content belongs to Kojo's Trick Lab and its authors.",
     "filters": {
       "searchLabel": "Search",
       "searchPlaceholder": "Tutorial title",
@@ -37,6 +37,7 @@
       "status": "Page {page} of {totalPages}"
     },
     "untitled": "Untitled tutorial",
+    "author": "Author: {name}",
     "openOnSite": "View on Kojo's Trick Lab",
     "expand": "Show details",
     "collapse": "Hide details"

@@ -77,6 +77,7 @@
     "detail": {
       "description": "Description",
       "noDescription": "This trick does not have a description yet.",
+      "howTo": "How to do it",
       "difficultyLabel": "Difficulty",
       "prereqs": "Prerequisites",
       "nextTricks": "Next tricks",
@@ -88,7 +89,8 @@
         "emptyTitle": "No video",
         "emptyDescription": "This trick does not have a video yet.",
         "label": "Demo video of {name}",
-        "fallback": "Your browser does not support video playback."
+        "fallback": "Your browser does not support video playback.",
+        "source": "Video source:"
       }
     }
   }

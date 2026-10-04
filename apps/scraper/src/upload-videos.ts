@@ -7,10 +7,12 @@ import { fileURLToPath } from 'node:url';
 
 import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 
-// Descarga y subida de los videos de Loopkicks a Cloudflare R2 (Fase 14).
+// Subida de videos a Cloudflare R2 (Fase 14). RESERVADO para videos propios o con
+// licencia: los videos de Loopkicks/Kojo son de terceros y NO se re-hospedan (solo se
+// enlazan al original). El script se niega a correr salvo que se pase --confirm-rights.
 //
 // - Entrada: apps/scraper/data/loopkicks-videos.json (URLs reales del scraper).
-// - Salida:  apps/scraper/data/r2-videos-manifest.json (manifiesto que consume la semilla).
+// - Salida:  apps/scraper/data/r2-videos-manifest.json (manifiesto opcional).
 // - Credenciales SOLO por variables de entorno (R2_ACCOUNT_ID, R2_ACCESS_KEY_ID,
 //   R2_SECRET_ACCESS_KEY, R2_BUCKET, R2_PUBLIC_URL). Nunca se imprimen.
 // - Si falta cualquiera de las credenciales, el script falla con un mensaje claro y no
@@ -246,6 +248,21 @@ async function download(url: string, destination: string): Promise<void> {
 
 async function main(): Promise<void> {
   loadEnv();
+
+  // Guarda de derechos: por defecto NO se sube nada. Los videos de Loopkicks son de
+  // terceros y no se re-hospedan (solo se enlazan); R2 queda reservado para videos propios
+  // o con licencia. Para subir contenido sobre el que tienes derechos, pasa --confirm-rights.
+  const rightsConfirmed = parseOption('confirm-rights') !== null;
+  if (!rightsConfirmed) {
+    console.error(
+      'Subida desactivada: no se re-hospedan videos de terceros (Loopkicks/Kojo). ' +
+        'R2 se reserva para videos propios o con licencia. Si tienes derechos sobre el ' +
+        'contenido, vuelve a correr con --confirm-rights.',
+    );
+    process.exitCode = 1;
+    return;
+  }
+
   const missing = REQUIRED_ENV.filter((name) => {
     const value = process.env[name];
     return value === undefined || value.trim() === '';

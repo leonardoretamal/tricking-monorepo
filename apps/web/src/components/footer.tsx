@@ -15,6 +15,7 @@ export async function Footer() {
     { href: '/variations', label: tNav('variations') },
     { href: '/transitions', label: tNav('transitions') },
     { href: '/stances', label: tNav('stances') },
+    { href: '/tutorials', label: tNav('tutorials') },
     { href: '/tips', label: tNav('tips') },
     { href: '/explore', label: tNav('explore') },
   ];
@@ -42,9 +43,12 @@ export async function Footer() {
         </nav>
       </div>
       <div className="border-t border-border">
-        <p className="mx-auto w-full max-w-6xl px-4 py-4 text-xs text-muted">
-          {year} {t('rights')}
-        </p>
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-4 text-xs text-muted">
+          <p>
+            {year} {t('rights')}
+          </p>
+          <p>{t('disclaimer')}</p>
+        </div>
       </div>
     </footer>
   );

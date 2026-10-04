@@ -239,7 +239,7 @@ Estado: completada.
 
 Criterio de cierre: acordeón funcional y accesible, con contenido real extraído de Instagram.
 
-Notas de cierre: el sitio `kojostricklab.com` es una SPA de Vue (el HTML inicial es una cáscara vacía), así que la fuente real fue su API pública `GET /api/user/get-more-recent-videos` con cheerio como respaldo inerte. Se extrajeron y sembraron 417 tutoriales de la categoría "Trick Tutorials" con permalink y fecha (`externalId` estable). El acordeón (`packages/ui/src/accordion.tsx`) es accesible y el estado expandido se persiste 7 días en localStorage. Virtualización al superar 100. Instagram con insta-fetcher y la cola Upstash quedan como respaldo opcional, sin ejecutar por falta de credenciales. E2E en `e2e/tutorials.spec.ts`.
+Notas de cierre: el sitio `kojostricklab.com` es una SPA de Vue (el HTML inicial es una cáscara vacía), así que la fuente real fue su API pública `GET /api/user/get-more-recent-videos` con cheerio como respaldo inerte. Se extrajeron y sembraron 417 tutoriales de la categoría "Trick Tutorials" con permalink y fecha (`externalId` estable). El acordeón (`packages/ui/src/accordion.tsx`) es accesible y el estado expandido se persiste 7 días en localStorage. Virtualización al superar 100. Instagram con insta-fetcher y la cola Upstash quedan como respaldo opcional, sin ejecutar por falta de credenciales. Cada tutorial se muestra con título, autor, fecha y enlace al original; Vimeo bloquea el embed en dominios de terceros (403), así que no se embebe ni se aloja el vídeo. E2E en `e2e/tutorials.spec.ts`.
 
 ## Fase 14: Almacenamiento de vídeos (R2)
 
@@ -254,6 +254,8 @@ Estado: completada.
 Criterio de cierre: vídeos servidos desde R2, con reproducción fluida en móvil y sin superar el free tier.
 
 Notas de cierre: se extrajeron 556 vídeos reales de Loopkicks (una URL por truco) y se sembraron en `videos` con `status='external'` y la URL original, por lo que el reproductor funciona hoy. La tubería de R2 (`apps/scraper/src/upload-videos.ts`, con transcode opcional 720p H.264 vía `ffmpeg`) queda lista: al existir credenciales de R2 y `R2_PUBLIC_URL`, sube y la semilla pasa a `status='ready'` con `r2Key`. El reproductor (`trick-video-player.tsx`) vive en el detalle de truco con cache de URL de 5 min. Pendientes de entorno: no hay credenciales de R2 en `.env` y `ffmpeg` no está instalado, así que no se pudo subir ni transcodificar todavía. E2E en `e2e/trick-video.spec.ts`.
+
+Política de contenido de terceros (2026-10-04): los vídeos de Loopkicks NO se re-hospedan. Cada truco guarda la URL original y el reproductor la enlaza; el vídeo de prueba que se había subido a R2 se borró. R2 queda reservado para contenido propio o con licencia (el uploader exige `--confirm-rights`). Se agregó la columna `tricks.how_to`/`how_to_es` para la descripción propia de "cómo se hace" (curada en `packages/db/src/seed/how-to/`, script `db:how-to`, con dos ejemplos), visible en el detalle. El pie de página lleva el aviso de "no afiliado" y el crédito a las fuentes.
 
 ## Fase 15: Enlaces cruzados entre secciones
 

@@ -34,6 +34,12 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
     return color ? [{ label: t(`categories.${slug}`), color }] : [];
   });
 
+  const howTo = pickDescription(locale, data.howTo, data.howToEs);
+  const sourceUrl =
+    data.loopkicksSlug !== null
+      ? `https://www.loopkickstricking.com/tricks/${data.loopkicksSlug}`
+      : null;
+
   const renderRelated = (items: TrickRelated[]) => (
     <ul className="flex flex-wrap gap-2">
       {items.map((item) => (
@@ -80,7 +86,7 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
         </div>
       </header>
 
-      <TrickVideoPlayer trickId={data.id} trickName={data.name} />
+      <TrickVideoPlayer trickId={data.id} trickName={data.name} sourceUrl={sourceUrl} />
 
       <section className="flex flex-col gap-2">
         <h2 className="text-lg font-semibold text-base-content">{t('detail.description')}</h2>
@@ -89,6 +95,13 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
             t('detail.noDescription')}
         </p>
       </section>
+
+      {howTo ? (
+        <section className="flex flex-col gap-2">
+          <h2 className="text-lg font-semibold text-base-content">{t('detail.howTo')}</h2>
+          <p className="text-base text-base-content/80">{howTo}</p>
+        </section>
+      ) : null}
 
       {data.prereqs.length > 0 ? (
         <section className="flex flex-col gap-2">

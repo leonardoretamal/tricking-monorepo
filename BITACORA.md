@@ -231,3 +231,19 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Decisiones: el grafo usa `@xyflow/react`; la corrección de la Fase 3 se hizo con una tabla de relación en vez de resolver al vuelo; la fuente real de Kojo es su API pública (el sitio es una SPA); Instagram y Upstash quedan reservados como respaldo; sin credenciales de R2 el reproductor usa la URL externa real de Loopkicks.
 - Pendientes y riesgos: (1) no hay credenciales de R2 en `.env`, así que no se subió ni se probó `status='ready'`; (2) `ffmpeg` no está instalado, no se probó el transcode; (3) Instagram y Upstash quedan reservados sin worker; (4) la cobertura de `trick_stances` sigue parcial; (5) `transitions.originTrickId/destinationTrickId` sin uso.
 - Referencias: `docs/docs-agents/fases.md` (Fases 11 a 14), `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/reglas-i18n.md`, `AGENTS.md` secciones 9, 11, 12, 13, 17 y 18.
+
+## Politica de contenido de terceros y descripcion propia (2026-10-04)
+
+- Issue: no aplica (cambio de política pedido por el usuario).
+- Título: No re-hospedar contenido de Loopkicks ni de Kojo; embed oficial y descripción propia.
+- Qué pedía: el usuario preguntó por el riesgo de usar los vídeos de Loopkicks y decidió no re-hospedar contenido de terceros, mostrar embeds oficiales o enlazar al original, y agregar una descripción propia de "cómo se hace" cada truco.
+- Fecha de inicio: 2026-10-04.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Acciones: se borró el objeto `arabian.mp4` del bucket R2 y el manifiesto local; el seed de vídeos ya no apunta a R2 (status `external`, URL original de Loopkicks); `upload-videos.ts` exige `--confirm-rights` y queda reservado a contenido propio o con licencia; los tutoriales de Kojo se muestran con su título, autor, fecha y enlace al original (Vimeo bloquea el embed en dominios de terceros con 403, así que no se embebe ni se aloja el vídeo; la columna nueva `tutorials.vimeo_id` queda guardada por si se habilita); se agregó `tricks.how_to`/`how_to_es` y el mecanismo curado `db:how-to` (`packages/db/src/seed/how-to/how-to.json`, dos ejemplos); el footer lleva aviso de "no afiliado" y crédito; el detalle de truco muestra "Cómo se hace" y la fuente del vídeo (Loopkicks).
+- Archivos tocados: `packages/db/src/schema.ts`, `drizzle/0006_freezing_deadpool.sql`, `seed/{tutorials,videos,apply-how-to,how-to/how-to.json}.ts`, `apps/scraper/src/upload-videos.ts`, `queries/{tricks,tutorials}.ts`, `apps/web/src/lib/{trick,tutorial}-schemas.ts`, `components/{tutorial-accordion,trick-detail-view,trick-video-player,footer}.tsx`, `messages/{es,en}/{common,tricks,tutorials}.json`, `lib/trick-schemas.test.ts`, `.env.example`, `docs/docs-agents/{fases,stack-tecnico,reglas-legal}.md`.
+- Comandos relevantes: `pnpm --filter @tricking/db db:generate`, `db:migrate`, `db:how-to`, `db:tutorials`, `db:videos`; borrado del objeto R2 con `DeleteObjectCommand`.
+- Pruebas: typecheck 9/9, lint, formato, i18n (10 módulos por locale) y `env:check` en verde; Vitest 32/32; verificación en navegador real pendiente de repetir tras el cambio.
+- Decisiones: sin re-hospedaje de terceros; R2 reservado para contenido propio o con licencia; Kojo con embed oficial de Vimeo; descripción propia en `tricks` (visible en detalle); retiro inmediato por soft delete; la atribución no se trata como defensa legal, se pide permiso antes de cualquier re-hospedaje futuro.
+- Pendientes y riesgos: reemplazar "contáctanos" del footer por una dirección real cuando exista; ampliar las descripciones propias; el vídeo de prueba ya se borró de R2.
+- Referencias: `docs/docs-agents/fases.md` (Fases 13 y 14), `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/reglas-legal.md`.

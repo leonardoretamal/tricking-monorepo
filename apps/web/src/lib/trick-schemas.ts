@@ -30,6 +30,8 @@ export const paginatedTricksSchema = z.object({
 });
 
 export const trickDetailSchema = trickListItemSchema.extend({
+  howTo: z.string().nullable(),
+  howToEs: z.string().nullable(),
   prereqs: z.array(trickRelatedSchema),
   nextTricks: z.array(trickRelatedSchema),
 });

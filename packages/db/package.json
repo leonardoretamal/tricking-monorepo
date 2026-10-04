@@ -25,6 +25,7 @@
     "db:stances": "tsx src/seed/stances.ts",
     "db:stance-links": "tsx src/seed/stance-links.ts",
     "db:translations": "tsx src/seed/apply-translations.ts",
+    "db:how-to": "tsx src/seed/apply-how-to.ts",
     "db:tutorials": "tsx src/seed/tutorials.ts",
     "db:videos": "tsx src/seed/videos.ts"
   },

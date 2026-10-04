@@ -35,9 +35,12 @@ describe('trickSchemas', () => {
   it('valida el detalle con relaciones', () => {
     const parsed = trickDetailSchema.parse({
       ...listItem,
+      howTo: null,
+      howToEs: 'Paso el peso y giro.',
       prereqs: [{ id: 'tornado', name: 'Tornado', difficulty: 3, section: 'vertical-kicks' }],
       nextTricks: [],
     });
     expect(parsed.prereqs[0]?.id).toBe('tornado');
+    expect(parsed.howToEs).toBe('Paso el peso y giro.');
   });
 });

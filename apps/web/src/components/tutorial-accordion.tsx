@@ -50,8 +50,11 @@ export function TutorialAccordion({ items, locale, virtualize }: TutorialAccordi
       id: String(tutorial.id),
       header: <span className="break-words">{tutorial.caption ?? t('untitled')}</span>,
       content: (
-        <div className="flex flex-col gap-2">
-          {postedAt ? <p className="text-xs text-base-content/60">{postedAt}</p> : null}
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-base-content/60">
+            {tutorial.author ? <span>{t('author', { name: tutorial.author })}</span> : null}
+            {postedAt ? <span>{postedAt}</span> : null}
+          </div>
           {tutorial.permalink ? (
             <a
               href={tutorial.permalink}

@@ -10,11 +10,13 @@ import type { Video } from '@/lib/video-schemas';
 
 // Reproductor del detalle de truco (Fase 14). Consume /api/videos y usa la cache
 // persistida de TanStack Query con TTL corto (5 minutos): las URLs se renuevan pronto y
-// no se guarda nada sensible. Prefiere la copia en R2 sobre la URL externa.
+// no se guarda nada sensible. Los videos de terceros se sirven desde su URL original de
+// Loopkicks (enlace, sin re-hospedar); R2 solo se usaria para videos propios o con licencia.
 
 interface TrickVideoPlayerProps {
   trickId: string;
   trickName: string;
+  sourceUrl?: string | null;
 }
 
 function pickPlayable(videos: Video[]): Video | null {
@@ -25,7 +27,7 @@ function pickPlayable(videos: Video[]): Video | null {
   return videos[0] ?? null;
 }
 
-export function TrickVideoPlayer({ trickId, trickName }: TrickVideoPlayerProps) {
+export function TrickVideoPlayer({ trickId, trickName, sourceUrl }: TrickVideoPlayerProps) {
   const t = useTranslations('tricks');
 
   const query = useQuery({
@@ -97,6 +99,19 @@ export function TrickVideoPlayer({ trickId, trickName }: TrickVideoPlayerProps) 
         <source src={video.url} type={video.mime ?? undefined} />
         {t('detail.video.fallback')}
       </video>
+      {sourceUrl ? (
+        <p className="text-xs text-base-content/60">
+          {t('detail.video.source')}{' '}
+          <a
+            href={sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            Loopkicks
+          </a>
+        </p>
+      ) : null}
     </section>
   );
 }

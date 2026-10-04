@@ -8,11 +8,16 @@ import { tricks, videos, type NewVideo } from '../schema';
 import { loadEnvFile } from './load-env';
 
 // Semilla de videos de trucos (Fase 14). Fuente: apps/scraper/data/loopkicks-videos.json
-// (URLs reales extraidas por el scraper). Si existe un manifiesto de subidas a R2
-// (apps/scraper/data/r2-videos-manifest.json, lo escribe upload-videos.ts), los trucos
-// subidos se guardan con status 'ready' y la URL publica del bucket; el resto queda con
-// status 'external' y la URL original de Loopkicks. Idempotente: se reemplazan las filas
-// de los trucos sembrados en cada corrida. No inventa videos: sin JSON, no escribe nada.
+// (URLs reales extraidas por el scraper).
+//
+// Politica de contenido de terceros: los videos de Loopkicks NO se re-hospedan. Cada truco
+// guarda la URL ORIGINAL de Loopkicks (status 'external') y el reproductor la usa como
+// enlace/hotlink al original. El bucket de R2 queda reservado para videos propios o con
+// licencia, que en el futuro entraran con su propio r2Key. Por eso esta semilla nunca
+// escribe en R2 ni lee manifiestos de subida.
+//
+// Idempotente: se reemplazan las filas de video de truco (tutorial_id nulo) de los trucos
+// sembrados en cada corrida. No inventa videos: sin JSON, no escribe nada.
 
 interface ScrapedVideo {
   slug: string;
@@ -22,20 +27,8 @@ interface ScrapedVideo {
   mime: string | null;
 }
 
-interface ManifestEntry {
-  slug: string;
-  r2Key: string;
-  mime: string | null;
-  sizeBytes: number | null;
-  durationSeconds: number | null;
-}
-
 const VIDEOS_JSON_URL = new URL(
   '../../../../apps/scraper/data/loopkicks-videos.json',
-  import.meta.url,
-);
-const MANIFEST_JSON_URL = new URL(
-  '../../../../apps/scraper/data/r2-videos-manifest.json',
   import.meta.url,
 );
 
@@ -47,18 +40,6 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 
 function asString(value: unknown): string | null {
   return typeof value === 'string' && value.trim() !== '' ? value : null;
-}
-
-function asNumber(value: unknown): number | null {
-  return typeof value === 'number' && Number.isFinite(value) ? value : null;
-}
-
-async function readJson(path: URL): Promise<unknown | null> {
-  try {
-    return JSON.parse(await readFile(fileURLToPath(path), 'utf8')) as unknown;
-  } catch {
-    return null;
-  }
 }
 
 function parseScrapedVideos(raw: unknown): ScrapedVideo[] {
@@ -88,44 +69,6 @@ function parseScrapedVideos(raw: unknown): ScrapedVideo[] {
   return result;
 }
 
-function parseManifest(raw: unknown): ManifestEntry[] {
-  let list: unknown = raw;
-  if (isRecord(raw) && Array.isArray(raw.entries)) {
-    list = raw.entries;
-  }
-  if (!Array.isArray(list)) {
-    return [];
-  }
-
-  const result: ManifestEntry[] = [];
-  for (const item of list) {
-    if (!isRecord(item)) {
-      continue;
-    }
-    const slug = asString(item.slug);
-    const r2Key = asString(item.r2Key);
-    if (slug === null || r2Key === null) {
-      continue;
-    }
-    result.push({
-      slug,
-      r2Key,
-      mime: asString(item.mime),
-      sizeBytes: asNumber(item.sizeBytes),
-      durationSeconds: asNumber(item.durationSeconds),
-    });
-  }
-
-  return result;
-}
-
-function publicUrlFor(base: string | undefined, key: string): string | null {
-  if (base === undefined || base.trim() === '') {
-    return null;
-  }
-  return `${base.replace(/\/+$/, '')}/${key.replace(/^\/+/, '')}`;
-}
-
 function chunk<T>(items: T[], size: number): T[][] {
   const result: T[][] = [];
   for (let index = 0; index < items.length; index += size) {
@@ -138,15 +81,19 @@ async function main(): Promise<void> {
   loadEnvFile('./.env');
   loadEnvFile(fileURLToPath(new URL('../../.env', import.meta.url)));
 
-  const scraped = parseScrapedVideos(await readJson(VIDEOS_JSON_URL));
-  if (scraped.length === 0) {
+  let raw: unknown;
+  try {
+    raw = JSON.parse(await readFile(fileURLToPath(VIDEOS_JSON_URL), 'utf8')) as unknown;
+  } catch {
     console.log('No hay videos en loopkicks-videos.json; no se escribe nada.');
     return;
   }
 
-  const manifest = parseManifest(await readJson(MANIFEST_JSON_URL));
-  const manifestBySlug = new Map(manifest.map((entry) => [entry.slug, entry]));
-  const publicBase = process.env.R2_PUBLIC_URL;
+  const scraped = parseScrapedVideos(raw);
+  if (scraped.length === 0) {
+    console.log('El JSON de videos esta vacio; no se escribe nada.');
+    return;
+  }
 
   const db = getDb();
   const trickRows = await db
@@ -163,8 +110,6 @@ async function main(): Promise<void> {
 
   const rows: NewVideo[] = [];
   const videoTrickIds = new Set<string>();
-  let ready = 0;
-  let external = 0;
   let skipped = 0;
 
   for (const video of scraped) {
@@ -174,33 +119,15 @@ async function main(): Promise<void> {
       continue;
     }
 
-    const uploaded = manifestBySlug.get(video.slug);
-    const r2Url = uploaded !== undefined ? publicUrlFor(publicBase, uploaded.r2Key) : null;
-
-    if (uploaded !== undefined && r2Url !== null) {
-      rows.push({
-        trickId,
-        r2Key: uploaded.r2Key,
-        url: r2Url,
-        mime: uploaded.mime ?? video.mime,
-        sizeBytes: uploaded.sizeBytes,
-        durationSeconds: uploaded.durationSeconds,
-        status: 'ready',
-      });
-      ready += 1;
-    } else {
-      rows.push({
-        trickId,
-        r2Key: null,
-        url: video.url,
-        mime: video.mime,
-        sizeBytes: null,
-        durationSeconds: null,
-        status: 'external',
-      });
-      external += 1;
-    }
-
+    rows.push({
+      trickId,
+      r2Key: null,
+      url: video.url,
+      mime: video.mime,
+      sizeBytes: null,
+      durationSeconds: null,
+      status: 'external',
+    });
     videoTrickIds.add(trickId);
   }
 
@@ -222,15 +149,10 @@ async function main(): Promise<void> {
     await db.insert(videos).values(batch).onConflictDoNothing();
   }
 
-  console.log(`Videos sembrados: ${rows.length} (${ready} en R2, ${external} externos)`);
+  console.log(`Videos sembrados: ${rows.length} (todos externos, enlazando al original)`);
   console.log(`Trucos con video: ${affectedTrickIds.length}`);
   if (skipped > 0) {
     console.log(`Videos sin truco mapeado (omitidos): ${skipped}`);
-  }
-  if (ready === 0) {
-    console.log(
-      'Aviso: no hay subidas a R2 en el manifiesto; todos los videos quedaron como externos.',
-    );
   }
 }
 

@@ -29,7 +29,8 @@
   },
   "footer": {
     "rights": "All rights reserved",
-    "navigation": "Navigation"
+    "navigation": "Navigation",
+    "disclaimer": "Site not affiliated with Loopkicks or Kojo's Trick Lab. Videos and tutorials belong to their authors and are shown with attribution and a link to the original. If you own a piece of content and want it removed, contact us."
   },
   "states": {
     "loading": "Loading",

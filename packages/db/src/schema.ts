@@ -40,6 +40,8 @@ export const tutorials = pgTable('tutorials', {
   source: text('source').notNull().default('instagram'),
   externalId: text('external_id').notNull().unique(),
   caption: text('caption'),
+  author: text('author'),
+  vimeoId: text('vimeo_id'),
   locale: text('locale').notNull().default('es'),
   permalink: text('permalink'),
   postedAt: timestamp('posted_at', { withTimezone: true }),
@@ -54,6 +56,10 @@ export const tricks = pgTable(
     name: text('name').notNull(),
     description: text('description'),
     descriptionEs: text('description_es'),
+    // Descripcion PROPIA (contenido original, no de las fuentes) de como se hace el truco.
+    // La escribe el autor del proyecto; sirve en el detalle y en la ficha del tutorial.
+    howTo: text('how_to'),
+    howToEs: text('how_to_es'),
     difficulty: smallint('difficulty'),
     section: text('section'),
     loopkicksSlug: text('loopkicks_slug').unique(),
