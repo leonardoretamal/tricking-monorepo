@@ -51,6 +51,9 @@ test.describe('seccion explore', () => {
 
   test('actualiza la URL al cambiar de seccion', async ({ page }) => {
     await page.goto('/es/explore');
+    // El grafo se monta en cliente; esperar a que hidrate evita seleccionar antes de
+    // que React ate el onChange del filtro.
+    await expect(page.getByRole('group', { name: 'Grafo de trucos' })).toBeVisible();
     await page.getByLabel('Sección').selectOption('backward');
     await expect(page).toHaveURL(/section=backward/);
   });
