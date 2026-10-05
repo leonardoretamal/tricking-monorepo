@@ -8,42 +8,42 @@ afterEach(() => {
 
 describe('getAiProviders', () => {
   it('devuelve vacio sin keys configuradas', () => {
-    vi.stubEnv('AI_GEMINI_API_KEY', '');
     vi.stubEnv('AI_GROQ_API_KEY', '');
+    vi.stubEnv('AI_NVIDIA_API_KEY', '');
+    vi.stubEnv('AI_OPENCODE_API_KEY', '');
     expect(getAiProviders()).toEqual([]);
   });
 
   it('ignora placeholders', () => {
-    vi.stubEnv('AI_GEMINI_API_KEY', 'change-me');
+    vi.stubEnv('AI_GROQ_API_KEY', 'change-me');
     expect(getAiProviders()).toEqual([]);
   });
 
   it('incluye solo los proveedores con key real, en orden de registro', () => {
     vi.stubEnv('AI_GROQ_API_KEY', 'gsk_real');
-    vi.stubEnv('AI_GEMINI_API_KEY', 'gm_real');
-    vi.stubEnv('AI_NVIDIA_API_KEY', '');
+    vi.stubEnv('AI_NVIDIA_API_KEY', 'nv_real');
+    vi.stubEnv('AI_OPENCODE_API_KEY', '');
 
-    const ids = getAiProviders().map((provider) => provider.id);
-    expect(ids).toEqual(['gemini', 'groq']);
+    expect(getAiProviders().map((provider) => provider.id)).toEqual(['groq', 'nvidia']);
   });
 
   it('respeta AI_PROVIDER_ORDER', () => {
-    vi.stubEnv('AI_GEMINI_API_KEY', 'gm_real');
     vi.stubEnv('AI_GROQ_API_KEY', 'gsk_real');
-    vi.stubEnv('AI_PROVIDER_ORDER', 'groq,gemini');
+    vi.stubEnv('AI_OPENCODE_API_KEY', 'oc_real');
+    vi.stubEnv('AI_PROVIDER_ORDER', 'opencode,groq');
 
-    expect(getAiProviders().map((provider) => provider.id)).toEqual(['groq', 'gemini']);
+    expect(getAiProviders().map((provider) => provider.id)).toEqual(['opencode', 'groq']);
   });
 
   it('permite override de modelo', () => {
-    vi.stubEnv('AI_GEMINI_API_KEY', 'gm_real');
-    vi.stubEnv('AI_GEMINI_MODEL', 'gemini-custom');
+    vi.stubEnv('AI_GROQ_API_KEY', 'gsk_real');
+    vi.stubEnv('AI_GROQ_MODEL', 'mi-modelo');
 
-    expect(getAiProviders()[0]?.model).toBe('gemini-custom');
+    expect(getAiProviders()[0]?.model).toBe('mi-modelo');
   });
 
   it('agrega el proveedor propio con la variable heredada AI_API_KEY', () => {
-    vi.stubEnv('AI_GEMINI_API_KEY', '');
+    vi.stubEnv('AI_GROQ_API_KEY', '');
     vi.stubEnv('AI_API_KEY', 'sk_real');
     vi.stubEnv('AI_PROVIDER_NAME', 'Mi proveedor');
 
@@ -52,18 +52,18 @@ describe('getAiProviders', () => {
     expect(providers[0]?.name).toBe('Mi proveedor');
   });
 
-  it('ignora OpenRouter si el modelo no termina en :free (candado anti-cobro)', () => {
-    vi.stubEnv('AI_OPENROUTER_API_KEY', 'or_real');
-    vi.stubEnv('AI_OPENROUTER_MODEL', 'openai/gpt-4o');
+  it('ignora OpenCode si el modelo no esta en la allowlist de gratis (candado anti-cobro)', () => {
+    vi.stubEnv('AI_OPENCODE_API_KEY', 'oc_real');
+    vi.stubEnv('AI_OPENCODE_MODEL', 'gpt-5.5');
 
-    expect(getAiProviders().map((provider) => provider.id)).not.toContain('openrouter');
+    expect(getAiProviders().map((provider) => provider.id)).not.toContain('opencode');
   });
 
-  it('incluye OpenRouter con un modelo :free', () => {
-    vi.stubEnv('AI_OPENROUTER_API_KEY', 'or_real');
-    vi.stubEnv('AI_OPENROUTER_MODEL', 'meta-llama/llama-3.3-70b-instruct:free');
+  it('incluye OpenCode con un modelo gratis de la allowlist', () => {
+    vi.stubEnv('AI_OPENCODE_API_KEY', 'oc_real');
+    vi.stubEnv('AI_OPENCODE_MODEL', 'big-pickle');
 
-    expect(getAiProviders().map((provider) => provider.id)).toContain('openrouter');
+    expect(getAiProviders().map((provider) => provider.id)).toContain('opencode');
   });
 });
 

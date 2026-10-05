@@ -20,22 +20,16 @@ interface ProviderDefinition {
   keyEnv: string;
   modelEnv: string;
   baseUrlEnv: string;
-  // Si esta definido, el proveedor SOLO se usa cuando el modelo termina con este sufijo.
-  // Sirve para blindar proveedores que cobran si el modelo no es gratuito (OpenRouter).
-  freeModelSuffix?: string;
+  // Si esta definido, el proveedor SOLO se usa cuando el modelo esta en esta lista. Es
+  // el candado anti-cobro: evita que un modelo pago se use por error (OpenCode Zen).
+  freeModelAllowlist?: readonly string[];
 }
 
 // Orden por defecto de intento. Se puede reordenar con AI_PROVIDER_ORDER.
+// Solo proveedores gratuitos sin sorpresas de facturacion. Se quitaron a proposito
+// Google Gemini (el usuario lo usa en otro repo), Cerebras, Mistral y OpenRouter
+// (cobran). OpenCode Zen usa una allowlist de modelos gratis.
 export const AI_PROVIDERS_REGISTRY: readonly ProviderDefinition[] = [
-  {
-    id: 'gemini',
-    name: 'Google Gemini',
-    baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai',
-    model: 'gemini-2.5-flash',
-    keyEnv: 'AI_GEMINI_API_KEY',
-    modelEnv: 'AI_GEMINI_MODEL',
-    baseUrlEnv: 'AI_GEMINI_BASE_URL',
-  },
   {
     id: 'groq',
     name: 'Groq',
@@ -55,34 +49,27 @@ export const AI_PROVIDERS_REGISTRY: readonly ProviderDefinition[] = [
     baseUrlEnv: 'AI_NVIDIA_BASE_URL',
   },
   {
-    id: 'cerebras',
-    name: 'Cerebras',
-    baseUrl: 'https://api.cerebras.ai/v1',
-    model: 'llama-3.3-70b',
-    keyEnv: 'AI_CEREBRAS_API_KEY',
-    modelEnv: 'AI_CEREBRAS_MODEL',
-    baseUrlEnv: 'AI_CEREBRAS_BASE_URL',
-  },
-  {
-    id: 'mistral',
-    name: 'Mistral AI',
-    baseUrl: 'https://api.mistral.ai/v1',
-    model: 'mistral-small-latest',
-    keyEnv: 'AI_MISTRAL_API_KEY',
-    modelEnv: 'AI_MISTRAL_MODEL',
-    baseUrlEnv: 'AI_MISTRAL_BASE_URL',
-  },
-  // OpenRouter queda ULTIMO y con candado: solo se usa si el modelo termina en `:free`.
-  // Asi nunca cae a un modelo pago por accidente.
-  {
-    id: 'openrouter',
-    name: 'OpenRouter',
-    baseUrl: 'https://openrouter.ai/api/v1',
-    model: 'meta-llama/llama-3.3-70b-instruct:free',
-    keyEnv: 'AI_OPENROUTER_API_KEY',
-    modelEnv: 'AI_OPENROUTER_MODEL',
-    baseUrlEnv: 'AI_OPENROUTER_BASE_URL',
-    freeModelSuffix: ':free',
+    id: 'opencode',
+    name: 'OpenCode Zen',
+    baseUrl: 'https://opencode.ai/zen/v1',
+    model: 'big-pickle',
+    keyEnv: 'AI_OPENCODE_API_KEY',
+    modelEnv: 'AI_OPENCODE_MODEL',
+    baseUrlEnv: 'AI_OPENCODE_BASE_URL',
+    // Solo modelos gratis de OpenCode Zen (endpoint /chat/completions). Cualquier otro
+    // id se ignora, asi nunca se usa un modelo pago.
+    freeModelAllowlist: [
+      'big-pickle',
+      'space-bunny-free',
+      'longcat-2.5-preview-free',
+      'fledge-alpha-free',
+      'mimo-v2.6-flash-free',
+      'mimo-v2.5-free',
+      'ling-3.1-flash-free',
+      'ling-3.0-flash-fin-free',
+      'nemotron-3-ultra-free',
+      'nemotron-3.5-lightning-free',
+    ],
   },
 ];
 
@@ -114,9 +101,12 @@ export function getAiProviders(): AiProviderConfig[] {
       continue;
     }
     const model = process.env[definition.modelEnv]?.trim() || definition.model;
-    // Candado anti-cobro: si el proveedor exige un sufijo gratuito y el modelo no lo
-    // tiene, se ignora por completo. Evita que OpenRouter cobre por un modelo pago.
-    if (definition.freeModelSuffix !== undefined && !model.endsWith(definition.freeModelSuffix)) {
+    // Candado anti-cobro: si el proveedor define una lista de modelos gratis y el modelo
+    // configurado no esta en ella, se ignora por completo (nunca usa un modelo pago).
+    if (
+      definition.freeModelAllowlist !== undefined &&
+      !definition.freeModelAllowlist.includes(model)
+    ) {
       continue;
     }
     providers.push({
