@@ -18,6 +18,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "env:check": "node scripts/check-env-example.mjs",
+    "env:sync": "node scripts/sync-env.mjs",
     "prepare": "husky"
   },
   "devDependencies": {

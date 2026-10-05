@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-import { consumeAiDailyBudget, getClientIp } from '@/lib/ai-client';
+import { getClientIp } from '@/lib/ai-client';
 import { getAiDailyCap, getAiProviders } from '@/lib/ai-providers';
 import {
   buildComboFromIds,
@@ -55,12 +55,14 @@ export async function POST(request: Request) {
     let provider: string | null = null;
 
     const aiProviders = getAiProviders();
-    if (
-      aiProviders.length > 0 &&
-      result.steps.length >= 2 &&
-      (await consumeAiDailyBudget(getAiDailyCap()))
-    ) {
-      const refined = await refineComboOrderWithAi(aiProviders, result, data.length, traceId);
+    if (aiProviders.length > 0 && result.steps.length >= 2) {
+      const refined = await refineComboOrderWithAi(
+        aiProviders,
+        result,
+        data.length,
+        traceId,
+        getAiDailyCap(),
+      );
       if (refined !== null) {
         const candidate = buildComboFromIds(pool, refined.order);
         if (candidate.steps.length >= 2) {

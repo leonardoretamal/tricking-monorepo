@@ -2,12 +2,7 @@ import { loadComboTricks, searchContextForAssistant, type AssistantContext } fro
 import { NextResponse } from 'next/server';
 import { getTranslations } from 'next-intl/server';
 
-import {
-  callChatCompletionWithFallback,
-  consumeAiDailyBudget,
-  getClientIp,
-  type ChatMessage,
-} from '@/lib/ai-client';
+import { callChatCompletionWithFallback, getClientIp, type ChatMessage } from '@/lib/ai-client';
 import { ASSISTANT_SYSTEM_PROMPT, isForbiddenTopic } from '@/lib/ai-guardrails';
 import { getAiDailyCap, getAiProviders } from '@/lib/ai-providers';
 import { assistantRequestSchema } from '@/lib/assistant-schemas';
@@ -192,12 +187,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ answer: text.notConfigured, configured: false, provider: null });
     }
 
-    const withinBudget = await consumeAiDailyBudget(getAiDailyCap());
-    if (!withinBudget) {
-      logger.warn({ traceId }, 'asistente: tope diario alcanzado');
-      return NextResponse.json({ error: 'daily_cap', traceId }, { status: 429 });
-    }
-
     const context = await searchContextForAssistant(message, ASSISTANT_CONTEXT_ITEMS, locale);
     const knownBlock = await buildKnownTricksBlock(knownTrickIds ?? [], locale);
 
@@ -216,8 +205,13 @@ export async function POST(request: Request) {
       messages,
       traceId,
       ASSISTANT_MAX_TOKENS,
+      getAiDailyCap(),
     );
-    if (result === null) {
+    if (!result.ok) {
+      if (result.reason === 'capped') {
+        logger.warn({ traceId }, 'asistente: tope diario de todos los proveedores alcanzado');
+        return NextResponse.json({ error: 'daily_cap', traceId }, { status: 429 });
+      }
       logger.error({ traceId }, 'asistente: ningun proveedor devolvio una respuesta valida');
       return NextResponse.json({ error: 'upstream_error', traceId }, { status: 502 });
     }

@@ -176,6 +176,7 @@ export async function refineComboOrderWithAi(
   deterministic: ComboBuildResult,
   length: ComboLength,
   traceId: string,
+  dailyCap: number,
 ): Promise<{ order: string[]; provider: string } | null> {
   if (deterministic.steps.length < COMBO_MIN_TRICKS) {
     return null;
@@ -199,8 +200,8 @@ export async function refineComboOrderWithAi(
     },
   ];
 
-  const result = await callChatCompletionWithFallback(providers, messages, traceId, 300);
-  if (result === null) {
+  const result = await callChatCompletionWithFallback(providers, messages, traceId, 300, dailyCap);
+  if (!result.ok) {
     return null;
   }
 

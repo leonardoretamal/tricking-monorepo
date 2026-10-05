@@ -30,10 +30,11 @@ export function getClientIp(request: Request): string {
   return realIp !== null && realIp.trim() !== '' ? realIp.trim() : 'unknown';
 }
 
-// Tope diario compartido por instalacion, ademas del rate limit por IP. Reutiliza el
-// limitador existente (Upstash con degradacion a memoria).
-export async function consumeAiDailyBudget(dailyCap: number): Promise<boolean> {
-  const result = await checkRateLimit('ai-daily', {
+// Tope diario POR PROVEEDOR, ademas del rate limit por IP. Reutiliza el limitador
+// existente (Upstash con degradacion a memoria). Cada proveedor tiene su propio cupo, asi
+// el total diario es la suma de los topes de los proveedores configurados.
+export async function consumeAiDailyBudget(providerId: string, dailyCap: number): Promise<boolean> {
+  const result = await checkRateLimit(`ai-daily:${providerId}`, {
     limit: dailyCap,
     windowMs: AI_DAILY_WINDOW_MS,
   });
@@ -130,24 +131,46 @@ export async function callChatCompletion(
   }
 }
 
+// Resultado del fallback: exito con el proveedor que respondio, o el motivo del fallo.
+export type ChatFallbackResult =
+  | { ok: true; answer: string; provider: AiProviderConfig }
+  | { ok: false; reason: 'capped' | 'failed' };
+
 // Prueba los proveedores en orden y devuelve la primera respuesta valida junto con el
-// proveedor que la produjo. Si todos fallan, devuelve null. Asi, si una IA deja de
-// funcionar, la app cae a la siguiente sin quedarse sin asistente.
+// proveedor que la produjo. Antes de cada uno revisa su tope diario: un proveedor sin
+// cupo se saltea y se prueba el siguiente. Asi, si una IA deja de funcionar o agota su
+// cuota gratis, la app cae a la siguiente sin quedarse sin asistente.
 export async function callChatCompletionWithFallback(
   providers: AiProviderConfig[],
   messages: ChatMessage[],
   traceId: string,
   maxTokens: number,
-): Promise<{ answer: string; provider: AiProviderConfig } | null> {
+  dailyCap: number,
+): Promise<ChatFallbackResult> {
+  let attempted = false;
+
   for (const provider of providers) {
+    const withinBudget = await consumeAiDailyBudget(provider.id, dailyCap);
+    if (!withinBudget) {
+      logger.warn(
+        { traceId, provider: provider.id },
+        'asistente: tope diario del proveedor alcanzado, se prueba el siguiente',
+      );
+      continue;
+    }
+
+    attempted = true;
     const answer = await callChatCompletion(provider, messages, traceId, maxTokens);
     if (answer !== null) {
-      return { answer, provider };
+      return { ok: true, answer, provider };
     }
     logger.warn(
       { traceId, provider: provider.id },
       'asistente: proveedor agotado, se prueba el siguiente',
     );
   }
-  return null;
+
+  // Si ninguno se intento, fue porque todos estaban en su tope; si alguno se intento y
+  // fallo, es un fallo de proveedor.
+  return { ok: false, reason: attempted ? 'failed' : 'capped' };
 }

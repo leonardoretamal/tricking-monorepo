@@ -2,6 +2,9 @@
 // OpenAI (`POST {baseUrl}/chat/completions`), asi que se llaman por HTTP sin SDK. El
 // asistente prueba los proveedores configurados en orden y usa el primero que responde;
 // si uno falla, cae al siguiente. Solo el servidor lee las keys; nunca llegan al cliente.
+//
+// Solo se incluyen proveedores gratuitos. Los modelos por defecto son ids VIGENTES
+// (los free se renuevan seguido: si uno deja de existir, se cambia el id o el override).
 
 export interface AiProviderConfig {
   id: string;
@@ -20,21 +23,18 @@ interface ProviderDefinition {
   keyEnv: string;
   modelEnv: string;
   baseUrlEnv: string;
-  // Si esta definido, el proveedor SOLO se usa cuando el modelo esta en esta lista. Es
-  // el candado anti-cobro: evita que un modelo pago se use por error (OpenCode Zen).
-  freeModelAllowlist?: readonly string[];
+  // Candado anti-cobro. Si se define, el modelo debe terminar con ese sufijo; si no
+  // cumple, el proveedor se ignora por completo (nunca se paga). Lo usa OpenRouter.
+  freeModelSuffix?: string;
 }
 
 // Orden por defecto de intento. Se puede reordenar con AI_PROVIDER_ORDER.
-// Solo proveedores gratuitos sin sorpresas de facturacion. Se quitaron a proposito
-// Google Gemini (el usuario lo usa en otro repo), Cerebras, Mistral y OpenRouter
-// (cobran). OpenCode Zen usa una allowlist de modelos gratis.
 export const AI_PROVIDERS_REGISTRY: readonly ProviderDefinition[] = [
   {
     id: 'groq',
     name: 'Groq',
     baseUrl: 'https://api.groq.com/openai/v1',
-    model: 'llama-3.3-70b-versatile',
+    model: 'openai/gpt-oss-120b',
     keyEnv: 'AI_GROQ_API_KEY',
     modelEnv: 'AI_GROQ_MODEL',
     baseUrlEnv: 'AI_GROQ_BASE_URL',
@@ -43,33 +43,21 @@ export const AI_PROVIDERS_REGISTRY: readonly ProviderDefinition[] = [
     id: 'nvidia',
     name: 'NVIDIA NIM',
     baseUrl: 'https://integrate.api.nvidia.com/v1',
-    model: 'meta/llama-3.3-70b-instruct',
+    model: 'nvidia/nemotron-3-super-120b-a12b',
     keyEnv: 'AI_NVIDIA_API_KEY',
     modelEnv: 'AI_NVIDIA_MODEL',
     baseUrlEnv: 'AI_NVIDIA_BASE_URL',
   },
   {
-    id: 'opencode',
-    name: 'OpenCode Zen',
-    baseUrl: 'https://opencode.ai/zen/v1',
-    model: 'big-pickle',
-    keyEnv: 'AI_OPENCODE_API_KEY',
-    modelEnv: 'AI_OPENCODE_MODEL',
-    baseUrlEnv: 'AI_OPENCODE_BASE_URL',
-    // Solo modelos gratis de OpenCode Zen (endpoint /chat/completions). Cualquier otro
-    // id se ignora, asi nunca se usa un modelo pago.
-    freeModelAllowlist: [
-      'big-pickle',
-      'space-bunny-free',
-      'longcat-2.5-preview-free',
-      'fledge-alpha-free',
-      'mimo-v2.6-flash-free',
-      'mimo-v2.5-free',
-      'ling-3.1-flash-free',
-      'ling-3.0-flash-fin-free',
-      'nemotron-3-ultra-free',
-      'nemotron-3.5-lightning-free',
-    ],
+    id: 'openrouter',
+    name: 'OpenRouter',
+    baseUrl: 'https://openrouter.ai/api/v1',
+    model: 'nvidia/nemotron-3-ultra-550b-a55b:free',
+    keyEnv: 'AI_OPENROUTER_API_KEY',
+    modelEnv: 'AI_OPENROUTER_MODEL',
+    baseUrlEnv: 'AI_OPENROUTER_BASE_URL',
+    // OpenRouter cobra si el modelo no es gratuito: solo se usa con sufijo `:free`.
+    freeModelSuffix: ':free',
   },
 ];
 
@@ -101,14 +89,12 @@ export function getAiProviders(): AiProviderConfig[] {
       continue;
     }
     const model = process.env[definition.modelEnv]?.trim() || definition.model;
-    // Candado anti-cobro: si el proveedor define una lista de modelos gratis y el modelo
-    // configurado no esta en ella, se ignora por completo (nunca usa un modelo pago).
-    if (
-      definition.freeModelAllowlist !== undefined &&
-      !definition.freeModelAllowlist.includes(model)
-    ) {
+
+    // Candado anti-cobro: el proveedor se ignora si el modelo no es de los gratuitos.
+    if (definition.freeModelSuffix !== undefined && !model.endsWith(definition.freeModelSuffix)) {
       continue;
     }
+
     providers.push({
       id: definition.id,
       name: definition.name,
@@ -150,8 +136,9 @@ export function getAiProviders(): AiProviderConfig[] {
   return providers;
 }
 
-// Tope diario global de peticiones con IA (todas las funciones), ademas del rate limit
-// por IP. Protege el costo.
+// Tope diario de peticiones con IA POR PROVEEDOR (ademas del rate limit por IP). Asi el
+// total diario es la suma de los topes de cada proveedor configurado (por ejemplo 4
+// proveedores x 200 = 800). Protege el costo sin desperdiciar la cuota gratis de cada uno.
 export function getAiDailyCap(): number {
   const raw = Number.parseInt(process.env.AI_DAILY_REQUEST_CAP?.trim() ?? '', 10);
   return Number.isFinite(raw) && raw > 0 ? raw : DEFAULT_AI_DAILY_CAP;
