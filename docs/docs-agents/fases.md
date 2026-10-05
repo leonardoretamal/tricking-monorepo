@@ -427,6 +427,21 @@ Variables nuevas: `AI_<PROVEEDOR>_API_KEY` (groq, nvidia, openrouter), con overr
 
 Criterio de cierre: el asistente responde sobre tricking y rechaza lo ajeno, el generador usa en tiempo real los trucos marcados, con rate limiting, topes de costo, subagentes en verde y verificado en navegador real.
 
+## Fase 23: Despliegue y lanzamiento
+
+Estado: en curso.
+
+Pone la app en producción en Cloudflare (gratis) con despliegue automático en cada push a `main`, y cierra los pendientes de lanzamiento.
+
+- 23.1. Adaptador `@opennextjs/cloudflare` + `wrangler` en `apps/web` (`open-next.config.ts`, `wrangler.jsonc`), scripts `cf:build`/`cf:preview`/`cf:deploy`.
+- 23.2. Workflow `.github/workflows/deploy.yml`: build con OpenNext y `wrangler deploy` en cada push a `main`; se salta si faltan los secretos de Cloudflare.
+- 23.3. Secretos de runtime en Cloudflare (`scripts/cf-secrets.sh`): base de datos, Upstash, Resend, Turnstile y keys de IA.
+- 23.4. Variables de build en GitHub Actions: `NEXT_PUBLIC_SITE_URL` (dominio de producción) y `NEXT_PUBLIC_TURNSTILE_SITE_KEY`. El `.env` local conserva `localhost`.
+- 23.5. Dominio gratis: subdominio `*.workers.dev` de Cloudflare (o un subdominio gratuito de terceros). Un dominio propio no es gratis.
+- 23.6. Cierre de lanzamiento: datos del titular en legal/privacidad, Lighthouse, Rich Results Test y Search Console.
+
+Criterio de cierre: la app responde en la URL de producción, el asistente, el feedback y el catálogo funcionan, y cada push a `main` despliega automáticamente.
+
 ## Fases sugeridas fuera de la numeración principal
 
 Estas fases no forman parte de la numeración principal y solo se abren con autorización explícita del usuario, cuando se active el skill tree y el generador de combos descritos en la sección 28.3 de `AGENTS.md`.

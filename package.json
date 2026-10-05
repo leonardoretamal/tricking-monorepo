@@ -21,6 +21,14 @@
     "env:sync": "node scripts/sync-env.mjs",
     "prepare": "husky"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "workerd",
+      "esbuild",
+      "@swc/core",
+      "@parcel/watcher"
+    ]
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
