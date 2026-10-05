@@ -17,7 +17,9 @@
     "tutorials": "Técnicas",
     "tips": "Tips",
     "explore": "Explorar",
-    "search": "Buscar"
+    "search": "Buscar",
+    "feedback": "Feedback",
+    "admin": "Administración"
   },
   "actions": {
     "search": "Buscar",

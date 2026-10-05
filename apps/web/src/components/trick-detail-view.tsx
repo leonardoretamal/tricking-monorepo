@@ -1,7 +1,7 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import { Accordion, categoryBadgeColor, type AccordionItem } from '@tricking/ui';
+import { Accordion, categoryBadgeColor, RelatedItems, type AccordionItem } from '@tricking/ui';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -21,6 +21,7 @@ interface TrickDetailViewProps {
 export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailViewProps) {
   const t = useTranslations('tricks');
   const tTechniques = useTranslations('tutorials');
+  const tVariations = useTranslations('variations');
   const locale = useLocale();
 
   const query = useQuery({
@@ -42,6 +43,25 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
     data.loopkicksSlug !== null
       ? `https://www.loopkickstricking.com/tricks/${data.loopkicksSlug}`
       : null;
+
+  // Enlaces cruzados (Fase 15). Los href se arman con el locale actual porque el
+  // componente RelatedItems vive en packages/ui y no conoce next-intl.
+  const related = data.related ?? { variations: [], transitions: [], stances: [] };
+  const variationItems = related.variations.map((item) => ({
+    href: `/${locale}/variations/${item.slug}`,
+    label: item.name,
+    badge: tVariations(`badges.${item.kind}`),
+  }));
+  const transitionItems = related.transitions.map((item) => ({
+    href: `/${locale}/transitions/${item.slug}`,
+    label: item.name,
+  }));
+  const stanceItems = related.stances.map((item) => ({
+    href: `/${locale}/stances/${item.slug}`,
+    label: item.name,
+    badge: t(`detail.stanceKind.${item.kind}`),
+  }));
+  const hasRelated = variationItems.length + transitionItems.length + stanceItems.length > 0;
 
   const renderRelated = (items: TrickRelated[]) => (
     <ul className="flex flex-wrap gap-2">
@@ -187,6 +207,39 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
           {renderRelated(data.nextTricks)}
         </section>
       ) : null}
+
+      {hasRelated ? (
+        <section className="flex flex-col gap-4">
+          <h2 className="text-lg font-semibold text-base-content">{t('detail.related')}</h2>
+          {variationItems.length > 0 ? (
+            <RelatedItems
+              title={t('detail.relatedVariations')}
+              items={variationItems}
+              emptyLabel={t('detail.relatedEmpty')}
+            />
+          ) : null}
+          {transitionItems.length > 0 ? (
+            <RelatedItems
+              title={t('detail.relatedTransitions')}
+              items={transitionItems}
+              emptyLabel={t('detail.relatedEmpty')}
+            />
+          ) : null}
+          {stanceItems.length > 0 ? (
+            <RelatedItems
+              title={t('detail.relatedStances')}
+              items={stanceItems}
+              emptyLabel={t('detail.relatedEmpty')}
+            />
+          ) : null}
+        </section>
+      ) : (
+        <RelatedItems
+          title={t('detail.related')}
+          items={[]}
+          emptyLabel={t('detail.relatedEmpty')}
+        />
+      )}
     </div>
   );
 }

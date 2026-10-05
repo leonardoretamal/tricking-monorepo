@@ -1,0 +1,76 @@
+{
+  "admin": {
+    "feedback": {
+      "meta": {
+        "title": "Panel de feedback",
+        "description": "Revisa y gestiona los mensajes de feedback de los usuarios."
+      },
+      "title": "Feedback",
+      "description": "Revisa y gestiona los mensajes recibidos. El panel no está enlazado desde el sitio público.",
+      "tokenLabel": "Token de administración",
+      "tokenPlaceholder": "Pega el token para ver los mensajes",
+      "tokenApply": "Aplicar token",
+      "tokenRequired": "Introduce el token para ver los mensajes.",
+      "tokenInvalid": "El token no es válido o la sesión expiró.",
+      "filters": {
+        "statusLabel": "Estado",
+        "typeLabel": "Tipo",
+        "allStatuses": "Todos los estados",
+        "allTypes": "Todos los tipos",
+        "clear": "Limpiar filtros",
+        "active": "Hay filtros activos"
+      },
+      "status": {
+        "nuevo": "Nuevo",
+        "leido": "Leído",
+        "respondido": "Respondido",
+        "archivado": "Archivado"
+      },
+      "results": {
+        "range": "Mostrando {start} a {end} de {total} mensajes."
+      },
+      "states": {
+        "loading": "Cargando mensajes",
+        "errorTitle": "No pudimos cargar el feedback",
+        "errorDescription": "Hubo un problema al pedir el listado. Intenta de nuevo.",
+        "retry": "Reintentar",
+        "emptyTitle": "Todavía no hay feedback",
+        "emptyDescription": "Cuando los usuarios envíen mensajes aparecerán aquí.",
+        "noResultsTitle": "Sin resultados con esos filtros",
+        "noResultsDescription": "Prueba con otros filtros o límpialos para ver todos los mensajes."
+      },
+      "actions": {
+        "markRead": "Marcar leído",
+        "markReplied": "Marcar respondido",
+        "archive": "Archivar",
+        "delete": "Eliminar"
+      },
+      "delete": {
+        "title": "Eliminar feedback",
+        "description": "El mensaje se ocultará del panel. Se conserva en la base de datos como borrado lógico.",
+        "cancel": "Cancelar",
+        "confirm": "Eliminar"
+      },
+      "fields": {
+        "name": "Nombre",
+        "email": "Correo",
+        "page": "Página",
+        "locale": "Idioma",
+        "anonymous": "Anónimo",
+        "none": "No indicado"
+      },
+      "pagination": {
+        "label": "Paginación del feedback",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "status": "Página {page} de {totalPages}"
+      },
+      "toast": {
+        "statusUpdated": "Estado actualizado.",
+        "deleted": "Mensaje eliminado.",
+        "error": "No pudimos completar la acción.",
+        "unauthorized": "Token inválido o ausente."
+      }
+    }
+  }
+}

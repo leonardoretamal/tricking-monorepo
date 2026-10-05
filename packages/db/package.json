@@ -28,7 +28,8 @@
     "db:how-to": "tsx src/seed/apply-how-to.ts",
     "db:loopkicks-notes": "tsx src/seed/loopkicks-notes.ts",
     "db:tutorials": "tsx src/seed/tutorials.ts",
-    "db:videos": "tsx src/seed/videos.ts"
+    "db:videos": "tsx src/seed/videos.ts",
+    "db:gaze-tips": "tsx src/seed/gaze-tips.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

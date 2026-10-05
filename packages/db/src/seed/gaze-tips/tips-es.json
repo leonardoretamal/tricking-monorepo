@@ -1,0 +1,133 @@
+[
+  {
+    "trickType": "vertical-kicks",
+    "phase": "durante",
+    "order": 10,
+    "instruction": "Mira al objetivo o blanco."
+  },
+  {
+    "trickType": "vertical-kicks",
+    "phase": "caida",
+    "order": 20,
+    "instruction": "Mira al frente, al horizonte.",
+    "warning": "No mires al suelo."
+  },
+  {
+    "trickType": "backward",
+    "phase": "inicio",
+    "order": 10,
+    "instruction": "Mira al frente o un poco arriba.",
+    "warning": "No mires tus pies."
+  },
+  {
+    "trickType": "backward",
+    "phase": "durante",
+    "order": 20,
+    "instruction": "La cabeza acompaña el giro.",
+    "warning": "No mires el suelo."
+  },
+  {
+    "trickType": "backward",
+    "phase": "caida",
+    "order": 30,
+    "instruction": "Mira al frente, al horizonte.",
+    "warning": "En gainer, piensa 'mira la pared de enfrente' para que el miedo no te haga mirar el piso al aterrizar."
+  },
+  {
+    "trickType": "forward",
+    "phase": "inicio",
+    "order": 10,
+    "instruction": "Mira al frente."
+  },
+  {
+    "trickType": "forward",
+    "phase": "durante",
+    "order": 20,
+    "instruction": "No mires los pies ni el suelo."
+  },
+  {
+    "trickType": "forward",
+    "phase": "caida",
+    "order": 30,
+    "instruction": "Mira al frente, al horizonte."
+  },
+  {
+    "trickType": "outside",
+    "phase": "durante",
+    "order": 10,
+    "instruction": "Mira al horizonte, como si miraras algo lejos; la cabeza gira con el cuerpo.",
+    "warning": "Los ojos no van abajo."
+  },
+  {
+    "trickType": "outside",
+    "phase": "caida",
+    "order": 20,
+    "instruction": "Mira al frente, al horizonte.",
+    "warning": "En TD raiz con mano, mira de reojo dónde apoyas y vuelve rápido al frente."
+  },
+  {
+    "trickType": "inside",
+    "phase": "inicio",
+    "order": 10,
+    "instruction": "Mira hacia dónde vas a salir."
+  },
+  {
+    "trickType": "inside",
+    "phase": "durante",
+    "order": 20,
+    "instruction": "La cabeza gira con el cuerpo; busca un punto por encima del hombro (b-twist, aerial).",
+    "warning": "No mires al suelo."
+  },
+  {
+    "trickType": "inside",
+    "phase": "caida",
+    "order": 30,
+    "instruction": "Mira al frente, al horizonte."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "durante",
+    "order": 10,
+    "label": "Rueda y Round Off",
+    "instruction": "Mira el suelo cuando vas a apoyar las manos.",
+    "warning": "En el momento en que tus pies tocan el piso, sube la mirada al frente para pararte bien."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "durante",
+    "order": 20,
+    "label": "Scoot",
+    "instruction": "Mira rápido el suelo para poner la mano.",
+    "warning": "Durante el deslizamiento y al levantarte, mira al frente."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "inicio",
+    "order": 30,
+    "label": "Flic Flac",
+    "instruction": "Empieza mirando al frente."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "durante",
+    "order": 31,
+    "label": "Flic Flac",
+    "instruction": "Al saltar, mira hacia atrás (como al techo o la pared de atrás).",
+    "warning": "No mires tus manos cuando tocan el piso."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "caida",
+    "order": 32,
+    "label": "Flic Flac",
+    "instruction": "Al caer de pie, mira al frente."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "durante",
+    "order": 40,
+    "label": "Coindrop",
+    "instruction": "Mira el suelo para calcular la caída.",
+    "warning": "Justo antes de impactar, gira la cara hacia un lado para no romperte la nariz."
+  }
+]

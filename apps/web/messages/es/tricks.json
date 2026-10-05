@@ -94,6 +94,15 @@
       "difficultyLabel": "Dificultad",
       "prereqs": "Prerrequisitos",
       "nextTricks": "Siguientes trucos",
+      "related": "Relacionados",
+      "relatedVariations": "Variaciones",
+      "relatedTransitions": "Transiciones",
+      "relatedStances": "Posturas",
+      "relatedEmpty": "Todavía no hay secciones relacionadas con este truco.",
+      "stanceKind": {
+        "landing": "Aterrizaje",
+        "takeoff": "Despegue"
+      },
       "video": {
         "heading": "Video demostrativo",
         "loading": "Cargando el video...",

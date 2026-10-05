@@ -94,6 +94,15 @@
       "difficultyLabel": "Difficulty",
       "prereqs": "Prerequisites",
       "nextTricks": "Next tricks",
+      "related": "Related",
+      "relatedVariations": "Variations",
+      "relatedTransitions": "Transitions",
+      "relatedStances": "Stances",
+      "relatedEmpty": "There are no related sections for this trick yet.",
+      "stanceKind": {
+        "landing": "Landing",
+        "takeoff": "Takeoff"
+      },
       "video": {
         "heading": "Demo video",
         "loading": "Loading the video...",

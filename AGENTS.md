@@ -180,13 +180,13 @@ Resumen de las decisiones por defecto:
 - Autenticación: no aplica; el contenido es público y no requiere login. Si se activa el skill tree (sección 28.3), se reevalúa.
 - CI/CD: GitHub Actions.
 - Gestión de secretos: variables de entorno en GitHub Actions y Cloudflare.
-- Correo: Resend. No aplica en Fase 0.
+- Correo: Resend. Activo desde la Fase 18 (aviso de feedback nuevo).
 - Analítica: Umami. Condicional.
 - Cookies y consentimiento: vanilla-cookieconsent. Condicional.
 
 Dependencias aprobadas del monorepo: turbo, pnpm, typescript, eslint, `@typescript-eslint/*`, prettier, husky, lint-staged, `@commitlint/cli`, `@commitlint/config-conventional`.
 
-Dependencias aprobadas del frontend: next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-virtual`, date-fns, date-fns-tz.
+Dependencias aprobadas del frontend: next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, `@xyflow/react`, `resend`, `@marsidev/react-turnstile`, date-fns, date-fns-tz.
 
 Dependencias aprobadas del backend y datos: drizzle-orm, drizzle-kit, `@neondatabase/serverless`, pino, pino-pretty, insta-fetcher, `@trickingapi/tricks-core-data`, `@trickingapi/tricking-ts`, `@upstash/redis`, `@upstash/qstash`, `@aws-sdk/client-s3`, cheerio.
 

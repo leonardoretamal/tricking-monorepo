@@ -47,6 +47,10 @@ export function Breadcrumbs() {
         return t('explore');
       case 'search':
         return t('search');
+      case 'feedback':
+        return t('feedback');
+      case 'admin':
+        return t('admin');
       default:
         return null;
     }
@@ -56,8 +60,10 @@ export function Breadcrumbs() {
     { href: '/', label: t('home'), current: false },
     ...segments.map((segment, index) => {
       const translated = translateSegment(segment);
+      const path = `/${segments.slice(0, index + 1).join('/')}`;
       return {
-        href: `/${segments.slice(0, index + 1).join('/')}`,
+        // `/admin` no tiene pagina propia; el panel vive en `/admin/feedback`.
+        href: path === '/admin' ? '/admin/feedback' : path,
         label: translated ?? segment,
         current: index === segments.length - 1,
       };

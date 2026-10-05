@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "idea_clave",
+    "order": 10,
+    "content": "Mirar al frente no significa mirar un solo punto todo el tiempo. Significa mirar hacia donde vas, hacia donde giras o hacia donde vas a caer, según el momento. Al caer, 'al frente' es el horizonte, nunca el suelo."
+  },
+  {
+    "kind": "regla_de_oro",
+    "order": 20,
+    "content": "Si caes de pie, miras al frente o al horizonte, con el pecho arriba y el estómago apretado. Si usas las manos o la cabeza para apoyarte, sí, miras el punto de apoyo, pero protegiéndote, y en cuanto te pones de pie vuelves al frente. Si miras los pies o el suelo al aterrizar, el pecho se cae."
+  },
+  {
+    "kind": "resumen_corto",
+    "order": 30,
+    "content": "Cayendo de pie: mirada al frente o al horizonte, pecho arriba. Apoyando manos o cabeza: mira el punto de apoyo con cuidado y sube la mirada al frente al pararte."
+  }
+]

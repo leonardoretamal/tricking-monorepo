@@ -1,0 +1,59 @@
+{
+  "feedback": {
+    "meta": {
+      "title": "Feedback",
+      "description": "Cuéntanos si encuentras un error, quieres sugerir una mejora o proponer contenido nuevo."
+    },
+    "title": "Enviar feedback",
+    "description": "Tu mensaje nos ayuda a mejorar el sitio. Puedes escribir de forma anónima.",
+    "typeLabel": "Tipo de mensaje",
+    "types": {
+      "sugerencia": "Sugerencia",
+      "error": "Reporte de error",
+      "contenido": "Contenido",
+      "otro": "Otro"
+    },
+    "nameLabel": "Nombre (opcional)",
+    "namePlaceholder": "Cómo te llamas",
+    "emailLabel": "Correo (opcional)",
+    "emailPlaceholder": "tu-correo@ejemplo.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntanos con detalle qué quieres reportar o sugerir",
+    "messageHint": "Mínimo {min} caracteres, máximo {max}.",
+    "honeypotLabel": "Empresa",
+    "captchaLabel": "Verificación de seguridad",
+    "submit": "Enviar feedback",
+    "submitting": "Enviando",
+    "successTitle": "Gracias por tu mensaje",
+    "successDescription": "Recibimos tu feedback y lo revisaremos pronto.",
+    "sendAnother": "Enviar otro mensaje",
+    "privacyNote": "Solo usamos tu correo para responderte si nos escribes. No se publica.",
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "typeInvalid": "Elige un tipo de mensaje.",
+      "nameMax": "El nombre es demasiado largo.",
+      "emailMax": "El correo es demasiado largo.",
+      "emailInvalid": "Escribe un correo válido.",
+      "messageMin": "El mensaje es demasiado corto.",
+      "messageMax": "El mensaje es demasiado largo.",
+      "pageMax": "La página indicada es demasiado larga.",
+      "honeypot": "No pudimos validar el formulario.",
+      "captchaRequired": "Completa la verificación de seguridad.",
+      "rateLimited": "Enviaste demasiados mensajes. Espera un momento.",
+      "generic": "No pudimos enviar tu mensaje. Intenta de nuevo."
+    },
+    "email": {
+      "subject": "Nuevo feedback: {type}",
+      "intro": "Se recibió un nuevo mensaje de feedback.",
+      "typeLabel": "Tipo",
+      "nameLabel": "Nombre",
+      "emailLabel": "Correo",
+      "pageLabel": "Página",
+      "localeLabel": "Idioma",
+      "dateLabel": "Fecha",
+      "messageLabel": "Mensaje",
+      "anonymous": "Anónimo",
+      "footer": "Feedback #{id}. Gestiónalo en el panel de administración."
+    }
+  }
+}

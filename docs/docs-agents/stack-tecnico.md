@@ -43,7 +43,7 @@ turbo, pnpm, typescript, eslint, `@typescript-eslint/*`, prettier, husky, lint-s
 
 ## Dependencias aprobadas del frontend
 
-next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, `@xyflow/react`, date-fns, date-fns-tz.
+next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, `@xyflow/react`, `resend`, `@marsidev/react-turnstile`, date-fns, date-fns-tz.
 
 ## Dependencias aprobadas del backend y datos
 
@@ -155,6 +155,15 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 - Fase 14 (videos): los videos de Loopkicks son contenido gratuito; se muestran desde la URL ORIGINAL de Loopkicks (`videos.status='external'`) pero NO se almacenan (no se re-hospedan). R2 (`@aws-sdk/client-s3`) queda RESERVADO para videos propios o con licencia; el script `upload:videos` se niega a correr salvo con `--confirm-rights`. Variables `R2_*` y `FFMPEG_PATH` documentadas en `.env.example` pero sin uso con contenido de terceros. La lista `/tricks` es una sola con todos los trucos (filtro por seccion en la URL) y el detalle ordena video a la izquierda, "como se hace" a la derecha y, debajo, los acordeones "Loopkicks" (descripcion real de su ficha en `tricks.loopkicks_notes`, migracion `0008`) y "Kojo".
 - Descripcion propia: la columna `tricks.how_to`/`how_to_es` guarda el "como se hace" escrito por el proyecto (contenido original). Se aplica con `pnpm --filter @tricking/db db:how-to` desde `packages/db/src/seed/how-to/how-to.json`.
 - Mini-guia de cada variable: queda en el bloque correspondiente de `.env.example`. Son opcionales para build y typecheck; sin ellas las fases 13 y 14 degradan (tecnicas por carga manual, videos sin subir) sin romper el resto.
+
+## Fases 15 a 18 (enlaces cruzados, tips de mirada, pulido, feedback)
+
+- Fase 15 (enlaces cruzados): la capa de consulta vive en `packages/db/src/queries/relations.ts` (`getTrickRelations`); un componente reutilizable `RelatedItems` (en `packages/ui`) pinta las relaciones en los detalles. Cache con TTL de 1 dia via TanStack Query.
+- Fase 16 (tips de mirada): tablas `gaze_tips` (con `label` para subcasos como los trucos de piso), `gaze_tip_summaries` (idea clave, regla de oro, resumen corto) y el puente `gaze_tip_sections` (tip -> seccion/categoria/transicion del catalogo). El contenido es PROPIO del proyecto, curado a mano y en es/en, en `packages/db/src/seed/gaze-tips/`; se aplica con `pnpm --filter @tricking/db db:gaze-tips`. Endpoints `GET /api/tips`, `GET /api/tips/summaries` y `GET /api/tips/[trickType]`; rutas `/es/tips` y `/es/tips/[trickType]`. Cache de 30 dias.
+- Migracion `0009_fancy_prism.sql`: agrega `gaze_tips.label`, `gaze_tip_summaries`, `gaze_tip_sections` y `feedback` (con indices de estado, tipo y fecha).
+- Fase 18 (feedback): tabla `feedback` con soft delete; `POST /api/feedback` publico (Zod, rate limiting con `@upstash/redis`, honeypot, tiempo minimo de llenado y Turnstile resuelto en el servidor) y `GET/PATCH/DELETE` de administracion protegidos por el token `FEEDBACK_ADMIN_TOKEN`. Formulario en `/es/feedback` y panel en `/es/admin/feedback`. Aviso por correo con Resend (`resend`) tolerante a fallos. Dependencias nuevas: `resend` y `@marsidev/react-turnstile`.
+- Variables de la Fase 18 (se activan): `RESEND_API_KEY`, `FEEDBACK_NOTIFY_EMAIL`, `FEEDBACK_FROM_EMAIL`, `FEEDBACK_ADMIN_TOKEN`, `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`. El valor real del token y de las claves vive solo en el `.env` local (no versionado); en `.env.example` van placeholders con su mini-guia.
+- El correo pasa de "no aplica" a activo: Resend es el proveedor de la Fase 18. La autenticacion de usuario final sigue sin aplicar; el panel de feedback se protege con token por variable de entorno y se migrara a Auth.js si se activa el skill tree.
 
 ## Notas sobre decisiones no aplicables
 

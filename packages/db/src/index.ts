@@ -8,3 +8,6 @@ export * from './queries/graph';
 export * from './queries/search';
 export * from './queries/tutorials';
 export * from './queries/videos';
+export * from './queries/relations';
+export * from './queries/gaze-tips';
+export * from './queries/feedback';

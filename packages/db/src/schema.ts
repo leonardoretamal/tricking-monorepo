@@ -11,6 +11,7 @@ import {
   smallint,
   text,
   timestamp,
+  uniqueIndex,
 } from 'drizzle-orm/pg-core';
 
 const timestamps = {
@@ -269,16 +270,78 @@ export const videos = pgTable(
   ],
 );
 
+// Tips de mirada (Fase 16). El contenido es original del proyecto, cargado a mano.
+// `trickType` agrupa por seccion del catalogo (vertical-kicks, backward, forward,
+// inside, outside) o por el tipo curado `piso-transiciones`; `phase` es inicio,
+// durante o caida; `label` distingue el subcaso cuando un tipo agrupa varios trucos
+// (por ejemplo rueda, scoot, flic flac y coindrop dentro de piso-transiciones).
 export const gazeTips = pgTable('gaze_tips', {
   id: serial('id').primaryKey(),
   trickType: text('trick_type').notNull(),
   phase: text('phase').notNull(),
+  label: text('label'),
   instruction: text('instruction').notNull(),
   warning: text('warning'),
   order: integer('order').notNull().default(0),
   locale: text('locale').notNull().default('es'),
   ...timestamps,
 });
+
+// Bloques destacados de la seccion de tips: idea clave, regla de oro y resumen corto
+// (Fase 16.2). Uno por (kind, locale).
+export const gazeTipSummaries = pgTable(
+  'gaze_tip_summaries',
+  {
+    id: serial('id').primaryKey(),
+    kind: text('kind').notNull(),
+    content: text('content').notNull(),
+    locale: text('locale').notNull().default('es'),
+    order: integer('order').notNull().default(0),
+    ...timestamps,
+  },
+  (table) => [uniqueIndex('gaze_tip_summaries_kind_locale_idx').on(table.kind, table.locale)],
+);
+
+// Puente tip -> destino del catalogo (Fase 15.3): una seccion (`section`), una
+// categoria (`category`) o una transicion (`transition`), referida por slug.
+export const gazeTipSections = pgTable(
+  'gaze_tip_sections',
+  {
+    gazeTipId: integer('gaze_tip_id')
+      .notNull()
+      .references(() => gazeTips.id, { onDelete: 'cascade' }),
+    targetKind: text('target_kind').notNull(),
+    targetSlug: text('target_slug').notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.gazeTipId, table.targetKind, table.targetSlug] }),
+    index('gaze_tip_sections_target_idx').on(table.targetKind, table.targetSlug),
+  ],
+);
+
+// Feedback de usuarios (Fase 18). Soft delete por defecto. `type` es sugerencia, error,
+// contenido u otro; `status` es nuevo, leido, respondido o archivado.
+export const feedback = pgTable(
+  'feedback',
+  {
+    id: serial('id').primaryKey(),
+    type: text('type').notNull().default('sugerencia'),
+    name: text('name'),
+    email: text('email'),
+    message: text('message').notNull(),
+    page: text('page'),
+    locale: text('locale'),
+    userAgent: text('user_agent'),
+    status: text('status').notNull().default('nuevo'),
+    deletedAt: timestamp('deleted_at', { withTimezone: true }),
+    ...timestamps,
+  },
+  (table) => [
+    index('feedback_status_idx').on(table.status),
+    index('feedback_type_idx').on(table.type),
+    index('feedback_created_at_idx').on(table.createdAt),
+  ],
+);
 
 export const categoriesRelations = relations(categories, ({ many }) => ({
   trickCategories: many(trickCategories),
@@ -394,6 +457,17 @@ export const videosRelations = relations(videos, ({ one }) => ({
   }),
 }));
 
+export const gazeTipsRelations = relations(gazeTips, ({ many }) => ({
+  sectionLinks: many(gazeTipSections),
+}));
+
+export const gazeTipSectionsRelations = relations(gazeTipSections, ({ one }) => ({
+  tip: one(gazeTips, {
+    fields: [gazeTipSections.gazeTipId],
+    references: [gazeTips.id],
+  }),
+}));
+
 export type Category = typeof categories.$inferSelect;
 export type NewCategory = typeof categories.$inferInsert;
 export type Trick = typeof tricks.$inferSelect;
@@ -424,3 +498,9 @@ export type ContentBlock = typeof contentBlocks.$inferSelect;
 export type NewContentBlock = typeof contentBlocks.$inferInsert;
 export type GazeTip = typeof gazeTips.$inferSelect;
 export type NewGazeTip = typeof gazeTips.$inferInsert;
+export type GazeTipSummary = typeof gazeTipSummaries.$inferSelect;
+export type NewGazeTipSummary = typeof gazeTipSummaries.$inferInsert;
+export type GazeTipSection = typeof gazeTipSections.$inferSelect;
+export type NewGazeTipSection = typeof gazeTipSections.$inferInsert;
+export type Feedback = typeof feedback.$inferSelect;
+export type NewFeedback = typeof feedback.$inferInsert;

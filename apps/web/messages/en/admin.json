@@ -1,0 +1,76 @@
+{
+  "admin": {
+    "feedback": {
+      "meta": {
+        "title": "Feedback panel",
+        "description": "Review and manage user feedback messages."
+      },
+      "title": "Feedback",
+      "description": "Review and manage the messages received. The panel is not linked from the public site.",
+      "tokenLabel": "Admin token",
+      "tokenPlaceholder": "Paste the token to view messages",
+      "tokenApply": "Apply token",
+      "tokenRequired": "Enter the token to view messages.",
+      "tokenInvalid": "The token is invalid or the session expired.",
+      "filters": {
+        "statusLabel": "Status",
+        "typeLabel": "Type",
+        "allStatuses": "All statuses",
+        "allTypes": "All types",
+        "clear": "Clear filters",
+        "active": "Filters are active"
+      },
+      "status": {
+        "nuevo": "New",
+        "leido": "Read",
+        "respondido": "Replied",
+        "archivado": "Archived"
+      },
+      "results": {
+        "range": "Showing {start} to {end} of {total} messages."
+      },
+      "states": {
+        "loading": "Loading messages",
+        "errorTitle": "We could not load the feedback",
+        "errorDescription": "There was a problem requesting the list. Please try again.",
+        "retry": "Retry",
+        "emptyTitle": "No feedback yet",
+        "emptyDescription": "When users send messages they will appear here.",
+        "noResultsTitle": "No results with those filters",
+        "noResultsDescription": "Try other filters or clear them to see every message."
+      },
+      "actions": {
+        "markRead": "Mark as read",
+        "markReplied": "Mark as replied",
+        "archive": "Archive",
+        "delete": "Delete"
+      },
+      "delete": {
+        "title": "Delete feedback",
+        "description": "The message will be hidden from the panel. It is kept in the database as a soft delete.",
+        "cancel": "Cancel",
+        "confirm": "Delete"
+      },
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "page": "Page",
+        "locale": "Locale",
+        "anonymous": "Anonymous",
+        "none": "Not provided"
+      },
+      "pagination": {
+        "label": "Feedback pagination",
+        "previous": "Previous",
+        "next": "Next",
+        "status": "Page {page} of {totalPages}"
+      },
+      "toast": {
+        "statusUpdated": "Status updated.",
+        "deleted": "Message deleted.",
+        "error": "We could not complete the action.",
+        "unauthorized": "Invalid or missing token."
+      }
+    }
+  }
+}

@@ -13,6 +13,8 @@ const modules = [
   'tips',
   'explore',
   'search',
+  'feedback',
+  'admin',
 ] as const;
 
 export default getRequestConfig(async ({ requestLocale }) => {

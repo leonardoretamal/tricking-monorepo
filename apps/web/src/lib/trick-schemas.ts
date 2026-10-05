@@ -39,6 +39,29 @@ export const kojoTechniqueSchema = z.object({
   author: z.string().nullable(),
 });
 
+export const relatedVariationSchema = z.object({
+  slug: z.string(),
+  name: z.string(),
+  kind: z.string(),
+});
+
+export const relatedTransitionSchema = z.object({
+  slug: z.string(),
+  name: z.string(),
+});
+
+export const relatedStanceSchema = z.object({
+  slug: z.string(),
+  name: z.string(),
+  kind: z.string(),
+});
+
+export const trickRelationsSchema = z.object({
+  variations: z.array(relatedVariationSchema),
+  transitions: z.array(relatedTransitionSchema),
+  stances: z.array(relatedStanceSchema),
+});
+
 export const trickDetailSchema = trickListItemSchema.extend({
   howTo: z.string().nullable(),
   howToEs: z.string().nullable(),
@@ -46,9 +69,14 @@ export const trickDetailSchema = trickListItemSchema.extend({
   kojoTechniques: z.array(kojoTechniqueSchema),
   prereqs: z.array(trickRelatedSchema),
   nextTricks: z.array(trickRelatedSchema),
+  related: trickRelationsSchema.optional(),
 });
 
 export type KojoTechnique = z.infer<typeof kojoTechniqueSchema>;
+export type RelatedVariation = z.infer<typeof relatedVariationSchema>;
+export type RelatedTransition = z.infer<typeof relatedTransitionSchema>;
+export type RelatedStance = z.infer<typeof relatedStanceSchema>;
+export type TrickRelations = z.infer<typeof trickRelationsSchema>;
 
 export type TrickListItem = z.infer<typeof trickListItemSchema>;
 export type TrickRelated = z.infer<typeof trickRelatedSchema>;

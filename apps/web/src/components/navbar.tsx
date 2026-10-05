@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import type { KeyboardEvent } from 'react';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Eye, Menu, X, type LucideIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { LocaleSwitcher } from '@/components/locale-switcher';
@@ -17,6 +17,7 @@ type NavSubItem = {
 type NavItem = {
   href: string;
   label: string;
+  icon?: LucideIcon;
   submenu?: NavSubItem[];
 };
 
@@ -57,7 +58,7 @@ export function Navbar() {
     { href: '/transitions', label: t('transitions') },
     { href: '/stances', label: t('stances') },
     { href: '/tutorials', label: t('tutorials') },
-    { href: '/tips', label: t('tips') },
+    { href: '/tips', label: t('tips'), icon: Eye },
     { href: '/explore', label: t('explore') },
   ];
 
@@ -83,6 +84,7 @@ export function Navbar() {
           <ul className="flex items-center gap-1">
             {links.map((item) => {
               const submenu = item.submenu;
+              const Icon = item.icon;
               if (submenu) {
                 return (
                   <li key={item.href} className="relative" onKeyDown={handleTricksKeyDown}>
@@ -126,6 +128,7 @@ export function Navbar() {
                     aria-current={isPathActive(pathname, item.href) ? 'page' : undefined}
                     className={linkClass(item.href)}
                   >
+                    {Icon ? <Icon aria-hidden="true" className="size-4" /> : null}
                     {item.label}
                   </Link>
                 </li>
@@ -164,6 +167,7 @@ export function Navbar() {
         <ul className="menu w-full gap-1 px-2 py-2">
           {links.map((item) => {
             const submenu = item.submenu;
+            const Icon = item.icon;
             return (
               <li key={item.href}>
                 <Link
@@ -172,6 +176,7 @@ export function Navbar() {
                   className={linkClass(item.href)}
                   onClick={() => setMobileOpen(false)}
                 >
+                  {Icon ? <Icon aria-hidden="true" className="size-4" /> : null}
                   {item.label}
                 </Link>
                 {submenu ? (

@@ -1,0 +1,59 @@
+{
+  "feedback": {
+    "meta": {
+      "title": "Feedback",
+      "description": "Tell us if you find a bug, want to suggest an improvement or propose new content."
+    },
+    "title": "Send feedback",
+    "description": "Your message helps us improve the site. You can write anonymously.",
+    "typeLabel": "Message type",
+    "types": {
+      "sugerencia": "Suggestion",
+      "error": "Bug report",
+      "contenido": "Content",
+      "otro": "Other"
+    },
+    "nameLabel": "Name (optional)",
+    "namePlaceholder": "What should we call you",
+    "emailLabel": "Email (optional)",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us in detail what you want to report or suggest",
+    "messageHint": "Minimum {min} characters, maximum {max}.",
+    "honeypotLabel": "Company",
+    "captchaLabel": "Security check",
+    "submit": "Send feedback",
+    "submitting": "Sending",
+    "successTitle": "Thanks for your message",
+    "successDescription": "We received your feedback and will review it soon.",
+    "sendAnother": "Send another message",
+    "privacyNote": "We only use your email to reply if you write to us. It is not published.",
+    "errors": {
+      "required": "This field is required.",
+      "typeInvalid": "Choose a message type.",
+      "nameMax": "The name is too long.",
+      "emailMax": "The email is too long.",
+      "emailInvalid": "Enter a valid email address.",
+      "messageMin": "The message is too short.",
+      "messageMax": "The message is too long.",
+      "pageMax": "The page reference is too long.",
+      "honeypot": "We could not validate the form.",
+      "captchaRequired": "Complete the security check.",
+      "rateLimited": "You sent too many messages. Please wait a moment.",
+      "generic": "We could not send your message. Please try again."
+    },
+    "email": {
+      "subject": "New feedback: {type}",
+      "intro": "A new feedback message was received.",
+      "typeLabel": "Type",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "pageLabel": "Page",
+      "localeLabel": "Locale",
+      "dateLabel": "Date",
+      "messageLabel": "Message",
+      "anonymous": "Anonymous",
+      "footer": "Feedback #{id}. Manage it in the admin panel."
+    }
+  }
+}

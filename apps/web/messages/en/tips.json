@@ -1,6 +1,41 @@
 {
   "tips": {
     "title": "Gaze tips",
-    "description": "Technical advice on where to look and how to execute each trick."
+    "description": "Technical advice on where to look at each moment of a trick, with the start, during and landing phases.",
+    "typesHeading": "Tips by trick type",
+    "typesLabel": "Trick types",
+    "allTypes": "All",
+    "tipCount": "{count} tips",
+    "viewTips": "View the tips",
+    "warningLabel": "Careful",
+    "phases": {
+      "inicio": "Start",
+      "durante": "During",
+      "caida": "Landing"
+    },
+    "summaries": {
+      "idea_clave": "Key idea",
+      "regla_de_oro": "Golden rule",
+      "resumen_corto": "Short summary"
+    },
+    "detail": {
+      "back": "Back to gaze tips",
+      "intro": "Review the start, during and landing phases for this trick type.",
+      "metaDescription": "Gaze tips for {type}: what to look at on the start, during and landing."
+    },
+    "related": {
+      "title": "In the catalog",
+      "section": "View the section",
+      "category": "View the category",
+      "transition": "View the transition"
+    },
+    "states": {
+      "loading": "Loading tips",
+      "errorTitle": "We could not load the tips",
+      "errorDescription": "There was a problem loading the tips. Try again.",
+      "retry": "Retry",
+      "emptyTitle": "No tips yet",
+      "emptyDescription": "This content will be completed soon."
+    }
   }
 }

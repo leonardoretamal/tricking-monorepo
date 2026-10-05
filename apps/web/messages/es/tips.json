@@ -1,6 +1,41 @@
 {
   "tips": {
     "title": "Tips de mirada",
-    "description": "Consejos técnicos sobre dónde mirar y cómo ejecutar cada truco."
+    "description": "Consejos técnicos sobre dónde mirar en cada momento del truco, con las fases de inicio, durante y caída.",
+    "typesHeading": "Tips por tipo de truco",
+    "typesLabel": "Tipos de truco",
+    "allTypes": "Todos",
+    "tipCount": "{count} tips",
+    "viewTips": "Ver los tips",
+    "warningLabel": "Cuidado",
+    "phases": {
+      "inicio": "Inicio",
+      "durante": "Durante",
+      "caida": "Caída"
+    },
+    "summaries": {
+      "idea_clave": "Idea clave",
+      "regla_de_oro": "Regla de oro",
+      "resumen_corto": "Resumen corto"
+    },
+    "detail": {
+      "back": "Volver a tips de mirada",
+      "intro": "Revisa las fases de inicio, durante y caída para este tipo de truco.",
+      "metaDescription": "Tips de mirada para {type}: qué mirar en el inicio, durante y la caída."
+    },
+    "related": {
+      "title": "En el catálogo",
+      "section": "Ver la sección",
+      "category": "Ver la categoría",
+      "transition": "Ver la transición"
+    },
+    "states": {
+      "loading": "Cargando tips",
+      "errorTitle": "No pudimos cargar los tips",
+      "errorDescription": "Hubo un problema al pedir los tips. Intenta de nuevo.",
+      "retry": "Reintentar",
+      "emptyTitle": "Todavía no hay tips",
+      "emptyDescription": "Este contenido se completará pronto."
+    }
   }
 }

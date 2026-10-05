@@ -64,6 +64,13 @@
       "when": 1791157012793,
       "tag": "0008_kind_paper_doll",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1791158598513,
+      "tag": "0009_fancy_prism",
+      "breakpoints": true
     }
   ]
 }

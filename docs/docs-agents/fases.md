@@ -261,7 +261,7 @@ Diseño final del catálogo (2026-10-04): `/tricks` es una sola lista con todos 
 
 ## Fase 15: Enlaces cruzados entre secciones
 
-Estado: pendiente.
+Estado: completada.
 
 - 15.1. Cada truco del catálogo enlaza a sus variaciones, transiciones y stance relacionado.
 - 15.2. Cada variación y transición enlaza de vuelta al truco base.
@@ -272,15 +272,17 @@ Estado: pendiente.
 
 Criterio de cierre: navegación cruzada funcional y coherente, sin enlaces rotos.
 
+Notas de cierre: la capa de consulta es `packages/db/src/queries/relations.ts` (`getTrickRelations`, 3 consultas por lote, sin N+1) y el detalle de truco la expone en `related`. El componente reutilizable `RelatedItems` (en `packages/ui`, sin dependencia de framework, recibe los `href` ya localizados) pinta variaciones, transiciones y stances en el detalle; se verifico en navegador real (`/es/tricks/inside/aerial` lista 6 transiciones y 2 stances). 15.2 ya estaba cubierto (variacion y transicion enlazan de vuelta al truco base). 15.3 (tip -> tipo de truco del catalogo) se implemento con la tabla puente `gaze_tip_sections` dentro de la Fase 16. 15.4 (tecnica de Kojo -> truco) ya existia via `tutorial_tricks`. La cache de relaciones viaja dentro del cache del detalle (TTL 1 dia) con `CACHE_BUSTER` subido. Sin migracion propia ni variables nuevas.
+
 ## Fase 16: Tips de mirada
 
-Estado: pendiente.
+Estado: completada.
 
 Sección dedicada a tips técnicos sobre hacia dónde mirar en cada momento del truco. El contenido es curado por el usuario y se carga manualmente en la base de datos, no se scrapea de ninguna fuente externa.
 
 Subfases:
 
-- 16.1. Modelar tabla `gaze_tips` con campos: `id`, `trick_type` (patadas, giros, side flip, mortales, horizontales, aerial), `phase` (inicio, durante, caida), `instruction`, `warning` opcional, `order`, `locale`, `created_at`, `updated_at`.
+- 16.1. Modelar tabla `gaze_tips` con campos: `id`, `trick_type` (secciones del catalogo: vertical-kicks, backward, forward, inside, outside, mas el tipo curado piso-transiciones), `phase` (inicio, durante, caida), `label` opcional (subcaso dentro de un tipo, por ejemplo los trucos de piso), `instruction`, `warning` opcional, `order`, `locale`, `created_at`, `updated_at`.
 - 16.2. Modelar tabla `gaze_tip_summaries` para la idea clave, la regla de oro y el resumen corto, con campos: `id`, `kind` (idea_clave, regla_de_oro, resumen_corto), `content`, `locale`, `order`.
 - 16.3. Endpoint `/api/tips` con filtros por tipo de truco y por fase.
 - 16.4. Endpoint `/api/tips/summaries` para los bloques destacados.
@@ -308,9 +310,11 @@ Campos que esta fase usa y que conviene vigilar: `gaze_tips` y `gaze_tip_summari
 
 Criterio de cierre: sección completa, navegable, responsive y accesible, con todo el contenido inicial cargado en español e inglés, y con la idea clave, la regla de oro y el resumen corto destacados visualmente.
 
+Notas de cierre: la taxonomia real usa las 5 secciones de Loopkicks (`vertical-kicks`, `backward`, `forward`, `inside`, `outside`) mas el tipo curado `piso-transiciones` (los trucos de piso usan `gaze_tips.label` para distinguir Rueda/Round Off, Scoot, Flic Flac y Coindrop). Migracion `0009_fancy_prism.sql`: `gaze_tips.label`, `gaze_tip_summaries` (unico por kind+locale) y `gaze_tip_sections` (puente tip -> seccion/categoria/transicion). Contenido PROPIO curado a mano en `packages/db/src/seed/gaze-tips/` (19 tips y 3 resumenes por locale, es y en), aplicado con `pnpm --filter @tricking/db db:gaze-tips`; el ingles lo redacto el agente. Endpoints `GET /api/tips`, `/api/tips/summaries`, `/api/tips/[trickType]`. Rutas `/es/tips` (server) y `/es/tips/[trickType]` (cliente con cache de 30 dias). Verificado en navegador real (bloques destacados, tabs, fases, enlaces "En el catalogo", movil 390x600 sin overflow). Icono de ojo en el navbar.
+
 ## Fase 17: Pulido y validación final
 
-Estado: pendiente.
+Estado: completada con pendientes de entorno.
 
 - 17.0. Endurecer los ganchos de pre-commit y pre-push (adelantado y completado el 2026-10-03).
 - 17.1. Subagentes de validación (reviewer, security, tester, i18n-checker).
@@ -323,9 +327,11 @@ Estado: pendiente.
 
 Criterio de cierre: proyecto listo para producción, con todos los subagentes en verde y el checklist de lanzamiento completo.
 
+Notas de cierre: 17.0 ya estaba hecho. 17.1 ejecutado con 4 subagentes en paralelo (reviewer, security, tester, i18n-checker) sobre las Fases 15, 16 y 18; el bloqueante unanime (el cache persistido de TanStack Query filtraba a localStorage el token del panel y la PII del feedback) se corrigio con `dehydrateOptions.shouldDehydrateQuery` en `providers.tsx`, y se aplicaron varios hallazgos menores (validar el minimo del mensaje tras sanear, `parseId` estricto, clave huerfana, texto hardcodeado, slug crudo, memoizar `getTrickById` con `cache()`, sincronizar AGENTS.md). 17.2 build delegado al gancho pre-push (regla del repo). 17.3 Lighthouse NO se ejecuto: la sesion no tiene la herramienta y Playwright no cubre Lighthouse (limitacion declarada). 17.4 accesibilidad revisada por codigo (roles, `aria-*`, foco, estados). 17.5 checklist de lanzamiento actualizado. 17.6 sin rastros de IA ni capturas dentro del repo. 17.7 documentacion actualizada. PENDIENTE: correr Lighthouse en movil cuando haya una herramienta/entorno que lo permita, y configurar `RESEND_API_KEY` y Turnstile.
+
 ## Fase 18: Feedback de usuarios
 
-Estado: pendiente.
+Estado: completada con pendientes de entorno.
 
 Sección que permite a los usuarios enviar feedback (sugerencias, reportes de error o de contenido), consultarlo en un panel mínimo de administración y recibir un aviso por correo en una dirección configurable. Es la parte accionable de los pendientes "Contribuciones de usuarios", "Notificaciones por correo" y "Comunidad ligera" de la sección 28.5 de `AGENTS.md`. Esta fase activa el proveedor de correo (Resend), que hasta ahora estaba marcado como "no aplica".
 
@@ -348,6 +354,8 @@ Dependencias: requiere base de datos (Fase 1) y frontend base (Fase 2). No requi
 Orden sugerido: se puede ejecutar después de la Fase 16 y antes de la Fase 17, o como Fase 18 tras el lanzamiento. El usuario decide.
 
 Criterio de cierre: formulario de feedback funcionando, feedback guardado en la base de datos, aviso por correo recibido en la dirección configurable, panel de administración listo para ver y gestionar los feedbacks, accesible, responsive, con i18n es/en, con la ronda de subagentes de validación ejecutada y con el build de producción verificado.
+
+Notas de cierre: tabla `feedback` en la migracion `0009_fancy_prism.sql` (soft delete, indices de estado/tipo/creado). `POST /api/feedback` publico con Zod, rate limiting (Upstash Redis; degrada a memoria), honeypot, tiempo minimo de llenado y Turnstile resuelto en el servidor; el feedback se guarda aunque falle el correo. `GET/PATCH/DELETE` protegidos por el token `FEEDBACK_ADMIN_TOKEN` comparado en tiempo constante (sin enlaces publicos, `noindex`). Formulario en `/es/feedback` (enlace en el footer) y panel en `/es/admin/feedback` con filtros, paginacion, estados y soft delete con modal. Aviso por correo con Resend tolerante a fallos y sin PII en logs. Decisiones: el captcha Turnstile se aplica SIEMPRE (dev y produccion son el mismo entorno); el token del panel se guarda solo en el `.env` local (no versionado) y en `.env.example` queda un placeholder; el panel no se persiste en localStorage (filtro `shouldDehydrateQuery`), para no filtrar el token ni datos personales. Verificado en navegador real (POST guarda, GET con token lista, sin token 401, panel carga) y la `query-cache` de localStorage no contiene token ni correo. PENDIENTES DE ENTORNO: faltan `RESEND_API_KEY` y las claves de Turnstile en el `.env`; sin ellas el feedback igual se guarda y el envio de correo y la verificacion captcha degradan con aviso. La Fase 18 se ejecuto antes que la 17 por decision del usuario.
 
 ## Fases sugeridas fuera de la numeración principal
 

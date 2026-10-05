@@ -1,0 +1,133 @@
+[
+  {
+    "trickType": "vertical-kicks",
+    "phase": "durante",
+    "order": 10,
+    "instruction": "Look at the target or mark."
+  },
+  {
+    "trickType": "vertical-kicks",
+    "phase": "caida",
+    "order": 20,
+    "instruction": "Look forward, at the horizon.",
+    "warning": "Do not look at the ground."
+  },
+  {
+    "trickType": "backward",
+    "phase": "inicio",
+    "order": 10,
+    "instruction": "Look forward or slightly up.",
+    "warning": "Do not look at your feet."
+  },
+  {
+    "trickType": "backward",
+    "phase": "durante",
+    "order": 20,
+    "instruction": "The head follows the rotation.",
+    "warning": "Do not look at the ground."
+  },
+  {
+    "trickType": "backward",
+    "phase": "caida",
+    "order": 30,
+    "instruction": "Look forward, at the horizon.",
+    "warning": "In a gainer, think 'look at the wall in front of you' so fear does not make you look at the floor when you land."
+  },
+  {
+    "trickType": "forward",
+    "phase": "inicio",
+    "order": 10,
+    "instruction": "Look forward."
+  },
+  {
+    "trickType": "forward",
+    "phase": "durante",
+    "order": 20,
+    "instruction": "Do not look at your feet or the ground."
+  },
+  {
+    "trickType": "forward",
+    "phase": "caida",
+    "order": 30,
+    "instruction": "Look forward, at the horizon."
+  },
+  {
+    "trickType": "outside",
+    "phase": "durante",
+    "order": 10,
+    "instruction": "Look at the horizon, as if you were looking at something far away; the head turns with the body.",
+    "warning": "Your eyes do not go down."
+  },
+  {
+    "trickType": "outside",
+    "phase": "caida",
+    "order": 20,
+    "instruction": "Look forward, at the horizon.",
+    "warning": "In a TD raiz with a hand, glance at where you place it and quickly return to the front."
+  },
+  {
+    "trickType": "inside",
+    "phase": "inicio",
+    "order": 10,
+    "instruction": "Look where you are going to come out."
+  },
+  {
+    "trickType": "inside",
+    "phase": "durante",
+    "order": 20,
+    "instruction": "The head turns with the body; find a point over your shoulder (b-twist, aerial).",
+    "warning": "Do not look at the ground."
+  },
+  {
+    "trickType": "inside",
+    "phase": "caida",
+    "order": 30,
+    "instruction": "Look forward, at the horizon."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "durante",
+    "order": 10,
+    "label": "Cartwheel and Round Off",
+    "instruction": "Look at the ground when you are about to place your hands.",
+    "warning": "The moment your feet touch the floor, lift your gaze forward so you stand up well."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "durante",
+    "order": 20,
+    "label": "Scoot",
+    "instruction": "Quickly look at the ground to place your hand.",
+    "warning": "During the slide and when you stand up, look forward."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "inicio",
+    "order": 30,
+    "label": "Flic Flac",
+    "instruction": "Start by looking forward."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "durante",
+    "order": 31,
+    "label": "Flic Flac",
+    "instruction": "As you jump, look backward (as if at the ceiling or the wall behind you).",
+    "warning": "Do not look at your hands when they touch the floor."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "caida",
+    "order": 32,
+    "label": "Flic Flac",
+    "instruction": "When you land on your feet, look forward."
+  },
+  {
+    "trickType": "piso-transiciones",
+    "phase": "durante",
+    "order": 40,
+    "label": "Coindrop",
+    "instruction": "Look at the ground to calculate the fall.",
+    "warning": "Just before impact, turn your face to the side so you do not break your nose."
+  }
+]

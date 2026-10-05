@@ -9,6 +9,7 @@ import {
   tutorialTricks,
   tutorials,
 } from '../schema';
+import { getTrickRelations, type TrickRelations } from './relations';
 
 // Consultas de trucos con paginacion, filtros, busqueda y orden resueltos en la base de
 // datos (regla de listados). La API valida los parametros con Zod antes de llegar aqui.
@@ -81,6 +82,7 @@ export interface TrickDetail extends TrickListItem {
   kojoTechniques: KojoTechnique[];
   prereqs: TrickRelated[];
   nextTricks: TrickRelated[];
+  related: TrickRelations;
 }
 
 function orderBy(sort: TrickSort) {
@@ -246,6 +248,10 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
 
   const map = await categoryMapFor([trick.id]);
 
+  // Enlaces cruzados de la Fase 15: variaciones, transiciones y stances ligados al
+  // truco, resueltos en consultas por lote (sin N+1).
+  const related = await getTrickRelations(trick.id);
+
   // Tecnicas de Kojo emparejadas con este truco (tips propios + credito).
   const kojoRows = await db
     .select({
@@ -277,5 +283,6 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     categories: map.get(trick.id) ?? [],
     prereqs,
     nextTricks,
+    related,
   };
 }
