@@ -22,8 +22,6 @@ jobs:
     name: Desplegar en Cloudflare
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    # Se salta (no falla) hasta que existan los secretos de Cloudflare.
-    if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
     env:
       # Variables publicas que Next inlinea en el BUILD (no en runtime).
       NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
