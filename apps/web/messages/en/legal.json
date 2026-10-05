@@ -1,0 +1,89 @@
+{
+  "legal": {
+    "meta": {
+      "title": "Legal notice",
+      "description": "Site owner details, terms of use, intellectual property and third-party content of the Tricking site."
+    },
+    "title": "Legal notice",
+    "updatedLabel": "Last updated:",
+    "updated": "October 5, 2026",
+    "intro": "This legal notice governs the use of the Tricking site. By browsing the site you accept the conditions described below.",
+    "holder": {
+      "title": "Site owner",
+      "placeholder": "[complete the owner details]",
+      "note": "Before publishing the site, replace this placeholder with the owner's name or legal entity, address and contact email."
+    },
+    "object": {
+      "title": "Purpose and acceptance",
+      "body": "The site offers an informational catalog of tricking tricks, variations, transitions, stances and tips, with links to the original sources. Access is free. Using the site implies acceptance of this notice."
+    },
+    "use": {
+      "title": "Use of the site",
+      "body": "Users agree to use the site lawfully and not to take actions that may damage it, overload it or prevent its normal operation. Mass automated extraction of the content without authorization is not allowed."
+    },
+    "intellectualProperty": {
+      "title": "Intellectual property",
+      "body": "The design, code and original texts of the site belong to the owner. Trick names are standard terms of the sport. The original descriptions were written for this project and do not copy the text of the sources."
+    },
+    "thirdParty": {
+      "title": "Third-party content",
+      "body": "The site displays and links content from Loopkicks and technical knowledge from Kojo's Trick Lab with attribution and a link to the original. No copies of those videos or materials are stored. The site is not affiliated with those sources and does not assume their content."
+    },
+    "removal": {
+      "title": "Content removal",
+      "body": "If you own a piece of content and want it removed from the site, write to us and it will be removed immediately through a soft delete, with no deployment required."
+    },
+    "links": {
+      "title": "External links",
+      "body": "The site includes links to third-party pages. We do not control those sites and are not responsible for their content or their policies."
+    },
+    "liability": {
+      "title": "Limitation of liability",
+      "body": "The information on the site is informational and is provided as is. Practicing tricking involves physical risk: consult a coach and take the necessary precautions. The owner is not liable for injuries resulting from practice."
+    },
+    "law": {
+      "title": "Applicable law",
+      "body": "This notice is governed by the law of the owner's country. Before publishing, complete the owner details to specify the applicable jurisdiction."
+    },
+    "privacy": {
+      "meta": {
+        "title": "Privacy policy",
+        "description": "What data we process, on what legal basis, how long we keep it, who we share it with and how to exercise your rights."
+      },
+      "title": "Privacy policy",
+      "updatedLabel": "Last updated:",
+      "updated": "October 5, 2026",
+      "intro": "This policy explains what personal data the Tricking site processes, what it uses it for, on what legal basis, how long it keeps it and how you can exercise your rights.",
+      "controllerTitle": "Data controller",
+      "controllerPlaceholder": "[complete the owner details]",
+      "controllerNote": "Before publishing the site, replace this placeholder with the owner's name or legal entity and a contact email.",
+      "dataTitle": "What data we process",
+      "dataIntro": "The site processes as little data as possible. Depending on how you use it, the following categories are processed.",
+      "feedbackTitle": "Feedback",
+      "feedbackBody": "In the feedback form, the name, email and message are optional. If you write without data, the message is anonymous. We use the email only to reply if needed. The message is not published.",
+      "progressTitle": "User progress",
+      "progressBody": "Your progress (tricks marked as already known, in progress or to learn) is stored only in the browser, in the device's local storage. It is not sent to our servers. The list of marked tricks is sent to the artificial intelligence assistant when you use it, to generate answers and combinations; it is not stored linked to your identity.",
+      "logsTitle": "Technical logs",
+      "logsBody": "The server records technical events with a trace identifier (trace_id) to diagnose failures. The logs do not include passwords, tokens or complete personal data.",
+      "cookiesTitle": "Cookies",
+      "cookiesBody": "The site uses a single cookie, NEXT_LOCALE, to remember the chosen language. It is strictly necessary, it is not used for advertising or to track your browsing and it does not require prior consent. No analytics or marketing cookies are set.",
+      "thirdPartiesTitle": "Third parties and processors",
+      "thirdPartiesIntro": "To operate the site we rely on providers that process data on our behalf and under the guarantees of their own terms.",
+      "thirdPartyNeon": "Neon: database where the catalog and the feedback live.",
+      "thirdPartyCloudflare": "Cloudflare: site hosting, HTTPS redirection and security headers.",
+      "thirdPartyResend": "Resend: sends the email notice when new feedback arrives.",
+      "thirdPartyUpstash": "Upstash: request limiting (rate limiting) to protect the form.",
+      "thirdPartyAi": "Artificial intelligence assistant provider (Phase 22): receives your question and the list of marked tricks to answer it.",
+      "legalBasisTitle": "Legal basis",
+      "legalBasisBody": "Feedback processing is based on your consent when you send it and on our legitimate interest in improving the site. Use of the assistant is based on your consent when you make a query. Strictly necessary cookies are based on the legitimate interest of providing the service.",
+      "retentionTitle": "Retention",
+      "retentionBody": "Feedback is kept while it is useful to manage it and then deleted or anonymized. Technical logs are kept for a short period and rotated. User progress remains in your browser until you delete it or reset the site storage.",
+      "rightsTitle": "Rights",
+      "rightsBody": "You may request access, rectification, erasure, objection, restriction and portability of your data, and withdraw your consent at any time. Since progress never leaves your browser, you can delete it directly from the site or by clearing your browser data.",
+      "contactTitle": "Contact",
+      "contactBody": "To exercise your rights or ask about privacy, write to the owner's contact email, which will be completed before the site is published.",
+      "changesTitle": "Changes to this policy",
+      "changesBody": "If data processing changes, we will update this policy and its date. We recommend reviewing it when you use the site."
+    }
+  }
+}

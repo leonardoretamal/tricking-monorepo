@@ -131,6 +131,7 @@ Reglas asociadas:
 - El agente no puede ejecutar una tarea sin haber leído los documentos referenciados que le aplican. Si no los leyó, no empieza.
 - Al inicio de la tarea, el agente declara qué documentos referenciados va a leer y por qué. Si alguno aplica y no lo leyó, lo reporta como incumplimiento.
 - Los documentos que no aplican a la tarea no se leen completos, pero el agente sabe que existen y dónde están porque están listados en `AGENTS.md`.
+- Cuando un documento se lee (porque aplica a la tarea, es el índice de flujo o contiene reglas), se lee completo: no se acorta, no se omite nada y no se reemplaza por un resumen. Si es muy extenso y no cabe en una sola lectura, se lee por tramos hasta el final (por ejemplo, varias llamadas a `Read` con `offset` y `limit`). Aplica a `AGENTS.md`, a los documentos índice (tipo `leonardo-flow.md`) y a todo documento de reglas; lo único que no se lee completo es el documento que no aplica a la tarea (viñeta anterior).
 
 ### Longitud de AGENTS.md y derivación de reglas nuevas
 
@@ -266,7 +267,7 @@ El estado de las fases vive en `docs/docs-agents/fases.md`. El detalle de las fa
 
 El detalle de paletas, colores y reglas visuales está en `docs/docs-agents/design.md`. Consultar `docs/docs-agents/design.md` siempre antes de tocar interfaz.
 
-Resumen: dos temas, `tricking-light` (default) y `tricking-dark` (prefersdark). La resolución del tema es, en orden: preferencia manual en localStorage (`tricking:theme`), preferencia del sistema vía `prefers-color-scheme`, y default del proyecto (modo claro). El tema se aplica con `data-theme` en `<html>`, nunca con clases condicionales. Prohibido escribir colores sueltos con hex en los componentes; todo sale de las variables del tema. El script inline anti-flash vive en el `<head>` del layout raíz y es el único `dangerouslySetInnerHTML` permitido sin autorización expresa. El tema persistido usa la clave `tricking:theme` con TTL de 1 año. El cambio es instantáneo, sin recargar. El botón de toggle tiene `aria-label` descriptivo, `aria-pressed` y es operable por teclado.
+Resumen: dos temas, `tricking-light` (default) y `tricking-dark` (prefersdark). La resolución del tema es, en orden: preferencia manual en localStorage (`tricking:theme`), preferencia del sistema vía `prefers-color-scheme`, y default del proyecto (modo claro). El tema se aplica con `data-theme` en `<html>`, nunca con clases condicionales. Prohibido escribir colores sueltos con hex en los componentes; todo sale de las variables del tema. El script inline anti-flash vive en el `<head>` del layout raíz y, junto con el JSON-LD de datos estructurados (serializado y con el carácter `<` escapado), son los dos únicos `dangerouslySetInnerHTML` permitidos sin autorización adicional (ver `docs/docs-agents/reglas-frontend.md`). El tema persistido usa la clave `tricking:theme` con TTL de 1 año. El cambio es instantáneo, sin recargar. El botón de toggle tiene `aria-label` descriptivo, `aria-pressed` y es operable por teclado.
 
 ## 11. Cacheo en cliente (localStorage)
 

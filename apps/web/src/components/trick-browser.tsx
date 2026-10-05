@@ -5,7 +5,6 @@ import { useVirtualizer } from '@tanstack/react-virtual';
 import {
   EmptyState,
   ErrorState,
-  TrickCard,
   TrickListSkeleton,
   categoryBadgeColor,
   type TrickCardCategory,
@@ -14,7 +13,8 @@ import { Search } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useRef, useState, type RefObject } from 'react';
 
-import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { TrickCard } from '@/components/trick-card';
+import { usePathname, useRouter } from '@/i18n/navigation';
 import { pickDescription } from '@/lib/description';
 import { fetchTricks } from '@/lib/trick-api';
 import type { TrickListItem } from '@/lib/trick-schemas';
@@ -22,6 +22,9 @@ import { DEFAULT_SECTION, SECTIONS, type Section } from '@/lib/sections';
 
 const PAGE_SIZES = [24, 48, 100];
 const VIRTUALIZE_THRESHOLD = 60;
+// Altura estimada de la tarjeta mas el control de progreso (Fase 21). Se usa para
+// las filas del listado virtualizado; si queda corta, las tarjetas se solapan.
+const CARD_ESTIMATE_SIZE = 240;
 
 export interface TrickFilters {
   q?: string;
@@ -118,7 +121,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   const virtualizer = useVirtualizer({
     count: shouldVirtualize ? items.length : 0,
     getScrollElement: () => gridRef.current,
-    estimateSize: () => 200,
+    estimateSize: () => CARD_ESTIMATE_SIZE,
     lanes: columns,
     overscan: 4,
   });
@@ -138,18 +141,15 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     });
 
   const renderCard = (item: TrickListItem) => (
-    <Link
+    <TrickCard
+      trickId={item.id}
       href={`/tricks/${item.section ?? activeSection ?? DEFAULT_SECTION}/${item.id}`}
-      className="block rounded-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-    >
-      <TrickCard
-        name={item.name}
-        description={pickDescription(locale, item.description, item.descriptionEs) ?? undefined}
-        difficulty={item.difficulty ?? undefined}
-        difficultyLabel={item.difficulty !== null ? tDifficulty(item.difficulty) : undefined}
-        categories={toCardCategories(item)}
-      />
-    </Link>
+      name={item.name}
+      description={pickDescription(locale, item.description, item.descriptionEs) ?? undefined}
+      difficulty={item.difficulty ?? undefined}
+      difficultyLabel={item.difficulty !== null ? tDifficulty(item.difficulty) : undefined}
+      categories={toCardCategories(item)}
+    />
   );
 
   const rangeStart = data && data.total > 0 ? (data.page - 1) * data.pageSize + 1 : 0;

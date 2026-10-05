@@ -5,6 +5,7 @@ import { Accordion, categoryBadgeColor, RelatedItems, type AccordionItem } from 
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
+import { ProgressControl } from '@/components/progress-control';
 import { TrickVideoPlayer } from '@/components/trick-video-player';
 import { Link } from '@/i18n/navigation';
 import { pickDescription } from '@/lib/description';
@@ -165,6 +166,7 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
             </span>
           ))}
         </div>
+        <ProgressControl trickId={data.id} />
       </header>
 
       <div className="grid gap-6 lg:grid-cols-2">

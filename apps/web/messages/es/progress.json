@@ -1,0 +1,48 @@
+{
+  "progress": {
+    "page": {
+      "title": "Progreso",
+      "description": "Marca los trucos que ya tienes, los que estás practicando y los que quieres aprender. Tu progreso se guarda solo en este navegador."
+    },
+    "control": {
+      "groupLabel": "Marcar progreso del truco",
+      "learned": "Ya lo tengo",
+      "inProgress": "En progreso",
+      "want": "Quiero aprender",
+      "clear": "Quitar marca"
+    },
+    "statuses": {
+      "learned": "Aprendido",
+      "in_progress": "En progreso",
+      "want": "Quiero aprender"
+    },
+    "summary": {
+      "title": "Tu progreso",
+      "counter": "{learned} de {total} trucos aprendidos",
+      "globalLabel": "Progreso global",
+      "learnedLabel": "Aprendidos",
+      "inProgressLabel": "En progreso",
+      "wantLabel": "Por aprender",
+      "count": "{count}",
+      "empty": "Todavía no marcaste ningún truco. Usa los botones de cada truco para empezar.",
+      "sectionsTitle": "Por sección"
+    },
+    "export": {
+      "title": "Exportar e importar",
+      "description": "Guarda tu progreso en un archivo JSON o restáuralo desde un archivo. El progreso vive solo en este navegador.",
+      "exportButton": "Exportar JSON",
+      "importButton": "Importar JSON",
+      "exportSuccess": "Progreso exportado.",
+      "exportError": "No se pudo exportar el progreso.",
+      "importError": "El archivo no tiene un progreso válido.",
+      "importSuccess": "Progreso importado.",
+      "readError": "No se pudo leer el archivo.",
+      "deleteButton": "Borrar todo",
+      "deleteTitle": "Borrar todo el progreso",
+      "deleteDescription": "Se quitarán todas las marcas guardadas en este navegador. Esta acción no se puede deshacer.",
+      "deleteCancel": "Cancelar",
+      "deleteConfirm": "Borrar todo",
+      "deleteSuccess": "Progreso borrado."
+    }
+  }
+}

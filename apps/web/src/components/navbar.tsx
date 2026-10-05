@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import type { KeyboardEvent } from 'react';
-import { ChevronDown, Eye, Menu, X, type LucideIcon } from 'lucide-react';
+import { ChevronDown, Eye, ListChecks, Menu, X, type LucideIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { LocaleSwitcher } from '@/components/locale-switcher';
@@ -60,6 +60,7 @@ export function Navbar() {
     { href: '/tutorials', label: t('tutorials') },
     { href: '/tips', label: t('tips'), icon: Eye },
     { href: '/explore', label: t('explore') },
+    { href: '/progress', label: t('progress'), icon: ListChecks },
   ];
 
   const linkClass = (href: string) =>

@@ -11,3 +11,4 @@ export * from './queries/videos';
 export * from './queries/relations';
 export * from './queries/gaze-tips';
 export * from './queries/feedback';
+export * from './queries/assistant';

@@ -4,7 +4,7 @@ Estado de las fases y subfases del monorepo. Este documento es el lugar donde vi
 
 El proyecto se organiza por secciones de contenido, no por capas técnicas. Cada sección de Loopkicks es una fase. Cada fase se cierra con build de producción verificado, subagentes de validación ejecutados y actualización de este documento.
 
-Última actualización: 2026-10-04.
+Última actualización: 2026-10-05.
 
 ## Reglas de fases
 
@@ -356,6 +356,75 @@ Orden sugerido: se puede ejecutar después de la Fase 16 y antes de la Fase 17, 
 Criterio de cierre: formulario de feedback funcionando, feedback guardado en la base de datos, aviso por correo recibido en la dirección configurable, panel de administración listo para ver y gestionar los feedbacks, accesible, responsive, con i18n es/en, con la ronda de subagentes de validación ejecutada y con el build de producción verificado.
 
 Notas de cierre: tabla `feedback` en la migracion `0009_fancy_prism.sql` (soft delete, indices de estado/tipo/creado). `POST /api/feedback` publico con Zod, rate limiting (Upstash Redis; degrada a memoria), honeypot, tiempo minimo de llenado y Turnstile resuelto en el servidor; el feedback se guarda aunque falle el correo. `GET/PATCH/DELETE` protegidos por el token `FEEDBACK_ADMIN_TOKEN` comparado en tiempo constante (sin enlaces publicos, `noindex`). Formulario en `/es/feedback` (enlace en el footer) y panel en `/es/admin/feedback` con filtros, paginacion, estados y soft delete con modal. Aviso por correo con Resend tolerante a fallos y sin PII en logs. Decisiones: el captcha Turnstile se aplica SIEMPRE (dev y produccion son el mismo entorno); el token del panel se guarda solo en el `.env` local (no versionado) y en `.env.example` queda un placeholder; el panel no se persiste en localStorage (filtro `shouldDehydrateQuery`), para no filtrar el token ni datos personales. Verificado en navegador real (POST guarda, GET con token lista, sin token 401, panel carga) y la `query-cache` de localStorage no contiene token ni correo. PENDIENTES DE ENTORNO: faltan `RESEND_API_KEY` y las claves de Turnstile en el `.env`; sin ellas el feedback igual se guarda y el envio de correo y la verificacion captcha degradan con aviso. La Fase 18 se ejecuto antes que la 17 por decision del usuario. Ademas, el acceso al formulario se reforzo con un boton flotante visible en todas las paginas (oculto en `/feedback` y en el panel), ademas del enlace del footer.
+
+## Fase 19: Lanzamiento legal y SEO técnico
+
+Estado: completada con pendientes de entorno.
+
+Cierra los ítems de lanzamiento pendientes (aviso legal, privacidad, HTTPS, datos estructurados, sitemap y `robots.txt`, ficha de Google, favicon y enlaces externos).
+
+- 19.1. Página de aviso legal con datos del titular, accesible desde el pie de página.
+- 19.2. Página de política de privacidad: qué datos se recogen (feedback, progreso local, logs con `trace_id`, terceros), base legal, retención, derechos y contacto.
+- 19.3. Enlaces desde el pie de página y desde el formulario de feedback; reemplazo del contacto provisional del footer por una dirección real.
+- 19.4. `robots.txt` y `sitemap.xml` generados por Next, con las rutas de catálogo por locale y `hreflang`.
+- 19.5. Favicon en formatos modernos e íconos de app.
+- 19.6. Metadatos completos: `canonical`, `alternates.languages`, Open Graph y Twitter Cards, con imagen Open Graph generada con `ImageResponse`.
+- 19.7. Datos estructurados JSON-LD (`WebSite` más `SearchAction`, `BreadcrumbList` y ficha por truco), validados con Rich Results Test.
+- 19.8. HTTPS y HSTS: cabeceras en `next.config.ts` y configuración en Cloudflare Pages.
+- 19.9. Revisión de enlaces externos rotos.
+
+Variable nueva: `NEXT_PUBLIC_SITE_URL`. El registro en la ficha de Google es una operación externa del usuario. Pendiente de datos: nombre del titular y correo de contacto reales.
+
+Criterio de cierre: páginas legales publicadas y enlazadas, `robots.txt` y `sitemap.xml` respondiendo 200, favicon servido, metadatos y JSON-LD presentes, checklist 1/2/4/6/7/9/16 en listo.
+
+## Fase 20: Rendimiento, accesibilidad y PWA
+
+Estado: completada con pendientes de entorno.
+
+- 20.1. Medición de Lighthouse móvil, objetivo mínimo 90.
+- 20.2. Correcciones derivadas de Lighthouse (imágenes, fuentes, JS no usado, cabeceras de caché).
+- 20.3. Medición de contraste WCAG AA de las clases `tb-cat-*` usadas como texto y de los badges de dificultad; ajuste de tokens si hace falta.
+- 20.4. Auditoría de accesibilidad: foco visible, enlace de salto, landmarks, teclado y ARIA de los componentes DaisyUI.
+- 20.5. PWA: `manifest`, service worker e instrucciones de instalación, con cache offline del catálogo y los tips.
+- 20.6. Analítica condicional: Umami con `vanilla-cookieconsent` solo si se activa.
+
+Criterio de cierre: Lighthouse mínimo 90 en móvil medido y documentado, contraste WCAG AA verificado con valores, ítems 12 y 13 del checklist en listo, y los condicionales 3 y 19 resueltos.
+
+## Fase 21: Progreso del usuario sin login
+
+Estado: completada.
+
+Decisión del usuario (2026-10-05): no hay autenticación en la app. El progreso vive solo en el navegador, con Zustand y el wrapper `packages/shared/src/storage.ts`.
+
+- 21.1. Store de Zustand con hidratación propia a través del wrapper (clave `tricking:progress`, sin TTL, versionado con Zod).
+- 21.2. Modelo `{ version, updatedAt, tricks }` con estados `learned`, `in_progress` y `want`. Schema Zod en un módulo cliente-seguro.
+- 21.3. Control en la tarjeta y en el detalle de truco para marcar "Ya lo tengo", "En progreso" y "Quiero aprender", con `aria-pressed` y operable por teclado.
+- 21.4. Badge de estado, contador global y barras de progreso (global y por sección) que se actualizan al instante.
+- 21.5. Export e import JSON del progreso validados con Zod, y borrado con modal de confirmación.
+- 21.6. Hidratación segura en cliente tras el montaje, sin desajuste con SSR.
+- 21.7. i18n y pruebas (Vitest del store más E2E de marcar, recargar y exportar).
+
+Sin dependencias nuevas (`zustand@5.0.15` ya está instalado), sin migración y sin variables nuevas. El store expone la lista de ids marcados para la Fase 22.
+
+Criterio de cierre: marcar y desmarcar persiste tras recargar, la UI reacciona en toda la app, export e import funcionan, sin PII y verificado en navegador real.
+
+## Fase 22: Asistente de IA acotado a tricking y generador de combinaciones
+
+Estado: completada con pendientes de entorno.
+
+Regla de producto del usuario (2026-10-05): la IA solo se usa para tricking (dudas de trucos e historia) y debe tener seguridad para que no sirva para nada más. El asistente es una burbuja de chat flotante (como el botón de feedback), NO una sección nueva, y no tiene memoria: el historial se pierde al recargar. Toma en cuenta los trucos que el usuario ya marcó como aprendidos (progreso local, Fase 21) para personalizar sus respuestas y para el generador de combinaciones.
+
+- 22.1. Recuperación de contexto sobre el contenido propio: búsqueda full-text ya existente para traer trucos, tips y transiciones relevantes a la consulta. pgvector y embeddings quedan como mejora futura.
+- 22.2. `POST /api/assistant` con validación Zod, topes de longitud y llamada al modelo por HTTP a un endpoint compatible con OpenAI (`AI_BASE_URL`, `AI_API_KEY`, `AI_MODEL`), sin SDK de proveedor. Recibe `knownTrickIds` del progreso local y los usa para personalizar.
+- 22.3. Guardrails: prompt de sistema acotado a tricking, pre-filtro por lista de temas prohibidos, plantilla de rechazo, validación de la salida y prohibido ejecutar código generado.
+- 22.4. Rate limiting con Upstash Redis por IP y tope diario, `trace_id` por petición y logs sin contenido sensible.
+- 22.5. `POST /api/combos/generate`: recibe los ids de trucos conocidos y los filtros; arma la combinación con un generador determinista sobre `trick_relations` y transiciones, con refinamiento opcional por IA.
+- 22.6. UI: burbuja flotante del asistente en todas las páginas (accesible, Escape para cerrar, historial en memoria) y el generador de combinaciones dentro de la página `/progress`, con longitud, filtros, regenerar, copiar como texto y enlace a cada truco.
+- 22.7. i18n y pruebas (guardrails que rechazan lo ajeno, combinación que usa solo trucos conocidos y rate limit), con revisión security reforzada.
+
+Variables nuevas: `AI_BASE_URL`, `AI_API_KEY`, `AI_MODEL`, `AI_DAILY_REQUEST_CAP`. Sin dependencias nuevas (llamada por HTTP). Proveedor gratuito recomendado por defecto: Google Gemini con endpoint compatible con OpenAI (`gemini-2.5-flash`); alternativas gratuitas Groq y OpenRouter documentadas en `.env.example`. La política de privacidad declara el envío de preguntas y de la lista de trucos conocidos al proveedor.
+
+Criterio de cierre: el asistente responde sobre tricking y rechaza lo ajeno, el generador usa en tiempo real los trucos marcados, con rate limiting, topes de costo, subagentes en verde y verificado en navegador real.
 
 ## Fases sugeridas fuera de la numeración principal
 

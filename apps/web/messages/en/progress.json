@@ -1,0 +1,48 @@
+{
+  "progress": {
+    "page": {
+      "title": "Progress",
+      "description": "Mark the tricks you already have, the ones you are practicing and the ones you want to learn. Your progress is saved only in this browser."
+    },
+    "control": {
+      "groupLabel": "Mark trick progress",
+      "learned": "I have it",
+      "inProgress": "In progress",
+      "want": "Want to learn",
+      "clear": "Remove mark"
+    },
+    "statuses": {
+      "learned": "Learned",
+      "in_progress": "In progress",
+      "want": "Want to learn"
+    },
+    "summary": {
+      "title": "Your progress",
+      "counter": "{learned} of {total} tricks learned",
+      "globalLabel": "Overall progress",
+      "learnedLabel": "Learned",
+      "inProgressLabel": "In progress",
+      "wantLabel": "To learn",
+      "count": "{count}",
+      "empty": "You have not marked any trick yet. Use the buttons on each trick to get started.",
+      "sectionsTitle": "By section"
+    },
+    "export": {
+      "title": "Export and import",
+      "description": "Save your progress to a JSON file or restore it from a file. Progress lives only in this browser.",
+      "exportButton": "Export JSON",
+      "importButton": "Import JSON",
+      "exportSuccess": "Progress exported.",
+      "exportError": "Could not export progress.",
+      "importError": "The file does not contain valid progress.",
+      "importSuccess": "Progress imported.",
+      "readError": "Could not read the file.",
+      "deleteButton": "Delete all",
+      "deleteTitle": "Delete all progress",
+      "deleteDescription": "All marks saved in this browser will be removed. This action cannot be undone.",
+      "deleteCancel": "Cancel",
+      "deleteConfirm": "Delete all",
+      "deleteSuccess": "Progress deleted."
+    }
+  }
+}

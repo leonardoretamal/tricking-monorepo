@@ -21,7 +21,7 @@ El tema se resuelve en este orden:
 
 - El tema se aplica con `data-theme` en `<html>`, nunca con clases condicionales.
 - Prohibido escribir colores sueltos con hex en los componentes. Todo sale de las variables del tema.
-- El script inline anti-flash vive en el `<head>` del layout raíz y es el único `dangerouslySetInnerHTML` permitido sin autorización expresa.
+- El script inline anti-flash vive en el `<head>` del layout raíz y es uno de los dos `dangerouslySetInnerHTML` permitidos sin autorización adicional (el otro es el JSON-LD de datos estructurados, con el carácter `<` escapado).
 - El tema persistido usa la clave `tricking:theme` con TTL de 1 año.
 - El cambio es instantáneo, sin recargar.
 - El botón de toggle tiene `aria-label` descriptivo y `aria-pressed`, y es operable por teclado.
@@ -67,12 +67,14 @@ Escala de 0 a 5. Se usa en los badges de dificultad.
 
 | Rango          | Nombre          | Oscuro  | Claro   |
 | -------------- | --------------- | ------- | ------- |
-| 0 (básico)     | Verde menta     | #10B981 | #059669 |
-| 1 (fácil)      | Lima            | #84CC16 | #65A30D |
-| 2 (intermedio) | Ámbar sol       | #F59E0B | #D97706 |
-| 3 (avanzado)   | Naranja flama   | #F97316 | #EA580C |
-| 4 (experto)    | Rojo coral      | #EF4444 | #DC2626 |
-| 5 (élite)      | Púrpura místico | #A855F7 | #9333EA |
+| 0 (básico)     | Verde menta     | #10B981 | #047753 |
+| 1 (fácil)      | Lima            | #84CC16 | #487409 |
+| 2 (intermedio) | Ámbar sol       | #F59E0B | #9D5604 |
+| 3 (avanzado)   | Naranja flama   | #F97316 | #B34309 |
+| 4 (experto)    | Rojo coral      | #F05353 | #C62222 |
+| 5 (élite)      | Púrpura místico | #B268F8 | #8F31E3 |
+
+Los tonos de la columna Claro se oscurecieron y los de la columna Oscuro se aclararon lo mínimo para cumplir contraste WCAG AA (4.5:1) como texto de badge. El texto del badge es el propio token y el fondo es `color-mix` al 12% de ese token sobre `base-100` o `base-200`. Ver la nota de contraste al final del documento.
 
 ## Colores por categoría de truco
 
@@ -80,11 +82,11 @@ Se usan en badges de categoría y en cualquier agrupación por categoría.
 
 | Categoría   | Oscuro  | Claro   |
 | ----------- | ------- | ------- |
-| Kicks       | #3B82F6 | #2563EB |
-| Flips       | #F97316 | #EA580C |
-| Twists      | #A855F7 | #9333EA |
-| Transitions | #22D3EE | #0891B2 |
-| Básicos     | #10B981 | #059669 |
+| Kicks       | #488BF7 | #235EE0 |
+| Flips       | #F97316 | #B34309 |
+| Twists      | #B268F8 | #8F31E3 |
+| Transitions | #22D3EE | #06718B |
+| Básicos     | #10B981 | #047753 |
 
 ## Colores para la sección de Tips
 
@@ -104,6 +106,28 @@ Colores propios de los bloques destacados de Tips:
 - Idea clave: cian eléctrico con fondo suave.
 - Regla de oro: ámbar advertencia con ícono de alerta.
 - Resumen corto: neutro con borde de acento.
+
+## Contraste WCAG AA
+
+Los colores de dificultad y de categoría se usan como texto de badge. El texto es el propio token y el fondo es el fondo efectivo de `.tb-badge` (`color-mix(in srgb, currentColor 12%, transparent)`), que se apoya en `base-100` (#FAFAFA claro, #0B0F1A oscuro) o `base-200` (#FFFFFF claro, #131826 oscuro). Se midió con la fórmula de luminancia relativa de WCAG 2.1.
+
+Ratios medidos después del ajuste (peor caso entre `base-100` y `base-200`):
+
+| Token           | Claro antes | Claro después | Oscuro antes | Oscuro después |
+| --------------- | ----------- | ------------- | ------------ | -------------- |
+| difficulty-0    | 3.13        | 4.51          | 5.82         | 5.82           |
+| difficulty-1    | 2.63        | 4.53          | 7.21         | 7.21           |
+| difficulty-2    | 2.69        | 4.53          | 6.77         | 6.77           |
+| difficulty-3    | 2.95        | 4.54          | 5.41         | 5.41           |
+| difficulty-4    | 3.85        | 4.54          | 4.21         | 4.51           |
+| difficulty-5    | 4.32        | 4.53          | 3.93         | 4.52           |
+| cat-kicks       | 4.20        | 4.53          | 4.16         | 4.54           |
+| cat-flips       | 2.95        | 4.54          | 5.41         | 5.41           |
+| cat-twists      | 4.32        | 4.53          | 3.93         | 4.52           |
+| cat-transitions | 3.07        | 4.54          | 7.75         | 7.75           |
+| cat-basics      | 3.13        | 4.51          | 5.82         | 5.82           |
+
+Todos los tokens alcanzan al menos 4.5:1. El borde del badge (`color-mix` al 45%) es refuerzo decorativo: la información la lleva el texto, que ya cumple AA. Los textos `text-base-content/60`, `/70` y `/80` y la variable `--color-muted` también se midieron y cumplen AA en ambos temas, por lo que no se ajustaron.
 
 ## Nota de ajuste
 

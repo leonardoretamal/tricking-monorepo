@@ -73,7 +73,7 @@ Reglas:
 
 - El tema se aplica con data-theme en el elemento html, nunca con clases condicionales.
 - Prohibido escribir colores sueltos con hex en los componentes. Todo sale de las variables del tema.
-- El script inline anti-flash vive en el head del layout raíz y es el único dangerouslySetInnerHTML permitido sin autorización expresa.
+- El script inline anti-flash vive en el head del layout raíz y es uno de los dos dangerouslySetInnerHTML permitidos sin autorización adicional. El otro es el JSON-LD de datos estructurados (autorizado por el usuario el 2026-10-05), serializado con JSON.stringify y con el carácter `<` escapado como secuencia unicode para impedir el cierre del bloque script.
 - El tema persistido usa la clave tricking:theme con TTL de 1 año.
 - El cambio de tema es instantáneo, sin recargar la página.
 - El botón de toggle tiene aria-label descriptivo, aria-pressed y es operable por teclado.

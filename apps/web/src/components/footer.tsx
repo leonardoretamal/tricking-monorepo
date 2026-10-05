@@ -19,6 +19,8 @@ export async function Footer() {
     { href: '/tips', label: tNav('tips') },
     { href: '/explore', label: tNav('explore') },
     { href: '/feedback', label: tNav('feedback') },
+    { href: '/legal', label: t('legal') },
+    { href: '/privacidad', label: t('privacy') },
   ];
 
   return (

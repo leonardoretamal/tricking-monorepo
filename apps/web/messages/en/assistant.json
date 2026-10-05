@@ -1,0 +1,64 @@
+{
+  "assistant": {
+    "title": "Tricking assistant",
+    "bubble": {
+      "open": "Open the tricking assistant",
+      "close": "Close the assistant"
+    },
+    "chat": {
+      "heading": "Ask about tricking",
+      "intro": "The assistant only answers about tricking: tricks, technique and the history of the sport. It uses the tricks you already marked as learned to personalize its recommendations. It does not write code or answer unrelated topics.",
+      "inputLabel": "Write your question",
+      "inputPlaceholder": "For example: how do you do a b-twist",
+      "send": "Send",
+      "sending": "Sending",
+      "you": "You",
+      "assistant": "Assistant",
+      "empty": "There are no questions yet. Write the first one.",
+      "refusal": "I can only help with tricking: tricks, technique and the history of the sport. I do not write code or answer unrelated topics. Ask me about a trick.",
+      "notConfigured": "The AI assistant is not configured in this environment. You can still use the catalog and the combo generator.",
+      "errorTitle": "We could not get an answer",
+      "errorDescription": "There was a problem contacting the assistant. Please try again.",
+      "rateLimited": "You asked too many questions in a row. Wait a moment and try again.",
+      "dailyLimit": "The daily limit of assistant requests was reached. Try again tomorrow.",
+      "retry": "Retry"
+    },
+    "combos": {
+      "heading": "Combo generator",
+      "intro": "Build a combo using only the tricks you already marked as learned.",
+      "noTricksTitle": "There are no learned tricks yet",
+      "noTricksDescription": "Mark tricks as learned in the catalog so the generator can use them.",
+      "noTricksAction": "View the catalog",
+      "length": "Length",
+      "lengths": {
+        "short": "Short (2 to 3 tricks)",
+        "medium": "Medium (4 to 5 tricks)",
+        "long": "Long (6 or more tricks)"
+      },
+      "section": "Section",
+      "sections": {
+        "all": "All"
+      },
+      "maxDifficulty": "Maximum difficulty",
+      "difficulties": {
+        "any": "Any"
+      },
+      "regenerate": "Regenerate",
+      "generating": "Generating",
+      "copy": "Copy as text",
+      "copied": "Combo copied",
+      "copyFailed": "We could not copy the combo",
+      "emptyResultTitle": "Not enough tricks",
+      "emptyResultDescription": "With the selected filters there are not enough tricks to build a combo. Adjust the filters or mark more tricks.",
+      "errorTitle": "We could not generate the combo",
+      "errorDescription": "There was a problem generating the combo. Please try again.",
+      "rateLimited": "You requested too many combos in a row. Wait a moment.",
+      "dailyLimit": "The daily limit of AI generations was reached.",
+      "stepLabel": "Step {number}",
+      "difficultyLabel": "Difficulty {value}",
+      "sourceAi": "Order refined with AI",
+      "sourceDeterministic": "Combo generated locally",
+      "retry": "Retry"
+    }
+  }
+}

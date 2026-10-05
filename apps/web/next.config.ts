@@ -49,6 +49,25 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   transpilePackages: ['@tricking/ui', '@tricking/shared', '@tricking/db'],
+  // Cabeceras de seguridad para todas las rutas. La redireccion 301 de HTTP a HTTPS
+  // se configura en Cloudflare Pages (la app no conoce el esquema original). HSTS
+  // solo lo aplica el navegador cuando la respuesta viaja por HTTPS.
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains',
+          },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+        ],
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

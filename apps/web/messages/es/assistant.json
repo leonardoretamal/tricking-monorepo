@@ -1,0 +1,64 @@
+{
+  "assistant": {
+    "title": "Asistente de tricking",
+    "bubble": {
+      "open": "Abrir el asistente de tricking",
+      "close": "Cerrar el asistente"
+    },
+    "chat": {
+      "heading": "Pregunta sobre tricking",
+      "intro": "El asistente responde solo sobre tricking: trucos, técnica e historia del deporte. Usa los trucos que ya marcaste como aprendidos para personalizar lo que te recomienda. No escribe código ni responde temas ajenos.",
+      "inputLabel": "Escribe tu pregunta",
+      "inputPlaceholder": "Por ejemplo: cómo se hace un b-twist",
+      "send": "Enviar",
+      "sending": "Enviando",
+      "you": "Tú",
+      "assistant": "Asistente",
+      "empty": "Todavía no hay preguntas. Escribe la primera.",
+      "refusal": "Solo puedo ayudarte con tricking: trucos, técnica e historia del deporte. No escribo código ni respondo temas ajenos. Pregúntame por un truco.",
+      "notConfigured": "El asistente de IA no está configurado en este entorno. Puedes seguir usando el catálogo y el generador de combinaciones.",
+      "errorTitle": "No pudimos obtener una respuesta",
+      "errorDescription": "Hubo un problema al consultar al asistente. Intenta de nuevo.",
+      "rateLimited": "Hiciste demasiadas preguntas seguidas. Espera un momento e intenta de nuevo.",
+      "dailyLimit": "Se alcanzó el límite diario de consultas al asistente. Intenta mañana.",
+      "retry": "Reintentar"
+    },
+    "combos": {
+      "heading": "Generador de combinaciones",
+      "intro": "Arma una combinación usando solo los trucos que ya marcaste como aprendidos.",
+      "noTricksTitle": "Todavía no hay trucos aprendidos",
+      "noTricksDescription": "Marca trucos como aprendidos en el catálogo para que el generador los use.",
+      "noTricksAction": "Ver el catálogo",
+      "length": "Longitud",
+      "lengths": {
+        "short": "Corta (2 a 3 trucos)",
+        "medium": "Media (4 a 5 trucos)",
+        "long": "Larga (6 o más trucos)"
+      },
+      "section": "Sección",
+      "sections": {
+        "all": "Todas"
+      },
+      "maxDifficulty": "Dificultad máxima",
+      "difficulties": {
+        "any": "Cualquiera"
+      },
+      "regenerate": "Regenerar",
+      "generating": "Generando",
+      "copy": "Copiar como texto",
+      "copied": "Combinación copiada",
+      "copyFailed": "No pudimos copiar la combinación",
+      "emptyResultTitle": "No hay suficientes trucos",
+      "emptyResultDescription": "Con los filtros elegidos no hay trucos suficientes para armar una combinación. Ajusta los filtros o marca más trucos.",
+      "errorTitle": "No pudimos generar la combinación",
+      "errorDescription": "Hubo un problema al generar la combinación. Intenta de nuevo.",
+      "rateLimited": "Pediste demasiadas combinaciones seguidas. Espera un momento.",
+      "dailyLimit": "Se alcanzó el límite diario de generaciones con IA.",
+      "stepLabel": "Paso {number}",
+      "difficultyLabel": "Dificultad {value}",
+      "sourceAi": "Orden refinado con IA",
+      "sourceDeterministic": "Combinación generada localmente",
+      "retry": "Reintentar"
+    }
+  }
+}

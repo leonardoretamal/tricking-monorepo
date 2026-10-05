@@ -1,0 +1,89 @@
+{
+  "legal": {
+    "meta": {
+      "title": "Aviso legal",
+      "description": "Datos del titular, condiciones de uso, propiedad intelectual y contenido de terceros del sitio de Tricking."
+    },
+    "title": "Aviso legal",
+    "updatedLabel": "Última actualización:",
+    "updated": "5 de octubre de 2026",
+    "intro": "Este aviso legal regula el uso del sitio de Tricking. Al navegar por el sitio aceptas las condiciones que se describen a continuación.",
+    "holder": {
+      "title": "Titular del sitio",
+      "placeholder": "[completar datos del titular]",
+      "note": "Antes de publicar el sitio, reemplaza este marcador por el nombre o la razón social, el domicilio y un correo de contacto del titular."
+    },
+    "object": {
+      "title": "Objeto y aceptación",
+      "body": "El sitio ofrece un catálogo informativo de trucos, variaciones, transiciones, posturas y tips de tricking, con enlaces a las fuentes originales. El acceso es libre y gratuito. El uso del sitio implica la aceptación de este aviso."
+    },
+    "use": {
+      "title": "Uso del sitio",
+      "body": "El usuario se compromete a usar el sitio de forma lícita y a no realizar acciones que puedan dañarlo, sobrecargarlo o impedir su funcionamiento normal. No se permite extraer el contenido de forma automatizada masiva sin autorización."
+    },
+    "intellectualProperty": {
+      "title": "Propiedad intelectual",
+      "body": "El diseño, el código y los textos propios del sitio pertenecen al titular. Los nombres de trucos son términos estándar del deporte. Las descripciones propias se redactaron para este proyecto y no copian el texto de las fuentes."
+    },
+    "thirdParty": {
+      "title": "Contenido de terceros",
+      "body": "El sitio muestra y enlaza contenido de Loopkicks y conocimiento de técnica de Kojo's Trick Lab con atribución y enlace al original. No se almacenan copias de esos vídeos ni de sus materiales. El sitio no está afiliado a esas fuentes y no asume su contenido."
+    },
+    "removal": {
+      "title": "Retiro de contenido",
+      "body": "Si eres titular de un contenido y quieres que se retire del sitio, escríbenos y se retirará de inmediato mediante una baja lógica, sin necesidad de un despliegue."
+    },
+    "links": {
+      "title": "Enlaces externos",
+      "body": "El sitio incluye enlaces a páginas de terceros. No controlamos esos sitios y no somos responsables de su contenido ni de sus políticas."
+    },
+    "liability": {
+      "title": "Limitación de responsabilidad",
+      "body": "La información del sitio es de carácter informativo y se ofrece tal cual. La práctica del tricking implica riesgo físico: consulta a un entrenador y toma las precauciones necesarias. El titular no se responsabiliza por lesiones derivadas de la práctica."
+    },
+    "law": {
+      "title": "Legislación aplicable",
+      "body": "Este aviso se rige por la legislación del país del titular. Antes de publicar, completa los datos del titular para precisar la jurisdicción aplicable."
+    },
+    "privacy": {
+      "meta": {
+        "title": "Política de privacidad",
+        "description": "Qué datos tratamos, con qué base legal, cuánto tiempo los conservamos, con quién los compartimos y cómo ejercer tus derechos."
+      },
+      "title": "Política de privacidad",
+      "updatedLabel": "Última actualización:",
+      "updated": "5 de octubre de 2026",
+      "intro": "Esta política explica qué datos personales trata el sitio de Tricking, para qué los usa, con qué base legal, durante cuánto tiempo los conserva y cómo puedes ejercer tus derechos.",
+      "controllerTitle": "Responsable del tratamiento",
+      "controllerPlaceholder": "[completar datos del titular]",
+      "controllerNote": "Antes de publicar el sitio, reemplaza este marcador por el nombre o la razón social y un correo de contacto del titular.",
+      "dataTitle": "Qué datos tratamos",
+      "dataIntro": "El sitio trata la menor cantidad de datos posible. Según cómo lo uses, se tratan las siguientes categorías.",
+      "feedbackTitle": "Feedback",
+      "feedbackBody": "En el formulario de feedback el nombre, el correo y el mensaje son opcionales. Si escribes sin datos, el mensaje queda anónimo. Usamos el correo solo para responderte si hace falta. El mensaje no se publica.",
+      "progressTitle": "Progreso del usuario",
+      "progressBody": "El progreso (trucos marcados como ya conocidos, en progreso o por aprender) se guarda solo en el navegador, en el almacenamiento local del dispositivo. No se envía a nuestros servidores. La lista de trucos marcados sí se envía al asistente de inteligencia artificial cuando tú lo usas, para generar respuestas y combinaciones; no se guarda asociada a tu identidad.",
+      "logsTitle": "Registros técnicos",
+      "logsBody": "El servidor registra eventos técnicos con un identificador de traza (trace_id) para diagnosticar fallos. Los registros no incluyen contraseñas, tokens ni datos personales completos.",
+      "cookiesTitle": "Cookies",
+      "cookiesBody": "El sitio usa una sola cookie, NEXT_LOCALE, para recordar el idioma elegido. Es estrictamente necesaria, no se usa para publicidad ni para rastrear tu navegación y no requiere consentimiento previo. No se instalan cookies de analítica ni de marketing.",
+      "thirdPartiesTitle": "Terceros y encargados",
+      "thirdPartiesIntro": "Para operar el sitio nos apoyamos en proveedores que tratan datos por cuenta nuestra y con las garantías de sus propios términos.",
+      "thirdPartyNeon": "Neon: base de datos donde vive el catálogo y el feedback.",
+      "thirdPartyCloudflare": "Cloudflare: alojamiento del sitio, redirección a HTTPS y cabeceras de seguridad.",
+      "thirdPartyResend": "Resend: envío del aviso por correo cuando llega un feedback nuevo.",
+      "thirdPartyUpstash": "Upstash: límite de peticiones (rate limiting) para proteger el formulario.",
+      "thirdPartyAi": "Proveedor del asistente de inteligencia artificial (Fase 22): recibe tu pregunta y la lista de trucos marcados para responderla.",
+      "legalBasisTitle": "Base legal",
+      "legalBasisBody": "El tratamiento del feedback se basa en tu consentimiento al enviarlo y en nuestro interés legítimo en mejorar el sitio. El uso del asistente se basa en tu consentimiento al hacer una consulta. Las cookies estrictamente necesarias se basan en el interés legítimo de prestar el servicio.",
+      "retentionTitle": "Retención",
+      "retentionBody": "El feedback se conserva mientras sea útil para gestionarlo y luego se elimina o se anonimiza. Los registros técnicos se conservan por un periodo corto y se rotan. El progreso del usuario permanece en tu navegador hasta que lo borres o restablezcas el almacenamiento del sitio.",
+      "rightsTitle": "Derechos",
+      "rightsBody": "Puedes solicitar acceso, rectificación, supresión, oposición, limitación y portabilidad de tus datos, y retirar tu consentimiento en cualquier momento. Como el progreso no sale de tu navegador, puedes eliminarlo directamente desde el propio sitio o borrando los datos del navegador.",
+      "contactTitle": "Contacto",
+      "contactBody": "Para ejercer tus derechos o hacer consultas sobre privacidad, escribe al correo de contacto del titular que se completará antes de publicar el sitio.",
+      "changesTitle": "Cambios en esta política",
+      "changesBody": "Si cambia el tratamiento de datos, actualizaremos esta política y su fecha. Te recomendamos revisarla cuando uses el sitio."
+    }
+  }
+}

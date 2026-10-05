@@ -75,32 +75,35 @@
 
 :root,
 :root[data-theme='tricking-light'] {
-  --difficulty-0: #059669;
-  --difficulty-1: #65a30d;
-  --difficulty-2: #d97706;
-  --difficulty-3: #ea580c;
-  --difficulty-4: #dc2626;
-  --difficulty-5: #9333ea;
-  --cat-kicks: #2563eb;
-  --cat-flips: #ea580c;
-  --cat-twists: #9333ea;
-  --cat-transitions: #0891b2;
-  --cat-basics: #059669;
+  /* Tokens ajustados para cumplir contraste WCAG AA (4.5:1) como texto de badge
+     sobre el fondo efectivo de .tb-badge (color-mix 12% de la superficie). */
+  --difficulty-0: #047753;
+  --difficulty-1: #487409;
+  --difficulty-2: #9d5604;
+  --difficulty-3: #b34309;
+  --difficulty-4: #c62222;
+  --difficulty-5: #8f31e3;
+  --cat-kicks: #235ee0;
+  --cat-flips: #b34309;
+  --cat-twists: #8f31e3;
+  --cat-transitions: #06718b;
+  --cat-basics: #047753;
 }
 
 :root[data-theme='tricking-dark'] {
   --color-border: #2a3344;
   --color-muted: #94a3b8;
 
+  /* Ajustados para WCAG AA (4.5:1) como texto de badge en tema oscuro. */
   --difficulty-0: #10b981;
   --difficulty-1: #84cc16;
   --difficulty-2: #f59e0b;
   --difficulty-3: #f97316;
-  --difficulty-4: #ef4444;
-  --difficulty-5: #a855f7;
-  --cat-kicks: #3b82f6;
+  --difficulty-4: #f05353;
+  --difficulty-5: #b268f8;
+  --cat-kicks: #488bf7;
   --cat-flips: #f97316;
-  --cat-twists: #a855f7;
+  --cat-twists: #b268f8;
   --cat-transitions: #22d3ee;
   --cat-basics: #10b981;
 }
@@ -145,4 +148,21 @@
 }
 .tb-cat-basics {
   color: var(--cat-basics);
+}
+
+/* Apertura de la burbuja del asistente: crece desde la esquina inferior derecha. */
+@keyframes tb-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tb-bubble-panel {
+  transform-origin: bottom right;
+  animation: tb-bubble-in 180ms ease-out;
 }
