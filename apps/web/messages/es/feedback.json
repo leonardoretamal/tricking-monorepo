@@ -23,6 +23,7 @@
     "honeypotLabel": "Empresa",
     "captchaLabel": "Verificación de seguridad",
     "submit": "Enviar feedback",
+    "fabLabel": "Enviar feedback",
     "submitting": "Enviando",
     "successTitle": "Gracias por tu mensaje",
     "successDescription": "Recibimos tu feedback y lo revisaremos pronto.",

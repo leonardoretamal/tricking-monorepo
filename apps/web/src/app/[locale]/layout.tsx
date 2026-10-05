@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 
 import { Breadcrumbs } from '@/components/breadcrumbs';
+import { FeedbackButton } from '@/components/feedback-button';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { Providers } from '@/components/providers';
@@ -46,6 +47,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             <Breadcrumbs />
             <main className="mx-auto w-full max-w-6xl px-4 py-6">{children}</main>
             <Footer />
+            <FeedbackButton />
           </Providers>
         </NextIntlClientProvider>
       </body>
