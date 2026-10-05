@@ -54,7 +54,10 @@ test.describe('busqueda global', () => {
     await expect(page.getByText(/Sin resultados/i).first()).toBeVisible();
   });
 
-  test('la busqueda en la navbar navega a la pagina dedicada', async ({ page }) => {
+  test('la busqueda en la navbar navega a la pagina dedicada', async ({ page, isMobile }) => {
+    // El buscador de la navbar se oculta en movil (`hidden md:block`); la prueba solo
+    // aplica al proyecto de escritorio.
+    test.skip(isMobile, 'El buscador de la navbar solo se muestra en escritorio.');
     await page.goto('/es');
     await page.getByRole('search').first().locator('input[type="search"]').fill('aerial');
     await expect(page).toHaveURL(/\/es\/search\?q=aerial/);

@@ -222,7 +222,7 @@ Estado: completada.
 
 Criterio de cierre: búsqueda funcional desde cualquier página, con cache y sin sobrecargar al servidor.
 
-Notas de cierre: columna generada `tricks.search_vector` (tsvector) con índice GIN en la migración `0005`; el endpoint `GET /api/search` usa `websearch_to_tsquery('simple', q)` y `ts_rank`, y cubre trucos, variaciones, transiciones y posturas con `count()` y paginación en SQL. Input en la navbar con debounce que navega a `/es/search?q=` y página dedicada con resultados agrupados por tipo y resaltado con `<mark>`. Cache de 10 min vía TanStack Query. Verificado en navegador real (17 resultados para "aerial", agrupados y resaltados). E2E en `e2e/search.spec.ts`.
+Notas de cierre: columna generada `tricks.search_vector` (tsvector) con índice GIN en la migración `0005`; el endpoint `GET /api/search` usa `websearch_to_tsquery('simple', q)` y `ts_rank`, y cubre trucos, variaciones, transiciones y posturas con `count()` y paginación en SQL. Input en la navbar con debounce que navega a `/es/search?q=` y página dedicada con resultados agrupados por tipo y resaltado con `<mark>`. Cache de 10 min vía TanStack Query. Verificado en navegador real (17 resultados para "aerial", agrupados y resaltados). E2E en `e2e/search.spec.ts`. Correccion (2026-10-05): la prueba "la busqueda en la navbar navega a la pagina dedicada" fallaba en el proyecto móvil porque el buscador de la navbar se oculta con `hidden md:block`; se marca `test.skip` en móvil y solo corre en escritorio.
 
 ## Fase 13: Técnicas de Kojo
 

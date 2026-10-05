@@ -292,3 +292,16 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Pruebas: typecheck db/web, lint db/web, Prettier, `i18n:check`, `env:check` y Vitest 26/26 en verde; migración aplicada; seed de tips (6 resúmenes, 38 tips, 30 enlaces); APIs de tips y feedback verificadas por HTTP; flujo de feedback end-to-end (POST guarda, GET con token lista, sin token 401); navegador real en `/es/tips`, `/es/tips/backward`, `/es/tricks/inside/aerial`, `/es/feedback` y `/es/admin/feedback`, con móvil 390x600 sin desborde. Build de producción delegado al gancho pre-push (regla del repo).
 - Pendientes y riesgos: configurar `RESEND_API_KEY` y las claves de Turnstile en el `.env` (sin ellas el feedback se guarda y el correo/captcha degradan con aviso); correr Lighthouse móvil cuando haya herramienta; ítems de lanzamiento en progreso (favicon, sitemap/robots, datos estructurados, HTTPS, contraste medido); el formulario usa estado controlado con Zod en vez de react-hook-form (las deps están instaladas; desviación consciente).
 - Referencias: `docs/docs-agents/fases.md` (Fases 15 a 18), `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/checklist-lanzamiento.md`.
+
+## Correccion de E2E de busqueda en movil (2026-10-05)
+
+- Issue: no aplica (correccion detectada al revisar el CI).
+- Título: `e2e/search.spec.ts` fallaba en el proyecto móvil.
+- Qué pedía: dejar el CI en verde; el último run de `main` (commit `6ce2897`) ya fallaba antes de las Fases 15 a 18.
+- Fecha de inicio: 2026-10-05.
+- Estado actual: completada.
+- Autor del registro: Leonardo Retamal.
+- Diagnóstico: la prueba "la busqueda en la navbar navega a la pagina dedicada" rellenaba el input de la navbar, que en móvil se oculta con `hidden md:block`; en el proyecto `mobile` el elemento nunca es visible y la prueba agotaba el timeout. Los otros 135 E2E pasaron.
+- Acciones: se agrega `test.skip(isMobile, ...)` para que la prueba corra solo en escritorio (su alcance real).
+- Pruebas: el resto de la suite E2E seguía en verde; el arreglo es de alcance de prueba, no de producto.
+- Referencias: `e2e/search.spec.ts`, `docs/docs-agents/fases.md` (Fase 12), run de CI `37250601619`.
