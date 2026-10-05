@@ -1,43 +1,16 @@
 import { z } from 'zod';
 
+import type { AiProviderConfig } from './ai-providers';
 import { logger } from './logger';
 import { checkRateLimit } from './rate-limit';
 
-// Cliente HTTP del proveedor de IA (Fase 22). Se llama a un endpoint compatible con
+// Cliente HTTP de los proveedores de IA (Fase 22). Se llama a un endpoint compatible con
 // OpenAI por `fetch`; prohibido usar un SDK de proveedor. La API key solo vive en el
-// servidor y nunca se registra en logs.
-
-export interface AiConfig {
-  baseUrl: string;
-  apiKey: string;
-  model: string;
-  dailyCap: number;
-}
+// servidor y nunca se registra en logs. El asistente prueba los proveedores configurados
+// en orden y usa el primero que responde.
 
 export const AI_REQUEST_TIMEOUT_MS = 20_000;
 export const AI_DAILY_WINDOW_MS = 24 * 60 * 60 * 1000;
-export const DEFAULT_AI_DAILY_CAP = 200;
-
-const PLACEHOLDER_KEYS = new Set(['change-me', 'changeme', 'your-key-here', 'tu-key-aqui']);
-
-// Devuelve la configuracion solo si hay una API key real. Un placeholder o una variable
-// ausente se tratan como "no configurado": el asistente degrada con aviso.
-export function getAiConfig(): AiConfig | null {
-  const apiKey = process.env.AI_API_KEY?.trim() ?? '';
-  if (apiKey === '' || PLACEHOLDER_KEYS.has(apiKey.toLowerCase())) {
-    return null;
-  }
-
-  const baseUrl = (
-    process.env.AI_BASE_URL?.trim() || 'https://generativelanguage.googleapis.com/v1beta/openai'
-  ).replace(/\/+$/, '');
-  const model = process.env.AI_MODEL?.trim() || 'gemini-2.5-flash';
-
-  const rawCap = Number.parseInt(process.env.AI_DAILY_REQUEST_CAP?.trim() ?? '', 10);
-  const dailyCap = Number.isFinite(rawCap) && rawCap > 0 ? rawCap : DEFAULT_AI_DAILY_CAP;
-
-  return { baseUrl, apiKey, model, dailyCap };
-}
 
 // IP del cliente respetando proxies y Cloudflare. Sin cabeceras utiles devuelve
 // 'unknown'; el limitador en memoria agrupa esos casos en un mismo cubo.
@@ -59,9 +32,9 @@ export function getClientIp(request: Request): string {
 
 // Tope diario compartido por instalacion, ademas del rate limit por IP. Reutiliza el
 // limitador existente (Upstash con degradacion a memoria).
-export async function consumeAiDailyBudget(config: AiConfig): Promise<boolean> {
+export async function consumeAiDailyBudget(dailyCap: number): Promise<boolean> {
   const result = await checkRateLimit('ai-daily', {
-    limit: config.dailyCap,
+    limit: dailyCap,
     windowMs: AI_DAILY_WINDOW_MS,
   });
   return result.success;
@@ -84,11 +57,11 @@ const chatCompletionSchema = z.object({
     .min(1),
 });
 
-// Llama al modelo y devuelve el texto de la primera respuesta, o null si el proveedor
-// falla, responde vacio o la forma no es la esperada. Nunca propaga el error crudo ni
-// registra el prompt, la respuesta ni la clave.
+// Llama a UN proveedor y devuelve el texto de la primera respuesta, o null si falla,
+// responde vacio o la forma no es la esperada. Nunca propaga el error crudo ni registra
+// el prompt, la respuesta ni la clave.
 export async function callChatCompletion(
-  config: AiConfig,
+  provider: AiProviderConfig,
   messages: ChatMessage[],
   traceId: string,
   maxTokens: number,
@@ -98,14 +71,14 @@ export async function callChatCompletion(
   const startedAt = Date.now();
 
   try {
-    const response = await fetch(`${config.baseUrl}/chat/completions`, {
+    const response = await fetch(`${provider.baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        authorization: `Bearer ${config.apiKey}`,
+        authorization: `Bearer ${provider.apiKey}`,
       },
       body: JSON.stringify({
-        model: config.model,
+        model: provider.model,
         messages,
         temperature: 0.3,
         max_tokens: maxTokens,
@@ -115,7 +88,12 @@ export async function callChatCompletion(
 
     if (!response.ok) {
       logger.warn(
-        { traceId, status: response.status, latencyMs: Date.now() - startedAt },
+        {
+          traceId,
+          provider: provider.id,
+          status: response.status,
+          latencyMs: Date.now() - startedAt,
+        },
         'asistente: el proveedor de IA respondio con error',
       );
       return null;
@@ -123,7 +101,10 @@ export async function callChatCompletion(
 
     const parsed = chatCompletionSchema.safeParse(await response.json());
     if (!parsed.success) {
-      logger.warn({ traceId, latencyMs: Date.now() - startedAt }, 'asistente: respuesta invalida');
+      logger.warn(
+        { traceId, provider: provider.id, latencyMs: Date.now() - startedAt },
+        'asistente: respuesta invalida',
+      );
       return null;
     }
 
@@ -137,6 +118,7 @@ export async function callChatCompletion(
     logger.warn(
       {
         traceId,
+        provider: provider.id,
         latencyMs: Date.now() - startedAt,
         error: error instanceof Error ? error.message : 'unknown',
       },
@@ -146,4 +128,26 @@ export async function callChatCompletion(
   } finally {
     clearTimeout(timeout);
   }
+}
+
+// Prueba los proveedores en orden y devuelve la primera respuesta valida junto con el
+// proveedor que la produjo. Si todos fallan, devuelve null. Asi, si una IA deja de
+// funcionar, la app cae a la siguiente sin quedarse sin asistente.
+export async function callChatCompletionWithFallback(
+  providers: AiProviderConfig[],
+  messages: ChatMessage[],
+  traceId: string,
+  maxTokens: number,
+): Promise<{ answer: string; provider: AiProviderConfig } | null> {
+  for (const provider of providers) {
+    const answer = await callChatCompletion(provider, messages, traceId, maxTokens);
+    if (answer !== null) {
+      return { answer, provider };
+    }
+    logger.warn(
+      { traceId, provider: provider.id },
+      'asistente: proveedor agotado, se prueba el siguiente',
+    );
+  }
+  return null;
 }

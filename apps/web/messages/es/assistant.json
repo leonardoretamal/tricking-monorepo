@@ -8,6 +8,7 @@
     "chat": {
       "heading": "Pregunta sobre tricking",
       "intro": "El asistente responde solo sobre tricking: trucos, técnica e historia del deporte. Usa los trucos que ya marcaste como aprendidos para personalizar lo que te recomienda. No escribe código ni responde temas ajenos.",
+      "provider": "Respondido por {name}.",
       "inputLabel": "Escribe tu pregunta",
       "inputPlaceholder": "Por ejemplo: cómo se hace un b-twist",
       "send": "Enviar",
@@ -58,6 +59,7 @@
       "difficultyLabel": "Dificultad {value}",
       "sourceAi": "Orden refinado con IA",
       "sourceDeterministic": "Combinación generada localmente",
+      "providerLabel": "con {name}",
       "retry": "Reintentar"
     }
   }

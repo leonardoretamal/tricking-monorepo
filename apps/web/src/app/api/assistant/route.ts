@@ -3,13 +3,13 @@ import { NextResponse } from 'next/server';
 import { getTranslations } from 'next-intl/server';
 
 import {
-  callChatCompletion,
+  callChatCompletionWithFallback,
   consumeAiDailyBudget,
-  getAiConfig,
   getClientIp,
   type ChatMessage,
 } from '@/lib/ai-client';
 import { ASSISTANT_SYSTEM_PROMPT, isForbiddenTopic } from '@/lib/ai-guardrails';
+import { getAiDailyCap, getAiProviders } from '@/lib/ai-providers';
 import { assistantRequestSchema } from '@/lib/assistant-schemas';
 import { logger, newTraceId } from '@/lib/logger';
 import { checkRateLimit } from '@/lib/rate-limit';
@@ -173,22 +173,26 @@ export async function POST(request: Request) {
 
     const { message, locale, history, knownTrickIds } = parsed.data;
     const text = await loadChatText(locale);
-    const config = getAiConfig();
+    const providers = getAiProviders();
 
     // Pre-filtro: se revisa el mensaje y el historial. Una peticion ajena se rechaza
     // sin llamar al modelo (no gasta tokens ni el tope diario).
     const scanned = [message, ...(history ?? []).map((item) => item.content)].join('\n');
     if (isForbiddenTopic(scanned)) {
       logger.info({ traceId, locale, blocked: true }, 'asistente: tema ajeno rechazado');
-      return NextResponse.json({ answer: text.refusal, configured: config !== null });
+      return NextResponse.json({
+        answer: text.refusal,
+        configured: providers.length > 0,
+        provider: null,
+      });
     }
 
-    if (config === null) {
+    if (providers.length === 0) {
       logger.info({ traceId, locale, configured: false }, 'asistente: sin proveedor configurado');
-      return NextResponse.json({ answer: text.notConfigured, configured: false });
+      return NextResponse.json({ answer: text.notConfigured, configured: false, provider: null });
     }
 
-    const withinBudget = await consumeAiDailyBudget(config);
+    const withinBudget = await consumeAiDailyBudget(getAiDailyCap());
     if (!withinBudget) {
       logger.warn({ traceId }, 'asistente: tope diario alcanzado');
       return NextResponse.json({ error: 'daily_cap', traceId }, { status: 429 });
@@ -207,18 +211,24 @@ export async function POST(request: Request) {
     }
     messages.push({ role: 'user', content: message });
 
-    const answer = await callChatCompletion(config, messages, traceId, ASSISTANT_MAX_TOKENS);
-    if (answer === null) {
-      logger.error({ traceId }, 'asistente: el proveedor no devolvio una respuesta valida');
+    const result = await callChatCompletionWithFallback(
+      providers,
+      messages,
+      traceId,
+      ASSISTANT_MAX_TOKENS,
+    );
+    if (result === null) {
+      logger.error({ traceId }, 'asistente: ningun proveedor devolvio una respuesta valida');
       return NextResponse.json({ error: 'upstream_error', traceId }, { status: 502 });
     }
 
-    const safeAnswer = answer.slice(0, ASSISTANT_MAX_ANSWER_CHARS);
+    const safeAnswer = result.answer.slice(0, ASSISTANT_MAX_ANSWER_CHARS);
 
     logger.info(
       {
         traceId,
         locale,
+        provider: result.provider.id,
         tricks: context.tricks.length,
         gazeTips: context.gazeTips.length,
         transitions: context.transitions.length,
@@ -227,7 +237,11 @@ export async function POST(request: Request) {
       'asistente: respuesta generada',
     );
 
-    return NextResponse.json({ answer: safeAnswer, configured: true });
+    return NextResponse.json({
+      answer: safeAnswer,
+      configured: true,
+      provider: result.provider.name,
+    });
   } catch (error) {
     logger.error(
       { traceId, error: error instanceof Error ? error.message : 'unknown' },

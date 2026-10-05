@@ -1,7 +1,8 @@
 import { loadComboRelations, loadComboTricks } from '@tricking/db';
 import { z } from 'zod';
 
-import { callChatCompletion, type AiConfig, type ChatMessage } from './ai-client';
+import { callChatCompletionWithFallback, type ChatMessage } from './ai-client';
+import type { AiProviderConfig } from './ai-providers';
 import {
   COMBO_MAX_KNOWN_IDS,
   COMBO_MIN_TRICKS,
@@ -168,14 +169,14 @@ function extractJsonObject(content: string): unknown {
 
 // Refinamiento opcional con IA: pide reordenar (o recortar) SOLO los trucos que ya
 // forman la combinacion determinista y valida que la respuesta sea un subconjunto sin
-// repetidos y dentro del rango de longitud. Si algo no cumple, devuelve null y el
-// llamador conserva el resultado determinista.
+// repetidos y dentro del rango de longitud. Prueba los proveedores en orden (fallback).
+// Si algo no cumple, devuelve null y el llamador conserva el resultado determinista.
 export async function refineComboOrderWithAi(
-  config: AiConfig,
+  providers: AiProviderConfig[],
   deterministic: ComboBuildResult,
   length: ComboLength,
   traceId: string,
-): Promise<string[] | null> {
+): Promise<{ order: string[]; provider: string } | null> {
   if (deterministic.steps.length < COMBO_MIN_TRICKS) {
     return null;
   }
@@ -198,12 +199,12 @@ export async function refineComboOrderWithAi(
     },
   ];
 
-  const content = await callChatCompletion(config, messages, traceId, 300);
-  if (content === null) {
+  const result = await callChatCompletionWithFallback(providers, messages, traceId, 300);
+  if (result === null) {
     return null;
   }
 
-  const parsed = comboOrderSchema.safeParse(extractJsonObject(content));
+  const parsed = comboOrderSchema.safeParse(extractJsonObject(result.answer));
   if (!parsed.success) {
     return null;
   }
@@ -223,5 +224,5 @@ export async function refineComboOrderWithAi(
     return null;
   }
 
-  return order;
+  return { order, provider: result.provider.name };
 }

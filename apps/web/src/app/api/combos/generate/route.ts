@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
-import { consumeAiDailyBudget, getAiConfig, getClientIp } from '@/lib/ai-client';
+import { consumeAiDailyBudget, getClientIp } from '@/lib/ai-client';
+import { getAiDailyCap, getAiProviders } from '@/lib/ai-providers';
 import {
   buildComboFromIds,
   buildComboFromPool,
@@ -51,15 +52,21 @@ export async function POST(request: Request) {
     const pool = await loadComboPool(data);
     let result = buildComboFromPool(pool, data.length);
     let source: ComboResponse['source'] = 'deterministic';
+    let provider: string | null = null;
 
-    const config = getAiConfig();
-    if (config !== null && result.steps.length >= 2 && (await consumeAiDailyBudget(config))) {
-      const order = await refineComboOrderWithAi(config, result, data.length, traceId);
-      if (order !== null) {
-        const refined = buildComboFromIds(pool, order);
-        if (refined.steps.length >= 2) {
-          result = refined;
+    const aiProviders = getAiProviders();
+    if (
+      aiProviders.length > 0 &&
+      result.steps.length >= 2 &&
+      (await consumeAiDailyBudget(getAiDailyCap()))
+    ) {
+      const refined = await refineComboOrderWithAi(aiProviders, result, data.length, traceId);
+      if (refined !== null) {
+        const candidate = buildComboFromIds(pool, refined.order);
+        if (candidate.steps.length >= 2) {
+          result = candidate;
           source = 'ai';
+          provider = refined.provider;
         }
       }
     }
@@ -72,6 +79,7 @@ export async function POST(request: Request) {
         length: data.length,
         steps: result.steps.length,
         source,
+        provider,
         latencyMs: Date.now() - startedAt,
       },
       'combinaciones: resultado generado',
@@ -81,6 +89,7 @@ export async function POST(request: Request) {
       steps: result.steps,
       transitions: result.transitions,
       source,
+      provider,
       traceId,
     });
   } catch (error) {

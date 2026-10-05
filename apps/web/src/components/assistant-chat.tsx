@@ -36,6 +36,7 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
   const [pending, setPending] = useState(false);
   const [errorCode, setErrorCode] = useState<string | null>(null);
   const [notConfigured, setNotConfigured] = useState(false);
+  const [provider, setProvider] = useState<string | null>(null);
   const lastAttempt = useRef('');
 
   const send = async (text: string, history: UiMessage[]): Promise<void> => {
@@ -56,6 +57,7 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
         ...(knownTrickIds.length > 0 ? { knownTrickIds } : {}),
       });
       setMessages([...withUser, { role: 'assistant', content: response.answer }]);
+      setProvider(response.provider);
       if (!response.configured) {
         setNotConfigured(true);
       }
@@ -100,6 +102,9 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
       <header className="flex flex-col gap-1">
         <h2 className="text-xl font-semibold text-base-content">{t('heading')}</h2>
         <p className="max-w-2xl text-sm text-base-content/70">{t('intro')}</p>
+        {provider !== null ? (
+          <p className="text-xs text-base-content/60">{t('provider', { name: provider })}</p>
+        ) : null}
       </header>
 
       {notConfigured ? (

@@ -284,6 +284,9 @@ export function ComboGenerator() {
         <div className="flex flex-col gap-3">
           <p className="text-sm text-base-content/60">
             {state.data.source === 'ai' ? t('sourceAi') : t('sourceDeterministic')}
+            {state.data.source === 'ai' && state.data.provider
+              ? ` · ${t('providerLabel', { name: state.data.provider })}`
+              : ''}
           </p>
           <ol className="flex flex-col gap-2">
             {state.data.steps.map((step, index) => {

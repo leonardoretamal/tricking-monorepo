@@ -34,6 +34,8 @@ export const assistantRequestSchema = z.object({
 export const assistantResponseSchema = z.object({
   answer: z.string(),
   configured: z.boolean(),
+  // Nombre del proveedor de IA que respondio, o null si no habia IA configurada.
+  provider: z.string().nullable(),
 });
 
 export const assistantErrorSchema = z.object({

@@ -52,6 +52,8 @@ export const comboResponseSchema = z.object({
   steps: z.array(comboStepSchema),
   transitions: z.array(comboTransitionSchema).optional(),
   source: z.enum(['deterministic', 'ai']).optional(),
+  // Nombre del proveedor de IA que refino el orden, o null si fue determinista.
+  provider: z.string().nullable().optional(),
   traceId: z.string().optional(),
 });
 
