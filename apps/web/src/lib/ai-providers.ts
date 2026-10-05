@@ -20,6 +20,9 @@ interface ProviderDefinition {
   keyEnv: string;
   modelEnv: string;
   baseUrlEnv: string;
+  // Si esta definido, el proveedor SOLO se usa cuando el modelo termina con este sufijo.
+  // Sirve para blindar proveedores que cobran si el modelo no es gratuito (OpenRouter).
+  freeModelSuffix?: string;
 }
 
 // Orden por defecto de intento. Se puede reordenar con AI_PROVIDER_ORDER.
@@ -52,15 +55,6 @@ export const AI_PROVIDERS_REGISTRY: readonly ProviderDefinition[] = [
     baseUrlEnv: 'AI_NVIDIA_BASE_URL',
   },
   {
-    id: 'openrouter',
-    name: 'OpenRouter',
-    baseUrl: 'https://openrouter.ai/api/v1',
-    model: 'meta-llama/llama-3.3-70b-instruct:free',
-    keyEnv: 'AI_OPENROUTER_API_KEY',
-    modelEnv: 'AI_OPENROUTER_MODEL',
-    baseUrlEnv: 'AI_OPENROUTER_BASE_URL',
-  },
-  {
     id: 'cerebras',
     name: 'Cerebras',
     baseUrl: 'https://api.cerebras.ai/v1',
@@ -77,6 +71,18 @@ export const AI_PROVIDERS_REGISTRY: readonly ProviderDefinition[] = [
     keyEnv: 'AI_MISTRAL_API_KEY',
     modelEnv: 'AI_MISTRAL_MODEL',
     baseUrlEnv: 'AI_MISTRAL_BASE_URL',
+  },
+  // OpenRouter queda ULTIMO y con candado: solo se usa si el modelo termina en `:free`.
+  // Asi nunca cae a un modelo pago por accidente.
+  {
+    id: 'openrouter',
+    name: 'OpenRouter',
+    baseUrl: 'https://openrouter.ai/api/v1',
+    model: 'meta-llama/llama-3.3-70b-instruct:free',
+    keyEnv: 'AI_OPENROUTER_API_KEY',
+    modelEnv: 'AI_OPENROUTER_MODEL',
+    baseUrlEnv: 'AI_OPENROUTER_BASE_URL',
+    freeModelSuffix: ':free',
   },
 ];
 
@@ -107,11 +113,17 @@ export function getAiProviders(): AiProviderConfig[] {
     if (apiKey === null) {
       continue;
     }
+    const model = process.env[definition.modelEnv]?.trim() || definition.model;
+    // Candado anti-cobro: si el proveedor exige un sufijo gratuito y el modelo no lo
+    // tiene, se ignora por completo. Evita que OpenRouter cobre por un modelo pago.
+    if (definition.freeModelSuffix !== undefined && !model.endsWith(definition.freeModelSuffix)) {
+      continue;
+    }
     providers.push({
       id: definition.id,
       name: definition.name,
       baseUrl: trimSlash(process.env[definition.baseUrlEnv]?.trim() || definition.baseUrl),
-      model: process.env[definition.modelEnv]?.trim() || definition.model,
+      model,
       apiKey,
     });
   }

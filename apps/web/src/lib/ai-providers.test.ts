@@ -51,6 +51,20 @@ describe('getAiProviders', () => {
     expect(providers.map((provider) => provider.id)).toEqual(['custom']);
     expect(providers[0]?.name).toBe('Mi proveedor');
   });
+
+  it('ignora OpenRouter si el modelo no termina en :free (candado anti-cobro)', () => {
+    vi.stubEnv('AI_OPENROUTER_API_KEY', 'or_real');
+    vi.stubEnv('AI_OPENROUTER_MODEL', 'openai/gpt-4o');
+
+    expect(getAiProviders().map((provider) => provider.id)).not.toContain('openrouter');
+  });
+
+  it('incluye OpenRouter con un modelo :free', () => {
+    vi.stubEnv('AI_OPENROUTER_API_KEY', 'or_real');
+    vi.stubEnv('AI_OPENROUTER_MODEL', 'meta-llama/llama-3.3-70b-instruct:free');
+
+    expect(getAiProviders().map((provider) => provider.id)).toContain('openrouter');
+  });
 });
 
 describe('getAiDailyCap', () => {
