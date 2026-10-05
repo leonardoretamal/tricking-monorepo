@@ -16,6 +16,8 @@ import type { ChatMessage } from '@/lib/assistant-schemas';
 interface UiMessage {
   role: 'user' | 'assistant';
   content: string;
+  // Nombre del proveedor de IA que respondio este mensaje (badge). Null si no aplica.
+  provider?: string | null;
 }
 
 const MAX_HISTORY = 6;
@@ -36,7 +38,6 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
   const [pending, setPending] = useState(false);
   const [errorCode, setErrorCode] = useState<string | null>(null);
   const [notConfigured, setNotConfigured] = useState(false);
-  const [provider, setProvider] = useState<string | null>(null);
   const lastAttempt = useRef('');
 
   const send = async (text: string, history: UiMessage[]): Promise<void> => {
@@ -56,8 +57,10 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
         history: payload,
         ...(knownTrickIds.length > 0 ? { knownTrickIds } : {}),
       });
-      setMessages([...withUser, { role: 'assistant', content: response.answer }]);
-      setProvider(response.provider);
+      setMessages([
+        ...withUser,
+        { role: 'assistant', content: response.answer, provider: response.provider },
+      ]);
       if (!response.configured) {
         setNotConfigured(true);
       }
@@ -102,9 +105,6 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
       <header className="flex flex-col gap-1">
         <h2 className="text-xl font-semibold text-base-content">{t('heading')}</h2>
         <p className="max-w-2xl text-sm text-base-content/70">{t('intro')}</p>
-        {provider !== null ? (
-          <p className="text-xs text-base-content/60">{t('provider', { name: provider })}</p>
-        ) : null}
       </header>
 
       {notConfigured ? (
@@ -127,8 +127,16 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
                 : 'rounded-box border border-primary/30 bg-primary/5 p-3'
             }
           >
-            <span className="text-xs font-semibold uppercase tracking-wide text-base-content/60">
+            <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-base-content/60">
               {message.role === 'user' ? t('you') : t('assistant')}
+              {message.role === 'assistant' && message.provider ? (
+                <span
+                  className="badge badge-outline badge-sm normal-case"
+                  aria-label={t('providerBadge', { name: message.provider })}
+                >
+                  {message.provider}
+                </span>
+              ) : null}
             </span>
             <p className="mt-1 whitespace-pre-wrap text-sm text-base-content">{message.content}</p>
           </div>

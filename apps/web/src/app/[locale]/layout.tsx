@@ -36,6 +36,10 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
   const name = t('name');
   const description = t('tagline');
   const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+  const hasGoogleVerification =
+    googleVerification !== undefined &&
+    googleVerification !== '' &&
+    googleVerification !== 'change-me';
 
   return {
     metadataBase: new URL(getSiteUrl()),
@@ -44,9 +48,7 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
       template: `%s | ${name}`,
     },
     description,
-    ...(googleVerification !== undefined && googleVerification !== ''
-      ? { verification: { google: googleVerification } }
-      : {}),
+    ...(hasGoogleVerification ? { verification: { google: googleVerification } } : {}),
     alternates: {
       languages: {
         es: '/es',

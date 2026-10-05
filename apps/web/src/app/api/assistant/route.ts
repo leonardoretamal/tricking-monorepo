@@ -1,10 +1,24 @@
-import { loadComboTricks, searchContextForAssistant, type AssistantContext } from '@tricking/db';
+import {
+  loadCatalogSample,
+  loadComboTricks,
+  loadNextTrickSuggestions,
+  searchContextForAssistant,
+  type AssistantContext,
+} from '@tricking/db';
 import { NextResponse } from 'next/server';
 import { getTranslations } from 'next-intl/server';
 
 import { callChatCompletionWithFallback, getClientIp, type ChatMessage } from '@/lib/ai-client';
-import { ASSISTANT_SYSTEM_PROMPT, isForbiddenTopic } from '@/lib/ai-guardrails';
+import {
+  ASSISTANT_SYSTEM_PROMPT,
+  comboMode,
+  isComboRequest,
+  isForbiddenTopic,
+  normalizeGuardText,
+} from '@/lib/ai-guardrails';
 import { getAiDailyCap, getAiProviders } from '@/lib/ai-providers';
+import { buildComboFromPool, buildFreeCatalogChain, loadComboPool } from '@/lib/combo-builder';
+import type { ComboLength } from '@/lib/combo-schemas';
 import { assistantRequestSchema } from '@/lib/assistant-schemas';
 import { logger, newTraceId } from '@/lib/logger';
 import { checkRateLimit } from '@/lib/rate-limit';
@@ -27,6 +41,7 @@ type Locale = 'es' | 'en';
 interface AssistantChatText {
   refusal: string;
   notConfigured: string;
+  comboAsk: string;
 }
 
 const FALLBACK_TEXT: Record<Locale, AssistantChatText> = {
@@ -35,12 +50,16 @@ const FALLBACK_TEXT: Record<Locale, AssistantChatText> = {
       'Solo puedo ayudarte con tricking: trucos, técnica e historia del deporte. No escribo código ni respondo temas ajenos. Pregúntame por un truco.',
     notConfigured:
       'El asistente de IA no está configurado en este entorno. Puedes seguir usando el catálogo y el generador de combinaciones.',
+    comboAsk:
+      '¿La quieres con los trucos que ya tienes o una combinación libre con trucos del catálogo?',
   },
   en: {
     refusal:
       'I can only help with tricking: tricks, technique and the history of the sport. I do not write code or answer unrelated topics. Ask me about a trick.',
     notConfigured:
       'The AI assistant is not configured in this environment. You can still use the catalog and the combo generator.',
+    comboAsk:
+      'Do you want it with the tricks you already have or a free combo with catalog tricks?',
   },
 };
 
@@ -49,13 +68,81 @@ async function loadChatText(locale: Locale): Promise<AssistantChatText> {
     const t = await getTranslations({ locale, namespace: 'assistant.chat' });
     const refusal = t('refusal');
     const notConfigured = t('notConfigured');
-    if (refusal.trim() === '' || notConfigured.trim() === '') {
+    const comboAsk = t('comboAsk');
+    if (refusal.trim() === '' || notConfigured.trim() === '' || comboAsk.trim() === '') {
       return FALLBACK_TEXT[locale];
     }
-    return { refusal, notConfigured };
+    return { refusal, notConfigured, comboAsk };
   } catch {
     return FALLBACK_TEXT[locale];
   }
+}
+
+// Palabras vacias que se quitan antes de buscar en el catalogo, para que "que es un
+// corkscrew? responde breve" busque "corkscrew" y no falle por los terminos de relleno.
+const SEARCH_STOPWORDS = new Set([
+  'que',
+  'qué',
+  'cual',
+  'cuales',
+  'como',
+  'es',
+  'son',
+  'un',
+  'una',
+  'unos',
+  'unas',
+  'el',
+  'la',
+  'los',
+  'las',
+  'de',
+  'del',
+  'al',
+  'y',
+  'o',
+  'para',
+  'por',
+  'con',
+  'sin',
+  'en',
+  'se',
+  'su',
+  'responde',
+  'respuesta',
+  'breve',
+  'explica',
+  'explicame',
+  'dime',
+  'sobre',
+  'the',
+  'what',
+  'which',
+  'how',
+  'is',
+  'are',
+  'an',
+  'of',
+  'to',
+  'and',
+  'or',
+  'for',
+  'with',
+  'about',
+  'tell',
+  'me',
+  'explain',
+  'short',
+  'answer',
+]);
+
+function buildSearchQuery(message: string): string {
+  const tokens = normalizeGuardText(message)
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((token) => token.length > 2 && !SEARCH_STOPWORDS.has(token));
+  const query = tokens.join(' ');
+  return query === '' ? message : query;
 }
 
 function pickText(locale: Locale, english: string | null, spanish: string | null): string | null {
@@ -139,6 +226,86 @@ async function buildKnownTricksBlock(knownTrickIds: string[], locale: Locale): P
   return `${intro} ${shown.join(', ')}${tail}.`;
 }
 
+// Sugerencias REALES del catalogo para anclar las recomendaciones: continuaciones
+// (`next`) de los trucos que el usuario ya tiene. El asistente debe recomendar solo entre
+// estos trucos (o los del contexto), nunca inventar nombres.
+async function buildSuggestionsBlock(knownTrickIds: string[], locale: Locale): Promise<string> {
+  const unique = [...new Set(knownTrickIds)];
+  if (unique.length === 0) {
+    return '';
+  }
+  const suggestions = await loadNextTrickSuggestions(unique, 20);
+  if (suggestions.length === 0) {
+    return '';
+  }
+  const shown = suggestions.map((trick) => {
+    const meta: string[] = [];
+    if (trick.section !== null) {
+      meta.push(trick.section);
+    }
+    if (trick.difficulty !== null) {
+      meta.push(`dificultad ${trick.difficulty}/5`);
+    }
+    return meta.length > 0 ? `${trick.name} (${meta.join(', ')})` : trick.name;
+  });
+  const intro =
+    locale === 'es'
+      ? 'Trucos del catalogo que PUEDES recomendar (continuaciones reales de lo que ya sabe). NO recomiendes ningun truco que no este en esta lista ni en el contexto del catalogo:'
+      : 'Catalog tricks you MAY recommend (real follow-ups to what the user knows). Do NOT recommend any trick that is not in this list or the catalog context:';
+  return `${intro} ${shown.join(', ')}.`;
+}
+
+// Muestra aleatoria del catalogo para que el asistente pueda armar una "combinacion
+// libre" con trucos reales, no solo los que el usuario ya conoce.
+async function buildCatalogSampleBlock(locale: Locale): Promise<string> {
+  const sample = await loadCatalogSample(40);
+  if (sample.length === 0) {
+    return '';
+  }
+  const names = sample.map((trick) => trick.name);
+  const intro =
+    locale === 'es'
+      ? 'Muestra aleatoria del catalogo para una combinacion libre (podes elegir trucos de aca). Solo nombres reales:'
+      : 'Random catalog sample for a free combo (you may pick tricks from here). Real names only:';
+  return `${intro} ${names.join(', ')}.`;
+}
+
+// Arma una combinacion del lado del servidor con el generador determinista, que usa SOLO
+// trucos del catalogo (con los que el usuario ya tiene o una muestra aleatoria). Asi el
+// asistente nunca inventa nombres de trucos en las combinaciones.
+async function buildComboAnswer(
+  mode: 'known' | 'free',
+  knownTrickIds: string[],
+  locale: Locale,
+): Promise<string | null> {
+  const length: ComboLength = 'medium';
+  let steps: { name: string }[];
+  if (mode === 'known') {
+    const ids = [...new Set(knownTrickIds)];
+    if (ids.length < 2) {
+      return null;
+    }
+    const pool = await loadComboPool({ knownTrickIds: ids, length });
+    steps = buildComboFromPool(pool, length).steps;
+  } else {
+    // Libre: cadena coherente siguiendo las relaciones `next` del catalogo.
+    steps = await buildFreeCatalogChain(length);
+  }
+  if (steps.length < 2) {
+    return null;
+  }
+  const lines = steps.map((step, index) => `${index + 1}. ${step.name}`);
+  const intro =
+    mode === 'known'
+      ? locale === 'es'
+        ? 'Combinación con los trucos que ya tienes:'
+        : 'Combo with the tricks you already have:'
+      : locale === 'es'
+        ? 'Combinación libre con trucos del catálogo:'
+        : 'Free combo with catalog tricks:';
+  return `${intro}\n${lines.join('\n')}`;
+}
+
 export async function POST(request: Request) {
   const traceId = newTraceId();
   const startedAt = Date.now();
@@ -182,17 +349,52 @@ export async function POST(request: Request) {
       });
     }
 
+    // Combinaciones: se resuelven del lado del servidor con trucos reales del catalogo.
+    // Si el usuario no aclaro el tipo, se le pregunta antes de armar nada. No necesitan IA.
+    if (isComboRequest(message)) {
+      const mode = comboMode(message);
+      if (mode === 'ask') {
+        logger.info({ traceId, comboMode: mode }, 'asistente: combinacion sin modo aclarado');
+        return NextResponse.json({
+          answer: text.comboAsk,
+          configured: providers.length > 0,
+          provider: null,
+        });
+      }
+      const comboAnswer = await buildComboAnswer(mode, knownTrickIds ?? [], locale);
+      if (comboAnswer !== null) {
+        logger.info({ traceId, comboMode: mode }, 'asistente: combinacion generada del catalogo');
+        return NextResponse.json({
+          answer: comboAnswer,
+          configured: providers.length > 0,
+          provider: null,
+        });
+      }
+    }
+
     if (providers.length === 0) {
       logger.info({ traceId, locale, configured: false }, 'asistente: sin proveedor configurado');
       return NextResponse.json({ answer: text.notConfigured, configured: false, provider: null });
     }
 
-    const context = await searchContextForAssistant(message, ASSISTANT_CONTEXT_ITEMS, locale);
+    const context = await searchContextForAssistant(
+      buildSearchQuery(message),
+      ASSISTANT_CONTEXT_ITEMS,
+      locale,
+    );
     const knownBlock = await buildKnownTricksBlock(knownTrickIds ?? [], locale);
+    const suggestionsBlock = await buildSuggestionsBlock(knownTrickIds ?? [], locale);
+    const comboBlock = isComboRequest(message) ? await buildCatalogSampleBlock(locale) : '';
 
     const messages: ChatMessage[] = [{ role: 'system', content: ASSISTANT_SYSTEM_PROMPT }];
     if (knownBlock !== '') {
       messages.push({ role: 'system', content: knownBlock });
+    }
+    if (suggestionsBlock !== '') {
+      messages.push({ role: 'system', content: suggestionsBlock });
+    }
+    if (comboBlock !== '') {
+      messages.push({ role: 'system', content: comboBlock });
     }
     messages.push({ role: 'system', content: buildContextBlock(context, locale) });
     for (const item of history ?? []) {

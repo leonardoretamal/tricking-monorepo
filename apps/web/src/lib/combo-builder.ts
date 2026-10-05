@@ -1,4 +1,9 @@
-import { loadComboRelations, loadComboTricks } from '@tricking/db';
+import {
+  buildRelationChain,
+  loadComboRelations,
+  loadComboTricks,
+  pickRandomChainStart,
+} from '@tricking/db';
 import { z } from 'zod';
 
 import { callChatCompletionWithFallback, type ChatMessage } from './ai-client';
@@ -148,6 +153,24 @@ export function buildComboFromPool(pool: ComboPool, length: ComboLength): ComboB
 export function buildComboFromIds(pool: ComboPool, ids: string[]): ComboBuildResult {
   const unique = dedupe(ids).filter((id) => pool.byId.has(id));
   return stepsToResult(pool, unique);
+}
+
+// Combinacion "libre" COHERENTE: arranca en un truco al azar del catalogo y sigue sus
+// continuaciones reales (`trick_relations` kind='next') con un CTE recursivo. Nunca
+// encadena trucos sin relacion entre si.
+export async function buildFreeCatalogChain(length: ComboLength): Promise<ComboStep[]> {
+  const { max } = comboLengthRange(length);
+  const start = await pickRandomChainStart();
+  if (start === null) {
+    return [];
+  }
+  const chain = await buildRelationChain(start, max);
+  return chain.map((row) => ({
+    trickId: row.id,
+    name: row.name,
+    section: row.section,
+    difficulty: row.difficulty,
+  }));
 }
 
 const comboOrderSchema = z.object({

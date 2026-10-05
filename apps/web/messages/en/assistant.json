@@ -9,6 +9,8 @@
       "heading": "Ask about tricking",
       "intro": "The assistant only answers about tricking: tricks, technique and the history of the sport. It uses the tricks you already marked as learned to personalize its recommendations. It does not write code or answer unrelated topics.",
       "provider": "Answered by {name}.",
+      "providerBadge": "Answered by {name}",
+      "comboAsk": "Do you want it with the tricks you already have or a free combo with catalog tricks?",
       "inputLabel": "Write your question",
       "inputPlaceholder": "For example: how do you do a b-twist",
       "send": "Send",

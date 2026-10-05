@@ -1,4 +1,4 @@
-import { and, asc, eq, inArray, isNull, sql } from 'drizzle-orm';
+import { and, asc, eq, inArray, isNull, notInArray, sql } from 'drizzle-orm';
 
 import { getDb } from '../client';
 import { trickRelations, tricks } from '../schema';
@@ -232,4 +232,129 @@ export async function loadComboRelations(trickIds: string[]): Promise<ComboRelat
         inArray(trickRelations.relatedId, unique),
       ),
     );
+}
+
+export interface NextTrickSuggestion {
+  id: string;
+  name: string;
+  section: string | null;
+  difficulty: number | null;
+}
+
+// Sugerencias REALES del catalogo para el asistente: continuaciones (`kind = 'next'`) de
+// los trucos que el usuario ya tiene, excluyendo los que ya conoce. Ancla las
+// recomendaciones al catalogo: el asistente solo deberia recomendar nombres de esta lista
+// (o del contexto), nunca inventados.
+export async function loadNextTrickSuggestions(
+  trickIds: string[],
+  limit = 20,
+): Promise<NextTrickSuggestion[]> {
+  const unique = [...new Set(trickIds)].slice(0, MAX_ASSISTANT_KNOWN_TRICKS);
+  if (unique.length === 0) {
+    return [];
+  }
+  const db = getDb();
+  const safeLimit = Math.min(40, Math.max(1, Math.trunc(limit)));
+  const rows = await db
+    .select({
+      id: tricks.id,
+      name: tricks.name,
+      section: tricks.section,
+      difficulty: tricks.difficulty,
+    })
+    .from(trickRelations)
+    .innerJoin(tricks, eq(tricks.id, trickRelations.relatedId))
+    .where(
+      and(
+        eq(trickRelations.kind, 'next'),
+        inArray(trickRelations.trickId, unique),
+        isNull(tricks.deletedAt),
+        notInArray(tricks.id, unique),
+      ),
+    )
+    .orderBy(asc(tricks.name))
+    .limit(safeLimit);
+
+  const seen = new Set<string>();
+  const suggestions: NextTrickSuggestion[] = [];
+  for (const row of rows) {
+    if (seen.has(row.id)) {
+      continue;
+    }
+    seen.add(row.id);
+    suggestions.push(row);
+  }
+  return suggestions;
+}
+
+// Muestra aleatoria del catalogo para que el asistente arme una "combinacion libre" con
+// trucos reales (no solo los que el usuario ya conoce). Acotada para no inflar el prompt.
+export async function loadCatalogSample(limit = 40): Promise<NextTrickSuggestion[]> {
+  const db = getDb();
+  const safeLimit = Math.min(80, Math.max(1, Math.trunc(limit)));
+  return db
+    .select({
+      id: tricks.id,
+      name: tricks.name,
+      section: tricks.section,
+      difficulty: tricks.difficulty,
+    })
+    .from(tricks)
+    .where(isNull(tricks.deletedAt))
+    .orderBy(sql`random()`)
+    .limit(safeLimit);
+}
+
+// Elige al azar un truco que tenga continuaciones (`next`) en el catalogo. Sirve como
+// punto de partida de una combinacion coherente.
+export async function pickRandomChainStart(): Promise<string | null> {
+  const db = getDb();
+  const rows = await db.execute<{ trick_id: string }>(sql`
+    SELECT r.trick_id
+    FROM trick_relations r
+    JOIN tricks t ON t.id = r.trick_id AND t.deleted_at IS NULL
+    WHERE r.kind = 'next'
+    ORDER BY random()
+    LIMIT 1
+  `);
+  return rows.rows[0]?.trick_id ?? null;
+}
+
+// Arma una cadena COHERENTE siguiendo las relaciones `next` del catalogo a partir de un
+// truco, con un CTE recursivo. Garantiza que cada truco sea continuacion real del
+// anterior (nada de saltos al azar). Corta si no hay mas continuaciones.
+export async function buildRelationChain(
+  startId: string,
+  maxLen: number,
+): Promise<NextTrickSuggestion[]> {
+  const db = getDb();
+  const safeLen = Math.min(12, Math.max(2, Math.trunc(maxLen)));
+  const rows = await db.execute<{
+    id: string;
+    name: string;
+    section: string | null;
+    difficulty: number | null;
+  }>(sql`
+    WITH RECURSIVE chain AS (
+      SELECT t.id, t.name, t.section, t.difficulty, 1 AS depth, ARRAY[t.id]::text[] AS path
+      FROM tricks t
+      WHERE t.id = ${startId} AND t.deleted_at IS NULL
+      UNION ALL
+      SELECT t.id, t.name, t.section, t.difficulty, c.depth + 1, c.path || t.id
+      FROM chain c
+      JOIN trick_relations r ON r.trick_id = c.id AND r.kind = 'next'
+      JOIN tricks t ON t.id = r.related_id AND t.deleted_at IS NULL
+      WHERE c.depth < ${safeLen} AND NOT (t.id = ANY(c.path))
+    )
+    SELECT id, name, section, difficulty
+    FROM chain
+    ORDER BY depth
+    LIMIT ${safeLen}
+  `);
+  return rows.rows.map((row) => ({
+    id: row.id,
+    name: row.name,
+    section: row.section,
+    difficulty: row.difficulty,
+  }));
 }

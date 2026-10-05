@@ -9,6 +9,8 @@
       "heading": "Pregunta sobre tricking",
       "intro": "El asistente responde solo sobre tricking: trucos, técnica e historia del deporte. Usa los trucos que ya marcaste como aprendidos para personalizar lo que te recomienda. No escribe código ni responde temas ajenos.",
       "provider": "Respondido por {name}.",
+      "providerBadge": "Respondido por {name}",
+      "comboAsk": "¿La quieres con los trucos que ya tienes o una combinación libre con trucos del catálogo?",
       "inputLabel": "Escribe tu pregunta",
       "inputPlaceholder": "Por ejemplo: cómo se hace un b-twist",
       "send": "Enviar",
