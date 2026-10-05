@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 
 // Imagen de Open Graph y Twitter Cards generada en el servidor. Usa los colores del
 // tema en modo oscuro (es un asset, no un componente con clases).
-export const alt = 'Tricking, catálogo de trucos, variaciones y transiciones';
+export const alt = 'Aprender Tricking, catálogo de trucos, variaciones y transiciones';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -34,10 +34,10 @@ export default function OpenGraphImage() {
             fontWeight: 700,
           }}
         >
-          T
+          A
         </div>
         <div style={{ display: 'flex', color: '#F1F5F9', fontSize: 40, fontWeight: 600 }}>
-          Tricking
+          Aprender Tricking
         </div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>

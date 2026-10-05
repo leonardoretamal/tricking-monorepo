@@ -24,6 +24,7 @@ export default async function HomePage({ params }: HomePageProps) {
   setRequestLocale(locale);
 
   const t = await getTranslations('home');
+  const tApp = await getTranslations('app');
   const tTricks = await getTranslations('tricks');
   const tVariations = await getTranslations('variations');
   const tTransitions = await getTranslations('transitions');
@@ -48,7 +49,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <>
-      <JsonLd data={websiteJsonLd()} />
+      <JsonLd data={websiteJsonLd(tApp('name'))} />
       <section className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-12 sm:px-6 lg:px-8">
         <header className="flex flex-col gap-3">
           <h1 className="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">

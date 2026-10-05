@@ -22,7 +22,7 @@ type NavItem = {
 };
 
 const LINK_BASE =
-  'inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
+  'inline-flex items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
 const LINK_INACTIVE = 'text-base-content/70 hover:bg-base-200 hover:text-primary';
 const LINK_ACTIVE = 'border-b-2 border-primary bg-primary/10 font-semibold text-primary';
 
@@ -74,14 +74,17 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-base-100/95 backdrop-blur">
-      <nav className="navbar mx-auto w-full max-w-6xl gap-2 px-2">
-        <div className="navbar-start">
-          <Link href="/" className="btn btn-ghost px-2 text-lg font-bold text-base-content">
+      <nav className="navbar mx-auto w-full max-w-7xl gap-2 px-3">
+        <div className="navbar-start min-w-fit">
+          <Link
+            href="/"
+            className="btn btn-ghost shrink-0 whitespace-nowrap px-2 text-lg font-bold text-base-content"
+          >
             {tApp('name')}
           </Link>
         </div>
 
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden xl:flex">
           <ul className="flex items-center gap-1">
             {links.map((item) => {
               const submenu = item.submenu;
@@ -144,7 +147,7 @@ export function Navbar() {
           <LocaleSwitcher />
           <button
             type="button"
-            className="btn btn-ghost btn-square btn-sm lg:hidden"
+            className="btn btn-ghost btn-square btn-sm xl:hidden"
             aria-label={mobileOpen ? tActions('closeMenu') : tActions('openMenu')}
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
@@ -161,7 +164,7 @@ export function Navbar() {
 
       <div
         id="mobile-navigation"
-        className={`border-t border-border bg-base-100 lg:hidden ${
+        className={`max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-border bg-base-100 xl:hidden ${
           mobileOpen ? 'block' : 'hidden'
         }`}
       >

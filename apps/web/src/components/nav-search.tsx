@@ -94,7 +94,7 @@ export function NavSearch() {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         placeholder={tSearch('inputPlaceholder')}
-        className={`input input-bordered input-sm w-40 lg:w-56 ${open ? 'block' : 'hidden'} md:block`}
+        className={`input input-bordered input-sm w-40 xl:w-44 ${open ? 'block' : 'hidden'} md:block`}
       />
     </form>
   );

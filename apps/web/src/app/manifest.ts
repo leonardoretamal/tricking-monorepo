@@ -5,8 +5,8 @@ import type { MetadataRoute } from 'next';
 // (base-100 y primary).
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Tricking',
-    short_name: 'Tricking',
+    name: 'Aprender Tricking',
+    short_name: 'Aprender Tricking',
     description:
       'Catálogo de trucos de tricking con técnicas, tips de mirada, variaciones y transiciones.',
     start_url: '/',

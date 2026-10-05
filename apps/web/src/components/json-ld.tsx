@@ -20,13 +20,14 @@ export function JsonLd({ data }: JsonLdProps): ReactElement {
 }
 
 // Datos estructurados del sitio: WebSite con la accion de busqueda que apunta a la
-// pagina de busqueda en espanol (idioma base del proyecto).
-export function websiteJsonLd(): JsonLdData {
+// pagina de busqueda en espanol (idioma base del proyecto). El nombre de la app llega
+// localizado desde la pagina.
+export function websiteJsonLd(name: string): JsonLdData {
   const base = getSiteUrl();
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Tricking',
+    name,
     url: base,
     inLanguage: ['es', 'en'],
     potentialAction: {
