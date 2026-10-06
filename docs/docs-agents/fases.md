@@ -429,7 +429,7 @@ Criterio de cierre: el asistente responde sobre tricking y rechaza lo ajeno, el 
 
 ## Fase 23: Despliegue y lanzamiento
 
-Estado: en curso.
+Estado: completada con pendientes de lanzamiento.
 
 Pone la app en producción en Cloudflare (gratis) con despliegue automático en cada push a `main`, y cierra los pendientes de lanzamiento.
 
@@ -442,12 +442,200 @@ Pone la app en producción en Cloudflare (gratis) con despliegue automático en 
 
 Criterio de cierre: la app responde en la URL de producción, el asistente, el feedback y el catálogo funcionan, y cada push a `main` despliega automáticamente.
 
-## Fases sugeridas fuera de la numeración principal
+Notas: 23.1 a 23.5 completadas. La app está desplegada en Cloudflare Workers con OpenNext en `https://aprender-tricking.leonardo-retamal-morales.workers.dev`, con auto-deploy en cada push a `main` (`deploy.yml`), secretos de runtime cargados y el asistente respondiendo (Groq). El subdominio `workers.dev` de la cuenta quedó auto-generado con el nombre del titular; cambiarlo no es self-service (la API da 10036 y el dashboard no lo permite): solo lo resetea soporte de Cloudflare. Se evaluó migrar a Netlify y se descartó por decisión del usuario (mantener la URL de Cloudflare). PENDIENTES DE LANZAMIENTO (23.6): datos del titular en aviso legal y privacidad, correr Lighthouse móvil, validar el JSON-LD con Rich Results Test y registrar el sitio en Search Console.
 
-Estas fases no forman parte de la numeración principal y solo se abren con autorización explícita del usuario, cuando se active el skill tree y el generador de combos descritos en la sección 28.3 de `AGENTS.md`.
+Notas de cierre (2026-10-05): 23.6 avanzado en el árbol de trabajo, con los cambios de código listos para el push a `main` (no desplegados todavía). Se completaron los datos estructurados: `BreadcrumbList` en el detalle de truco, variaciones, transiciones y posturas, y ficha por truco con schema.org `LearningResource` (con `teaches` cuando hay "cómo se hace"), en `apps/web/src/components/json-ld.tsx` y las páginas de detalle, con tests en `json-ld.test.ts`. Se agregó la redirección 301 de HTTP a HTTPS en `apps/web/src/proxy.ts` (en Cloudflare Workers el subdominio `workers.dev` no la aplica y la app respondía 200 por `http`). Se midió Lighthouse móvil con `lighthouse` (devDependency raíz nueva, script `pnpm lighthouse`): performance 89 a 90 (variable), accesibilidad 100, buenas prácticas 100 y SEO 100; el cuello de botella es el TBT y el redirect de `/` a `/es`. Verificado en producción: `robots.txt` y `sitemap.xml` con 200 (1294 URLs), `icon.svg` y `apple-icon` con 200, cabeceras HSTS, X-Content-Type-Options, X-Frame-Options y Referrer-Policy presentes, y enlaces externos de Loopkicks con 200. PENDIENTES: datos del titular en aviso legal y privacidad (items 1 y 2, diferidos por el usuario); desplegar el JSON-LD (la validación con Rich Results Test queda diferida a futuro por decisión del usuario); registrar el sitio en Search Console y, si se usa la verificación por meta, cargar `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` como variable de build; performance en 89 a 90, justo en el umbral.
 
-- Fase A: autenticación y tabla de progreso.
-- Fase B: skill tree visual y marcado de trucos.
-- Fase C: generador de combos aleatorios.
-- Fase D: editor y guardado de combos.
-- Fase E: logros, estadísticas y compartición.
+## Fase 24: "Cómo se hace" del catálogo completo
+
+Estado: pendiente.
+
+Contenido propio (no copiado de las fuentes) de "cómo se hace" para los trucos del catálogo. Hoy solo 1 de 558 lo tiene.
+
+- 24.1. Fijar plantilla, extensión y tono del texto (es/en), con criterios de calidad y de no copia.
+- 24.2. Redactar por lotes priorizando la dificultad menor (0, 1 y 2 primero).
+- 24.3. Cargar con `pnpm --filter @tricking/db db:how-to` desde `packages/db/src/seed/how-to/how-to.json`, con revisión del usuario por tanda.
+- 24.4. Exponer el "cómo se hace" también como `teaches` en el JSON-LD de la ficha por truco.
+- 24.5. Cobertura objetivo del 100 % de los trucos, con `how_to` y `how_to_es`.
+
+Criterio de cierre: todos los trucos con descripción propia es/en revisada por el usuario, sin texto copiado, visible en el detalle.
+
+Dependencias: ninguna. Sin variables nuevas.
+
+## Fase 25: Trucos nuevos para dificultad básica y fácil
+
+Estado: pendiente.
+
+Hoy la dificultad 0 (básico) tiene 0 trucos y la 1 (fácil) tiene 2.
+
+- 25.1. Propuesta curada de trucos nuevos que no existan en el catálogo, con nombre, sección, descripción y dificultad 0 o 1.
+- 25.2. Aprobación del usuario de la lista.
+- 25.3. Extensión de la semilla: alta de trucos, traducción al español, relaciones (`trick_relations`) y dificultad en `packages/db/src/seed/difficulty/`.
+- 25.4. E2E y verificación de que aparecen en el listado y en el detalle.
+
+Criterio de cierre: niveles 0 y 1 poblados con trucos nuevos aprobados, sin duplicados, con relaciones y dificultad.
+
+Dependencias: ninguna. Sin variables nuevas.
+
+## Fase 26: Ampliación de la sección de Tips
+
+Estado: pendiente.
+
+Sección 28.2 de `AGENTS.md`.
+
+- 26.1. Nuevos tipos de truco: gainer, cork, full, double full y raiz con variantes.
+- 26.2. Tips por nivel: principiante, intermedio y avanzado.
+- 26.3. Respiración y preparación mental antes del truco.
+- 26.4. Aterrizaje y absorción de impacto.
+- 26.5. Calentamiento específico por tipo de truco.
+- 26.6. Vídeos cortos propios en Cloudflare R2 (contenido propio o con licencia).
+- 26.7. Diagramas de hacia dónde mirar por fase del truco.
+- 26.8. Modo comparación de dos tipos de truco lado a lado.
+- 26.9. i18n es/en, cache de 30 días y estructura de datos que crezca sin migración destructiva.
+
+Criterio de cierre: contenido ampliado curado, es/en, visible y accesible, con la estructura lista para seguir creciendo.
+
+Dependencias: Cloudflare R2 (ya documentado) solo para vídeos propios. Sin dependencias npm nuevas.
+
+## Fase 27: Skill tree visual (sin login)
+
+Estado: pendiente.
+
+Sección 28.3, adaptada a la decisión de no usar autenticación: el progreso vive en el navegador (Fase 21).
+
+- 27.1. Modelo del árbol sobre `trick_relations` (prereqs y next) y las categorías.
+- 27.2. Render con `@xyflow/react` (dependencia ya aprobada).
+- 27.3. Estados por nodo (bloqueado, disponible, en progreso, aprendido y quiero aprender) con los tokens de estado de `design.md`.
+- 27.4. Filtros por categoría, dificultad y estado; zoom, arrastre y navegación por teclado.
+- 27.5. Barras de progreso global y por categoría, y logros por hitos.
+- 27.6. Persistencia con el store de la Fase 21 (Zustand y wrapper de storage), sin cuenta.
+
+Criterio de cierre: árbol navegable y accesible que refleja y actualiza el progreso local, verificado en navegador real y móvil.
+
+Dependencias: ninguna nueva (`@xyflow/react` ya aprobada). Sin variables nuevas.
+
+## Fase 28: Editor y guardado de combos
+
+Estado: pendiente.
+
+El generador de combos ya existe (Fase 22) sin guardado.
+
+- 28.1. Modelo local de combos (Zustand y Zod) con estados borrador, practicando y dominado.
+- 28.2. Editor tipo nota: lista numerada, autocompletado con debounce, reordenar pasos y notas por paso.
+- 28.3. Título, descripción y etiquetas opcionales.
+- 28.4. Listado con filtros y búsqueda; export a texto plano y markdown; borrado con modal de confirmación.
+
+Criterio de cierre: crear, guardar, editar y exportar combos en el navegador, persistente tras recargar, sin PII.
+
+Dependencias: ninguna nueva. Sin variables nuevas.
+
+## Fase 29: Favoritos y colecciones
+
+Estado: pendiente.
+
+- 29.1. Marcar trucos como favoritos.
+- 29.2. Colecciones con nombre y descripción.
+- 29.3. Export e import de favoritos y colecciones.
+
+Criterio de cierre: favoritos y colecciones persistentes en local, exportables, sin cuenta.
+
+Dependencias: ninguna nueva. Sin variables nuevas.
+
+## Fase 30: Timeline de progresión
+
+Estado: pendiente.
+
+- 30.1. Vista del camino prereq, truco y next tricks de forma visual.
+- 30.2. Integración con el progreso local y los enlaces cruzados de la Fase 15.
+- 30.3. Navegación por teclado y estado vacío reutilizado.
+
+Criterio de cierre: timeline navegable que muestra el camino de un truco y su avance local.
+
+Dependencias: ninguna nueva. Sin variables nuevas.
+
+## Fase 31: Comparación de trucos lado a lado
+
+Estado: pendiente.
+
+- 31.1. Selección de dos trucos y vista en paralelo con sus vídeos.
+- 31.2. Diferencias técnicas resaltadas (categoría, dificultad, stance y "cómo se hace").
+- 31.3. Responsive y accesible; en móvil apilado.
+
+Criterio de cierre: comparación funcional de dos trucos, con sus vídeos y diferencias, en escritorio y móvil.
+
+Dependencias: ninguna nueva. Sin variables nuevas.
+
+## Fase 32: Modo entrenamiento o rutinas
+
+Estado: pendiente.
+
+- 32.1. Generar sesiones de práctica según el nivel y los trucos marcados.
+- 32.2. Incorporar los tips de mirada relevantes por tipo de truco.
+- 32.3. Guardar y reanudar rutinas en local.
+
+Criterio de cierre: rutinas generadas y reanudables que usan el progreso local y los tips, sin cuenta.
+
+Dependencias: ninguna nueva. Sin variables nuevas.
+
+## Fase 33: Búsqueda por timestamps en vídeos
+
+Estado: pendiente.
+
+- 33.1. Modelo de momentos clave por truco (tiempo, etiqueta y descripción) asociados al vídeo.
+- 33.2. Curación inicial de los momentos.
+- 33.3. Marcadores en el reproductor para saltar a cada momento.
+
+Criterio de cierre: marcar y saltar a momentos clave en el detalle de un truco, accesible por teclado.
+
+Dependencias: ninguna nueva (los vídeos son externos de Loopkicks). Sin variables nuevas.
+
+## Fase 34: Modo contraste para vídeos claros
+
+Estado: pendiente.
+
+- 34.1. Detección o marca curada de vídeos con fondo claro.
+- 34.2. Overlay automático cuando el tema del sitio es oscuro y el vídeo es claro.
+- 34.3. Control manual para activarlo o desactivarlo.
+
+Criterio de cierre: overlay aplicado a los vídeos claros sin afectar los oscuros, con control manual accesible.
+
+Dependencias: ninguna nueva. Sin variables nuevas.
+
+## Fase 35: Chatbot de IA con RAG
+
+Estado: pendiente.
+
+Mejora el asistente de la Fase 22 con recuperación semántica sobre el contenido propio.
+
+- 35.1. Extensión `pgvector` en Neon y tabla de embeddings.
+- 35.2. Embeddings con NVIDIA NIM (misma cuenta y `AI_NVIDIA_API_KEY`), sin SDK.
+- 35.3. Troceado e ingesta de descripciones, tips, "cómo se hace" y notas de Loopkicks.
+- 35.4. Recuperación combinada (semántica y full-text) para el contexto del asistente.
+- 35.5. Guardarraíles, topes diarios y trazabilidad ya vigentes de la Fase 22.
+
+Criterio de cierre: el asistente responde con contexto recuperado por similitud, acotado a tricking, con topes y sin exponer datos sensibles.
+
+Dependencias: extensión `pgvector` en Neon y embeddings de NVIDIA NIM. Sin SDK ni proveedor nuevo. Variable opcional `AI_NVIDIA_EMBED_MODEL`.
+
+## Fase 36: Traducción automática del contenido propio es/en
+
+Estado: pendiente.
+
+Hoy el contenido propio (tips y "cómo se hace") se traduce a mano. Esta fase lo automatiza con el proveedor de IA ya configurado.
+
+- 36.1. Pipeline de traducción es/en por lotes usando el proveedor por HTTP ya existente.
+- 36.2. Revisión obligatoria del resultado (el texto traducido es contenido propio del proyecto).
+- 36.3. Integración con los scripts de carga (`db:how-to`, `db:gaze-tips`).
+
+Criterio de cierre: el contenido propio nuevo se traduce y se carga en es/en con revisión, sin traducir los nombres de trucos.
+
+Dependencias: ninguna nueva (usa el proveedor de IA por HTTP ya aprobado). Sin variables nuevas.
+
+## Fases de la sección 28 no activadas
+
+Las siguientes quedan en la sección 28 de `AGENTS.md` y no se abren por ahora, por decisión del usuario (2026-10-05):
+
+- Notificaciones push (Web Push API): diferida a futuro. Requeriría claves VAPID y una tabla de suscripciones.
+- Analítica (Umami): diferida a futuro. Activa cookies no esenciales y exigiría `vanilla-cookieconsent`, el inventario de cookies y actualizar la privacidad.
+
+El resto de la sección 28 que no se menciona en las Fases 24 a 36 sigue como pendiente sin activar. El skill tree y el generador o editor de combos descritos en la sección 28.3 ya no viven en una numeración aparte: quedan absorbidos por las Fases 27 y 28.

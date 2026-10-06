@@ -1,8 +1,9 @@
 import { getStanceBySlug } from '@tricking/db';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { cache } from 'react';
 
+import { breadcrumbJsonLd, JsonLd } from '@/components/json-ld';
 import { StanceDetailView } from '@/components/stance-detail-view';
 import { pickDescription } from '@/lib/description';
 
@@ -37,9 +38,20 @@ export default async function StanceDetailPage({ params }: StanceDetailPageProps
     notFound();
   }
 
+  const tNav = await getTranslations('nav');
+
   return (
-    <article className="flex flex-col gap-6 py-6">
-      <StanceDetailView stance={stance} />
-    </article>
+    <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: tNav('home'), path: `/${locale}` },
+          { name: tNav('stances'), path: `/${locale}/stances` },
+          { name: stance.name, path: `/${locale}/stances/${slug}` },
+        ])}
+      />
+      <article className="flex flex-col gap-6 py-6">
+        <StanceDetailView stance={stance} />
+      </article>
+    </>
   );
 }

@@ -51,7 +51,7 @@ drizzle-orm, drizzle-kit, `@neondatabase/serverless`, pino, pino-pretty, insta-f
 
 ## Dependencias aprobadas de testing
 
-vitest, `@testing-library/react`, playwright, i18next-parser o i18next-lint.
+vitest, `@testing-library/react`, playwright, i18next-parser o i18next-lint, `lighthouse` (devDependency raíz para medir rendimiento móvil; ver Fase 23).
 
 ## Dependencias prohibidas sin autorización
 
@@ -181,6 +181,20 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 - Secretos de runtime: se cargan una vez con `bash scripts/cf-secrets.sh` (lee el `.env` local) o desde el panel de Cloudflare. Incluye `DATABASE_URL`, `UPSTASH_*`, `RESEND_*`, `FEEDBACK_*`, `TURNSTILE_SECRET_KEY` y las keys `AI_*`.
 - Dominio gratis: subdominio `*.workers.dev` (por defecto) o un subdominio gratuito de terceros. Un dominio propio no es gratis.
 - Advertencia: el middleware de Node en Cloudflare es experimental en OpenNext; si da problemas, se evalua mover la logica de locale o usar Netlify.
+- Cierre de lanzamiento (Fase 23.6): datos estructurados completos (`BreadcrumbList` y ficha por truco `LearningResource`), redireccion 301 de HTTP a HTTPS en `apps/web/src/proxy.ts` (Cloudflare Workers no la aplica en `*.workers.dev`; la cabecera `x-forwarded-proto` decide y el desarrollo local no se afecta) y medicion con `lighthouse` (devDependency raiz y script `pnpm lighthouse`, que requiere `CHROME_PATH` apuntando al Chromium). Pendientes: datos del titular, deploy y Search Console; la validación con Rich Results Test queda diferida a futuro por decisión del usuario.
+
+## Fases 24 a 36 (mejoras de la sección 28 activadas)
+
+Planificadas el 2026-10-05 por decisión del usuario. Ninguna se implementa todavía; el detalle de subfases y criterios de cierre vive en `docs/docs-agents/fases.md`.
+
+- Fase 24 ("cómo se hace" de todos los trucos): contenido propio, sin dependencias ni variables. Se carga con `db:how-to`.
+- Fase 25 (trucos nuevos para básico y fácil): amplía la semilla y la dificultad, sin dependencias ni variables.
+- Fase 26 (ampliación de Tips): reutiliza Cloudflare R2 para vídeos propios (ya documentado); sin dependencias npm nuevas.
+- Fase 27 (skill tree visual): reutiliza `@xyflow/react` (ya aprobada) y el store local de la Fase 21; sin dependencias ni variables.
+- Fases 28 a 34 (editor de combos, favoritos, timeline, comparación, rutinas, timestamps y contraste de vídeo): estado local con Zustand y el wrapper de storage, y datos en la base para los timestamps; sin dependencias ni variables nuevas.
+- Fase 35 (chatbot con RAG): extensión `pgvector` en Neon y embeddings de NVIDIA NIM, sin SDK y reutilizando `AI_NVIDIA_API_KEY`. Variable opcional `AI_NVIDIA_EMBED_MODEL`. Requiere una migración de base.
+- Fase 36 (traducción automática del contenido propio es/en): usa el proveedor de IA por HTTP ya aprobado; sin dependencias ni variables nuevas.
+- No activadas: analítica (Umami) y notificaciones push (Web Push API). Quedan en la sección 28 y, si se activan, sus dependencias y variables se registran entonces.
 
 ## Notas sobre decisiones no aplicables
 

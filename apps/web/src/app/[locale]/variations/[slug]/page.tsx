@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { cache } from 'react';
 
+import { breadcrumbJsonLd, JsonLd } from '@/components/json-ld';
 import { VariationDetailView } from '@/components/variation-detail-view';
 import { pickDescription } from '@/lib/description';
 
@@ -40,9 +41,20 @@ export default async function VariationDetailPage({ params }: VariationDetailPag
     notFound();
   }
 
+  const tNav = await getTranslations('nav');
+
   return (
-    <article className="flex flex-col gap-6 py-6">
-      <VariationDetailView variation={variation} />
-    </article>
+    <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: tNav('home'), path: `/${locale}` },
+          { name: tNav('variations'), path: `/${locale}/variations` },
+          { name: variation.name, path: `/${locale}/variations/${slug}` },
+        ])}
+      />
+      <article className="flex flex-col gap-6 py-6">
+        <VariationDetailView variation={variation} />
+      </article>
+    </>
   );
 }

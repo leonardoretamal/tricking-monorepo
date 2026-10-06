@@ -19,6 +19,7 @@
     "format:check": "prettier --check .",
     "env:check": "node scripts/check-env-example.mjs",
     "env:sync": "node scripts/sync-env.mjs",
+    "lighthouse": "cd ${LH_CWD:-/tmp} && lighthouse ${LH_URL:-${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}} --form-factor=mobile --screenEmulation.mobile --only-categories=performance,accessibility,best-practices,seo --output=json --output=html --output-path=${LH_OUT:-/tmp/lighthouse-mobile} --chrome-flags=\"--headless=new --no-sandbox --disable-dev-shm-usage\" --quiet",
     "prepare": "husky"
   },
   "pnpm": {
@@ -36,6 +37,7 @@
     "@playwright/test": "^1.63.0",
     "eslint": "^9.39.5",
     "husky": "^9.1.7",
+    "lighthouse": "^13.5.0",
     "lint-staged": "^15.5.2",
     "prettier": "^3.9.9",
     "turbo": "^2.11.7",

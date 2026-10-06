@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { cache } from 'react';
 
+import { breadcrumbJsonLd, JsonLd, trickJsonLd } from '@/components/json-ld';
 import { TrickDetailView } from '@/components/trick-detail-view';
 import { pickDescription } from '@/lib/description';
 import { isSection } from '@/lib/sections';
@@ -48,14 +49,36 @@ export default async function TrickDetailPage({ params }: TrickDetailPageProps) 
   }
 
   const t = await getTranslations('tricks');
+  const tNav = await getTranslations('nav');
+  const tApp = await getTranslations('app');
+  const sectionTitle = t(`sections.${section}.title`);
+  const path = `/${locale}/tricks/${section}/${trick.id}`;
 
   return (
-    <article className="flex flex-col gap-6 py-6">
-      <TrickDetailView
-        trick={trick}
-        section={section}
-        sectionTitle={t(`sections.${section}.title`)}
+    <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: tNav('home'), path: `/${locale}` },
+          { name: tNav('tricks'), path: `/${locale}/tricks` },
+          { name: sectionTitle, path: `/${locale}/tricks/${section}` },
+          { name: trick.name, path },
+        ])}
       />
-    </article>
+      <JsonLd
+        data={trickJsonLd({
+          name: trick.name,
+          description: trick.description,
+          descriptionEs: trick.descriptionEs,
+          howTo: trick.howTo,
+          howToEs: trick.howToEs,
+          path,
+          locale,
+          siteName: tApp('name'),
+        })}
+      />
+      <article className="flex flex-col gap-6 py-6">
+        <TrickDetailView trick={trick} section={section} sectionTitle={sectionTitle} />
+      </article>
+    </>
   );
 }

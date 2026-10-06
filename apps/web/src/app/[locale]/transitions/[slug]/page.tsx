@@ -1,8 +1,9 @@
 import { getTransitionBySlug } from '@tricking/db';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { cache } from 'react';
 
+import { breadcrumbJsonLd, JsonLd } from '@/components/json-ld';
 import { TransitionDetailView } from '@/components/transition-detail-view';
 import { pickDescription } from '@/lib/description';
 
@@ -38,9 +39,20 @@ export default async function TransitionDetailPage({ params }: TransitionDetailP
     notFound();
   }
 
+  const tNav = await getTranslations('nav');
+
   return (
-    <article className="flex flex-col gap-6 py-6">
-      <TransitionDetailView transition={transition} />
-    </article>
+    <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: tNav('home'), path: `/${locale}` },
+          { name: tNav('transitions'), path: `/${locale}/transitions` },
+          { name: transition.name, path: `/${locale}/transitions/${slug}` },
+        ])}
+      />
+      <article className="flex flex-col gap-6 py-6">
+        <TransitionDetailView transition={transition} />
+      </article>
+    </>
   );
 }
