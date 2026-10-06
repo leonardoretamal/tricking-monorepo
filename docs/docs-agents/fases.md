@@ -448,7 +448,7 @@ Notas de cierre (2026-10-05): 23.6 avanzado en el árbol de trabajo, con los cam
 
 ## Fase 24: "Cómo se hace" del catálogo completo
 
-Estado: pendiente.
+Estado: completada.
 
 Contenido propio (no copiado de las fuentes) de "cómo se hace" para los trucos del catálogo. Hoy solo 1 de 558 lo tiene.
 
@@ -460,11 +460,13 @@ Contenido propio (no copiado de las fuentes) de "cómo se hace" para los trucos 
 
 Criterio de cierre: todos los trucos con descripción propia es/en revisada por el usuario, sin texto copiado, visible en el detalle.
 
+Notas de cierre: se cubrieron los 568 trucos con sección (556 de las fuentes más los 12 nuevos de la Fase 25) con `how_to` y `how_to_es`, en 7 archivos `packages/db/src/seed/how-to/*.json` que `apply-how-to.ts` ahora lee y fusiona por orden alfabético (reporta ids repetidos y sin fila). Se aplicó con `db:how-to` y la cobertura quedó 568/568. El texto es un BORRADOR propio redactado por lotes; queda pendiente la revisión del usuario por tanda (algunos nombres propios se describieron por composición). Se eliminó `how-to/how-to.json`: su `aerial` quedó cubierto por `inside.json` y su clave `btwist` no correspondía a ningún id del catálogo.
+
 Dependencias: ninguna. Sin variables nuevas.
 
 ## Fase 25: Trucos nuevos para dificultad básica y fácil
 
-Estado: pendiente.
+Estado: completada.
 
 Hoy la dificultad 0 (básico) tiene 0 trucos y la 1 (fácil) tiene 2.
 
@@ -474,6 +476,8 @@ Hoy la dificultad 0 (básico) tiene 0 trucos y la 1 (fácil) tiene 2.
 - 25.4. E2E y verificación de que aparecen en el listado y en el detalle.
 
 Criterio de cierre: niveles 0 y 1 poblados con trucos nuevos aprobados, sin duplicados, con relaciones y dificultad.
+
+Notas de cierre: se cargaron 12 trucos nuevos aprobados por el usuario con `packages/db/src/seed/manual-tricks/tricks.json` y el script `db:manual-tricks` (upsert por id más enlace a categoría `GROUNDWORK`/`VERT_KICK`). Dificultad 0: Handstand, Forward Roll, Backward Roll, Bridge, Headstand, Kip Up. Dificultad 1: Front Walkover, Back Walkover, Macaco, Headspring, Donkey Kick, Hook Kick. La distribucion paso de 0 y 2 trucos en basico/facil a 6 y 8, y el total de la base quedo en 570. Contenido propio en es/en (descripción y "cómo se hace").
 
 Dependencias: ninguna. Sin variables nuevas.
 
@@ -639,3 +643,9 @@ Las siguientes quedan en la sección 28 de `AGENTS.md` y no se abren por ahora, 
 - Analítica (Umami): diferida a futuro. Activa cookies no esenciales y exigiría `vanilla-cookieconsent`, el inventario de cookies y actualizar la privacidad.
 
 El resto de la sección 28 que no se menciona en las Fases 24 a 36 sigue como pendiente sin activar. El skill tree y el generador o editor de combos descritos en la sección 28.3 ya no viven en una numeración aparte: quedan absorbidos por las Fases 27 y 28.
+
+## Correcciones aplicadas (2026-10-05)
+
+- Asistente de IA (Fase 22): el generador de combinaciones libres fallaba cuando el usuario respondía al modo con una sola palabra ("libre"), porque `isComboRequest` no lo reconocía y el mensaje caía al modelo sin la muestra del catálogo. Se corrigió en `apps/web/src/lib/ai-guardrails.ts` (una respuesta de modo cuenta como petición solo si el mensaje es corto, para no clasificar frases ajenas) y se agregaron tests en `ai-guardrails.test.ts`. Multiidioma real: el prompt de sistema y las plantillas del chat ahora salen en el idioma del usuario (`assistant.json` es/en).
+- Notas de Loopkicks (Fase 13/14): eran solo inglés y salían en inglés también en la página en español. Se agregó `tricks.loopkicks_notes_es` (migración `0010`), se tradujeron las 556 notas (traducción de cortesía, con atribución y enlace intactos) y el detalle elige por locale con `pickDescription`.
+- Footer: rediseño transversal. La lista vertical larga y el espacio vacío se reemplazaron por un bloque de marca y tres grupos de enlaces ("Catálogo", "Aprender", "Sitio") en un grid responsive, con una barra inferior de copyright, contacto y aviso de no afiliación. Claves nuevas en `messages/{es,en}/common.json` (`footer.groups.*`, `footer.contact`).

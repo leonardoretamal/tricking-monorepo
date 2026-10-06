@@ -38,6 +38,7 @@ describe('trickSchemas', () => {
       howTo: null,
       howToEs: 'Paso el peso y giro.',
       loopkicksNotes: 'An Arabian starts with a backflip.',
+      loopkicksNotesEs: 'Un Arabian empieza con un backflip.',
       kojoTechniques: [],
       prereqs: [{ id: 'tornado', name: 'Tornado', difficulty: 3, section: 'vertical-kicks' }],
       nextTricks: [],

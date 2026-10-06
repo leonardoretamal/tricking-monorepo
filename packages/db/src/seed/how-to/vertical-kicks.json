@@ -1,0 +1,382 @@
+{
+  "pop360": {
+    "es": "Es una patada vertical de 360 grados lanzada desde un salto recto (pop). Da un paso corto, salta hacia arriba y gira la cadera mientras la pierna de ataque describe un arco circular; aterriza sobre el pie de despegue con la rodilla flexionada.",
+    "en": "It is a 360-degree vertical kick thrown from a straight-up jump (pop). Take a short step, jump up and turn the hips while the kicking leg sweeps in a circular arc; land on the takeoff foot with the knee bent."
+  },
+  "swing360": {
+    "es": "Patada vertical de 360 grados que entra con un paso de swing: balanceas la pierna libre hacia adelante y usas ese envion para abrir la cadera y elevar el giro. La pierna de ataque corta en el aire y aterrizas sobre el pie de despegue.",
+    "en": "A 360-degree vertical kick entered with a swing step: you swing the free leg forward and use that momentum to open the hips and lift the spin. The kicking leg slices across the air and you land on the takeoff foot."
+  },
+  "540": {
+    "es": "Es una patada vertical de 360 grados que, a diferencia del tornado, aterriza sobre la pierna que pateo. Entra con un paso, gira la cadera y lanza la pierna de ataque en un arco alto; el giro termina con esa misma pierna abajo y la otra recogida.",
+    "en": "It is a 360-degree vertical kick that, unlike the tornado, lands on the kicking leg. Step in, turn the hips and throw the attacking leg in a high arc; the spin finishes with that leg coming down and the other tucked."
+  },
+  "backside720": {
+    "es": "Patada vertical de dos giros completos (720 grados) en direccion backside, es decir, el cuerpo gira alejandose del lado de la patada. Salta y encadena ambas rotaciones con el torso apretado, pateando a mitad del giro y aterrizando de espaldas al frente inicial.",
+    "en": "A vertical kick with two full rotations (720 degrees) in the backside direction, meaning the body turns away from the kicking side. Jump and chain both rotations with a tight torso, kicking mid-spin and landing with your back to the starting direction."
+  },
+  "cheat720": {
+    "es": "Patada vertical de dos giros (720 grados) que arranca con un paso de cheat: una pisada falsa que carga la cadera antes del salto. Desde ahi saltas, completas las dos vueltas y lanzas la patada en el aire, aterrizando sobre el pie de despegue.",
+    "en": "A vertical kick of two rotations (720 degrees) that starts with a cheat step, a feinted plant that loads the hips before the jump. From there you jump, complete the two turns and throw the kick in the air, landing on the takeoff foot."
+  },
+  "hurricaneKick": {
+    "es": "Es un giro de 360 grados con una patada de gancho o media luna que barre bajo y amplio. Entras con un paso, dejas que la pierna de ataque pase cerca del suelo y la subes en arco mientras el torso gira; aterrizas sobre el pie de despegue.",
+    "en": "It is a 360-degree turn with a hook or crescent kick that sweeps low and wide. Step in, let the attacking leg pass near the floor and lift it in an arc while the torso turns; land on the takeoff foot."
+  },
+  "parafuso": {
+    "es": "Es una patada giratoria tipo sacacorchos: un tornado en el que el torso agrega una rotacion extra y el giro sale mas apretado y veloz. Entras con un paso, giras la cadera y azotas la pierna de ataque en un latigazo antes de aterrizar.",
+    "en": "It is a screw-style spinning kick: a tornado in which the torso adds an extra rotation so the spin comes out tighter and faster. Step in, turn the hips and whip the attacking leg through before landing."
+  },
+  "pop360Gyro": {
+    "es": "Un pop 360 al que se le suma un gyro: despues de la patada y el giro en el aire, el pie de aterrizaje sigue girando otros 360 grados en el suelo. El resultado encadena la patada con una vuelta completa al tocar tierra.",
+    "en": "A pop 360 with a gyro added: after the kick and the spin in the air, the landing foot keeps turning another 360 degrees on the ground. The result chains the kick into a full turn as you touch down."
+  },
+  "pop360GyroDoubleleg": {
+    "es": "Pop 360 con giro de aterrizaje (gyro) en el que la patada se lanza con las dos piernas juntas. Saltas y giras, pateas con ambos pies al mismo tiempo y al caer sumas la vuelta del gyro.",
+    "en": "A pop 360 with a landing gyro in which the kick is thrown with both legs together. You jump and spin, kick with both feet at once and add the gyro turn as you land."
+  },
+  "pop360GyroRound": {
+    "es": "Pop 360 con gyro que termina en patada circular (round). Tras el salto y la patada de giro, el pie de aterrizaje completa la vuelta y rematas con una patada redonda.",
+    "en": "A pop 360 with a gyro that ends in a round kick. After the jump and the spinning kick, the landing foot completes the turn and you finish with a roundhouse."
+  },
+  "pop360Shuriken": {
+    "es": "Pop 360 en el que la patada se lanza como un shuriken: la pierna sale con una recamara corta y un latigazo rapido de gancho. Saltas, giras y sueltas el golpe seco en el aire antes de aterrizar.",
+    "en": "A pop 360 in which the kick is thrown like a shuriken: the leg fires from a short chamber with a quick hook-like snap. You jump, spin and release the sharp strike in the air before landing."
+  },
+  "pop540": {
+    "es": "Patada vertical de 360 grados desde un salto recto que aterriza sobre la pierna que pateo. Saltas hacia arriba, giras la cadera y lanzas la pierna de ataque en arco alto, cayendo sobre ella con la otra recogida.",
+    "en": "A 360-degree vertical kick from a straight jump that lands on the kicking leg. You jump up, turn the hips and throw the attacking leg in a high arc, coming down on it with the other leg tucked."
+  },
+  "pop720": {
+    "es": "Patada vertical de dos giros completos (720 grados) lanzada desde un salto recto. Saltas, encadenas ambas rotaciones con el torso firme y pateas a mitad del giro, aterrizando sobre el pie de despegue.",
+    "en": "A vertical kick of two full rotations (720 degrees) thrown from a straight jump. You jump, chain both rotations with a firm torso and kick mid-spin, landing on the takeoff foot."
+  },
+  "popTornado": {
+    "es": "Es un tornado lanzado desde un salto recto en lugar de un paso de barrido. Saltas hacia arriba, giras la cadera 360 grados y lanzas la pierna de ataque en arco; aterrizas sobre el pie de despegue.",
+    "en": "It is a tornado launched from a straight jump instead of a sweeping step. You jump up, turn the hips 360 degrees and throw the attacking leg in an arc; land on the takeoff foot."
+  },
+  "skipHook": {
+    "es": "Es una patada de gancho con un paso de skip: das un salto corto hacia adelante y, en el aire, giras la pierna de ataque en gancho antes de caer. El skip da el impulso y el gancho golpea de costado.",
+    "en": "It is a hook kick with a skip step: you take a short hop forward and, in the air, swing the attacking leg in a hook before landing. The skip provides the lift and the hook strikes from the side."
+  },
+  "tornado": {
+    "es": "Es la patada vertical clasica: un giro de 360 grados desde un paso de barrido. Pasas la pierna de ataque cerca del suelo, subes la cadera y pateas en arco con la otra pierna, aterrizando sobre el pie de despegue.",
+    "en": "It is the classic vertical kick: a 360-degree turn from a sweep step. You pass the lead leg near the floor, lift the hips and kick in an arc with the other leg, landing on the takeoff foot."
+  },
+  "540Gyro": {
+    "es": "Un 540 (patada de 360 grados que aterriza en la pierna que pateo) al que se le anade un gyro: al caer, el pie de apoyo sigue girando otros 360 grados. Encadena la patada y la caida con una vuelta completa mas.",
+    "en": "A 540 (a 360-degree kick that lands on the kicking leg) with a gyro added: on landing, the support foot keeps turning another 360 degrees. It chains the kick and the landing with one more full turn."
+  },
+  "540Gyroknife": {
+    "es": "Un 540 con gyro de aterrizaje en el que la patada se lanza con la pierna estirada y rigida, como un cuchillo. Giras, pateas con la pierna recta, caes sobre ella y completas la vuelta del gyro.",
+    "en": "A 540 with a landing gyro in which the kick is thrown with the leg straight and rigid, like a knife. You spin, kick with the straight leg, land on it and complete the gyro turn."
+  },
+  "backside1080": {
+    "es": "Patada vertical de tres giros completos (1080 grados) en direccion backside. Saltas y encadenas las tres rotaciones girando alejandote del lado de la patada, pateando hacia la mitad y aterrizando de espaldas al frente inicial.",
+    "en": "A vertical kick of three full rotations (1080 degrees) in the backside direction. You jump and chain the three rotations turning away from the kicking side, kicking around the middle and landing with your back to the starting direction."
+  },
+  "backside900": {
+    "es": "Patada vertical de dos giros y medio (900 grados) en direccion backside. El cuerpo gira alejandose del lado de la patada mientras encadenas las rotaciones y lanzas el golpe a mitad del giro.",
+    "en": "A vertical kick of two and a half rotations (900 degrees) in the backside direction. The body turns away from the kicking side as you chain the rotations and throw the strike mid-spin."
+  },
+  "cheat1080": {
+    "es": "Patada vertical de tres giros completos (1080 grados) desde un paso de cheat. La pisada falsa carga la cadera, y desde ahi saltas, encadenas las tres vueltas y pateas en el aire antes de aterrizar.",
+    "en": "A vertical kick of three full rotations (1080 degrees) from a cheat step. The feinted plant loads the hips, and from there you jump, chain the three turns and kick in the air before landing."
+  },
+  "cheat720Double": {
+    "es": "Patada de dos giros (720 grados) desde un paso de cheat en la que se lanzan dos patadas con la misma pierna dentro de la rotacion. Saltas, completas la primera vuelta con una patada y rematas la segunda con otra.",
+    "en": "A two-rotation kick (720 degrees) from a cheat step in which two kicks are thrown with the same leg inside the rotation. You jump, complete the first turn with one kick and finish the second with another."
+  },
+  "cheat720Shuriken": {
+    "es": "Cheat 720 en el que la patada se suelta como un shuriken, con recamara corta y latigazo seco. El paso de cheat carga el salto y el golpe sale rapido a mitad de las dos vueltas.",
+    "en": "A cheat 720 in which the kick is released like a shuriken, with a short chamber and a sharp snap. The cheat step loads the jump and the strike fires fast in the middle of the two turns."
+  },
+  "cheat720Turbo": {
+    "es": "Cheat 720 con impulso turbo: el giro se acelera para que la patada salga mas alta y veloz. El paso de cheat carga el salto y el empuje extra sostiene las dos vueltas hasta el aterrizaje.",
+    "en": "A cheat 720 with a turbo drive: the spin is accelerated so the kick comes out higher and faster. The cheat step loads the jump and the extra drive sustains the two turns through the landing."
+  },
+  "cheat900": {
+    "es": "Patada vertical de dos giros y medio (900 grados) desde un paso de cheat. La pisada falsa carga la cadera y el salto encadena las rotaciones hasta el golpe y el aterrizaje.",
+    "en": "A vertical kick of two and a half rotations (900 degrees) from a cheat step. The feinted plant loads the hips and the jump chains the rotations through the strike and the landing."
+  },
+  "cheatDoubleHook": {
+    "es": "Desde un paso de cheat se lanzan dos patadas de gancho consecutivas en el aire. El salto levanta el cuerpo y cada pierna gira en gancho, una despues de la otra, antes de caer.",
+    "en": "From a cheat step, two consecutive hook kicks are thrown in the air. The jump lifts the body and each leg swings in a hook, one after the other, before you come down."
+  },
+  "cheatFeilong": {
+    "es": "Cheat con remate feilong: tras el salto, la patada giratoria se prolonga en un barrido de dragon con el cuerpo inclinado hacia atras. El giro sale volando y termina en un arco descendente.",
+    "en": "A cheat with a feilong finish: after the jump, the spinning kick extends into a dragon sweep with the body leaning back. The spin flies through and ends in a descending arc."
+  },
+  "crowdAwakener": {
+    "es": "Es una patada giratoria vertical de exhibicion que se remata con un gesto amplio y vistoso para llamar al publico. Entras con paso, giras, lanzas la patada alta y abres los brazos en el momento del golpe.",
+    "en": "It is a showy vertical spinning kick finished with a wide, flashy gesture to draw the crowd. Step in, spin, throw the kick high and open the arms at the moment of the strike."
+  },
+  "crowdAwakenerKnife": {
+    "es": "Crowd Awakener en el que la patada final se lanza con la pierna estirada y rigida, tipo cuchillo, manteniendo el remate amplio y vistoso. El giro sube y la pierna recta corta el aire antes del aterrizaje.",
+    "en": "A Crowd Awakener in which the final kick is thrown with the leg straight and rigid, knife style, keeping the wide showy finish. The spin lifts and the straight leg slices the air before landing."
+  },
+  "jackknife": {
+    "es": "Es una patada de tijera: en el aire las dos piernas se abren y se cierran como una navaja. Saltas, giras la cadera y extiendes ambas piernas en el punto alto antes de recogerlas para caer.",
+    "en": "It is a scissors kick: in the air both legs open and close like a jackknife. You jump, turn the hips and extend both legs at the high point before tucking them to land."
+  },
+  "jackknifeShuriken": {
+    "es": "Jackknife en el que la apertura de las piernas termina en un latigazo seco tipo shuriken. Tras el salto y la tijera, la pierna de ataque remata con recamara corta y golpe rapido.",
+    "en": "A jackknife in which the leg opening ends in a sharp shuriken-style snap. After the jump and the scissors, the attacking leg finishes with a short chamber and a quick strike."
+  },
+  "jackknifeTurbo": {
+    "es": "Jackknife con impulso turbo: el salto y el giro se aceleran para que la tijera se abra mas alto y mas rapido. El empuje extra sostiene las piernas extendidas en el aire.",
+    "en": "A jackknife with a turbo drive: the jump and spin are accelerated so the scissors open higher and faster. The extra drive holds the legs extended in the air."
+  },
+  "parafusoGyro": {
+    "es": "Un parafuso (tornado con rotacion extra de sacacorchos) al que se le suma un gyro: tras el giro y el latigazo, el pie de aterrizaje sigue girando otros 360 grados. Encadena el sacacorchos con una vuelta completa.",
+    "en": "A parafuso (a tornado with an extra screw rotation) with a gyro added: after the spin and the whip, the landing foot keeps turning another 360 degrees. It chains the screw kick into a full turn."
+  },
+  "parafusoHawkeye": {
+    "es": "Parafuso rematado con un golpe de precision tipo Hawkeye: la pierna de ataque sube muy alto y apunta con la mirada fija. El giro de sacacorchos termina en un remate fino y controlado.",
+    "en": "A parafuso finished with a precise Hawkeye-style strike: the attacking leg rises very high and aims with a fixed gaze. The screw spin ends in a fine, controlled finish."
+  },
+  "parafusoTwistKick": {
+    "es": "Parafuso en el que el remate anade un twist: la patada sale con el tronco y la cadera contrarrotando en un giro extra. El sacacorchos desemboca en una patada con torsion.",
+    "en": "A parafuso whose finish adds a twist: the kick fires with the trunk and hips counter-rotating in an extra turn. The screw kick flows into a twisting strike."
+  },
+  "paraknife": {
+    "es": "Es un parafuso rematado con la pierna estirada y rigida, tipo cuchillo. El giro de sacacorchos sube y la pierna recta corta en el aire antes de aterrizar.",
+    "en": "It is a parafuso finished with the leg straight and rigid, knife style. The screw spin lifts and the straight leg slices the air before landing."
+  },
+  "pop1080": {
+    "es": "Patada vertical de tres giros completos (1080 grados) desde un salto recto. Saltas, encadenas las tres rotaciones con el torso firme y pateas a mitad del giro.",
+    "en": "A vertical kick of three full rotations (1080 degrees) from a straight jump. You jump, chain the three rotations with a firm torso and kick mid-spin."
+  },
+  "pop720Double": {
+    "es": "Pop 720 en el que se lanzan dos patadas con la misma pierna dentro de las dos vueltas. Tras el salto, la primera vuelta lleva una patada y la segunda otra.",
+    "en": "A pop 720 in which two kicks are thrown with the same leg inside the two turns. After the jump, the first turn carries one kick and the second another."
+  },
+  "pop900": {
+    "es": "Patada vertical de dos giros y medio (900 grados) desde un salto recto. Saltas y encadenas las rotaciones con la cadera apretada hasta soltar la patada en el aire.",
+    "en": "A vertical kick of two and a half rotations (900 degrees) from a straight jump. You jump and chain the rotations with the hips tight until you release the kick in the air."
+  },
+  "popFeilong": {
+    "es": "Pop con remate feilong: tras el salto, la patada giratoria se prolonga en un barrido de dragon con el cuerpo inclinado atras. El giro sale volando en un arco descendente.",
+    "en": "A pop with a feilong finish: after the jump, the spinning kick extends into a dragon sweep with the body leaning back. The spin flies through in a descending arc."
+  },
+  "popFeilongKnife": {
+    "es": "Pop Feilong en el que el barrido final se hace con la pierna estirada y rigida. El giro se prolonga en el aire y la pierna recta cierra el arco antes de caer.",
+    "en": "A pop Feilong in which the final sweep is done with the leg straight and rigid. The spin extends in the air and the straight leg closes the arc before landing."
+  },
+  "swing1080": {
+    "es": "Patada vertical de tres giros completos (1080 grados) que entra con un paso de swing. El envion de la pierna libre carga la cadera y el salto encadena las tres vueltas hasta el golpe.",
+    "en": "A vertical kick of three full rotations (1080 degrees) entered with a swing step. The swing of the free leg loads the hips and the jump chains the three turns through the strike."
+  },
+  "swing900": {
+    "es": "Patada vertical de dos giros y medio (900 grados) con entrada de swing. El balanceo previo impulsa el salto y el giro encadena las rotaciones hasta la patada.",
+    "en": "A vertical kick of two and a half rotations (900 degrees) with a swing entry. The prior swing drives the jump and the spin chains the rotations through the kick."
+  },
+  "tornadoDouble": {
+    "es": "Tornado en el que se lanzan dos patadas con la misma pierna dentro del giro de 360 grados. Tras el barrido de entrada, la rotacion lleva un golpe y el segundo remata.",
+    "en": "A tornado in which two kicks are thrown with the same leg inside the 360-degree turn. After the sweep entry, the rotation carries one strike and the second finishes."
+  },
+  "tornadoHawkeye": {
+    "es": "Tornado rematado con un golpe de precision tipo Hawkeye: la pierna de ataque sube alta y el giro termina en un remate fijo y controlado.",
+    "en": "A tornado finished with a precise Hawkeye-style strike: the attacking leg rises high and the spin ends in a fixed, controlled finish."
+  },
+  "tornadoSidekick": {
+    "es": "Tornado que termina con una patada lateral: tras el giro de 360 grados, la cadera se abre y el golpe sale con el borde del pie. El remate lateral cierra la rotacion.",
+    "en": "A tornado that ends with a side kick: after the 360-degree turn, the hip opens and the strike lands with the edge of the foot. The side kick closes the rotation."
+  },
+  "twistKnife": {
+    "es": "Es una patada giratoria con torsion de tronco que remata con la pierna estirada y rigida. La cadera y los hombros giran en sentidos opuestos y la pierna recta corta el aire.",
+    "en": "It is a spinning kick with a trunk twist that finishes with the leg straight and rigid. The hips and shoulders turn in opposite directions and the straight leg slices the air."
+  },
+  "wackestKnife": {
+    "es": "Version extrema de la familia wacko rematada con la pierna estirada tipo cuchillo. El giro es amplio y la pierna recta sale muy extendida antes del aterrizaje.",
+    "en": "An extreme version of the wacko family finished with the leg straight, knife style. The spin is wide and the straight leg extends far before the landing."
+  },
+  "wackknife": {
+    "es": "Es una patada giratoria tipo wacko rematada con la pierna estirada y rigida, tipo cuchillo. Entras con paso, giras la cadera y la pierna recta corta alta en el aire.",
+    "en": "It is a wacko-style spinning kick finished with the leg straight and rigid, knife style. Step in, turn the hips and the straight leg slices high in the air."
+  },
+  "wackknifeDoubleleg": {
+    "es": "Wackknife en el que el remate se lanza con las dos piernas juntas. Tras el giro, ambas piernas salen extendidas al mismo tiempo antes de caer.",
+    "en": "A wackknife in which the finish is thrown with both legs together. After the spin, both legs extend at the same time before you land."
+  },
+  "wackknifeRound": {
+    "es": "Wackknife que termina en patada circular. El giro sube y, al final de la rotacion, la pierna de ataque remata con una patada redonda.",
+    "en": "A wackknife that ends in a round kick. The spin lifts and, at the end of the rotation, the attacking leg finishes with a roundhouse."
+  },
+  "wackknifeTurbo": {
+    "es": "Wackknife con impulso turbo: el giro se acelera para que la pierna recta salga mas alta y veloz. El empuje extra sostiene el remate hasta el aterrizaje.",
+    "en": "A wackknife with a turbo drive: the spin is accelerated so the straight leg comes out higher and faster. The extra drive sustains the finish through the landing."
+  },
+  "backside1080Shuriken": {
+    "es": "Backside 1080 rematado con un latigazo seco tipo shuriken. El cuerpo gira tres vueltas alejandose del lado de la patada y el golpe final sale con recamara corta.",
+    "en": "A backside 1080 finished with a sharp shuriken-style snap. The body turns three rotations away from the kicking side and the final strike fires from a short chamber."
+  },
+  "backside1260": {
+    "es": "Patada vertical de tres giros y medio (1260 grados) en direccion backside. El cuerpo gira alejandose del lado de la patada y encadena las rotaciones hasta el golpe.",
+    "en": "A vertical kick of three and a half rotations (1260 degrees) in the backside direction. The body turns away from the kicking side and chains the rotations through the strike."
+  },
+  "backside1260Feilong": {
+    "es": "Backside 1260 con remate feilong: tras los tres giros y medio, la patada se prolonga en un barrido de dragon inclinado atras. El giro cae en un arco descendente.",
+    "en": "A backside 1260 with a feilong finish: after the three and a half turns, the kick extends into a dragon sweep leaning back. The spin falls in a descending arc."
+  },
+  "backside1260FeilongKnife": {
+    "es": "Backside 1260 con remate feilong y pierna estirada. Tras el giro, el barrido de dragon se hace con la pierna rigida antes de aterrizar.",
+    "en": "A backside 1260 with a feilong finish and a straight leg. After the spin, the dragon sweep is done with the leg rigid before landing."
+  },
+  "backside1260Knife": {
+    "es": "Backside 1260 en el que el remate se lanza con la pierna estirada y rigida, tipo cuchillo. El giro de tres vueltas y media termina con la pierna recta cortando el aire.",
+    "en": "A backside 1260 in which the finish is thrown with the leg straight and rigid, knife style. The three-and-a-half turn spin ends with the straight leg slicing the air."
+  },
+  "backside1260Wackknife": {
+    "es": "Backside 1260 rematado con un wackknife: la pierna estirada del wackknife cierra el giro de tres vueltas y media. El cuerpo gira alejandose y la pierna recta sale extendida.",
+    "en": "A backside 1260 finished with a wackknife: the straight wackknife leg closes the three-and-a-half turn spin. The body turns away and the straight leg extends."
+  },
+  "backside1440": {
+    "es": "Patada vertical de cuatro giros completos (1440 grados) en direccion backside. El cuerpo gira alejandose del lado de la patada y encadena las cuatro vueltas con el torso apretado.",
+    "en": "A vertical kick of four full rotations (1440 degrees) in the backside direction. The body turns away from the kicking side and chains the four turns with a tight torso."
+  },
+  "backside1620": {
+    "es": "Patada vertical de cuatro giros y medio (1620 grados) en direccion backside. Es una de las rotaciones mas altas de la familia: el cuerpo encadena las vueltas alejandose y patea a mitad del giro.",
+    "en": "A vertical kick of four and a half rotations (1620 degrees) in the backside direction. It is one of the highest spins in the family: the body chains the turns away from the kicking side and strikes mid-spin."
+  },
+  "backside900Feilong": {
+    "es": "Backside 900 con remate feilong: tras los dos giros y medio, la patada se prolonga en un barrido de dragon inclinado atras.",
+    "en": "A backside 900 with a feilong finish: after the two and a half turns, the kick extends into a dragon sweep leaning back."
+  },
+  "backside900Gyro": {
+    "es": "Backside 900 al que se le suma un gyro: al aterrizar, el pie de apoyo sigue girando otros 360 grados. El giro alejado encadena la patada con una vuelta completa en el suelo.",
+    "en": "A backside 900 with a gyro added: on landing, the support foot keeps turning another 360 degrees. The away-facing spin chains the kick into a full turn on the ground."
+  },
+  "backside900Hyper": {
+    "es": "Backside 900 rematado con un gancho hiperextendido: la pierna de ataque alcanza muy alto y lejos antes de caer. El giro de dos vueltas y media desemboca en ese remate amplio.",
+    "en": "A backside 900 finished with a hyper-extended hook: the attacking leg reaches very high and far before landing. The two-and-a-half turn spin flows into that wide finish."
+  },
+  "backside900Knife": {
+    "es": "Backside 900 en el que el remate se lanza con la pierna estirada y rigida, tipo cuchillo. El giro alejado termina con la pierna recta cortando el aire.",
+    "en": "A backside 900 in which the finish is thrown with the leg straight and rigid, knife style. The away-facing spin ends with the straight leg slicing the air."
+  },
+  "backside900Sidekick": {
+    "es": "Backside 900 que termina con una patada lateral. Tras los dos giros y medio, la cadera se abre y el golpe sale con el borde del pie.",
+    "en": "A backside 900 that ends with a side kick. After the two and a half turns, the hip opens and the strike lands with the edge of the foot."
+  },
+  "cheat1080Double": {
+    "es": "Cheat 1080 en el que se lanzan dos patadas con la misma pierna dentro de las tres vueltas. El paso de cheat carga el salto y la rotacion reparte un golpe y luego el otro.",
+    "en": "A cheat 1080 in which two kicks are thrown with the same leg inside the three turns. The cheat step loads the jump and the rotation spreads one strike and then the other."
+  },
+  "cheat1080Shuriken": {
+    "es": "Cheat 1080 rematado con un latigazo seco tipo shuriken. Tras el paso de cheat, el giro de tres vueltas termina con recamara corta y golpe rapido.",
+    "en": "A cheat 1080 finished with a sharp shuriken-style snap. After the cheat step, the three-turn spin ends with a short chamber and a quick strike."
+  },
+  "cheat1260": {
+    "es": "Patada vertical de tres giros y medio (1260 grados) desde un paso de cheat. La pisada falsa carga la cadera y el salto encadena las rotaciones hasta el golpe.",
+    "en": "A vertical kick of three and a half rotations (1260 degrees) from a cheat step. The feinted plant loads the hips and the jump chains the rotations through the strike."
+  },
+  "cheat1260Double": {
+    "es": "Cheat 1260 en el que se lanzan dos patadas con la misma pierna dentro de las tres vueltas y media. El giro reparte el primer golpe y el segundo.",
+    "en": "A cheat 1260 in which two kicks are thrown with the same leg inside the three and a half turns. The spin spreads the first strike and the second."
+  },
+  "cheat1260Doubleleg": {
+    "es": "Cheat 1260 en el que el remate se lanza con las dos piernas juntas. Tras el giro, ambas piernas salen extendidas al mismo tiempo.",
+    "en": "A cheat 1260 in which the finish is thrown with both legs together. After the spin, both legs extend at the same time."
+  },
+  "cheat1260Hyper": {
+    "es": "Cheat 1260 rematado con un gancho hiperextendido. La pierna de ataque alcanza muy alto y lejos al final de las tres vueltas y media.",
+    "en": "A cheat 1260 finished with a hyper-extended hook. The attacking leg reaches very high and far at the end of the three and a half turns."
+  },
+  "cheat1440": {
+    "es": "Patada vertical de cuatro giros completos (1440 grados) desde un paso de cheat. El paso carga el salto y el giro encadena las cuatro vueltas con el torso firme.",
+    "en": "A vertical kick of four full rotations (1440 degrees) from a cheat step. The step loads the jump and the spin chains the four turns with a firm torso."
+  },
+  "cheat1620": {
+    "es": "Patada vertical de cuatro giros y medio (1620 grados) desde un paso de cheat. Es una de las rotaciones mas altas: el salto encadena las vueltas alejandose tras la pisada falsa.",
+    "en": "A vertical kick of four and a half rotations (1620 degrees) from a cheat step. It is one of the highest spins: the jump chains the turns away after the feinted plant."
+  },
+  "cheat900CrowdAwakener": {
+    "es": "Cheat 900 rematado al estilo Crowd Awakener: al final del giro, la patada se lanza alta y con un gesto amplio y vistoso. El paso de cheat carga el salto y el remate busca llamar al publico.",
+    "en": "A cheat 900 finished in Crowd Awakener style: at the end of the spin, the kick is thrown high with a wide, flashy gesture. The cheat step loads the jump and the finish aims to draw the crowd."
+  },
+  "cheat900CrowdAwakenerKnife": {
+    "es": "Cheat 900 con remate Crowd Awakener y pierna estirada. Tras el giro, la patada sale alta, amplia y con la pierna rigida tipo cuchillo.",
+    "en": "A cheat 900 with a Crowd Awakener finish and a straight leg. After the spin, the kick comes out high, wide and with a rigid knife-style leg."
+  },
+  "cheat900Double": {
+    "es": "Cheat 900 en el que se lanzan dos patadas con la misma pierna dentro de los dos giros y medio. El giro reparte el primer golpe y el segundo.",
+    "en": "A cheat 900 in which two kicks are thrown with the same leg inside the two and a half turns. The spin spreads the first strike and the second."
+  },
+  "cheat900DoubleHyper": {
+    "es": "Cheat 900 con dos patadas de la misma pierna en el que el remate es un gancho hiperextendido. La segunda patada alcanza muy alto y lejos antes de caer.",
+    "en": "A cheat 900 with two kicks from the same leg in which the finish is a hyper-extended hook. The second kick reaches very high and far before landing."
+  },
+  "cheat900DoubleKnife": {
+    "es": "Cheat 900 con dos patadas de la misma pierna en el que el remate se lanza con la pierna estirada y rigida. El segundo golpe corta el aire tipo cuchillo.",
+    "en": "A cheat 900 with two kicks from the same leg in which the finish is thrown with the leg straight and rigid. The second strike slices the air knife style."
+  },
+  "cheat900DoubleTaiFighter": {
+    "es": "Cheat 900 con dos patadas de la misma pierna rematado al estilo Tai Fighter, con un golpe de pierna potente tipo muay thai. El segundo golpe sale con la cadera rotada y la espinilla.",
+    "en": "A cheat 900 with two kicks from the same leg finished in Tai Fighter style, with a powerful Muay Thai-style leg strike. The second kick fires with the hip rotated and the shin."
+  },
+  "cheat900Doubleleg": {
+    "es": "Cheat 900 en el que el remate se lanza con las dos piernas juntas. Tras el giro, ambas piernas salen extendidas al mismo tiempo.",
+    "en": "A cheat 900 in which the finish is thrown with both legs together. After the spin, both legs extend at the same time."
+  },
+  "cheat900DoublelegTwist": {
+    "es": "Cheat 900 con remate de dos piernas al que se le anade un twist: el tronco y la cadera contrarrotan al extender las piernas. El giro desemboca en una tijera con torsion.",
+    "en": "A cheat 900 with a two-leg finish and a twist added: the trunk and hips counter-rotate as the legs extend. The spin flows into a twisting scissors."
+  },
+  "cheat900Feilong": {
+    "es": "Cheat 900 con remate feilong: tras los dos giros y medio, la patada se prolonga en un barrido de dragon inclinado atras.",
+    "en": "A cheat 900 with a feilong finish: after the two and a half turns, the kick extends into a dragon sweep leaning back."
+  },
+  "cheat900Gyro": {
+    "es": "Cheat 900 al que se le suma un gyro: al aterrizar, el pie de apoyo sigue girando otros 360 grados. El giro encadena la patada con una vuelta completa en el suelo.",
+    "en": "A cheat 900 with a gyro added: on landing, the support foot keeps turning another 360 degrees. The spin chains the kick into a full turn on the ground."
+  },
+  "cheat900Hyper": {
+    "es": "Cheat 900 rematado con un gancho hiperextendido. La pierna de ataque alcanza muy alto y lejos al final del giro.",
+    "en": "A cheat 900 finished with a hyper-extended hook. The attacking leg reaches very high and far at the end of the spin."
+  },
+  "cheat900Knife": {
+    "es": "Cheat 900 en el que el remate se lanza con la pierna estirada y rigida, tipo cuchillo. El giro termina con la pierna recta cortando el aire.",
+    "en": "A cheat 900 in which the finish is thrown with the leg straight and rigid, knife style. The spin ends with the straight leg slicing the air."
+  },
+  "cheat900Paraknife": {
+    "es": "Cheat 900 rematado con un paraknife: la pierna estirada y rigida cierra el giro con un latigazo de sacacorchos. El remate combina la trayectoria del parafuso con la pierna tipo cuchillo.",
+    "en": "A cheat 900 finished with a paraknife: the straight, rigid leg closes the spin with a screw-style whip. The finish combines the parafuso path with the knife-style leg."
+  },
+  "cheat900Rodeo": {
+    "es": "Cheat 900 rematado al estilo rodeo: el cuerpo se inclina atras y las piernas pasan en un arco descendente, como en un giro de jinete. El giro se echa atras al final de la rotacion.",
+    "en": "A cheat 900 finished in rodeo style: the body leans back and the legs pass in a descending arc, like a rider's spin. The spin lays back at the end of the rotation."
+  },
+  "cheat900Sidekick": {
+    "es": "Cheat 900 que termina con una patada lateral. Tras los dos giros y medio, la cadera se abre y el golpe sale con el borde del pie.",
+    "en": "A cheat 900 that ends with a side kick. After the two and a half turns, the hip opens and the strike lands with the edge of the foot."
+  },
+  "jackknife1080": {
+    "es": "Jackknife de tres giros completos (1080 grados): la tijera de piernas se mantiene mientras el cuerpo encadena las rotaciones. En el punto alto las piernas se abren y se cierran antes de caer.",
+    "en": "A jackknife of three full rotations (1080 degrees): the scissors legs are kept while the body chains the rotations. At the high point the legs open and close before landing."
+  },
+  "pop1260": {
+    "es": "Patada vertical de tres giros y medio (1260 grados) desde un salto recto. Saltas, encadenas las rotaciones con el torso apretado y pateas a mitad del giro.",
+    "en": "A vertical kick of three and a half rotations (1260 degrees) from a straight jump. You jump, chain the rotations with a tight torso and kick mid-spin."
+  },
+  "pop1440": {
+    "es": "Patada vertical de cuatro giros completos (1440 grados) desde un salto recto. El salto encadena las cuatro vueltas con el torso firme hasta soltar la patada en el aire.",
+    "en": "A vertical kick of four full rotations (1440 degrees) from a straight jump. The jump chains the four turns with a firm torso until you release the kick in the air."
+  },
+  "pop900Hyper": {
+    "es": "Pop 900 rematado con un gancho hiperextendido. La pierna de ataque alcanza muy alto y lejos al final de los dos giros y medio.",
+    "en": "A pop 900 finished with a hyper-extended hook. The attacking leg reaches very high and far at the end of the two and a half turns."
+  },
+  "swing1260": {
+    "es": "Patada vertical de tres giros y medio (1260 grados) con entrada de swing. El balanceo previo impulsa el salto y el giro encadena las rotaciones hasta la patada.",
+    "en": "A vertical kick of three and a half rotations (1260 degrees) with a swing entry. The prior swing drives the jump and the spin chains the rotations through the kick."
+  },
+  "swing900Knife": {
+    "es": "Swing 900 en el que el remate se lanza con la pierna estirada y rigida, tipo cuchillo. El giro con entrada de swing termina con la pierna recta cortando el aire.",
+    "en": "A swing 900 in which the finish is thrown with the leg straight and rigid, knife style. The swing-entry spin ends with the straight leg slicing the air."
+  },
+  "swing900Sidekick": {
+    "es": "Swing 900 que termina con una patada lateral. Tras los dos giros y medio, la cadera se abre y el golpe sale con el borde del pie.",
+    "en": "A swing 900 that ends with a side kick. After the two and a half turns, the hip opens and the strike lands with the edge of the foot."
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "caliRoll": {
+    "es": "Es una raiz con dos giros adicionales antes de aterrizar, también conocida como cheat 1080 twist. Se entra como en un cheat 720 twist y se sigue girando sobre el eje de la raiz hasta completar el tercer giro, con el pecho abierto y la mirada buscando el piso para caer de pie.",
+    "en": "It is a raiz with two extra spins before landing, also known as a cheat 1080 twist. Enter it like a cheat 720 twist and keep rotating on the raiz axis until the third spin is complete, with the chest open and the gaze hunting the floor to land on the feet."
+  },
+  "doubleleg": {
+    "es": "Es un flip lateral fuera de eje que despega con los dos pies y las piernas juntas y pikeadas. La cadera no sube por encima del pecho; las dos piernas barren juntas como un limpiaparabrisas y el cuerpo aterriza de pie tras completar la rotación.",
+    "en": "It is an off-axis outside flip that takes off from both feet with the legs together and piked. The hips never rise above the chest; both legs sweep together like a windshield wiper and the body lands on the feet after completing the rotation."
+  },
+  "eKick": {
+    "es": "Es un compasso (touchdown hook) al que se le agrega un switch antes del gancho. Se planta la mano como en un touchdown, se cambia la pierna en el aire y se remata con el gancho exterior, aterrizando sobre el pie de pateo.",
+    "en": "It is a compasso (touchdown hook) with a switch added before the hook. Plant the hand as in a touchdown, swap legs in the air and finish with the outside hook, landing on the kicking foot."
+  },
+  "gumbi": {
+    "es": "Es un cartwheel invertido con manos que sirve de transición. Se inclina el peso a un lado, se barre una pierna por detrás apoyando las manos y se continúa el impulso hasta caer como un scoot sobre una pierna, con la otra atrás para generar potencia.",
+    "en": "It is an inverted cartwheel with hands used as a transition. Lean the weight to one side, sweep a leg behind while planting the hands and carry the momentum until you land like a scoot on one leg, with the other behind to generate power."
+  },
+  "machine": {
+    "es": "Es un spyder apoyado con las manos. Se entra como una raiz, pero el cuerpo se aplana horizontal como en un butterfly kick mientras las manos tocan el piso para sostener el giro, y se aterriza de pie.",
+    "en": "It is a spyder with a hand support. Enter like a raiz, but the body flattens horizontally as in a butterfly kick while the hands touch the floor to carry the spin, and land on the feet."
+  },
+  "raiz": {
+    "es": "Es un gumbi sin manos, también descrito como un tornado inclinado hacia atrás. Se despega de un pie con la espalda arqueada, se barren las dos piernas hacia arriba y se aterriza sobre el pie de pateo con el pecho abierto.",
+    "en": "It is a gumbi with no hands, also described as a laid-back tornado. Take off from one foot with the back arched, sweep both legs up and land on the kicking foot with the chest open."
+  },
+  "raizIn": {
+    "es": "Es una raiz cuyo remate barre hacia dentro, con la pierna de pateo cerrando como un inside crescent. Se entra igual que la raiz, pero la patada se recoge hacia el centro del cuerpo y se cae sobre la misma base.",
+    "en": "It is a raiz whose finish sweeps inward, with the kicking leg closing like an inside crescent. Enter as a raiz, but the kick pulls toward the center of the body and you land on the same base."
+  },
+  "scrubba": {
+    "es": "Es un gumbi en el que las manos se apoyan en momentos distintos. Se barre una pierna detrás y se van plantando las manos de forma escalonada para completar el giro y caer de pie.",
+    "en": "It is a gumbi in which the hands plant at different moments. Sweep one leg behind and place the hands in a staggered way to complete the turn and land on the feet."
+  },
+  "sideflip": {
+    "es": "Es un mortal lateral. Se despega de un pie con el cuerpo de perfil, se eleva y gira sobre el eje lateral como un backflip de costado, y se aterriza de pie absorbiendo con las rodillas.",
+    "en": "It is a side somersault. Take off from one foot with the body sideways, rise and rotate on the lateral axis like a sideways backflip, and land on the feet absorbing with the knees."
+  },
+  "sideswipe": {
+    "es": "Es una raiz combinada con un 540, con la espalda arqueada y el cuerpo cerca de la horizontal. Se entra como una raiz alta, se barre una pierna arriba y la otra pasa por encima en un swipe, aterrizando bajo el cuerpo.",
+    "en": "It is a raiz combined with a 540, with the back arched and the body near horizontal. Enter like a high raiz, sweep one leg up and let the other pass over in a swipe, landing under the body."
+  },
+  "spyder": {
+    "es": "Es un truco que arranca como una raiz pero se aplana en el aire como un butterfly kick. Se despega de un pie, la cadera gira en horizontal y las piernas barren de costado, y se cae de pie.",
+    "en": "It is a trick that starts like a raiz but flattens in the air like a butterfly kick. Take off from one foot, let the hips turn horizontally and the legs sweep sideways, and land on the feet."
+  },
+  "touchdownRaiz": {
+    "es": "Es una raiz en la que la mano opuesta toca el piso al despegar. Se baja el pecho, se apoya la mano y se barre la pierna para pasar por encima, cayendo primero sobre la mano y luego sobre el pie.",
+    "en": "It is a raiz in which the opposite hand touches the floor on takeoff. Lower the chest, plant the hand and sweep the leg to pass over, landing on the hand first and then on the foot."
+  },
+  "brokenScrubba": {
+    "es": "Es un scrubba con un cambio adicional de mano que crea un quiebre visual y cae en hyper. Se apoya una mano, se cambia el apoyo y se completa el giro hasta aterrizar sobre una pierna con la otra recogida.",
+    "en": "It is a scrubba with an extra hand switch that creates a broken visual and lands in hyper. Plant one hand, change the support and complete the turn until landing on one leg with the other tucked."
+  },
+  "cheat720Twist": {
+    "es": "Es una raiz con un giro extra, también llamada raiz twist. Se entra con el impulso del cheat, se arquea la espalda y se suma un twist completo sobre el mismo eje antes de caer de pie.",
+    "en": "It is a raiz with an extra twist, also called a raiz twist. Enter with the cheat impulse, arch the back and add a full twist on the same axis before landing on the feet."
+  },
+  "crackknife": {
+    "es": "Es un wackknife sobre el eje de la raiz, también llamado sideswipe wackknife. Se entra como un sideswipe y se encadenan dos o tres patadas con poca rotación, aterrizando de costado.",
+    "en": "It is a wackknife on the raiz axis, also called a sideswipe wackknife. Enter like a sideswipe and chain two or three kicks with little rotation, landing sideways."
+  },
+  "doublelegRodeo": {
+    "es": "Es un doubleleg que arranca igual que la base, pero en el aire se arquea la espalda y se agarran las piernas como en un rodeo. Se completa la rotación hacia atrás y se cae de pie con el cuerpo extendido.",
+    "en": "It is a doubleleg that starts like the base move, but in the air the back arches and the legs are grabbed as in a rodeo. Complete the backward rotation and land on the feet with the body extended."
+  },
+  "doublelegSidekick": {
+    "es": "Es un doubleleg que remata con una patada lateral. Después del pike inicial se extiende una pierna hacia el costado y se aterriza sobre la otra tras el impacto.",
+    "en": "It is a doubleleg that finishes with a side kick. After the initial pike, extend one leg to the side and land on the other after the impact."
+  },
+  "doublelegTwist": {
+    "es": "Es un doubleleg con un twist extra que aterriza en complete. Se mantiene el pike de la base y, al final de la rotación, se suma el giro para caer de frente sobre los pies.",
+    "en": "It is a doubleleg with an extra twist that lands in complete. Keep the base pike and, at the end of the rotation, add the spin to land facing forward on the feet."
+  },
+  "doublelegXOut": {
+    "es": "Es un doubleleg que en el punto más alto abre las piernas en X y las vuelve a juntar. El spread frena un instante la rotación y da la sensación de flotar antes de caer de pie.",
+    "en": "It is a doubleleg that opens the legs in an X at the peak and snaps them back together. The spread briefly stalls the rotation and gives a floating feel before landing on the feet."
+  },
+  "envergado": {
+    "es": "Es una raiz que ejecuta un doubleleg en el punto más alto y cae con los dos pies. Se entra como una raiz y, en el aire, las piernas barren juntas y pikeadas antes de aterrizar de frente.",
+    "en": "It is a raiz that executes a doubleleg at the peak and lands on both feet. Enter like a raiz and, in the air, the legs sweep together and piked before landing facing forward."
+  },
+  "feilongSnapu": {
+    "es": "Es un cheat feilong invertido con un giro extra de 360 grados antes de aterrizar. Se entra con el outside crescent y el remate del feilong, y se agrega el twist al final para caer de pie.",
+    "en": "It is an inverted cheat feilong with an extra 360-degree twist before landing. Enter with the outside crescent and the feilong finish, and add the twist at the end to land on the feet."
+  },
+  "lotusCrowdAwakener": {
+    "es": "Es un lotus flip con una patada de split. Se entra con el swingthrough del lotus y, en el aire, se abre una patada lateral potente antes de caer de pie.",
+    "en": "It is a lotus flip with a split kick. Enter with the lotus swingthrough and, in the air, throw a powerful split kick before landing on the feet."
+  },
+  "lotusDoubleleg": {
+    "es": "Es un swingthrough que no llega a ir del todo hacia atrás, similar a un masterswing, pero con la pierna de dentro y un flip sobre el eje de la raiz. Se despega, las piernas barren en el aire y se aterriza de pie.",
+    "en": "It is a swingthrough that does not quite go backward, similar to a masterswing, but with the inside leg and a flip on the raiz axis. Take off, let the legs sweep in the air and land on the feet."
+  },
+  "lotusLateRound": {
+    "es": "Es un lotus que remata con un round kick tardío. Después del swingthrough se espera el momento final para lanzar la patada circular y caer de pie.",
+    "en": "It is a lotus that finishes with a late round kick. After the swingthrough, wait for the final moment to throw the round kick and land on the feet."
+  },
+  "lotusRodeo": {
+    "es": "Es un lotus con el arqueo y la toma de piernas del rodeo. Se entra con el swingthrough y, al girar, se agarran las piernas para caer de pie.",
+    "en": "It is a lotus with the arch and leg grab of a rodeo. Enter with the swingthrough and, while turning, grab the legs to land on the feet."
+  },
+  "lotusShuriken": {
+    "es": "Es un lotus que remata con un shuriken, es decir un outside crescent que aterriza sobre la pierna de pateo. Se completa el swingthrough y se lanza el crescent exterior antes de caer.",
+    "en": "It is a lotus that finishes with a shuriken, that is an outside crescent landing on the kicking leg. Complete the swingthrough and throw the outside crescent before landing."
+  },
+  "popSnapu": {
+    "es": "Es un snapu que despega con un pop de los dos pies. Se sale en frontside pop, se lanza el round kick y se suma el twist antes de caer de pie.",
+    "en": "It is a snapu that takes off from a two-foot pop. Leave in frontside pop, throw the round kick and add the twist before landing on the feet."
+  },
+  "popSwipeknife": {
+    "es": "Es un swipeknife que despega con un pop frontside. Se sale de los dos pies, se encadena el round y el hyper hook y se aterriza sobre una pierna.",
+    "en": "It is a swipeknife that takes off from a frontside pop. Leave from both feet, chain the round and the hyper hook and land on one leg."
+  },
+  "popTaiFighter": {
+    "es": "Es un pop que incluye una toma de pierna entre dos patadas, al estilo tai fighter. Se despega con los dos pies y se agarra la pierna en el aire para sostenerla y rematar la segunda patada.",
+    "en": "It is a pop that includes a leg grab between two kicks, in the tai fighter style. Take off from both feet and grab the leg in the air to hold it and finish the second kick."
+  },
+  "raizHyperhook": {
+    "es": "Es una raiz que aterriza en hyper con un gancho al final. Se entra como la raiz y, en la caída, se lanza el hook exterior para caer sobre el pie contrario.",
+    "en": "It is a raiz that lands in hyper with a hook at the end. Enter like a raiz and, on the way down, throw the outside hook to land on the opposite foot."
+  },
+  "raizReversao": {
+    "es": "Es una raiz con una reversao o scissor en el punto más alto. Se despega como la raiz y en el aire se cruzan las piernas en tijera antes de caer de pie.",
+    "en": "It is a raiz with a reversao or scissor at the peak. Take off like a raiz and, in the air, cross the legs in a scissor before landing on the feet."
+  },
+  "raizShurikane": {
+    "es": "Es una raiz que remata en shuriken, con un outside crescent que aterriza sobre la pierna de pateo. Se entra como la raiz y se lanza el remate exterior antes de caer.",
+    "en": "It is a raiz that finishes in a shuriken, with an outside crescent that lands on the kicking leg. Enter like a raiz and throw the outside finish before landing."
+  },
+  "reversao": {
+    "es": "Es un movimiento invertido de tijera, tomado de la capoeira. Se despega de un pie, se cruzan las piernas en el aire como una tijera abierta y se aterriza de pie con las caderas alineadas.",
+    "en": "It is an inverted scissor move taken from capoeira. Take off from one foot, cross the legs in the air like an open scissor and land on the feet with the hips aligned."
+  },
+  "rodeoSnapu": {
+    "es": "Es un snapu al que se le suma el arqueo y la toma de piernas del rodeo. Se lanza el round kick, se agarran las piernas mientras gira el cuerpo y se aterriza de pie.",
+    "en": "It is a snapu with the arch and leg grab of a rodeo added. Throw the round kick, grab the legs while the body twists and land on the feet."
+  },
+  "sailorGumbi": {
+    "es": "Es un sailor moon en el que la mano apoyada no deja el piso, como un gumbi con una sola mano. Se planta la mano y se empuja con ella para completar el giro y caer de pie.",
+    "en": "It is a sailor moon in which the planted hand never leaves the floor, like a gumbi with one hand. Plant the hand and push off it to complete the turn and land on the feet."
+  },
+  "sailorMoon": {
+    "es": "Es una raiz de una mano. Se planta la mano detrás al despegar, se empuja con ella, se barre la pierna y se cae primero sobre un pie con la espalda arqueada.",
+    "en": "It is a one-hand raiz. Plant the hand behind you on takeoff, push off it, sweep the leg and land on one foot first with the back arched."
+  },
+  "sideflipRound": {
+    "es": "Es un mortal lateral que remata con un round kick. Se despega de perfil y, al completar la rotación lateral, se lanza la patada circular antes de caer de pie.",
+    "en": "It is a side somersault that finishes with a round kick. Take off sideways and, as the lateral rotation completes, throw the round kick before landing on the feet."
+  },
+  "sideswipeLateRound": {
+    "es": "Es un sideswipe con un round kick tardío antes de aterrizar. Se barre como en el sideswipe y, en el último tramo de la caída, se lanza la patada circular.",
+    "en": "It is a sideswipe with a late round kick before landing. Sweep as in a sideswipe and, on the last part of the descent, throw the round kick."
+  },
+  "sideswipeLateSwipe": {
+    "es": "Es un sideswipe con un swipe tardío antes de aterrizar. Se completa el barrido inicial y, cerca del piso, se agrega un segundo swipe para cerrar el giro.",
+    "en": "It is a sideswipe with a late swipe before landing. Complete the initial sweep and, near the floor, add a second swipe to close the turn."
+  },
+  "snapu": {
+    "es": "Es un sideswipe con un twist adicional antes de aterrizar, también llamado snapuswipe. Se lanza el round kick, se gira el cuerpo y se cae de pie sobre una pierna.",
+    "en": "It is a sideswipe with an extra twist before landing, also called a snapuswipe. Throw the round kick, twist the body and land on one foot."
+  },
+  "spyderTwist": {
+    "es": "Es un spyder con un twist extra. Se entra con el aplanado horizontal del spyder y se suma el giro para caer de pie tras completar la rotación.",
+    "en": "It is a spyder with an extra twist. Enter with the horizontal flattening of the spyder and add the spin to land on the feet after completing the rotation."
+  },
+  "swipeknife": {
+    "es": "Es un jackknife fuera de eje: un inside kick seguido de un hyper hook exterior. Se encadenan las dos patadas en el aire y se aterriza sobre una pierna, con el cuerpo casi horizontal.",
+    "en": "It is an off-axis jackknife: an inside kick followed by an outside hyper hook. Chain the two kicks in the air and land on one leg, with the body near horizontal."
+  },
+  "touchdownRaizRoll": {
+    "es": "Es un touchdown raiz que sale rodando del aterrizaje. Se apoya la mano como en el touchdown y, al tocar el piso, el impulso se continúa en un roll para levantarse.",
+    "en": "It is a touchdown raiz that rolls out of the landing. Plant the hand as in a touchdown and, on touching the floor, carry the momentum into a roll to get up."
+  },
+  "touchdownRaizTwist": {
+    "es": "Es un touchdown raiz con un twist extra que aterriza en complete. Se apoya la mano al despegar y se suma el giro en el aire antes de caer de frente sobre los pies.",
+    "en": "It is a touchdown raiz with an extra twist that lands in complete. Plant the hand on takeoff and add the spin in the air before landing facing forward on the feet."
+  },
+  "touchdownSwipe": {
+    "es": "Es un touchdown raiz que barre y aterriza sobre la pierna contraria, también llamado touchdown sideswipe. Se apoya la mano, se pasa una pierna por encima en swipe y se cae sobre la otra.",
+    "en": "It is a touchdown raiz that swipes and lands on the opposite leg, also called a touchdown sideswipe. Plant the hand, pass one leg over in a swipe and land on the other."
+  },
+  "cheat720TwistBroken": {
+    "es": "Es un cheat 720 twist que cierra con un quiebre o broken, normalmente cayendo en hyper o semi. Se frena la rotación de golpe al final para marcar el corte antes de aterrizar.",
+    "en": "It is a cheat 720 twist that closes with a broken, usually landing in hyper or semi. The rotation is stopped sharply at the end to mark the break before landing."
+  },
+  "cheat720TwistHyperhook": {
+    "es": "Es un cheat 720 twist que cae en hyper con un gancho al final, también llamado laid back cheat 1080. Se entra como el cheat 720 twist y se lanza el hook exterior en la caída.",
+    "en": "It is a cheat 720 twist that lands in hyper with a hook at the end, also called a laid-back cheat 1080. Enter like a cheat 720 twist and throw the outside hook on the way down."
+  },
+  "cheat720TwistRound": {
+    "es": "Es un cheat 720 twist que remata con un round kick antes de aterrizar. Se completa el twist y, en el último tramo, se lanza la patada circular.",
+    "en": "It is a cheat 720 twist that finishes with a round kick before landing. Complete the twist and, on the last part, throw the round kick."
+  },
+  "doublelegTwistRound": {
+    "es": "Es un doubleleg twist que remata con un round kick antes de aterrizar. Se mantiene el pike y el twist, y se agrega la patada circular en la caída.",
+    "en": "It is a doubleleg twist that finishes with a round kick before landing. Keep the pike and the twist, and add the round kick on the descent."
+  },
+  "doublelegXOutHyperhook": {
+    "es": "Es un doubleleg x-out que cae en hyper con un gancho. Después de abrir las piernas en X, se cierra el remate con el hook exterior al aterrizar.",
+    "en": "It is a doubleleg x-out that lands in hyper with a hook. After opening the legs in an X, close the finish with the outside hook on landing."
+  },
+  "envergadoTwist": {
+    "es": "Es un envergado con un twist extra. Se entra como la raiz, se ejecuta el doubleleg en el aire y se suma el giro antes de caer de pie.",
+    "en": "It is an envergado with an extra twist. Enter like a raiz, execute the doubleleg in the air and add the spin before landing on the feet."
+  },
+  "lotusDoublelegHyperhook": {
+    "es": "Es un lotus doubleleg que aterriza en hyperhook, también llamado lotus switchblade. Se completa el swingthrough con pike y se lanza el hook exterior al caer.",
+    "en": "It is a lotus doubleleg that lands in a hyperhook, also called a lotus switchblade. Complete the swingthrough with the pike and throw the outside hook on landing."
+  },
+  "raizHyperhookTurbo": {
+    "es": "Es un raiz hyperhook que aterriza en turbo, es decir con los dos pies a la vez. Se entra como la raiz y se lanza el hook exterior para caer con ambas plantas al frente.",
+    "en": "It is a raiz hyperhook that lands in turbo, meaning on both feet at once. Enter like a raiz and throw the outside hook to land with both soles facing front."
+  },
+  "sailorMoonDoubleleg": {
+    "es": "Es un sailor moon que ejecuta un doubleleg en el punto más alto. Se planta la mano y se empuja, y en el aire las piernas barren juntas y pikeadas antes de aterrizar.",
+    "en": "It is a sailor moon that executes a doubleleg at the peak. Plant and push off the hand, and in the air the legs sweep together and piked before landing."
+  },
+  "sailorMoonHawkeye": {
+    "es": "Es un sailor moon que remata con un hawkeye, una salida de pierna cruzada propia de esta familia. Se completa el giro sobre la mano y se busca el remate cruzado antes de aterrizar.",
+    "en": "It is a sailor moon that finishes with a hawkeye, a crossed-leg exit of this family. Complete the turn over the hand and look for the crossed finish before landing."
+  },
+  "sailorMoonHyperhook": {
+    "es": "Es un sailor moon que cae en hyper con un gancho. Se empuja con la mano, se barre la pierna y se lanza el hook exterior al aterrizar.",
+    "en": "It is a sailor moon that lands in hyper with a hook. Push off the hand, sweep the leg and throw the outside hook on landing."
+  },
+  "sailorMoonLateRound": {
+    "es": "Es un sailor moon con un round kick tardío. Se completa el giro sobre la mano y, en el último tramo de la caída, se lanza la patada circular.",
+    "en": "It is a sailor moon with a late round kick. Complete the turn over the hand and, on the last part of the descent, throw the round kick."
+  },
+  "sailorMoonReversao": {
+    "es": "Es un sailor moon con una reversao o tijera en el punto más alto. Se apoya la mano al despegar y en el aire se cruzan las piernas antes de caer de pie.",
+    "en": "It is a sailor moon with a reversao or scissor at the peak. Plant the hand on takeoff and, in the air, cross the legs before landing on the feet."
+  },
+  "sailorMoonRound": {
+    "es": "Es un sailor moon que remata con un round kick. Se empuja con la mano al despegar y, al completar el giro, se lanza la patada circular antes de caer.",
+    "en": "It is a sailor moon that finishes with a round kick. Push off the hand on takeoff and, as the turn completes, throw the round kick before landing."
+  },
+  "sailorMoonSnapu": {
+    "es": "Es un sailor moon que se convierte en snapu con un twist adicional. Se apoya la mano, se barre la pierna y se suma el giro antes de caer de pie.",
+    "en": "It is a sailor moon that turns into a snapu with an extra twist. Plant the hand, sweep the leg and add the spin before landing on the feet."
+  },
+  "sailorMoonTwist": {
+    "es": "Es un sailor moon con un twist extra. Se completa el giro sobre la mano y se suma otro giro en el aire antes de aterrizar de frente.",
+    "en": "It is a sailor moon with an extra twist. Complete the turn over the hand and add another spin in the air before landing facing forward."
+  },
+  "sailorMoonWackknife": {
+    "es": "Es un sailor moon que remata con un wackknife, con dos o tres patadas de poca rotación. Se apoya la mano y se encadenan las patadas antes de caer de costado.",
+    "en": "It is a sailor moon that finishes with a wackknife, with two or three kicks of little rotation. Plant the hand and chain the kicks before landing sideways."
+  },
+  "snapuDoubleleg": {
+    "es": "Es un snapu que remata con un doubleleg, con las piernas pikeadas al final. Se lanza el round kick, se gira y se cierra con el barrido doble antes de aterrizar.",
+    "en": "It is a snapu that finishes with a doubleleg, with the legs piked at the end. Throw the round kick, twist and close with the double sweep before landing."
+  },
+  "snapuHyperhook": {
+    "es": "Es un snapu que cae en hyper con un gancho. Se lanza el round kick, se suma el twist y se remata con el hook exterior al aterrizar.",
+    "en": "It is a snapu that lands in hyper with a hook. Throw the round kick, add the twist and finish with the outside hook on landing."
+  },
+  "snapuRound": {
+    "es": "Es un snapu que remata con un round kick. Después del barrido inicial se lanza la patada circular antes de caer de pie.",
+    "en": "It is a snapu that finishes with a round kick. After the initial sweep, throw the round kick before landing on the feet."
+  },
+  "snapuTwist": {
+    "es": "Es un snapu con un twist adicional al final. Se lanza el round kick, se gira el cuerpo y se cae de pie tras completar el giro extra.",
+    "en": "It is a snapu with an extra twist at the end. Throw the round kick, twist the body and land on the feet after completing the extra spin."
+  },
+  "spyderTwistRound": {
+    "es": "Es un spyder twist que remata con un round kick. Se aplana el cuerpo como en el spyder, se suma el giro y se lanza la patada circular antes de caer.",
+    "en": "It is a spyder twist that finishes with a round kick. Flatten the body as in a spyder, add the spin and throw the round kick before landing."
+  },
+  "swipeknifeTurbo": {
+    "es": "Es un swipeknife que aterriza en turbo, con los dos pies a la vez. Se encadenan el round y el hyper hook y se cae de frente sobre ambas plantas.",
+    "en": "It is a swipeknife that lands in turbo, on both feet at once. Chain the round and the hyper hook and land facing front on both soles."
+  },
+  "doubleDoubleleg": {
+    "es": "Es un doubleleg con dos rotaciones completas antes de aterrizar. Se despega de los dos pies con pike y se mantiene el barrido durante los dos giros hasta caer de pie.",
+    "en": "It is a doubleleg with two full rotations before landing. Take off from both feet in a pike and keep the sweep through both turns until landing on the feet."
+  },
+  "doubleSideflip": {
+    "es": "Es un mortal lateral con dos rotaciones completas. Se despega de perfil y se mantiene el giro lateral apretado durante los dos ciclos hasta caer de pie.",
+    "en": "It is a side somersault with two full rotations. Take off sideways and hold the tight lateral spin through both cycles until landing on the feet."
+  },
+  "doublelegDoubleTwist": {
+    "es": "Es un doubleleg con dos twists antes de aterrizar. Se mantiene el pike de la base y se suman dos giros completos sobre el eje antes de caer de pie.",
+    "en": "It is a doubleleg with two twists before landing. Keep the base pike and add two full spins on the axis before landing on the feet."
+  },
+  "envergadoDoubleTwist": {
+    "es": "Es un envergado con dos twists extra antes de aterrizar. Se entra como la raiz, se hace el doubleleg en el aire y se suman dos giros completos hasta caer de pie.",
+    "en": "It is an envergado with two extra twists before landing. Enter like a raiz, do the doubleleg in the air and add two full spins until landing on the feet."
+  },
+  "sailorMoonDoublelegTwist": {
+    "es": "Es un sailor moon doubleleg con un twist extra. Se apoya la mano, se ejecuta el doubleleg en el aire y se suma el giro antes de aterrizar de pie.",
+    "en": "It is a sailor moon doubleleg with an extra twist. Plant the hand, execute the doubleleg in the air and add the spin before landing on the feet."
+  }
+}

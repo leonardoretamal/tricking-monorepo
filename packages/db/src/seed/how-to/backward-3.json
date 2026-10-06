@@ -1,0 +1,322 @@
+{
+  "fullUpTwist": {
+    "es": "Entra con un paso de impulso y sube en un mortal atrás estirado. Inicia el giro de 360 grados hacia arriba en el punto más alto del salto y aterriza de pie.",
+    "en": "Take a setup step and rise in a laid-out backflip. Start the 360-degree twist upward at the highest point of the jump and land on the feet."
+  },
+  "fullWackknife": {
+    "es": "Entra con un paso y sube en un mortal atrás con giro completo de 360 grados. Cierra el cuerpo en pike tipo navaja antes de abrir y aterrizar de pie.",
+    "en": "Take a step and rise in a backflip with a full 360-degree twist. Fold the body in a jackknife pike before opening and landing on the feet."
+  },
+  "fullWackknifeHyperhook": {
+    "es": "Entra con un paso y ejecuta un mortal atrás con giro completo y cuerpo en pike tipo navaja. Al final arquea la espalda y engancha una pierna en hiperextensión antes de aterrizar de pie.",
+    "en": "Take a step and perform a full-twisting backflip with the body folded in a jackknife pike. At the end arch the back and hook one leg in hyperextension before landing on the feet."
+  },
+  "fullWackknifeRound": {
+    "es": "Entra con un paso y sube en un mortal atrás con giro completo y cuerpo en pike tipo navaja. Remata con una patada circular extendida y aterriza de pie.",
+    "en": "Take a step and rise in a full-twisting backflip with the body folded in a jackknife pike. Finish with an extended round kick and land on the feet."
+  },
+  "fullInBackOutHyper": {
+    "es": "Entra con paso o pique y sube en un doble mortal atrás. El primer giro lleva un full de 360 grados, el segundo sale recto, y al final arqueas la espalda antes de aterrizar de pie.",
+    "en": "Take a step or punch and rise in a double backflip. The first rotation carries a 360-degree full, the second comes out straight, and you arch the back at the end before landing on the feet."
+  },
+  "gainerArabianGrabCrowdAwakener": {
+    "es": "Entra de espaldas con un paso y un gainer, agrega medio giro para caer de frente en un arabian y recoge una pierna con la mano. Cierra con el gesto de despertar a la tribuna y aterriza de pie.",
+    "en": "Enter backward with a step and a gainer, add a half twist to come down facing forward in an arabian and grab one leg with the hand. Finish with the crowd-awakener gesture and land on the feet."
+  },
+  "gainerFigure4Sidekick": {
+    "es": "Entra con un paso y ejecuta un gainer. En el aire dobla una pierna en figura de cuatro y lanza la otra en patada lateral antes de aterrizar de pie.",
+    "en": "Take a step and perform a gainer. In the air fold one leg in a figure four and throw the other in a side kick before landing on the feet."
+  },
+  "gainerLateRound": {
+    "es": "Entra con un paso y sube en un gainer. Retrasa la patada circular hasta el final del giro y aterriza de pie.",
+    "en": "Take a step and rise in a gainer. Delay the round kick until the end of the rotation and land on the feet."
+  },
+  "gainerScissorLateRound": {
+    "es": "Entra con un paso y sube en un gainer. Cruza y abre las piernas en tijera y agrega una patada circular tardía antes de aterrizar de pie.",
+    "en": "Take a step and rise in a gainer. Cross and open the legs in a scissor and add a late round kick before landing on the feet."
+  },
+  "gainerScissorRound": {
+    "es": "Entra con un paso y sube en un gainer. Cruza y abre las piernas en tijera y remata con una patada circular antes de aterrizar de pie.",
+    "en": "Take a step and rise in a gainer. Cross and open the legs in a scissor and finish with a round kick before landing on the feet."
+  },
+  "gainerScissorTwist": {
+    "es": "Entra con un paso y sube en un gainer con las piernas en tijera. Suma un giro sobre el eje del cuerpo y aterriza de pie.",
+    "en": "Take a step and rise in a gainer with the legs scissoring. Add a twist around the body axis and land on the feet."
+  },
+  "gainerSwitch": {
+    "es": "Entra con un paso y sube en un gainer. En el aire cambia las piernas para aterrizar sobre la pierna opuesta a la de impulso.",
+    "en": "Take a step and rise in a gainer. In the air switch the legs to land on the leg opposite the takeoff."
+  },
+  "gainerSwitchHalf": {
+    "es": "Entra con un paso y sube en un gainer cambiando las piernas. Suma media vuelta y aterriza sobre la pierna opuesta mirando hacia atrás.",
+    "en": "Take a step and rise in a gainer while switching the legs. Add a half twist and land on the opposite leg facing backward."
+  },
+  "gainerSwitchHawkeye": {
+    "es": "Entra con un paso y sube en un gainer cambiando las piernas. Extiende una pierna en patada tipo hawkeye y aterriza sobre la pierna opuesta.",
+    "en": "Take a step and rise in a gainer while switching the legs. Extend one leg in a hawkeye-style kick and land on the opposite leg."
+  },
+  "gainerSwitchHyperhook": {
+    "es": "Entra con un paso y sube en un gainer cambiando las piernas. Al final arquea la espalda y engancha una pierna en hiperextensión antes de aterrizar sobre la pierna opuesta.",
+    "en": "Take a step and rise in a gainer while switching the legs. At the end arch the back and hook one leg in hyperextension before landing on the opposite leg."
+  },
+  "gainerWackknife": {
+    "es": "Entra con un paso y sube en un gainer. Cierra el cuerpo en pike tipo navaja en el aire y ábrelo para aterrizar de pie.",
+    "en": "Take a step and rise in a gainer. Fold the body in a jackknife pike in the air and open it to land on the feet."
+  },
+  "kickFullDoubleleg": {
+    "es": "Entra con una patada de impulso y sube en un mortal atrás con giro completo de 360 grados. Recoge las dos piernas juntas y aterriza de pie.",
+    "en": "Enter with a kick setup and rise in a backflip with a full 360-degree twist. Tuck both legs together and land on the feet."
+  },
+  "rocketboiFullDoublelegRocketboi": {
+    "es": "Entra con un paso y sube en un mortal atrás con giro completo y las dos piernas recogidas al estilo rocketboi. Abre al final para aterrizar de pie.",
+    "en": "Take a step and rise in a full-twisting backflip with both legs tucked in a rocketboi shape. Open at the end to land on the feet."
+  },
+  "rodeoBackflipFullDown": {
+    "es": "Entra con un paso y sube en un rodeo, un mortal atrás con giro desviado. Suma un full de 360 grados y baja la rotación hasta aterrizar de pie.",
+    "en": "Take a step and rise in a rodeo, an off-axis backflip. Add a full 360-degree twist and bring the rotation down to land on the feet."
+  },
+  "rodeoBoxcutter": {
+    "es": "Entra con un paso y sube en un rodeo. En el aire corta con una pierna extendida en forma de boxcutter y aterriza de pie.",
+    "en": "Take a step and rise in a rodeo. In the air slice with one extended leg in a boxcutter shape and land on the feet."
+  },
+  "rodeoCorkscrew": {
+    "es": "Entra con un paso y sube en un rodeo con giro desviado tipo corkscrew. Mantén la cadera abierta y aterriza de pie.",
+    "en": "Take a step and rise in a rodeo with an off-axis corkscrew twist. Keep the hip open and land on the feet."
+  },
+  "rodeoCorkscrewShurikenCutter": {
+    "es": "Entra con un paso y sube en un rodeo tipo corkscrew. Abre brazos y piernas como estrella ninja y corta el aire antes de aterrizar de pie.",
+    "en": "Take a step and rise in a corkscrew rodeo. Spread the arms and legs like a ninja star and cut the air before landing on the feet."
+  },
+  "rodeoCorkscrewSnapu": {
+    "es": "Entra con un paso y sube en un rodeo tipo corkscrew. Da un latigazo con las piernas al estilo snapu y aterriza de pie.",
+    "en": "Take a step and rise in a corkscrew rodeo. Snap the legs in a snapu motion and land on the feet."
+  },
+  "rodeoCorkscrewTwist": {
+    "es": "Entra con un paso y sube en un rodeo tipo corkscrew. Suma un giro extra sobre el eje y aterriza de pie.",
+    "en": "Take a step and rise in a corkscrew rodeo. Add an extra twist around the axis and land on the feet."
+  },
+  "rodeoFull": {
+    "es": "Entra con un paso y sube en un rodeo, un mortal atrás con giro desviado. Completa un full de 360 grados y aterriza de pie.",
+    "en": "Take a step and rise in a rodeo, an off-axis backflip. Complete a full 360-degree twist and land on the feet."
+  },
+  "rodeoFullDoubleleg": {
+    "es": "Entra con un paso y sube en un rodeo con full de 360 grados. Recoge las dos piernas juntas y aterriza de pie.",
+    "en": "Take a step and rise in a full rodeo. Tuck both legs together and land on the feet."
+  },
+  "rodeoFullHyperhook": {
+    "es": "Entra con un paso y sube en un rodeo con full de 360 grados. Al final arquea la espalda y engancha una pierna en hiperextensión antes de aterrizar de pie.",
+    "en": "Take a step and rise in a full rodeo. At the end arch the back and hook one leg in hyperextension before landing on the feet."
+  },
+  "rodeoFullRound": {
+    "es": "Entra con un paso y sube en un rodeo con full de 360 grados. Remata con una patada circular extendida y aterriza de pie.",
+    "en": "Take a step and rise in a full rodeo. Finish with an extended round kick and land on the feet."
+  },
+  "rodeoFullShuriken": {
+    "es": "Entra con un paso y sube en un rodeo con full de 360 grados. Abre brazos y piernas como estrella ninja y aterriza de pie.",
+    "en": "Take a step and rise in a full rodeo. Spread the arms and legs like a ninja star and land on the feet."
+  },
+  "rodeoFullSnapu": {
+    "es": "Entra con un paso y sube en un rodeo con full de 360 grados. Da un latigazo con las piernas al estilo snapu y aterriza de pie.",
+    "en": "Take a step and rise in a full rodeo. Snap the legs in a snapu motion and land on the feet."
+  },
+  "rodeoFullWackknife": {
+    "es": "Entra con un paso y sube en un rodeo con full de 360 grados. Cierra el cuerpo en pike tipo navaja y ábrelo para aterrizar de pie.",
+    "en": "Take a step and rise in a full rodeo. Fold the body in a jackknife pike and open it to land on the feet."
+  },
+  "rodeoGainerSwitch": {
+    "es": "Entra con un paso y combina un rodeo con un gainer. En el aire cambia las piernas y aterriza sobre la pierna opuesta.",
+    "en": "Take a step and combine a rodeo with a gainer. In the air switch the legs and land on the opposite leg."
+  },
+  "doubleArabian": {
+    "es": "Entra de espaldas y sube en un doble mortal de frente. En la segunda rotación agrega media vuelta para salir y aterrizar de espaldas.",
+    "en": "Enter backward and rise in a double front flip. On the second rotation add a half twist to come out and land facing backward."
+  },
+  "doubleBackTuck": {
+    "es": "Entra con un paso o pique y sube en un doble mortal atrás bien agrupado. Mantén las rodillas al pecho y aterriza de pie.",
+    "en": "Take a step or punch and rise in a tightly tucked double backflip. Keep the knees to the chest and land on the feet."
+  },
+  "doubleCorkscrew": {
+    "es": "Entra con un paso y sube en un corkscrew con dos giros desviados. Mantén el eje inclinado y aterriza de pie.",
+    "en": "Take a step and rise in a corkscrew with two off-axis twists. Keep the axis tilted and land on the feet."
+  },
+  "doubleCorkscrewDoubleleg": {
+    "es": "Entra con un paso y sube en un doble corkscrew. Recoge las dos piernas juntas y aterriza de pie.",
+    "en": "Take a step and rise in a double corkscrew. Tuck both legs together and land on the feet."
+  },
+  "doubleCorkscrewDoublelegTwist": {
+    "es": "Entra con un paso y sube en un doble corkscrew con las dos piernas recogidas. Suma un giro extra sobre el eje y aterriza de pie.",
+    "en": "Take a step and rise in a double corkscrew with both legs tucked. Add an extra twist around the axis and land on the feet."
+  },
+  "doubleCorkscrewRound": {
+    "es": "Entra con un paso y sube en un doble corkscrew. Remata con una patada circular extendida y aterriza de pie.",
+    "en": "Take a step and rise in a double corkscrew. Finish with an extended round kick and land on the feet."
+  },
+  "doubleCorkscrewShuriken": {
+    "es": "Entra con un paso y sube en un doble corkscrew. Abre brazos y piernas como estrella ninja y aterriza de pie.",
+    "en": "Take a step and rise in a double corkscrew. Spread the arms and legs like a ninja star and land on the feet."
+  },
+  "doubleCorkscrewShurikenCutter": {
+    "es": "Entra con un paso y sube en un doble corkscrew. Abre brazos y piernas como estrella ninja y corta el aire antes de aterrizar de pie.",
+    "en": "Take a step and rise in a double corkscrew. Spread the arms and legs like a ninja star and cut the air before landing on the feet."
+  },
+  "doubleCorkscrewSnapu": {
+    "es": "Entra con un paso y sube en un doble corkscrew. Da un latigazo con las piernas al estilo snapu y aterriza de pie.",
+    "en": "Take a step and rise in a double corkscrew. Snap the legs in a snapu motion and land on the feet."
+  },
+  "doubleCorkscrewWackknife": {
+    "es": "Entra con un paso y sube en un doble corkscrew. Cierra el cuerpo en pike tipo navaja y ábrelo para aterrizar de pie.",
+    "en": "Take a step and rise in a double corkscrew. Fold the body in a jackknife pike and open it to land on the feet."
+  },
+  "doubleFull": {
+    "es": "Entra con un paso y sube en un mortal atrás estirado. Completa dos giros de 360 grados, es decir 720 en total, y aterriza de pie.",
+    "en": "Take a step and rise in a laid-out backflip. Complete two 360-degree twists, 720 in total, and land on the feet."
+  },
+  "doubleFullCrowdAwakener": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Cierra con el gesto de despertar a la tribuna y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full. Finish with the crowd-awakener gesture and land on the feet."
+  },
+  "doubleFullDoubleleg": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Recoge las dos piernas juntas y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full. Tuck both legs together and land on the feet."
+  },
+  "doubleFullDoublelegDoubleTwist": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados con las dos piernas recogidas. Suma dos giros extra sobre el eje y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full with both legs tucked. Add two extra twists around the axis and land on the feet."
+  },
+  "doubleFullDoublelegTwist": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados con las dos piernas recogidas. Suma un giro extra sobre el eje y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full with both legs tucked. Add an extra twist around the axis and land on the feet."
+  },
+  "doubleFullHyperhook": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Al final arquea la espalda y engancha una pierna en hiperextensión antes de aterrizar de pie.",
+    "en": "Take a step and rise in a 720-degree double full. At the end arch the back and hook one leg in hyperextension before landing on the feet."
+  },
+  "doubleFullMcDirty": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados con entrada inclinada tipo McDirty. Mantén el eje bajo y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full with a dipped McDirty entry. Keep the axis low and land on the feet."
+  },
+  "doubleFullRound": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Remata con una patada circular extendida y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full. Finish with an extended round kick and land on the feet."
+  },
+  "doubleFullShurikane": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Abre brazos y piernas como estrella ninja y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full. Spread the arms and legs like a ninja star and land on the feet."
+  },
+  "doubleFullShurikenHyperhook": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Abre brazos y piernas como estrella ninja y al final engancha una pierna en hiperextensión antes de aterrizar de pie.",
+    "en": "Take a step and rise in a 720-degree double full. Spread the arms and legs like a ninja star and hook one leg in hyperextension at the end before landing on the feet."
+  },
+  "doubleFullShurikenHyperhookTurbo": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados con apertura de estrella ninja. Acelera el giro final tipo turbo y engancha una pierna en hiperextensión antes de aterrizar de pie.",
+    "en": "Take a step and rise in a 720-degree double full with a ninja-star spread. Accelerate the final turbo twist and hook one leg in hyperextension before landing on the feet."
+  },
+  "doubleFullSnapu": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Da un latigazo con las piernas al estilo snapu y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full. Snap the legs in a snapu motion and land on the feet."
+  },
+  "doubleFullSnapuTwist": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados con latigazo de piernas tipo snapu. Suma un giro extra y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full with a snapu leg snap. Add an extra twist and land on the feet."
+  },
+  "doubleFullSwipe": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Barre una pierna extendida al frente en un swipe y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full. Sweep one extended leg forward in a swipe and land on the feet."
+  },
+  "doubleFullSwipeknife": {
+    "es": "Entra con un paso y sube en un doble full de 720 grados. Combina el barrido del swipe con un pike tipo navaja y aterriza de pie.",
+    "en": "Take a step and rise in a 720-degree double full. Combine the swipe sweep with a jackknife pike and land on the feet."
+  },
+  "doubleFullInBackOut": {
+    "es": "Entra con paso o pique y sube en un doble mortal atrás. El primer giro lleva dos fulles de 720 grados y el segundo sale recto antes de aterrizar de pie.",
+    "en": "Take a step or punch and rise in a double backflip. The first rotation carries two fulls, 720 degrees, and the second comes out straight before landing on the feet."
+  },
+  "doubleGainer": {
+    "es": "Entra de espaldas con un paso y ejecuta dos gainers seguidos. Mantén la rotación continua y aterriza de pie absorbiendo con las rodillas.",
+    "en": "Enter backward with a step and perform two gainers in a row. Keep the rotation continuous and land on the feet, absorbing with the knees."
+  },
+  "doubleLayout": {
+    "es": "Entra con un paso y sube en un doble mortal atrás completamente estirado. Mantén el cuerpo recto y aterriza de pie.",
+    "en": "Take a step and rise in a fully laid-out double backflip. Keep the body straight and land on the feet."
+  },
+  "doubleNike": {
+    "es": "Entra con un paso y sube en un doble mortal atrás. Forma una figura tipo nike con las piernas en cada rotación y aterriza de pie.",
+    "en": "Take a step and rise in a double backflip. Shape a nike-style figure with the legs on each rotation and land on the feet."
+  },
+  "dragonflyDoubleCorkscrew": {
+    "es": "Entra con un paso y sube en un doble corkscrew. Extiende una pierna como libélula durante el giro y aterriza de pie.",
+    "en": "Take a step and rise in a double corkscrew. Extend one leg like a dragonfly through the twist and land on the feet."
+  },
+  "dragonflyDoubleCorkscrewHyperhook": {
+    "es": "Entra con un paso y sube en un doble corkscrew con una pierna extendida como libélula. Al final arquea la espalda y engancha una pierna en hiperextensión antes de aterrizar de pie.",
+    "en": "Take a step and rise in a double corkscrew with one leg extended like a dragonfly. At the end arch the back and hook one leg in hyperextension before landing on the feet."
+  },
+  "dragonflyDoubleCorkscrewRound": {
+    "es": "Entra con un paso y sube en un doble corkscrew con una pierna extendida como libélula. Remata con una patada circular y aterriza de pie.",
+    "en": "Take a step and rise in a double corkscrew with one leg extended like a dragonfly. Finish with a round kick and land on the feet."
+  },
+  "dragonflyTripleCorkscrew": {
+    "es": "Entra con un paso y sube en un triple corkscrew. Extiende una pierna como libélula durante los tres giros y aterriza de pie.",
+    "en": "Take a step and rise in a triple corkscrew. Extend one leg like a dragonfly through the three twists and land on the feet."
+  },
+  "fullDoublelegDoubleTwist": {
+    "es": "Entra con un paso y sube en un mortal atrás con giro completo de 360 grados y las dos piernas recogidas. Suma dos giros extra sobre el eje y aterriza de pie.",
+    "en": "Take a step and rise in a full-twisting backflip with both legs tucked. Add two extra twists around the axis and land on the feet."
+  },
+  "fullFeilongDouble": {
+    "es": "Entra con un paso y sube en un full con forma de feilong, con una pierna extendida como dragón. Completa el giro doble y aterriza de pie.",
+    "en": "Take a step and rise in a full shaped like a feilong, with one leg extended like a dragon. Complete the double rotation and land on the feet."
+  },
+  "gainerTriple": {
+    "es": "Entra con un paso y encadena tres gainers seguidos. Mantén el impulso y la rotación continua y aterriza de pie absorbiendo con las rodillas.",
+    "en": "Take a step and chain three gainers in a row. Keep the momentum and continuous rotation and land on the feet, absorbing with the knees."
+  },
+  "kickDoubleFull": {
+    "es": "Entra con una patada de impulso y sube en un doble full de 720 grados. Mantén el cuerpo estirado y aterriza de pie.",
+    "en": "Enter with a kick setup and rise in a 720-degree double full. Keep the body laid out and land on the feet."
+  },
+  "peterPanDoubleCorkscrew": {
+    "es": "Entra con un paso y sube en un doble corkscrew al estilo Peter Pan. Mantén una postura erguida y despreocupada durante el giro y aterriza de pie.",
+    "en": "Take a step and rise in a double corkscrew in a Peter Pan style. Keep an upright, carefree posture through the twist and land on the feet."
+  },
+  "quadCorkscrew": {
+    "es": "Entra con un paso y sube en un corkscrew con cuatro giros desviados. Mantén el eje inclinado y la velocidad de rotación hasta aterrizar de pie.",
+    "en": "Take a step and rise in a corkscrew with four off-axis twists. Keep the axis tilted and the spin fast until landing on the feet."
+  },
+  "quadFull": {
+    "es": "Entra con un paso y sube en un mortal atrás estirado. Completa cuatro giros de 360 grados, es decir 1440 en total, y aterriza de pie.",
+    "en": "Take a step and rise in a laid-out backflip. Complete four 360-degree twists, 1440 in total, and land on the feet."
+  },
+  "tripleCorkscrew": {
+    "es": "Entra con un paso y sube en un corkscrew con tres giros desviados. Mantén el eje inclinado y aterriza de pie.",
+    "en": "Take a step and rise in a corkscrew with three off-axis twists. Keep the axis tilted and land on the feet."
+  },
+  "tripleCorkscrewRound": {
+    "es": "Entra con un paso y sube en un triple corkscrew. Remata con una patada circular extendida y aterriza de pie.",
+    "en": "Take a step and rise in a triple corkscrew. Finish with an extended round kick and land on the feet."
+  },
+  "tripleFlashKickFull": {
+    "es": "Entra con un pique y lanza una patada rápida hacia arriba tipo flash kick. Encadena un mortal atrás con giro completo de 360 grados y aterriza de pie.",
+    "en": "Enter with a punch and throw a fast upward kick in a flash-kick shape. Chain a backflip with a full 360-degree twist and land on the feet."
+  },
+  "tripleFull": {
+    "es": "Entra con un paso y sube en un mortal atrás estirado. Completa tres giros de 360 grados, es decir 1080 en total, y aterriza de pie.",
+    "en": "Take a step and rise in a laid-out backflip. Complete three 360-degree twists, 1080 in total, and land on the feet."
+  },
+  "tripleFullHyper": {
+    "es": "Entra con un paso y sube en un triple full de 1080 grados. Arquea la espalda en la parte final del giro y aterriza de pie.",
+    "en": "Take a step and rise in a 1080-degree triple full. Arch the back in the final part of the twist and land on the feet."
+  },
+  "tripleFullHyperhook": {
+    "es": "Entra con un paso y sube en un triple full de 1080 grados. Al final arquea la espalda y engancha una pierna en hiperextensión antes de aterrizar de pie.",
+    "en": "Take a step and rise in a 1080-degree triple full. At the end arch the back and hook one leg in hyperextension before landing on the feet."
+  },
+  "tripleFullRound": {
+    "es": "Entra con un paso y sube en un triple full de 1080 grados. Remata con una patada circular extendida y aterriza de pie.",
+    "en": "Take a step and rise in a 1080-degree triple full. Finish with an extended round kick and land on the feet."
+  },
+  "tripleFullShurikenHyperhook": {
+    "es": "Entra con un paso y sube en un triple full de 1080 grados. Abre brazos y piernas como estrella ninja y engancha una pierna en hiperextensión antes de aterrizar de pie.",
+    "en": "Take a step and rise in a 1080-degree triple full. Spread the arms and legs like a ninja star and hook one leg in hyperextension before landing on the feet."
+  }
+}

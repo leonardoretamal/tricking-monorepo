@@ -101,8 +101,10 @@ export const tricks = pgTable(
     section: text('section'),
     loopkicksSlug: text('loopkicks_slug').unique(),
     // Descripcion tecnica publicada por Loopkicks en su ficha de truco (texto de ellos).
-    // Se muestra citada, con credito y enlace a su ficha; no se traduce.
+    // Se muestra citada, con credito y enlace a su ficha. La traduccion al espanol es una
+    // cortesia del proyecto y vive en `loopkicksNotesEs`; el original queda intacto.
     loopkicksNotes: text('loopkicks_notes'),
+    loopkicksNotesEs: text('loopkicks_notes_es'),
     prereqs: text('prereqs').array().notNull().default([]),
     nextTricks: text('next_tricks').array().notNull().default([]),
     source: text('source').notNull().default('trickingapi'),

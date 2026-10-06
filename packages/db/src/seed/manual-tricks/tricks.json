@@ -1,0 +1,134 @@
+[
+  {
+    "id": "handstand",
+    "name": "Handstand",
+    "section": "inside",
+    "difficulty": 0,
+    "category": "GROUNDWORK",
+    "description": "An inverted balance held on the hands with the body stacked over the shoulders.",
+    "descriptionEs": "Un equilibrio invertido sobre las manos con el cuerpo alineado sobre los hombros.",
+    "howTo": "Place the hands on the floor shoulder-width apart, kick one leg up and bring the other to meet it, then stack the hips, ribs and shoulders in a straight line. Push through the shoulders, keep the core tight and the gaze between the hands; come down by pivoting the feet to one side.",
+    "howToEs": "Apoya las manos en el piso al ancho de los hombros, patea una pierna hacia arriba y junta la otra, luego alinea caderas, costillas y hombros en una línea recta. Empuja con los hombros, mantén el abdomen firme y la mirada entre las manos; baja girando los pies hacia un costado."
+  },
+  {
+    "id": "forwardRoll",
+    "name": "Forward Roll",
+    "section": "forward",
+    "difficulty": 0,
+    "category": "GROUNDWORK",
+    "description": "A basic forward roll over one shoulder that carries momentum from feet to feet.",
+    "descriptionEs": "Una voltereta hacia adelante sobre un hombro que traslada el impulso de pies a pies.",
+    "howTo": "From a squat, tuck the chin, place the hands on the floor and roll over one shoulder and across the back. Keep the knees tight to the chest and the spine rounded; finish by planting the feet and standing up in one motion.",
+    "howToEs": "Desde una cuclilla, esconde el mentón, apoya las manos en el piso y gira sobre un hombro y a lo largo de la espalda. Mantén las rodillas pegadas al pecho y la columna redondeada; termina apoyando los pies y levantándote en un solo movimiento."
+  },
+  {
+    "id": "backwardRoll",
+    "name": "Backward Roll",
+    "section": "backward",
+    "difficulty": 0,
+    "category": "GROUNDWORK",
+    "description": "A backward roll that travels over the shoulders and finishes on the feet.",
+    "descriptionEs": "Una voltereta hacia atrás que pasa por los hombros y termina de pie.",
+    "howTo": "From a squat, tuck the chin to the chest, place the hands beside the head with the palms up and roll backward over the shoulders. Keep the knees tucked and push the floor with the hands to bring the hips over; land on the balls of the feet and stand up.",
+    "howToEs": "Desde una cuclilla, lleva el mentón al pecho, apoya las manos al lado de la cabeza con las palmas hacia arriba y gira hacia atrás sobre los hombros. Mantén las rodillas recogidas y empuja el piso con las manos para pasar las caderas; aterriza sobre la punta de los pies y levántate."
+  },
+  {
+    "id": "bridge",
+    "name": "Bridge",
+    "section": "backward",
+    "difficulty": 0,
+    "category": "GROUNDWORK",
+    "description": "A backbend that supports the body on the hands and feet with the hips lifted.",
+    "descriptionEs": "Un puente que sostiene el cuerpo sobre manos y pies con las caderas elevadas.",
+    "howTo": "Lie on the back, bend the knees with the feet close to the hips and place the hands by the ears with the fingers pointing toward the shoulders. Press into the hands and feet, lift the hips and open the chest; hold the arch with the arms and legs slightly bent, then lower with control.",
+    "howToEs": "Acuéstate boca arriba, flexiona las rodillas con los pies cerca de las caderas y apoya las manos junto a las orejas con los dedos hacia los hombros. Empuja con manos y pies, eleva las caderas y abre el pecho; sostén el arco con brazos y piernas algo flexionados y baja con control."
+  },
+  {
+    "id": "headstand",
+    "name": "Headstand",
+    "section": "inside",
+    "difficulty": 0,
+    "category": "GROUNDWORK",
+    "description": "An inverted balance supported on the head and hands.",
+    "descriptionEs": "Un equilibrio invertido sostenido sobre la cabeza y las manos.",
+    "howTo": "Place the head on the floor and the hands beside it to form a stable base, then walk the feet in and lift the hips. Stack the hips over the shoulders and the shoulders over the base, keep the core tight and the gaze forward; come down by lowering the legs together.",
+    "howToEs": "Apoya la cabeza en el piso y las manos a los lados para formar una base estable, luego acerca los pies y eleva las caderas. Alinea las caderas sobre los hombros y los hombros sobre la base, mantén el abdomen firme y la mirada al frente; baja descendiendo las piernas juntas."
+  },
+  {
+    "id": "kipUp",
+    "name": "Kip Up",
+    "section": "forward",
+    "difficulty": 0,
+    "category": "GROUNDWORK",
+    "description": "A floor move that returns to standing from the back with a snap of the hips.",
+    "descriptionEs": "Un movimiento de piso que vuelve al parado desde la espalda con un latigazo de caderas.",
+    "howTo": "Lie on the back with the knees tucked and the feet flat, then rock back to load and swing the legs forward as the hands push the floor. Snap the hips up, plant the feet under the body and rise with the chest; finish standing with the weight centered.",
+    "howToEs": "Acuéstate boca arriba con las rodillas recogidas y los pies apoyados, luego méce hacia atrás para cargar e impulsa las piernas hacia adelante mientras las manos empujan el piso. Lanza las caderas hacia arriba, apoya los pies debajo del cuerpo y sube con el pecho; termina de pie con el peso centrado."
+  },
+  {
+    "id": "frontWalkover",
+    "name": "Front Walkover",
+    "section": "forward",
+    "difficulty": 1,
+    "category": "GROUNDWORK",
+    "description": "A walkover that passes through a handstand and lands on one foot.",
+    "descriptionEs": "Un walkover que pasa por el parado de manos y cae sobre un pie.",
+    "howTo": "Step forward, place the hands on the floor and kick the lead leg over the top while the hips stay open. Pass through a brief handstand with the legs split, then bring the second leg down to land on one foot and stand tall.",
+    "howToEs": "Da un paso al frente, apoya las manos en el piso y patea la pierna guía por encima mientras las caderas se abren. Pasa por un parado de manos breve con las piernas abiertas, luego baja la segunda pierna para aterrizar sobre un pie y quédate de pie."
+  },
+  {
+    "id": "backWalkover",
+    "name": "Back Walkover",
+    "section": "backward",
+    "difficulty": 1,
+    "category": "GROUNDWORK",
+    "description": "A backward walkover from one foot through a handstand to one foot.",
+    "descriptionEs": "Un walkover hacia atrás que va de un pie, pasa por el parado de manos y cae en un pie.",
+    "howTo": "From one foot, reach the hands back to the floor and kick the free leg over while the hips lift. Pass through a handstand with the legs split, bring the first leg down to land and finish standing with the chest up.",
+    "howToEs": "Desde un pie, lleva las manos hacia atrás al piso y patea la pierna libre por encima mientras las caderas suben. Pasa por un parado de manos con las piernas abiertas, baja la primera pierna para aterrizar y termina de pie con el pecho arriba."
+  },
+  {
+    "id": "macaco",
+    "name": "Macaco",
+    "section": "backward",
+    "difficulty": 1,
+    "category": "GROUNDWORK",
+    "description": "A dynamic backward move that jumps from feet to feet over one hand.",
+    "descriptionEs": "Un movimiento dinámico hacia atrás que salta de pies a pies apoyado en una mano.",
+    "howTo": "Squat with the weight on one leg, plant one hand behind you and swing the free leg back as the hips lift. Push off the planted foot, pass over the support hand with the legs tucked and land on both feet with the chest up.",
+    "howToEs": "Haz una cuclilla con el peso en una pierna, apoya una mano detrás de ti y balancea la pierna libre hacia atrás mientras las caderas suben. Impúlsate con el pie apoyado, pasa sobre la mano de apoyo con las piernas recogidas y aterriza con ambos pies y el pecho arriba."
+  },
+  {
+    "id": "headspring",
+    "name": "Headspring",
+    "section": "forward",
+    "difficulty": 1,
+    "category": "GROUNDWORK",
+    "description": "A spring from the head and hands that lands on the feet.",
+    "descriptionEs": "Un resorte desde la cabeza y las manos que aterriza sobre los pies.",
+    "howTo": "Place the head and hands on the floor forming a triangle, then drive the hips up and forward as the legs swing. Push hard with the hands to leave the floor, keep the body compact in the air and land on both feet with the knees soft.",
+    "howToEs": "Apoya la cabeza y las manos en el piso formando un triángulo, luego impulsa las caderas hacia arriba y adelante mientras las piernas se balancean. Empuja con fuerza las manos para despegar del piso, mantén el cuerpo compacto en el aire y aterriza con ambos pies y las rodillas suaves."
+  },
+  {
+    "id": "donkeyKick",
+    "name": "Donkey Kick",
+    "section": "vertical-kicks",
+    "difficulty": 1,
+    "category": "VERT_KICK",
+    "description": "A two-foot kick where the body pivots over the hands and lands on the feet.",
+    "descriptionEs": "Una patada a dos pies en la que el cuerpo gira sobre las manos y cae sobre los pies.",
+    "howTo": "Place both hands on the floor shoulder-width apart, kick both legs up and over the head in a tight tuck. Keep the arms straight and the core engaged as the hips rise; land on both feet with the knees bent to absorb.",
+    "howToEs": "Apoya ambas manos en el piso al ancho de los hombros, patea las dos piernas hacia arriba y por encima de la cabeza con un recogido cerrado. Mantén los brazos extendidos y el abdomen activo mientras las caderas suben; aterriza con ambos pies y las rodillas flexionadas para absorber."
+  },
+  {
+    "id": "hookKick",
+    "name": "Hook Kick",
+    "section": "vertical-kicks",
+    "difficulty": 1,
+    "category": "VERT_KICK",
+    "description": "A vertical kick that arcs one leg over the head in a hooking path.",
+    "descriptionEs": "Una patada vertical en la que una pierna traza un arco por encima de la cabeza.",
+    "howTo": "Plant the support foot, swing the kicking leg up past the head with the knee slightly bent and hook it across in a wide arc. Keep the hips open and the support leg strong; land back on the support foot with the chest up.",
+    "howToEs": "Apoya el pie de sostén, balancea la pierna que patea por encima de la cabeza con la rodilla algo flexionada y traza un gancho en arco amplio. Mantén las caderas abiertas y la pierna de sostén firme; aterriza de nuevo sobre el pie de sostén con el pecho arriba."
+  }
+]

@@ -29,7 +29,10 @@
     "db:loopkicks-notes": "tsx src/seed/loopkicks-notes.ts",
     "db:tutorials": "tsx src/seed/tutorials.ts",
     "db:videos": "tsx src/seed/videos.ts",
-    "db:gaze-tips": "tsx src/seed/gaze-tips.ts"
+    "db:gaze-tips": "tsx src/seed/gaze-tips.ts",
+    "db:manual-tricks": "tsx src/seed/manual-tricks.ts",
+    "db:translate-loopkicks": "tsx src/seed/translate-loopkicks.ts",
+    "db:loopkicks-notes-es": "tsx src/seed/apply-loopkicks-notes-es.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

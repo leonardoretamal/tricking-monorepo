@@ -79,6 +79,7 @@ export interface TrickDetail extends TrickListItem {
   howTo: string | null;
   howToEs: string | null;
   loopkicksNotes: string | null;
+  loopkicksNotesEs: string | null;
   kojoTechniques: KojoTechnique[];
   prereqs: TrickRelated[];
   nextTricks: TrickRelated[];
@@ -206,6 +207,7 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
       section: tricks.section,
       loopkicksSlug: tricks.loopkicksSlug,
       loopkicksNotes: tricks.loopkicksNotes,
+      loopkicksNotesEs: tricks.loopkicksNotesEs,
     })
     .from(tricks)
     .where(and(eq(tricks.id, id), isNull(tricks.deletedAt)))
@@ -279,6 +281,7 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     section: trick.section,
     loopkicksSlug: trick.loopkicksSlug,
     loopkicksNotes: trick.loopkicksNotes,
+    loopkicksNotesEs: trick.loopkicksNotesEs,
     kojoTechniques: kojoRows,
     categories: map.get(trick.id) ?? [],
     prereqs,

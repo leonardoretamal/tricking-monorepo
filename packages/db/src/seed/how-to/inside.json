@@ -1,0 +1,494 @@
+{
+  "aerial": {
+    "es": "Es un cartwheel sin manos. Sales con un paso lateral, pateas la pierna de ataque hacia arriba mientras el tronco se inclina y aterrizas sobre una pierna.",
+    "en": "It is a cartwheel without hands. Step out to the side, kick the lead leg up as the torso tilts, and land on one leg."
+  },
+  "butterflyKick": {
+    "es": "Es una patada de mariposa. Das un paso de impulso, saltas y llevas el cuerpo horizontal mientras las piernas se cruzan y se abren en el aire; aterrizas de pie.",
+    "en": "It is a butterfly kick. Take a setup step, jump and send the body horizontal while the legs cross and open in the air; land on your feet."
+  },
+  "cartwheel": {
+    "es": "Es una rueda lateral. Apoyas una mano y luego la otra mientras el cuerpo pasa de lado con las piernas abiertas, y cae de pie.",
+    "en": "It is a sideways cartwheel. Plant one hand and then the other as the body passes to the side with the legs split, and come down on your feet."
+  },
+  "oneHandedCartwheel": {
+    "es": "Es una rueda con una sola mano. Apoyas una mano, giras el cuerpo de lado con las piernas abiertas y pasas sin tocar el suelo con la otra mano antes de caer de pie.",
+    "en": "It is a one-handed cartwheel. Plant a single hand, turn the body to the side with the legs split and pass through without touching down with the other hand before landing on your feet."
+  },
+  "palmkick": {
+    "es": "Es una patada con apoyo de palma. Te lanzas al frente, plantas la palma en el suelo y barres una pierna hacia arriba y adelante mientras el cuerpo gira; aterrizas de pie.",
+    "en": "It is a palm-plant kick. Dive forward, plant the palm on the floor and sweep one leg up and forward as the body turns; land on your feet."
+  },
+  "roundoff": {
+    "es": "Es una rueda que cierra con chasquido. Apoyas las manos, juntas las piernas en el aire y caes de pie mirando al frente.",
+    "en": "It is a cartwheel that snaps shut. Plant the hands, bring the legs together in the air and land on both feet facing forward."
+  },
+  "scoot": {
+    "es": "Es una entrada de manos al frente. Te lanzas, apoyas las manos y pasas las dos piernas juntas por delante para caer de pie.",
+    "en": "It is a forward hand-plant entry. Dive in, plant the hands and sweep both legs through together to land on your feet."
+  },
+  "aerialHelicoptero": {
+    "es": "Es un aerial con giro horizontal. Tras el paso lateral el cuerpo rota de lado con las piernas extendidas como una hélice y aterrizas sobre una pierna controlando el giro.",
+    "en": "It is an aerial with a horizontal spin. After the side step the body rotates sideways with the legs extended like a rotor and you land on one leg controlling the turn."
+  },
+  "aerialHook": {
+    "es": "Es un aerial que remata en patada de gancho. Sales de lado, pateas la pierna de ataque arriba y la traes en gancho mientras giras, cayendo de pie.",
+    "en": "It is an aerial that finishes with a hook kick. Step out to the side, kick the lead leg up and hook it across as you turn, landing on your feet."
+  },
+  "aerialMega": {
+    "es": "Es un aerial que cae en postura mega. Tras el paso lateral y la patada de ataque, aterrizas en una postura baja y amplia con la pierna estirada al frente.",
+    "en": "It is an aerial that lands in a mega stance. After the side step and lead kick, you land in a low, wide stance with the front leg extended."
+  },
+  "aerialScissor": {
+    "es": "Es un aerial con cruce de tijera. Sales de lado y en el aire cruzas y vuelves a abrir las piernas antes de caer sobre una pierna.",
+    "en": "It is an aerial with a scissor switch. Step out to the side and cross then reopen the legs in the air before landing on one leg."
+  },
+  "aerialSidewinder": {
+    "es": "Es un aerial de costado. Sobre el paso lateral el cuerpo gira de lado y la pierna de ataque barre en arco amplio; aterrizas sobre una pierna.",
+    "en": "It is a sideways aerial. On the side step the body turns to the side and the lead leg sweeps through a wide arc; you land on one leg."
+  },
+  "aerialTwist": {
+    "es": "Es un aerial con giro de 360 grados. Tras el paso lateral saltas y giras el cuerpo hacia atrás mientras pateas, y aterrizas sobre una pierna mirando al frente.",
+    "en": "It is an aerial with a 360-degree twist. After the side step, jump and turn the body backward as you kick, and land on one leg facing forward."
+  },
+  "blasterscoot": {
+    "es": "Es un scoot potente de manga larga. Te lanzas con más velocidad, plantas las manos y pasas las piernas juntas con un empuje explosivo, cayendo de pie.",
+    "en": "It is a powerful, longer-range scoot. You dive in with more speed, plant the hands and sweep both legs through with an explosive push, landing on your feet."
+  },
+  "butterKnife": {
+    "es": "Es una variante de mariposa con las piernas cerradas. En el salto el cuerpo pasa horizontal y las piernas viajan juntas y extendidas antes de caer de pie.",
+    "en": "It is a butterfly variant with the legs closed. In the jump the body passes horizontal and the legs travel together and extended before landing on your feet."
+  },
+  "butterflyKickHelicoptero": {
+    "es": "Es una patada de mariposa con giro horizontal. Tras el cruce de piernas el cuerpo rota de lado como una hélice y aterrizas de pie.",
+    "en": "It is a butterfly kick with a horizontal spin. After the leg cross the body rotates sideways like a rotor and you land on your feet."
+  },
+  "butterflyKickLateHook": {
+    "es": "Es una patada de mariposa con gancho tardío. Sales en mariposa y al final del vuelo agregas un gancho con la pierna libre, cayendo de pie.",
+    "en": "It is a butterfly kick with a late hook. Launch the butterfly and add a hook with the free leg at the end of the flight, landing on your feet."
+  },
+  "butterflyKickScissor": {
+    "es": "Es una patada de mariposa con tijera. En el aire las piernas se cruzan y se intercambian antes de abrirse para caer de pie.",
+    "en": "It is a butterfly kick with a scissor. In the air the legs cross and swap before opening to land on your feet."
+  },
+  "butterflyKickSwitch": {
+    "es": "Es una patada de mariposa con cambio de piernas. El cruce se resuelve cambiando la pierna de ataque y aterrizas de pie con la otra adelante.",
+    "en": "It is a butterfly kick with a leg switch. The cross resolves by swapping the striking leg and you land on your feet with the other leg forward."
+  },
+  "butterflyKickTeradaGrab": {
+    "es": "Es una patada de mariposa con agarre terada. En el vuelo llevas una mano hacia la pierna para hacer el agarre mientras el cuerpo pasa horizontal, y caes de pie.",
+    "en": "It is a butterfly kick with a Terada grab. In flight you reach one hand to the leg to make the grab as the body passes horizontal, and land on your feet."
+  },
+  "butterflyTwist": {
+    "es": "Es un giro atrás de 360 grados sobre un pie. Tras el paso de impulso cargas en la pierna de giro, giras cadera y hombros juntos hacia atrás y aterrizas sobre el mismo pie.",
+    "en": "It is a 360-degree backward twist on one foot. After the setup step you load the pivot leg, turn the hips and shoulders together backward and land on the same foot."
+  },
+  "cartwheelLateSwipe": {
+    "es": "Es una rueda con barrido tardío. Apoyas las manos en rueda y al final agregas un barrido de pierna con giro antes de caer de pie.",
+    "en": "It is a cartwheel with a late swipe. Plant the hands in a cartwheel and add a leg swipe with a turn at the end before landing on your feet."
+  },
+  "cartwheelTwist": {
+    "es": "Es una rueda con giro. Sobre el apoyo de manos el cuerpo rota hacia atrás y cae de pie mirando al frente.",
+    "en": "It is a cartwheel with a twist. On the hand plant the body rotates backward and lands on the feet facing forward."
+  },
+  "grandMasterScissor": {
+    "es": "Es un cruce de tijera avanzado. Con más altura y control, las piernas se cruzan y se intercambian en el aire antes de caer de pie.",
+    "en": "It is an advanced scissor. With more height and control, the legs cross and swap in the air before landing on your feet."
+  },
+  "grandMasterScoot": {
+    "es": "Es un scoot avanzado. Te lanzas con más potencia, plantas las manos y pasas las piernas juntas con un empuje fuerte, cayendo de pie.",
+    "en": "It is an advanced scoot. Dive in with more power, plant the hands and sweep both legs through with a strong push, landing on your feet."
+  },
+  "grandMasterSwipe": {
+    "es": "Es un barrido avanzado con apoyo de manos. Plantas las manos, barres una pierna por encima con giro amplio de cadera y caes de pie.",
+    "en": "It is an advanced swipe with a hand plant. Plant the hands, sweep one leg over with a wide hip turn and land on your feet."
+  },
+  "helicoptero": {
+    "es": "Es un giro horizontal. Saltas y el cuerpo rota de lado con las piernas extendidas como una hélice, aterrizando de pie.",
+    "en": "It is a horizontal spin. You jump and the body rotates sideways with the legs extended like a rotor, landing on your feet."
+  },
+  "helicopteroEKick": {
+    "es": "Es un giro horizontal que remata en patada E. Durante la rotación de lado, la pierna libre lanza una patada en arco antes de caer de pie.",
+    "en": "It is a horizontal spin that finishes with an E kick. During the sideways rotation the free leg throws an arcing kick before landing on your feet."
+  },
+  "inward360DiveRoll": {
+    "es": "Es un rollo de buceo con giro interno de 360 grados. Te lanzas al frente girando hacia dentro, pasas por el hombro y ruedas para volver de pie.",
+    "en": "It is a dive roll with an inward 360-degree turn. Dive forward turning inward, pass over the shoulder and roll back to your feet."
+  },
+  "kaydem": {
+    "es": "Es un truco de entrada con giro y patada. Tomas impulso, saltas girando el cuerpo mientras una pierna barre en el aire y aterrizas de pie.",
+    "en": "It is an entry move with a turn and a kick. Take momentum, jump turning the body as one leg sweeps in the air and land on your feet."
+  },
+  "macaron": {
+    "es": "Es un truco con giro y patada de composición propia. Das el paso de impulso, giras el cuerpo y barres la pierna en el aire antes de caer de pie.",
+    "en": "It is a move with a twist and a kick of combined form. Take the setup step, turn the body and sweep the leg in the air before landing on your feet."
+  },
+  "masterscoot": {
+    "es": "Es un scoot de nivel master. Te lanzas con más recorrido y potencia, plantas las manos y pasas las piernas juntas para caer de pie controlando el impulso.",
+    "en": "It is a master-level scoot. Dive in with more distance and power, plant the hands and sweep both legs through to land on your feet controlling the momentum."
+  },
+  "masterswipe": {
+    "es": "Es un barrido de nivel master. Plantas las manos, barres la pierna con giro amplio y controlas el aterrizaje de pie.",
+    "en": "It is a master-level swipe. Plant the hands, sweep the leg with a wide turn and control the landing on your feet."
+  },
+  "masterswipeHelicoptero": {
+    "es": "Es un masterswipe que remata con giro horizontal. Tras el barrido con apoyo de manos el cuerpo rota de lado como una hélice y cae de pie.",
+    "en": "It is a masterswipe that finishes with a horizontal spin. After the hand-plant swipe the body rotates sideways like a rotor and lands on your feet."
+  },
+  "palmkickKyro": {
+    "es": "Es una patada con apoyo de palma en variante kyro. Plantas la palma y barres la pierna con un giro marcado de cadera antes de caer de pie.",
+    "en": "It is a palm-plant kick in the kyro variation. Plant the palm and sweep the leg with a marked hip turn before landing on your feet."
+  },
+  "palmkickScissorSwipe": {
+    "es": "Es una patada de palma con tijera y barrido. Apoyas la palma, cruzas las piernas y barres una por encima con giro antes de caer de pie.",
+    "en": "It is a palm kick with a scissor and swipe. Plant the palm, cross the legs and sweep one over with a turn before landing on your feet."
+  },
+  "scootHyper": {
+    "es": "Es un scoot que cae en hyper. Tras apoyar las manos y pasar las piernas juntas, aterrizas con la pierna estirada y el cuerpo inclinado en postura hyper.",
+    "en": "It is a scoot that lands in hyper. After the hand plant and leg sweep, you land with the leg extended and the body leaning in a hyper stance."
+  },
+  "scootTwist": {
+    "es": "Es un scoot con giro. Apoyas las manos, pasas las piernas juntas y agregas un giro del cuerpo antes de caer de pie.",
+    "en": "It is a scoot with a twist. Plant the hands, sweep both legs through and add a body turn before landing on your feet."
+  },
+  "sidewinder": {
+    "es": "Es un truco de costado. Tras el impulso el cuerpo gira de lado y una pierna barre en arco amplio, cayendo sobre una pierna.",
+    "en": "It is a sideways move. After the setup the body turns to the side and one leg sweeps in a wide arc, landing on one leg."
+  },
+  "sketchdownRaiz": {
+    "es": "Es una raiz con entrada sketchdown. Tomas el impulso con un paso bailado, apoyas las manos y giras el cuerpo barriendo las piernas antes de caer de pie.",
+    "en": "It is a raiz with a sketchdown entry. Take momentum with a danced step, plant the hands and turn the body sweeping the legs before landing on your feet."
+  },
+  "takFull": {
+    "es": "Es un takuraba con giro completo. Tomas impulso, barres la pierna en arco con un giro de 360 grados y aterrizas de pie.",
+    "en": "It is a takuraba with a full twist. Take momentum, sweep the leg in an arc with a 360-degree turn and land on your feet."
+  },
+  "takuraba": {
+    "es": "Es un truco de barrido con giro. Das el paso de impulso, barres una pierna en arco amplio mientras el cuerpo gira y caes de pie.",
+    "en": "It is a sweeping move with a turn. Take the setup step, sweep one leg in a wide arc as the body turns and land on your feet."
+  },
+  "takurabaScissor": {
+    "es": "Es un takuraba con tijera. Durante el barrido con giro las piernas se cruzan y se intercambian antes de caer de pie.",
+    "en": "It is a takuraba with a scissor. During the sweeping turn the legs cross and swap before landing on your feet."
+  },
+  "touchdownAerialTwist": {
+    "es": "Es un aerial twist que cae en touchdown. Tras el giro de 360 grados en el aire aterrizas de rodillas con una pierna atrás y la mirada al frente.",
+    "en": "It is an aerial twist that lands in a touchdown. After the 360-degree air turn you land on one knee with a leg back and the gaze forward."
+  },
+  "touchdownTakFull": {
+    "es": "Es un tak full que cae en touchdown. Tras el barrido con giro completo aterrizas de rodillas en postura de touchdown.",
+    "en": "It is a tak full that lands in a touchdown. After the sweeping full twist you land on one knee in a touchdown pose."
+  },
+  "touchdownWrapFull": {
+    "es": "Es un wrap full que cae en touchdown. Tras el giro completo con los brazos recogidos aterrizas de rodillas en postura de touchdown.",
+    "en": "It is a wrap full that lands in a touchdown. After the full turn with the arms wrapped you land on one knee in a touchdown pose."
+  },
+  "wrapFull": {
+    "es": "Es un giro completo con los brazos recogidos. Saltas, recoges los brazos contra el cuerpo para acelerar el giro de 360 grados y aterrizas de pie.",
+    "en": "It is a full turn with the arms wrapped. Jump, pull the arms to the body to speed the 360-degree turn and land on your feet."
+  },
+  "aerialTwistDoubleleg": {
+    "es": "Es un aerial twist con las piernas juntas. Tras el paso lateral giras el cuerpo con las dos piernas extendidas y juntas, y caes de pie.",
+    "en": "It is an aerial twist with the legs together. After the side step you turn the body with both legs extended and together, and land on your feet."
+  },
+  "aerialTwistGumbi": {
+    "es": "Es un aerial twist que entra como gumbi. Apoyas la mano, giras el cuerpo hacia atrás con el twist y caes de pie.",
+    "en": "It is an aerial twist that enters like a gumbi. Plant the hand, turn the body backward with the twist and land on your feet."
+  },
+  "butterflyKickHelicopteroRound": {
+    "es": "Es una mariposa con giro horizontal que remata en patada circular. Tras la rotación de lado la pierna libre lanza un round kick antes de caer de pie.",
+    "en": "It is a butterfly with a horizontal spin that finishes in a round kick. After the sideways rotation the free leg throws a round kick before landing on your feet."
+  },
+  "butterflyTwistAxe": {
+    "es": "Es un b-twist que remata en patada de hacha. Tras el giro de 360 grados la pierna sube y baja en hacha antes de aterrizar de pie.",
+    "en": "It is a b-twist that finishes in an axe kick. After the 360-degree turn the leg rises and chops down in an axe kick before landing on your feet."
+  },
+  "butterflyTwistDoubleleg": {
+    "es": "Es un b-twist con las piernas juntas. En el giro llevas las dos piernas extendidas y pegadas, y aterrizas de pie.",
+    "en": "It is a b-twist with the legs together. In the turn you keep both legs extended and pressed together, and land on your feet."
+  },
+  "butterflyTwistFeilongSwipe": {
+    "es": "Es un b-twist con barrido feilong. Tras el giro la pierna barre en arco amplio con salto extra antes de caer de pie.",
+    "en": "It is a b-twist with a feilong swipe. After the turn the leg sweeps in a wide arc with extra flight before landing on your feet."
+  },
+  "butterflyTwistHawkeye": {
+    "es": "Es un b-twist en variante hawkeye. Tras el giro el cuerpo se abre y la pierna lanza un barrido lateral antes de aterrizar de pie.",
+    "en": "It is a b-twist in the hawkeye variation. After the turn the body opens and the leg throws a side sweep before landing on your feet."
+  },
+  "butterflyTwistHyper": {
+    "es": "Es un b-twist que cae en hyper. Tras el giro de 360 grados aterrizas con la pierna estirada y el cuerpo inclinado en postura hyper.",
+    "en": "It is a b-twist that lands in hyper. After the 360-degree turn you land with the leg extended and the body leaning in a hyper stance."
+  },
+  "butterflyTwistHyperhook": {
+    "es": "Es un b-twist que remata en hyperhook. Tras el giro la pierna remata en gancho con un giro extra y aterrizas de pie.",
+    "en": "It is a b-twist that finishes in a hyperhook. After the turn the leg finishes in a hook with extra rotation and you land on your feet."
+  },
+  "butterflyTwistKnife": {
+    "es": "Es un b-twist que remata en patada de cuchillo. Tras el giro la pierna corta de lado con el borde del pie antes de caer de pie.",
+    "en": "It is a b-twist that finishes in a knife kick. After the turn the leg cuts to the side with the edge of the foot before landing on your feet."
+  },
+  "butterflyTwistRound": {
+    "es": "Es un b-twist que remata en patada circular. Tras el giro de 360 grados la pierna lanza un round kick antes de aterrizar de pie.",
+    "en": "It is a b-twist that finishes in a round kick. After the 360-degree turn the leg throws a round kick before landing on your feet."
+  },
+  "butterflyTwistShurikane": {
+    "es": "Es un b-twist con patada shurikane. Tras el giro la pierna traza un arco cruzado como estrella antes de caer de pie.",
+    "en": "It is a b-twist with a shurikane kick. After the turn the leg traces a crossed star-like arc before landing on your feet."
+  },
+  "butterflyTwistShuriken": {
+    "es": "Es un b-twist con patada shuriken. Tras el giro la pierna lanza un giro corto y cruzado antes de aterrizar de pie.",
+    "en": "It is a b-twist with a shuriken kick. After the turn the leg throws a short crossed spin before landing on your feet."
+  },
+  "butterflyTwistSnapu": {
+    "es": "Es un b-twist con patada snapu. Tras el giro la pierna de ataque remata en una patada seca antes de caer de pie.",
+    "en": "It is a b-twist with a snapu kick. After the turn the striking leg finishes in a sharp kick before landing on your feet."
+  },
+  "butterflyTwistSwipe": {
+    "es": "Es un b-twist con barrido. Tras el giro la pierna barre por encima con giro de cadera antes de aterrizar de pie.",
+    "en": "It is a b-twist with a swipe. After the turn the leg sweeps over with a hip turn before landing on your feet."
+  },
+  "butterflyTwistTwistKick": {
+    "es": "Es un b-twist que remata en twist kick. Tras el giro de 360 grados la pierna lanza una patada con giro extra antes de caer de pie.",
+    "en": "It is a b-twist that finishes in a twist kick. After the 360-degree turn the leg throws a kick with extra rotation before landing on your feet."
+  },
+  "butterflyTwistWackknife": {
+    "es": "Es un b-twist en variante wackknife. Tras el giro la pierna remata en una patada corta y seca antes de aterrizar de pie.",
+    "en": "It is a b-twist in the wackknife variation. After the turn the leg finishes in a short sharp kick before landing on your feet."
+  },
+  "butterflyTwistIn": {
+    "es": "Es un b-twist con giro hacia dentro. El cuerpo gira hacia dentro en el aire y la pierna remata el movimiento antes de caer de pie.",
+    "en": "It is a b-twist with an inward turn. The body turns inward in the air and the leg finishes the move before landing on your feet."
+  },
+  "grandMasterArabian": {
+    "es": "Es un arabian de nivel master. Entras como en un mortal hacia atrás, agregas medio giro y completas el mortal hacia adelante antes de caer de pie.",
+    "en": "It is a master-level arabian. Enter like a backflip, add a half twist and complete the front flip before landing on your feet."
+  },
+  "grandMasterRocketboi": {
+    "es": "Es un truco avanzado con giro y patada. Tomas impulso, saltas girando el cuerpo mientras la pierna barre en arco y aterrizas de pie.",
+    "en": "It is an advanced move with a turn and a kick. Take momentum, jump turning the body as the leg sweeps in an arc and land on your feet."
+  },
+  "grandMasterSwipeknife": {
+    "es": "Es un swipeknife de nivel master. Plantas las manos, barres la pierna y la rematas en corte de cuchillo antes de caer de pie.",
+    "en": "It is a master-level swipeknife. Plant the hands, sweep the leg and finish it in a knife cut before landing on your feet."
+  },
+  "grandMasterTwist": {
+    "es": "Es un giro de nivel master. Tras el paso de impulso giras el cuerpo con más altura y control, y aterrizas de pie sobre el mismo pie.",
+    "en": "It is a master-level twist. After the setup step you turn the body with more height and control, and land on the same foot."
+  },
+  "illusionTwist": {
+    "es": "Es un giro con cruce de piernas tipo illusion. Saltas, cruzas las piernas mientras el cuerpo gira y las vuelves a abrir antes de caer de pie.",
+    "en": "It is a twist with an illusion leg cross. Jump, cross the legs as the body turns and reopen them before landing on your feet."
+  },
+  "masterscootTwist": {
+    "es": "Es un masterscoot con giro. Tras apoyar las manos y pasar las piernas juntas agregas un giro del cuerpo antes de caer de pie.",
+    "en": "It is a masterscoot with a twist. After the hand plant and leg sweep you add a body turn before landing on your feet."
+  },
+  "oneElbowCartwheelTwist": {
+    "es": "Es una rueda con giro sobre un codo. Apoyas un codo, giras el cuerpo de lado y rematas el twist antes de caer de pie.",
+    "en": "It is a cartwheel twist on one elbow. Plant one elbow, turn the body to the side and finish the twist before landing on your feet."
+  },
+  "oneHandedCartwheelTwist": {
+    "es": "Es una rueda con una mano y giro. Apoyas una sola mano, giras el cuerpo hacia atrás y caes de pie mirando al frente.",
+    "en": "It is a one-handed cartwheel with a twist. Plant a single hand, turn the body backward and land on your feet facing forward."
+  },
+  "rodeoGrandMasterSwipe": {
+    "es": "Es un rodeo que remata en grand master swipe. Tras el mortal con giro la pierna barre con apoyo de manos antes de caer de pie.",
+    "en": "It is a rodeo that finishes in a grand master swipe. After the twisting flip the leg sweeps with a hand plant before landing on your feet."
+  },
+  "takFullHyperhook": {
+    "es": "Es un tak full que remata en hyperhook. Tras el barrido con giro completo la pierna remata en gancho con giro extra y caes de pie.",
+    "en": "It is a tak full that finishes in a hyperhook. After the sweeping full twist the leg finishes in a hook with extra rotation and you land on your feet."
+  },
+  "takFullKyro": {
+    "es": "Es un tak full en variante kyro. Tras el barrido con giro completo la cadera marca el giro y aterrizas de pie.",
+    "en": "It is a tak full in the kyro variation. After the sweeping full twist the hips mark the turn and you land on your feet."
+  },
+  "takFullPizzaboy": {
+    "es": "Es un tak full en variante pizzaboy. Tras el barrido con giro completo la pierna se extiende hacia un lado antes de aterrizar de pie.",
+    "en": "It is a tak full in the pizzaboy variation. After the sweeping full twist the leg extends to one side before landing on your feet."
+  },
+  "takFullRound": {
+    "es": "Es un tak full que remata en patada circular. Tras el barrido con giro completo la pierna lanza un round kick antes de caer de pie.",
+    "en": "It is a tak full that finishes in a round kick. After the sweeping full twist the leg throws a round kick before landing on your feet."
+  },
+  "takFullSwipe": {
+    "es": "Es un tak full que remata en barrido. Tras el giro completo la pierna barre por encima con giro de cadera antes de aterrizar de pie.",
+    "en": "It is a tak full that finishes in a swipe. After the full twist the leg sweeps over with a hip turn before landing on your feet."
+  },
+  "takFullWackknife": {
+    "es": "Es un tak full que remata en wackknife. Tras el barrido con giro completo la pierna remata en una patada corta y seca antes de caer de pie.",
+    "en": "It is a tak full that finishes in a wackknife. After the sweeping full twist the leg finishes in a short sharp kick before landing on your feet."
+  },
+  "takRodeoFull": {
+    "es": "Es un rodeo con giro completo. Entras como en un mortal atrás, agregas el medio giro y completas el full antes de aterrizar de pie.",
+    "en": "It is a rodeo with a full twist. Enter like a backflip, add the half twist and complete the full before landing on your feet."
+  },
+  "touchdownButterflyTwist": {
+    "es": "Es un b-twist que cae en touchdown. Tras el giro de 360 grados aterrizas de rodillas en postura de touchdown.",
+    "en": "It is a b-twist that lands in a touchdown. After the 360-degree turn you land on one knee in a touchdown pose."
+  },
+  "wrapArabian": {
+    "es": "Es un arabian con brazos recogidos. Entras como en un mortal atrás, recoges los brazos, agregas medio giro y completas el mortal hacia adelante antes de caer de pie.",
+    "en": "It is an arabian with the arms wrapped. Enter like a backflip, wrap the arms, add a half twist and complete the front flip before landing on your feet."
+  },
+  "wrapArabianScissor": {
+    "es": "Es un wrap arabian con tijera. Durante el mortal con giro las piernas se cruzan y se intercambian antes de aterrizar de pie.",
+    "en": "It is a wrap arabian with a scissor. During the twisting flip the legs cross and swap before landing on your feet."
+  },
+  "wrapFullDoubleleg": {
+    "es": "Es un wrap full con las piernas juntas. Tras el giro completo con los brazos recogidos llevas las dos piernas extendidas y juntas, y caes de pie.",
+    "en": "It is a wrap full with the legs together. After the wrapped full twist you keep both legs extended and together, and land on your feet."
+  },
+  "wrapFullHyper": {
+    "es": "Es un wrap full que cae en hyper. Tras el giro completo con los brazos recogidos aterrizas con la pierna estirada en postura hyper.",
+    "en": "It is a wrap full that lands in hyper. After the wrapped full twist you land with the leg extended in a hyper stance."
+  },
+  "wrapFullHyperhook": {
+    "es": "Es un wrap full que remata en hyperhook. Tras el giro con los brazos recogidos la pierna remata en gancho con giro extra y caes de pie.",
+    "en": "It is a wrap full that finishes in a hyperhook. After the wrapped turn the leg finishes in a hook with extra rotation and you land on your feet."
+  },
+  "wrapFullLateRound": {
+    "es": "Es un wrap full con round tardío. Tras el giro con los brazos recogidos la pierna lanza un round kick al final antes de aterrizar de pie.",
+    "en": "It is a wrap full with a late round kick. After the wrapped turn the leg throws a round kick at the end before landing on your feet."
+  },
+  "wrapFullPike": {
+    "es": "Es un wrap full en pike. Tras el giro con los brazos recogidos el cuerpo se cierra en pike antes de aterrizar de pie.",
+    "en": "It is a wrap full in a pike. After the wrapped turn the body closes in a pike before landing on your feet."
+  },
+  "wrapFullRound": {
+    "es": "Es un wrap full que remata en patada circular. Tras el giro con los brazos recogidos la pierna lanza un round kick antes de caer de pie.",
+    "en": "It is a wrap full that finishes in a round kick. After the wrapped turn the leg throws a round kick before landing on your feet."
+  },
+  "wrapFullShurikane": {
+    "es": "Es un wrap full con shurikane. Tras el giro con los brazos recogidos la pierna traza un arco cruzado como estrella antes de caer de pie.",
+    "en": "It is a wrap full with a shurikane. After the wrapped turn the leg traces a crossed star-like arc before landing on your feet."
+  },
+  "wrapFullSnapu": {
+    "es": "Es un wrap full con snapu. Tras el giro con los brazos recogidos la pierna remata en una patada seca antes de caer de pie.",
+    "en": "It is a wrap full with a snapu. After the wrapped turn the leg finishes in a sharp kick before landing on your feet."
+  },
+  "wrapFullSwipe": {
+    "es": "Es un wrap full que remata en barrido. Tras el giro con los brazos recogidos la pierna barre por encima antes de aterrizar de pie.",
+    "en": "It is a wrap full that finishes in a swipe. After the wrapped turn the leg sweeps over before landing on your feet."
+  },
+  "wrapFullSwipeknife": {
+    "es": "Es un wrap full que remata en swipeknife. Tras el giro con los brazos recogidos la pierna barre y corta antes de caer de pie.",
+    "en": "It is a wrap full that finishes in a swipeknife. After the wrapped turn the leg sweeps and cuts before landing on your feet."
+  },
+  "aerialTwistGumbiHelicoptero": {
+    "es": "Es un aerial twist con entrada gumbi y giro horizontal. Apoyas la mano, giras hacia atrás con el twist y agregas una rotación de lado antes de caer de pie.",
+    "en": "It is an aerial twist with a gumbi entry and a horizontal spin. Plant the hand, turn backward with the twist and add a sideways rotation before landing on your feet."
+  },
+  "butterflyKickSwitchHyperhook": {
+    "es": "Es una mariposa con cambio de piernas y hyperhook. Tras el cruce cambias la pierna de ataque y rematas en gancho con giro extra antes de caer de pie.",
+    "en": "It is a butterfly with a leg switch and hyperhook. After the cross you swap the striking leg and finish in a hook with extra rotation before landing on your feet."
+  },
+  "butterflyTwistDoubleRound": {
+    "es": "Es un b-twist con doble round. Tras el giro de 360 grados la pierna lanza dos patadas circulares encadenadas antes de aterrizar de pie.",
+    "en": "It is a b-twist with a double round. After the 360-degree turn the leg throws two chained round kicks before landing on your feet."
+  },
+  "butterflyTwistDoublelegTwist": {
+    "es": "Es un b-twist con las piernas juntas que agrega otro twist. Tras el primer giro con las piernas extendidas sumas una rotación extra antes de caer de pie.",
+    "en": "It is a b-twist with the legs together that adds another twist. After the first turn with the legs extended you add extra rotation before landing on your feet."
+  },
+  "butterflyTwistRoundLateRound": {
+    "es": "Es un b-twist con round y round tardío. Tras el giro la pierna lanza un round kick y luego otro al final antes de aterrizar de pie.",
+    "en": "It is a b-twist with a round and a late round. After the turn the leg throws a round kick and then another at the end before landing on your feet."
+  },
+  "butterflyTwistShurikenHyperhook": {
+    "es": "Es un b-twist con shuriken y hyperhook. Tras el giro la pierna lanza un shuriken y remata en gancho con giro extra antes de caer de pie.",
+    "en": "It is a b-twist with a shuriken and a hyperhook. After the turn the leg throws a shuriken and finishes in a hook with extra rotation before landing on your feet."
+  },
+  "butterflyTwistShurikenTwist": {
+    "es": "Es un b-twist con shuriken y twist extra. Tras el giro la pierna lanza un shuriken y el cuerpo suma otra rotación antes de aterrizar de pie.",
+    "en": "It is a b-twist with a shuriken and an extra twist. After the turn the leg throws a shuriken and the body adds another rotation before landing on your feet."
+  },
+  "doubleAerialTwist": {
+    "es": "Es un aerial con dos giros. Tras el paso lateral saltas y giras el cuerpo 720 grados mientras pateas, y aterrizas de pie.",
+    "en": "It is an aerial with two twists. After the side step you jump and turn the body 720 degrees as you kick, and land on your feet."
+  },
+  "doubleButterflyTwist": {
+    "es": "Es un b-twist con dos giros. Tras el paso de impulso saltas y giras el cuerpo 720 grados antes de aterrizar sobre un pie.",
+    "en": "It is a b-twist with two twists. After the setup step you jump and turn the body 720 degrees before landing on one foot."
+  },
+  "doubleButterflyTwistHyper": {
+    "es": "Es un doble b-twist que cae en hyper. Tras los dos giros aterrizas con la pierna estirada en postura hyper.",
+    "en": "It is a double b-twist that lands in hyper. After the two turns you land with the leg extended in a hyper stance."
+  },
+  "doubleButterflyTwistRound": {
+    "es": "Es un doble b-twist que remata en patada circular. Tras los dos giros la pierna lanza un round kick antes de aterrizar de pie.",
+    "en": "It is a double b-twist that finishes in a round kick. After the two turns the leg throws a round kick before landing on your feet."
+  },
+  "doubleButterflyTwistSnapu": {
+    "es": "Es un doble b-twist que remata en snapu. Tras los dos giros la pierna remata en una patada seca antes de aterrizar de pie.",
+    "en": "It is a double b-twist that finishes in a snapu. After the two turns the leg finishes in a sharp kick before landing on your feet."
+  },
+  "doublePeterPanButterflyTwist": {
+    "es": "Es un b-twist tipo Peter Pan con doble giro. Tras el paso de impulso giras el cuerpo dos vueltas manteniendo las piernas en posición de Peter Pan antes de caer de pie.",
+    "en": "It is a Peter Pan style b-twist with a double twist. After the setup step you turn the body two full times keeping the legs in a Peter Pan position before landing on your feet."
+  },
+  "grandMasterTwistDoubleleg": {
+    "es": "Es un grand master twist con las piernas juntas. Tras el paso de impulso giras el cuerpo con las dos piernas extendidas y pegadas, y aterrizas de pie.",
+    "en": "It is a grand master twist with the legs together. After the setup step you turn the body with both legs extended and pressed together, and land on your feet."
+  },
+  "takDoubleFull": {
+    "es": "Es un takuraba con doble giro. Tras el impulso barres la pierna en arco y giras el cuerpo 720 grados antes de aterrizar de pie.",
+    "en": "It is a takuraba with a double twist. After the setup you sweep the leg in an arc and turn the body 720 degrees before landing on your feet."
+  },
+  "takDoubleFullHyper": {
+    "es": "Es un tak double full que cae en hyper. Tras los dos giros aterrizas con la pierna estirada en postura hyper.",
+    "en": "It is a tak double full that lands in hyper. After the two turns you land with the leg extended in a hyper stance."
+  },
+  "takDoubleFullHyperhook": {
+    "es": "Es un tak double full que remata en hyperhook. Tras los dos giros la pierna remata en gancho con giro extra antes de caer de pie.",
+    "en": "It is a tak double full that finishes in a hyperhook. After the two turns the leg finishes in a hook with extra rotation before landing on your feet."
+  },
+  "takDoubleFullRound": {
+    "es": "Es un tak double full que remata en patada circular. Tras los dos giros la pierna lanza un round kick antes de aterrizar de pie.",
+    "en": "It is a tak double full that finishes in a round kick. After the two turns the leg throws a round kick before landing on your feet."
+  },
+  "takDoubleFullTouchdown": {
+    "es": "Es un tak double full que cae en touchdown. Tras los dos giros aterrizas de rodillas en postura de touchdown.",
+    "en": "It is a tak double full that lands in a touchdown. After the two turns you land on one knee in a touchdown pose."
+  },
+  "takFullShurikenHyperhook": {
+    "es": "Es un tak full con shuriken y hyperhook. Tras el giro completo la pierna lanza un shuriken y remata en gancho con giro extra antes de caer de pie.",
+    "en": "It is a tak full with a shuriken and a hyperhook. After the full twist the leg throws a shuriken and finishes in a hook with extra rotation before landing on your feet."
+  },
+  "takTripleFull": {
+    "es": "Es un takuraba con triple giro. Tras el impulso barres la pierna en arco y giras el cuerpo 1080 grados antes de aterrizar de pie.",
+    "en": "It is a takuraba with a triple twist. After the setup you sweep the leg in an arc and turn the body 1080 degrees before landing on your feet."
+  },
+  "touchupDoubleButterflyTwist": {
+    "es": "Es un doble b-twist con toque. Tras el paso de impulso giras dos vueltas y buscas un contacto con la pierna antes de aterrizar de pie.",
+    "en": "It is a double b-twist with a touch. After the setup step you turn two full times and reach a touch with the leg before landing on your feet."
+  },
+  "tripleAerialTwist": {
+    "es": "Es un aerial con tres giros. Tras el paso lateral saltas y giras el cuerpo 1080 grados mientras pateas, y aterrizas de pie.",
+    "en": "It is an aerial with three twists. After the side step you jump and turn the body 1080 degrees as you kick, and land on your feet."
+  },
+  "tripleButterflyTwist": {
+    "es": "Es un b-twist con tres giros. Tras el paso de impulso saltas y giras el cuerpo 1080 grados antes de aterrizar sobre un pie.",
+    "en": "It is a b-twist with three twists. After the setup step you jump and turn the body 1080 degrees before landing on one foot."
+  },
+  "wrapDoubleFull": {
+    "es": "Es un doble giro con los brazos recogidos. Saltas, recoges los brazos para acelerar el giro de 720 grados y aterrizas de pie.",
+    "en": "It is a double turn with the arms wrapped. Jump, pull the arms in to speed the 720-degree turn and land on your feet."
+  },
+  "wrapDoubleFullMega": {
+    "es": "Es un wrap double full que cae en mega. Tras los dos giros con los brazos recogidos aterrizas en una postura baja y amplia.",
+    "en": "It is a wrap double full that lands in a mega stance. After the two wrapped turns you land in a low, wide stance."
+  },
+  "wrapDoubleFullSnapu": {
+    "es": "Es un wrap double full que remata en snapu. Tras los dos giros con los brazos recogidos la pierna remata en una patada seca antes de caer de pie.",
+    "en": "It is a wrap double full that finishes in a snapu. After the two wrapped turns the leg finishes in a sharp kick before landing on your feet."
+  },
+  "wrapFullShurikenHyperhook": {
+    "es": "Es un wrap full con shuriken y hyperhook. Tras el giro con los brazos recogidos la pierna lanza un shuriken y remata en gancho con giro extra antes de caer de pie.",
+    "en": "It is a wrap full with a shuriken and a hyperhook. After the wrapped turn the leg throws a shuriken and finishes in a hook with extra rotation before landing on your feet."
+  },
+  "wrapTripleFull": {
+    "es": "Es un triple giro con los brazos recogidos. Saltas, recoges los brazos para acelerar el giro de 1080 grados y aterrizas de pie.",
+    "en": "It is a triple turn with the arms wrapped. Jump, pull the arms in to speed the 1080-degree turn and land on your feet."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "diveRoll": {
+    "es": "Entra corriendo y lanza el cuerpo hacia adelante hasta quedar casi horizontal. Apoya las manos, recoge la cabeza y el pecho, rueda sobre un hombro y la espalda y vuelve de pie.",
+    "en": "Enter running and launch the body forward until nearly horizontal. Plant the hands, tuck the head and chest, roll over one shoulder and the back, and rise back to the feet."
+  },
+  "frontHandspring": {
+    "es": "Da un paso de impulso y lanza una pierna arriba mientras llevas las dos manos al piso. Bloquea los hombros, pasa por la vertical y azota las piernas para caer de pie con los brazos arriba.",
+    "en": "Take a setup step and kick one leg up while reaching both hands to the floor. Block through the shoulders, pass through a vertical position and snap the legs down to land on the feet with the arms up."
+  },
+  "frontAxe": {
+    "es": "Entra con carrera y un pique, y en el aire mantén una pierna extendida hacia arriba en forma de hachazo mientras la otra queda recogida. Gira el tronco hacia adelante y aterriza de pie absorbiendo con las rodillas.",
+    "en": "Enter with a run and a punch, and in the air keep one leg extended overhead in an axe shape while the other stays tucked. Rotate the torso forward and land on the feet, absorbing with the knees."
+  },
+  "frontPike": {
+    "es": "Entra con carrera, un pique y un salto hacia adelante. Cierra el cuerpo en pike llevando el pecho hacia las piernas extendidas y gira sobre la cadera; abre antes de aterrizar de pie.",
+    "en": "Enter with a run, a punch and a forward jump. Close the body in a pike, bringing the chest toward the extended legs and rotating over the hips; open before landing on the feet."
+  },
+  "frontTuck": {
+    "es": "Entra con carrera y un pique para saltar hacia adelante. Recoge las rodillas al pecho y agarra las espinillas para girar rápido, luego abre las piernas y aterriza de pie.",
+    "en": "Enter with a run and a punch to jump forward. Pull the knees to the chest and grab the shins to rotate quickly, then open the legs and land on the feet."
+  },
+  "frontXOut": {
+    "es": "Entra con carrera y un pique hacia adelante. En el punto más alto abre las piernas en forma de X con los brazos extendidos, cierra la rotación y aterriza de pie.",
+    "en": "Enter with a run and a punch forward. At the highest point open the legs in an X shape with the arms extended, finish the rotation and land on the feet."
+  },
+  "janitorFlip": {
+    "es": "Da un paso y patea una pierna recta hacia arriba y adelante para arrancar el giro. Pasa por encima de esa pierna en un mortal agrupado con la otra pierna recogida y aterriza de pie.",
+    "en": "Take a step and kick one straight leg up and forward to start the rotation. Flip over that leg in a tucked front rotation with the other leg pulled in, and land on the feet."
+  },
+  "russianFront": {
+    "es": "Entra con carrera y un pique hacia adelante. En el aire abre las piernas hacia los lados en un agrupado ancho, junta de nuevo la rotación y cae de pie con las rodillas flexionadas.",
+    "en": "Enter with a run and a punch forward. In the air spread the legs to the sides in a wide tuck, close the rotation again and land on the feet with the knees bent."
+  },
+  "supermanFront": {
+    "es": "Entra corriendo y lanza el cuerpo estirado hacia adelante con los brazos al frente, como un superhéroe en vuelo. Completa la rotación jalando el pecho y aterriza de pie.",
+    "en": "Enter running and launch the body stretched forward with the arms ahead, like a superhero in flight. Finish the rotation by pulling the chest through and land on the feet."
+  },
+  "360CartwheelTwist": {
+    "es": "Arranca una rueda lateral apoyando una mano. En el aire agrega un giro completo de 360 grados sobre el eje vertical y aterriza de pie mirando hacia el mismo lado del inicio.",
+    "en": "Start a sideways cartwheel by planting one hand. In the air add a full 360-degree twist around the vertical axis and land on the feet facing the same side as the start."
+  },
+  "frontHalf": {
+    "es": "Entra con carrera y un pique hacia adelante. Ejecuta el mortal de frente y agrega media vuelta en el aire para aterrizar de espaldas a la dirección de salida.",
+    "en": "Enter with a run and a punch forward. Perform the front flip and add a half twist in the air to land facing away from the takeoff direction."
+  },
+  "handcuff360DiveRoll": {
+    "es": "Entra corriendo con las manos juntas detrás de la espalda. Lánzate hacia adelante, agrega un giro completo de 360 grados en el aire y rueda sobre el hombro y la espalda hasta quedar de pie.",
+    "en": "Enter running with the hands clasped behind the back. Dive forward, add a full 360-degree twist in the air and roll over the shoulder and back until standing."
+  },
+  "janitorScissorTwist": {
+    "es": "Da un paso y patea una pierna para arrancar el giro. En el aire cruza y descruza las piernas en un tijeretazo mientras el cuerpo gira, y aterriza de pie.",
+    "en": "Take a step and kick one leg to start the rotation. In the air cross and open the legs in a scissor motion while the body twists, and land on the feet."
+  },
+  "janitorTwist": {
+    "es": "Da un paso y patea una pierna recta hacia arriba para iniciar el mortal. Suma un giro sobre el eje del cuerpo durante el vuelo y aterriza de pie.",
+    "en": "Take a step and kick one straight leg up to begin the flip. Add a twist around the body axis during the flight and land on the feet."
+  },
+  "webster": {
+    "es": "Toma impulso sobre un solo pie sin apoyar las manos y lanza la otra pierna extendida hacia adelante. Gira por encima de esa pierna en un mortal de frente y aterriza de pie.",
+    "en": "Take off from a single foot without planting the hands and throw the other leg extended forward. Flip over that leg in a front rotation and land on the feet."
+  },
+  "websterAxe": {
+    "es": "Salta desde un solo pie y mantén la pierna libre recta hacia arriba en forma de hachazo. Gira por encima de ella en un mortal de frente y cae de pie.",
+    "en": "Jump from a single foot and keep the free leg straight overhead in an axe shape. Flip over it in a front rotation and land on the feet."
+  },
+  "websterHalf": {
+    "es": "Salta desde un solo pie con la pierna libre extendida al frente. Suma media vuelta en el aire y aterriza de espaldas a la dirección de salida.",
+    "en": "Jump from a single foot with the free leg extended forward. Add a half twist in the air and land facing away from the takeoff direction."
+  },
+  "websterXOut": {
+    "es": "Salta desde un solo pie y arranca el mortal de frente. En el punto más alto abre las piernas en forma de X, ciérralas para completar el giro y aterriza de pie.",
+    "en": "Jump from a single foot and start the front flip. At the highest point open the legs in an X shape, close them to finish the rotation and land on the feet."
+  },
+  "rodeoJanitorTwist": {
+    "es": "Da un paso y patea una pierna para arrancar el giro. Agrega un giro desviado tipo rodeo mientras el cuerpo rota de frente, y aterriza de pie.",
+    "en": "Take a step and kick one leg to start the rotation. Add an off-axis rodeo twist while the body rotates forward, and land on the feet."
+  },
+  "websterHyperhook": {
+    "es": "Salta desde un solo pie con la pierna libre extendida al frente. Gira el mortal de frente y engancha esa pierna en un giro con la cadera abierta antes de aterrizar de pie.",
+    "en": "Jump from a single foot with the free leg extended forward. Flip forward and hook that leg into a turn with the hip open before landing on the feet."
+  }
+}

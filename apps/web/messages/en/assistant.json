@@ -11,6 +11,8 @@
       "provider": "Answered by {name}.",
       "providerBadge": "Answered by {name}",
       "comboAsk": "Do you want it with the tricks you already have or a free combo with catalog tricks?",
+      "comboKnownIntro": "Combo with the tricks you already have:",
+      "comboFreeIntro": "Free combo with catalog tricks:",
       "inputLabel": "Write your question",
       "inputPlaceholder": "For example: how do you do a b-twist",
       "send": "Send",
@@ -25,6 +27,22 @@
       "rateLimited": "You asked too many questions in a row. Wait a moment and try again.",
       "dailyLimit": "The daily limit of assistant requests was reached. Try again tomorrow.",
       "retry": "Retry"
+    },
+    "prompt": {
+      "contextIntro": "Catalog context (use it only if relevant):",
+      "contextEmpty": "- No results in the catalog for this question.",
+      "trickLabel": "Trick",
+      "sectionLabel": "section",
+      "difficultyLabel": "difficulty",
+      "descriptionLabel": "description",
+      "howToLabel": "how to do it",
+      "gazeLabel": "Gaze tip",
+      "warningLabel": "warning",
+      "transitionLabel": "Transition",
+      "knownIntro": "Tricks the user ALREADY has (do not explain them from scratch or recommend them as new):",
+      "knownMore": "and {count} more",
+      "suggestionsIntro": "Catalog tricks you MAY recommend (real follow-ups to what the user knows). Do NOT recommend any trick that is not in this list or the catalog context:",
+      "catalogSampleIntro": "Random catalog sample for a free combo (you may pick tricks from here). Real names only:"
     },
     "combos": {
       "heading": "Combo generator",

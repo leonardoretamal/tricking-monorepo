@@ -39,6 +39,9 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
 
   const howTo = pickDescription(locale, data.howTo, data.howToEs);
   const description = pickDescription(locale, data.description, data.descriptionEs);
+  // La nota de Loopkicks es texto de ellos; la traduccion al espanol es una cortesia.
+  // En espanol se usa la traduccion con fallback al original; en ingles, el original.
+  const loopkicksNotes = pickDescription(locale, data.loopkicksNotes, data.loopkicksNotesEs);
   const kojoTechniques = data.kojoTechniques ?? [];
   const sourceUrl =
     data.loopkicksSlug !== null
@@ -81,7 +84,7 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
 
   const loopkicksContent = (
     <div className="flex flex-col gap-2">
-      <p>{data.loopkicksNotes ?? t('detail.loopkicksEmpty')}</p>
+      <p>{loopkicksNotes ?? t('detail.loopkicksEmpty')}</p>
       {sourceUrl ? (
         <a
           href={sourceUrl}

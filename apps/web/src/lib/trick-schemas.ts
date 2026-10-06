@@ -66,6 +66,7 @@ export const trickDetailSchema = trickListItemSchema.extend({
   howTo: z.string().nullable(),
   howToEs: z.string().nullable(),
   loopkicksNotes: z.string().nullable(),
+  loopkicksNotesEs: z.string().nullable(),
   kojoTechniques: z.array(kojoTechniqueSchema),
   prereqs: z.array(trickRelatedSchema),
   nextTricks: z.array(trickRelatedSchema),

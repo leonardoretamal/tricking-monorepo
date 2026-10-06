@@ -1,0 +1,342 @@
+{
+  "arabian": {
+    "es": "Entra con un pique o salto de dos pies viajando hacia adelante y arranca una rotacion de frente. Antes de aterrizar suma media vuelta sobre el eje vertical para caer de pie mirando hacia donde venias.",
+    "en": "Enter with a punch or two-foot jump traveling forward and start a front rotation. Before landing add a half twist around the vertical axis to land on the feet facing the way you came from."
+  },
+  "arabianAxe": {
+    "es": "Es el mortal de frente con media vuelta en el que una pierna se mantiene extendida hacia arriba en forma de hachazo. La rotacion abre la cadera y aterriza de pie sobre las dos piernas.",
+    "en": "It is the front flip with a half twist in which one leg stays extended overhead in an axe shape. The rotation opens the hip and lands on the feet."
+  },
+  "arabianHalf": {
+    "es": "Version del arabian en la que la media vuelta se ejecuta en el primer tramo de la rotacion. El cuerpo gira de frente y termina cayendo de lado antes de completar el giro.",
+    "en": "A version of the arabian where the half twist happens during the first phase of the rotation. The body rotates forward and lands sideways before finishing the turn."
+  },
+  "arabianPikeSnapu": {
+    "es": "Combina el arabian con el cuerpo en pike y un remate en snapu. La entrada viaja al frente, el tronco se cierra sobre las piernas y el ultimo tramo engancha la pierna antes de aterrizar.",
+    "en": "It combines the arabian with a pike body position and a snapu finish. The entry travels forward, the torso closes over the legs and the final phase hooks the leg before landing."
+  },
+  "arabianScissor": {
+    "es": "Arabian en el que las piernas cruzan y descruzan en un tijeretazo durante el vuelo. El impulso va al frente y el tijeretazo ayuda a completar la media vuelta antes de caer de pie.",
+    "en": "An arabian where the legs cross and open in a scissor motion during the flight. The drive goes forward and the scissor helps complete the half twist before landing on the feet."
+  },
+  "arabianScissorHalf": {
+    "es": "Toma la base del arabian scissor y agrega otra media vuelta en la salida. El tijeretazo marca el aire y el cuerpo cierra el giro antes de aterrizar de pie.",
+    "en": "It takes the arabian scissor base and adds another half twist on the way out. The scissor marks the air and the body closes the turn before landing on the feet."
+  },
+  "arabianUnhalfInBackOut": {
+    "es": "Arabian que entra con media vuelta hacia adentro y saca el resto del giro hacia atras al salir. La entrada viaja al frente y la cadera separa las dos medias vueltas alrededor del mortal.",
+    "en": "An arabian that enters with a half twist inward and brings the rest of the turn back on the way out. The entry travels forward and the hip separates the two half turns around the flip."
+  },
+  "arabianXOut": {
+    "es": "Arabian en el que las piernas se abren en equis en el punto mas alto. La rotacion de frente con media vuelta se cierra con las piernas juntas antes de aterrizar de pie.",
+    "en": "An arabian where the legs open in an X at the highest point. The forward rotation with the half twist closes with the legs together before landing on the feet."
+  },
+  "backHandspring": {
+    "es": "Desde parado o con un paso, lanza los brazos hacia atras y empuja la cadera para pasar por la vertical. Apoya las manos, patea las piernas por encima y azota para caer de pie con los brazos al frente.",
+    "en": "From standing or with a step, throw the arms back and push the hips to pass through a vertical position. Plant the hands, kick the legs over and snap down to land on the feet with the arms forward."
+  },
+  "backPike": {
+    "es": "Entra con un salto hacia atras y un pique de dos pies. Cierra el cuerpo en pike llevando el pecho hacia las piernas extendidas y gira sobre la cadera antes de abrir para aterrizar de pie.",
+    "en": "Enter with a backward jump and a two-foot punch. Close the body in a pike, bringing the chest toward the extended legs and rotating over the hips before opening to land on the feet."
+  },
+  "backtuck": {
+    "es": "Entra con un pique de dos pies y lanza la cadera hacia arriba y atras. Recoge las rodillas al pecho, agarra las espinillas para girar rapido y abre antes de aterrizar de pie.",
+    "en": "Enter with a two-foot punch and throw the hips up and back. Pull the knees to the chest, grab the shins to rotate quickly and open before landing on the feet."
+  },
+  "backInRocketboiOut": {
+    "es": "Empieza el mortal hacia atras y saca las piernas disparadas hacia arriba en el estilo rocketboi al salir. La cadera gira primero y la subida vertical cierra la rotacion antes del aterrizaje.",
+    "en": "Start the backflip and shoot the legs upward in the rocketboi style on the way out. The hips rotate first and the vertical rise closes the rotation before landing."
+  },
+  "backInSquirrelOut": {
+    "es": "Entra con un mortal atras recogido y cambia a una forma de ardilla al salir, con el cuerpo pequeno y las extremidades pegadas. El giro se completa y cae de pie.",
+    "en": "Enter with a tucked backflip and switch to a squirrel shape on the way out, with a small body and the limbs pulled in. The rotation completes and it lands on the feet."
+  },
+  "backInXOut": {
+    "es": "Arranca el mortal atras con el cuerpo recogido y abre las piernas en equis en el ultimo tramo. Las piernas se cierran de nuevo para completar el giro y aterrizar de pie.",
+    "en": "Start the backflip with the body tucked and open the legs in an X in the final phase. The legs close again to finish the rotation and land on the feet."
+  },
+  "crashmoon": {
+    "es": "Es un mortal atras con forma de luna que rompe la linea del cuerpo en el descenso. La entrada viaja larga, la cadera se abre en la subida y el aterrizaje cae fuerte y agrupado.",
+    "en": "It is a moon-shaped backflip that breaks the body line on the way down. The entry travels long, the hip opens on the rise and the landing comes down hard and gathered."
+  },
+  "donutBoy": {
+    "es": "Mortal atras con un agrupado muy redondo, rodillas al pecho y brazos cerrando el circulo. La forma de dona marca el vuelo y se abre justo antes de aterrizar de pie.",
+    "en": "A backflip with a very round tuck, knees to the chest and arms closing the circle. The donut shape marks the flight and opens just before landing on the feet."
+  },
+  "dragonflyMoonkick": {
+    "es": "La entrada barre una pierna en arco amplio al estilo dragonfly y el cuerpo se recuesta hacia atras. En el aire la otra pierna dibuja el moonkick y aterriza sobre los dos pies.",
+    "en": "The entry sweeps one leg in a wide dragonfly arc and the body leans back. In the air the other leg draws the moonkick and it lands on both feet."
+  },
+  "filipino": {
+    "es": "Despega de un pie con la cadera viajando hacia atras y patea la pierna libre cruzando el cuerpo. La rotacion es de mortal atras y cae de pie sobre las dos piernas.",
+    "en": "Take off from one foot with the hips traveling backward and kick the free leg across the body. The rotation is a backflip and it lands on both feet."
+  },
+  "flashHelicoptero": {
+    "es": "Combina la patada del flash kick con el giro del helicoptero. Despues del despegue, una pierna sale en patada y la cadera agrega el giro acostado antes de aterrizar de pie.",
+    "en": "It combines the flash kick leg snap with the helicoptero spin. After takeoff one leg snaps out and the hip adds the laid-back turn before landing on the feet."
+  },
+  "flashKick": {
+    "es": "Entra con un pique de dos pies y arranca el mortal atras. En el punto mas alto patea una pierna hacia adelante y arriba, y recoge para aterrizar de pie.",
+    "en": "Enter with a two-foot punch and start the backflip. At the highest point kick one leg forward and up, then pull it back in to land on the feet."
+  },
+  "frappe": {
+    "es": "Mortal atras en el que las piernas cruzan y golpean juntas en el aire, como un frappe. El cuerpo gira por detras y aterriza de pie con las piernas juntas.",
+    "en": "A backflip in which the legs cross and snap together in the air, like a frappe. The body rotates backward and lands on the feet with the legs together."
+  },
+  "lonestar": {
+    "es": "Despega de un pie y recuesta el tronco hacia atras mientras la pierna libre se extiende larga al costado. La cadera gira como un mortal y aterriza de pie.",
+    "en": "Take off from one foot and lay the torso back while the free leg extends long to the side. The hips rotate like a backflip and it lands on the feet."
+  },
+  "lonestarScissor": {
+    "es": "Es el lonestar al que se le suma un tijeretazo de piernas. Tras el despegue recostado, las piernas cruzan y abren para cerrar la rotacion antes de aterrizar de pie.",
+    "en": "It is the lonestar with a scissor of the legs added. After the laid-back takeoff the legs cross and open to close the rotation before landing on the feet."
+  },
+  "popDonutBoy": {
+    "es": "Entra con un pop de un pie y ejecuta el agrupado redondo del donut boy. La subida es rapida y el cuerpo se abre justo antes de caer de pie.",
+    "en": "Enter with a one-foot pop and perform the round donut boy tuck. The rise is quick and the body opens just before landing on the feet."
+  },
+  "popcorn": {
+    "es": "Mortal atras corto y explosivo que sale de un pique rapido de dos pies. El agrupado es apretado y pequeno, y aterriza de pie casi en el mismo lugar.",
+    "en": "A short, explosive backflip that comes from a quick two-foot punch. The tuck is tight and small, and it lands on the feet almost in place."
+  },
+  "rocketboi": {
+    "es": "Entra con un pique fuerte y viaja hacia atras manteniendo el cuerpo largo. Las piernas se disparan hacia arriba como un cohete y la rotacion se cierra antes de aterrizar de pie.",
+    "en": "Enter with a strong punch and travel backward keeping the body long. The legs shoot upward like a rocket and the rotation closes before landing on the feet."
+  },
+  "rocketboiScissorSnapu": {
+    "es": "Toma el rocketboi de piernas extendidas y agrega un tijeretazo con remate en snapu. La pierna que sube disparada engancha al final antes de aterrizar de pie.",
+    "en": "It takes the extended-leg rocketboi and adds a scissor with a snapu finish. The leg that shoots up hooks at the end before landing on the feet."
+  },
+  "shattermoon": {
+    "es": "Mortal atras con forma de luna que quiebra el cuerpo de golpe en el descenso. La cadera se abre en la subida y el cambio brusco de forma marca el aterrizaje de pie.",
+    "en": "A moon-shaped backflip that breaks the body sharply on the way down. The hip opens on the rise and the sudden shape change marks the landing on the feet."
+  },
+  "sheepShearer": {
+    "es": "Mortal atras en el que las piernas se abren y se cruzan como tijeras grandes, al estilo de una esquiladora. La rotacion pasa por detras y cae de pie con las piernas juntas.",
+    "en": "A backflip in which the legs open and cross like large shears, in a sheep shearer style. The rotation goes backward and it lands on the feet with the legs together."
+  },
+  "shurikane": {
+    "es": "Mortal atras que remata con una patada circular tipo shuriken. Despues del pique, la cadera gira y una pierna traza el arco cortante antes de aterrizar de pie.",
+    "en": "A backflip that finishes with a circular shuriken-style kick. After the punch the hips turn and one leg traces the cutting arc before landing on the feet."
+  },
+  "slice": {
+    "es": "Mortal atras en el que una pierna corta en diagonal durante el vuelo. La entrada despega de dos pies y la pierna filosa cruza el cuerpo antes de aterrizar de pie.",
+    "en": "A backflip in which one leg slices diagonally during the flight. The entry takes off from both feet and the sharp leg crosses the body before landing on the feet."
+  },
+  "snatchCannon": {
+    "es": "Mortal atras que agarra la pierna en el aire (snatch) y se cierra como bala de canon. El cuerpo se recoge fuerte y cae de pie con las rodillas juntas.",
+    "en": "A backflip that snatches the leg in the air and closes like a cannonball. The body gathers hard and lands on the feet with the knees together."
+  },
+  "teradaGrab": {
+    "es": "Mortal atras en el que una mano agarra la pierna extendida en el aire, al estilo terada. La entrada despega de dos pies y el agarre sostiene el eje hasta el aterrizaje de pie.",
+    "en": "A backflip in which one hand grabs the extended leg in the air, terada style. The entry takes off from both feet and the grab holds the axis into the landing on the feet."
+  },
+  "teradaGrabInShantOut": {
+    "es": "Es el terada grab que entra con media vuelta hacia adentro y sale con media vuelta hacia atras. El agarre a la pierna se mantiene mientras la cadera separa los dos medios giros.",
+    "en": "It is the terada grab that enters with a half twist inward and exits with a half twist backward. The leg grab holds while the hips separate the two half turns."
+  },
+  "touchdownQuat": {
+    "es": "Mortal atras que baja a una pose de touchdown, con una rodilla cerca del piso y el tronco erguido. La rotacion se corta a proposito para marcar la pose antes de incorporarse.",
+    "en": "A backflip that drops into a touchdown pose, with one knee near the floor and the torso upright. The rotation is cut on purpose to mark the pose before standing up."
+  },
+  "valdez": {
+    "es": "Desde una posicion baja, empuja los hombros hacia atras y pasa por encima de las manos como un flic flac. Las piernas patean por arriba y el cuerpo termina de pie.",
+    "en": "From a low position, push the shoulders back and pass over the hands like a flic flac. The legs kick over the top and the body finishes on the feet."
+  },
+  "xOut": {
+    "es": "Entra con un pique de dos pies y arranca el mortal atras. En el punto mas alto abre las piernas en equis, cierralas y aterriza de pie.",
+    "en": "Enter with a two-foot punch and start the backflip. At the highest point open the legs in an X, close them and land on the feet."
+  },
+  "xOutInBackOut": {
+    "es": "Empieza con una equis de piernas, entra con media vuelta y saca otra media vuelta hacia atras al salir. El cuerpo completa el mortal mientras encadena los dos giros.",
+    "en": "It starts with an X of the legs, enters with a half twist and brings another half twist backward on the way out. The body completes the flip while chaining both turns."
+  },
+  "arabianScissorHyperhook": {
+    "es": "Es el arabian scissor que remata en hyperhook, con la pierna enganchada y la cadera abierta. La media vuelta de entrada y el tijeretazo desembocan en el gancho extendido antes de aterrizar.",
+    "en": "It is the arabian scissor that finishes in a hyperhook, with the leg hooked and the hip open. The half twist entry and the scissor lead into the extended hook before landing."
+  },
+  "arabianScissorRound": {
+    "es": "Arabian scissor que cierra con una salida redonda tipo roundoff. El tijeretazo marca el aire y la ultima fase gira redonda hasta aterrizar de pie.",
+    "en": "An arabian scissor that closes with a round, roundoff-style exit. The scissor marks the air and the final phase turns round into a landing on the feet."
+  },
+  "boxcutter": {
+    "es": "Mortal que corta el aire con las piernas en diagonal, como una cuchilla. La entrada despega de un pie y las piernas cruzan en angulo antes de aterrizar de pie.",
+    "en": "A flip that cuts the air with the legs diagonally, like a box cutter. The entry takes off from one foot and the legs cross at an angle before landing on the feet."
+  },
+  "brokenFull": {
+    "es": "Full en el que el giro se parte en dos tiempos, con una pausa visible a mitad de la vuelta. La cadera gira 360 grados en dos tramos y aterriza de pie.",
+    "en": "A full in which the twist breaks into two beats, with a visible pause halfway through the turn. The hips turn 360 degrees in two stages and it lands on the feet."
+  },
+  "corkscrew": {
+    "es": "Entra con un pique y arranca el mortal atras. La cadera gira un giro completo sobre un eje inclinado, como un sacacorchos, y aterriza de pie.",
+    "en": "Enter with a punch and start the backflip. The hips spin a full turn on a tilted axis, like a corkscrew, and it lands on the feet."
+  },
+  "corkscrewKyro": {
+    "es": "Es el corkscrew con el remate kyro, un corte de pierna que marca el final del giro. Tras la vuelta inclinada, la pierna sale filosa y aterriza de pie.",
+    "en": "It is the corkscrew with a kyro finish, a leg cut that marks the end of the turn. After the tilted spin the leg snaps out sharp and it lands on the feet."
+  },
+  "corkscrewMcDirty": {
+    "es": "Corkscrew que agrega el gesto rapido y suelto del McDirty en la salida. El giro inclinado se acelera al final y cae de pie.",
+    "en": "A corkscrew that adds the fast, loose McDirty gesture on the way out. The tilted spin speeds up at the end and lands on the feet."
+  },
+  "corkscrewSidewinder": {
+    "es": "Corkscrew que encadena el barrido lateral del sidewinder. La vuelta inclinada desemboca en una pierna que barre de costado antes del aterrizaje de pie.",
+    "en": "A corkscrew that chains into the sidewinder lateral sweep. The tilted spin leads into a leg that sweeps to the side before landing on the feet."
+  },
+  "corkscrewSkullsnapper": {
+    "es": "Corkscrew en el que la pierna libre chasquea cerca de la cabeza al girar, al estilo skullsnapper. El giro inclinado pasa cerca y aterriza de pie.",
+    "en": "A corkscrew in which the free leg snaps near the head as it turns, skullsnapper style. The tilted spin passes close and lands on the feet."
+  },
+  "corkscrewSnapu": {
+    "es": "Corkscrew que termina con el gancho del snapu. La vuelta inclinada gira y la pierna engancha al final antes de caer de pie.",
+    "en": "A corkscrew that ends with the snapu hook. The tilted spin turns and the leg hooks at the end before landing on the feet."
+  },
+  "corkscrewSwipe": {
+    "es": "Corkscrew que remata con un barrido de pierna. Despues de la vuelta inclinada, la pierna pasa barriendo y el cuerpo aterriza de pie.",
+    "en": "A corkscrew that finishes with a leg swipe. After the tilted spin the leg sweeps through and the body lands on the feet."
+  },
+  "corkscrewSwipeLateSwipe": {
+    "es": "Corkscrew con barrido que suma un segundo barrido tardio. La vuelta inclinada se encadena con dos pasadas de pierna antes del aterrizaje de pie.",
+    "en": "A corkscrew with a swipe that adds a second, late swipe. The tilted spin chains two leg passes before landing on the feet."
+  },
+  "donutBoyHyperhook": {
+    "es": "Es el donut boy con remate en hyperhook. El agrupado redondo se abre al final y la pierna engancha con la cadera abierta antes de aterrizar de pie.",
+    "en": "It is the donut boy with a hyperhook finish. The round tuck opens at the end and the leg hooks with the hip open before landing on the feet."
+  },
+  "dragonflyBoxcutter": {
+    "es": "Barre una pierna en arco dragonfly y encadena el corte diagonal del boxcutter. La cadera gira y las piernas cruzan antes de aterrizar de pie.",
+    "en": "It sweeps one leg in a dragonfly arc and chains the diagonal boxcutter cut. The hips turn and the legs cross before landing on the feet."
+  },
+  "dragonflyCorkscrew": {
+    "es": "Entra con el barrido amplio del dragonfly y agrega una vuelta inclinada de corkscrew. El cuerpo gira sobre el eje inclinado y aterriza de pie.",
+    "en": "Enter with the wide dragonfly sweep and add a tilted corkscrew turn. The body spins on the tilted axis and lands on the feet."
+  },
+  "dragonflyHyperhook": {
+    "es": "Es el dragonfly que cierra con un hyperhook. Tras el barrido de entrada, el cuerpo gira y la pierna sale enganchada con la cadera abierta antes de aterrizar.",
+    "en": "It is the dragonfly that closes with a hyperhook. After the entry sweep the body turns and the leg hooks out with the hip open before landing."
+  },
+  "dragonflyShurikenCutter": {
+    "es": "Combina el barrido dragonfly con el corte circular del shuriken. El vuelo encadena el arco amplio y la patada cortante antes del aterrizaje de pie.",
+    "en": "It combines the dragonfly sweep with the circular shuriken cut. The flight chains the wide arc and the cutting kick before landing on the feet."
+  },
+  "flashKnife": {
+    "es": "Flash kick en el que la pierna que patea sale recta y filosa como un cuchillo. La rotacion de mortal atras sostiene la patada hasta el aterrizaje de pie.",
+    "en": "A flash kick in which the kicking leg snaps out straight and sharp like a knife. The backflip rotation holds the kick into the landing on the feet."
+  },
+  "fullCobra": {
+    "es": "Full que arquea el cuerpo como una cobra en el punto mas alto. El giro completo se combina con el arco de espalda y aterriza de pie.",
+    "en": "A full that arches the body like a cobra at the peak. The complete twist combines with the back arch and it lands on the feet."
+  },
+  "fullDown": {
+    "es": "Full que termina bajando el cuerpo hacia el piso de forma controlada. El giro completo se cierra en un descenso firme hasta aterrizar de pie.",
+    "en": "A full that finishes by bringing the body down toward the floor in a controlled way. The complete twist closes in a firm descent into a landing on the feet."
+  },
+  "fullElbowGumbi": {
+    "es": "Full con la forma de gumbi de codos flexionados y espalda redonda. El giro completo pasa por el eje redondeado y cae de pie.",
+    "en": "A full with the gumbi shape of bent elbows and a rounded back. The complete twist passes through the rounded axis and lands on the feet."
+  },
+  "fullGumbi": {
+    "es": "Full ejecutado con el cuerpo redondo y los brazos recogidos del gumbi. El giro completo gira sobre ese eje cerrado y aterriza de pie.",
+    "en": "A full performed with the round body and pulled-in arms of the gumbi. The complete twist turns on that closed axis and lands on the feet."
+  },
+  "fullKyro": {
+    "es": "Full que remata con el corte de pierna del kyro. El giro completo se completa y la pierna sale filosa justo antes del aterrizaje de pie.",
+    "en": "A full that finishes with the kyro leg cut. The complete twist finishes and the leg snaps out sharp just before landing on the feet."
+  },
+  "fullMcDirty": {
+    "es": "Full que agrega el gesto rapido y suelto del McDirty al salir. El giro completo se acelera al final y aterriza de pie.",
+    "en": "A full that adds the fast, loose McDirty gesture on the way out. The complete twist speeds up at the end and lands on the feet."
+  },
+  "fullPike": {
+    "es": "Entra con un pique y arranca el mortal atras. Cierra el cuerpo en pike mientras la cadera gira 360 grados y abre antes de aterrizar de pie.",
+    "en": "Enter with a punch and start the backflip. Close the body in a pike while the hips turn 360 degrees and open before landing on the feet."
+  },
+  "fullRocketboi": {
+    "es": "Full en el que las piernas se disparan hacia arriba en el estilo rocketboi. El giro completo viaja con el cuerpo largo y cae de pie.",
+    "en": "A full in which the legs shoot upward in the rocketboi style. The complete twist travels with a long body and lands on the feet."
+  },
+  "fullScissor": {
+    "es": "Full que agrega un tijeretazo de piernas durante el giro. Tras el pique, el cuerpo gira 360 grados y las piernas cruzan y abren antes de aterrizar de pie.",
+    "en": "A full that adds a scissor of the legs during the turn. After the punch the body turns 360 degrees and the legs cross and open before landing on the feet."
+  },
+  "fullShurikane": {
+    "es": "Full que remata con la patada circular del shurikane. El giro completo gira y la pierna traza el arco cortante antes de aterrizar de pie.",
+    "en": "A full that finishes with the circular shurikane kick. The complete twist turns and the leg traces the cutting arc before landing on the feet."
+  },
+  "fullSnapu": {
+    "es": "Full que cierra con el gancho del snapu. La cadera completa los 360 grados y la pierna engancha al final antes de aterrizar de pie.",
+    "en": "A full that closes with the snapu hook. The hips complete the 360 degrees and the leg hooks at the end before landing on the feet."
+  },
+  "fullSnapuSnapu": {
+    "es": "Full con doble gancho de snapu, uno en cada tramo del giro. El cuerpo gira 360 grados encadenando los dos enganches antes de aterrizar de pie.",
+    "en": "A full with a double snapu hook, one in each phase of the turn. The body turns 360 degrees chaining both hooks before landing on the feet."
+  },
+  "fullSnapuSwipe": {
+    "es": "Full que suma al gancho del snapu un barrido de pierna. El giro completo engancha primero y barre despues antes del aterrizaje de pie.",
+    "en": "A full that adds a leg swipe to the snapu hook. The complete twist hooks first and sweeps after before landing on the feet."
+  },
+  "fullSnapuInBackOut": {
+    "es": "Full que entra con el gancho del snapu y sale con media vuelta hacia atras. El giro completo encadena el enganche de entrada con la salida trasera.",
+    "en": "A full that enters with the snapu hook and exits with a half twist backward. The complete twist chains the entry hook with the back exit."
+  },
+  "fullSwipe": {
+    "es": "Full que remata con un barrido de pierna. El giro de 360 grados termina con la pierna pasando barrida antes del aterrizaje de pie.",
+    "en": "A full that finishes with a leg swipe. The 360-degree turn ends with the leg sweeping through before landing on the feet."
+  },
+  "fullTaiFighter": {
+    "es": "Full que adopta la forma de tai fighter, con una pierna y un brazo en guardia. El giro completo se ejecuta dentro de esa postura y aterriza de pie.",
+    "en": "A full that takes the tai fighter shape, with one leg and one arm in guard. The complete twist is performed inside that pose and lands on the feet."
+  },
+  "fullTeradaGrab": {
+    "es": "Full en el que una mano agarra la pierna extendida en el aire. El giro de 360 grados gira con el agarre terada y cae de pie.",
+    "en": "A full in which one hand grabs the extended leg in the air. The 360-degree turn spins with the terada grab and lands on the feet."
+  },
+  "fullUp": {
+    "es": "Full que viaja hacia arriba y atras antes de girar. El cuerpo sube con el pique y completa los 360 grados en la caida para aterrizar de pie.",
+    "en": "A full that travels upward and back before turning. The body rises off the punch and completes the 360 degrees on the way down to land on the feet."
+  },
+  "fullInBackOut": {
+    "es": "Full que entra con media vuelta hacia adentro y sale con media vuelta hacia atras. El giro de 360 grados reparte las dos medias vueltas a los lados del mortal.",
+    "en": "A full that enters with a half twist inward and exits with a half twist backward. The 360-degree turn splits the two half turns around the flip."
+  },
+  "fullInFullOut": {
+    "es": "Full que entra con un giro completo hacia adentro y sale con otro giro completo hacia atras. La cadera encadena dos vueltas de 360 grados alrededor del mortal.",
+    "en": "A full that enters with a complete inward turn and exits with another complete backward turn. The hips chain two 360-degree turns around the flip."
+  },
+  "gainerArabian": {
+    "es": "Gainer, es decir mortal atras que viaja hacia adelante, con media vuelta final. El despegue va al frente y la cadera agrega el medio giro antes de aterrizar de pie.",
+    "en": "A gainer, a backflip that travels forward, with a final half twist. The takeoff goes forward and the hips add the half turn before landing on the feet."
+  },
+  "gainerFigure4": {
+    "es": "Gainer en el que una pierna cruza sobre la otra formando un cuatro. La rotacion viaja hacia adelante y el cruce de piernas marca el vuelo antes de aterrizar de pie.",
+    "en": "A gainer in which one leg crosses over the other forming a figure four. The rotation travels forward and the leg cross marks the flight before landing on the feet."
+  },
+  "gainerFlash": {
+    "es": "Gainer que agrega la patada del flash kick. La rotacion viaja al frente y en el punto mas alto una pierna sale en patada antes de aterrizar de pie.",
+    "en": "A gainer that adds the flash kick leg snap. The rotation travels forward and at the highest point one leg snaps out in a kick before landing on the feet."
+  },
+  "gainerHelicoptero": {
+    "es": "Gainer que encadena el giro acostado del helicoptero. El cuerpo viaja hacia adelante y la cadera agrega la vuelta tendida antes de aterrizar de pie.",
+    "en": "A gainer that chains the laid-back helicoptero turn. The body travels forward and the hips add the laid-back spin before landing on the feet."
+  },
+  "gainerHook": {
+    "es": "Gainer que remata con un gancho de pierna. La rotacion viaja al frente y la pierna engancha al final antes de aterrizar de pie.",
+    "en": "A gainer that finishes with a leg hook. The rotation travels forward and the leg hooks at the end before landing on the feet."
+  },
+  "gainerRocketboi": {
+    "es": "Gainer en el que las piernas se disparan hacia arriba en el estilo rocketboi. El cuerpo viaja al frente con las piernas extendidas y cae de pie.",
+    "en": "A gainer in which the legs shoot upward in the rocketboi style. The body travels forward with the legs extended and lands on the feet."
+  },
+  "gainerScissor": {
+    "es": "Gainer que agrega un tijeretazo de piernas. La rotacion viaja hacia adelante y las piernas cruzan y abren antes de aterrizar de pie.",
+    "en": "A gainer that adds a scissor of the legs. The rotation travels forward and the legs cross and open before landing on the feet."
+  },
+  "gainerScissorSwipe": {
+    "es": "Gainer que suma al tijeretazo un barrido de pierna. El vuelo hacia adelante encadena el cruce y el barrido antes de aterrizar de pie.",
+    "en": "A gainer that adds a leg swipe to the scissor. The forward flight chains the cross and the swipe before landing on the feet."
+  },
+  "gainerSidewinder": {
+    "es": "Gainer que encadena el barrido lateral del sidewinder. La rotacion viaja al frente y una pierna barre de costado antes del aterrizaje de pie.",
+    "en": "A gainer that chains the sidewinder lateral sweep. The rotation travels forward and one leg sweeps to the side before landing on the feet."
+  }
+}

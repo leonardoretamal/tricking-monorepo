@@ -11,6 +11,8 @@
       "provider": "Respondido por {name}.",
       "providerBadge": "Respondido por {name}",
       "comboAsk": "¿La quieres con los trucos que ya tienes o una combinación libre con trucos del catálogo?",
+      "comboKnownIntro": "Combinación con los trucos que ya tienes:",
+      "comboFreeIntro": "Combinación libre con trucos del catálogo:",
       "inputLabel": "Escribe tu pregunta",
       "inputPlaceholder": "Por ejemplo: cómo se hace un b-twist",
       "send": "Enviar",
@@ -25,6 +27,22 @@
       "rateLimited": "Hiciste demasiadas preguntas seguidas. Espera un momento e intenta de nuevo.",
       "dailyLimit": "Se alcanzó el límite diario de consultas al asistente. Intenta mañana.",
       "retry": "Reintentar"
+    },
+    "prompt": {
+      "contextIntro": "Contexto del catálogo (úsalo solo si es relevante):",
+      "contextEmpty": "- Sin resultados en el catálogo para esta pregunta.",
+      "trickLabel": "Truco",
+      "sectionLabel": "sección",
+      "difficultyLabel": "dificultad",
+      "descriptionLabel": "descripción",
+      "howToLabel": "cómo se hace",
+      "gazeLabel": "Tip de mirada",
+      "warningLabel": "advertencia",
+      "transitionLabel": "Transición",
+      "knownIntro": "Trucos que el usuario YA tiene (no se los expliques desde cero ni los recomiendes como nuevos):",
+      "knownMore": "y {count} más",
+      "suggestionsIntro": "Trucos del catálogo que PUEDES recomendar (continuaciones reales de lo que ya sabe). NO recomiendes ningún truco que no esté en esta lista ni en el contexto del catálogo:",
+      "catalogSampleIntro": "Muestra aleatoria del catálogo para una combinación libre (puedes elegir trucos de aquí). Solo nombres reales:"
     },
     "combos": {
       "heading": "Generador de combinaciones",

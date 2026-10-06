@@ -38,6 +38,7 @@ export interface AssistantGazeTipContext {
 export interface AssistantTransitionContext {
   slug: string;
   name: string;
+  description: string | null;
   descriptionEs: string | null;
 }
 
@@ -82,6 +83,7 @@ type GazeTipContextRow = {
 type TransitionContextRow = {
   slug: string;
   name: string;
+  description: string | null;
   description_es: string | null;
 };
 
@@ -152,7 +154,7 @@ export async function searchContextForAssistant(
   `);
 
   const transitionRows = await db.execute<TransitionContextRow>(sql`
-    SELECT tr.slug, tr.name, tr.description_es
+    SELECT tr.slug, tr.name, tr.description, tr.description_es
     FROM transitions tr
     WHERE tr.deleted_at IS NULL
       AND (
@@ -186,6 +188,7 @@ export async function searchContextForAssistant(
     transitions: transitionRows.rows.map((row) => ({
       slug: row.slug,
       name: row.name,
+      description: row.description,
       descriptionEs: row.description_es,
     })),
   };

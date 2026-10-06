@@ -1,0 +1,322 @@
+{
+  "gainerTuck": {
+    "es": "Es un mortal atrás que viaja hacia adelante. La entrada despega de un pie con el impulso hacia el frente, el cuerpo se agrupa en el aire y la mirada busca el piso antes de aterrizar con los dos pies.",
+    "en": "It is a backflip that travels forward. The setup takes off from one foot driving forward, the body tucks in the air and the gaze finds the floor before landing on both feet."
+  },
+  "gainerXOut": {
+    "es": "Es un gainer con las piernas abiertas en equis en el punto más alto. Tras el despegue hacia adelante se abren las piernas y se cierran rápido para completar el mortal y aterrizar de pie.",
+    "en": "It is a gainer with the legs spread in an X at the peak. After the forward takeoff the legs open and snap shut quickly to finish the flip and land on the feet."
+  },
+  "gainerInShantOut": {
+    "es": "Es un gainer que gira media vuelta hacia adentro al entrar y media vuelta al salir. La entrada despega hacia adelante, el cuerpo completa el mortal con los dos medios giros y aterriza de frente.",
+    "en": "It is a gainer that turns a half twist inward on the way in and a half twist on the way out. The setup takes off forward, the body completes the flip with both half turns and lands facing forward."
+  },
+  "handcuffCorkscrew": {
+    "es": "Es un corkscrew con un brazo esposado, es decir pegado al cuerpo o detrás de la espalda. La entrada despega de un pie, la cadera gira sobre la cabeza y el brazo firme ayuda a mantener el eje hasta el aterrizaje.",
+    "en": "It is a corkscrew with one arm handcuffed, held to the body or behind the back. The setup takes off from one foot, the hips spin over the head and the locked arm helps hold the axis into the landing."
+  },
+  "ironmanFullSnapu": {
+    "es": "Es un full snapu con los brazos extendidos al frente como Ironman. La entrada despega de un pie, el cuerpo gira el full con la pierna de gancho y aterriza con los brazos todavía estirados.",
+    "en": "It is a full snapu with the arms stretched forward like Ironman. The setup takes off from one foot, the body turns the full with the hooking leg and lands with the arms still extended."
+  },
+  "kickFull": {
+    "es": "Es un mortal atrás con giro completo que remata con una patada. La entrada despega de dos pies, el cuerpo gira 360 grados y la pierna sale de patada antes de aterrizar.",
+    "en": "It is a backflip with a full twist that finishes with a kick. The setup takes off from both feet, the body turns 360 degrees and the leg snaps out in a kick before landing."
+  },
+  "kickFullSnapu": {
+    "es": "Es un kick full al que se le suma el gancho del snapu. La entrada despega de dos pies, el giro completo se combina con la pierna de gancho y el aterrizaje absorbe con las rodillas.",
+    "en": "It is a kick full with the snapu hook added. The setup takes off from both feet, the full twist combines with the hooking leg and the landing absorbs through the knees."
+  },
+  "lonestarHyperhook": {
+    "es": "Es un lonestar que termina en hyperhook. La entrada despega de un pie, el cuerpo se recuesta en el aire y la pierna sale en gancho extendido antes de caer de pie.",
+    "en": "It is a lonestar that finishes in a hyperhook. The setup takes off from one foot, the body leans back in the air and the leg swings out in an extended hook before landing on the feet."
+  },
+  "lonestarTwist": {
+    "es": "Es un lonestar con un giro extra de cuerpo. La entrada despega de un pie, la pierna marca el lonestar y el torso suma el giro antes de aterrizar.",
+    "en": "It is a lonestar with an extra body twist. The setup takes off from one foot, the leg marks the lonestar and the torso adds the twist before landing."
+  },
+  "outstretchedBoxcutter": {
+    "es": "Es un boxcutter con el cuerpo estirado. La entrada despega de un pie, el torso viaja largo y la pierna corta en diagonal antes del aterrizaje.",
+    "en": "It is a boxcutter with the body stretched out. The setup takes off from one foot, the torso travels long and the leg slices diagonally before landing."
+  },
+  "outstretchedCorkscrew": {
+    "es": "Es un corkscrew con el cuerpo extendido en lugar de agrupado. La entrada despega de un pie, el giro pasa sobre la cabeza con las piernas largas y aterriza de pie.",
+    "en": "It is a corkscrew with the body extended instead of tucked. The setup takes off from one foot, the rotation passes over the head with the legs long and lands on the feet."
+  },
+  "popDonutBoyRound": {
+    "es": "Es un donut boy round con entrada pop. La entrada despega de un pie de forma explosiva, el cuerpo gira y la pierna remata en patada circular antes de aterrizar.",
+    "en": "It is a donut boy round with a pop takeoff. The setup drives off one foot explosively, the body spins and the leg finishes in a round kick before landing."
+  },
+  "popcornHyper": {
+    "es": "Es un popcorn en versión hyper. La entrada despega de un pie con un salto suelto, el cuerpo se recuesta y gira con la pierna extendida hasta el aterrizaje.",
+    "en": "It is a popcorn in the hyper version. The setup takes off from one foot with a loose bounce, the body leans back and turns with the leg extended into the landing."
+  },
+  "rocketboiRound": {
+    "es": "Es un rocketboi que termina en patada circular. La entrada despega de un pie con impulso rápido, el cuerpo gira como un cohete y la pierna remata la patada antes de caer.",
+    "en": "It is a rocketboi that finishes with a round kick. The setup takes off from one foot with fast drive, the body spins like a rocket and the leg finishes the kick before landing."
+  },
+  "rocketboiScissorSwitch": {
+    "es": "Es un rocketboi con cambio de tijera en el aire. La entrada despega de un pie, las piernas se cruzan y se cambian y el cuerpo cierra el giro antes de aterrizar.",
+    "en": "It is a rocketboi with a scissor switch in the air. The setup takes off from one foot, the legs cross and switch and the body closes the spin before landing."
+  },
+  "rodeoBackflip": {
+    "es": "Es un mortal atrás con giro de rodeo, es decir fuera de eje y con el cuerpo doblado de lado. La entrada despega de un pie, el torso se inclina y la pierna patea mientras gira, y el aterrizaje busca el piso de frente.",
+    "en": "It is a backflip with a rodeo twist, off axis and with the body bent to the side. The setup takes off from one foot, the torso tilts and the leg kicks as it turns, and the landing finds the floor facing forward."
+  },
+  "shurikaneLateHook": {
+    "es": "Es un shuriken con gancho tardío. La entrada despega de un pie, el primer giro pasa rápido y la pierna sale en gancho al final de la rotación, justo antes de aterrizar.",
+    "en": "It is a shuriken with a late hook. The setup takes off from one foot, the first spin passes fast and the leg swings out in a hook at the end of the rotation, just before landing."
+  },
+  "shurikenCutter": {
+    "es": "Es un giro con pierna de corte tipo shuriken. La entrada despega de un pie, la cadera gira y la pierna corta en diagonal como una hoja antes del aterrizaje.",
+    "en": "It is a spin with a shuriken-style cutting leg. The setup takes off from one foot, the hips turn and the leg slices diagonally like a blade before landing."
+  },
+  "shurikenCutterScissor": {
+    "es": "Es un shuriken cutter con tijera de piernas. La entrada despega de un pie, el corte inicial se encadena con un cruce de tijera y el cuerpo cierra el giro al caer.",
+    "en": "It is a shuriken cutter with a leg scissor. The setup takes off from one foot, the initial slice links into a scissor cross and the body closes the spin on landing."
+  },
+  "straddleCorkscrew": {
+    "es": "Es un corkscrew con las piernas abiertas. La entrada despega de un pie, el giro pasa sobre la cabeza con las piernas en straddle y se cierran para aterrizar.",
+    "en": "It is a corkscrew with the legs open. The setup takes off from one foot, the rotation passes over the head with the legs in a straddle and they close for the landing."
+  },
+  "teradaFull": {
+    "es": "Es un full en versión terada, recostado y con la pierna extendida. La entrada despega de un pie, el cuerpo gira 360 grados casi tumbado en el aire y aterriza de pie.",
+    "en": "It is a full in the terada version, leaning back with the leg extended. The setup takes off from one foot, the body turns 360 degrees almost flat in the air and lands on the feet."
+  },
+  "touchdownCorkscrew": {
+    "es": "Es un corkscrew que baja con una mano al piso, como un touchdown. La entrada despega de un pie, el giro sobre la cabeza termina con el apoyo de la mano antes de ponerse de pie.",
+    "en": "It is a corkscrew that comes down touching one hand to the floor, like a touchdown. The setup takes off from one foot, the spin over the head ends with the hand plant before standing up."
+  },
+  "touchdownFull": {
+    "es": "Es un mortal atrás con giro completo que toca el piso con una mano al aterrizar. La entrada despega de dos pies, el cuerpo gira 360 grados y la mano amortigua la caída.",
+    "en": "It is a backflip with a full twist that touches the floor with one hand on landing. The setup takes off from both feet, the body turns 360 degrees and the hand cushions the drop."
+  },
+  "xOutFull": {
+    "es": "Es un full con las piernas en equis en el aire. La entrada despega de un pie, las piernas se abren y se cierran mientras el cuerpo completa el giro y aterriza.",
+    "en": "It is a full with the legs in an X in the air. The setup takes off from one foot, the legs open and close while the body completes the twist and lands."
+  },
+  "boxcutterTurbo": {
+    "es": "Es un boxcutter en versión turbo, con el giro acelerado y tardío. La entrada despega de un pie, el corte de la pierna llega al final de una rotación rápida y el aterrizaje absorbe el impulso.",
+    "en": "It is a boxcutter in the turbo version, with an accelerated late spin. The setup takes off from one foot, the leg slice comes at the end of a fast rotation and the landing absorbs the momentum."
+  },
+  "corkscrewCrowdAwakener": {
+    "es": "Es un corkscrew que encadena un crowd awakener. La entrada despega de un pie, el giro sobre la cabeza se enlaza con el golpe bajo que despierta a la gente y termina de pie.",
+    "en": "It is a corkscrew linked to a crowd awakener. The setup takes off from one foot, the spin over the head links into the low slap that wakes the crowd and finishes on the feet."
+  },
+  "corkscrewCrowdAwakenerHyper": {
+    "es": "Es un corkscrew crowd awakener en versión hyper. La entrada despega de un pie, el cuerpo se recuesta al girar y el remate bajo sale con la pierna extendida antes de aterrizar.",
+    "en": "It is a corkscrew crowd awakener in the hyper version. The setup takes off from one foot, the body leans back as it turns and the low finish comes out with the leg extended before landing."
+  },
+  "corkscrewCrowdAwakenerKnife": {
+    "es": "Es un corkscrew crowd awakener con pierna de cuchillo. La entrada despega de un pie, el giro se enlaza con un remate recto de pierna y el aterrizaje cierra el movimiento.",
+    "en": "It is a corkscrew crowd awakener with a knife leg. The setup takes off from one foot, the spin links into a straight leg finish and the landing closes the move."
+  },
+  "corkscrewCrowdAwakenerRound": {
+    "es": "Es un corkscrew crowd awakener que termina en patada circular. La entrada despega de un pie, el giro y el remate bajo se encadenan con una patada redonda antes de caer de pie.",
+    "en": "It is a corkscrew crowd awakener that ends in a round kick. The setup takes off from one foot, the spin and low finish chain into a round kick before landing on the feet."
+  },
+  "corkscrewDoubleleg": {
+    "es": "Es un corkscrew que pasa a doble pierna. La entrada despega de un pie, el giro sobre la cabeza lleva las dos piernas juntas por debajo y aterriza de pie.",
+    "en": "It is a corkscrew that moves into a double leg. The setup takes off from one foot, the spin over the head carries both legs together underneath and lands on the feet."
+  },
+  "corkscrewDoublelegHyperhook": {
+    "es": "Es un corkscrew doubleleg que remata en hyperhook. La entrada despega de un pie, las dos piernas pasan juntas y al final sale el gancho extendido antes del aterrizaje.",
+    "en": "It is a corkscrew doubleleg that finishes in a hyperhook. The setup takes off from one foot, both legs pass together and at the end the extended hook swings out before landing."
+  },
+  "corkscrewDoublelegLateRound": {
+    "es": "Es un corkscrew doubleleg con patada circular tardía. La entrada despega de un pie, la doble pierna se completa y la patada redonda llega al final de la rotación.",
+    "en": "It is a corkscrew doubleleg with a late round kick. The setup takes off from one foot, the double leg completes and the round kick arrives at the end of the rotation."
+  },
+  "corkscrewDoublelegTwist": {
+    "es": "Es un corkscrew doubleleg con un giro extra de cuerpo. La entrada despega de un pie, las dos piernas pasan y el torso suma el giro antes de caer.",
+    "en": "It is a corkscrew doubleleg with an extra body twist. The setup takes off from one foot, both legs pass and the torso adds the twist before landing."
+  },
+  "corkscrewFeilong": {
+    "es": "Es un corkscrew en versión feilong, recostado y con la pierna larga. La entrada despega de un pie, el giro pasa sobre la cabeza casi acostado y el cuerpo aterriza de pie.",
+    "en": "It is a corkscrew in the feilong version, leaning back with a long leg. The setup takes off from one foot, the spin passes over the head almost lying down and the body lands on the feet."
+  },
+  "corkscrewFeilongKnife": {
+    "es": "Es un corkscrew feilong con remate de pierna de cuchillo. La entrada despega de un pie, el giro recostado se cierra con un corte recto de pierna antes del aterrizaje.",
+    "en": "It is a corkscrew feilong with a knife leg finish. The setup takes off from one foot, the leaning spin closes with a straight leg cut before landing."
+  },
+  "corkscrewRound": {
+    "es": "Es un corkscrew que termina en patada circular. La entrada despega de un pie, el giro sobre la cabeza se encadena con la patada redonda y el aterrizaje absorbe la caída.",
+    "en": "It is a corkscrew that ends in a round kick. The setup takes off from one foot, the spin over the head links into the round kick and the landing absorbs the drop."
+  },
+  "corkscrewShuriken": {
+    "es": "Es un corkscrew que pasa a shuriken. La entrada despega de un pie, el primer giro sobre la cabeza se enlaza con el corte giratorio y el cuerpo termina de pie.",
+    "en": "It is a corkscrew that moves into a shuriken. The setup takes off from one foot, the first spin over the head links into the spinning cut and the body finishes on the feet."
+  },
+  "corkscrewShurikenKyro": {
+    "es": "Es un corkscrew shuriken en versión kyro. La entrada despega de un pie, el giro y el corte se encadenan con un eje retorcido y el aterrizaje cierra el movimiento.",
+    "en": "It is a corkscrew shuriken in the kyro version. The setup takes off from one foot, the spin and cut chain with a twisted axis and the landing closes the move."
+  },
+  "corkscrewSnapuHyper": {
+    "es": "Es un corkscrew con gancho snapu y cuerpo recostado. La entrada despega de un pie, el giro se pasa sobre el hombro y la pierna de gancho sale extendida antes de aterrizar.",
+    "en": "It is a corkscrew with a snapu hook and the body leaning back. The setup takes off from one foot, the spin passes over the shoulder and the hooking leg swings out extended before landing."
+  },
+  "corkscrewSwipeLateRound": {
+    "es": "Es un corkscrew con swipe y patada circular tardía. La entrada despega de un pie, el giro baja en un barrido y la patada redonda llega al final de la rotación.",
+    "en": "It is a corkscrew with a swipe and a late round kick. The setup takes off from one foot, the spin drops into a sweep and the round kick arrives at the end of the rotation."
+  },
+  "corkscrewSwipeknife": {
+    "es": "Es un corkscrew con swipeknife. La entrada despega de un pie, el giro sobre la cabeza se cierra con un barrido corto y recto de pierna antes de caer de pie.",
+    "en": "It is a corkscrew with a swipeknife. The setup takes off from one foot, the spin over the head closes with a short straight leg sweep before landing on the feet."
+  },
+  "corkscrewWackknife": {
+    "es": "Es un corkscrew con remate wackknife. La entrada despega de un pie, el giro se encadena con un corte de pierna recto y suelto, y el aterrizaje cierra la caída.",
+    "en": "It is a corkscrew with a wackknife finish. The setup takes off from one foot, the spin links into a loose straight leg cut and the landing closes the drop."
+  },
+  "dragonflyCorkscrewDoubleleg": {
+    "es": "Es un dragón que enlaza un corkscrew doubleleg. La entrada despega de un pie con el cuerpo horizontal, el giro sobre la cabeza lleva las dos piernas juntas y aterriza de pie.",
+    "en": "It is a dragonfly that links into a corkscrew doubleleg. The setup takes off from one foot with the body horizontal, the spin over the head carries both legs together and lands on the feet."
+  },
+  "dragonflyCorkscrewFeilongKnife": {
+    "es": "Es un dragón que pasa a corkscrew feilong con cuchillo. La entrada despega de un pie, el cuerpo se recuesta al girar y la pierna remata recta antes de aterrizar.",
+    "en": "It is a dragonfly that moves into a corkscrew feilong with a knife. The setup takes off from one foot, the body leans back as it turns and the leg finishes straight before landing."
+  },
+  "dragonflyCorkscrewRound": {
+    "es": "Es un dragón que enlaza un corkscrew y termina en patada circular. La entrada despega de un pie, el giro sobre la cabeza se encadena con la patada redonda y el aterrizaje absorbe.",
+    "en": "It is a dragonfly that links a corkscrew and ends in a round kick. The setup takes off from one foot, the spin over the head links into the round kick and the landing absorbs."
+  },
+  "dragonflyCorkscrewSidewinderLateRound": {
+    "es": "Es un dragón con corkscrew y patada lateral tardía. La entrada despega de un pie, el giro se cruza con un remate de costado y la patada redonda llega al final.",
+    "en": "It is a dragonfly with a corkscrew and a late side kick. The setup takes off from one foot, the spin crosses into a side finish and the round kick arrives at the end."
+  },
+  "dragonflyCorkscrewSwipeknife": {
+    "es": "Es un dragón que enlaza un corkscrew swipeknife. La entrada despega de un pie, el giro sobre la cabeza baja en un barrido recto de pierna y el cuerpo aterriza de pie.",
+    "en": "It is a dragonfly that links a corkscrew swipeknife. The setup takes off from one foot, the spin over the head drops into a straight leg sweep and the body lands on the feet."
+  },
+  "fullCobraTwist": {
+    "es": "Es un full con torsión de cobra. La entrada despega de un pie, el cuerpo se enrosca de lado mientras completa el giro y el aterrizaje busca el piso de frente.",
+    "en": "It is a full with a cobra twist. The setup takes off from one foot, the body coils to the side while completing the turn and the landing finds the floor facing forward."
+  },
+  "fullCrowdAwakener": {
+    "es": "Es un full que encadena un crowd awakener. La entrada despega de un pie, el giro completo se enlaza con el golpe bajo que despierta a la gente y termina de pie.",
+    "en": "It is a full linked to a crowd awakener. The setup takes off from one foot, the full twist links into the low slap that wakes the crowd and finishes on the feet."
+  },
+  "fullCrowdAwakenerSnapu": {
+    "es": "Es un full crowd awakener con gancho snapu. La entrada despega de un pie, el giro y el remate bajo se cierran con la pierna de gancho antes de aterrizar.",
+    "en": "It is a full crowd awakener with a snapu hook. The setup takes off from one foot, the spin and low finish close with the hooking leg before landing."
+  },
+  "fullDoubleleg": {
+    "es": "Es un full que pasa a doble pierna. La entrada despega de un pie, el giro completo lleva las dos piernas juntas por debajo y aterriza de pie.",
+    "en": "It is a full that moves into a double leg. The setup takes off from one foot, the full twist carries both legs together underneath and lands on the feet."
+  },
+  "fullDoublelegHawkeye": {
+    "es": "Es un full doubleleg con remate hawkeye. La entrada despega de un pie, las dos piernas pasan juntas y al final la pierna barre en gancho extendido antes de caer.",
+    "en": "It is a full doubleleg with a hawkeye finish. The setup takes off from one foot, both legs pass together and at the end the leg sweeps in an extended hook before landing."
+  },
+  "fullDoublelegHyperhook": {
+    "es": "Es un full doubleleg que termina en hyperhook. La entrada despega de un pie, la doble pierna se completa y el gancho extendido sale justo antes del aterrizaje.",
+    "en": "It is a full doubleleg that ends in a hyperhook. The setup takes off from one foot, the double leg completes and the extended hook swings out just before landing."
+  },
+  "fullDoublelegTwist": {
+    "es": "Es un full doubleleg con giro extra. La entrada despega de un pie, las dos piernas pasan juntas y el torso suma otro giro antes de caer.",
+    "en": "It is a full doubleleg with an extra twist. The setup takes off from one foot, both legs pass together and the torso adds another turn before landing."
+  },
+  "fullDoublelegTwistDoubleleg": {
+    "es": "Es un full doubleleg que añade giro y otra doble pierna. La entrada despega de un pie y el movimiento encadena dos pasadas de piernas con giro entre medio hasta aterrizar.",
+    "en": "It is a full doubleleg that adds a twist and another double leg. The setup takes off from one foot and the move chains two leg passes with a twist in between into the landing."
+  },
+  "fullFeilong": {
+    "es": "Es un full en versión feilong, recostado y con la pierna larga. La entrada despega de un pie, el giro completo se hace casi acostado en el aire y el cuerpo aterriza de pie.",
+    "en": "It is a full in the feilong version, leaning back with a long leg. The setup takes off from one foot, the full twist is done almost lying down in the air and the body lands on the feet."
+  },
+  "fullFeilongKnife": {
+    "es": "Es un full feilong con remate de cuchillo. La entrada despega de un pie, el giro recostado se cierra con un corte recto de pierna antes del aterrizaje.",
+    "en": "It is a full feilong with a knife finish. The setup takes off from one foot, the leaning spin closes with a straight leg cut before landing."
+  },
+  "fullFeilongLateSwipeknife": {
+    "es": "Es un full feilong que remata tarde con un swipeknife. La entrada despega de un pie, el giro recostado se completa y el barrido recto de pierna sale al final de la rotación.",
+    "en": "It is a full feilong that finishes late with a swipeknife. The setup takes off from one foot, the leaning spin completes and the straight leg sweep comes out at the end of the rotation."
+  },
+  "fullHyper": {
+    "es": "Es un full en versión hyper, con el cuerpo recostado y una pierna extendida. La entrada despega de un pie, el giro completo se hace sin agrupar del todo y aterriza de pie.",
+    "en": "It is a full in the hyper version, with the body leaning back and one leg extended. The setup takes off from one foot, the full twist is done without a full tuck and lands on the feet."
+  },
+  "fullHyperhook": {
+    "es": "Es un full que termina en hyperhook. La entrada despega de un pie, el giro completo se enlaza con el gancho extendido de pierna antes de caer.",
+    "en": "It is a full that ends in a hyperhook. The setup takes off from one foot, the full twist links into the extended leg hook before landing."
+  },
+  "fullHyperhookTurbo": {
+    "es": "Es un full hyperhook en versión turbo, con el gancho tardío y acelerado. La entrada despega de un pie, el giro completo se acelera y el gancho sale al final antes del aterrizaje.",
+    "en": "It is a full hyperhook in the turbo version, with a late accelerated hook. The setup takes off from one foot, the full twist speeds up and the hook swings out at the end before landing."
+  },
+  "fullLateRound": {
+    "es": "Es un full con patada circular tardía. La entrada despega de un pie, el cuerpo completa el giro y la patada redonda sale justo antes de aterrizar.",
+    "en": "It is a full with a late round kick. The setup takes off from one foot, the body completes the twist and the round kick comes out just before landing."
+  },
+  "fullPikeRound": {
+    "es": "Es un full con posición de pike y patada circular. La entrada despega de un pie, el cuerpo se dobla en pike mientras gira y la pierna remata la patada redonda al caer.",
+    "en": "It is a full with a pike position and a round kick. The setup takes off from one foot, the body folds into a pike as it turns and the leg finishes the round kick on landing."
+  },
+  "fullRound": {
+    "es": "Es un full que termina en patada circular. La entrada despega de un pie, el giro completo se encadena con la patada redonda y el aterrizaje absorbe la caída.",
+    "en": "It is a full that ends in a round kick. The setup takes off from one foot, the full twist links into the round kick and the landing absorbs the drop."
+  },
+  "fullShuriken": {
+    "es": "Es un full que pasa a shuriken. La entrada despega de un pie, el giro completo se enlaza con el corte giratorio de pierna y el cuerpo termina de pie.",
+    "en": "It is a full that moves into a shuriken. The setup takes off from one foot, the full twist links into the spinning leg cut and the body finishes on the feet."
+  },
+  "fullShurikenHyperhook": {
+    "es": "Es un full shuriken que remata en hyperhook. La entrada despega de un pie, el giro completo y el corte se cierran con un gancho extendido antes del aterrizaje.",
+    "en": "It is a full shuriken that finishes in a hyperhook. The setup takes off from one foot, the full twist and cut close with an extended hook before landing."
+  },
+  "fullSnapuDoubleleg": {
+    "es": "Es un full snapu que pasa a doble pierna. La entrada despega de un pie, el giro con gancho se encadena con las dos piernas juntas y aterriza de pie.",
+    "en": "It is a full snapu that moves into a double leg. The setup takes off from one foot, the hook spin links into both legs passing together and lands on the feet."
+  },
+  "fullSnapuHyper": {
+    "es": "Es un full snapu en versión hyper. La entrada despega de un pie, el giro se pasa sobre el hombro con el cuerpo recostado y la pierna de gancho sale extendida antes de aterrizar.",
+    "en": "It is a full snapu in the hyper version. The setup takes off from one foot, the spin passes over the shoulder with the body leaning back and the hooking leg swings out extended before landing."
+  },
+  "fullSnapuHyperhook": {
+    "es": "Es un full snapu que termina en hyperhook. La entrada despega de un pie, el giro con gancho se enlaza con un segundo gancho extendido antes de caer.",
+    "en": "It is a full snapu that ends in a hyperhook. The setup takes off from one foot, the hook spin links into a second extended hook before landing."
+  },
+  "fullSnapuRound": {
+    "es": "Es un full snapu con patada circular. La entrada despega de un pie, el giro con gancho se encadena con la patada redonda y el aterrizaje absorbe.",
+    "en": "It is a full snapu with a round kick. The setup takes off from one foot, the hook spin links into the round kick and the landing absorbs."
+  },
+  "fullSnapuTwist": {
+    "es": "Es un full snapu con giro extra de cuerpo. La entrada despega de un pie, el gancho se combina con otro giro del torso antes de caer.",
+    "en": "It is a full snapu with an extra body twist. The setup takes off from one foot, the hook combines with another torso turn before landing."
+  },
+  "fullSwipeLateRound": {
+    "es": "Es un full con swipe y patada circular tardía. La entrada despega de un pie, el giro baja en un barrido y la patada redonda llega al final de la rotación.",
+    "en": "It is a full with a swipe and a late round kick. The setup takes off from one foot, the twist drops into a sweep and the round kick arrives at the end of the rotation."
+  },
+  "fullSwipeknife": {
+    "es": "Es un full que termina en swipeknife. La entrada despega de un pie, el giro completo baja en un barrido corto y recto de pierna antes de aterrizar.",
+    "en": "It is a full that ends in a swipeknife. The setup takes off from one foot, the full twist drops into a short straight leg sweep before landing."
+  },
+  "fullTaiFighterKnife": {
+    "es": "Es un full en versión tai fighter con remate de cuchillo. La entrada despega de un pie, el giro se marca con guardia de pelea y la pierna corta recta antes de caer.",
+    "en": "It is a full in the tai fighter version with a knife finish. The setup takes off from one foot, the twist is marked with a fighting guard and the leg cuts straight before landing."
+  },
+  "fullTaiFighterHyperhook": {
+    "es": "Es un full tai fighter que remata en hyperhook. La entrada despega de un pie, el giro con guardia de pelea se cierra con un gancho extendido antes del aterrizaje.",
+    "en": "It is a full tai fighter that finishes in a hyperhook. The setup takes off from one foot, the twist with a fighting guard closes with an extended hook before landing."
+  },
+  "fullTwist": {
+    "es": "Es un mortal atrás con giro completo de 360 grados. La entrada despega de dos pies o de uno, el cuerpo gira apretado en el aire y aterriza de pie mirando al frente.",
+    "en": "It is a backflip with a full 360-degree twist. The setup takes off from both feet or one, the body turns tight in the air and lands on the feet facing forward."
+  },
+  "fullUpCrowdAwakener": {
+    "es": "Es un full que viaja hacia arriba y encadena un crowd awakener. La entrada despega de un pie, el giro sube antes del remate bajo que despierta a la gente y termina de pie.",
+    "en": "It is a full that travels up and links into a crowd awakener. The setup takes off from one foot, the twist rises before the low slap that wakes the crowd and finishes on the feet."
+  },
+  "fullUpDoubleleg": {
+    "es": "Es un full que sube y pasa a doble pierna. La entrada despega de un pie, el giro gana altura y lleva las dos piernas juntas por debajo antes de aterrizar.",
+    "en": "It is a full that rises and moves into a double leg. The setup takes off from one foot, the twist gains height and carries both legs together underneath before landing."
+  },
+  "fullUpHyperhook": {
+    "es": "Es un full que sube y remata en hyperhook. La entrada despega de un pie, el giro gana altura y el gancho extendido sale al final antes de caer.",
+    "en": "It is a full that rises and finishes in a hyperhook. The setup takes off from one foot, the twist gains height and the extended hook swings out at the end before landing."
+  },
+  "fullUpRocketboiTwist": {
+    "es": "Es un full up con remate rocketboi twist. La entrada despega de un pie, el giro sube como un cohete y el cuerpo encadena otro giro rápido antes de aterrizar.",
+    "en": "It is a full up with a rocketboi twist finish. The setup takes off from one foot, the twist rises like a rocket and the body chains another fast turn before landing."
+  }
+}

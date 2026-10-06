@@ -40,7 +40,12 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados",
-    "navigation": "Navegación",
+    "groups": {
+      "catalog": "Catálogo",
+      "learn": "Aprender",
+      "site": "Sitio"
+    },
+    "contact": "Contáctanos",
     "legal": "Aviso legal",
     "privacy": "Política de privacidad",
     "disclaimer": "Sitio no afiliado a Loopkicks ni a Kojo's Trick Lab. Los vídeos y tutoriales son de sus autores y se muestran con atribución y enlace al original. Si eres titular de un contenido y quieres retirarlo, contáctanos."
