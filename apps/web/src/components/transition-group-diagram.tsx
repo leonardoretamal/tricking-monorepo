@@ -47,7 +47,7 @@ export function TransitionGroupDiagram({ group, label, caption }: TransitionGrou
   const { landing, takeoff } = feetFor(bucket);
 
   return (
-    <figure className="flex flex-col items-center gap-3 rounded-box border border-border bg-base-200/40 p-4">
+    <figure className="tb-surface flex flex-col items-center gap-3 p-4">
       <svg
         role="img"
         aria-label={label}

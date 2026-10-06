@@ -392,7 +392,7 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
         ) : null}
       </div>
 
-      <div className="relative h-[65vh] min-h-[420px] overflow-hidden rounded-box border border-border bg-base-200">
+      <div className="tb-surface relative h-[65vh] min-h-[420px] overflow-hidden">
         {!mounted ? (
           <div className="p-4">
             <TrickListSkeleton items={3} />

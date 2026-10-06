@@ -104,7 +104,9 @@ export function Accordion({
                 aria-controls={panelId}
                 onClick={() => toggle(item.id)}
                 onKeyDown={(event) => handleKeyDown(event, index)}
-                className="flex w-full items-center justify-between gap-3 rounded-field px-4 py-3 text-left text-base font-medium text-base-content transition-colors hover:bg-base-300/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className={`flex w-full items-center justify-between gap-3 rounded-field px-4 py-4 text-left text-base font-medium text-base-content transition-colors hover:bg-base-300/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
+                  isOpen ? 'text-primary' : ''
+                }`}
               >
                 <span className="min-w-0 flex-1">{item.header}</span>
                 {expandLabel || collapseLabel ? (
@@ -114,8 +116,8 @@ export function Accordion({
                 ) : null}
                 <ChevronDown
                   aria-hidden="true"
-                  className={`size-5 shrink-0 text-base-content/60 transition-transform ${
-                    isOpen ? 'rotate-180' : ''
+                  className={`size-5 shrink-0 transition-transform ${
+                    isOpen ? 'rotate-180 text-primary' : 'text-base-content/60'
                   }`}
                 />
               </button>

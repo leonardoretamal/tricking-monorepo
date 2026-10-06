@@ -23,10 +23,7 @@ interface TutorialBrowserProps {
 
 function TutorialListSkeleton() {
   return (
-    <div
-      className="flex flex-col gap-2 rounded-box border border-border bg-base-200 px-2 py-2"
-      aria-hidden="true"
-    >
+    <div className="tb-surface flex flex-col gap-2 px-2 py-2" aria-hidden="true">
       {Array.from({ length: 8 }).map((_, index) => (
         <div key={index} className="flex items-center justify-between gap-3 px-4 py-3">
           <div className="skeleton h-5 w-2/3" />
@@ -96,15 +93,13 @@ export function TutorialBrowser({ initial }: TutorialBrowserProps) {
   return (
     <div className="flex flex-col gap-6">
       {generalQuery.data?.content ? (
-        <section className="rounded-box border border-info/30 bg-info/10 px-4 py-3">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-base-content/70">
-            {t('generalHeading')}
-          </h2>
+        <section className="rounded-box border border-info/30 bg-info/10 px-4 py-4">
+          <h2 className="tb-eyebrow text-info">{t('generalHeading')}</h2>
           <p className="mt-1 text-sm text-base-content/85">{generalQuery.data.content}</p>
         </section>
       ) : null}
 
-      <div className="flex flex-col gap-4 rounded-box border border-border bg-base-300/40 p-4 sm:flex-row sm:flex-wrap sm:items-end">
+      <div className="tb-surface flex flex-col gap-4 p-4 sm:flex-row sm:flex-wrap sm:items-end">
         <label className="flex flex-1 flex-col gap-1 text-sm font-medium">
           <span>{t('filters.searchLabel')}</span>
           <span className="relative block">

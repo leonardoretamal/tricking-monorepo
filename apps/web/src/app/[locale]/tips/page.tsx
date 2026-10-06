@@ -29,6 +29,7 @@ export default async function TipsPage({ params }: TipsPageProps) {
   setRequestLocale(locale);
 
   const t = await getTranslations('tips');
+  const tApp = await getTranslations('app');
   const [summaries, types] = await Promise.all([
     listGazeTipSummaries(locale),
     listGazeTipTypes(locale),
@@ -40,10 +41,9 @@ export default async function TipsPage({ params }: TipsPageProps) {
 
   return (
     <section className="flex flex-col gap-8 py-6">
-      <header className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-4xl">
-          {t('title')}
-        </h1>
+      <header className="flex flex-col gap-3">
+        <p className="tb-eyebrow">{tApp('name')}</p>
+        <h1 className="tb-display tb-gradient-text text-4xl sm:text-5xl">{t('title')}</h1>
         <p className="max-w-2xl text-base text-base-content/70">{t('description')}</p>
       </header>
 
@@ -61,7 +61,7 @@ export default async function TipsPage({ params }: TipsPageProps) {
         <EmptyState title={t('states.emptyTitle')} description={t('states.emptyDescription')} />
       ) : (
         <section className="flex flex-col gap-4" aria-labelledby="gaze-types-title">
-          <h2 id="gaze-types-title" className="text-xl font-semibold text-base-content">
+          <h2 id="gaze-types-title" className="tb-display text-2xl text-base-content">
             {t('typesHeading')}
           </h2>
           <GazeTypeTabs types={types} />

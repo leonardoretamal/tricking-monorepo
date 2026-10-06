@@ -24,7 +24,7 @@ export function FeedbackButton() {
     <Link
       href="/feedback"
       aria-label={t('fabLabel')}
-      className="btn btn-primary btn-sm fixed bottom-5 right-5 z-40 gap-2 shadow-lg"
+      className="tb-glow btn btn-primary btn-sm fixed bottom-5 right-5 z-40 gap-2 rounded-full px-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
       <MessageSquarePlus aria-hidden="true" className="size-4" />
       <span className="hidden sm:inline">{t('fabLabel')}</span>

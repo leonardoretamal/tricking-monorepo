@@ -30,7 +30,7 @@ export function ExploreFilters({
   const tTricks = useTranslations('tricks');
 
   return (
-    <div className="flex flex-col gap-4 rounded-box border border-border bg-base-300/40 p-4 sm:flex-row sm:flex-wrap sm:items-end">
+    <div className="tb-surface flex flex-col gap-4 p-4 sm:flex-row sm:flex-wrap sm:items-end">
       <label className="flex flex-col gap-1 text-sm font-medium">
         <span>{t('filters.sectionLabel')}</span>
         <select

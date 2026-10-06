@@ -23,7 +23,7 @@ export function LocaleSwitcher() {
       value={locale}
       onChange={handleChange}
       aria-label={t('switchLanguage')}
-      className="select select-bordered select-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      className="select select-sm border-border bg-base-200/70 text-base-content transition-colors hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
       {LOCALES.map((code) => (
         <option key={code} value={code}>

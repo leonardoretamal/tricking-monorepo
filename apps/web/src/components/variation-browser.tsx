@@ -89,7 +89,7 @@ export function VariationBrowser({ initial }: VariationBrowserProps) {
       <div
         role="tablist"
         aria-label={t('kindFilterLabel')}
-        className="flex w-fit flex-wrap gap-1 rounded-box border border-border bg-base-300/40 p-1"
+        className="tb-surface flex w-fit flex-wrap gap-1 p-1"
       >
         {KINDS.map((kind) => {
           const selected = filters.kind === kind;
@@ -112,7 +112,7 @@ export function VariationBrowser({ initial }: VariationBrowserProps) {
         })}
       </div>
 
-      <div className="flex flex-col gap-4 rounded-box border border-border bg-base-300/40 p-4 sm:flex-row sm:flex-wrap sm:items-end">
+      <div className="tb-surface flex flex-col gap-4 p-4 sm:flex-row sm:flex-wrap sm:items-end">
         <label className="flex flex-1 flex-col gap-1 text-sm font-medium">
           <span>{t('filters.searchLabel')}</span>
           <span className="relative block">

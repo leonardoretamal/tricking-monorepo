@@ -76,7 +76,7 @@ export default async function TrickDetailPage({ params }: TrickDetailPageProps) 
           siteName: tApp('name'),
         })}
       />
-      <article className="flex flex-col gap-6 py-6">
+      <article className="flex flex-col gap-8 py-6">
         <TrickDetailView trick={trick} section={section} sectionTitle={sectionTitle} />
       </article>
     </>

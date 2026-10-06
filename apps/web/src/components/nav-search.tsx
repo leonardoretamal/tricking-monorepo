@@ -70,7 +70,7 @@ export function NavSearch() {
     <form role="search" aria-label={tActions('search')} className="flex items-center">
       <button
         type="button"
-        className="btn btn-ghost btn-square btn-sm md:hidden"
+        className="btn btn-ghost btn-square btn-sm text-base-content/80 transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:hidden"
         aria-label={tActions('search')}
         aria-expanded={open}
         aria-controls={SEARCH_INPUT_ID}
@@ -94,7 +94,9 @@ export function NavSearch() {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         placeholder={tSearch('inputPlaceholder')}
-        className={`input input-bordered input-sm w-40 xl:w-44 ${open ? 'block' : 'hidden'} md:block`}
+        className={`input input-bordered input-sm w-40 border-border bg-base-200/70 text-base-content placeholder:text-base-content/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary xl:w-44 ${
+          open ? 'block' : 'hidden'
+        } md:block`}
       />
     </form>
   );

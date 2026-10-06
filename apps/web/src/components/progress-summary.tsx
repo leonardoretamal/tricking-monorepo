@@ -88,10 +88,10 @@ export function ProgressSummary({ total, sections = [] }: ProgressSummaryProps) 
   const want = countStatus(tricks, 'want');
 
   return (
-    <section className="card border border-border bg-base-200/60">
-      <div className="card-body gap-4">
+    <section className="tb-surface">
+      <div className="flex flex-col gap-4 p-5 sm:p-6">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h2 className="text-lg font-semibold text-base-content">{t('summary.title')}</h2>
+          <h2 className="tb-display text-2xl text-base-content">{t('summary.title')}</h2>
           <span className="text-sm text-base-content/80" aria-live="polite">
             {t('summary.counter', {
               learned: formatNumber(clampedLearned, locale),
@@ -143,9 +143,7 @@ export function ProgressSummary({ total, sections = [] }: ProgressSummaryProps) 
 
         {sections.length > 0 ? (
           <div className="flex flex-col gap-3">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-base-content/60">
-              {t('summary.sectionsTitle')}
-            </h3>
+            <h3 className="tb-eyebrow text-base-content/60">{t('summary.sectionsTitle')}</h3>
             {sections.map((section) => {
               const sectionTotal = section.trickIds.length;
               const sectionLearned = section.trickIds.reduce(

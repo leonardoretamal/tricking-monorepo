@@ -2,6 +2,7 @@
   "tricks": {
     "title": "Trucos",
     "description": "Catálogo de trucos de tricking con su información técnica y de ejecución.",
+    "eyebrow": "Catálogo",
     "sections": {
       "vertical-kicks": {
         "title": "Patadas verticales",
@@ -25,6 +26,8 @@
       }
     },
     "filters": {
+      "panelTitle": "Filtros",
+      "clear": "Limpiar filtros",
       "searchLabel": "Buscar",
       "searchPlaceholder": "Nombre del truco",
       "sectionLabel": "Sección",

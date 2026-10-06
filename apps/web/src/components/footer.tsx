@@ -2,16 +2,16 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { formatNumber } from '@tricking/shared';
 
-const GROUP_TITLE_CLASS = 'mb-3 text-xs font-semibold uppercase tracking-wide text-muted';
+const FOCUS_RING =
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
 
-const LINK_CLASS =
-  'link link-hover inline-flex min-h-9 items-center rounded text-sm text-base-content/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
+const GROUP_TITLE_CLASS = 'tb-eyebrow mb-3';
 
-const BRAND_CLASS =
-  'inline-flex items-center rounded text-lg font-bold text-base-content transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
+const LINK_CLASS = `inline-flex min-h-9 items-center rounded text-sm text-base-content/75 transition-colors hover:text-primary ${FOCUS_RING}`;
 
-const BOTTOM_LINK_CLASS =
-  'rounded text-xs text-muted transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
+const BRAND_CLASS = `tb-display inline-flex items-center rounded text-xl text-base-content transition-colors hover:text-primary ${FOCUS_RING}`;
+
+const BOTTOM_LINK_CLASS = `rounded text-xs text-muted transition-colors hover:text-primary ${FOCUS_RING}`;
 
 export async function Footer() {
   const t = await getTranslations('footer');
@@ -53,10 +53,11 @@ export async function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border bg-base-200 text-base-content">
-      <div className="mx-auto w-full max-w-6xl px-4 py-10">
+    <footer className="border-t border-border bg-base-200/70 text-base-content">
+      <div className="mx-auto w-full max-w-6xl px-4 py-12">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.6fr)_repeat(3,minmax(0,1fr))] lg:gap-8">
-          <div className="space-y-2 sm:col-span-2 lg:col-span-1">
+          <div className="space-y-3 sm:col-span-2 lg:col-span-1">
+            <span aria-hidden="true" className="block h-1 w-12 rounded-full bg-primary" />
             <Link href="/" className={BRAND_CLASS}>
               {tApp('name')}
             </Link>
@@ -88,7 +89,7 @@ export async function Footer() {
               {t('contact')}
             </Link>
           </div>
-          <p>{t('disclaimer')}</p>
+          <p className="max-w-4xl leading-relaxed">{t('disclaimer')}</p>
         </div>
       </div>
     </footer>

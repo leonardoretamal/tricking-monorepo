@@ -1,13 +1,15 @@
 'use client';
 
 import { TrickCard as BaseTrickCard, type TrickCardCategory } from '@tricking/ui';
+import { useLocale } from 'next-intl';
 
 import { ProgressControl } from '@/components/progress-control';
-import { Link } from '@/i18n/navigation';
 
 // Envoltorio de la tarjeta de truco a nivel app: reutiliza la TrickCard de
-// packages/ui y le suma el control de progreso (Fase 21). El control vive FUERA
-// del enlace de navegacion para no anidar botones dentro de un ancla.
+// packages/ui y le suma el control de progreso (Fase 21). El control va en el pie de
+// la propia tarjeta, fuera del enlace del titulo, para no anidar botones dentro de un
+// ancla. El href se localiza con el locale actual para que el enlace estirado del
+// titulo navegue a la ruta con prefijo de idioma.
 export interface TrickCardProps {
   trickId: string;
   href: string;
@@ -27,21 +29,18 @@ export function TrickCard({
   difficultyLabel,
   categories,
 }: TrickCardProps) {
+  const locale = useLocale();
+  const localizedHref = href.startsWith('/') ? `/${locale}${href}` : href;
+
   return (
-    <div className="flex h-full flex-col gap-2">
-      <Link
-        href={href}
-        className="block flex-1 rounded-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-      >
-        <BaseTrickCard
-          name={name}
-          description={description}
-          difficulty={difficulty}
-          difficultyLabel={difficultyLabel}
-          categories={categories}
-        />
-      </Link>
-      <ProgressControl trickId={trickId} compact />
-    </div>
+    <BaseTrickCard
+      href={localizedHref}
+      name={name}
+      description={description}
+      difficulty={difficulty}
+      difficultyLabel={difficultyLabel}
+      categories={categories}
+      footer={<ProgressControl trickId={trickId} compact />}
+    />
   );
 }

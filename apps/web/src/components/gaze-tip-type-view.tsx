@@ -106,10 +106,9 @@ export function GazeTipTypeView({ trickType, locale, types }: GazeTipTypeViewPro
 
       {data ? (
         <>
-          <header className="flex flex-col gap-2">
-            <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-4xl">
-              {data.label}
-            </h1>
+          <header className="flex flex-col gap-3">
+            <p className="tb-eyebrow">{t('title')}</p>
+            <h1 className="tb-display text-4xl text-base-content sm:text-5xl">{data.label}</h1>
             <p className="max-w-2xl text-base text-base-content/70">{t('detail.intro')}</p>
           </header>
 
@@ -125,16 +124,14 @@ export function GazeTipTypeView({ trickType, locale, types }: GazeTipTypeViewPro
             >
               <h2
                 id={`gaze-phase-${phase.phase}`}
-                className="text-xl font-semibold text-base-content"
+                className="tb-display text-2xl text-base-content"
               >
                 {t(`phases.${phase.phase}`)}
               </h2>
               {groupByLabel(phase.tips).map((group, index) => (
                 <div key={group.label ?? `sin-label-${index}`} className="flex flex-col gap-2">
                   {group.label ? (
-                    <h3 className="text-sm font-semibold uppercase tracking-wide text-base-content/60">
-                      {group.label}
-                    </h3>
+                    <h3 className="tb-eyebrow text-base-content/60">{group.label}</h3>
                   ) : null}
                   <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                     {group.tips.map((tip) => (
@@ -149,8 +146,11 @@ export function GazeTipTypeView({ trickType, locale, types }: GazeTipTypeViewPro
           ))}
 
           {data.targets.length > 0 ? (
-            <section className="flex flex-col gap-2" aria-labelledby="gaze-related-title">
-              <h2 id="gaze-related-title" className="text-lg font-semibold text-base-content">
+            <section
+              className="tb-surface flex flex-col gap-3 p-5"
+              aria-labelledby="gaze-related-title"
+            >
+              <h2 id="gaze-related-title" className="tb-eyebrow">
                 {t('related.title')}
               </h2>
               <ul className="flex flex-wrap gap-2">
@@ -164,7 +164,7 @@ export function GazeTipTypeView({ trickType, locale, types }: GazeTipTypeViewPro
                     <li key={`${target.targetKind}:${target.targetSlug}`}>
                       <Link
                         href={targetHref(target.targetKind, target.targetSlug)}
-                        className="link link-hover rounded text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        className="link link-hover rounded text-sm text-base-content transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
                         {t(`related.${target.targetKind}`)}: {name}
                       </Link>

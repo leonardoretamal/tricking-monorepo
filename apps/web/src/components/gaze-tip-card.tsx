@@ -10,8 +10,10 @@ export function GazeTipCard({ tip }: { tip: GazeTipItem }) {
   const t = useTranslations('tips');
 
   return (
-    <article className="flex h-full flex-col gap-2 rounded-box border border-border bg-base-100 p-4">
-      {tip.label ? <span className="badge badge-outline w-fit text-xs">{tip.label}</span> : null}
+    <article className="tb-surface flex h-full flex-col gap-2 p-4">
+      {tip.label ? (
+        <span className="badge tb-badge tb-cat-transitions w-fit text-xs">{tip.label}</span>
+      ) : null}
       <p className="text-sm text-base-content/90">{tip.instruction}</p>
       {tip.warning ? (
         <p className="mt-auto flex items-start gap-2 rounded-md bg-warning/10 p-2 text-sm text-warning">

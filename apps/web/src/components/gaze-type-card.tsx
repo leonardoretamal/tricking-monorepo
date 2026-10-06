@@ -12,7 +12,7 @@ export function GazeTypeCard({ type }: { type: GazeTipTypeItem }) {
   return (
     <Link
       href={`/tips/${type.trickType}`}
-      className="group block h-full rounded-box border border-border bg-base-100 p-5 shadow-sm transition-colors hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      className="group tb-surface tb-surface-hover block h-full p-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
       <article className="flex h-full flex-col gap-2">
         <h3 className={`text-lg font-semibold ${gazeTypeColor(type.trickType)}`}>{type.label}</h3>

@@ -126,7 +126,7 @@ export function ComboGenerator() {
     return (
       <div className="flex flex-col gap-4">
         <header className="flex flex-col gap-1">
-          <h2 className="text-xl font-semibold text-base-content">{t('heading')}</h2>
+          <h2 className="tb-display text-2xl text-base-content">{t('heading')}</h2>
           <p className="max-w-2xl text-sm text-base-content/70">{t('intro')}</p>
         </header>
         <EmptyState
@@ -154,7 +154,7 @@ export function ComboGenerator() {
   return (
     <div className="flex flex-col gap-4">
       <header className="flex flex-col gap-1">
-        <h2 className="text-xl font-semibold text-base-content">{t('heading')}</h2>
+        <h2 className="tb-display text-2xl text-base-content">{t('heading')}</h2>
         <p className="max-w-2xl text-sm text-base-content/70">{t('intro')}</p>
       </header>
 
@@ -294,20 +294,20 @@ export function ComboGenerator() {
               return (
                 <li
                   key={`${step.trickId}-${index}`}
-                  className="flex flex-wrap items-center gap-3 rounded-box border border-base-300 p-3"
+                  className="tb-surface flex flex-wrap items-center gap-3 p-3"
                 >
                   <span className="badge badge-neutral">
                     {t('stepLabel', { number: index + 1 })}
                   </span>
                   <Link
                     href={`/tricks/${sectionSlug}/${step.trickId}`}
-                    className="link link-hover font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    className="link link-hover font-medium transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     {step.name}
                   </Link>
                   {step.difficulty !== null ? (
                     <span
-                      className="badge badge-outline"
+                      className={`badge tb-badge tb-difficulty-${step.difficulty}`}
                       aria-label={t('difficultyLabel', { value: step.difficulty })}
                       title={t('difficultyLabel', { value: step.difficulty })}
                     >

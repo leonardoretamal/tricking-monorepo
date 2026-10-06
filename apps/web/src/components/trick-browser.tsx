@@ -9,7 +9,7 @@ import {
   categoryBadgeColor,
   type TrickCardCategory,
 } from '@tricking/ui';
-import { Search } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Search, SlidersHorizontal, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useRef, useState, type RefObject } from 'react';
 
@@ -21,10 +21,11 @@ import type { TrickListItem } from '@/lib/trick-schemas';
 import { DEFAULT_SECTION, SECTIONS, type Section } from '@/lib/sections';
 
 const PAGE_SIZES = [24, 48, 100];
+const DEFAULT_PAGE_SIZE = 24;
 const VIRTUALIZE_THRESHOLD = 60;
-// Altura estimada de la tarjeta mas el control de progreso (Fase 21). Se usa para
-// las filas del listado virtualizado; si queda corta, las tarjetas se solapan.
-const CARD_ESTIMATE_SIZE = 240;
+// Altura estimada de la tarjeta rediseñada mas el pie del control de progreso (Fase 21).
+// Se usa para las filas del listado virtualizado; si queda corta, las tarjetas se solapan.
+const CARD_ESTIMATE_SIZE = 250;
 
 export interface TrickFilters {
   q?: string;
@@ -90,9 +91,22 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     if (next.difficulty !== undefined) params.set('difficulty', String(next.difficulty));
     if (next.sort && next.sort !== 'name-asc') params.set('sort', next.sort);
     if (next.page > 1) params.set('page', String(next.page));
-    if (next.pageSize !== 24) params.set('pageSize', String(next.pageSize));
+    if (next.pageSize !== DEFAULT_PAGE_SIZE) params.set('pageSize', String(next.pageSize));
     const qs = params.toString();
     router.replace(qs ? `${pathname}?${qs}` : pathname);
+  };
+
+  const clearFilters = () => {
+    setQInput('');
+    applyFilter({
+      q: undefined,
+      difficulty: undefined,
+      sort: 'name-asc',
+      pageSize: DEFAULT_PAGE_SIZE,
+      // En las paginas de seccion la seccion es fija (viene de la ruta); en el listado
+      // general tambien se limpia.
+      ...(section === undefined ? { section: undefined } : {}),
+    });
   };
 
   useEffect(() => {
@@ -157,103 +171,127 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-4 rounded-box border border-border bg-base-300/40 p-4 sm:flex-row sm:flex-wrap sm:items-end">
-        <label className="flex flex-1 flex-col gap-1 text-sm font-medium">
-          <span>{t('filters.searchLabel')}</span>
-          <span className="relative block">
-            <Search
-              aria-hidden="true"
-              className="size-4 absolute left-3 top-1/2 -translate-y-1/2 text-base-content/50"
-            />
-            <input
-              type="search"
-              value={qInput}
-              onChange={(event) => setQInput(event.target.value)}
-              placeholder={t('filters.searchPlaceholder')}
-              className="input input-bordered w-full pl-9"
-            />
+      <div className="tb-surface flex flex-col gap-5 p-4 sm:p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <span className="tb-eyebrow flex items-center gap-2">
+            <SlidersHorizontal aria-hidden="true" className="size-4" />
+            {t('filters.panelTitle')}
           </span>
-        </label>
+          {hasActiveFilters ? (
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="btn btn-ghost btn-xs gap-1 text-base-content/70 hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              <X aria-hidden="true" className="size-3.5" />
+              {t('filters.clear')}
+            </button>
+          ) : null}
+        </div>
 
-        {section === undefined ? (
-          <label className="flex flex-col gap-1 text-sm font-medium">
-            <span>{t('filters.sectionLabel')}</span>
+        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-end">
+          <label className="flex min-w-[12rem] flex-1 flex-col gap-1.5 text-sm font-medium text-base-content/80">
+            <span>{t('filters.searchLabel')}</span>
+            <span className="relative block">
+              <Search
+                aria-hidden="true"
+                className="size-4 absolute left-3 top-1/2 -translate-y-1/2 text-base-content/50"
+              />
+              <input
+                type="search"
+                value={qInput}
+                onChange={(event) => setQInput(event.target.value)}
+                placeholder={t('filters.searchPlaceholder')}
+                className="input input-bordered w-full bg-base-100 pl-9 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              />
+            </span>
+          </label>
+
+          {section === undefined ? (
+            <label className="flex flex-col gap-1.5 text-sm font-medium text-base-content/80">
+              <span>{t('filters.sectionLabel')}</span>
+              <select
+                className="select select-bordered bg-base-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                value={filters.section ?? ''}
+                onChange={(event) =>
+                  applyFilter({
+                    section:
+                      event.target.value === '' ? undefined : (event.target.value as Section),
+                  })
+                }
+              >
+                <option value="">{t('filters.allSections')}</option>
+                {SECTIONS.map((candidate) => (
+                  <option key={candidate} value={candidate}>
+                    {t(`sections.${candidate}.title`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : null}
+
+          <label className="flex flex-col gap-1.5 text-sm font-medium text-base-content/80">
+            <span>{t('filters.difficultyLabel')}</span>
             <select
-              className="select select-bordered"
-              value={filters.section ?? ''}
+              className="select select-bordered bg-base-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              value={filters.difficulty ?? ''}
               onChange={(event) =>
                 applyFilter({
-                  section: event.target.value === '' ? undefined : (event.target.value as Section),
+                  difficulty: event.target.value === '' ? undefined : Number(event.target.value),
                 })
               }
             >
-              <option value="">{t('filters.allSections')}</option>
-              {SECTIONS.map((candidate) => (
-                <option key={candidate} value={candidate}>
-                  {t(`sections.${candidate}.title`)}
+              <option value="">{t('filters.allDifficulties')}</option>
+              {[0, 1, 2, 3, 4, 5].map((level) => (
+                <option key={level} value={level}>
+                  {tDifficulty(level)}
                 </option>
               ))}
             </select>
           </label>
-        ) : null}
 
-        <label className="flex flex-col gap-1 text-sm font-medium">
-          <span>{t('filters.difficultyLabel')}</span>
-          <select
-            className="select select-bordered"
-            value={filters.difficulty ?? ''}
-            onChange={(event) =>
-              applyFilter({
-                difficulty: event.target.value === '' ? undefined : Number(event.target.value),
-              })
-            }
-          >
-            <option value="">{t('filters.allDifficulties')}</option>
-            {[0, 1, 2, 3, 4, 5].map((level) => (
-              <option key={level} value={level}>
-                {tDifficulty(level)}
-              </option>
-            ))}
-          </select>
-        </label>
+          <label className="flex flex-col gap-1.5 text-sm font-medium text-base-content/80">
+            <span>{t('filters.sortLabel')}</span>
+            <select
+              className="select select-bordered bg-base-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              value={filters.sort}
+              onChange={(event) => applyFilter({ sort: event.target.value })}
+            >
+              <option value="name-asc">{t('sort.nameAsc')}</option>
+              <option value="name-desc">{t('sort.nameDesc')}</option>
+              <option value="difficulty-asc">{t('sort.difficultyAsc')}</option>
+              <option value="difficulty-desc">{t('sort.difficultyDesc')}</option>
+            </select>
+          </label>
 
-        <label className="flex flex-col gap-1 text-sm font-medium">
-          <span>{t('filters.sortLabel')}</span>
-          <select
-            className="select select-bordered"
-            value={filters.sort}
-            onChange={(event) => applyFilter({ sort: event.target.value })}
-          >
-            <option value="name-asc">{t('sort.nameAsc')}</option>
-            <option value="name-desc">{t('sort.nameDesc')}</option>
-            <option value="difficulty-asc">{t('sort.difficultyAsc')}</option>
-            <option value="difficulty-desc">{t('sort.difficultyDesc')}</option>
-          </select>
-        </label>
-
-        <label className="flex flex-col gap-1 text-sm font-medium">
-          <span>{t('filters.pageSizeLabel')}</span>
-          <select
-            className="select select-bordered"
-            value={filters.pageSize}
-            onChange={(event) => applyFilter({ pageSize: Number(event.target.value) })}
-          >
-            {PAGE_SIZES.map((size) => (
-              <option key={size} value={size}>
-                {t('filters.pageSizeOption', { count: size })}
-              </option>
-            ))}
-          </select>
-        </label>
+          <label className="flex flex-col gap-1.5 text-sm font-medium text-base-content/80">
+            <span>{t('filters.pageSizeLabel')}</span>
+            <select
+              className="select select-bordered bg-base-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              value={filters.pageSize}
+              onChange={(event) => applyFilter({ pageSize: Number(event.target.value) })}
+            >
+              {PAGE_SIZES.map((size) => (
+                <option key={size} value={size}>
+                  {t('filters.pageSizeOption', { count: size })}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
       </div>
 
       {data ? (
-        <p className="text-sm text-base-content/70" aria-live="polite">
-          {data.total === 0
-            ? t('results.none')
-            : t('results.range', { start: rangeStart, end: rangeEnd, total: data.total })}
-          {hasActiveFilters ? ` ${t('results.filtered')}` : ''}
-        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <p className="text-sm text-base-content/70" aria-live="polite">
+            {data.total === 0
+              ? t('results.none')
+              : t('results.range', { start: rangeStart, end: rangeEnd, total: data.total })}
+          </p>
+          {hasActiveFilters ? (
+            <span className="badge tb-badge tb-cat-transitions">{t('results.filtered')}</span>
+          ) : null}
+        </div>
       ) : null}
 
       {query.isPending ? <TrickListSkeleton /> : null}
@@ -321,25 +359,30 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
       ) : null}
 
       {data && data.totalPages > 1 ? (
-        <nav className="flex items-center justify-center gap-3" aria-label={t('pagination.label')}>
+        <nav
+          className="flex flex-wrap items-center justify-center gap-2"
+          aria-label={t('pagination.label')}
+        >
           <button
             type="button"
-            className="btn btn-outline btn-sm"
+            className="btn btn-outline btn-sm gap-1"
             disabled={data.page <= 1}
             onClick={() => applyFilter({ page: data.page - 1 })}
           >
+            <ChevronLeft aria-hidden="true" className="size-4" />
             {t('pagination.previous')}
           </button>
-          <span className="text-sm text-base-content/70">
+          <span className="rounded-box border border-border bg-base-200 px-4 py-1.5 text-sm font-medium text-base-content">
             {t('pagination.status', { page: data.page, totalPages: data.totalPages })}
           </span>
           <button
             type="button"
-            className="btn btn-outline btn-sm"
+            className="btn btn-outline btn-sm gap-1"
             disabled={data.page >= data.totalPages}
             onClick={() => applyFilter({ page: data.page + 1 })}
           >
             {t('pagination.next')}
+            <ChevronRight aria-hidden="true" className="size-4" />
           </button>
         </nav>
       ) : null}

@@ -1,3 +1,5 @@
+import { WifiOff } from 'lucide-react';
+
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { Link } from '@/i18n/navigation';
@@ -23,35 +25,20 @@ export default async function OfflinePage({ params }: OfflinePageProps) {
   setRequestLocale(locale);
 
   const t = await getTranslations('offline');
+  const tApp = await getTranslations('app');
 
   return (
-    <section className="mx-auto flex w-full max-w-3xl flex-col items-start gap-4 px-4 py-16 sm:px-6 lg:px-8">
-      <svg
+    <section className="mx-auto flex w-full max-w-3xl flex-col items-center gap-5 px-4 py-20 text-center sm:px-6 lg:px-8">
+      <span
         aria-hidden="true"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="size-8 text-base-content/60"
+        className="flex size-16 items-center justify-center rounded-full border border-border bg-base-200 text-secondary tb-glow"
       >
-        <path d="M12 20h.01" />
-        <path d="M2 8.82a15 15 0 0 1 4.17-2.65" />
-        <path d="M5 12.86a10 10 0 0 1 5.17-2.69" />
-        <path d="M8.5 16.43a5 5 0 0 1 7 0" />
-        <path d="M19 12.86a10 10 0 0 0-2.01-1.52" />
-        <path d="M22 8.82a15 15 0 0 0-11.29-3.76" />
-        <path d="m2 2 20 20" />
-      </svg>
-      <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-4xl">
-        {t('title')}
-      </h1>
-      <p className="text-base text-base-content/70">{t('description')}</p>
-      <Link
-        href="/"
-        className="rounded-field bg-primary px-4 py-2 font-medium text-primary-content focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-      >
+        <WifiOff className="size-8" />
+      </span>
+      <p className="tb-eyebrow">{tApp('name')}</p>
+      <h1 className="tb-display text-4xl text-base-content sm:text-5xl">{t('title')}</h1>
+      <p className="max-w-md text-base text-base-content/70">{t('description')}</p>
+      <Link href="/" className="btn btn-primary mt-2">
         {t('backHome')}
       </Link>
     </section>

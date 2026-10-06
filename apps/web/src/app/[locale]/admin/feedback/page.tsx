@@ -24,13 +24,13 @@ export default async function AdminFeedbackPage({ params }: AdminFeedbackPagePro
   setRequestLocale(locale);
 
   const t = await getTranslations('admin.feedback');
+  const tApp = await getTranslations('app');
 
   return (
-    <section className="flex flex-col gap-6 py-6">
-      <header className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-4xl">
-          {t('title')}
-        </h1>
+    <section className="flex flex-col gap-8 py-6">
+      <header className="flex flex-col gap-3">
+        <p className="tb-eyebrow">{tApp('name')}</p>
+        <h1 className="tb-display text-4xl text-base-content sm:text-5xl">{t('title')}</h1>
         <p className="max-w-2xl text-base text-base-content/70">{t('description')}</p>
       </header>
       <FeedbackAdmin />

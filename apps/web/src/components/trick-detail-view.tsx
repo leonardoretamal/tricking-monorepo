@@ -73,7 +73,7 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
         <li key={item.id}>
           <Link
             href={`/tricks/${item.section ?? section}/${item.id}`}
-            className="link link-hover rounded text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="inline-flex items-center rounded-full border border-border bg-base-300/60 px-3 py-1 text-sm text-base-content transition-colors hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             {item.name}
           </Link>
@@ -83,8 +83,8 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
   );
 
   const loopkicksContent = (
-    <div className="flex flex-col gap-2">
-      <p>{loopkicksNotes ?? t('detail.loopkicksEmpty')}</p>
+    <div className="flex flex-col gap-3">
+      <p className="leading-relaxed">{loopkicksNotes ?? t('detail.loopkicksEmpty')}</p>
       {sourceUrl ? (
         <a
           href={sourceUrl}
@@ -115,7 +115,7 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
                   </span>
                 ) : null}
               </div>
-              <p>{tips ?? t('detail.kojoEmptyTips')}</p>
+              <p className="leading-relaxed">{tips ?? t('detail.kojoEmptyTips')}</p>
               {technique.permalink ? (
                 <a
                   href={technique.permalink}
@@ -132,7 +132,7 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
         })}
       </ul>
     ) : (
-      <p>{t('detail.kojoEmpty')}</p>
+      <p className="leading-relaxed">{t('detail.kojoEmpty')}</p>
     );
 
   const versions: AccordionItem[] = [
@@ -141,7 +141,7 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
   ];
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-8">
       <Link
         href={`/tricks/${section}`}
         className="inline-flex w-fit items-center gap-1 text-sm text-base-content/70 hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
@@ -150,10 +150,11 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
         {sectionTitle}
       </Link>
 
-      <header className="flex flex-col gap-3">
-        <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-4xl">
-          {data.name}
-        </h1>
+      <header className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
+          <span className="tb-eyebrow">{sectionTitle}</span>
+          <h1 className="tb-display text-4xl text-base-content sm:text-5xl">{data.name}</h1>
+        </div>
         <div className="flex flex-wrap items-center gap-2">
           {data.difficulty !== null ? (
             <span
@@ -172,50 +173,52 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
         <ProgressControl trickId={data.id} />
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-start">
         <TrickVideoPlayer trickId={data.id} trickName={data.name} sourceUrl={sourceUrl} />
 
-        <section className="flex flex-col gap-2">
-          <h2 className="text-lg font-semibold text-base-content">{t('detail.howTo')}</h2>
-          <p className="text-base text-base-content/80">{howTo ?? t('detail.noHowTo')}</p>
+        <section className="tb-surface flex flex-col gap-3 p-5">
+          <h2 className="tb-display text-xl text-base-content">{t('detail.howTo')}</h2>
+          <p className="text-base leading-relaxed text-base-content/80">
+            {howTo ?? t('detail.noHowTo')}
+          </p>
           {description ? (
-            <div className="mt-2 flex flex-col gap-1">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-base-content/60">
+            <div className="mt-1 flex flex-col gap-1 border-t border-border pt-4">
+              <h3 className="text-xs font-semibold uppercase tracking-wide text-base-content/60">
                 {t('detail.description')}
               </h3>
-              <p className="text-sm text-base-content/70">{description}</p>
+              <p className="text-sm leading-relaxed text-base-content/70">{description}</p>
             </div>
           ) : null}
         </section>
       </div>
 
-      <section className="flex flex-col gap-2">
-        <h2 className="text-lg font-semibold text-base-content">{t('detail.versionsTitle')}</h2>
+      <section className="flex flex-col gap-3">
+        <h2 className="tb-display text-xl text-base-content">{t('detail.versionsTitle')}</h2>
         <Accordion
           items={versions}
           expandLabel={t('detail.expand')}
           collapseLabel={t('detail.collapse')}
-          className="rounded-box border border-border bg-base-200 px-2"
+          className="tb-surface px-2"
         />
       </section>
 
       {data.prereqs.length > 0 ? (
-        <section className="flex flex-col gap-2">
-          <h2 className="text-lg font-semibold text-base-content">{t('detail.prereqs')}</h2>
+        <section className="tb-surface flex flex-col gap-3 p-5">
+          <h2 className="tb-display text-lg text-base-content">{t('detail.prereqs')}</h2>
           {renderRelated(data.prereqs)}
         </section>
       ) : null}
 
       {data.nextTricks.length > 0 ? (
-        <section className="flex flex-col gap-2">
-          <h2 className="text-lg font-semibold text-base-content">{t('detail.nextTricks')}</h2>
+        <section className="tb-surface flex flex-col gap-3 p-5">
+          <h2 className="tb-display text-lg text-base-content">{t('detail.nextTricks')}</h2>
           {renderRelated(data.nextTricks)}
         </section>
       ) : null}
 
       {hasRelated ? (
-        <section className="flex flex-col gap-4">
-          <h2 className="text-lg font-semibold text-base-content">{t('detail.related')}</h2>
+        <section className="tb-surface flex flex-col gap-4 p-5">
+          <h2 className="tb-display text-xl text-base-content">{t('detail.related')}</h2>
           {variationItems.length > 0 ? (
             <RelatedItems
               title={t('detail.relatedVariations')}
@@ -239,11 +242,13 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
           ) : null}
         </section>
       ) : (
-        <RelatedItems
-          title={t('detail.related')}
-          items={[]}
-          emptyLabel={t('detail.relatedEmpty')}
-        />
+        <section className="tb-surface p-5">
+          <RelatedItems
+            title={t('detail.related')}
+            items={[]}
+            emptyLabel={t('detail.relatedEmpty')}
+          />
+        </section>
       )}
     </div>
   );

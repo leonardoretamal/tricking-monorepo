@@ -43,6 +43,7 @@ export default async function ProgressPage({ params }: ProgressPageProps) {
   setRequestLocale(locale);
 
   const t = await getTranslations('progress');
+  const tApp = await getTranslations('app');
   const tTricks = await getTranslations('tricks');
 
   const [catalog, sectionIds] = await Promise.all([
@@ -57,11 +58,10 @@ export default async function ProgressPage({ params }: ProgressPageProps) {
   }));
 
   return (
-    <section className="flex flex-col gap-6 py-6">
-      <header className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold tracking-tight text-base-content sm:text-4xl">
-          {t('page.title')}
-        </h1>
+    <section className="flex flex-col gap-8 py-6">
+      <header className="flex flex-col gap-3">
+        <p className="tb-eyebrow">{tApp('name')}</p>
+        <h1 className="tb-display tb-gradient-text text-4xl sm:text-5xl">{t('page.title')}</h1>
         <p className="max-w-2xl text-base text-base-content/70">{t('page.description')}</p>
       </header>
 

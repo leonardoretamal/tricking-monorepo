@@ -1,7 +1,24 @@
 {
   "home": {
     "title": "Learn Tricking",
-    "subtitle": "Explore the trick catalog",
-    "intro": "Here you will find the Loopkicks tricks organized by category, with their variations, transitions and stances."
+    "subtitle": "Tricking trick catalog with variations, transitions, stances and gaze tips.",
+    "intro": "Explore the Loopkicks tricks, their variations, transitions and stances, and learn where to look at every moment of the trick.",
+    "hero": {
+      "eyebrow": "The tricking catalog",
+      "headline": "Learn every trick, step by step",
+      "cta": "Browse the catalog"
+    },
+    "stats": {
+      "sectionsValue": "5",
+      "sectionsLabel": "Trick sections",
+      "stancesValue": "6",
+      "stancesLabel": "Base stances",
+      "openValue": "100%",
+      "openLabel": "Open content"
+    },
+    "featured": {
+      "eyebrow": "Explore",
+      "heading": "The whole catalog, section by section"
+    }
   }
 }

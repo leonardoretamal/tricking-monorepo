@@ -72,9 +72,7 @@ export function TutorialAccordion({ items, locale, virtualize }: TutorialAccordi
 
           {tricks.length > 0 ? (
             <div className="flex flex-col gap-1">
-              <span className="text-xs font-semibold uppercase tracking-wide text-base-content/60">
-                {t('relatedTricks')}
-              </span>
+              <span className="tb-eyebrow text-base-content/60">{t('relatedTricks')}</span>
               <ul className="flex flex-wrap gap-2">
                 {tricks.map((trick) => (
                   <li key={trick.id}>
@@ -120,10 +118,7 @@ export function TutorialAccordion({ items, locale, virtualize }: TutorialAccordi
 
   if (virtualize) {
     return (
-      <div
-        ref={scrollRef}
-        className="relative h-[70vh] overflow-auto rounded-box border border-border bg-base-200 px-2"
-      >
+      <div ref={scrollRef} className="tb-surface relative h-[70vh] overflow-auto px-2">
         <div style={{ height: virtualizer.getTotalSize(), position: 'relative' }}>
           {virtualizer.getVirtualItems().map((virtualItem) => {
             const tutorial = items[virtualItem.index];
@@ -159,7 +154,7 @@ export function TutorialAccordion({ items, locale, virtualize }: TutorialAccordi
   }
 
   return (
-    <div className="rounded-box border border-border bg-base-200 px-2">
+    <div className="tb-surface px-2">
       <Accordion
         items={items.map(toItem)}
         expandedIds={expandedIds}

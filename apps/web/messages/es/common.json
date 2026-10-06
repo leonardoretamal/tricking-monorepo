@@ -20,7 +20,10 @@
     "search": "Buscar",
     "feedback": "Feedback",
     "admin": "Administración",
-    "progress": "Mi progreso"
+    "progress": "Mi progreso",
+    "primary": "Navegación principal",
+    "mobile": "Menú móvil",
+    "breadcrumbs": "Ruta de navegación"
   },
   "actions": {
     "search": "Buscar",

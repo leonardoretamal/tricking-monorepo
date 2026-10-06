@@ -15,10 +15,8 @@ export interface RelatedItemsProps {
 // importa next-intl: el llamador entrega los `href` ya localizados, igual que TrickCard.
 export function RelatedItems({ title, items, emptyLabel, ariaLabel }: RelatedItemsProps) {
   return (
-    <div className="flex flex-col gap-2">
-      <h3 className="text-sm font-semibold uppercase tracking-wide text-base-content/60">
-        {title}
-      </h3>
+    <div className="flex flex-col gap-3">
+      <h3 className="tb-eyebrow">{title}</h3>
       {items.length === 0 ? (
         <p className="text-sm text-base-content/60">{emptyLabel}</p>
       ) : (
@@ -28,7 +26,7 @@ export function RelatedItems({ title, items, emptyLabel, ariaLabel }: RelatedIte
               <li key={item.href} className="flex items-center gap-1">
                 <a
                   href={item.href}
-                  className="link link-hover rounded text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="link link-hover rounded text-sm text-base-content transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   {item.label}
                 </a>

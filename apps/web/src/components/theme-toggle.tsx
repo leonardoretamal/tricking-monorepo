@@ -34,7 +34,7 @@ export function ThemeToggle() {
       aria-label={t('toggleTheme')}
       aria-pressed={isDark}
       onClick={handleToggle}
-      className="btn btn-ghost btn-square btn-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      className="btn btn-ghost btn-square btn-sm text-base-content/80 transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
       {isDark ? (
         <Sun aria-hidden="true" className="size-5" />

@@ -94,7 +94,7 @@ export function TransitionBrowser({ initial }: TransitionBrowserProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-4 rounded-box border border-border bg-base-300/40 p-4 sm:flex-row sm:flex-wrap sm:items-end">
+      <div className="tb-surface flex flex-col gap-4 p-4 sm:flex-row sm:flex-wrap sm:items-end">
         <label className="flex flex-1 flex-col gap-1 text-sm font-medium">
           <span>{t('filters.searchLabel')}</span>
           <span className="relative block">
@@ -203,11 +203,11 @@ export function TransitionBrowser({ initial }: TransitionBrowserProps) {
           <div className="flex items-baseline gap-2">
             <h2
               id={`transition-group-${section.bucket}`}
-              className="text-xl font-semibold text-base-content"
+              className="tb-display text-2xl text-base-content"
             >
               {t(`groups.${section.bucket}`)}
             </h2>
-            <span className="text-sm text-base-content/60">{section.items.length}</span>
+            <span className="badge tb-badge tb-cat-transitions">{section.items.length}</span>
           </div>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {section.items.map((item) => (
@@ -216,17 +216,15 @@ export function TransitionBrowser({ initial }: TransitionBrowserProps) {
                   href={`/transitions/${item.slug}`}
                   className="block h-full rounded-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
-                  <article className="card h-full border border-base-300 bg-base-100 shadow-sm">
-                    <div className="card-body gap-3">
-                      <h3 className="card-title">{item.name}</h3>
-                      {pickDescription(locale, item.description, item.descriptionEs) ? (
-                        <p className="line-clamp-3 text-sm text-base-content/70">
-                          {pickDescription(locale, item.description, item.descriptionEs)}
-                        </p>
-                      ) : null}
-                      <div className="card-actions">
-                        <TransitionBadge group={item.group} />
-                      </div>
+                  <article className="tb-surface tb-surface-hover flex h-full flex-col gap-3 p-5">
+                    <h3 className="text-lg font-semibold text-base-content">{item.name}</h3>
+                    {pickDescription(locale, item.description, item.descriptionEs) ? (
+                      <p className="line-clamp-3 text-sm text-base-content/70">
+                        {pickDescription(locale, item.description, item.descriptionEs)}
+                      </p>
+                    ) : null}
+                    <div className="mt-auto">
+                      <TransitionBadge group={item.group} />
                     </div>
                   </article>
                 </Link>

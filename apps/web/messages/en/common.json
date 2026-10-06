@@ -20,7 +20,10 @@
     "search": "Search",
     "feedback": "Feedback",
     "admin": "Admin",
-    "progress": "My progress"
+    "progress": "My progress",
+    "primary": "Primary navigation",
+    "mobile": "Mobile menu",
+    "breadcrumbs": "Breadcrumb"
   },
   "actions": {
     "search": "Search",

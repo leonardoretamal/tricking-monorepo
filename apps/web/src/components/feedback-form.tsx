@@ -205,11 +205,11 @@ export function FeedbackForm() {
 
   if (success) {
     return (
-      <div className="card max-w-xl border border-border bg-base-200/60">
-        <div className="card-body gap-4" role="status">
-          <h2 className="card-title text-base-content">{t('successTitle')}</h2>
+      <div className="tb-surface max-w-xl">
+        <div className="flex flex-col gap-4 p-6" role="status">
+          <h2 className="tb-display text-2xl text-base-content">{t('successTitle')}</h2>
           <p className="text-base-content/80">{t('successDescription')}</p>
-          <div className="card-actions">
+          <div className="flex">
             <button type="button" className="btn btn-primary" onClick={resetForm}>
               {t('sendAnother')}
             </button>
@@ -222,7 +222,11 @@ export function FeedbackForm() {
   const valueError = (field: FieldName): string | undefined => errors[field];
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="flex max-w-xl flex-col gap-5">
+    <form
+      onSubmit={handleSubmit}
+      noValidate
+      className="tb-surface flex max-w-xl flex-col gap-5 p-5 sm:p-6"
+    >
       <label className="flex flex-col gap-1 text-sm font-medium" htmlFor="feedback-type">
         <span>
           {t('typeLabel')}{' '}

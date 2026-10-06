@@ -1,7 +1,24 @@
 {
   "home": {
     "title": "Aprender Tricking",
-    "subtitle": "Explora el catálogo de trucos",
-    "intro": "Aquí encontrarás los trucos de Loopkicks organizados por categoría, con sus variaciones, transiciones y stances."
+    "subtitle": "Catálogo de trucos de tricking con variaciones, transiciones, posturas y tips de mirada.",
+    "intro": "Explora los trucos de Loopkicks, sus variaciones, transiciones y posturas, y aprende dónde mirar en cada momento del truco.",
+    "hero": {
+      "eyebrow": "El catálogo de tricking",
+      "headline": "Aprende cada truco, paso a paso",
+      "cta": "Explorar el catálogo"
+    },
+    "stats": {
+      "sectionsValue": "5",
+      "sectionsLabel": "Secciones de trucos",
+      "stancesValue": "6",
+      "stancesLabel": "Posturas base",
+      "openValue": "100%",
+      "openLabel": "Contenido abierto"
+    },
+    "featured": {
+      "eyebrow": "Explora",
+      "heading": "Todo el catálogo, sección por sección"
+    }
   }
 }

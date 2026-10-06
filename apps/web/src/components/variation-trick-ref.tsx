@@ -11,7 +11,7 @@ export function VariationTrickRef({ trick }: { trick: TrickRef }) {
   return (
     <Link
       href={`/tricks/${trick.section}/${trick.id}`}
-      className="link link-hover rounded text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      className="link link-hover rounded text-sm text-base-content transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
     >
       {trick.name}
     </Link>

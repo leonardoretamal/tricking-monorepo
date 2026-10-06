@@ -71,22 +71,36 @@ export function Breadcrumbs() {
   ];
 
   return (
-    <nav className="breadcrumbs mx-auto w-full max-w-6xl px-4 py-2 text-sm text-muted">
-      <ul>
-        {crumbs.map((crumb) => (
-          <li key={crumb.href}>
+    <nav
+      aria-label={t('breadcrumbs')}
+      className="mx-auto w-full max-w-6xl px-4 py-3 text-sm text-muted"
+    >
+      <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
+        {crumbs.map((crumb, index) => (
+          <li key={crumb.href} className="flex min-w-0 items-center gap-2">
+            {index > 0 ? (
+              <span aria-hidden="true" className="text-base-content/40">
+                /
+              </span>
+            ) : null}
             {crumb.current ? (
-              <span aria-current="page" className="font-semibold text-base-content">
+              <span
+                aria-current="page"
+                className="max-w-[16rem] truncate font-semibold text-base-content"
+              >
                 {crumb.label}
               </span>
             ) : (
-              <Link href={crumb.href} className="hover:text-primary">
+              <Link
+                href={crumb.href}
+                className="max-w-[12rem] truncate rounded transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              >
                 {crumb.label}
               </Link>
             )}
           </li>
         ))}
-      </ul>
+      </ol>
     </nav>
   );
 }

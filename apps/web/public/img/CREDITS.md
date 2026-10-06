@@ -1,43 +1,45 @@
 # Créditos de imágenes
 
-Las imágenes de esta carpeta provienen de Unsplash y se usan bajo la licencia de Unsplash (uso gratuito, incluso comercial, sin obligación de atribución; la atribución se incluye por cortesía).
+Las imágenes de esta carpeta provienen de Pexels y se usan bajo la licencia de Pexels (uso gratuito, incluso comercial, sin obligación de atribución; la atribución se incluye por cortesía).
 
-- Licencia: https://unsplash.com/license
+- Licencia: https://www.pexels.com/license/
 
-Todas se descargaron en formato WebP directo desde el CDN de Unsplash con los parámetros `fm=webp&q=58&w=1280` (resolución suficiente para el contenedor del sitio y peso total bajo).
+Todas se descargaron en formato WebP directo desde el CDN de Pexels con los parámetros `auto=compress&cs=tinysrgb&w=1600&fm=webp` (hero) o `...&w=1280&fm=webp` (secciones), para mantener el peso total bajo.
 
-## hero-parkour-flips.webp
+Son fotos de artes marciales, patadas, flips y breakdance (no de gimnasia de aparatos).
 
-- Tema: dos personas haciendo flips en una demostración de parkour.
-- Autor: no identificado en la ficha pública.
-- Ficha: https://unsplash.com/photos/two-people-are-doing-flips-during-a-parkour-demonstration-5jzYReafs6g
+## hero-kick.webp
 
-## section-gym-jump.webp
+- Tema: practicante de muay thai ejecutando una patada alta, fondo oscuro.
+- Foto: Pexels 35342464.
+- Ficha: https://www.pexels.com/photo/athletic-martial-artist-performing-high-kick-35342464/
 
-- Tema: gimnasta saltando cerca de una pared blanca.
-- Autor: Eugene Lim (https://unsplash.com/@overide).
-- Ficha: https://unsplash.com/photos/gymnas-jumping-near-the-white-board-pOwltFP-q30
+## section-vertical-kick.webp
 
-## section-acrobatics.webp
+- Tema: patada alta a un saco de boxeo en un gimnasio.
+- Foto: Pexels 10222628.
+- Ficha: https://www.pexels.com/photo/a-man-kicking-the-air-10222628/
 
-- Tema: acrobacia o gimnasia.
-- Autor: no identificado en la ficha pública.
-- Foto de Unsplash.
+## section-backflip.webp
 
-## section-tumbling.webp
+- Tema: backflip al aire libre con palmeras.
+- Foto: Pexels 8861059.
+- Ficha: https://www.pexels.com/photo/a-man-doing-a-backflip-8861059/
 
-- Tema: acrobacia o gimnasia.
-- Autor: no identificado en la ficha pública.
-- Foto de Unsplash.
+## section-silhouette.webp
 
-## section-gymnast-pose.webp
+- Tema: silueta en blanco y negro de una patada alta sobre una roca.
+- Foto: Pexels 29109596.
+- Ficha: https://www.pexels.com/photo/martial-artist-performing-high-kick-on-rocky-terrain-29109596/
 
-- Tema: gimnasta en una postura artística.
-- Autor: Maria Budanova (Pristavskaya) (https://unsplash.com/@budanovamrus).
-- Ficha: https://unsplash.com/photos/a-gymnast-performs-a-graceful-artistic-pose-4Pk6EQ7H4VI
+## section-street-flip.webp
 
-## section-aerial-silks.webp
+- Tema: flip en plena calle, estilo urbano.
+- Foto: Pexels 9249769.
+- Ficha: https://www.pexels.com/photo/man-in-gray-shirt-and-blue-denim-jeans-tumbling-backwards-9249769/
 
-- Tema: mujer practicando acrobacia aérea con telas.
-- Autor: Tim Mossholder (https://unsplash.com/@timmossholder).
-- Ficha: https://unsplash.com/photos/woman-doing-acrobatic-yoga-vi969pdKYWM
+## section-padwork.webp
+
+- Tema: patada circular a las manoplas en un gimnasio de artes marciales.
+- Foto: Pexels 5750754.
+- Ficha: https://www.pexels.com/photo/woman-doing-high-kick-during-boxing-training-5750754/

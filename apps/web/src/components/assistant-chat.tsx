@@ -103,7 +103,7 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
   return (
     <div className="flex flex-col gap-4">
       <header className="flex flex-col gap-1">
-        <h2 className="text-xl font-semibold text-base-content">{t('heading')}</h2>
+        <h2 className="tb-display text-2xl text-base-content">{t('heading')}</h2>
         <p className="max-w-2xl text-sm text-base-content/70">{t('intro')}</p>
       </header>
 
@@ -123,15 +123,15 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
             key={`${message.role}-${index}`}
             className={
               message.role === 'user'
-                ? 'rounded-box border border-base-300 bg-base-200 p-3'
+                ? 'tb-surface p-3'
                 : 'rounded-box border border-primary/30 bg-primary/5 p-3'
             }
           >
-            <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-base-content/60">
+            <span className="tb-eyebrow flex items-center gap-2 text-base-content/60">
               {message.role === 'user' ? t('you') : t('assistant')}
               {message.role === 'assistant' && message.provider ? (
                 <span
-                  className="badge badge-outline badge-sm normal-case"
+                  className="badge tb-badge tb-cat-transitions badge-sm normal-case"
                   aria-label={t('providerBadge', { name: message.provider })}
                 >
                   {message.provider}

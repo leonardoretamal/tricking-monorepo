@@ -172,8 +172,8 @@ export function FeedbackAdmin() {
 
   if (token === '') {
     return (
-      <div className="card max-w-xl border border-border bg-base-200/60">
-        <form onSubmit={applyToken} className="card-body gap-4">
+      <div className="tb-surface max-w-xl">
+        <form onSubmit={applyToken} className="flex flex-col gap-4 p-6">
           <label className="flex flex-col gap-1 text-sm font-medium" htmlFor="feedback-admin-token">
             <span>{t('tokenLabel')}</span>
             <input
@@ -190,7 +190,7 @@ export function FeedbackAdmin() {
           <p id="feedback-admin-token-hint" className="text-xs text-base-content/60">
             {t('tokenRequired')}
           </p>
-          <div className="card-actions justify-start">
+          <div className="flex justify-start">
             <button type="submit" className="btn btn-primary" disabled={tokenInput.trim() === ''}>
               {t('tokenApply')}
             </button>
@@ -220,7 +220,7 @@ export function FeedbackAdmin() {
 
       {!unauthorized ? (
         <>
-          <div className="flex flex-col gap-4 rounded-box border border-border bg-base-300/40 p-4 sm:flex-row sm:flex-wrap sm:items-end">
+          <div className="tb-surface flex flex-col gap-4 p-4 sm:flex-row sm:flex-wrap sm:items-end">
             <label className="flex flex-col gap-1 text-sm font-medium">
               <span>{t('filters.statusLabel')}</span>
               <select
@@ -312,8 +312,8 @@ export function FeedbackAdmin() {
           {items.length > 0 ? (
             <ul className="flex flex-col gap-4">
               {items.map((item) => (
-                <li key={item.id} className="card border border-border bg-base-200/60">
-                  <div className="card-body gap-3">
+                <li key={item.id} className="tb-surface">
+                  <div className="flex flex-col gap-3 p-5">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className={`badge ${STATUS_BADGE[item.status] ?? 'badge-ghost'}`}>
                         {t(`status.${item.status}`)}
@@ -353,7 +353,7 @@ export function FeedbackAdmin() {
                       </div>
                     </dl>
 
-                    <div className="card-actions flex-wrap justify-start">
+                    <div className="flex flex-wrap justify-start gap-2">
                       <button
                         type="button"
                         className="btn btn-outline btn-sm"
@@ -434,7 +434,7 @@ export function FeedbackAdmin() {
         onClose={() => setPendingDelete(null)}
       >
         <div className="modal-box">
-          <h2 id="feedback-delete-title" className="text-lg font-semibold text-base-content">
+          <h2 id="feedback-delete-title" className="tb-display text-2xl text-base-content">
             {t('delete.title')}
           </h2>
           <p id="feedback-delete-description" className="py-4 text-sm text-base-content/80">

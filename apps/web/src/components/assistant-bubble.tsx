@@ -88,12 +88,12 @@ export function AssistantBubble() {
         aria-hidden={!open}
         className={
           open
-            ? 'tb-bubble-panel fixed bottom-16 right-5 z-50 flex max-h-[75vh] w-[min(88vw,24rem)] flex-col overflow-hidden rounded-box border border-border bg-base-100 shadow-2xl'
+            ? 'tb-bubble-panel tb-surface fixed bottom-16 right-5 z-50 flex max-h-[75vh] w-[min(88vw,24rem)] flex-col overflow-hidden shadow-2xl'
             : 'hidden'
         }
       >
         <header className="flex items-center justify-between gap-2 border-b border-border px-4 py-3">
-          <h2 className="text-base font-semibold text-base-content">{t('title')}</h2>
+          <h2 className="tb-display text-lg text-base-content">{t('title')}</h2>
           <button
             type="button"
             aria-label={t('bubble.close')}

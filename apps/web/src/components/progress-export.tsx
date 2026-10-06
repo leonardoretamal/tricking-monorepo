@@ -95,10 +95,10 @@ export function ProgressExport() {
   };
 
   return (
-    <section className="card border border-border bg-base-200/60">
-      <div className="card-body gap-4">
+    <section className="tb-surface">
+      <div className="flex flex-col gap-4 p-5 sm:p-6">
         <div className="flex flex-col gap-1">
-          <h2 className="text-lg font-semibold text-base-content">{t('export.title')}</h2>
+          <h2 className="tb-display text-2xl text-base-content">{t('export.title')}</h2>
           <p className="max-w-2xl text-sm text-base-content/70">{t('export.description')}</p>
         </div>
 

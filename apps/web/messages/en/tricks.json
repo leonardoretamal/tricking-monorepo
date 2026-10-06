@@ -2,6 +2,7 @@
   "tricks": {
     "title": "Tricks",
     "description": "Tricking catalog with its technical and execution information.",
+    "eyebrow": "Catalog",
     "sections": {
       "vertical-kicks": {
         "title": "Vertical kicks",
@@ -25,6 +26,8 @@
       }
     },
     "filters": {
+      "panelTitle": "Filters",
+      "clear": "Clear filters",
       "searchLabel": "Search",
       "searchPlaceholder": "Trick name",
       "sectionLabel": "Section",

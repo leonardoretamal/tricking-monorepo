@@ -221,13 +221,10 @@ export function SearchResults({ initial }: SearchResultsProps) {
           aria-labelledby={`search-group-${group.type}`}
         >
           <div className="flex items-baseline gap-2">
-            <h2
-              id={`search-group-${group.type}`}
-              className="text-xl font-semibold text-base-content"
-            >
+            <h2 id={`search-group-${group.type}`} className="tb-display text-2xl text-base-content">
               {t(`groups.${group.type}`)}
             </h2>
-            <span className="text-sm text-base-content/60">{group.items.length}</span>
+            <span className="badge tb-badge tb-cat-transitions">{group.items.length}</span>
           </div>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {group.items.map((item) => {
@@ -238,24 +235,22 @@ export function SearchResults({ initial }: SearchResultsProps) {
                     href={hrefFor(item)}
                     className="block h-full rounded-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
-                    <article className="card h-full border border-base-300 bg-base-100 shadow-sm">
-                      <div className="card-body gap-2">
-                        <h3 className="text-lg font-semibold text-base-content">
-                          {highlightMatch(item.name, queryTerm)}
-                        </h3>
-                        {description ? (
-                          <p className="line-clamp-3 text-sm text-base-content/70">
-                            {highlightMatch(description, queryTerm)}
-                          </p>
-                        ) : null}
-                        {item.type === 'trick' && item.difficulty !== null ? (
-                          <div className="card-actions">
-                            <span className={`badge tb-badge tb-difficulty-${item.difficulty}`}>
-                              {tTricks(`difficulty.${item.difficulty}`)}
-                            </span>
-                          </div>
-                        ) : null}
-                      </div>
+                    <article className="tb-surface tb-surface-hover flex h-full flex-col gap-2 p-5">
+                      <h3 className="text-lg font-semibold text-base-content">
+                        {highlightMatch(item.name, queryTerm)}
+                      </h3>
+                      {description ? (
+                        <p className="line-clamp-3 text-sm text-base-content/70">
+                          {highlightMatch(description, queryTerm)}
+                        </p>
+                      ) : null}
+                      {item.type === 'trick' && item.difficulty !== null ? (
+                        <div className="mt-auto">
+                          <span className={`badge tb-badge tb-difficulty-${item.difficulty}`}>
+                            {tTricks(`difficulty.${item.difficulty}`)}
+                          </span>
+                        </div>
+                      ) : null}
                     </article>
                   </Link>
                 </li>
