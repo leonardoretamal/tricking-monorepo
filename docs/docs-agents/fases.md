@@ -651,6 +651,83 @@ Dependencias: ninguna nueva. `next/font` es parte de Next y las imágenes son de
 
 Criterio de cierre: rediseño completo aplicado a todas las pantallas, dark-first, contraste WCAG AA, Lighthouse móvil >= 90 y verificación en navegador real.
 
+## Fase 38: Contenido en BD y cierre de brechas contra TrickingAPI
+
+Estado: completada.
+
+Confirmar que la app no depende en runtime de la API de Loopkicks ni de TrickingAPI, que todo el contenido vive en la base salvo los vídeos (que se enlazan externos) y cerrar las brechas de contenido reales.
+
+- 38.1. Script de auditoría reproducible y de solo lectura (`scripts/audit-content.mjs`) que compara TrickingAPI en vivo contra la base.
+- 38.2. Curar los 2 trucos que quedaban sin `section`, `difficulty` ni `how_to` (`backTuck`, `touchupTripleButterflyTwist`).
+- 38.3. Acordeón Kojo: ocultar el bloque de tips (y el bloque Kojo del detalle) cuando no hay tips.
+
+Criterio de cierre: cobertura 570/570 con `section`, `difficulty` y `how_to` es/en; auditoría sin faltantes.
+
+Notas: la API viva `/tricks` da 558, iguales a la semilla y a la base (558 más 12 manuales = 570). `/transitions` 15 en vivo contra 16 en base (Loopkicks aporta `swingthrough`); `/landingstances` 4 contra 6 posturas en base (Loopkicks aporta 6). No hay dependencia runtime: los vídeos son URLs externas (`videos.status='external'`). Los dos trucos se cargaron por el seed de `manual-tricks`, que fija `source='manual'` y reescribe descripciones (cosmético, `tricks.source` no se usa en consultas).
+
+Dependencias: ninguna. Sin variables nuevas.
+
+## Fase 39: i18n estricto del asistente y de los combos
+
+Estado: completada.
+
+- 39.1. `locale` en el contrato del generador de combos (`comboRequestSchema`) y en `/api/combos/generate`.
+- 39.2. Prompt de refinamiento de la IA por idioma (ya no hardcodeado en español).
+- 39.3. Regla de idioma endurecida en el prompt de sistema del asistente.
+
+Criterio de cierre: la respuesta sale en el idioma de la interfaz (es si la UI está en es, en si está en en), verificado en navegador real.
+
+Dependencias: ninguna. Sin variables nuevas.
+
+## Fase 40: Turnstile en producción
+
+Estado: completada en código; pendiente la acción del usuario en el panel de Cloudflare.
+
+- 40.1. Diagnóstico: la causa es la configuración del widget (hostname de producción no permitido), no el código ni la clave.
+- 40.2. Manejo de error y reintento localizado en el formulario de feedback, con remonte del widget cuando el script no cargó.
+
+Criterio de cierre: el formulario muestra un mensaje propio y permite reintentar; el widget funciona en producción tras agregar el hostname en Cloudflare.
+
+Notas: la guía exacta para el panel se entregó al usuario; el server sigue degradando con aviso si falta el secreto.
+
+Dependencias: acceso del usuario al panel de Cloudflare. Sin variables nuevas.
+
+## Fase 41: Progreso por estado, generación bajo demanda y multi-sección
+
+Estado: completada.
+
+- 41.1. Listas de trucos marcados (Aprendidos, En progreso, Por aprender) con enlace al detalle, resueltas con `listTricksByIds` y el endpoint `GET /api/tricks/by-ids`.
+- 41.2. El generador de combos ya no se dispara al montar ni al cambiar filtros: solo con el botón Generar/Regenerar.
+- 41.3. Filtro de secciones múltiple con chips: "Todas" significa sin restricción (desmarca las individuales); marcar individuales desmarca "Todas"; con las cinco individuales vuelve "Todas".
+
+Criterio de cierre: el progreso muestra los trucos por estado, el generador genera a demanda y el filtro admite más de una sección.
+
+Dependencias: ninguna. Sin variables nuevas.
+
+## Fase 42: CRUD de combos guardados (tope 5)
+
+Estado: completada.
+
+- 42.1. Modelo local de combos (Zustand y Zod) en la clave `tricking:combos`, con tope duro de 5 y sin PII.
+- 42.2. Editor tipo nota (pasos, reordenar, nota por paso, título, descripción y estado) y listado con export a texto y borrado con modal de confirmación.
+- 42.3. Guardar la combinación del generador cuando hay resultado; al llegar a 5 se deshabilita y se pide editar o eliminar.
+
+Criterio de cierre: crear, guardar, editar, exportar y eliminar combos en el navegador, persistente tras recargar, con tope de 5.
+
+Dependencias: ninguna. Sin variables nuevas.
+
+## Fase 43: Imágenes del inicio
+
+Estado: completada.
+
+- 43.1. Hero con una imagen de truco acrobático en lugar de una patada de muay thai.
+- 43.2. Reasignación de las tarjetas: Trucos con el flip urbano, Transiciones con una nueva imagen de flujo y Variaciones con la patada vertical.
+- 43.3. `CREDITS.md` actualizado con la fuente y la licencia de cada imagen (Pexels).
+
+Criterio de cierre: el inicio muestra imágenes de tricking coherentes con cada sección, con créditos y licencia documentados.
+
+Dependencias: ninguna. Sin variables nuevas.
+
 ## Fases de la sección 28 no activadas
 
 Las siguientes quedan en la sección 28 de `AGENTS.md` y no se abren por ahora, por decisión del usuario (2026-10-05):
