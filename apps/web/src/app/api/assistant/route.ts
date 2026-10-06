@@ -364,6 +364,7 @@ async function buildComboAnswer(
   mode: 'known' | 'free',
   knownTrickIds: string[],
   text: AssistantChatText,
+  locale: Locale,
 ): Promise<string | null> {
   const length: ComboLength = 'medium';
   let steps: { name: string }[];
@@ -372,7 +373,7 @@ async function buildComboAnswer(
     if (ids.length < 2) {
       return null;
     }
-    const pool = await loadComboPool({ knownTrickIds: ids, length });
+    const pool = await loadComboPool({ knownTrickIds: ids, length, locale });
     steps = buildComboFromPool(pool, length).steps;
   } else {
     // Libre: cadena coherente siguiendo las relaciones `next` del catalogo.
@@ -441,7 +442,7 @@ export async function POST(request: Request) {
           provider: null,
         });
       }
-      const comboAnswer = await buildComboAnswer(mode, knownTrickIds ?? [], text);
+      const comboAnswer = await buildComboAnswer(mode, knownTrickIds ?? [], text, locale);
       if (comboAnswer !== null) {
         logger.info({ traceId, comboMode: mode }, 'asistente: combinacion generada del catalogo');
         return NextResponse.json({

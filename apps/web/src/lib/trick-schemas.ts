@@ -29,6 +29,18 @@ export const paginatedTricksSchema = z.object({
   totalPages: z.number(),
 });
 
+// Respuesta de /api/tricks/by-ids. Referencia minima para resolver ids locales.
+export const trickByIdItemSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  section: z.string().nullable(),
+  difficulty: z.number().nullable(),
+});
+
+export const tricksByIdsResponseSchema = z.object({
+  items: z.array(trickByIdItemSchema),
+});
+
 export const kojoTechniqueSchema = z.object({
   id: z.number(),
   title: z.string().nullable(),
@@ -83,3 +95,5 @@ export type TrickListItem = z.infer<typeof trickListItemSchema>;
 export type TrickRelated = z.infer<typeof trickRelatedSchema>;
 export type TrickDetail = z.infer<typeof trickDetailSchema>;
 export type PaginatedTricks = z.infer<typeof paginatedTricksSchema>;
+export type TrickByIdItem = z.infer<typeof trickByIdItemSchema>;
+export type TricksByIdsResponse = z.infer<typeof tricksByIdsResponseSchema>;

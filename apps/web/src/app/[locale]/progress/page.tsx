@@ -2,7 +2,9 @@ import { listTricks } from '@tricking/db';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { ComboGenerator } from '@/components/combo-generator';
+import { ComboList } from '@/components/combo-list';
 import { ProgressExport } from '@/components/progress-export';
+import { ProgressLists } from '@/components/progress-lists';
 import { ProgressSummary, type ProgressSectionSummary } from '@/components/progress-summary';
 import { SECTIONS, type Section } from '@/lib/sections';
 
@@ -66,8 +68,10 @@ export default async function ProgressPage({ params }: ProgressPageProps) {
       </header>
 
       <ProgressSummary total={catalog.total} sections={sections} />
+      <ProgressLists />
       <ProgressExport />
       <ComboGenerator />
+      <ComboList />
     </section>
   );
 }

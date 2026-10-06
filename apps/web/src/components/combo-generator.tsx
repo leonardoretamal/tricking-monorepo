@@ -1,26 +1,29 @@
 'use client';
 
 import { EmptyState, ErrorState, LoadingState } from '@tricking/ui';
-import { Copy, RefreshCw } from 'lucide-react';
-import { useTranslations } from 'next-intl';
-import { useEffect, useMemo, useState } from 'react';
+import { Copy, RefreshCw, Save } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { toast } from 'sonner';
 
 import { Link } from '@/i18n/navigation';
 import { AssistantApiError, generateCombo } from '@/lib/assistant-api';
 import {
-  COMBO_LENGTHS,
+  COMBO_MAX_SAVED,
   isComboLength,
+  COMBO_LENGTHS,
   type ComboLength,
+  type ComboLocale,
   type ComboResponse,
 } from '@/lib/combo-schemas';
+import { useComboStore } from '@/lib/combo-store';
 import { useProgressStore } from '@/lib/progress-store';
 import { SECTIONS, type Section } from '@/lib/sections';
 
-// Generador de combinaciones (Fase 22). Lee el progreso del usuario desde el store del
-// navegador y envia SOLO los ids de los trucos marcados como aprendidos; el servidor
-// nunca lee localStorage. El resultado es deterministico y se puede regenerar rotando el
-// orden de los ids enviados.
+// Generador de combinaciones (Fase 22, actualizado en la Fase 41). Lee el progreso del
+// usuario desde el store del navegador y envia SOLO los ids de los trucos marcados como
+// aprendidos; el servidor nunca lee localStorage. La generacion es a demanda (boton
+// Generar / Regenerar), no al montar ni al cambiar los filtros.
 
 type GeneratorState =
   | { status: 'idle' }
@@ -39,6 +42,13 @@ const SECTION_KEYS: Record<Section, string> = {
 const DIFFICULTIES = ['0', '1', '2', '3', '4', '5'] as const;
 type DifficultyChoice = 'any' | (typeof DIFFICULTIES)[number];
 
+const FOCUS_CLASS =
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary';
+
+const CHIP_BASE = `btn btn-sm ${FOCUS_CLASS}`;
+const CHIP_ON = 'border border-primary bg-primary/15 text-base-content';
+const CHIP_OFF = 'btn-outline text-base-content/80';
+
 function rotate(ids: string[], offset: number): string[] {
   if (ids.length === 0) {
     return ids;
@@ -50,19 +60,34 @@ function rotate(ids: string[], offset: number): string[] {
 export function ComboGenerator() {
   const t = useTranslations('assistant.combos');
   const tNav = useTranslations('nav');
+  const currentLocale = useLocale();
+  // El contrato del generador solo admite es/en; cualquier otro valor cae a es.
+  const locale: ComboLocale = currentLocale === 'en' ? 'en' : 'es';
 
   const hydrate = useProgressStore((state) => state.hydrate);
   const tricks = useProgressStore((state) => state.tricks);
 
+  const combos = useComboStore((state) => state.combos);
+  const hydrateCombos = useComboStore((state) => state.hydrate);
+  const addCombo = useComboStore((state) => state.addCombo);
+
   const [length, setLength] = useState<ComboLength>('medium');
-  const [section, setSection] = useState<Section | 'all'>('all');
+  // [] significa "Todas" (sin restriccion); un subconjunto es el filtro explicito.
+  const [sections, setSections] = useState<Section[]>([]);
   const [maxDifficulty, setMaxDifficulty] = useState<DifficultyChoice>('any');
   const [attempt, setAttempt] = useState(0);
   const [state, setState] = useState<GeneratorState>({ status: 'idle' });
 
+  const abortRef = useRef<AbortController | null>(null);
+
   useEffect(() => {
     hydrate();
-  }, [hydrate]);
+    hydrateCombos();
+  }, [hydrate, hydrateCombos]);
+
+  useEffect(() => {
+    return () => abortRef.current?.abort();
+  }, []);
 
   // Se considera "conocido" solo el truco marcado como aprendido; "quiero" o "en
   // progreso" no habilitan el generador.
@@ -73,28 +98,55 @@ export function ComboGenerator() {
         .map(([id]) => id),
     [tricks],
   );
-  const learnedKey = learnedIds.join(',');
 
   useEffect(() => {
     if (learnedIds.length === 0) {
+      abortRef.current?.abort();
       setState({ status: 'idle' });
+    }
+  }, [learnedIds.length]);
+
+  const allSectionsSelected = sections.length === 0;
+
+  const toggleSection = (section: Section): void => {
+    setSections((current) => {
+      const next = current.includes(section)
+        ? current.filter((item) => item !== section)
+        : SECTIONS.filter((item) => item === section || current.includes(item));
+      // Con las 5 individuales marcadas, vuelve "Todas" y las individuales se desmarcan.
+      return next.length === SECTIONS.length ? [] : next;
+    });
+  };
+
+  const toggleAll = (): void => {
+    setSections([]);
+  };
+
+  const runGeneration = (): void => {
+    if (learnedIds.length === 0) {
       return;
     }
-
+    abortRef.current?.abort();
     const controller = new AbortController();
+    abortRef.current = controller;
+    const rotation = attempt;
+    setAttempt((value) => value + 1);
     setState({ status: 'loading' });
 
     generateCombo(
       {
-        knownTrickIds: rotate(learnedIds, attempt),
+        knownTrickIds: rotate(learnedIds, rotation),
         length,
-        ...(section === 'all' ? {} : { section }),
+        locale,
+        ...(allSectionsSelected ? {} : { sections }),
         ...(maxDifficulty === 'any' ? {} : { maxDifficulty: Number(maxDifficulty) }),
       },
       controller.signal,
     )
       .then((data) => {
-        setState({ status: 'success', data });
+        if (!controller.signal.aborted) {
+          setState({ status: 'success', data });
+        }
       })
       .catch((error: unknown) => {
         if (controller.signal.aborted) {
@@ -105,9 +157,7 @@ export function ComboGenerator() {
           code: error instanceof AssistantApiError ? error.code : 'unknown',
         });
       });
-
-    return () => controller.abort();
-  }, [learnedIds, learnedKey, length, section, maxDifficulty, attempt]);
+  };
 
   const copy = async (): Promise<void> => {
     if (state.status !== 'success') {
@@ -119,6 +169,29 @@ export function ComboGenerator() {
       toast.success(t('copied'));
     } catch {
       toast.error(t('copyFailed'));
+    }
+  };
+
+  const atSaveLimit = combos.length >= COMBO_MAX_SAVED;
+
+  const save = (): void => {
+    if (state.status !== 'success') {
+      return;
+    }
+    const saved = addCombo({
+      title: t('savedDefaultTitle', { number: combos.length + 1 }),
+      status: 'draft',
+      steps: state.data.steps.map((step) => ({
+        trickId: step.trickId,
+        name: step.name,
+        section: step.section,
+        difficulty: step.difficulty,
+      })),
+    });
+    if (saved) {
+      toast.success(t('saved'));
+    } else {
+      toast.error(t('saveLimitReached'));
     }
   };
 
@@ -158,7 +231,7 @@ export function ComboGenerator() {
         <p className="max-w-2xl text-sm text-base-content/70">{t('intro')}</p>
       </header>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1">
           <label htmlFor="combo-length" className="text-sm font-medium text-base-content">
             {t('length')}
@@ -176,35 +249,6 @@ export function ComboGenerator() {
             {COMBO_LENGTHS.map((value) => (
               <option key={value} value={value}>
                 {t(`lengths.${value}`)}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="flex flex-col gap-1">
-          <label htmlFor="combo-section" className="text-sm font-medium text-base-content">
-            {t('section')}
-          </label>
-          <select
-            id="combo-section"
-            className="select select-bordered w-full"
-            value={section}
-            onChange={(event) => {
-              const value = event.target.value;
-              if (value === 'all') {
-                setSection('all');
-                return;
-              }
-              const found = SECTIONS.find((item) => item === value);
-              if (found !== undefined) {
-                setSection(found);
-              }
-            }}
-          >
-            <option value="all">{t('sections.all')}</option>
-            {SECTIONS.map((value) => (
-              <option key={value} value={value}>
-                {tNav(SECTION_KEYS[value])}
               </option>
             ))}
           </select>
@@ -240,23 +284,81 @@ export function ComboGenerator() {
         </div>
       </div>
 
+      <fieldset className="flex flex-col gap-2">
+        <legend className="text-sm font-medium text-base-content">{t('section')}</legend>
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            className={`${CHIP_BASE} ${allSectionsSelected ? CHIP_ON : CHIP_OFF}`}
+            aria-pressed={allSectionsSelected}
+            onClick={toggleAll}
+          >
+            {t('sections.all')}
+          </button>
+          {SECTIONS.map((value) => {
+            const active = sections.includes(value);
+            return (
+              <button
+                key={value}
+                type="button"
+                className={`${CHIP_BASE} ${active ? CHIP_ON : CHIP_OFF}`}
+                aria-pressed={active}
+                onClick={() => toggleSection(value)}
+              >
+                {tNav(SECTION_KEYS[value])}
+              </button>
+            );
+          })}
+        </div>
+      </fieldset>
+
       <div className="flex flex-wrap items-center gap-2">
         <button
           type="button"
-          className="btn btn-primary btn-sm"
-          onClick={() => setAttempt((value) => value + 1)}
+          className={`btn btn-primary btn-sm ${FOCUS_CLASS}`}
+          onClick={runGeneration}
           disabled={state.status === 'loading'}
         >
           <RefreshCw aria-hidden="true" className="size-4" />
-          {state.status === 'loading' ? t('generating') : t('regenerate')}
+          {state.status === 'loading'
+            ? t('generating')
+            : state.status === 'idle'
+              ? t('generate')
+              : t('regenerate')}
         </button>
         {state.status === 'success' && state.data.steps.length >= 2 ? (
-          <button type="button" className="btn btn-outline btn-sm" onClick={() => void copy()}>
-            <Copy aria-hidden="true" className="size-4" />
-            {t('copy')}
-          </button>
+          <>
+            <button
+              type="button"
+              className={`btn btn-outline btn-sm ${FOCUS_CLASS}`}
+              onClick={() => void copy()}
+            >
+              <Copy aria-hidden="true" className="size-4" />
+              {t('copy')}
+            </button>
+            <button
+              type="button"
+              className={`btn btn-outline btn-sm ${FOCUS_CLASS}`}
+              onClick={save}
+              disabled={atSaveLimit}
+              title={atSaveLimit ? t('saveLimitReached') : undefined}
+            >
+              <Save aria-hidden="true" className="size-4" />
+              {t('save')}
+            </button>
+          </>
         ) : null}
       </div>
+
+      {state.status === 'success' && atSaveLimit ? (
+        <p className="text-sm text-base-content/70" role="status">
+          {t('saveLimitReached')}
+        </p>
+      ) : null}
+
+      {state.status === 'idle' ? (
+        <p className="text-sm text-base-content/70">{t('idleDescription')}</p>
+      ) : null}
 
       {state.status === 'loading' ? <LoadingState label={t('generating')} /> : null}
 
@@ -267,8 +369,8 @@ export function ComboGenerator() {
           action={
             <button
               type="button"
-              className="btn btn-primary btn-sm"
-              onClick={() => setAttempt((value) => value + 1)}
+              className={`btn btn-primary btn-sm ${FOCUS_CLASS}`}
+              onClick={runGeneration}
             >
               {t('retry')}
             </button>

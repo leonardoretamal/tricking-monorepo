@@ -80,7 +80,14 @@
       "sourceAi": "Order refined with AI",
       "sourceDeterministic": "Combo generated locally",
       "providerLabel": "with {name}",
-      "retry": "Retry"
+      "retry": "Retry",
+      "generate": "Generate",
+      "idleDescription": "Adjust the filters and press Generate to build a combo.",
+      "save": "Save",
+      "saved": "Combo saved. Edit it in your combos.",
+      "saveError": "We could not save the combo.",
+      "saveLimitReached": "You reached the maximum of 5 saved combos. Edit or delete one to save another.",
+      "savedDefaultTitle": "Combo {number}"
     }
   }
 }

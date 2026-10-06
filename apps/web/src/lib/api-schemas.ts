@@ -8,6 +8,7 @@ import {
   MAX_GAZE_PAGE_SIZE,
   MAX_PAGE_SIZE,
   MAX_STANCE_PAGE_SIZE,
+  MAX_TRICKS_BY_IDS,
   MAX_TRANSITION_PAGE_SIZE,
   MAX_VARIATION_PAGE_SIZE,
   TRICK_SECTIONS,
@@ -80,6 +81,21 @@ export const gazeLocaleQuerySchema = z.object({
 
 export const trickIdSchema = z.string().trim().min(1).max(120);
 export const slugSchema = z.string().trim().min(1).max(120);
+
+// Query del endpoint /api/tricks/by-ids: ids separados por coma, con tope duro. Se
+// normaliza a un arreglo acotado y sin elementos vacios antes de tocar la base de datos.
+export const tricksByIdsQuerySchema = z.object({
+  ids: z
+    .string()
+    .min(1)
+    .transform((value) =>
+      value
+        .split(',')
+        .map((item) => item.trim())
+        .filter((item) => item !== ''),
+    )
+    .pipe(z.array(trickIdSchema).min(1).max(MAX_TRICKS_BY_IDS)),
+});
 
 export type TricksQuery = z.infer<typeof tricksQuerySchema>;
 export type GazeTipsQuery = z.infer<typeof gazeTipsQuerySchema>;

@@ -60,6 +60,7 @@ export async function POST(request: Request) {
         aiProviders,
         result,
         data.length,
+        data.locale,
         traceId,
         getAiDailyCap(),
       );
@@ -79,6 +80,8 @@ export async function POST(request: Request) {
         known: data.knownTrickIds.length,
         candidates: pool.order.length,
         length: data.length,
+        locale: data.locale,
+        sections: data.sections?.length ?? 'all',
         steps: result.steps.length,
         source,
         provider,

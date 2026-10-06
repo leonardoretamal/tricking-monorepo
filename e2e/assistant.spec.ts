@@ -36,7 +36,7 @@ test.describe('asistente y combinaciones', () => {
 
   test('el POST de combinaciones rechaza un cuerpo invalido', async ({ request }) => {
     const response = await request.post('/api/combos/generate', {
-      data: { knownTrickIds: [], length: 'medium' },
+      data: { knownTrickIds: [], length: 'medium', locale: 'es' },
     });
     expect(response.status()).toBe(400);
   });
@@ -59,7 +59,7 @@ test.describe('asistente y combinaciones', () => {
     }
 
     const response = await request.post('/api/combos/generate', {
-      data: { knownTrickIds: ids, length: 'short' },
+      data: { knownTrickIds: ids, length: 'short', locale: 'es' },
     });
     expect(response.status()).toBe(200);
 

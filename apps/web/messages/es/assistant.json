@@ -80,7 +80,14 @@
       "sourceAi": "Orden refinado con IA",
       "sourceDeterministic": "Combinación generada localmente",
       "providerLabel": "con {name}",
-      "retry": "Reintentar"
+      "retry": "Reintentar",
+      "generate": "Generar",
+      "idleDescription": "Ajusta los filtros y pulsa Generar para armar una combinación.",
+      "save": "Guardar",
+      "saved": "Combinación guardada. Edítala en tus combinaciones.",
+      "saveError": "No pudimos guardar la combinación.",
+      "saveLimitReached": "Llegaste al máximo de 5 combinaciones guardadas. Edita o elimina una para guardar otra.",
+      "savedDefaultTitle": "Combinación {number}"
     }
   }
 }

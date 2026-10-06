@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
-import { comboMode, isComboRequest } from './ai-guardrails';
+import {
+  comboMode,
+  getAssistantSystemPrompt,
+  getComboRefinementItemsLabel,
+  getComboRefinementSystemPrompt,
+  isComboRequest,
+} from './ai-guardrails';
 
 describe('isComboRequest', () => {
   it('reconoce una peticion explicita de combinacion', () => {
@@ -45,5 +51,31 @@ describe('comboMode', () => {
 
   it('no interpreta libre dentro de una frase larga ajena', () => {
     expect(comboMode('tengo poco tiempo libre para entrenar hoy')).toBe('ask');
+  });
+});
+
+describe('getAssistantSystemPrompt', () => {
+  it('fija el idioma del usuario en espanol', () => {
+    const prompt = getAssistantSystemPrompt('es');
+    expect(prompt).toContain('Responde EXACTAMENTE en espanol');
+    expect(prompt).toContain('No cambies de idioma');
+  });
+
+  it('fija el idioma del usuario en ingles', () => {
+    const prompt = getAssistantSystemPrompt('en');
+    expect(prompt).toContain('Answer EXACTLY in English');
+    expect(prompt).toContain('Do not switch languages');
+  });
+});
+
+describe('getComboRefinementSystemPrompt', () => {
+  it('cambia el prompt de refinamiento por idioma', () => {
+    expect(getComboRefinementSystemPrompt('es')).toContain('EXACTAMENTE en espanol');
+    expect(getComboRefinementSystemPrompt('en')).toContain('EXACTLY in English');
+  });
+
+  it('localiza la etiqueta de la lista de trucos', () => {
+    expect(getComboRefinementItemsLabel('es')).toBe('trucos');
+    expect(getComboRefinementItemsLabel('en')).toBe('tricks');
   });
 });

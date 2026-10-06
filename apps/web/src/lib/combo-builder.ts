@@ -7,6 +7,11 @@ import {
 import { z } from 'zod';
 
 import { callChatCompletionWithFallback, type ChatMessage } from './ai-client';
+import {
+  getComboRefinementItemsLabel,
+  getComboRefinementSystemPrompt,
+  type AssistantLanguage,
+} from './ai-guardrails';
 import type { AiProviderConfig } from './ai-providers';
 import {
   COMBO_MAX_KNOWN_IDS,
@@ -45,13 +50,16 @@ export async function loadComboPool(request: ComboRequest): Promise<ComboPool> {
   const requested = dedupe(request.knownTrickIds);
   const rows = await loadComboTricks(requested);
   const excluded = new Set(request.exclude ?? []);
+  // Multi-seccion (Fase 41): ausente = todas; un arreglo vacio no deja pasar ningun truco.
+  const sectionFilter: Set<string> | null =
+    request.sections !== undefined ? new Set<string>(request.sections) : null;
 
   const byId = new Map<string, ComboStep>();
   for (const row of rows) {
     if (excluded.has(row.id)) {
       continue;
     }
-    if (request.section !== undefined && row.section !== request.section) {
+    if (sectionFilter !== null && (row.section === null || !sectionFilter.has(row.section))) {
       continue;
     }
     if (
@@ -198,6 +206,7 @@ export async function refineComboOrderWithAi(
   providers: AiProviderConfig[],
   deterministic: ComboBuildResult,
   length: ComboLength,
+  language: AssistantLanguage,
   traceId: string,
   dailyCap: number,
 ): Promise<{ order: string[]; provider: string } | null> {
@@ -214,12 +223,11 @@ export async function refineComboOrderWithAi(
   const messages: ChatMessage[] = [
     {
       role: 'system',
-      content:
-        'Eres un entrenador de tricking. Recibes una lista de trucos que el alumno ya domina. Devuelve un orden fluido para encadenarlos, usando UNICAMENTE los trickId de la lista, sin repetirlos. Responde solo con JSON valido con la forma {"order": ["id1", "id2"]}.',
+      content: getComboRefinementSystemPrompt(language),
     },
     {
       role: 'user',
-      content: JSON.stringify({ trucos: available }),
+      content: JSON.stringify({ [getComboRefinementItemsLabel(language)]: available }),
     },
   ];
 

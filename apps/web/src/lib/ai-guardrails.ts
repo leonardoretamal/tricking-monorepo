@@ -25,7 +25,7 @@ const ASSISTANT_SYSTEM_PROMPT_ES = [
   'Si la quiere basada en lo que ya sabe, arma la combinacion SOLO con los trucos que el usuario tiene (la lista de conocidos del contexto), encadenados en un orden fluido.',
   'Si la quiere libre, arma la combinacion SOLO con trucos del catalogo provisto; nunca inventes nombres.',
   'No des consejos medicos, legales ni financieros: sugiere consultar a un profesional.',
-  'Responde siempre en espanol, sin importar el idioma del catalogo o del contexto, de forma clara y breve.',
+  'Responde EXACTAMENTE en espanol: es el idioma de la interfaz del usuario. No cambies de idioma aunque el usuario escriba en otro idioma, aunque el catalogo o el contexto vengan en ingles o aunque la pregunta parezca pedirlo. Se claro y breve.',
 ].join(' ');
 
 const ASSISTANT_SYSTEM_PROMPT_EN = [
@@ -42,13 +42,33 @@ const ASSISTANT_SYSTEM_PROMPT_EN = [
   'If they want it based on what they already know, build the combo ONLY with the tricks the user has (the known list in the context), chained in a fluid order.',
   'If they want it free, build the combo ONLY with tricks from the provided catalog; never invent names.',
   'Do not give medical, legal or financial advice: suggest consulting a professional.',
-  'Always answer in English, regardless of the language of the catalog or the context, in a clear and brief way.',
+  'Answer EXACTLY in English: it is the language of the user interface. Do not switch languages even if the user writes in another language, even if the catalog or context is in Spanish, or even if the question seems to ask for it. Be clear and brief.',
 ].join(' ');
 
 // Devuelve el prompt de sistema en el idioma del usuario. Las reglas son las mismas en
 // ambos idiomas; solo cambia el idioma de las instrucciones y de la respuesta esperada.
 export function getAssistantSystemPrompt(language: AssistantLanguage): string {
   return language === 'en' ? ASSISTANT_SYSTEM_PROMPT_EN : ASSISTANT_SYSTEM_PROMPT_ES;
+}
+
+// Prompt de sistema del refinamiento de combinaciones (Fase 22). Se construye en el
+// idioma del usuario para que la instruccion y la salida esperada sean coherentes con la
+// interfaz (paridad i18n del Bloque 39). La respuesta es solo JSON con ids, igual que el
+// prompt del asistente.
+const COMBO_REFINEMENT_PROMPT_ES =
+  'Eres un entrenador de tricking. Recibes una lista de trucos que el alumno ya domina. Devuelve un orden fluido para encadenarlos, usando UNICAMENTE los trickId de la lista, sin repetirlos. Responde EXACTAMENTE en espanol y solo con JSON valido con la forma {"order": ["id1", "id2"]}.';
+
+const COMBO_REFINEMENT_PROMPT_EN =
+  'You are a tricking coach. You receive a list of tricks the athlete already masters. Return a fluid order to chain them, using ONLY the trickId values from the list, without repeating them. Answer EXACTLY in English and only with valid JSON shaped {"order": ["id1", "id2"]}.';
+
+export function getComboRefinementSystemPrompt(language: AssistantLanguage): string {
+  return language === 'en' ? COMBO_REFINEMENT_PROMPT_EN : COMBO_REFINEMENT_PROMPT_ES;
+}
+
+// Etiqueta de la lista de trucos que se envia al modelo en el refinamiento. Se traduce
+// por idioma; el contenido son solo ids y nombres, nunca datos personales.
+export function getComboRefinementItemsLabel(language: AssistantLanguage): string {
+  return language === 'en' ? 'tricks' : 'trucos';
 }
 
 // Temas ajenos al tricking que se rechazan por pre-filtro. Las palabras se comparan

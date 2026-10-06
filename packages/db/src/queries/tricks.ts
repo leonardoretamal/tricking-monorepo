@@ -29,6 +29,10 @@ export type TrickSort = (typeof TRICK_SORTS)[number];
 export const DEFAULT_PAGE_SIZE = 24;
 export const MAX_PAGE_SIZE = 100;
 
+// Tope de ids que acepta `listTricksByIds` (y el endpoint /api/tricks/by-ids). Cubre el
+// maximo de trucos que el progreso local puede marcar hoy con holgura.
+export const MAX_TRICKS_BY_IDS = 600;
+
 export interface ListTricksParams {
   section?: TrickSection;
   category?: string;
@@ -63,6 +67,15 @@ export interface TrickRelated {
   name: string;
   difficulty: number | null;
   section: string | null;
+}
+
+// Referencia minima de un truco para resolver ids locales (progreso) a datos del
+// catalogo. Es lo que necesita el listado de trucos marcados por estado.
+export interface TrickByIdItem {
+  id: string;
+  name: string;
+  section: string | null;
+  difficulty: number | null;
 }
 
 export interface KojoTechnique {
@@ -190,6 +203,31 @@ export async function listTricks(params: ListTricksParams): Promise<PaginatedTri
     pageSize,
     totalPages: total === 0 ? 0 : Math.ceil(total / pageSize),
   };
+}
+
+// Resuelve una lista de ids locales (progreso del navegador) a la referencia minima del
+// catalogo. Filtra borrados, deduplica, aplica el tope y ordena por nombre en la base de
+// datos. Los ids inexistentes simplemente no vuelven.
+export async function listTricksByIds(ids: string[]): Promise<TrickByIdItem[]> {
+  const unique = [...new Set(ids.map((id) => id.trim()).filter((id) => id !== ''))].slice(
+    0,
+    MAX_TRICKS_BY_IDS,
+  );
+  if (unique.length === 0) {
+    return [];
+  }
+
+  const db = getDb();
+  return db
+    .select({
+      id: tricks.id,
+      name: tricks.name,
+      section: tricks.section,
+      difficulty: tricks.difficulty,
+    })
+    .from(tricks)
+    .where(and(isNull(tricks.deletedAt), inArray(tricks.id, unique)))
+    .orderBy(asc(tricks.name));
 }
 
 export async function getTrickById(id: string): Promise<TrickDetail | null> {
