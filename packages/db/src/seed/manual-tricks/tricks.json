@@ -130,5 +130,27 @@
     "descriptionEs": "Una patada vertical en la que una pierna traza un arco por encima de la cabeza.",
     "howTo": "Plant the support foot, swing the kicking leg up past the head with the knee slightly bent and hook it across in a wide arc. Keep the hips open and the support leg strong; land back on the support foot with the chest up.",
     "howToEs": "Apoya el pie de sostén, balancea la pierna que patea por encima de la cabeza con la rodilla algo flexionada y traza un gancho en arco amplio. Mantén las caderas abiertas y la pierna de sostén firme; aterriza de nuevo sobre el pie de sostén con el pecho arriba."
+  },
+  {
+    "id": "backTuck",
+    "name": "Back Tuck",
+    "section": "backward",
+    "difficulty": 2,
+    "category": "BACKWARD",
+    "description": "The Back Tuck (dubbed “back flip” by most) is the most fundamental and crucial move that a tricker can learn. Mastery of the backflip is an important fundamental building block, it teach air awareness and builds comfort-ability with flipping upside down.",
+    "descriptionEs": "El Back Tuck (llamado back flip por la mayoría) es el movimiento más fundamental y crucial que puede aprender quien practica tricking. Dominar el backflip es un bloque fundamental importante: enseña conciencia en el aire y da comodidad para girar boca abajo.",
+    "howTo": "From a standing setup, swing the arms back and bend the knees, then jump and pull the knees to the chest as the body rotates backward. Keep the chest up on takeoff, spot the landing over the shoulders and open out of the tuck to land on both feet with soft knees.",
+    "howToEs": "Desde una posición de pie, lleva los brazos hacia atrás y flexiona las rodillas, luego salta y recoge las rodillas al pecho mientras el cuerpo gira hacia atrás. Mantén el pecho arriba al despegar, ubica la caída por encima de los hombros y abre el recogido para aterrizar con ambos pies y las rodillas suaves."
+  },
+  {
+    "id": "touchupTripleButterflyTwist",
+    "name": "Touchup Triple Butterfly Twist",
+    "section": "inside",
+    "difficulty": 5,
+    "category": "INSIDE",
+    "description": "A Triple Butterfly Twist where the inside hand touches the ground on takeoff.",
+    "descriptionEs": "Un Triple Butterfly Twist en el que la mano interna toca el suelo en el despegue.",
+    "howTo": "This is a triple butterfly twist in which the inside hand touches the ground on takeoff. After the setup step, plant the inside hand for an instant, push off and turn the body three full times before landing on one foot.",
+    "howToEs": "Es un triple b-twist en el que la mano interna toca el piso al despegar. Tras el paso de impulso, apoya un instante la mano interna, empuja y gira el cuerpo tres vueltas completas antes de caer sobre un pie."
   }
 ]

@@ -99,45 +99,50 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
     </div>
   );
 
-  const kojoContent =
-    kojoTechniques.length > 0 ? (
-      <ul className="flex flex-col gap-4">
-        {kojoTechniques.map((technique) => {
-          const tips = pickDescription(locale, technique.tips, technique.tipsEs);
-          const level = technique.level ? tTechniques(`levels.${technique.level}`) : null;
-          return (
-            <li key={technique.id} className="flex flex-col gap-1">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="font-medium text-base-content">{technique.title}</span>
-                {level ? (
-                  <span className="badge badge-sm tb-badge border border-border bg-base-300 text-base-content/80">
-                    {level}
-                  </span>
-                ) : null}
-              </div>
-              <p className="leading-relaxed">{tips ?? t('detail.kojoEmptyTips')}</p>
-              {technique.permalink ? (
-                <a
-                  href={technique.permalink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-1 rounded text-primary underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                >
-                  {t('detail.sourceKojo')}
-                  <ExternalLink aria-hidden="true" className="size-4" />
-                </a>
+  // Solo se muestran las tecnicas que traen tips propios. Si ninguna los tiene, el bloque
+  // Kojo se oculta por completo para no dejar un hueco con el mensaje de "sin tips".
+  const kojoWithTips = kojoTechniques.flatMap((technique) => {
+    const tips = pickDescription(locale, technique.tips, technique.tipsEs);
+    return tips !== null && tips.trim() !== '' ? [{ technique, tips }] : [];
+  });
+
+  const kojoContent = (
+    <ul className="flex flex-col gap-4">
+      {kojoWithTips.map(({ technique, tips }) => {
+        const level = technique.level ? tTechniques(`levels.${technique.level}`) : null;
+        return (
+          <li key={technique.id} className="flex flex-col gap-1">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="font-medium text-base-content">{technique.title}</span>
+              {level ? (
+                <span className="badge badge-sm tb-badge border border-border bg-base-300 text-base-content/80">
+                  {level}
+                </span>
               ) : null}
-            </li>
-          );
-        })}
-      </ul>
-    ) : (
-      <p className="leading-relaxed">{t('detail.kojoEmpty')}</p>
-    );
+            </div>
+            <p className="leading-relaxed">{tips}</p>
+            {technique.permalink ? (
+              <a
+                href={technique.permalink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-1 rounded text-primary underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              >
+                {t('detail.sourceKojo')}
+                <ExternalLink aria-hidden="true" className="size-4" />
+              </a>
+            ) : null}
+          </li>
+        );
+      })}
+    </ul>
+  );
 
   const versions: AccordionItem[] = [
     { id: 'loopkicks', header: t('detail.loopkicks'), content: loopkicksContent },
-    { id: 'kojo', header: t('detail.kojo'), content: kojoContent },
+    ...(kojoWithTips.length > 0
+      ? [{ id: 'kojo', header: t('detail.kojo'), content: kojoContent }]
+      : []),
   ];
 
   return (

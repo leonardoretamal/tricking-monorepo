@@ -66,9 +66,7 @@ export function TutorialAccordion({ items, locale, virtualize }: TutorialAccordi
       ),
       content: (
         <div className="flex flex-col gap-3">
-          <p className="text-sm text-base-content/80">
-            {tips ?? <span className="text-base-content/60">{t('tipsEmpty')}</span>}
-          </p>
+          {tips ? <p className="text-sm text-base-content/80">{tips}</p> : null}
 
           {tricks.length > 0 ? (
             <div className="flex flex-col gap-1">
