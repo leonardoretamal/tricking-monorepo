@@ -1,6 +1,6 @@
 'use client';
 
-import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile';
+import { DEFAULT_SCRIPT_ID, Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   useEffect,
@@ -24,6 +24,10 @@ import {
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 type FieldName = 'type' | 'name' | 'email' | 'message';
+
+type CaptchaStatus = 'loading' | 'ready' | 'error' | 'expired';
+
+type CaptchaFailureKind = 'script' | 'widget';
 
 interface FormState {
   type: string;
@@ -64,6 +68,9 @@ export function FeedbackForm() {
   const [success, setSuccess] = useState(false);
   const [formStartedAt, setFormStartedAt] = useState(() => Date.now());
   const [turnstileToken, setTurnstileToken] = useState('');
+  const [captchaStatus, setCaptchaStatus] = useState<CaptchaStatus>('loading');
+  const [captchaFailureKind, setCaptchaFailureKind] = useState<CaptchaFailureKind | null>(null);
+  const [turnstileKey, setTurnstileKey] = useState(0);
   const turnstileRef = useRef<TurnstileInstance | undefined>(undefined);
   const controllerRef = useRef<AbortController | null>(null);
 
@@ -75,6 +82,46 @@ export function FeedbackForm() {
     } catch {
       return t('errors.generic');
     }
+  };
+
+  const clearCaptchaError = (): void => {
+    setErrors((previous) => {
+      if (previous.captcha === undefined) {
+        return previous;
+      }
+      const next = { ...previous };
+      delete next.captcha;
+      return next;
+    });
+  };
+
+  const handleCaptchaSuccess = (token: string): void => {
+    setTurnstileToken(token);
+    setCaptchaStatus('ready');
+    setCaptchaFailureKind(null);
+    clearCaptchaError();
+  };
+
+  const handleCaptchaFailure = (
+    status: 'error' | 'expired',
+    kind: CaptchaFailureKind = 'widget',
+  ): void => {
+    setTurnstileToken('');
+    setCaptchaStatus(status);
+    setCaptchaFailureKind(kind);
+  };
+
+  const handleCaptchaRetry = (): void => {
+    if (captchaFailureKind === 'script') {
+      const script = document.getElementById(DEFAULT_SCRIPT_ID);
+      script?.parentNode?.removeChild(script);
+    }
+    setTurnstileToken('');
+    setCaptchaStatus('loading');
+    setCaptchaFailureKind(null);
+    clearCaptchaError();
+    turnstileRef.current?.reset();
+    setTurnstileKey((previous) => previous + 1);
   };
 
   const validateField = (field: FieldName, value: string): void => {
@@ -123,6 +170,8 @@ export function FeedbackForm() {
     setErrors({});
     setSuccess(false);
     setTurnstileToken('');
+    setCaptchaStatus('loading');
+    setCaptchaFailureKind(null);
     setFormStartedAt(Date.now());
     turnstileRef.current?.reset();
   };
@@ -198,6 +247,7 @@ export function FeedbackForm() {
       toast.error(translateError(key));
       turnstileRef.current?.reset();
       setTurnstileToken('');
+      setCaptchaStatus('loading');
     } finally {
       setSubmitting(false);
     }
@@ -350,13 +400,46 @@ export function FeedbackForm() {
         <div className="flex flex-col gap-2">
           <span className="text-sm font-medium">{t('captchaLabel')}</span>
           <Turnstile
+            key={turnstileKey}
             ref={turnstileRef}
             siteKey={TURNSTILE_SITE_KEY}
             options={{ theme: 'auto' }}
-            onSuccess={(token) => setTurnstileToken(token)}
-            onExpire={() => setTurnstileToken('')}
-            onError={() => setTurnstileToken('')}
+            scriptOptions={{ onError: () => handleCaptchaFailure('error', 'script') }}
+            onWidgetLoad={() =>
+              setCaptchaStatus((previous) =>
+                previous === 'error' || previous === 'expired' ? previous : 'ready',
+              )
+            }
+            onSuccess={handleCaptchaSuccess}
+            onExpire={() => handleCaptchaFailure('expired')}
+            onTimeout={() => handleCaptchaFailure('error')}
+            onUnsupported={() => handleCaptchaFailure('error')}
+            onError={() => handleCaptchaFailure('error')}
           />
+          {captchaStatus === 'error' || captchaStatus === 'expired' ? (
+            <div
+              className="flex flex-col gap-2 rounded-box border border-warning/40 bg-warning/10 p-3"
+              role="alert"
+            >
+              <p className="text-sm font-medium text-base-content">
+                {t(captchaStatus === 'expired' ? 'captchaExpiredTitle' : 'captchaErrorTitle')}
+              </p>
+              <p className="text-xs text-base-content/70">
+                {t(
+                  captchaStatus === 'expired'
+                    ? 'captchaExpiredDescription'
+                    : 'captchaErrorDescription',
+                )}
+              </p>
+              <button
+                type="button"
+                className="btn btn-outline btn-sm self-start"
+                onClick={handleCaptchaRetry}
+              >
+                {t('captchaRetry')}
+              </button>
+            </div>
+          ) : null}
           {errors.captcha !== undefined ? (
             <p id="feedback-captcha-error" role="alert" className="text-sm text-error">
               {translateError(errors.captcha)}
