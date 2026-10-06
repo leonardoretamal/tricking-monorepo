@@ -46,19 +46,19 @@ export default async function HomePage({ params }: HomePageProps) {
       href: '/tricks',
       title: tTricks('title'),
       description: tTricks('description'),
-      image: '/img/section-vertical-kick.webp',
+      image: '/img/section-street-flip.webp',
     },
     {
       href: '/variations',
       title: tVariations('title'),
       description: tVariations('description'),
-      image: '/img/section-padwork.webp',
+      image: '/img/section-vertical-kick.webp',
     },
     {
       href: '/transitions',
       title: tTransitions('title'),
       description: tTransitions('description'),
-      image: '/img/section-street-flip.webp',
+      image: '/img/section-parkour-flow.webp',
     },
     {
       href: '/stances',
@@ -100,7 +100,7 @@ export default async function HomePage({ params }: HomePageProps) {
           seccion del ancho maximo del main y la centra en la ventana sin desbordarla. */}
       <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden">
         <img
-          src="/img/hero-kick.webp"
+          src="/img/hero-trick.webp"
           alt=""
           fetchPriority="high"
           decoding="async"
