@@ -4,7 +4,7 @@ export const size = { width: 180, height: 180 };
 export const contentType = 'image/png';
 
 // Icono de app para iOS y otros sistemas. Reproduce la marca del favicon: la letra T
-// sobre el fondo oscuro del tema, con el naranja y el cian de la paleta.
+// inclinada sobre el fondo oscuro del tema, con el magenta de la paleta nueva.
 export default function AppleIcon() {
   return new ImageResponse(
     <div
@@ -14,8 +14,8 @@ export default function AppleIcon() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#0B0F1A',
-        color: '#FF6B1A',
+        backgroundColor: '#07080D',
+        color: '#FF2E88',
         fontSize: 128,
         fontWeight: 700,
       }}

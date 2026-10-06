@@ -309,6 +309,14 @@
   animation: tb-pulse-glow 3.2s ease-in-out infinite;
 }
 
+/* El hero a sangre completa usa w-screen (100vw) y ese ancho incluye la barra de
+   scroll, lo que deja unos pixeles de desborde horizontal. clip recorta ese desborde
+   sin crear un contenedor de scroll, por lo que position: sticky sigue funcionando. */
+html,
+body {
+  overflow-x: clip;
+}
+
 /* Apertura de la burbuja del asistente: crece desde la esquina inferior derecha. */
 @keyframes tb-bubble-in {
   from {

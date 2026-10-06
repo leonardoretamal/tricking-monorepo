@@ -39,8 +39,12 @@ export function Providers({ children }: { children: ReactNode }) {
         // El panel de feedback no se persiste: su queryKey lleva el token de
         // administracion y su data lleva datos personales (nombre, correo, mensaje).
         // Guardarlos en localStorage violaria las reglas de secretos y de cacheo.
+        // Solo se persisten queries con datos ya resueltos (success): una query que
+        // quedaba en vuelo se guardaba como pendiente y al rehidratar rechazaba con
+        // CancelledError.
         dehydrateOptions: {
-          shouldDehydrateQuery: (query) => query.queryKey[0] !== 'feedback-admin',
+          shouldDehydrateQuery: (query) =>
+            query.state.status === 'success' && query.queryKey[0] !== 'feedback-admin',
         },
       }}
     >

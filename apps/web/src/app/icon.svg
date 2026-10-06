@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Tricking">
-  <rect width="64" height="64" rx="14" fill="#0B0F1A" />
-  <path fill="#FF6B1A" d="M15 16h34v9H38v23H26V25H15z" />
-  <circle cx="49" cy="15" r="5" fill="#22D3EE" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Aprender Tricking">
+  <defs>
+    <linearGradient id="tb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF2E88" />
+      <stop offset="1" stop-color="#7C6CFF" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#07080D" />
+  <g transform="skewX(-10)">
+    <path fill="url(#tb)" d="M22 16h34v9H44v24H33V25H22z" />
+  </g>
+  <circle cx="50" cy="15" r="5" fill="#C6FF3D" />
 </svg>
