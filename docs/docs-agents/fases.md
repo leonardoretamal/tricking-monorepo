@@ -4,7 +4,7 @@ Estado de las fases y subfases del monorepo. Este documento es el lugar donde vi
 
 El proyecto se organiza por secciones de contenido, no por capas técnicas. Cada sección de Loopkicks es una fase. Cada fase se cierra con build de producción verificado, subagentes de validación ejecutados y actualización de este documento.
 
-Última actualización: 2026-10-05.
+Última actualización: 2026-10-06.
 
 ## Reglas de fases
 
@@ -634,6 +634,22 @@ Hoy el contenido propio (tips y "cómo se hace") se traduce a mano. Esta fase lo
 Criterio de cierre: el contenido propio nuevo se traduce y se carga en es/en con revisión, sin traducir los nombres de trucos.
 
 Dependencias: ninguna nueva (usa el proveedor de IA por HTTP ya aprobado). Sin variables nuevas.
+
+## Fase 37: Rediseño visual
+
+Estado: en curso.
+
+Objetivo: renovar la interfaz completa con la paleta "Neón nocturno" (dark-first), tipografía display, superficies y utilidades de efecto, sin cambiar la funcionalidad ni el contenido.
+
+- U0. Fundación visual: paleta y temas (`globals.css`), tipografías (Anton + Inter con `next/font`), fondo global (malla y grano), componente `Reveal`, imágenes libres y documentación de diseño.
+- U1. Shell: navbar, footer, breadcrumbs y contenedores.
+- U2. Home y landing.
+- U3. Catálogo (listados y detalle de trucos, variaciones, transiciones, posturas y tips).
+- U4. Resto de las pantallas (explore, progreso, asistente, feedback y legal).
+
+Dependencias: ninguna nueva. `next/font` es parte de Next y las imágenes son de Unsplash (licencia libre). Sin variables de entorno nuevas.
+
+Criterio de cierre: rediseño completo aplicado a todas las pantallas, dark-first, contraste WCAG AA, Lighthouse móvil >= 90 y verificación en navegador real.
 
 ## Fases de la sección 28 no activadas
 
