@@ -7,7 +7,7 @@ Decisiones de diseño del sitio: sistema de temas, paletas, colores semánticos,
 Dos temas, dark-first:
 
 - `tricking-dark`: tema por defecto (`default: true`). El modo oscuro es el default del proyecto.
-- `tricking-light`: tema claro, disponible para quien lo elija. No es default ni se activa solo por `prefers-color-scheme`.
+- `tricking-light`: tema claro, disponible para quien lo elija. No es el default; se usa solo si el sistema prefiere claro o si el usuario lo elige.
 
 La paleta se llama "Neón nocturno". El modo oscuro es la referencia y el claro es su adaptación a fondo claro.
 
@@ -172,7 +172,7 @@ Otros textos medidos con las bases nuevas: `base-content` 17.96 en claro y 17.37
 
 ## Créditos de imágenes
 
-Las imágenes libres del rediseño viven en `apps/web/public/img/` y provienen de Unsplash (licencia Unsplash, uso libre). El detalle por archivo, autor y ficha está en `apps/web/public/img/CREDITS.md`.
+Las imágenes libres del rediseño viven en `apps/web/public/img/` y provienen de Pexels (licencia Pexels, uso libre). El detalle por archivo, autor y ficha está en `apps/web/public/img/CREDITS.md`.
 
 ## Nota de ajuste
 

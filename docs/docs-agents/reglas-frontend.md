@@ -61,13 +61,13 @@ Propósito: definir los estándares de interfaz, listados, imágenes, rendimient
 
 ## Sistema de temas y modos
 
-El proyecto tiene dos temas: tricking-light (default) y tricking-dark (prefersdark).
+El proyecto tiene dos temas, dark-first: tricking-dark (default) y tricking-light (alternativa).
 
 La resolución del tema sigue este orden:
 
 1. Preferencia manual guardada en localStorage (clave tricking:theme).
 2. Preferencia del sistema vía prefers-color-scheme.
-3. Default del proyecto (modo claro).
+3. Default del proyecto (modo oscuro).
 
 Reglas:
 

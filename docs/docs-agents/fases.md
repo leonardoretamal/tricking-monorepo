@@ -647,7 +647,7 @@ Objetivo: renovar la interfaz completa con la paleta "Neón nocturno" (dark-firs
 - U3. Catálogo (listados y detalle de trucos, variaciones, transiciones, posturas y tips).
 - U4. Resto de las pantallas (explore, progreso, asistente, feedback y legal).
 
-Dependencias: ninguna nueva. `next/font` es parte de Next y las imágenes son de Unsplash (licencia libre). Sin variables de entorno nuevas.
+Dependencias: ninguna nueva. `next/font` es parte de Next y las imágenes son de Pexels (licencia libre). Sin variables de entorno nuevas.
 
 Criterio de cierre: rediseño completo aplicado a todas las pantallas, dark-first, contraste WCAG AA, Lighthouse móvil >= 90 y verificación en navegador real.
 

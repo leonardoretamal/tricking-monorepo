@@ -62,9 +62,9 @@ export function TrickCard({
           </h2>
           {difficulty !== undefined ? (
             <span
-              className={`badge tb-badge shrink-0 tb-difficulty-${difficulty}`}
-              aria-label={difficultyLabel}
-              title={difficultyLabel}
+              className={`badge tb-badge tb-difficulty-${difficulty}`}
+              aria-label={difficultyLabel ?? String(difficulty)}
+              title={difficultyLabel ?? String(difficulty)}
             >
               {difficulty}
             </span>

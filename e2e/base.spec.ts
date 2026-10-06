@@ -13,24 +13,26 @@ test('el layout base muestra navbar, toggle de tema y footer', async ({ page }) 
   await expect(page.getByRole('contentinfo')).toBeVisible();
 });
 
-test('el toggle de tema alterna data-theme y persiste tras recargar', async ({ page }) => {
+test('el tema arranca oscuro por defecto y el toggle alterna y persiste', async ({ page }) => {
+  // El proyecto es dark-first: con el sistema en oscuro, arranca en tricking-dark.
+  await page.emulateMedia({ colorScheme: 'dark' });
   await page.goto('/es');
   const html = page.locator('html');
-  await expect(html).toHaveAttribute('data-theme', 'tricking-light');
+  await expect(html).toHaveAttribute('data-theme', 'tricking-dark');
 
   // toPass reintenta el click hasta que la hidratacion de React este lista.
   await expect(async () => {
-    if ((await html.getAttribute('data-theme')) !== 'tricking-dark') {
+    if ((await html.getAttribute('data-theme')) !== 'tricking-light') {
       await page.getByRole('button', { name: 'Cambiar tema' }).click();
     }
-    await expect(html).toHaveAttribute('data-theme', 'tricking-dark', { timeout: 1000 });
+    await expect(html).toHaveAttribute('data-theme', 'tricking-light', { timeout: 1000 });
   }).toPass({ timeout: 15000 });
 
   const stored = await page.evaluate(() => window.localStorage.getItem('tricking:theme'));
-  expect(stored).toContain('tricking-dark');
+  expect(stored).toContain('tricking-light');
 
   await page.reload();
-  await expect(html).toHaveAttribute('data-theme', 'tricking-dark');
+  await expect(html).toHaveAttribute('data-theme', 'tricking-light');
 });
 
 test('el selector de idioma navega de es a en', async ({ page }) => {

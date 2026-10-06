@@ -153,7 +153,9 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
       <header className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <span className="tb-eyebrow">{sectionTitle}</span>
-          <h1 className="tb-display text-4xl text-base-content sm:text-5xl">{data.name}</h1>
+          <h1 className="tb-display text-4xl break-words text-base-content sm:text-5xl">
+            {data.name}
+          </h1>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           {data.difficulty !== null ? (

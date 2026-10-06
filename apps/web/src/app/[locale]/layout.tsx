@@ -120,6 +120,11 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     <html lang={locale} className={`${inter.variable} ${anton.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {/* Sin JavaScript, el observer de Reveal no corre y el contenido con .tb-reveal
+            quedaria invisible: aqui se fuerza visible. */}
+        <noscript>
+          <style>{'.tb-reveal{opacity:1 !important;transform:none !important}'}</style>
+        </noscript>
       </head>
       <body className="min-h-screen font-sans text-base-content">
         <SiteBackground />

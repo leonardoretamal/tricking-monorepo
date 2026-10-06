@@ -41,7 +41,9 @@ export function TransitionDetailView({ transition }: TransitionDetailViewProps) 
 
       <header className="flex flex-col gap-3">
         <p className="tb-eyebrow">{t('title')}</p>
-        <h1 className="tb-display text-4xl text-base-content sm:text-5xl">{data.name}</h1>
+        <h1 className="tb-display text-4xl break-words text-base-content sm:text-5xl">
+          {data.name}
+        </h1>
         <div className="flex flex-wrap items-center gap-2">
           <TransitionBadge group={data.group} />
         </div>

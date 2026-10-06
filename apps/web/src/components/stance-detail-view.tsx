@@ -39,7 +39,9 @@ export function StanceDetailView({ stance }: StanceDetailViewProps) {
 
       <header className="flex flex-col gap-3">
         <p className="tb-eyebrow">{t('title')}</p>
-        <h1 className="tb-display text-4xl text-base-content sm:text-5xl">{data.name}</h1>
+        <h1 className="tb-display text-4xl break-words text-base-content sm:text-5xl">
+          {data.name}
+        </h1>
         <span className="badge tb-badge tb-cat-basics w-fit">
           {t('landingCount', { count: data.landingTrickCount })}
         </span>

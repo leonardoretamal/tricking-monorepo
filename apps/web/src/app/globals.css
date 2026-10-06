@@ -165,13 +165,17 @@
   line-height: 0.95;
 }
 
-/* Etiqueta pequena de seccion: mayusculas, tracking amplio y color secundario. */
-.tb-eyebrow {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-secondary);
+/* Etiqueta pequena de seccion: mayusculas, tracking amplio y color secundario.
+   Va en @layer components para que las utilidades de color de Tailwind (por ejemplo
+   text-info o text-muted) puedan pisar el color cuando haga falta. */
+@layer components {
+  .tb-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+  }
 }
 
 /* Superficie de tarjeta: fondo base-200, borde del tema y radio box. */
@@ -207,6 +211,15 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+/* En modo de alto contraste el texto degradado seria invisible: se fuerza a un color
+   de sistema y se quita el degradado. */
+@media (forced-colors: active) {
+  .tb-gradient-text {
+    color: CanvasText;
+    background-image: none;
+  }
 }
 
 /* Malla de fondo: degradados radiales con los colores del tema. */
