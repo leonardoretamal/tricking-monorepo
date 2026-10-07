@@ -18,10 +18,9 @@ export default function middleware(request: NextRequest) {
   return handleI18nRouting(request);
 }
 
-// Se mantiene el convenio legacy middleware.ts a proposito: el middleware de Next 16
-// corre siempre en runtime Node y OpenNext para Cloudflare lo re-bundlea de forma
-// experimental (se cuelga en workerd). Con el nombre legacy y runtime experimental-edge
-// el middleware se compila como Edge, que es la via estable en Cloudflare.
+// El nombre legacy middleware.ts (no proxy.ts) es lo que saca al middleware del bundle Node
+// experimental de OpenNext y evita el cuelgue en workerd. El runtime experimental-edge
+// explicita la intencion y evita un cambio de default a 'edge' (E1015).
 export const config = {
   runtime: 'experimental-edge',
   matcher: ['/((?!api|_next|_vercel|apple-icon|.*\\..*).*)'],

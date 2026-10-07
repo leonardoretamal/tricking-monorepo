@@ -66,7 +66,7 @@ Criterio de cierre: la web arranca, el tema respeta al usuario, i18n funciona y 
 Notas de cierre:
 
 - Stack implementado: Next.js 16.3.8 + React 19.3.0, next-intl 4.14.9, Tailwind CSS 4.3.3 + DaisyUI 5.7.47, Zod 4.6.5. `packages/ui` y `packages/shared` se consumen como fuente TS con `transpilePackages`.
-- El layout raíz vive en `apps/web/src/app/[locale]/layout.tsx` (patrón de next-intl) y el middleware de locale se declara en `apps/web/src/proxy.ts` (convención de Next 16).
+- El layout raíz vive en `apps/web/src/app/[locale]/layout.tsx` (patrón de next-intl) y el middleware de locale se declara en `apps/web/src/middleware.ts` (convenio Edge `middleware.ts` mantenido a proposito para no usar el middleware Node experimental de OpenNext en Cloudflare).
 - `localeDetection` queda en `false`: la raíz va siempre a `/es` y el idioma se cambia con el selector, coherente con el idioma base del proyecto.
 - No se incluye un `loading.tsx` de ruta global a propósito: su boundary de Suspense hacía que las rutas desconocidas respondieran HTTP 200 (soft 404). El componente `LoadingState` existe en `packages/ui` para las fases con carga de datos.
 - CI ampliado con jobs `test`, `i18n` (paridad de claves) y `e2e` (Playwright).
