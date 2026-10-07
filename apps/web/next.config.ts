@@ -50,7 +50,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   transpilePackages: ['@tricking/ui', '@tricking/shared', '@tricking/db'],
   // Cabeceras de seguridad para todas las rutas. La redireccion 301 de HTTP a HTTPS
-  // vive en el middleware (apps/web/src/proxy.ts), que lee x-forwarded-proto porque
+  // vive en el middleware (apps/web/src/middleware.ts), que lee x-forwarded-proto porque
   // la app no conoce el esquema original. HSTS solo lo aplica el navegador cuando la
   // respuesta viaja por HTTPS.
   async headers() {

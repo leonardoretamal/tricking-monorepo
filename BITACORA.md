@@ -404,3 +404,17 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Subagentes: no aplica (corrida local sin issues; el usuario pidio no saturar la maquina porque usa subagentes en otra sesion).
 - Pendientes y riesgos: `touchupTripleButterflyTwist` sin video; la revision de menores se hizo por miniatura y conviene una segunda pasada del usuario; build de produccion delegado al gancho pre-push; el push lo autoriza el usuario.
 - Referencias: `docs/docs-agents/fases.md` (Fase 44), `docs/docs-agents/reglas-legal.md`, `packages/db/drizzle/0011_slippery_punisher.sql`.
+
+## Tarea: workers de Cloudflare colgándose (sin issue)
+
+- Issue: no aplica (feedback del usuario, sin issue asociado).
+- Título: Los workers de Cloudflare se colgaban al atender algunas peticiones.
+- Qué pedía: el usuario reportó que los workers de la app en Cloudflare se estaban colgando y sospechaba de Next.
+- Fecha de inicio: 2026-10-07.
+- Estado actual: completada en código; commit local, sin push (lo autoriza el usuario).
+- Autor del registro: Leonardo Retamal (@leonardoretamal).
+- Acciones: se sacó el middleware del camino experimental de Node de OpenNext. En Next 16 el middleware corría como `proxy.ts` en runtime Node y OpenNext para Cloudflare lo re-bundleaba de forma experimental, que es justo la superficie que se cuelga en workerd; se pasó al convenio legacy `middleware.ts` con `runtime: 'experimental-edge'`, que compila como Edge sin cambiar la redirección de HTTP a HTTPS ni el ruteo de idioma. Además se acotó la verificación de Turnstile con un tope de tiempo, porque una llamada externa sin timeout dejaba el handler esperando y contribuía a los cuelgues.
+- Archivos tocados: `apps/web/src/middleware.ts` (antes `proxy.ts`), `apps/web/next.config.ts` (comentario), `apps/web/src/lib/turnstile.ts`, `BITACORA.md`.
+- Pruebas: `pnpm --filter @tricking/web typecheck` sin errores; `pnpm exec eslint "apps/web/src"` sin hallazgos; prettier con los tres archivos en formato. El build de Cloudflare (`cf:build`) terminó con "OpenNext build complete" y ya no aparece el aviso "Node.js middleware support is experimental"; las carpetas generadas se borraron al terminar.
+- Pendientes y riesgos: `docs/docs-agents/stack-tecnico.md`, `docs/docs-agents/fases.md` y `docs/docs-agents/checklist-lanzamiento.md` todavía mencionan `proxy.ts` y conviene alinearlos; el push a `main` lo autoriza el usuario.
+- Referencias: `apps/web/src/middleware.ts`, `apps/web/next.config.ts`, `apps/web/src/lib/turnstile.ts`.

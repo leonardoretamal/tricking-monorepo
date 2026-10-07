@@ -8,6 +8,11 @@ import { logger } from './logger';
 
 const TURNSTILE_VERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
+// Tope defensivo para la verificacion remota: si Cloudflare no responde, la peticion
+// se aborta y el catch de abajo bloquea el envio; asi el handler no queda esperando
+// hasta que workerd lo cancele.
+const TURNSTILE_TIMEOUT_MS = 5000;
+
 const turnstileResponseSchema = z.object({
   success: z.boolean().optional(),
 });
@@ -41,6 +46,7 @@ export async function verifyTurnstile(
       method: 'POST',
       body,
       cache: 'no-store',
+      signal: AbortSignal.timeout(TURNSTILE_TIMEOUT_MS),
     });
     if (!response.ok) {
       return { blocked: true, configured: true };
