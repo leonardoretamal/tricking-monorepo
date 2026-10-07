@@ -113,7 +113,12 @@
         "emptyDescription": "This trick does not have a video yet.",
         "label": "Demo video of {name}",
         "fallback": "Your browser does not support video playback.",
-        "source": "Video source:"
+        "play": "Play video",
+        "facadeHint": "Loads from {provider} when played",
+        "creditBy": "Video by {author} on {provider}",
+        "creditGeneric": "Video on {provider}",
+        "watch": "Watch on {provider}",
+        "source": "View original"
       }
     }
   }

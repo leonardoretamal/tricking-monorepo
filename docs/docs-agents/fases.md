@@ -728,6 +728,28 @@ Criterio de cierre: el inicio muestra imágenes de tricking coherentes con cada 
 
 Dependencias: ninguna. Sin variables nuevas.
 
+## Fase 44: Vídeos de los trucos faltantes (fuentes externas con atribución)
+
+Estado: en curso.
+
+Objetivo: cubrir con vídeo los 14 trucos que quedaron sin él (los 12 trucos manuales de la Fase 25 más `backTuck` y `touchupTripleButterflyTwist` de la Fase 38), usando fuentes externas con atribución, sin re-hospedar nada y sin vídeos que involucren a menores de edad.
+
+- 44.1. Listar los trucos sin vídeo (consulta de solo lectura a `videos`): 14.
+- 44.2. Investigar candidatos en YouTube, Vimeo y Dailymotion con el navegador real; descartar cualquier vídeo con menores y preferir al autor original.
+- 44.3. Modelo: extender `videos` con `provider`, `embed_url`, `author`, `title`, `kind` ('file' | 'iframe' | 'link') y `aspect` ('16:9' | '9:16'); migración nueva; backfill de las filas de Loopkicks a `provider='loopkicks', kind='file', aspect='16:9'`.
+- 44.4. API y Zod: exponer los campos nuevos en `GET /api/videos` y `video-schemas.ts`.
+- 44.5. Reproductor: fachada que carga el iframe recién al clic (con `youtube-nocookie`), modo enlace para lo no embebible, crédito por autor y plataforma, y encuadre para verticales.
+- 44.6. Carga: JSON curado en `packages/db/src/seed/video-sources/` más script `db:video-sources`, idempotente y acotado por truco.
+- 44.7. Documentos y legal: `reglas-legal.md` (filtro de menores y embed con atribución), `reglas-cookies.md` (fachada al clic), aviso legal es/en y footer.
+- 44.8. Verificación: navegador real, E2E del detalle y revisión humana de que ningún candidato admitido muestre menores.
+- 44.9. i18n y subagentes de cierre.
+
+Criterio de cierre: los trucos con candidato aprobado muestran el vídeo con crédito, sin re-hospedar, sin menores y con la fachada al clic; los trucos sin candidato seguro conservan el estado vacío; subagentes en verde y build delegado al gancho pre-push.
+
+Dependencias: ninguna dependencia npm nueva. Sin variables nuevas.
+
+Notas: Dailymotion y Vimeo no dieron resultados útiles para estos trucos (buscadores con ruido); en la práctica la fuente es YouTube. Quedan candidatos flojos en Donkey Kick y Triple Butterfly Twist. Los trucos básicos de gimnasia tienen muchos canales con menores, por eso el filtro reduce las opciones.
+
 ## Fases de la sección 28 no activadas
 
 Las siguientes quedan en la sección 28 de `AGENTS.md` y no se abren por ahora, por decisión del usuario (2026-10-05):

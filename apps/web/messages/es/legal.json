@@ -27,7 +27,7 @@
     },
     "thirdParty": {
       "title": "Contenido de terceros",
-      "body": "El sitio muestra y enlaza contenido de Loopkicks y conocimiento de técnica de Kojo's Trick Lab con atribución y enlace al original. No se almacenan copias de esos vídeos ni de sus materiales. El sitio no está afiliado a esas fuentes y no asume su contenido."
+      "body": "El sitio muestra y enlaza contenido de Loopkicks y conocimiento de técnica de Kojo's Trick Lab con atribución y enlace al original. También puede incrustar o enlazar vídeos de otros creadores (por ejemplo YouTube, Vimeo o Dailymotion) con atribución a su autor y enlace al original; esos vídeos se cargan solo cuando el usuario lo pide y no se almacenan copias. El sitio no está afiliado a esas fuentes y no asume su contenido."
     },
     "removal": {
       "title": "Retiro de contenido",
@@ -66,7 +66,7 @@
       "logsTitle": "Registros técnicos",
       "logsBody": "El servidor registra eventos técnicos con un identificador de traza (trace_id) para diagnosticar fallos. Los registros no incluyen contraseñas, tokens ni datos personales completos.",
       "cookiesTitle": "Cookies",
-      "cookiesBody": "El sitio usa una sola cookie, NEXT_LOCALE, para recordar el idioma elegido. Es estrictamente necesaria, no se usa para publicidad ni para rastrear tu navegación y no requiere consentimiento previo. No se instalan cookies de analítica ni de marketing.",
+      "cookiesBody": "El sitio usa una sola cookie, NEXT_LOCALE, para recordar el idioma elegido. Es estrictamente necesaria, no se usa para publicidad ni para rastrear tu navegación y no requiere consentimiento previo. Los vídeos incrustados de terceros (YouTube, Vimeo, Dailymotion) no se cargan hasta que los activas con un clic; antes de ese clic no instalan cookies, y al activarlos la plataforma puede instalar las suyas. No se instalan cookies de analítica ni de marketing.",
       "thirdPartiesTitle": "Terceros y encargados",
       "thirdPartiesIntro": "Para operar el sitio nos apoyamos en proveedores que tratan datos por cuenta nuestra y con las garantías de sus propios términos.",
       "thirdPartyNeon": "Neon: base de datos donde vive el catálogo y el feedback.",

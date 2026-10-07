@@ -196,6 +196,13 @@ Planificadas el 2026-10-05 por decisión del usuario. Ninguna se implementa toda
 - Fase 36 (traducción automática del contenido propio es/en): usa el proveedor de IA por HTTP ya aprobado; sin dependencias ni variables nuevas.
 - No activadas: analítica (Umami) y notificaciones push (Web Push API). Quedan en la sección 28 y, si se activan, sus dependencias y variables se registran entonces.
 
+## Fase 44 (vídeos de trucos faltantes)
+
+- Cubre los 14 trucos sin vídeo (12 manuales de la Fase 25 más `backTuck` y `touchupTripleButterflyTwist`) con vídeos de fuentes externas (YouTube, Vimeo, Dailymotion) mostrados con atribución, sin re-hospedar y sin vídeos con menores.
+- Modelo: `videos` suma las columnas nulables `provider` (loopkicks | youtube | vimeo | dailymotion), `embed_url`, `author`, `title`, `kind` ('file' | 'iframe' | 'link') y `aspect` ('16:9' | '9:16'). Migración nueva, con backfill de las filas existentes de Loopkicks a `provider='loopkicks', kind='file', aspect='16:9'`.
+- Presentación: fachada que carga el iframe recién al clic (con `youtube-nocookie`), modo enlace para lo no embebible y crédito por autor y plataforma. Al no cargar terceros hasta el clic, no activa cookies no esenciales (ver `reglas-cookies.md`).
+- Carga: semilla idempotente `db:video-sources` desde `packages/db/src/seed/video-sources/`. Sin dependencias npm nuevas y sin variables nuevas.
+
 ## Notas sobre decisiones no aplicables
 
 - Autenticación: no aplica en el producto. Todo el contenido es público y visible sin login; el estado del usuario (última posición, filtros, favoritos locales) vive en el cliente con Zustand y localStorage, no en una cuenta.

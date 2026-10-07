@@ -31,6 +31,16 @@ export async function GET(request: Request) {
       }
       const source: 'r2' | 'external' =
         row.status === 'ready' && row.r2Key !== null ? 'r2' : 'external';
+      const provider =
+        row.provider === 'loopkicks' ||
+        row.provider === 'youtube' ||
+        row.provider === 'vimeo' ||
+        row.provider === 'dailymotion'
+          ? row.provider
+          : null;
+      const kind: 'file' | 'iframe' | 'link' =
+        row.kind === 'iframe' || row.kind === 'link' ? row.kind : 'file';
+      const aspect: '16:9' | '9:16' = row.aspect === '9:16' ? '9:16' : '16:9';
       return [
         {
           id: row.id,
@@ -39,6 +49,12 @@ export async function GET(request: Request) {
           mime: row.mime,
           durationSeconds: row.durationSeconds,
           source,
+          provider,
+          embedUrl: row.embedUrl,
+          author: row.author,
+          title: row.title,
+          kind,
+          aspect,
         },
       ];
     });

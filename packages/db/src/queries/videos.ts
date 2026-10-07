@@ -15,6 +15,12 @@ export interface VideoForTrick {
   mime: string | null;
   durationSeconds: number | null;
   status: string;
+  provider: string | null;
+  embedUrl: string | null;
+  author: string | null;
+  title: string | null;
+  kind: string | null;
+  aspect: string | null;
 }
 
 export async function listVideosForTrick(trickId: string): Promise<VideoForTrick[]> {
@@ -29,6 +35,12 @@ export async function listVideosForTrick(trickId: string): Promise<VideoForTrick
       mime: videos.mime,
       durationSeconds: videos.durationSeconds,
       status: videos.status,
+      provider: videos.provider,
+      embedUrl: videos.embedUrl,
+      author: videos.author,
+      title: videos.title,
+      kind: videos.kind,
+      aspect: videos.aspect,
     })
     .from(videos)
     .where(and(eq(videos.trickId, trickId), isNull(videos.deletedAt)))

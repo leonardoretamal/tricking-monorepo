@@ -263,6 +263,16 @@ export const videos = pgTable(
     sizeBytes: bigint('size_bytes', { mode: 'number' }),
     durationSeconds: integer('duration_seconds'),
     status: text('status').notNull().default('pending'),
+    // Fase 44: origen y forma de presentacion de videos de fuentes externas.
+    // `provider` es loopkicks, youtube, vimeo o dailymotion; `kind` es 'file'
+    // (archivo directo, <video>), 'iframe' (embed con fachada al clic) o 'link'
+    // (tarjeta con enlace); `aspect` es '16:9' o '9:16' (verticales tipo short).
+    provider: text('provider'),
+    embedUrl: text('embed_url'),
+    author: text('author'),
+    title: text('title'),
+    kind: text('kind'),
+    aspect: text('aspect'),
     deletedAt: timestamp('deleted_at', { withTimezone: true }),
     ...timestamps,
   },

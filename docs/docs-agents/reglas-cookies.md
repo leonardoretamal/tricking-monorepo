@@ -20,6 +20,14 @@ Categorías:
 
 Las categorías con banner son preferencias, analítica y marketing.
 
+## Embeds de terceros
+
+- Los vídeos de terceros (YouTube, Vimeo, Dailymotion) no se cargan al abrir la ficha: se muestra una fachada con la portada y un botón, y el iframe se carga solo tras la acción explícita del usuario.
+- Por eso, mientras el usuario no hace clic, no se instalan cookies ni se hacen peticiones a esos terceros, y no cuentan como categoría no esencial.
+- Cuando la plataforma lo permite se usa el dominio de privacidad (`youtube-nocookie`, `dailymotion` sin cookies de seguimiento, etc.).
+- La fachada y su carga al clic se documentan en el inventario de cookies.
+- Si en el futuro se cargara un embed sin acción del usuario, ese embed sí entra en la clasificación con banner y exige consentimiento previo.
+
 ## Banner y granularidad
 
 - El banner se muestra antes de instalar cookies no esenciales.

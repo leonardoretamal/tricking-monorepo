@@ -27,14 +27,16 @@ Propósito: definir las páginas legales exigibles, los enlaces obligatorios, el
 
 ## Contenido de terceros y retiro
 
-Política del proyecto (decidida por el usuario el 2026-10-04):
+Política del proyecto (decidida por el usuario el 2026-10-04, ampliada el 2026-10-07):
 
 - Los vídeos de Loopkicks son contenido gratuito: se muestran desde su URL original (hotlink), con crédito y enlace, pero NUNCA se descargan ni se almacenan (nada de Loopkicks sube a R2).
 - De Kojo's Trick Lab se toma solo su conocimiento de técnica (nombres de trucos/técnicas y tips), NO sus vídeos. Las entradas de técnica llevan tips PROPIOS del proyecto, con crédito y enlace a la página original del tutorial; los vídeos de Kojo no se embeben (Vimeo responde 403 en dominios de terceros) ni se almacenan.
+- Vídeos de creadores externos (YouTube, Vimeo, Dailymotion, y en general cualquier plataforma): se muestran con una fachada que carga el iframe solo al hacer clic (nunca autoplay al ingresar a la ficha) o como enlace a la página original, siempre con crédito al autor y enlace al original. No se descargan ni se re-hospedan. Cuando la plataforma lo permite se usa el dominio de privacidad (`youtube-nocookie`). El origen se registra por proveedor en `videos.provider` y el modo de presentación en `videos.kind`.
+- Filtro de admisión obligatorio: PROHIBIDO admitir vídeos que involucren a menores de edad, como protagonistas o en segundo plano. Ante duda razonable se excluye, aunque sea el único candidato o el canal sea oficial; el truco queda sin vídeo antes que usar un vídeo con menores. Esta regla no la valida un script, la valida una persona al aprobar cada candidato.
 - El bucket de Cloudflare R2 queda reservado para contenido propio o con licencia. El script de subida se niega a correr salvo que se confirme que se tienen derechos (`--confirm-rights`).
 - Cada truco lleva una descripción propia de "cómo se hace" escrita por el proyecto; no se copia ni se parafrasea de cerca el texto de las fuentes.
 - El pie de página incluye un aviso de "no afiliado" y el crédito a las fuentes.
-- Mecanismo de retiro: ante el pedido de un titular se retira el contenido de inmediato (soft delete del vídeo o de la técnica por su id). El mecanismo es rápido y no requiere despliegue.
+- Mecanismo de retiro: ante el pedido de un titular, o ante la detección de un vídeo con menores, se retira el contenido de inmediato (soft delete del vídeo o de la técnica por su id). El mecanismo es rápido y no requiere despliegue.
 
 ## Reglas transversales relacionadas
 

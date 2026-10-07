@@ -8,7 +8,7 @@ Si una regla nueva aparece, primero se declara en su documento referenciado y de
 
 Tricking Monorepo es un sitio web de tricking que reúne:
 
-- Los trucos de Loopkicks (loopkickstricking.com): vertical kicks, backward, forward, inside, outside, variations, transitions, stances y la explore page. Es la fuente primaria del contenido y de la clasificación de trucos, y se obtiene por scraping. Sus vídeos son contenido gratuito: se muestran desde su URL original, sin descargarlos ni almacenarlos.
+- Los trucos de Loopkicks (loopkickstricking.com): vertical kicks, backward, forward, inside, outside, variations, transitions, stances y la explore page. Es la fuente primaria del contenido y de la clasificación de trucos, y se obtiene por scraping. Sus vídeos son contenido gratuito: se muestran desde su URL original, sin descargarlos ni almacenarlos. Los vídeos de otros creadores (YouTube, Vimeo, Dailymotion) se incrustan o enlazan con crédito a su autor y enlace al original, nunca se re-hospedan y nunca se admite un vídeo que involucre a menores de edad (ver `docs/docs-agents/reglas-legal.md`).
 - El conocimiento de técnica de Kojo's Trick Lab: los nombres de trucos/técnicas que enseña y sus tips. Se obtiene de la API pública de `kojostricklab.com` (el sitio es una SPA; scraping web con cheerio como respaldo, Instagram con insta-fetcher como respaldo opcional). De Kojo NO se usan sus vídeos.
 - Una sección de tips técnicos sobre mirada y ejecución, contenido propio curado por el usuario y cargado manualmente en la base de datos en la Fase 16.
 

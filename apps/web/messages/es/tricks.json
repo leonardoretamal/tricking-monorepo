@@ -113,7 +113,12 @@
         "emptyDescription": "Este truco todavía no tiene video.",
         "label": "Video demostrativo de {name}",
         "fallback": "Tu navegador no soporta la reproducción de video.",
-        "source": "Fuente del video:"
+        "play": "Reproducir video",
+        "facadeHint": "Se carga desde {provider} al reproducirlo",
+        "creditBy": "Video de {author} en {provider}",
+        "creditGeneric": "Video en {provider}",
+        "watch": "Ver en {provider}",
+        "source": "Ver original"
       }
     }
   }

@@ -1,0 +1,132 @@
+[
+  {
+    "trickId": "handstand",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=2-3wv5kLNnw",
+    "embedUrl": "https://www.youtube.com/embed/2-3wv5kLNnw",
+    "author": "Tom Merrick",
+    "title": "The Complete Handstand Guide | From Absolute Beginner",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "headstand",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=V1HbXt5ZRlg",
+    "embedUrl": "https://www.youtube.com/embed/V1HbXt5ZRlg",
+    "author": "Yoga With Adriene",
+    "title": "Head Stand Yoga Pose - How To Do a Headstand for Beginners",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "forwardRoll",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=XPlsmgMLf8E",
+    "embedUrl": "https://www.youtube.com/embed/XPlsmgMLf8E",
+    "author": "RingFrat",
+    "title": "THE Forward Roll Tutorial",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "backwardRoll",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=0WwpeWEGIlY",
+    "embedUrl": "https://www.youtube.com/embed/0WwpeWEGIlY",
+    "author": "Free Focus Dance",
+    "title": "Learn to Back Roll in 1 Minute! (Backwards Roll Tutorial)",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "bridge",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=tSvmWU-0Zo0",
+    "embedUrl": "https://www.youtube.com/embed/tSvmWU-0Zo0",
+    "author": "FitnessFAQs",
+    "title": "How To BACK BRIDGE For Beginners (FLEXIBLE & STRONG)",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "backWalkover",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=ggiU9R9iiio",
+    "embedUrl": "https://www.youtube.com/embed/ggiU9R9iiio",
+    "author": "pigmie",
+    "title": "Learn Back Walkover In 5 Minutes",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "frontWalkover",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=pPSnIy7M5jA",
+    "embedUrl": "https://www.youtube.com/embed/pPSnIy7M5jA",
+    "author": "Alivia D'Andrea",
+    "title": "How to do a Front Walkover",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "macaco",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=sekDHtCi7QA",
+    "embedUrl": "https://www.youtube.com/embed/sekDHtCi7QA",
+    "author": "Thomas Inauen",
+    "title": "How To Do Macaco - In 8 Easy Steps | Tutorial",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "backTuck",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=YGJeERbIzIY",
+    "embedUrl": "https://www.youtube.com/embed/YGJeERbIzIY",
+    "author": "pigmie",
+    "title": "A Proper Back Tuck Tutorial",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "kipUp",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=HWXD0JbwT-w",
+    "embedUrl": "https://www.youtube.com/embed/HWXD0JbwT-w",
+    "author": "VincaniTV",
+    "title": "Learn How to Kick Up / Kip Up | Beginner Breaking Tutorial",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "headspring",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=kXhTtTaQAKA",
+    "embedUrl": "https://www.youtube.com/embed/kXhTtTaQAKA",
+    "author": "AJ-47 Soul Mavericks",
+    "title": "Headspring Tutorial | Head Flip Tutorial | Bboy Tricks Basics",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "hookKick",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=q3sQIjzeB5o",
+    "embedUrl": "https://www.youtube.com/embed/q3sQIjzeB5o",
+    "author": "Thomas Inauen",
+    "title": "Tricking Tutorial | Learn the Spinning Hook Kick",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "donkeyKick",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=iyiaZuYY_KA",
+    "embedUrl": "https://www.youtube.com/embed/iyiaZuYY_KA",
+    "author": "Breakdancing Ninja",
+    "title": "Do Donkey Kicks and Be Cool!",
+    "kind": "iframe",
+    "aspect": "16:9"
+  }
+]

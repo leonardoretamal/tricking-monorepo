@@ -27,7 +27,7 @@
     },
     "thirdParty": {
       "title": "Third-party content",
-      "body": "The site displays and links content from Loopkicks and technical knowledge from Kojo's Trick Lab with attribution and a link to the original. No copies of those videos or materials are stored. The site is not affiliated with those sources and does not assume their content."
+      "body": "The site displays and links content from Loopkicks and technical knowledge from Kojo's Trick Lab with attribution and a link to the original. It may also embed or link videos from other creators (for example YouTube, Vimeo or Dailymotion) with attribution to their author and a link to the original; those videos load only when the user asks for them and no copies are stored. The site is not affiliated with those sources and does not assume their content."
     },
     "removal": {
       "title": "Content removal",
@@ -66,7 +66,7 @@
       "logsTitle": "Technical logs",
       "logsBody": "The server records technical events with a trace identifier (trace_id) to diagnose failures. The logs do not include passwords, tokens or complete personal data.",
       "cookiesTitle": "Cookies",
-      "cookiesBody": "The site uses a single cookie, NEXT_LOCALE, to remember the chosen language. It is strictly necessary, it is not used for advertising or to track your browsing and it does not require prior consent. No analytics or marketing cookies are set.",
+      "cookiesBody": "The site uses a single cookie, NEXT_LOCALE, to remember the chosen language. It is strictly necessary, it is not used for advertising or to track your browsing and it does not require prior consent. Embedded third-party videos (YouTube, Vimeo, Dailymotion) do not load until you activate them with a click; before that click they set no cookies, and once activated the platform may set its own. No analytics or marketing cookies are set.",
       "thirdPartiesTitle": "Third parties and processors",
       "thirdPartiesIntro": "To operate the site we rely on providers that process data on our behalf and under the guarantees of their own terms.",
       "thirdPartyNeon": "Neon: database where the catalog and the feedback live.",
