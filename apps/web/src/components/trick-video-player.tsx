@@ -149,6 +149,43 @@ function LinkCard({ video, watchLabel }: { video: VideoItem; watchLabel: string 
   );
 }
 
+// Video de archivo directo (Loopkicks). Si la fuente ya no responde (por ejemplo si
+// Loopkicks deja de existir), el evento error degrada al estado vacio en vez de dejar un
+// reproductor en negro.
+function FileVideo({ video, trickName }: { video: VideoItem; trickName: string }) {
+  const t = useTranslations('tricks');
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <EmptyState
+        title={t('detail.video.unavailableTitle')}
+        description={t('detail.video.unavailableDescription')}
+      />
+    );
+  }
+
+  return (
+    <div
+      className={`overflow-hidden rounded-box border border-border bg-base-300 ${aspectClass(video)}`}
+    >
+      <video
+        className="size-full"
+        controls
+        playsInline
+        preload="metadata"
+        src={video.url}
+        aria-label={t('detail.video.label', { name: trickName })}
+        onError={() => {
+          setFailed(true);
+        }}
+      >
+        {t('detail.video.fallback')}
+      </video>
+    </div>
+  );
+}
+
 export function TrickVideoPlayer({ trickId, trickName, sourceUrl }: TrickVideoPlayerProps) {
   const t = useTranslations('tricks');
 
@@ -229,20 +266,7 @@ export function TrickVideoPlayer({ trickId, trickName, sourceUrl }: TrickVideoPl
     <section className="tb-surface flex flex-col gap-3 p-4 sm:p-5">
       <PlayerHeading>{t('detail.video.heading')}</PlayerHeading>
       {video.kind === 'file' ? (
-        <div
-          className={`overflow-hidden rounded-box border border-border bg-base-300 ${aspectClass(video)}`}
-        >
-          <video
-            className="size-full"
-            controls
-            playsInline
-            preload="metadata"
-            aria-label={t('detail.video.label', { name: trickName })}
-          >
-            <source src={video.url} type={video.mime ?? undefined} />
-            {t('detail.video.fallback')}
-          </video>
-        </div>
+        <FileVideo video={video} trickName={trickName} />
       ) : video.kind === 'iframe' ? (
         <EmbedFacade video={video} playLabel={t('detail.video.play')} hint={facadeHint} />
       ) : (

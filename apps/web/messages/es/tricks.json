@@ -118,7 +118,9 @@
         "creditBy": "Video de {author} en {provider}",
         "creditGeneric": "Video en {provider}",
         "watch": "Ver en {provider}",
-        "source": "Ver original"
+        "source": "Ver original",
+        "unavailableTitle": "Video no disponible",
+        "unavailableDescription": "No se pudo cargar el video desde su fuente original."
       }
     }
   }
