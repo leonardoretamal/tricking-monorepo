@@ -508,7 +508,7 @@ Estado: pendiente.
 Sección 28.3, adaptada a la decisión de no usar autenticación: el progreso vive en el navegador (Fase 21).
 
 - 27.1. Modelo del árbol sobre `trick_relations` (prereqs y next) y las categorías.
-- 27.2. Render con `@xyflow/react` (dependencia ya aprobada).
+- 27.2. Render del arbol; la libreria de visualizacion se elige en la fase (hoy la dependencia 3D aprobada es `three`).
 - 27.3. Estados por nodo (bloqueado, disponible, en progreso, aprendido y quiero aprender) con los tokens de estado de `design.md`.
 - 27.4. Filtros por categoría, dificultad y estado; zoom, arrastre y navegación por teclado.
 - 27.5. Barras de progreso global y por categoría, y logros por hitos.
@@ -516,7 +516,7 @@ Sección 28.3, adaptada a la decisión de no usar autenticación: el progreso vi
 
 Criterio de cierre: árbol navegable y accesible que refleja y actualiza el progreso local, verificado en navegador real y móvil.
 
-Dependencias: ninguna nueva (`@xyflow/react` ya aprobada). Sin variables nuevas.
+Dependencias: ninguna nueva por ahora (la libreria del skill tree se elige en su fase; hoy la dependencia 3D aprobada es `three`). Sin variables nuevas.
 
 ## Fase 28: Editor y guardado de combos
 

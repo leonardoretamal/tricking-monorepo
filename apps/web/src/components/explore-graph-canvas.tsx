@@ -76,6 +76,7 @@ export default function ExploreGraphCanvas({
 }: ExploreGraphCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const labelRef = useRef<HTMLDivElement>(null);
   const sceneApiRef = useRef<SceneApi | null>(null);
   const selectedIdRef = useRef<string | null>(selectedId);
   const onSelectRef = useRef(onSelect);
@@ -95,6 +96,7 @@ export default function ExploreGraphCanvas({
   useEffect(() => {
     const container = containerRef.current;
     const canvas = canvasRef.current;
+    const label = labelRef.current;
     if (container === null || canvas === null) {
       return;
     }
@@ -115,7 +117,6 @@ export default function ExploreGraphCanvas({
       }
 
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 5000);
 
       // Encuadre estable: la camara parte del centro del grafo y se aleja segun el
       // tamano del conjunto. La disposicion de los nodos la fija el padre, asi que
@@ -131,6 +132,11 @@ export default function ExploreGraphCanvas({
         ? new THREE.Vector3(0, 0, 0)
         : bounds.getSize(new THREE.Vector3());
       const maxDimension = Math.max(size.x, size.y, size.z, 20);
+
+      // El plano lejano se deriva del tamano del grafo para que alejar todo el zoom
+      // (maxDistance) quede siempre bien por debajo y no recorte el grafo.
+      const far = Math.max(maxDimension * 12, 5000);
+      const camera = new THREE.PerspectiveCamera(50, 1, 0.1, far);
 
       camera.position.set(center.x, center.y, center.z + maxDimension * 1.35);
 
@@ -262,8 +268,10 @@ export default function ExploreGraphCanvas({
 
       const raycaster = new THREE.Raycaster();
       const pointer = new THREE.Vector2();
+      const projected = new THREE.Vector3();
       let pointerDownX = 0;
       let pointerDownY = 0;
+      let hoveredId: string | null = null;
 
       const updatePointer = (event: PointerEvent) => {
         const rect = renderer.domElement.getBoundingClientRect();
@@ -292,8 +300,13 @@ export default function ExploreGraphCanvas({
       };
 
       const onPointerMove = (event: PointerEvent) => {
-        const hoveredId = pickNode(event);
+        hoveredId = pickNode(event);
         renderer.domElement.style.cursor = hoveredId !== null ? 'pointer' : 'grab';
+      };
+
+      const onPointerLeave = () => {
+        hoveredId = null;
+        renderer.domElement.style.cursor = 'grab';
       };
 
       const onPointerUp = (event: PointerEvent) => {
@@ -310,14 +323,45 @@ export default function ExploreGraphCanvas({
         }
       };
 
+      // Etiqueta unica: muestra el nombre del nodo bajo el puntero o, si no hay hover,
+      // el del nodo seleccionado. Se proyecta la posicion 3D a pantalla cada frame; con
+      // muchos nodos no se dibujan todas las etiquetas a la vez.
+      const updateLabel = () => {
+        if (label === null) {
+          return;
+        }
+        const activeId = hoveredId ?? selectedIdRef.current;
+        const node = activeId !== null ? positionById.get(activeId) : undefined;
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        if (node === undefined || width === 0 || height === 0) {
+          label.style.display = 'none';
+          return;
+        }
+        projected.set(node.x, node.y, node.z).project(camera);
+        if (projected.z > 1) {
+          label.style.display = 'none';
+          return;
+        }
+        const px = (projected.x * 0.5 + 0.5) * width;
+        const py = (-projected.y * 0.5 + 0.5) * height;
+        if (label.textContent !== node.name) {
+          label.textContent = node.name;
+        }
+        label.style.display = 'block';
+        label.style.transform = `translate(-50%, 0) translate(${px}px, ${py + 14}px)`;
+      };
+
       renderer.domElement.addEventListener('pointerdown', onPointerDown);
       renderer.domElement.addEventListener('pointermove', onPointerMove);
       renderer.domElement.addEventListener('pointerup', onPointerUp);
+      renderer.domElement.addEventListener('pointerleave', onPointerLeave);
 
       const renderFrame = () => {
         frameId = requestAnimationFrame(renderFrame);
         controls.update();
         renderer.render(scene, camera);
+        updateLabel();
       };
       frameId = requestAnimationFrame(renderFrame);
 
@@ -329,6 +373,10 @@ export default function ExploreGraphCanvas({
         renderer.domElement.removeEventListener('pointerdown', onPointerDown);
         renderer.domElement.removeEventListener('pointermove', onPointerMove);
         renderer.domElement.removeEventListener('pointerup', onPointerUp);
+        renderer.domElement.removeEventListener('pointerleave', onPointerLeave);
+        if (label !== null) {
+          label.style.display = 'none';
+        }
         controls.dispose();
         nodeGeometry.dispose();
         baseMaterial.dispose();
@@ -340,6 +388,9 @@ export default function ExploreGraphCanvas({
           geometry.dispose();
         }
         scene.clear();
+        // dispose() no libera el contexto WebGL; forceContextLoss evita acumular
+        // contextos al cambiar de filtro rapido (el navegador puede tirar el mas viejo).
+        renderer.forceContextLoss();
         renderer.dispose();
         sceneApiRef.current = null;
       };
@@ -361,6 +412,14 @@ export default function ExploreGraphCanvas({
   return (
     <div ref={containerRef} className="absolute inset-0">
       <canvas ref={canvasRef} aria-hidden="true" className="block h-full w-full touch-none" />
+      {/* Etiqueta del nodo bajo el puntero o seleccionado. Es solo visual: los nombres
+          ya los expone la capa sr-only del padre, por eso va aria-hidden. */}
+      <div
+        ref={labelRef}
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 top-0 z-10 max-w-[14rem] truncate rounded-box border border-border bg-base-200 px-2 py-1 text-xs font-medium text-base-content shadow-md"
+        style={{ display: 'none' }}
+      />
     </div>
   );
 }

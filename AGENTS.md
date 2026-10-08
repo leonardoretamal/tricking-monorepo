@@ -187,7 +187,7 @@ Resumen de las decisiones por defecto:
 
 Dependencias aprobadas del monorepo: turbo, pnpm, typescript, eslint, `@typescript-eslint/*`, prettier, husky, lint-staged, `@commitlint/cli`, `@commitlint/config-conventional`.
 
-Dependencias aprobadas del frontend: next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, \`@tanstack/react-query\`, \`@tanstack/react-query-persist-client\`, \`@tanstack/react-virtual\`, \`three\` (con \`@types/three\` como devDependency), \`resend\`, \`@marsidev/react-turnstile\`, date-fns, date-fns-tz.
+Dependencias aprobadas del frontend: next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, `three` (con `@types/three` como devDependency), `resend`, `@marsidev/react-turnstile`, date-fns, date-fns-tz.
 
 Dependencias aprobadas del backend y datos: drizzle-orm, drizzle-kit, `@neondatabase/serverless`, pino, pino-pretty, insta-fetcher, `@trickingapi/tricks-core-data`, `@trickingapi/tricking-ts`, `@upstash/redis`, `@upstash/qstash`, `@aws-sdk/client-s3`, cheerio.
 

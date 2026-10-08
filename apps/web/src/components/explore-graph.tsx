@@ -173,6 +173,14 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
   const data = query.data;
   const graphNodes = data?.nodes ?? EMPTY_NODES;
 
+  // Si el nodo seleccionado deja de existir (por ejemplo al cambiar un filtro), se
+  // limpia la seleccion para no dejar un aria-pressed ni un panel colgando.
+  useEffect(() => {
+    if (selectedId !== null && !graphNodes.some((node) => node.id === selectedId)) {
+      setSelectedId(null);
+    }
+  }, [graphNodes, selectedId]);
+
   // Disposicion determinista: las secciones son columnas a lo largo de X, las filas a lo
   // largo de Y y un Z leve por categoria. No depende de la seleccion para que el lienzo
   // no se reconstruya al elegir un nodo.
