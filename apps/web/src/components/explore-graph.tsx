@@ -29,10 +29,13 @@ import { ExploreNodePanel } from './explore-node-panel';
 // three.js se carga unicamente cuando la pagina Explorar monta el lienzo.
 const ExploreGraphCanvas = dynamic(() => import('./explore-graph-canvas'), { ssr: false });
 
-const COLUMN_GAP = 34;
-const ROW_GAP = 16;
-const CATEGORY_DEPTH_GAP = 6;
-const CATEGORY_ORDER: readonly string[] = ['VERT_KICK', 'TWIST', 'FLIP', 'GROUNDWORK', 'VARIATION'];
+// Layout horizontal: cada seccion es una banda apilada de arriba hacia abajo y dentro
+// de la banda los trucos fluyen de izquierda a derecha, con un tope de columnas para que
+// la fila no quede kilometrica.
+const ITEM_GAP = 34;
+const ROW_GAP = 20;
+const BAND_GAP = 48;
+const WRAP_COLS = 12;
 
 const EMPTY_NODES: GraphNodeItem[] = [];
 
@@ -85,12 +88,13 @@ function findNeighbor(
       primary = -dx;
       secondary = Math.abs(dy);
     } else if (direction === 'ArrowDown') {
-      if (dy <= 0) continue;
-      primary = dy;
-      secondary = Math.abs(dx);
-    } else {
+      // La Y de three crece hacia arriba; "abajo" en pantalla es una Y menor.
       if (dy >= 0) continue;
       primary = -dy;
+      secondary = Math.abs(dx);
+    } else {
+      if (dy <= 0) continue;
+      primary = dy;
       secondary = Math.abs(dx);
     }
     const score = primary + secondary * 2;
@@ -181,9 +185,11 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
     }
   }, [graphNodes, selectedId]);
 
-  // Disposicion determinista: las secciones son columnas a lo largo de X, las filas a lo
-  // largo de Y y un Z leve por categoria. No depende de la seleccion para que el lienzo
-  // no se reconstruya al elegir un nodo.
+  // Disposicion determinista y horizontal: cada seccion es una banda apilada de arriba
+  // hacia abajo (en el orden de SECTIONS mas 'other') y dentro de la banda los trucos
+  // fluyen de izquierda a derecha, con un tope de WRAP_COLS columnas por fila. La Y de
+  // three crece hacia arriba, por eso las bandas van en Y negativa. No depende de la
+  // seleccion para que el lienzo no se reconstruya al elegir un nodo.
   const layout = useMemo(() => {
     const groups = new Map<string, GraphNodeItem[]>();
     for (const node of graphNodes) {
@@ -199,21 +205,30 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
     const order = [...SECTIONS, 'other'];
     const nodes: GraphCanvasNode[] = [];
     const positions = new Map<string, { x: number; y: number }>();
-    let column = 0;
+    let bandTop = 0;
     for (const key of order) {
       const group = groups.get(key);
       if (!group) {
         continue;
       }
-      for (const [row, node] of group.entries()) {
-        const x = column * COLUMN_GAP;
-        const y = row * ROW_GAP;
-        const categoryIndex = node.categories.findIndex((slug) => CATEGORY_ORDER.includes(slug));
-        const zIndex = categoryIndex === -1 ? 0 : categoryIndex - (CATEGORY_ORDER.length - 1) / 2;
+      const rows = Math.ceil(group.length / WRAP_COLS);
+      for (const [index, node] of group.entries()) {
+        const column = index % WRAP_COLS;
+        const row = Math.floor(index / WRAP_COLS);
+        const x = column * ITEM_GAP;
+        const y = -(bandTop + row * ROW_GAP);
         positions.set(node.id, { x, y });
-        nodes.push({ id: node.id, name: node.name, x, y, z: zIndex * CATEGORY_DEPTH_GAP });
+        nodes.push({
+          id: node.id,
+          name: node.name,
+          x,
+          y,
+          z: 0,
+          difficulty: node.difficulty,
+          categories: node.categories,
+        });
       }
-      column += 1;
+      bandTop += rows * ROW_GAP + BAND_GAP;
     }
 
     return { nodes, positions };

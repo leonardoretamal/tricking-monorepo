@@ -1,13 +1,17 @@
 'use client';
 
+import { categoryBadgeColor, categoryColorClass } from '@tricking/ui';
+import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
 
 import type * as THREE from 'three';
+import type { CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
 
 // Lienzo 3D del grafo de la Explore Page. three.js solo se carga en el cliente: este
-// modulo se importa con next/dynamic y, ademas, three se resuelve con import dinamico
-// dentro del efecto para que no toque window al cargar el modulo ni entre al bundle del
-// resto de las paginas. La capa DOM accesible vive en el componente padre.
+// modulo se importa con next/dynamic y, ademas, three, OrbitControls y CSS2DRenderer se
+// resuelven con import dinamico dentro del efecto para que no toquen window al cargar el
+// modulo ni entren al bundle del resto de las paginas. La capa DOM accesible (los botones
+// sr-only con el nombre de cada truco) vive en el componente padre.
 
 export type GraphCanvasEdgeKind = 'prereq' | 'next' | 'stance' | 'variation';
 
@@ -17,6 +21,8 @@ export interface GraphCanvasNode {
   x: number;
   y: number;
   z: number;
+  difficulty: number | null;
+  categories: string[];
 }
 
 export interface GraphCanvasEdge {
@@ -48,6 +54,17 @@ interface ThemeColors {
   selected: string;
 }
 
+// Tamano estimado de una etiqueta para el filtro de nivel de detalle. Se mide la tarjeta
+// real al crearla y se usa este valor solo como respaldo.
+const LABEL_FALLBACK_WIDTH = 140;
+const LABEL_FALLBACK_HEIGHT = 30;
+const LABEL_MARGIN = 6;
+
+function difficultyClass(level: number): string {
+  const clamped = Math.min(5, Math.max(0, Math.round(level)));
+  return `tb-difficulty-${clamped}`;
+}
+
 // Lee los colores del tema desde las variables CSS resueltas. Nunca hay colores sueltos
 // en el componente: las aristas reutilizan las mismas variables que la leyenda
 // (--color-secondary, --color-primary, --color-muted, --color-info) y los nodos salen
@@ -76,13 +93,15 @@ export default function ExploreGraphCanvas({
 }: ExploreGraphCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const labelRef = useRef<HTMLDivElement>(null);
   const sceneApiRef = useRef<SceneApi | null>(null);
   const selectedIdRef = useRef<string | null>(selectedId);
   const onSelectRef = useRef(onSelect);
   const onDeselectRef = useRef(onDeselect);
+  const tTricks = useTranslations('tricks');
+  const tricksRef = useRef(tTricks);
   onSelectRef.current = onSelect;
   onDeselectRef.current = onDeselect;
+  tricksRef.current = tTricks;
 
   useEffect(() => {
     selectedIdRef.current = selectedId;
@@ -96,7 +115,6 @@ export default function ExploreGraphCanvas({
   useEffect(() => {
     const container = containerRef.current;
     const canvas = canvasRef.current;
-    const label = labelRef.current;
     if (container === null || canvas === null) {
       return;
     }
@@ -115,12 +133,16 @@ export default function ExploreGraphCanvas({
       if (disposed) {
         return;
       }
+      const { CSS2DObject, CSS2DRenderer } =
+        await import('three/examples/jsm/renderers/CSS2DRenderer.js');
+      if (disposed) {
+        return;
+      }
 
       const scene = new THREE.Scene();
 
-      // Encuadre estable: la camara parte del centro del grafo y se aleja segun el
-      // tamano del conjunto. La disposicion de los nodos la fija el padre, asi que
-      // cada render coloca exactamente los mismos puntos.
+      // Encuadre: la camara parte del centro del grafo. La disposicion de los nodos la
+      // fija el padre, asi que cada render coloca exactamente los mismos puntos.
       const bounds = new THREE.Box3();
       for (const node of nodes) {
         bounds.expandByPoint(new THREE.Vector3(node.x, node.y, node.z));
@@ -133,12 +155,24 @@ export default function ExploreGraphCanvas({
         : bounds.getSize(new THREE.Vector3());
       const maxDimension = Math.max(size.x, size.y, size.z, 20);
 
-      // El plano lejano se deriva del tamano del grafo para que alejar todo el zoom
-      // (maxDistance) quede siempre bien por debajo y no recorte el grafo.
-      const far = Math.max(maxDimension * 12, 5000);
-      const camera = new THREE.PerspectiveCamera(50, 1, 0.1, far);
-
-      camera.position.set(center.x, center.y, center.z + maxDimension * 1.35);
+      const aspect =
+        container.clientWidth > 0 && container.clientHeight > 0
+          ? container.clientWidth / container.clientHeight
+          : 1;
+      // Distancia para que entren el ancho y el alto del bounding box segun el FOV y el
+      // aspect. El plano lejano se deriva para que alejar todo el zoom no recorte.
+      const fovRadians = (50 * Math.PI) / 180;
+      const fitHeight = size.y / 2 / Math.tan(fovRadians / 2);
+      const fitWidth = size.x / 2 / (Math.tan(fovRadians / 2) * aspect);
+      const fitDistance = Math.max(fitHeight, fitWidth, 20) * 1.25;
+      const far = Math.max(maxDimension * 12, fitDistance * 6, 5000);
+      const camera = new THREE.PerspectiveCamera(50, aspect, 0.1, far);
+      // Vista levemente inclinada para que se note el 3D, no totalmente de frente.
+      camera.position.set(
+        center.x + fitDistance * 0.12,
+        center.y + fitDistance * 0.18,
+        center.z + fitDistance,
+      );
 
       const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -150,8 +184,8 @@ export default function ExploreGraphCanvas({
       controls.enableDamping = true;
       controls.dampingFactor = 0.08;
       controls.enablePan = true;
-      controls.minDistance = maxDimension * 0.4;
-      controls.maxDistance = maxDimension * 4;
+      controls.minDistance = Math.max(maxDimension * 0.2, 1);
+      controls.maxDistance = Math.max(fitDistance * 4, maxDimension);
       controls.update();
 
       const ambientLight = new THREE.AmbientLight();
@@ -165,7 +199,9 @@ export default function ExploreGraphCanvas({
       keyLight.intensity = 1.4;
       scene.add(ambientLight, keyLight);
 
-      const nodeGeometry = new THREE.SphereGeometry(Math.max(1.2, maxDimension * 0.011), 18, 14);
+      // Esfera chica por nodo: ancla de las aristas y blanco del raycasting. El nombre
+      // visible va en la etiqueta HTML del CSS2DRenderer.
+      const nodeGeometry = new THREE.SphereGeometry(Math.max(0.9, maxDimension * 0.008), 16, 12);
       const baseMaterial = new THREE.MeshStandardMaterial({ roughness: 0.45, metalness: 0.1 });
       const selectedMaterial = new THREE.MeshStandardMaterial({
         roughness: 0.3,
@@ -225,6 +261,75 @@ export default function ExploreGraphCanvas({
         scene.add(line);
       }
 
+      // Capa de etiquetas: un CSS2DObject por nodo con una tarjeta HTML (nombre y
+      // badges). El contenedor y los elementos son pointer-events none para que el
+      // puntero siga llegando al canvas (OrbitControls y raycasting).
+      const labelRenderer = new CSS2DRenderer();
+      labelRenderer.domElement.style.position = 'absolute';
+      labelRenderer.domElement.style.top = '0';
+      labelRenderer.domElement.style.left = '0';
+      labelRenderer.domElement.style.pointerEvents = 'none';
+      labelRenderer.domElement.style.zIndex = '1';
+      labelRenderer.domElement.setAttribute('aria-hidden', 'true');
+      container.appendChild(labelRenderer.domElement);
+
+      const buildLabelElement = (node: GraphCanvasNode): HTMLElement => {
+        const t = tricksRef.current;
+        const card = document.createElement('div');
+        card.className =
+          'pointer-events-none select-none rounded-box border border-border bg-base-200 px-2 py-1 text-xs font-medium text-base-content shadow-sm';
+        card.style.maxWidth = '11rem';
+        card.style.overflow = 'hidden';
+
+        const name = document.createElement('p');
+        name.className = 'truncate';
+        name.textContent = node.name;
+        card.appendChild(name);
+
+        const badges = document.createElement('div');
+        badges.className = 'mt-1 flex flex-wrap items-center gap-1';
+
+        if (node.difficulty !== null) {
+          const level = Math.min(5, Math.max(0, Math.round(node.difficulty)));
+          const badge = document.createElement('span');
+          badge.className = `tb-badge inline-flex rounded-full border px-1.5 py-0.5 text-[10px] font-medium ${difficultyClass(node.difficulty)}`;
+          badge.textContent = t(`difficulty.${level}`);
+          badges.appendChild(badge);
+        }
+
+        for (const slug of node.categories) {
+          const color = categoryBadgeColor(slug);
+          if (color === null) {
+            continue;
+          }
+          const badge = document.createElement('span');
+          badge.className = `tb-badge inline-flex rounded-full border px-1.5 py-0.5 text-[10px] font-medium ${categoryColorClass(color)}`;
+          badge.textContent = t(`categories.${slug}`);
+          badges.appendChild(badge);
+        }
+
+        if (badges.childElementCount > 0) {
+          card.appendChild(badges);
+        }
+
+        return card;
+      };
+
+      const labelById = new Map<string, CSS2DObject>();
+      const labelSizeById = new Map<string, { width: number; height: number }>();
+      for (const node of nodes) {
+        const element = buildLabelElement(node);
+        const object = new CSS2DObject(element);
+        object.position.set(node.x, node.y, node.z);
+        labelRenderer.domElement.appendChild(element);
+        labelSizeById.set(node.id, {
+          width: element.offsetWidth || LABEL_FALLBACK_WIDTH,
+          height: element.offsetHeight || LABEL_FALLBACK_HEIGHT,
+        });
+        labelById.set(node.id, object);
+        scene.add(object);
+      }
+
       const applyColors = () => {
         const colors = readThemeColors();
         baseMaterial.color.set(colors.node);
@@ -240,31 +345,27 @@ export default function ExploreGraphCanvas({
         for (const [nodeId, mesh] of meshById) {
           const isSelected = nodeId === id;
           mesh.material = isSelected ? selectedMaterial : baseMaterial;
-          mesh.scale.setScalar(isSelected ? 1.5 : 1);
+          mesh.scale.setScalar(isSelected ? 1.6 : 1);
         }
       };
 
       applyColors();
       applySelection(selectedIdRef.current);
 
-      resizeObserver = new ResizeObserver(() => {
+      const resize = () => {
         const width = container.clientWidth;
         const height = container.clientHeight;
         if (width === 0 || height === 0) {
           return;
         }
         renderer.setSize(width, height, false);
+        labelRenderer.setSize(width, height);
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
-      });
+      };
+      resizeObserver = new ResizeObserver(resize);
       resizeObserver.observe(container);
-      const initialWidth = container.clientWidth;
-      const initialHeight = container.clientHeight;
-      if (initialWidth > 0 && initialHeight > 0) {
-        renderer.setSize(initialWidth, initialHeight, false);
-        camera.aspect = initialWidth / initialHeight;
-        camera.updateProjectionMatrix();
-      }
+      resize();
 
       const raycaster = new THREE.Raycaster();
       const pointer = new THREE.Vector2();
@@ -323,45 +424,73 @@ export default function ExploreGraphCanvas({
         }
       };
 
-      // Etiqueta unica: muestra el nombre del nodo bajo el puntero o, si no hay hover,
-      // el del nodo seleccionado. Se proyecta la posicion 3D a pantalla cada frame; con
-      // muchos nodos no se dibujan todas las etiquetas a la vez.
-      const updateLabel = () => {
-        if (label === null) {
-          return;
-        }
-        const activeId = hoveredId ?? selectedIdRef.current;
-        const node = activeId !== null ? positionById.get(activeId) : undefined;
-        const width = container.clientWidth;
-        const height = container.clientHeight;
-        if (node === undefined || width === 0 || height === 0) {
-          label.style.display = 'none';
-          return;
-        }
-        projected.set(node.x, node.y, node.z).project(camera);
-        if (projected.z > 1) {
-          label.style.display = 'none';
-          return;
-        }
-        const px = (projected.x * 0.5 + 0.5) * width;
-        const py = (-projected.y * 0.5 + 0.5) * height;
-        if (label.textContent !== node.name) {
-          label.textContent = node.name;
-        }
-        label.style.display = 'block';
-        label.style.transform = `translate(-50%, 0) translate(${px}px, ${py + 14}px)`;
-      };
-
       renderer.domElement.addEventListener('pointerdown', onPointerDown);
       renderer.domElement.addEventListener('pointermove', onPointerMove);
       renderer.domElement.addEventListener('pointerup', onPointerUp);
       renderer.domElement.addEventListener('pointerleave', onPointerLeave);
 
+      // Nivel de detalle: se muestran solo las etiquetas que no se encimen (greedy por
+      // pantalla), mas las del nodo bajo el puntero y el seleccionado. Las ocultas
+      // quedan en el DOM con display none, no se eliminan; al acercar se revelan.
+      const occupied: { x: number; y: number }[] = [];
+      const updateLevelOfDetail = () => {
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        if (width === 0 || height === 0) {
+          return;
+        }
+        occupied.length = 0;
+        const activeId = hoveredId ?? selectedIdRef.current;
+
+        const place = (node: GraphCanvasNode, force: boolean) => {
+          const object = labelById.get(node.id);
+          if (object === undefined) {
+            return;
+          }
+          projected.set(node.x, node.y, node.z).project(camera);
+          if (projected.z < -1 || projected.z > 1) {
+            object.visible = false;
+            return;
+          }
+          const screenX = (projected.x * 0.5 + 0.5) * width;
+          const screenY = (-projected.y * 0.5 + 0.5) * height;
+          const size = labelSizeById.get(node.id) ?? {
+            width: LABEL_FALLBACK_WIDTH,
+            height: LABEL_FALLBACK_HEIGHT,
+          };
+          if (!force) {
+            for (const point of occupied) {
+              if (
+                Math.abs(screenX - point.x) < size.width + LABEL_MARGIN &&
+                Math.abs(screenY - point.y) < size.height + LABEL_MARGIN
+              ) {
+                object.visible = false;
+                return;
+              }
+            }
+          }
+          object.visible = true;
+          occupied.push({ x: screenX, y: screenY });
+        };
+
+        for (const node of nodes) {
+          if (node.id === activeId) {
+            place(node, true);
+          }
+        }
+        for (const node of nodes) {
+          if (node.id !== activeId) {
+            place(node, false);
+          }
+        }
+      };
+
       const renderFrame = () => {
         frameId = requestAnimationFrame(renderFrame);
         controls.update();
+        updateLevelOfDetail();
         renderer.render(scene, camera);
-        updateLabel();
+        labelRenderer.render(scene, camera);
       };
       frameId = requestAnimationFrame(renderFrame);
 
@@ -374,9 +503,6 @@ export default function ExploreGraphCanvas({
         renderer.domElement.removeEventListener('pointermove', onPointerMove);
         renderer.domElement.removeEventListener('pointerup', onPointerUp);
         renderer.domElement.removeEventListener('pointerleave', onPointerLeave);
-        if (label !== null) {
-          label.style.display = 'none';
-        }
         controls.dispose();
         nodeGeometry.dispose();
         baseMaterial.dispose();
@@ -388,6 +514,7 @@ export default function ExploreGraphCanvas({
           geometry.dispose();
         }
         scene.clear();
+        labelRenderer.domElement.remove();
         // dispose() no libera el contexto WebGL; forceContextLoss evita acumular
         // contextos al cambiar de filtro rapido (el navegador puede tirar el mas viejo).
         renderer.forceContextLoss();
@@ -412,14 +539,6 @@ export default function ExploreGraphCanvas({
   return (
     <div ref={containerRef} className="absolute inset-0">
       <canvas ref={canvasRef} aria-hidden="true" className="block h-full w-full touch-none" />
-      {/* Etiqueta del nodo bajo el puntero o seleccionado. Es solo visual: los nombres
-          ya los expone la capa sr-only del padre, por eso va aria-hidden. */}
-      <div
-        ref={labelRef}
-        aria-hidden="true"
-        className="pointer-events-none absolute left-0 top-0 z-10 max-w-[14rem] truncate rounded-box border border-border bg-base-200 px-2 py-1 text-xs font-medium text-base-content shadow-md"
-        style={{ display: 'none' }}
-      />
     </div>
   );
 }
