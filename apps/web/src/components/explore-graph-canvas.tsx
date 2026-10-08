@@ -55,10 +55,11 @@ interface ThemeColors {
 }
 
 // Tamano estimado de una etiqueta para el filtro de nivel de detalle. Se mide la tarjeta
-// real al crearla y se usa este valor solo como respaldo.
-const LABEL_FALLBACK_WIDTH = 140;
-const LABEL_FALLBACK_HEIGHT = 30;
-const LABEL_MARGIN = 6;
+// real al crearla (sin badges, que solo aparecen en hover o seleccion) y se usa este valor
+// solo como respaldo. El margen chico empaqueta la mayor cantidad de nombres posible.
+const LABEL_FALLBACK_WIDTH = 80;
+const LABEL_FALLBACK_HEIGHT = 16;
+const LABEL_MARGIN = 3;
 
 function difficultyClass(level: number): string {
   const clamped = Math.min(5, Math.max(0, Math.round(level)));
@@ -159,18 +160,19 @@ export default function ExploreGraphCanvas({
         container.clientWidth > 0 && container.clientHeight > 0
           ? container.clientWidth / container.clientHeight
           : 1;
-      // Distancia para que entren el ancho y el alto del bounding box segun el FOV y el
-      // aspect. El plano lejano se deriva para que alejar todo el zoom no recorte.
+      // Distancia para encuadrar EXACTAMENTE el bounding box real del layout (ancho y
+      // alto segun el FOV y el aspect) con un margen chico, para que no sobre espacio
+      // vacio. El plano lejano se deriva para que alejar todo el zoom no recorte.
       const fovRadians = (50 * Math.PI) / 180;
       const fitHeight = size.y / 2 / Math.tan(fovRadians / 2);
       const fitWidth = size.x / 2 / (Math.tan(fovRadians / 2) * aspect);
-      const fitDistance = Math.max(fitHeight, fitWidth, 20) * 1.25;
+      const fitDistance = Math.max(fitHeight, fitWidth, 20) * 1.08;
       const far = Math.max(maxDimension * 12, fitDistance * 6, 5000);
       const camera = new THREE.PerspectiveCamera(50, aspect, 0.1, far);
       // Vista levemente inclinada para que se note el 3D, no totalmente de frente.
       camera.position.set(
-        center.x + fitDistance * 0.12,
-        center.y + fitDistance * 0.18,
+        center.x + fitDistance * 0.06,
+        center.y + fitDistance * 0.1,
         center.z + fitDistance,
       );
 
@@ -273,12 +275,17 @@ export default function ExploreGraphCanvas({
       labelRenderer.domElement.setAttribute('aria-hidden', 'true');
       container.appendChild(labelRenderer.domElement);
 
-      const buildLabelElement = (node: GraphCanvasNode): HTMLElement => {
+      // La tarjeta siempre lleva el nombre; los badges de dificultad y categoria solo se
+      // muestran en el nodo con hover o seleccionado, para que el ancho quede chico y
+      // entren muchos nombres en la vista ajustada.
+      const buildLabelElement = (
+        node: GraphCanvasNode,
+      ): { element: HTMLElement; badges: HTMLElement | null } => {
         const t = tricksRef.current;
         const card = document.createElement('div');
         card.className =
-          'pointer-events-none select-none rounded-box border border-border bg-base-200 px-2 py-1 text-xs font-medium text-base-content shadow-sm';
-        card.style.maxWidth = '11rem';
+          'pointer-events-none select-none rounded-box border border-border bg-base-200 px-1.5 py-0.5 text-[10px] font-medium leading-tight text-base-content shadow-sm';
+        card.style.maxWidth = '5rem';
         card.style.overflow = 'hidden';
 
         const name = document.createElement('p');
@@ -288,11 +295,12 @@ export default function ExploreGraphCanvas({
 
         const badges = document.createElement('div');
         badges.className = 'mt-1 flex flex-wrap items-center gap-1';
+        badges.style.display = 'none';
 
         if (node.difficulty !== null) {
           const level = Math.min(5, Math.max(0, Math.round(node.difficulty)));
           const badge = document.createElement('span');
-          badge.className = `tb-badge inline-flex rounded-full border px-1.5 py-0.5 text-[10px] font-medium ${difficultyClass(node.difficulty)}`;
+          badge.className = `tb-badge inline-flex rounded-full border px-1 py-0.5 text-[9px] font-medium ${difficultyClass(node.difficulty)}`;
           badge.textContent = t(`difficulty.${level}`);
           badges.appendChild(badge);
         }
@@ -303,22 +311,24 @@ export default function ExploreGraphCanvas({
             continue;
           }
           const badge = document.createElement('span');
-          badge.className = `tb-badge inline-flex rounded-full border px-1.5 py-0.5 text-[10px] font-medium ${categoryColorClass(color)}`;
+          badge.className = `tb-badge inline-flex rounded-full border px-1 py-0.5 text-[9px] font-medium ${categoryColorClass(color)}`;
           badge.textContent = t(`categories.${slug}`);
           badges.appendChild(badge);
         }
 
         if (badges.childElementCount > 0) {
           card.appendChild(badges);
+          return { element: card, badges };
         }
 
-        return card;
+        return { element: card, badges: null };
       };
 
       const labelById = new Map<string, CSS2DObject>();
       const labelSizeById = new Map<string, { width: number; height: number }>();
+      const badgeById = new Map<string, HTMLElement>();
       for (const node of nodes) {
-        const element = buildLabelElement(node);
+        const { element, badges } = buildLabelElement(node);
         const object = new CSS2DObject(element);
         object.position.set(node.x, node.y, node.z);
         labelRenderer.domElement.appendChild(element);
@@ -326,6 +336,9 @@ export default function ExploreGraphCanvas({
           width: element.offsetWidth || LABEL_FALLBACK_WIDTH,
           height: element.offsetHeight || LABEL_FALLBACK_HEIGHT,
         });
+        if (badges !== null) {
+          badgeById.set(node.id, badges);
+        }
         labelById.set(node.id, object);
         scene.add(object);
       }
@@ -441,6 +454,10 @@ export default function ExploreGraphCanvas({
         }
         occupied.length = 0;
         const activeId = hoveredId ?? selectedIdRef.current;
+        // Los badges solo se ven en el nodo activo (hover o seleccionado).
+        for (const [nodeId, badges] of badgeById) {
+          badges.style.display = nodeId === activeId ? '' : 'none';
+        }
 
         const place = (node: GraphCanvasNode, force: boolean) => {
           const object = labelById.get(node.id);

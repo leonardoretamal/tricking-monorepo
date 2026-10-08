@@ -9,12 +9,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent }
 
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { fetchGraph } from '@/lib/graph-api';
-import {
-  DEFAULT_GRAPH_NODES,
-  type GraphEdgeItem,
-  type GraphFilters,
-  type GraphNodeItem,
-} from '@/lib/graph-schemas';
+import { type GraphEdgeItem, type GraphFilters, type GraphNodeItem } from '@/lib/graph-schemas';
 import { SECTIONS } from '@/lib/sections';
 import { ExploreFilters } from './explore-filters';
 import type { GraphCanvasEdge, GraphCanvasNode } from './explore-graph-canvas';
@@ -29,13 +24,21 @@ import { ExploreNodePanel } from './explore-node-panel';
 // three.js se carga unicamente cuando la pagina Explorar monta el lienzo.
 const ExploreGraphCanvas = dynamic(() => import('./explore-graph-canvas'), { ssr: false });
 
-// Layout horizontal: cada seccion es una banda apilada de arriba hacia abajo y dentro
-// de la banda los trucos fluyen de izquierda a derecha, con un tope de columnas para que
-// la fila no quede kilometrica.
-const ITEM_GAP = 34;
-const ROW_GAP = 20;
-const BAND_GAP = 48;
-const WRAP_COLS = 12;
+// La pagina pide un conjunto acotado para que la vista ajustada se lea: el default de la
+// API (DEFAULT_GRAPH_NODES de graph-schemas) no se toca.
+const EXPLORE_GRAPH_NODES = 80;
+
+// Layout en grid ancho: cada seccion es una banda apilada de arriba hacia abajo y dentro
+// de la banda los trucos fluyen de izquierda a derecha. El numero de columnas se calcula
+// para que el grid tenga un aspecto ancho cercano al del contenedor; si fuera fijo y
+// chico el layout quedaria alto y angosto y la camara ajustaria por el alto, dejando el
+// ancho vacio.
+const ITEM_GAP = 48;
+const ROW_GAP = 18;
+const BAND_GAP = 10;
+const TARGET_ASPECT = 1.6;
+const MIN_COLS = 6;
+const MAX_COLS = 28;
 
 const EMPTY_NODES: GraphNodeItem[] = [];
 
@@ -131,7 +134,7 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
 
   const query = useQuery({
     queryKey: ['graph', filters],
-    queryFn: ({ signal }) => fetchGraph({ ...filters, maxNodes: DEFAULT_GRAPH_NODES }, signal),
+    queryFn: ({ signal }) => fetchGraph({ ...filters, maxNodes: EXPLORE_GRAPH_NODES }, signal),
     // Cache agresivo: el grafo cambia poco. El persister del monorepo acota la copia en
     // localStorage a un dia; el gcTime largo mantiene el dato en memoria de la sesion.
     staleTime: ONE_DAY_MS,
@@ -187,9 +190,9 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
 
   // Disposicion determinista y horizontal: cada seccion es una banda apilada de arriba
   // hacia abajo (en el orden de SECTIONS mas 'other') y dentro de la banda los trucos
-  // fluyen de izquierda a derecha, con un tope de WRAP_COLS columnas por fila. La Y de
-  // three crece hacia arriba, por eso las bandas van en Y negativa. No depende de la
-  // seleccion para que el lienzo no se reconstruya al elegir un nodo.
+  // fluyen de izquierda a derecha. El numero de columnas se deriva del total de nodos
+  // para que el grid sea ancho; la Y de three crece hacia arriba, por eso las bandas van
+  // en Y negativa. No depende de la seleccion para que el lienzo no se reconstruya.
   const layout = useMemo(() => {
     const groups = new Map<string, GraphNodeItem[]>();
     for (const node of graphNodes) {
@@ -202,6 +205,11 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
       }
     }
 
+    const columns = Math.min(
+      MAX_COLS,
+      Math.max(MIN_COLS, Math.round(Math.sqrt(Math.max(graphNodes.length, 1) * TARGET_ASPECT))),
+    );
+
     const order = [...SECTIONS, 'other'];
     const nodes: GraphCanvasNode[] = [];
     const positions = new Map<string, { x: number; y: number }>();
@@ -211,10 +219,10 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
       if (!group) {
         continue;
       }
-      const rows = Math.ceil(group.length / WRAP_COLS);
+      const rows = Math.ceil(group.length / columns);
       for (const [index, node] of group.entries()) {
-        const column = index % WRAP_COLS;
-        const row = Math.floor(index / WRAP_COLS);
+        const column = index % columns;
+        const row = Math.floor(index / columns);
         const x = column * ITEM_GAP;
         const y = -(bandTop + row * ROW_GAP);
         positions.set(node.id, { x, y });
