@@ -26,6 +26,7 @@ const ASSISTANT_SYSTEM_PROMPT_ES = [
   'Si la quiere basada en lo que ya sabe, arma la combinacion SOLO con los trucos que el usuario tiene (la lista de conocidos del contexto), encadenados en un orden fluido.',
   'Si la quiere libre, arma la combinacion SOLO con trucos del catalogo provisto; nunca inventes nombres.',
   'No des consejos medicos, legales ni financieros: sugiere consultar a un profesional.',
+  'Termina siempre tus ideas y frases completas; nunca cortes una respuesta a mitad.',
   'Responde EXACTAMENTE en espanol: es el idioma de la interfaz del usuario. No cambies de idioma aunque el usuario escriba en otro idioma, aunque el catalogo o el contexto vengan en ingles o aunque la pregunta parezca pedirlo. Se claro y breve.',
 ].join(' ');
 
@@ -44,6 +45,7 @@ const ASSISTANT_SYSTEM_PROMPT_EN = [
   'If they want it based on what they already know, build the combo ONLY with the tricks the user has (the known list in the context), chained in a fluid order.',
   'If they want it free, build the combo ONLY with tricks from the provided catalog; never invent names.',
   'Do not give medical, legal or financial advice: suggest consulting a professional.',
+  'Always finish your ideas and sentences completely; never cut an answer off mid-way.',
   'Answer EXACTLY in English: it is the language of the user interface. Do not switch languages even if the user writes in another language, even if the catalog or context is in Spanish, or even if the question seems to ask for it. Be clear and brief.',
 ].join(' ');
 
@@ -189,21 +191,6 @@ export function normalizeGuardText(value: string): string {
     .toLowerCase();
 }
 
-// Texto que el pre-filtro debe escanear: el mensaje actual y los turnos del USUARIO del
-// historial. Nunca los turnos del asistente: su propia respuesta puede contener palabras
-// que estan en FORBIDDEN_TOPIC_WORDS (p. ej. el rechazo menciona "codigo"), y escanear la
-// salida del asistente hace que el pre-filtro se auto-envener de forma permanente. Se
-// mantiene la deteccion de inyeccion multi-turno de los turnos del usuario.
-export function guardScanText(
-  message: string,
-  history?: readonly { role: string; content: string }[],
-): string {
-  const userTurns = (history ?? [])
-    .filter((item) => item.role === 'user')
-    .map((item) => item.content);
-  return [message, ...userTurns].join('\n');
-}
-
 export function isForbiddenTopic(message: string): boolean {
   if (CODE_PATTERNS.some((pattern) => pattern.test(message))) {
     return true;
@@ -219,20 +206,6 @@ export function isForbiddenTopic(message: string): boolean {
     const pattern = new RegExp(`(^|[^a-z0-9])${escapeRegExp(word)}([^a-z0-9]|$)`);
     return pattern.test(normalized);
   });
-}
-
-// Deteccion de inyeccion (intento de cambiar de rol, saltarse las reglas o colar codigo).
-// Revisa SOLO los patrones de codigo y las frases prohibidas, NUNCA las palabras de tema
-// suelto. Se usa para escanear los turnos del historial rotulados como 'assistant', que el
-// cliente controla (el schema admite ese rol y el route los reenvia al modelo), sin
-// reintroducir el auto-envenenamiento: el texto de rechazo del asistente menciona "codigo"
-// como tema, no como frase de inyeccion, asi que no lo dispara.
-export function isForbiddenInjection(text: string): boolean {
-  if (CODE_PATTERNS.some((pattern) => pattern.test(text))) {
-    return true;
-  }
-  const normalized = normalizeGuardText(text);
-  return FORBIDDEN_PHRASES.some((phrase) => normalized.includes(phrase));
 }
 
 // Detecta si el usuario pide una combinacion/combo/secuencia. Sirve para que el asistente

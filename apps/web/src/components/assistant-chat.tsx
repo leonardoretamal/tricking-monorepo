@@ -4,10 +4,25 @@ import { ErrorState } from '@tricking/ui';
 import { Send } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRef, useState, type FormEvent } from 'react';
+import ReactMarkdown, { type Components } from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { toast } from 'sonner';
 
 import { AssistantApiError, askAssistant } from '@/lib/assistant-api';
 import type { ChatMessage } from '@/lib/assistant-schemas';
+
+// Render de la respuesta del asistente en Markdown (react-markdown + remark-gfm). No se
+// habilita HTML crudo: react-markdown lo ignora por defecto y no se agrega rehype-raw.
+// Los enlaces salen a pestana nueva sin opener y las imagenes se descartan para no cargar
+// recursos externos. El estilo con Tailwind respeta el tema (sin colores sueltos).
+const markdownComponents: Components = {
+  a: ({ href, children }) => (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  ),
+  img: () => null,
+};
 
 // Chat del asistente (Fase 22). El historial vive solo en memoria del componente: no se
 // persiste en localStorage. Resuelve los tres estados (carga, error y exito) y muestra
@@ -138,7 +153,17 @@ export function AssistantChat({ knownTrickIds = [] }: AssistantChatProps) {
                 </span>
               ) : null}
             </span>
-            <p className="mt-1 whitespace-pre-wrap text-sm text-base-content">{message.content}</p>
+            {message.role === 'user' ? (
+              <p className="mt-1 whitespace-pre-wrap text-sm text-base-content">
+                {message.content}
+              </p>
+            ) : (
+              <div className="mt-1 space-y-2 text-sm text-base-content [&_a]:text-primary [&_a]:underline [&_blockquote]:border-l-2 [&_blockquote]:border-border [&_blockquote]:pl-3 [&_code]:rounded [&_code]:bg-base-300 [&_code]:px-1 [&_code]:py-0.5 [&_h1]:text-base [&_h1]:font-semibold [&_h2]:text-sm [&_h2]:font-semibold [&_h3]:font-semibold [&_li]:my-0.5 [&_ol]:list-decimal [&_ol]:pl-5 [&_p]:my-1 [&_pre]:overflow-x-auto [&_pre]:rounded [&_pre]:bg-base-300 [&_pre]:p-2 [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5">
+                <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                  {message.content}
+                </ReactMarkdown>
+              </div>
+            )}
           </div>
         ))}
 

@@ -12,9 +12,7 @@ import { callChatCompletionWithFallback, getClientIp, type ChatMessage } from '@
 import {
   comboMode,
   getAssistantSystemPrompt,
-  guardScanText,
   isComboRequest,
-  isForbiddenInjection,
   isForbiddenTopic,
   normalizeGuardText,
 } from '@/lib/ai-guardrails';
@@ -34,8 +32,8 @@ export const runtime = 'nodejs';
 const ASSISTANT_RATE_LIMIT = 12;
 const ASSISTANT_RATE_WINDOW_MS = 60_000;
 const ASSISTANT_CONTEXT_ITEMS = 8;
-const ASSISTANT_MAX_TOKENS = 500;
-const ASSISTANT_MAX_ANSWER_CHARS = 4000;
+const ASSISTANT_MAX_TOKENS = 1400;
+const ASSISTANT_MAX_ANSWER_CHARS = 6000;
 const ASSISTANT_KNOWN_TRICKS_IN_PROMPT = 80;
 
 type Locale = 'es' | 'en';
@@ -420,17 +418,12 @@ export async function POST(request: Request) {
     const text = await loadChatText(locale);
     const providers = getAiProviders();
 
-    // Pre-filtro: el mensaje y los turnos del usuario se revisan por tema ajeno. Los turnos
-    // rotulados como 'assistant' los controla el cliente, asi que se revisan aparte por
-    // inyeccion (frases de cambio de rol y bloques de codigo), NO por palabras de tema: el
-    // propio rechazo del asistente menciona "codigo" como tema y auto-envenenaria si se
-    // escaneara igual. Una peticion ajena se rechaza sin llamar al modelo ni gastar tokens.
-    const scanned = guardScanText(message, history);
-    const assistantTurns = (history ?? [])
-      .filter((item) => item.role === 'assistant')
-      .map((item) => item.content)
-      .join('\n');
-    if (isForbiddenTopic(scanned) || isForbiddenInjection(assistantTurns)) {
+    // Pre-filtro: se revisa UNICAMENTE el mensaje actual. Escanear el historial de
+    // cualquier rol auto-envenena el guard: un mensaje off-topic previo del propio usuario
+    // (o el texto de rechazo del asistente, que menciona "codigo") lo deja disparado para
+    // todo lo que siga. El contexto multi-turno lo cubre el prompt de sistema. Una peticion
+    // ajena se rechaza sin llamar al modelo ni gastar tokens.
+    if (isForbiddenTopic(message)) {
       logger.info({ traceId, locale, blocked: true }, 'asistente: tema ajeno rechazado');
       return NextResponse.json({
         answer: text.refusal,
