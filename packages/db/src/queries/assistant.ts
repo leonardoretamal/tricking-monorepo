@@ -1,4 +1,4 @@
-import { and, asc, eq, inArray, isNull, notInArray, sql } from 'drizzle-orm';
+import { and, asc, eq, inArray, isNull, notInArray, sql, type SQL } from 'drizzle-orm';
 
 import { getDb } from '../client';
 import { trickRelations, tricks } from '../schema';
@@ -93,6 +93,21 @@ const GAZE_SEARCH_TEXT = sql`coalesce(gt.instruction, '') || ' ' || coalesce(gt.
 
 const TRANSITION_SEARCH_TEXT = sql`coalesce(tr.name, '') || ' ' || coalesce(tr.description, '') || ' ' || coalesce(tr.description_es, '')`;
 
+// Condicion ILIKE por token con OR: cada token debe aparecer en alguna de las columnas
+// dadas. Antes se buscaba la frase completa ("hace corkscrew"), que no matchea nada; con OR
+// por token, un truco como "Corkscrew" entra aunque la pregunta traiga relleno. Solo se
+// usan parametros de drizzle; las columnas se pasan como fragmentos SQL estaticos.
+function tokenLikeCondition(tokens: string[], columns: SQL[]): SQL {
+  return sql.join(
+    tokens.map((token) => {
+      const pattern = `%${token}%`;
+      const likes = columns.map((column) => sql`${column} ILIKE ${pattern}`);
+      return sql`(${sql.join(likes, sql` OR `)})`;
+    }),
+    sql` OR `,
+  );
+}
+
 export async function searchContextForAssistant(
   query: string,
   limit: number,
@@ -103,12 +118,23 @@ export async function searchContextForAssistant(
   if (q === '') {
     return empty;
   }
+  // Busqueda por tokens con OR: el cliente arma la consulta con las palabras
+  // significativas separadas por espacios. Para el full-text se unen con "or"
+  // (websearch_to_tsquery) y para el ILIKE cada token matchea cualquiera de las columnas,
+  // de modo que "corkscrew" solo entre y las frases con varias palabras no fallen.
+  const tokens = q.split(/\s+/).filter(Boolean);
+  if (tokens.length === 0) {
+    return empty;
+  }
+  const tsQuery = tokens.join(' or ');
+  const trickLike = tokenLikeCondition(tokens, [sql`t.name`, sql`t.how_to`, sql`t.how_to_es`]);
+  const gazeLike = tokenLikeCondition(tokens, [sql`gt.instruction`, sql`gt.warning`]);
+  const transitionLike = tokenLikeCondition(tokens, [sql`tr.name`, sql`tr.description_es`]);
 
   const db = getDb();
   const safeLimit = Math.min(MAX_ASSISTANT_CONTEXT_ITEMS, Math.max(1, Math.trunc(limit)));
   const tipLimit = Math.min(MAX_ASSISTANT_GAZE_TIPS, safeLimit);
   const transitionLimit = Math.min(MAX_ASSISTANT_TRANSITIONS, safeLimit);
-  const like = `%${q}%`;
 
   const trickRows = await db.execute<TrickContextRow>(sql`
     SELECT
@@ -123,16 +149,14 @@ export async function searchContextForAssistant(
     FROM tricks t
     WHERE t.deleted_at IS NULL
       AND (
-        t.search_vector @@ websearch_to_tsquery('simple', ${q})
-        OR to_tsvector('simple', ${TRICK_SEARCH_TEXT}) @@ websearch_to_tsquery('simple', ${q})
-        OR t.name ILIKE ${like}
-        OR t.how_to ILIKE ${like}
-        OR t.how_to_es ILIKE ${like}
+        t.search_vector @@ websearch_to_tsquery('simple', ${tsQuery})
+        OR to_tsvector('simple', ${TRICK_SEARCH_TEXT}) @@ websearch_to_tsquery('simple', ${tsQuery})
+        OR ${trickLike}
       )
     ORDER BY
       GREATEST(
-        ts_rank(t.search_vector, websearch_to_tsquery('simple', ${q})),
-        ts_rank(to_tsvector('simple', ${TRICK_SEARCH_TEXT}), websearch_to_tsquery('simple', ${q}))
+        ts_rank(t.search_vector, websearch_to_tsquery('simple', ${tsQuery})),
+        ts_rank(to_tsvector('simple', ${TRICK_SEARCH_TEXT}), websearch_to_tsquery('simple', ${tsQuery}))
       ) DESC,
       t.name ASC
     LIMIT ${safeLimit}::int
@@ -143,12 +167,11 @@ export async function searchContextForAssistant(
     FROM gaze_tips gt
     WHERE gt.locale = ${locale}
       AND (
-        to_tsvector('simple', ${GAZE_SEARCH_TEXT}) @@ websearch_to_tsquery('simple', ${q})
-        OR gt.instruction ILIKE ${like}
-        OR gt.warning ILIKE ${like}
+        to_tsvector('simple', ${GAZE_SEARCH_TEXT}) @@ websearch_to_tsquery('simple', ${tsQuery})
+        OR ${gazeLike}
       )
     ORDER BY
-      ts_rank(to_tsvector('simple', ${GAZE_SEARCH_TEXT}), websearch_to_tsquery('simple', ${q})) DESC,
+      ts_rank(to_tsvector('simple', ${GAZE_SEARCH_TEXT}), websearch_to_tsquery('simple', ${tsQuery})) DESC,
       gt.order ASC
     LIMIT ${tipLimit}::int
   `);
@@ -158,12 +181,11 @@ export async function searchContextForAssistant(
     FROM transitions tr
     WHERE tr.deleted_at IS NULL
       AND (
-        to_tsvector('simple', ${TRANSITION_SEARCH_TEXT}) @@ websearch_to_tsquery('simple', ${q})
-        OR tr.name ILIKE ${like}
-        OR tr.description_es ILIKE ${like}
+        to_tsvector('simple', ${TRANSITION_SEARCH_TEXT}) @@ websearch_to_tsquery('simple', ${tsQuery})
+        OR ${transitionLike}
       )
     ORDER BY
-      ts_rank(to_tsvector('simple', ${TRANSITION_SEARCH_TEXT}), websearch_to_tsquery('simple', ${q})) DESC,
+      ts_rank(to_tsvector('simple', ${TRANSITION_SEARCH_TEXT}), websearch_to_tsquery('simple', ${tsQuery})) DESC,
       tr.name ASC
     LIMIT ${transitionLimit}::int
   `);
