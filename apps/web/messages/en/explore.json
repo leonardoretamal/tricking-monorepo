@@ -1,7 +1,7 @@
 {
   "explore": {
     "title": "Explore",
-    "description": "Browse the catalog as a graph: nodes are tricks and edges show requirements, follow-ups, shared stances and shared variations.",
+    "description": "Browse the catalog as a 3D graph: nodes are tricks and edges show requirements, follow-ups, shared stances and shared variations. Drag to rotate and zoom to explore.",
     "filters": {
       "sectionLabel": "Section",
       "allSections": "All",
@@ -36,7 +36,7 @@
     },
     "graph": {
       "label": "Trick graph",
-      "hint": "Use Tab to move through the nodes, the arrow keys to jump between them, Enter to open the summary and Escape to close it."
+      "hint": "Use Tab to move through the nodes, the arrow keys to jump between them, Enter to open the summary and Escape to close it. Drag to rotate the graph and use the wheel or pinch to zoom."
     },
     "panel": {
       "close": "Close panel",

@@ -1,7 +1,7 @@
 {
   "explore": {
     "title": "Explorar",
-    "description": "Recorre el catálogo como un grafo: los nodos son trucos y las aristas muestran requisitos, continuaciones, posturas y variaciones compartidas.",
+    "description": "Recorre el catálogo como un grafo 3D: los nodos son trucos y las aristas muestran requisitos, continuaciones, posturas y variaciones compartidas. Arrastra para rotar y haz zoom para explorar.",
     "filters": {
       "sectionLabel": "Sección",
       "allSections": "Todas",
@@ -36,7 +36,7 @@
     },
     "graph": {
       "label": "Grafo de trucos",
-      "hint": "Usa Tab para recorrer los nodos, las flechas para moverte entre ellos, Enter para abrir el resumen y Escape para cerrarlo."
+      "hint": "Usa Tab para recorrer los nodos, las flechas para moverte entre ellos, Enter para abrir el resumen y Escape para cerrarlo. Arrastra para rotar el grafo y usa la rueda o la pinza para hacer zoom."
     },
     "panel": {
       "close": "Cerrar panel",

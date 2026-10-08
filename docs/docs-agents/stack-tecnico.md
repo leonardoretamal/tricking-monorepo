@@ -43,7 +43,7 @@ turbo, pnpm, typescript, eslint, `@typescript-eslint/*`, prettier, husky, lint-s
 
 ## Dependencias aprobadas del frontend
 
-next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, `@xyflow/react`, `resend`, `@marsidev/react-turnstile`, date-fns, date-fns-tz.
+next, react, react-dom, tailwindcss, postcss, autoprefixer, daisyui, lucide-react, next-intl, zod, react-hook-form, `@hookform/resolvers`, sonner, zustand, `@tanstack/react-query`, `@tanstack/react-query-persist-client`, `@tanstack/react-virtual`, `three` (con `@types/three` como devDependency), `resend`, `@marsidev/react-turnstile`, date-fns, date-fns-tz.
 
 ## Dependencias aprobadas del backend y datos
 
@@ -148,7 +148,7 @@ Estos nombres pueden ajustarse si el usuario lo pide. El filtro de CI usa `@tric
 
 ## Fases 11 a 14 (Explore, busqueda, tecnicas de Kojo, videos)
 
-- Fase 11 (Explore Page): grafo con `@xyflow/react` (dependencia aprobada del frontend). Sin variables de entorno. Endpoint `GET /api/graph`.
+- Fase 11 (Explore Page): grafo en 3D con `three` (dependencia aprobada del frontend). Sin variables de entorno. Endpoint `GET /api/graph`.
 - Correccion de la Fase 3 (subfase de correccion): la tabla `trick_relations(trick_id, related_id, kind)` resuelve `prereqs`/`nextTricks` (que la semilla guarda como nombres) a ids; se puebla con `pnpm --filter @tricking/db db:relations` y `getTrickById` lee de ahi. Migracion `0005`, junto con la busqueda full-text.
 - Fase 12 (busqueda global): columna generada `tricks.search_vector` (tsvector) con indice GIN; la consulta usa `websearch_to_tsquery` y `ts_rank` en SQL. Sin variables nuevas.
 - Fase 13 (tecnicas de Kojo): de Kojo NO se toman los videos, solo su conocimiento de tecnica. El indice se extrae de la API publica de `kojostricklab.com` (`GET /api/user/get-more-recent-videos`), que da titulo, autor, nivel (Beginner/Intermediate/Advanced/Elite), fecha y `vimeo_id` (sin texto de tecnica). Cada tecnica guarda ademas tips PROPIOS (`tutorials.tips`/`tips_es`, curados en `packages/db/src/seed/kojo/tips.json`), se empareja con los trucos del catalogo en `tutorial_tricks` (automatico por nombre normalizado + revision curada) y se muestra en un acordeon con credito y enlace al original. El resumen "General" vive en `content_blocks` (clave `techniques_general`). Migracion `0007`. Instagram con `insta-fetcher` y la cola Upstash quedan RESERVADOS como respaldo. Variables `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, `QSTASH_TOKEN`, `KOJO_WORKER_URL` (reservadas). Las tecnicas tambien aparecen en el detalle de cada truco (acordeon "Kojo").
@@ -190,7 +190,7 @@ Planificadas el 2026-10-05 por decisión del usuario. Ninguna se implementa toda
 - Fase 24 ("cómo se hace" de todos los trucos): contenido propio, sin dependencias ni variables. Se carga con `db:how-to`.
 - Fase 25 (trucos nuevos para básico y fácil): amplía la semilla y la dificultad, sin dependencias ni variables.
 - Fase 26 (ampliación de Tips): reutiliza Cloudflare R2 para vídeos propios (ya documentado); sin dependencias npm nuevas.
-- Fase 27 (skill tree visual): reutiliza `@xyflow/react` (ya aprobada) y el store local de la Fase 21; sin dependencias ni variables.
+- Fase 27 (skill tree visual): reutiliza `three` (ya aprobada) y el store local de la Fase 21; sin dependencias ni variables.
 - Fases 28 a 34 (editor de combos, favoritos, timeline, comparación, rutinas, timestamps y contraste de vídeo): estado local con Zustand y el wrapper de storage, y datos en la base para los timestamps; sin dependencias ni variables nuevas.
 - Fase 35 (chatbot con RAG): extensión `pgvector` en Neon y embeddings de NVIDIA NIM, sin SDK y reutilizando `AI_NVIDIA_API_KEY`. Variable opcional `AI_NVIDIA_EMBED_MODEL`. Requiere una migración de base.
 - Fase 36 (traducción automática del contenido propio es/en): usa el proveedor de IA por HTTP ya aprobado; sin dependencias ni variables nuevas.
