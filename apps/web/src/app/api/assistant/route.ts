@@ -12,6 +12,7 @@ import { callChatCompletionWithFallback, getClientIp, type ChatMessage } from '@
 import {
   comboMode,
   getAssistantSystemPrompt,
+  guardScanText,
   isComboRequest,
   isForbiddenTopic,
   normalizeGuardText,
@@ -418,9 +419,10 @@ export async function POST(request: Request) {
     const text = await loadChatText(locale);
     const providers = getAiProviders();
 
-    // Pre-filtro: se revisa el mensaje y el historial. Una peticion ajena se rechaza
-    // sin llamar al modelo (no gasta tokens ni el tope diario).
-    const scanned = [message, ...(history ?? []).map((item) => item.content)].join('\n');
+    // Pre-filtro: se revisa el mensaje y los turnos del usuario del historial, nunca la
+    // salida del asistente (su propio rechazo menciona "codigo" y se auto-envenenaria). Una
+    // peticion ajena se rechaza sin llamar al modelo (no gasta tokens ni el tope diario).
+    const scanned = guardScanText(message, history);
     if (isForbiddenTopic(scanned)) {
       logger.info({ traceId, locale, blocked: true }, 'asistente: tema ajeno rechazado');
       return NextResponse.json({

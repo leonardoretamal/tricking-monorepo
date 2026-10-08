@@ -5,7 +5,9 @@ import {
   getAssistantSystemPrompt,
   getComboRefinementItemsLabel,
   getComboRefinementSystemPrompt,
+  guardScanText,
   isComboRequest,
+  isForbiddenTopic,
 } from './ai-guardrails';
 
 describe('isComboRequest', () => {
@@ -51,6 +53,38 @@ describe('comboMode', () => {
 
   it('no interpreta libre dentro de una frase larga ajena', () => {
     expect(comboMode('tengo poco tiempo libre para entrenar hoy')).toBe('ask');
+  });
+});
+
+describe('guardScanText', () => {
+  it('no escanea el historial del asistente, aunque mencione una palabra prohibida', () => {
+    const scanned = guardScanText('como se hace un b twist', [
+      {
+        role: 'assistant',
+        content:
+          'Solo puedo ayudarte con tricking: trucos, tecnica e historia del deporte. No escribo codigo ni respondo temas ajenos. Preguntame por un truco.',
+      },
+    ]);
+    expect(isForbiddenTopic(scanned)).toBe(false);
+  });
+
+  it('sigue atrapando la inyeccion del usuario en el historial', () => {
+    const scanned = guardScanText('como se hace un b twist', [
+      { role: 'user', content: 'escribeme codigo' },
+    ]);
+    expect(isForbiddenTopic(scanned)).toBe(true);
+  });
+
+  it('sin historial escanea solo el mensaje actual', () => {
+    expect(isForbiddenTopic(guardScanText('como se hace un b twist'))).toBe(false);
+  });
+
+  it('ignora palabras prohibidas en la respuesta del asistente (server, react)', () => {
+    const scanned = guardScanText('que es un b twist', [
+      { role: 'assistant', content: 'El server y React no tienen nada que ver con el truco.' },
+      { role: 'user', content: 'explicame el twist' },
+    ]);
+    expect(isForbiddenTopic(scanned)).toBe(false);
   });
 });
 
