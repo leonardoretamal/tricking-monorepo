@@ -221,6 +221,20 @@ export function isForbiddenTopic(message: string): boolean {
   });
 }
 
+// Deteccion de inyeccion (intento de cambiar de rol, saltarse las reglas o colar codigo).
+// Revisa SOLO los patrones de codigo y las frases prohibidas, NUNCA las palabras de tema
+// suelto. Se usa para escanear los turnos del historial rotulados como 'assistant', que el
+// cliente controla (el schema admite ese rol y el route los reenvia al modelo), sin
+// reintroducir el auto-envenenamiento: el texto de rechazo del asistente menciona "codigo"
+// como tema, no como frase de inyeccion, asi que no lo dispara.
+export function isForbiddenInjection(text: string): boolean {
+  if (CODE_PATTERNS.some((pattern) => pattern.test(text))) {
+    return true;
+  }
+  const normalized = normalizeGuardText(text);
+  return FORBIDDEN_PHRASES.some((phrase) => normalized.includes(phrase));
+}
+
 // Detecta si el usuario pide una combinacion/combo/secuencia. Sirve para que el asistente
 // pregunte si la quiere con sus trucos o libre, y para adjuntar un pool del catalogo.
 const COMBO_REQUEST_PATTERNS: readonly RegExp[] = [

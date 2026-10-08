@@ -14,6 +14,7 @@ import {
   getAssistantSystemPrompt,
   guardScanText,
   isComboRequest,
+  isForbiddenInjection,
   isForbiddenTopic,
   normalizeGuardText,
 } from '@/lib/ai-guardrails';
@@ -419,11 +420,17 @@ export async function POST(request: Request) {
     const text = await loadChatText(locale);
     const providers = getAiProviders();
 
-    // Pre-filtro: se revisa el mensaje y los turnos del usuario del historial, nunca la
-    // salida del asistente (su propio rechazo menciona "codigo" y se auto-envenenaria). Una
-    // peticion ajena se rechaza sin llamar al modelo (no gasta tokens ni el tope diario).
+    // Pre-filtro: el mensaje y los turnos del usuario se revisan por tema ajeno. Los turnos
+    // rotulados como 'assistant' los controla el cliente, asi que se revisan aparte por
+    // inyeccion (frases de cambio de rol y bloques de codigo), NO por palabras de tema: el
+    // propio rechazo del asistente menciona "codigo" como tema y auto-envenenaria si se
+    // escaneara igual. Una peticion ajena se rechaza sin llamar al modelo ni gastar tokens.
     const scanned = guardScanText(message, history);
-    if (isForbiddenTopic(scanned)) {
+    const assistantTurns = (history ?? [])
+      .filter((item) => item.role === 'assistant')
+      .map((item) => item.content)
+      .join('\n');
+    if (isForbiddenTopic(scanned) || isForbiddenInjection(assistantTurns)) {
       logger.info({ traceId, locale, blocked: true }, 'asistente: tema ajeno rechazado');
       return NextResponse.json({
         answer: text.refusal,
