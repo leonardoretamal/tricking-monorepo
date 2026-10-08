@@ -156,25 +156,14 @@ export default function ExploreGraphCanvas({
         : bounds.getSize(new THREE.Vector3());
       const maxDimension = Math.max(size.x, size.y, size.z, 20);
 
-      const aspect =
-        container.clientWidth > 0 && container.clientHeight > 0
-          ? container.clientWidth / container.clientHeight
-          : 1;
-      // Distancia para encuadrar EXACTAMENTE el bounding box real del layout (ancho y
-      // alto segun el FOV y el aspect) con un margen chico, para que no sobre espacio
-      // vacio. El plano lejano se deriva para que alejar todo el zoom no recorte.
+      // El encuadre (aspecto, distancia y plano lejano) se calcula en applyFraming para
+      // poder reencuadrar cuando cambia el tamano del contenedor. La camara se crea con el
+      // aspecto inicial y applyFraming la posiciona en cuanto existen los controles.
+      const initialWidth = container.clientWidth;
+      const initialHeight = container.clientHeight;
+      const aspect = initialWidth > 0 && initialHeight > 0 ? initialWidth / initialHeight : 1;
       const fovRadians = (50 * Math.PI) / 180;
-      const fitHeight = size.y / 2 / Math.tan(fovRadians / 2);
-      const fitWidth = size.x / 2 / (Math.tan(fovRadians / 2) * aspect);
-      const fitDistance = Math.max(fitHeight, fitWidth, 20) * 1.08;
-      const far = Math.max(maxDimension * 12, fitDistance * 6, 5000);
-      const camera = new THREE.PerspectiveCamera(50, aspect, 0.1, far);
-      // Vista levemente inclinada para que se note el 3D, no totalmente de frente.
-      camera.position.set(
-        center.x + fitDistance * 0.06,
-        center.y + fitDistance * 0.1,
-        center.z + fitDistance,
-      );
+      const camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 1000);
 
       const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -182,13 +171,40 @@ export default function ExploreGraphCanvas({
       renderer.setClearAlpha(0);
 
       const controls = new OrbitControls(camera, renderer.domElement);
-      controls.target.copy(center);
       controls.enableDamping = true;
       controls.dampingFactor = 0.08;
       controls.enablePan = true;
-      controls.minDistance = Math.max(maxDimension * 0.2, 1);
-      controls.maxDistance = Math.max(fitDistance * 4, maxDimension);
-      controls.update();
+
+      // Encuadra EXACTAMENTE el bounding box real del layout (ancho y alto segun el FOV y
+      // el aspect) con un margen chico, para que no sobre espacio vacio; el plano lejano se
+      // deriva para que alejar todo el zoom no recorte. Se recalcula en cada cambio de
+      // tamano del contenedor, que es lo unico que lo desajusta (el layout es determinista).
+      const applyFraming = () => {
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        if (width === 0 || height === 0) {
+          return;
+        }
+        const nextAspect = width / height;
+        const fitHeight = size.y / 2 / Math.tan(fovRadians / 2);
+        const fitWidth = size.x / 2 / (Math.tan(fovRadians / 2) * nextAspect);
+        const fitDistance = Math.max(fitHeight, fitWidth, 20) * 1.08;
+        camera.aspect = nextAspect;
+        camera.near = 0.1;
+        camera.far = Math.max(maxDimension * 12, fitDistance * 6, 5000);
+        // Vista levemente inclinada para que se note el 3D, no totalmente de frente.
+        camera.position.set(
+          center.x + fitDistance * 0.06,
+          center.y + fitDistance * 0.1,
+          center.z + fitDistance,
+        );
+        camera.updateProjectionMatrix();
+        controls.target.copy(center);
+        controls.minDistance = Math.max(maxDimension * 0.2, 1);
+        controls.maxDistance = Math.max(fitDistance * 4, maxDimension);
+        controls.update();
+      };
+      applyFraming();
 
       const ambientLight = new THREE.AmbientLight();
       ambientLight.intensity = 1.6;
@@ -365,6 +381,8 @@ export default function ExploreGraphCanvas({
       applyColors();
       applySelection(selectedIdRef.current);
 
+      let lastWidth = 0;
+      let lastHeight = 0;
       const resize = () => {
         const width = container.clientWidth;
         const height = container.clientHeight;
@@ -373,8 +391,13 @@ export default function ExploreGraphCanvas({
         }
         renderer.setSize(width, height, false);
         labelRenderer.setSize(width, height);
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
+        // Solo se reencuadra cuando el tamano cambia de verdad: un disparo del observer con
+        // el mismo tamano no debe pisar el zoom ni la rotacion del usuario.
+        if (width !== lastWidth || height !== lastHeight) {
+          lastWidth = width;
+          lastHeight = height;
+          applyFraming();
+        }
       };
       resizeObserver = new ResizeObserver(resize);
       resizeObserver.observe(container);

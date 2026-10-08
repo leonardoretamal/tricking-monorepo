@@ -10,7 +10,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent }
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { fetchGraph } from '@/lib/graph-api';
 import { type GraphEdgeItem, type GraphFilters, type GraphNodeItem } from '@/lib/graph-schemas';
-import { SECTIONS } from '@/lib/sections';
+import { SECTIONS, isSection } from '@/lib/sections';
 import { ExploreFilters } from './explore-filters';
 import type { GraphCanvasEdge, GraphCanvasNode } from './explore-graph-canvas';
 import { ExploreNodePanel } from './explore-node-panel';
@@ -196,7 +196,10 @@ export function ExploreGraph({ initial }: ExploreGraphProps) {
   const layout = useMemo(() => {
     const groups = new Map<string, GraphNodeItem[]>();
     for (const node of graphNodes) {
-      const key = node.section ?? 'other';
+      // Una seccion desconocida (fuera de SECTIONS) se agrupa como 'other' para que el
+      // nodo no quede fuera del orden de bandas y desaparezca del lienzo y de la capa
+      // accesible.
+      const key = node.section !== null && isSection(node.section) ? node.section : 'other';
       const bucket = groups.get(key);
       if (bucket) {
         bucket.push(node);
