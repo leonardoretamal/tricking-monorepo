@@ -1,0 +1,156 @@
+[
+  {
+    "trickId": "tornado",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=OlpoN7ubnk0",
+    "embedUrl": "https://www.youtube.com/embed/OlpoN7ubnk0",
+    "author": "Thomas Inauen",
+    "title": "How To Tornado Kick - In 3 Steps For Beginners | Easy Tricking Moves",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "butterflyKick",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=Fj2Vhv-TFcA",
+    "embedUrl": "https://www.youtube.com/embed/Fj2Vhv-TFcA",
+    "author": "Ronnie Street Stunts",
+    "title": "How To BUTTERFLY KICK - Free Running Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "butterflyTwist",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=ahOFZ-to8XY",
+    "embedUrl": "https://www.youtube.com/embed/ahOFZ-to8XY",
+    "author": "Ginger Ninja Trickster",
+    "title": "Butterfly Twist Tutorial (B-Twist) | GNT How to",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "backTuck",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=MiWwHhyYcro",
+    "embedUrl": "https://www.youtube.com/embed/MiWwHhyYcro",
+    "author": "Ginger Ninja Trickster",
+    "title": "Back Flip (Back Tuck) Tutorial | GNT How to",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "aerial",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=c45Fv2IorxI",
+    "embedUrl": "https://www.youtube.com/embed/c45Fv2IorxI",
+    "author": "Mastering Tricking 22",
+    "title": "Easy How To Aerial | Martial Arts Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "roundoff",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=y1OoqEAb4OY",
+    "embedUrl": "https://www.youtube.com/embed/y1OoqEAb4OY",
+    "author": "Strength Project",
+    "title": "How to do a Round Off Tutorial- Gymnastics tumbling tricking",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "540",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=m5DocuF1vHo",
+    "embedUrl": "https://www.youtube.com/embed/m5DocuF1vHo",
+    "author": "Ginger Ninja Trickster",
+    "title": "Taekwondo 540 Kick Tutorial | GNT How to",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "corkscrew",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=r_VnnEcCtp8",
+    "embedUrl": "https://www.youtube.com/embed/r_VnnEcCtp8",
+    "author": "Kojos Trick Lab",
+    "title": "CORK TUTORIAL - Everything you need to know!",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "gainerFlash",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=jCwVGUauTIo",
+    "embedUrl": "https://www.youtube.com/embed/jCwVGUauTIo",
+    "author": "Zak Ferguson",
+    "title": "How to Gainer Flash | Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "doubleFull",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=xM1jlOYyi8s",
+    "embedUrl": "https://www.youtube.com/embed/xM1jlOYyi8s",
+    "author": "Plan Zero",
+    "title": "How to Double Full (Backflip 720) | Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "raiz",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=ZyGb2imgZBA",
+    "embedUrl": "https://www.youtube.com/embed/ZyGb2imgZBA",
+    "author": "Johzuke",
+    "title": "Raiz and Touchdown Raiz - Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "scoot",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=ZlseIYawXiM",
+    "embedUrl": "https://www.youtube.com/embed/ZlseIYawXiM",
+    "author": "Ronnie Street Stunts",
+    "title": "How To SCOOT - Tricking tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "frontTuck",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=8ANy0cG59Fw",
+    "embedUrl": "https://www.youtube.com/embed/8ANy0cG59Fw",
+    "author": "Hadyn Wiseman",
+    "title": "How To Frontflip For Beginners | Step By Step Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "sideflip",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=TfkwCYMxVo8",
+    "embedUrl": "https://www.youtube.com/embed/TfkwCYMxVo8",
+    "author": "Omar Zaki",
+    "title": "SIDEFLIP Tutorial | How to Sideflip",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  }
+]
