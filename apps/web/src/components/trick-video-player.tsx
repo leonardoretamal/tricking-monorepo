@@ -5,22 +5,26 @@ import { EmptyState } from '@tricking/ui';
 import { FIVE_MINUTES_MS } from '@tricking/shared';
 import { Play, Video } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { fetchTrickVideos } from '@/lib/video-api';
 import type { Video as VideoItem, VideoProvider } from '@/lib/video-schemas';
 
-// Reproductor del detalle de truco (Fase 14, ampliado en la Fase 44). Consume /api/videos y
-// usa la cache persistida de TanStack Query con TTL corto (5 minutos). Los videos de terceros
-// (Loopkicks, YouTube, Vimeo, Dailymotion) se muestran desde su fuente original, con credito:
+// Reproductor del detalle de truco (Fase 14, ampliado en las Fases 44 y 45). Consume
+// /api/videos y usa la cache persistida de TanStack Query con TTL corto (5 minutos). Los
+// videos se agrupan por rol en pestanas accesibles: "Ejecucion" (demos de Loopkicks) y
+// "Tutorial" (externos). Los de terceros se muestran desde su fuente original, con credito:
 // nada se re-hospeda. Los que no permiten un archivo directo usan una fachada que carga el
-// iframe recien al clic, de modo que no se contacta al tercero ni se instalan cookies antes.
+// iframe recien al clic, de modo que no se contacta al proveedor ni se instalan cookies ni
+// se descarga la portada antes.
 
 interface TrickVideoPlayerProps {
   trickId: string;
   trickName: string;
   sourceUrl?: string | null;
 }
+
+type TabId = 'demo' | 'tutorial';
 
 const PROVIDER_LABEL: Record<VideoProvider, string> = {
   loopkicks: 'Loopkicks',
@@ -30,24 +34,32 @@ const PROVIDER_LABEL: Record<VideoProvider, string> = {
   tiktok: 'TikTok',
 };
 
-function pickPlayable(videos: VideoItem[]): VideoItem | null {
-  const fromR2 = videos.find((video) => video.source === 'r2');
+// Demo a reproducir: la copia en R2 primero, luego un archivo directo, luego cualquiera.
+function pickDemo(videos: VideoItem[]): VideoItem | null {
+  const demos = videos.filter((video) => video.role === 'demo');
+  const fromR2 = demos.find((video) => video.source === 'r2');
   if (fromR2 !== undefined) {
     return fromR2;
   }
-  const file = videos.find((video) => video.kind === 'file');
+  const file = demos.find((video) => video.kind === 'file');
   if (file !== undefined) {
     return file;
   }
-  return videos[0] ?? null;
+  return demos[0] ?? null;
 }
 
-// Miniatura de YouTube derivada del id, para la portada de la fachada. No se guarda en la
-// base: es una derivacion de la URL.
-function youtubePoster(embedUrl: string | null, url: string): string | null {
-  const source = embedUrl ?? url;
-  const match = source.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{6,})/);
-  return match?.[1] !== undefined ? `https://i.ytimg.com/vi/${match[1]}/hqdefault.jpg` : null;
+// Tutorial: se prefiere el espanol y se cae al ingles; si no hay idioma, el primero.
+function pickTutorial(videos: VideoItem[]): VideoItem | null {
+  const tutorials = videos.filter((video) => video.role === 'tutorial');
+  if (tutorials.length === 0) {
+    return null;
+  }
+  return (
+    tutorials.find((video) => video.language === 'es') ??
+    tutorials.find((video) => video.language === 'en') ??
+    tutorials[0] ??
+    null
+  );
 }
 
 function nocookieEmbed(video: VideoItem): string | null {
@@ -81,10 +93,11 @@ interface EmbedFacadeProps {
   hint: string;
 }
 
+// Fachada sin recurso previo: hasta el clic no se contacta al proveedor ni se descarga su
+// portada (fondo neutro del tema). Asi no se instalan cookies no esenciales ni se suma peso.
 function EmbedFacade({ video, playLabel, hint }: EmbedFacadeProps) {
   const [loaded, setLoaded] = useState(false);
   const embed = nocookieEmbed(video);
-  const poster = video.provider === 'youtube' ? youtubePoster(video.embedUrl, video.url) : null;
 
   if (embed === null) {
     return null;
@@ -114,15 +127,6 @@ function EmbedFacade({ video, playLabel, hint }: EmbedFacadeProps) {
         setLoaded(true);
       }}
       className={`group relative flex items-center justify-center overflow-hidden rounded-box border border-border bg-base-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${aspectClass(video)}`}
-      style={
-        poster !== null
-          ? {
-              backgroundImage: `url(${poster})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }
-          : undefined
-      }
       aria-label={playLabel}
     >
       <span className="absolute inset-0 bg-base-300/50 transition-colors group-hover:bg-base-300/30" />
@@ -189,6 +193,8 @@ function FileVideo({ video, trickName }: { video: VideoItem; trickName: string }
 
 export function TrickVideoPlayer({ trickId, trickName, sourceUrl }: TrickVideoPlayerProps) {
   const t = useTranslations('tricks');
+  const [selectedTab, setSelectedTab] = useState<TabId | null>(null);
+  const tabRefs = useRef<Partial<Record<TabId, HTMLButtonElement | null>>>({});
 
   const query = useQuery({
     queryKey: ['videos', trickId],
@@ -233,8 +239,11 @@ export function TrickVideoPlayer({ trickId, trickName, sourceUrl }: TrickVideoPl
     );
   }
 
-  const video = pickPlayable(query.data?.items ?? []);
-  if (video === null) {
+  const items = query.data?.items ?? [];
+  const demoVideo = pickDemo(items);
+  const tutorialVideo = pickTutorial(items);
+
+  if (demoVideo === null && tutorialVideo === null) {
     return (
       <section className="tb-surface flex flex-col gap-3 p-4 sm:p-5">
         <PlayerHeading>{t('detail.video.heading')}</PlayerHeading>
@@ -246,34 +255,150 @@ export function TrickVideoPlayer({ trickId, trickName, sourceUrl }: TrickVideoPl
     );
   }
 
-  const providerName = video.provider !== null ? PROVIDER_LABEL[video.provider] : null;
-  const creditHref = sourceUrl ?? video.url;
+  const tabs: { id: TabId; label: string }[] = [];
+  if (demoVideo !== null) {
+    tabs.push({ id: 'demo', label: t('detail.video.tabDemo') });
+  }
+  if (tutorialVideo !== null) {
+    tabs.push({ id: 'tutorial', label: t('detail.video.tabTutorial') });
+  }
+
+  const activeTab: TabId =
+    selectedTab !== null && tabs.some((tab) => tab.id === selectedTab)
+      ? selectedTab
+      : (tabs[0]?.id ?? 'demo');
+  const activeVideo = activeTab === 'tutorial' ? tutorialVideo : demoVideo;
+
+  const selectTab = (id: TabId) => {
+    setSelectedTab(id);
+    tabRefs.current[id]?.focus();
+  };
+
+  const onTabKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    const ids = tabs.map((tab) => tab.id);
+    const currentIndex = ids.indexOf(activeTab);
+    let nextIndex: number | null = null;
+
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+      nextIndex = (currentIndex + 1) % ids.length;
+    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+      nextIndex = (currentIndex - 1 + ids.length) % ids.length;
+    } else if (event.key === 'Home') {
+      nextIndex = 0;
+    } else if (event.key === 'End') {
+      nextIndex = ids.length - 1;
+    }
+
+    if (nextIndex !== null) {
+      event.preventDefault();
+      const nextId = ids[nextIndex];
+      if (nextId !== undefined) {
+        selectTab(nextId);
+      }
+    }
+  };
+
+  const providerName =
+    activeVideo !== null && activeVideo.provider !== null
+      ? PROVIDER_LABEL[activeVideo.provider]
+      : null;
+  // El credito enlaza al original del video que se muestra: el tutorial externo va a su
+  // propia pagina (YouTube, Vimeo, etc.) y la demo va a la ficha del truco cuando existe.
+  const creditHref =
+    activeVideo === null
+      ? null
+      : activeTab === 'demo'
+        ? (sourceUrl ?? activeVideo.url)
+        : activeVideo.url;
   const creditLabel =
-    video.author !== null
-      ? t('detail.video.creditBy', { author: video.author, provider: providerName ?? '' })
-      : providerName !== null
-        ? t('detail.video.creditGeneric', { provider: providerName })
-        : null;
+    activeVideo === null
+      ? null
+      : activeVideo.author !== null
+        ? t('detail.video.creditBy', {
+            author: activeVideo.author,
+            provider: providerName ?? '',
+          })
+        : providerName !== null
+          ? t('detail.video.creditGeneric', { provider: providerName })
+          : null;
   const watchLabel =
     providerName !== null
       ? t('detail.video.watch', { provider: providerName })
-      : (video.title ?? '');
+      : (activeVideo?.title ?? '');
   const facadeHint =
     providerName !== null
       ? t('detail.video.facadeHint', { provider: providerName })
       : t('detail.video.play');
 
+  const renderActiveVideo = () => {
+    if (activeVideo === null) {
+      return null;
+    }
+    if (activeVideo.kind === 'file') {
+      return <FileVideo video={activeVideo} trickName={trickName} />;
+    }
+    if (activeVideo.kind === 'iframe') {
+      return (
+        <EmbedFacade video={activeVideo} playLabel={t('detail.video.play')} hint={facadeHint} />
+      );
+    }
+    return <LinkCard video={activeVideo} watchLabel={watchLabel} />;
+  };
+
   return (
     <section className="tb-surface flex flex-col gap-3 p-4 sm:p-5">
       <PlayerHeading>{t('detail.video.heading')}</PlayerHeading>
-      {video.kind === 'file' ? (
-        <FileVideo video={video} trickName={trickName} />
-      ) : video.kind === 'iframe' ? (
-        <EmbedFacade video={video} playLabel={t('detail.video.play')} hint={facadeHint} />
-      ) : (
-        <LinkCard video={video} watchLabel={watchLabel} />
-      )}
-      {creditLabel !== null ? (
+
+      <div
+        role="tablist"
+        aria-label={t('detail.video.tabsLabel')}
+        onKeyDown={onTabKeyDown}
+        className="flex flex-wrap gap-1 border-b border-border"
+      >
+        {tabs.map((tab) => {
+          const isActive = tab.id === activeTab;
+          return (
+            <button
+              key={tab.id}
+              ref={(element) => {
+                tabRefs.current[tab.id] = element;
+              }}
+              type="button"
+              role="tab"
+              id={`video-tab-${tab.id}`}
+              aria-selected={isActive}
+              aria-controls={`video-panel-${tab.id}`}
+              tabIndex={isActive ? 0 : -1}
+              onClick={() => {
+                setSelectedTab(tab.id);
+              }}
+              className={`-mb-px border-b-2 px-3 py-2 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
+                isActive
+                  ? 'border-primary text-primary'
+                  : 'border-transparent text-base-content/70 hover:text-base-content'
+              }`}
+            >
+              {tab.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div
+        role="tabpanel"
+        id={`video-panel-${activeTab}`}
+        aria-labelledby={`video-tab-${activeTab}`}
+        tabIndex={0}
+        className="flex flex-col gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      >
+        {renderActiveVideo()}
+      </div>
+
+      {tutorialVideo === null && demoVideo !== null ? (
+        <p className="text-xs text-base-content/60">{t('detail.video.noTutorial')}</p>
+      ) : null}
+
+      {creditLabel !== null && creditHref !== null ? (
         <p className="text-xs text-base-content/60">
           {creditLabel}{' '}
           <a
