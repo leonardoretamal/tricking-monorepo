@@ -90,10 +90,45 @@ jobs:
       - name: Verificar paridad de claves
         run: pnpm --filter @tricking/web i18n:check
 
-  e2e:
-    name: Pruebas E2E
+  changes:
+    name: Cambios que afectan la web
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 5
+    outputs:
+      web: ${{ steps.filter.outputs.web }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detectar cambios que afectan la web
+        id: filter
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "web=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          base="${{ github.event.pull_request.base.sha }}"
+          if ! files=$(git diff --name-only "$base"...HEAD 2>/dev/null); then
+            echo "web=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if echo "$files" | grep -qE '^(apps/web/|packages/ui/|packages/shared/|e2e/|playwright\.config\.ts$|package\.json$|pnpm-lock\.yaml$|\.github/workflows/ci\.yml$)'; then
+            echo "web=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "web=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  e2e:
+    name: Pruebas E2E (${{ matrix.project }})
+    needs: changes
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [chromium, mobile]
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
     steps:
@@ -126,11 +161,18 @@ jobs:
       # Las pruebas de trucos consultan la base en tiempo real. Si el secreto
       # DATABASE_URL no esta configurado, solo se ejecutan las pruebas de layout que
       # no dependen de la base, y se avisa en el log.
+      # Si el PR no toca la web (apps/web, packages/ui, packages/shared, e2e o la config
+      # del CI), se corre solo el humo de layout; el resto se cubre en el push a main.
       - name: Ejecutar pruebas E2E
         run: |
           if [ -z "$DATABASE_URL" ]; then
             echo "::warning::Sin DATABASE_URL configurado: se omiten las pruebas E2E que dependen de la base y se ejecutan solo las de layout."
-            pnpm exec playwright test e2e/base.spec.ts
+            pnpm exec playwright test e2e/base.spec.ts --project=${{ matrix.project }}
+            exit 0
+          fi
+          if [ "${{ needs.changes.outputs.web }}" = "true" ]; then
+            pnpm exec playwright test --project=${{ matrix.project }}
           else
-            pnpm exec playwright test
+            echo "Cambio sin impacto en la web: se ejecuta solo el humo de layout."
+            pnpm exec playwright test e2e/base.spec.ts --project=${{ matrix.project }}
           fi
