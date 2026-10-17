@@ -1,0 +1,1204 @@
+{
+  "touchdownAerialTwist": {
+    "es": "Es un aerial twist que cae en touchdown. Tras el giro de 360 grados en el aire aterrizas de rodillas con una pierna atrás y la mirada al frente.",
+    "en": "It is an Aerial Twist that lands in a touchdown. After the 360-degree air turn you land on one knee with a leg back and the gaze forward.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un aerial twist que cae en touchdown. Tras el giro de 360 grados en el aire aterrizas de rodillas con una pierna atrás y la mirada al frente.",
+      "before": {
+        "prerequisites": "Necesitas el Aerial Twist y el Touchdown Raiz. El primero te da el giro en el aire y el segundo la postura de aterrizaje de rodillas.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie y el otro barre en el giro.",
+        "legs": "Las piernas giran en el aire y al final una queda atrás para el touchdown.",
+        "arms": "Los brazos abren el giro y acompañan la postura final.",
+        "gaze": "Mira por encima del hombro durante el giro y al frente al caer.",
+        "torso": "El tronco gira el 360 y baja controlado a la postura de rodillas."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega con el aerial twist."
+        },
+        {
+          "title": "Giro",
+          "body": "Completa los 360 grados en el aire."
+        },
+        {
+          "title": "Touchdown",
+          "body": "Baja a una rodilla con la otra pierna atrás."
+        },
+        {
+          "title": "Estabiliza",
+          "body": "Mantén la postura con el pecho arriba y la mirada al frente."
+        }
+      ],
+      "landing": "Aterriza sobre una rodilla con la pierna de atrás extendida y la mirada al frente. Mantén el pecho arriba para no caer hacia adelante.",
+      "mistakes": [
+        "Perder el giro y caer de lado.",
+        "Caer con el pecho abajo.",
+        "No colocar la rodilla: el touchdown es parte del truco."
+      ],
+      "tips": [
+        "Practica el Touchdown Raiz hasta que la postura sea firme.",
+        "Después une el giro del aerial twist."
+      ],
+      "terms": [
+        {
+          "term": "aerial twist",
+          "meaning": "Mortal de lado sin manos con un giro en el aire."
+        },
+        {
+          "term": "touchdown",
+          "meaning": "Postura de aterrizaje de rodillas, con una pierna atrás y la mirada al frente."
+        }
+      ],
+      "prereqNotes": {
+        "aerialTwist": "El Aerial Twist te da el giro de 360 grados en el aire.",
+        "touchdownRaiz": "El Touchdown Raiz te da la postura de aterrizaje de rodillas que cierra el truco."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an Aerial Twist that lands in a touchdown. After the 360-degree air turn you land on one knee with a leg back and the gaze forward.",
+      "before": {
+        "prerequisites": "You need the Aerial Twist and the Touchdown Raiz. The first gives you the air turn and the second the on-knee landing pose.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot and the other sweeps in the turn.",
+        "legs": "The legs turn in the air and at the end one stays back for the touchdown.",
+        "arms": "The arms open the turn and follow the final pose.",
+        "gaze": "Look over the shoulder during the turn and ahead when you land.",
+        "torso": "The torso turns the 360 and comes down controlled into the on-knee pose."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off with the aerial twist."
+        },
+        {
+          "title": "Turn",
+          "body": "Complete the 360 degrees in the air."
+        },
+        {
+          "title": "Touchdown",
+          "body": "Come down to one knee with the other leg back."
+        },
+        {
+          "title": "Hold",
+          "body": "Hold the pose with the chest up and the gaze forward."
+        }
+      ],
+      "landing": "Land on one knee with the back leg extended and the gaze forward. Keep the chest up so you do not fall forward.",
+      "mistakes": [
+        "Losing the turn and falling sideways.",
+        "Landing with the chest down.",
+        "Not placing the knee: the touchdown is part of the trick."
+      ],
+      "tips": [
+        "Practice the Touchdown Raiz until the pose is firm.",
+        "Then join the aerial twist turn."
+      ],
+      "terms": [
+        {
+          "term": "aerial twist",
+          "meaning": "A no-hands side flip with a turn in the air."
+        },
+        {
+          "term": "touchdown",
+          "meaning": "A landing pose on one knee, with one leg back and the gaze forward."
+        }
+      ],
+      "prereqNotes": {
+        "aerialTwist": "The Aerial Twist gives you the 360-degree air turn.",
+        "touchdownRaiz": "The Touchdown Raiz gives you the on-knee landing pose that closes the trick."
+      }
+    }
+  },
+  "tripleAerialTwist": {
+    "es": "Es un aerial con tres giros. Tras el paso lateral saltas y giras el cuerpo 1080 grados mientras pateas, y aterrizas de pie.",
+    "en": "It is an Aerial with three turns. After the side step you jump and turn the body 1080 degrees as you kick, and land on your feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un aerial con tres giros. Tras el paso lateral saltas y giras el cuerpo 1080 grados mientras pateas, y aterrizas de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Double Aerial Twist. Ese truco te da el giro doble en el aire; aquí sumas un tercer giro.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión."
+      },
+      "body": {
+        "feet": "Despegas de un pie y aterrizas sobre los pies.",
+        "legs": "La pierna patea mientras el cuerpo gira tres vueltas.",
+        "arms": "Los brazos abren los giros y se recogen para acelerarlos.",
+        "gaze": "Mira por encima del hombro en cada giro y el horizonte al caer.",
+        "torso": "El tronco gira 1080 grados con el eje firme."
+      },
+      "steps": [
+        {
+          "title": "Paso lateral",
+          "body": "Da el paso lateral y prepárate para saltar."
+        },
+        {
+          "title": "Primer giro",
+          "body": "Salta y completa el primer giro."
+        },
+        {
+          "title": "Giros restantes",
+          "body": "Encadena el segundo y el tercer giro mientras pateas."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si pierdes el eje, práctica el giro doble hasta que sea sólido.",
+      "mistakes": [
+        "Perder la orientación al tercer giro.",
+        "Abrir los brazos: frenan el giro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Double Aerial Twist hasta que los giros sean estables.",
+        "Marca el tercer giro a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "aerial twist",
+          "meaning": "Mortal de lado sin manos con un giro en el aire."
+        },
+        {
+          "term": "eje",
+          "meaning": "Línea imaginaria sobre la que gira el cuerpo."
+        }
+      ],
+      "prereqNotes": {
+        "doubleAerialTwist": "El Double Aerial Twist te da el giro doble; el triple aerial twist encadena un tercer giro sobre el mismo eje."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an Aerial with three turns. After the side step you jump and turn the body 1080 degrees as you kick, and land on your feet.",
+      "before": {
+        "prerequisites": "You need the Double Aerial Twist. That trick gives you the double air turn; here you add a third turn.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "You take off from one foot and land on your feet.",
+        "legs": "The leg kicks as the body turns three rotations.",
+        "arms": "The arms open the turns and tuck to speed them up.",
+        "gaze": "Look over the shoulder on each turn and at the horizon when you land.",
+        "torso": "The torso turns 1080 degrees with the axis firm."
+      },
+      "steps": [
+        {
+          "title": "Side step",
+          "body": "Take the side step and prepare to jump."
+        },
+        {
+          "title": "First turn",
+          "body": "Jump and complete the first turn."
+        },
+        {
+          "title": "Remaining turns",
+          "body": "Chain the second and third turns as you kick."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If you lose the axis, practice the double turn until it is solid.",
+      "mistakes": [
+        "Losing orientation on the third turn.",
+        "Opening the arms: they slow the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Double Aerial Twist until the turns are stable.",
+        "Mark the third turn at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "aerial twist",
+          "meaning": "A no-hands side flip with a turn in the air."
+        },
+        {
+          "term": "axis",
+          "meaning": "An imaginary line the body turns around."
+        }
+      ],
+      "prereqNotes": {
+        "doubleAerialTwist": "The Double Aerial Twist gives you the double turn; the triple aerial twist chains a third turn on the same axis."
+      }
+    }
+  },
+  "wrapDoubleFullSnapu": {
+    "es": "Es un wrap double full que remata en snapu. Tras los dos giros con los brazos recogidos la pierna remata en una patada seca antes de caer de pie.",
+    "en": "It is a Wrap Double Full that finishes with a Snapu. After the two wrapped turns the leg finishes in a sharp kick before landing on your feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un wrap double full que remata en snapu. Tras los dos giros con los brazos recogidos la pierna remata en una patada seca antes de caer de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Wrap Full Snapu y el Wrap Triple Full. El primero te da el giro con el remate y el segundo los tres giros recogidos.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión."
+      },
+      "body": {
+        "feet": "Despegas de un pie y giras con el peso centrado.",
+        "legs": "Las piernas giran recogidas y al final una remata en el gancho del snapu.",
+        "arms": "Los brazos van pegados al cuerpo durante los giros y se abren en el remate.",
+        "gaze": "Mira por encima del hombro durante los giros y al objetivo al rematar.",
+        "torso": "El tronco gira con los brazos recogidos y se firme en el remate."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el mortal con los brazos recogidos."
+        },
+        {
+          "title": "Dos giros",
+          "body": "Completa los dos giros con los brazos pegados al cuerpo."
+        },
+        {
+          "title": "Snapu",
+          "body": "Remata la pierna en una patada seca tipo gancho."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el remate sale corto, acelera el giro justo antes de abrir.",
+      "mistakes": [
+        "Abrir los brazos durante los giros: van recogidos.",
+        "Perder los dos giros.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Wrap Full Snapu hasta que el remate sea sólido.",
+        "Después encadena los dos giros del Wrap Triple Full."
+      ],
+      "terms": [
+        {
+          "term": "wrap",
+          "meaning": "Giro con los brazos recogidos y pegados al cuerpo."
+        },
+        {
+          "term": "snapu",
+          "meaning": "Gancho de pierna que sale al final de un giro."
+        }
+      ],
+      "prereqNotes": {
+        "wrapFullSnapu": "El Wrap Full Snapu te da el giro recogido con el remate de gancho.",
+        "wrapTripleFull": "El Wrap Triple Full te da los tres giros recogidos, de los que aquí se usan dos."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Wrap Double Full that finishes with a Snapu. After the two wrapped turns the leg finishes in a sharp kick before landing on your feet.",
+      "before": {
+        "prerequisites": "You need the Wrap Full Snapu and the Wrap Triple Full. The first gives you the turn with the finish and the second the three wrapped turns.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "You take off from one foot and turn with the weight centered.",
+        "legs": "The legs turn tucked and at the end one finishes in the snapu hook.",
+        "arms": "The arms stay pressed to the body during the turns and open on the finish.",
+        "gaze": "Look over the shoulder during the turns and at the target on the finish.",
+        "torso": "The torso turns with the arms tucked and stays firm on the finish."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the punch and start the flip with the arms tucked."
+        },
+        {
+          "title": "Two turns",
+          "body": "Complete the two turns with the arms pressed to the body."
+        },
+        {
+          "title": "Snapu",
+          "body": "Finish the leg in a sharp hook-style kick."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the finish falls short, speed up the turn just before you open.",
+      "mistakes": [
+        "Opening the arms during the turns: they stay tucked.",
+        "Losing the two turns.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Wrap Full Snapu until the finish is solid.",
+        "Then chain the two turns of the Wrap Triple Full."
+      ],
+      "terms": [
+        {
+          "term": "wrap",
+          "meaning": "A turn with the arms tucked and pressed to the body."
+        },
+        {
+          "term": "snapu",
+          "meaning": "A leg hook that comes out at the end of a turn."
+        }
+      ],
+      "prereqNotes": {
+        "wrapFullSnapu": "The Wrap Full Snapu gives you the wrapped turn with the hook finish.",
+        "wrapTripleFull": "The Wrap Triple Full gives you the three wrapped turns, of which two are used here."
+      }
+    }
+  },
+  "wrapFullPike": {
+    "es": "Es un wrap full en pike. Tras el giro con los brazos recogidos el cuerpo se cierra en pike antes de aterrizar de pie.",
+    "en": "It is a Wrap Full in a pike. After the wrapped turn the body closes in a pike before landing on your feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un wrap full en pike. Tras el giro con los brazos recogidos el cuerpo se cierra en pike antes de aterrizar de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Wrap Full y el Full Pike. El primero te da el giro con los brazos recogidos y el segundo la posición pike.",
+        "space": "Cama elástica o colchoneta amplia, con supervisión."
+      },
+      "body": {
+        "feet": "Despegas de un pie y giras con el peso centrado.",
+        "legs": "Las piernas se estiran y juntas en la posición pike durante el giro.",
+        "arms": "Los brazos van pegados al cuerpo y ayudan a doblar el tronco.",
+        "gaze": "Mira por encima del hombro durante el giro y ubica el piso al abrir.",
+        "torso": "El tronco se dobla en pike mientras gira con los brazos recogidos."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el mortal con los brazos recogidos."
+        },
+        {
+          "title": "Giro",
+          "body": "Completa los 360 grados con los brazos pegados."
+        },
+        {
+          "title": "Pike",
+          "body": "Cierra el cuerpo en pike con las piernas estiradas."
+        },
+        {
+          "title": "Caída",
+          "body": "Abre el tronco y aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si caes sentado, abre un poco antes.",
+      "mistakes": [
+        "Agrupar las rodillas: el pike va estirado.",
+        "Abrir los brazos durante el giro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Wrap Full hasta que el giro sea sólido.",
+        "Marca el pike a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "wrap",
+          "meaning": "Giro con los brazos recogidos y pegados al cuerpo."
+        },
+        {
+          "term": "pike",
+          "meaning": "Posición con las piernas estiradas y juntas, dobladas por la cadera."
+        }
+      ],
+      "prereqNotes": {
+        "wrapFull": "El Wrap Full te da el giro con los brazos recogidos.",
+        "fullPike": "El Full Pike te da la posición pike con las piernas estiradas."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Wrap Full in a pike. After the wrapped turn the body closes in a pike before landing on your feet.",
+      "before": {
+        "prerequisites": "You need the Wrap Full and the Full Pike. The first gives you the turn with the arms tucked and the second the pike position.",
+        "space": "A trampoline or a large mat, with supervision."
+      },
+      "body": {
+        "feet": "You take off from one foot and turn with the weight centered.",
+        "legs": "The legs stay extended and together in the pike position during the turn.",
+        "arms": "The arms stay pressed to the body and help fold the torso.",
+        "gaze": "Look over the shoulder during the turn and find the floor when you open.",
+        "torso": "The torso folds in a pike as it turns with the arms tucked."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the punch and start the flip with the arms tucked."
+        },
+        {
+          "title": "Turn",
+          "body": "Complete the 360 degrees with the arms pressed in."
+        },
+        {
+          "title": "Pike",
+          "body": "Close the body in a pike with the legs extended."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the torso and land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If you land seated, open a little earlier.",
+      "mistakes": [
+        "Tucking the knees: the pike stays extended.",
+        "Opening the arms during the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Wrap Full until the turn is solid.",
+        "Mark the pike at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "wrap",
+          "meaning": "A turn with the arms tucked and pressed to the body."
+        },
+        {
+          "term": "pike",
+          "meaning": "A position with the legs extended and together, folded at the hips."
+        }
+      ],
+      "prereqNotes": {
+        "wrapFull": "The Wrap Full gives you the turn with the arms tucked.",
+        "fullPike": "The Full Pike gives you the pike position with the legs extended."
+      }
+    }
+  },
+  "wrapFullSwipeknife": {
+    "es": "Es un wrap full que remata en swipeknife. Tras el giro con los brazos recogidos la pierna barre y corta antes de caer de pie.",
+    "en": "It is a Wrap Full that finishes with a Swipeknife. After the wrapped turn the leg sweeps and cuts before landing on your feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un wrap full que remata en swipeknife. Tras el giro con los brazos recogidos la pierna barre y corta antes de caer de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Wrap Full Hyperhook y el Full Swipeknife. El primero te da el giro recogido con remate y el segundo la forma del swipeknife.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión."
+      },
+      "body": {
+        "feet": "Despegas de un pie y giras con el peso centrado.",
+        "legs": "La pierna barre y corta con la pierna estirada al final del giro.",
+        "arms": "Los brazos van pegados al cuerpo durante el giro y se abren en el barrido.",
+        "gaze": "Mira por encima del hombro durante el giro y al objetivo al cortar.",
+        "torso": "El tronco gira con los brazos recogidos y se firme en el barrido."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el mortal con los brazos recogidos."
+        },
+        {
+          "title": "Giro",
+          "body": "Completa los 360 grados con los brazos pegados."
+        },
+        {
+          "title": "Swipeknife",
+          "body": "Barre y corta con la pierna estirada."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el barrido sale corto, ábrelo un poco antes.",
+      "mistakes": [
+        "Abrir los brazos durante el giro.",
+        "Cortar con la rodilla doblada.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Wrap Full Hyperhook hasta que el giro sea sólido.",
+        "Marca el swipeknife a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "wrap",
+          "meaning": "Giro con los brazos recogidos y pegados al cuerpo."
+        },
+        {
+          "term": "swipeknife",
+          "meaning": "Combinación de un barrido y un corte con la pierna estirada."
+        }
+      ],
+      "prereqNotes": {
+        "wrapFullHyperhook": "El Wrap Full Hyperhook te da el giro recogido con el remate.",
+        "fullSwipeknife": "El Full Swipeknife te da la forma del barrido y corte de la salida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Wrap Full that finishes with a Swipeknife. After the wrapped turn the leg sweeps and cuts before landing on your feet.",
+      "before": {
+        "prerequisites": "You need the Wrap Full Hyperhook and the Full Swipeknife. The first gives you the wrapped turn with a finish and the second the swipeknife shape.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "You take off from one foot and turn with the weight centered.",
+        "legs": "The leg sweeps and cuts with the leg extended at the end of the turn.",
+        "arms": "The arms stay pressed to the body during the turn and open on the sweep.",
+        "gaze": "Look over the shoulder during the turn and at the target when you cut.",
+        "torso": "The torso turns with the arms tucked and stays firm on the sweep."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the punch and start the flip with the arms tucked."
+        },
+        {
+          "title": "Turn",
+          "body": "Complete the 360 degrees with the arms pressed in."
+        },
+        {
+          "title": "Swipeknife",
+          "body": "Sweep and cut with the leg extended."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the sweep falls short, open it a little earlier.",
+      "mistakes": [
+        "Opening the arms during the turn.",
+        "Cutting with a bent knee.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Wrap Full Hyperhook until the turn is solid.",
+        "Mark the swipeknife at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "wrap",
+          "meaning": "A turn with the arms tucked and pressed to the body."
+        },
+        {
+          "term": "swipeknife",
+          "meaning": "A combination of a sweep and a cut with the leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "wrapFullHyperhook": "The Wrap Full Hyperhook gives you the wrapped turn with a finish.",
+        "fullSwipeknife": "The Full Swipeknife gives you the sweep and cut shape on the exit."
+      }
+    }
+  },
+  "cheat720TwistHyperhook": {
+    "es": "Es un cheat 720 twist que cae en hyper con un gancho al final, también llamado laid back cheat 1080. Se entra como el cheat 720 twist y se lanza el hook exterior en la caída.",
+    "en": "It is a Cheat 720 Twist that lands in hyper with a hook at the end, also called a laid-back cheat 1080. You enter like the cheat 720 twist and throw the outside hook on the way down.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un cheat 720 twist que cae en hyper con un gancho al final. Se entra como el cheat 720 twist y se lanza el hook exterior en la caída.",
+      "before": {
+        "prerequisites": "Necesitas el Cheat 720 Twist y el Cheat 1080. El primero te da la entrada y los giros y el segundo la rotación extra en el aire.",
+        "space": "Colchoneta amplia, con unos 4 o 5 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie con el paso de cheat y giras.",
+        "legs": "Las piernas giran los 720 grados y al final el hook exterior sale abajo.",
+        "arms": "Los brazos abren los giros y se recogen para el hook.",
+        "gaze": "Mira por encima del hombro durante los giros y al objetivo en el hook.",
+        "torso": "El tronco gira recostado y se firme en el gancho."
+      },
+      "steps": [
+        {
+          "title": "Paso de cheat",
+          "body": "Da el paso de cheat y arranca el giro."
+        },
+        {
+          "title": "Dos giros",
+          "body": "Completa los 720 grados."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Lanza el hook exterior en la caída."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza en hyper sobre el pie contrario."
+        }
+      ],
+      "landing": "Aterriza en hyper, con una pierna adelante doblada y la otra estirada atrás, sobre el pie contrario. Mantén el pecho arriba.",
+      "mistakes": [
+        "Perder la orientación en el segundo giro.",
+        "Lanzar el hook con la rodilla doblada.",
+        "Caer con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Cheat 720 Twist hasta que el giro sea sólido.",
+        "Marca el hook exterior a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "Entrada en la que giras las caderas antes de saltar, por eso el giro se siente corto."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de gancho que sale con la pierna extendida y giro extra en el remate."
+        },
+        {
+          "term": "laid back",
+          "meaning": "Recostado: el tronco se inclina hacia atrás durante el giro."
+        }
+      ],
+      "prereqNotes": {
+        "cheat720Twist": "El Cheat 720 Twist te da la entrada de cheat y los dos giros.",
+        "cheat1080": "El Cheat 1080 te da la rotación extra que permite llegar al hook recostado."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Cheat 720 Twist that lands in hyper with a hook at the end. You enter like the cheat 720 twist and throw the outside hook on the way down.",
+      "before": {
+        "prerequisites": "You need the Cheat 720 Twist and the Cheat 1080. The first gives you the entry and the turns and the second the extra rotation in the air.",
+        "space": "A large mat, with about 4 or 5 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot with the cheat step and turn.",
+        "legs": "The legs turn the 720 degrees and at the end the outside hook comes out low.",
+        "arms": "The arms open the turns and tuck for the hook.",
+        "gaze": "Look over the shoulder during the turns and at the target on the hook.",
+        "torso": "The torso turns laid back and stays firm on the hook."
+      },
+      "steps": [
+        {
+          "title": "Cheat step",
+          "body": "Take the cheat step and start the turn."
+        },
+        {
+          "title": "Two turns",
+          "body": "Complete the 720 degrees."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Throw the outside hook on the way down."
+        },
+        {
+          "title": "Landing",
+          "body": "Land in hyper on the opposite foot."
+        }
+      ],
+      "landing": "Land in hyper, with one leg forward and bent and the other extended back, on the opposite foot. Keep the chest up.",
+      "mistakes": [
+        "Losing orientation on the second turn.",
+        "Throwing the hook with a bent knee.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Cheat 720 Twist until the turn is solid.",
+        "Mark the outside hook at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "An entry where you turn the hips before jumping, so the turn feels short."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hook kick that comes out with the leg extended and extra rotation on the finish."
+        },
+        {
+          "term": "laid back",
+          "meaning": "Leaning back: the torso tilts backward during the turn."
+        }
+      ],
+      "prereqNotes": {
+        "cheat720Twist": "The Cheat 720 Twist gives you the cheat entry and the two turns.",
+        "cheat1080": "The Cheat 1080 gives you the extra rotation that lets you reach the laid-back hook."
+      }
+    }
+  },
+  "doublelegDoubleTwist": {
+    "es": "Es un doubleleg con dos twists antes de aterrizar. Se mantiene el pike de la base y se suman dos giros completos sobre el eje antes de caer de pie.",
+    "en": "It is a Doubleleg with two twists before landing. You keep the pike of the base and add two full turns on the axis before landing on the feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doubleleg con dos twists antes de aterrizar. Se mantiene el pike de la base y se suman dos giros completos sobre el eje antes de caer de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Doubleleg Twist. Ese truco te da el doubleleg con un giro; aquí sumas el segundo giro.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión."
+      },
+      "body": {
+        "feet": "Despegas de un pie y giras con el peso centrado.",
+        "legs": "Las piernas pasan juntas y estiradas en el pike durante los dos giros.",
+        "arms": "Los brazos aceleran los giros y se recogen al final.",
+        "gaze": "Mira por encima del hombro en cada giro y ubica el piso al final.",
+        "torso": "El tronco gira en pike dos vueltas completas."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el mortal en pike."
+        },
+        {
+          "title": "Primer giro",
+          "body": "Completa el primer giro con las piernas juntas."
+        },
+        {
+          "title": "Segundo giro",
+          "body": "Encadena el segundo giro sin separar las piernas."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si las piernas se separan, júntalas antes del contacto.",
+      "mistakes": [
+        "Separar las piernas: van juntas en el pike.",
+        "Perder el segundo giro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Doubleleg Twist hasta que el giro sea sólido.",
+        "Marca la segunda vuelta a baja altura antes de unirla."
+      ],
+      "terms": [
+        {
+          "term": "doubleleg",
+          "meaning": "Las dos piernas pasan juntas y estiradas, como una sola."
+        },
+        {
+          "term": "twist",
+          "meaning": "Giro sobre el eje del cuerpo."
+        }
+      ],
+      "prereqNotes": {
+        "doublelegTwist": "El Doubleleg Twist te da el doubleleg con un giro; el doubleleg double twist agrega la segunda vuelta sobre el mismo eje."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Doubleleg with two twists before landing. You keep the pike of the base and add two full turns on the axis before landing on the feet.",
+      "before": {
+        "prerequisites": "You need the Doubleleg Twist. That trick gives you the doubleleg with one turn; here you add the second turn.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "You take off from one foot and turn with the weight centered.",
+        "legs": "The legs pass together and extended in the pike during the two turns.",
+        "arms": "The arms speed up the turns and tuck at the end.",
+        "gaze": "Look over the shoulder on each turn and find the floor at the end.",
+        "torso": "The torso turns in a pike for two full rotations."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the punch and start the pike flip."
+        },
+        {
+          "title": "First turn",
+          "body": "Complete the first turn with the legs together."
+        },
+        {
+          "title": "Second turn",
+          "body": "Chain the second turn without separating the legs."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the legs separate, join them before contact.",
+      "mistakes": [
+        "Separating the legs: they stay together in the pike.",
+        "Losing the second turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Doubleleg Twist until the turn is solid.",
+        "Mark the second rotation at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "doubleleg",
+          "meaning": "Both legs pass together and extended, as if they were one."
+        },
+        {
+          "term": "twist",
+          "meaning": "A turn on the body axis."
+        }
+      ],
+      "prereqNotes": {
+        "doublelegTwist": "The Doubleleg Twist gives you the doubleleg with one turn; the doubleleg double twist adds the second rotation on the same axis."
+      }
+    }
+  },
+  "doublelegXOutHyperhook": {
+    "es": "Es un doubleleg x-out que cae en hyper con un gancho. Después de abrir las piernas en X, se cierra el remate con el hook exterior al aterrizar.",
+    "en": "It is a Doubleleg X-Out that lands in hyper with a hook. After opening the legs in an X, the finish closes with the outside hook on landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doubleleg x-out que cae en hyper con un gancho. Después de abrir las piernas en X, el remate se cierra con el hook exterior al aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Doubleleg X-Out. Ese truco te da el doubleleg con la equis; aquí el remate es un gancho exterior.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión."
+      },
+      "body": {
+        "feet": "Despegas de un pie y aterrizas en hyper sobre el pie contrario.",
+        "legs": "Las piernas abren en X en el aire y el gancho exterior cierra la caída.",
+        "arms": "Los brazos abren el giro y se recogen para el gancho.",
+        "gaze": "Mira por encima del hombro durante el giro y al objetivo en el gancho.",
+        "torso": "El tronco gira y se firme en el gancho."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el doubleleg."
+        },
+        {
+          "title": "Equis",
+          "body": "Abre las piernas en X en el aire."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Cierra con el hook exterior."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza en hyper sobre el pie contrario."
+        }
+      ],
+      "landing": "Aterriza en hyper sobre el pie contrario, con el pecho arriba. Si el gancho sale corto, ciérralo un poco antes.",
+      "mistakes": [
+        "No abrir la equis: es la marca del truco.",
+        "Ganchar con la rodilla doblada.",
+        "Caer con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Doubleleg X-Out hasta que la equis sea sólida.",
+        "Marca el hook exterior a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "X-out",
+          "meaning": "Abrir las piernas en forma de equis durante el giro."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de gancho que sale con la pierna extendida y giro extra en el remate."
+        }
+      ],
+      "prereqNotes": {
+        "doublelegXOut": "El Doubleleg X-Out te da el doubleleg con la equis; el hyperhook agrega el gancho exterior en el aterrizaje."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Doubleleg X-Out that lands in hyper with a hook. After opening the legs in an X, the finish closes with the outside hook on landing.",
+      "before": {
+        "prerequisites": "You need the Doubleleg X-Out. That trick gives you the doubleleg with the X; here the finish is an outside hook.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "You take off from one foot and land in hyper on the opposite foot.",
+        "legs": "The legs open in an X in the air and the outside hook closes the landing.",
+        "arms": "The arms open the turn and tuck for the hook.",
+        "gaze": "Look over the shoulder during the turn and at the target on the hook.",
+        "torso": "The torso turns and stays firm on the hook."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the punch and start the doubleleg."
+        },
+        {
+          "title": "X shape",
+          "body": "Open the legs in an X in the air."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Close with the outside hook."
+        },
+        {
+          "title": "Landing",
+          "body": "Land in hyper on the opposite foot."
+        }
+      ],
+      "landing": "Land in hyper on the opposite foot, with the chest up. If the hook falls short, close it a little earlier.",
+      "mistakes": [
+        "Not opening the X: it is the mark of the trick.",
+        "Hooking with a bent knee.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Doubleleg X-Out until the X is solid.",
+        "Mark the outside hook at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "X-out",
+          "meaning": "Opening the legs in an X shape during the turn."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hook kick that comes out with the leg extended and extra rotation on the finish."
+        }
+      ],
+      "prereqNotes": {
+        "doublelegXOut": "The Doubleleg X-Out gives you the doubleleg with the X; the hyperhook adds the outside hook on landing."
+      }
+    }
+  },
+  "gumbi": {
+    "es": "Es un cartwheel invertido con manos que sirve de transición, base de todos los trucos tipo raiz. Inclinas el peso a un lado, barres una pierna por detrás apoyando las manos y continúas el impulso hasta caer como un scoot.",
+    "en": "It is an inverted cartwheel with hands, used as a transition and the base of all the raiz-type tricks. You lean the weight to one side, sweep a leg behind while planting the hands and carry the momentum until you land like a scoot.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un cartwheel invertido con manos, base de todos los trucos tipo raiz. Inclinas el peso a un lado, barres una pierna por detrás apoyando las manos y continúas el impulso hasta caer como un scoot.",
+      "before": {
+        "prerequisites": "Necesitas la Cartwheel. Esa base te da la rueda con apoyo de manos; el gumbi es esa misma rueda arqueada y un poco invertida.",
+        "space": "Colchoneta amplia, con unos 3 o 4 pasos. Es una transición, no un truco de impacto."
+      },
+      "body": {
+        "feet": "Empiezas de pie, con el peso inclinado hacia el lado de la rueda.",
+        "legs": "Una pierna barre por detrás y arriba; la otra sigue el impulso hasta el aterrizaje.",
+        "arms": "Las manos apoyan en el piso una después de la otra y empujan.",
+        "gaze": "Mira el punto de apoyo y luego al frente al caer.",
+        "torso": "El tronco pasa arqueado por el apoyo y gira."
+      },
+      "steps": [
+        {
+          "title": "Inclina el peso",
+          "body": "Da el paso y lleva el peso hacia el lado de la rueda."
+        },
+        {
+          "title": "Apoyo",
+          "body": "Apoya las manos en el piso, una después de la otra."
+        },
+        {
+          "title": "Barrido",
+          "body": "Barre una pierna por detrás y arriba con el cuerpo arqueado."
+        },
+        {
+          "title": "Salida",
+          "body": "Cae como un scoot sobre una pierna y sigue el impulso."
+        }
+      ],
+      "landing": "Cae sobre una pierna, como en un scoot, y deja la otra atrás para generar potencia. Absorbe con la rodilla flexionada.",
+      "mistakes": [
+        "Apoyar las dos manos juntas: van una después de la otra.",
+        "No arquear el tronco.",
+        "Frenar al salir: la gracia es seguir el impulso."
+      ],
+      "tips": [
+        "Practica la Cartwheel hasta que sea fluida.",
+        "Marca el gumbi lento sobre colchoneta antes de sumar velocidad."
+      ],
+      "terms": [
+        {
+          "term": "gumbi",
+          "meaning": "Cartwheel invertido con manos que sirve de transición y base de los trucos tipo raiz."
+        },
+        {
+          "term": "cartwheel",
+          "meaning": "Rueda de lado con apoyo de manos."
+        },
+        {
+          "term": "raiz",
+          "meaning": "Familia de trucos que salen del gumbi, parecidos a un sacacorchos invertido."
+        },
+        {
+          "term": "scoot",
+          "meaning": "Salida sobre una pierna, con la otra atrás, para tomar impulso."
+        }
+      ],
+      "prereqNotes": {
+        "cartwheel": "La Cartwheel te da la rueda con apoyo de manos; el gumbi es esa misma rueda arqueada y un poco invertida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an inverted cartwheel with hands, the base of all the raiz-type tricks. You lean the weight to one side, sweep a leg behind while planting the hands and carry the momentum until you land like a scoot.",
+      "before": {
+        "prerequisites": "You need the Cartwheel. That base gives you the side wheel with a hand plant; the gumbi is that same arched, slightly inverted wheel.",
+        "space": "A large mat, with about 3 or 4 steps. It is a transition, not an impact trick."
+      },
+      "body": {
+        "feet": "You start standing, with the weight leaning toward the side of the wheel.",
+        "legs": "One leg sweeps behind and up; the other follows the momentum to the landing.",
+        "arms": "The hands plant on the floor one after the other and push.",
+        "gaze": "Look at the plant point and then ahead when you land.",
+        "torso": "The torso passes arched over the plant and turns."
+      },
+      "steps": [
+        {
+          "title": "Lean the weight",
+          "body": "Take the step and bring the weight toward the side of the wheel."
+        },
+        {
+          "title": "Plant",
+          "body": "Plant the hands on the floor, one after the other."
+        },
+        {
+          "title": "Sweep",
+          "body": "Sweep one leg behind and up with the body arched."
+        },
+        {
+          "title": "Exit",
+          "body": "Land like a scoot on one leg and keep the momentum."
+        }
+      ],
+      "landing": "Land on one leg, like a scoot, and leave the other back to generate power. Absorb with the knee bent.",
+      "mistakes": [
+        "Planting both hands together: they go one after the other.",
+        "Not arching the torso.",
+        "Stopping on the exit: the point is to keep the momentum."
+      ],
+      "tips": [
+        "Practice the Cartwheel until it is fluid.",
+        "Mark the gumbi slowly on a mat before adding speed."
+      ],
+      "terms": [
+        {
+          "term": "gumbi",
+          "meaning": "An inverted cartwheel with hands, used as a transition and the base of the raiz-type tricks."
+        },
+        {
+          "term": "cartwheel",
+          "meaning": "A side wheel with a hand plant."
+        },
+        {
+          "term": "raiz",
+          "meaning": "A family of tricks that come out of the gumbi, similar to an inverted corkscrew."
+        },
+        {
+          "term": "scoot",
+          "meaning": "An exit on one leg, with the other back, to take momentum."
+        }
+      ],
+      "prereqNotes": {
+        "cartwheel": "The Cartwheel gives you the hand-plant wheel; the gumbi is that same arched, slightly inverted wheel."
+      }
+    }
+  },
+  "lotusShuriken": {
+    "es": "Es un lotus que remata con un shuriken: un outside crescent que aterriza sobre la pierna de pateo. Completas el swingthrough y lanzas el crescent exterior antes de caer.",
+    "en": "It is a Lotus that finishes with a shuriken: an outside crescent that lands on the kicking leg. You complete the swingthrough and throw the outside crescent before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un lotus que remata con un shuriken, es decir un outside crescent que aterriza sobre la pierna de pateo. Se completa el swingthrough y se lanza el crescent exterior antes de caer.",
+      "before": {
+        "prerequisites": "Necesitas el Lotus Doubleleg. Ese truco te da el swingthrough con las piernas juntas; aquí el remate es un shuriken.",
+        "space": "Colchoneta amplia, con unos 3 o 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie y aterrizas sobre la pierna de pateo.",
+        "legs": "Las piernas pasan juntas en el swingthrough y una lanza el crescent exterior.",
+        "arms": "Los brazos abren el giro y se recogen para el crescent.",
+        "gaze": "Mira por encima del hombro durante el giro y al objetivo al cortar.",
+        "torso": "El tronco gira con el swingthrough y se firme en el crescent."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y arranca el lotus."
+        },
+        {
+          "title": "Swingthrough",
+          "body": "Completa el swingthrough con las piernas juntas."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Lanza el outside crescent con la pierna."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre la pierna de pateo con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre la pierna de pateo con la rodilla flexionada y el pecho arriba. La otra pierna queda lista para seguir.",
+      "mistakes": [
+        "Cortar el swingthrough antes de tiempo.",
+        "Lanzar el crescent con la rodilla doblada.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Lotus Doubleleg hasta que el swingthrough sea sólido.",
+        "Marca el outside crescent a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "lotus",
+          "meaning": "Giro con las piernas juntas que pasa por el swingthrough."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "Outside crescent kick que aterriza sobre la pierna de pateo."
+        },
+        {
+          "term": "swingthrough",
+          "meaning": "Paso de impulso que se usa para armar el giro."
+        }
+      ],
+      "prereqNotes": {
+        "lotusDoubleleg": "El Lotus Doubleleg te da el swingthrough con las piernas juntas; el shuriken es el remate exterior que se agrega al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Lotus that finishes with a shuriken: an outside crescent that lands on the kicking leg. You complete the swingthrough and throw the outside crescent before landing.",
+      "before": {
+        "prerequisites": "You need the Lotus Doubleleg. That trick gives you the swingthrough with the legs together; here the finish is a shuriken.",
+        "space": "A large mat, with about 3 or 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot and land on the kicking leg.",
+        "legs": "The legs pass together in the swingthrough and one throws the outside crescent.",
+        "arms": "The arms open the turn and tuck for the crescent.",
+        "gaze": "Look over the shoulder during the turn and at the target when you cut.",
+        "torso": "The torso turns with the swingthrough and stays firm on the crescent."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and start the lotus."
+        },
+        {
+          "title": "Swingthrough",
+          "body": "Complete the swingthrough with the legs together."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Throw the outside crescent with the leg."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the kicking leg with soft knees."
+        }
+      ],
+      "landing": "Land on the kicking leg with the knee bent and the chest up. The other leg stays ready to continue.",
+      "mistakes": [
+        "Cutting the swingthrough too early.",
+        "Throwing the crescent with a bent knee.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Lotus Doubleleg until the swingthrough is solid.",
+        "Mark the outside crescent at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "lotus",
+          "meaning": "A turn with the legs together that passes through the swingthrough."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "An outside crescent kick that lands on the kicking leg."
+        },
+        {
+          "term": "swingthrough",
+          "meaning": "A setup step used to build the turn."
+        }
+      ],
+      "prereqNotes": {
+        "lotusDoubleleg": "The Lotus Doubleleg gives you the swingthrough with the legs together; the shuriken is the outside finish added at the end."
+      }
+    }
+  }
+}

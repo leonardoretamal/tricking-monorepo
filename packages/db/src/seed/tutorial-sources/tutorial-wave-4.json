@@ -1,0 +1,112 @@
+[
+  {
+    "trickId": "360CartwheelTwist",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=SqF5wByUYRY",
+    "embedUrl": "https://www.youtube.com/embed/SqF5wByUYRY",
+    "author": "BVO MASTER CHONG",
+    "title": "How to Cartwheel Full Twist | Beginners Step By Step Tutorial | Simple & Easy",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "aerialTwist",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=kwE_CPll3H0",
+    "embedUrl": "https://www.youtube.com/embed/kwE_CPll3H0",
+    "author": "Plan Zero",
+    "title": "Learn to Aerial Twist (A-Twist) | Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "butterflyTwistRound",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=hhEGnbrl86c",
+    "embedUrl": "https://www.youtube.com/embed/hhEGnbrl86c",
+    "author": "Zak Ferguson",
+    "title": "How to Btwist Round | Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "cartwheelTwist",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=NbLBOD0kne0",
+    "embedUrl": "https://www.youtube.com/embed/NbLBOD0kne0",
+    "author": "Kyle Spevak",
+    "title": "Cart Twist Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "cheat720Twist",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=ltUdOq8N4OI",
+    "embedUrl": "https://www.youtube.com/embed/ltUdOq8N4OI",
+    "author": "The Tricking Academy",
+    "title": "How To Cheat 720 Twist - Tricking Tutorial by Rory Bratter",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "doubleBackTuck",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=GWpFxWRQShI",
+    "embedUrl": "https://www.youtube.com/embed/GWpFxWRQShI",
+    "author": "pigmie",
+    "title": "How to Trick Yourself into Doing A DOUBLE BACKFLIP with No Fear",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "doubleSideflip",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=Kh3NQQEAg1w",
+    "embedUrl": "https://www.youtube.com/embed/Kh3NQQEAg1w",
+    "author": "Vortex Tricking",
+    "title": "How to Double Sideflip on Trampoline | BEST TUTORIAL | You Can Learn in Only 5 Minutes! |",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "fullInFullOut",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=McgNFcu4QbU",
+    "embedUrl": "https://www.youtube.com/embed/McgNFcu4QbU",
+    "author": "Tumble Sensei",
+    "title": "Tumbling Tutorial: the Full In Full Out (double tw",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "palmkick",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=litZcT0NCjc",
+    "embedUrl": "https://www.youtube.com/embed/litZcT0NCjc",
+    "author": "Zak Ferguson",
+    "title": "How to Palm Kick | Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "touchdownRaiz",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=ZyGb2imgZBA",
+    "embedUrl": "https://www.youtube.com/embed/ZyGb2imgZBA",
+    "author": "Johzuke",
+    "title": "Raiz and Touchdown Raiz - Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  }
+]

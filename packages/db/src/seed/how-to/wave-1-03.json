@@ -1,0 +1,1212 @@
+{
+  "fullPike": {
+    "es": "Es un Full Twist que se hace con el cuerpo en pike, doblado por la cadera y con las piernas estiradas.",
+    "en": "It is a Full Twist done with the body in a pike, folded at the hips with the legs straight.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un giro completo con forma de pike. La cadera se dobla, el cuerpo gira y se abre antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Full Doubleleg y el Back Pike. El primero te da el giro completo y el segundo la forma de pike.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con un pique y despegue con los dos pies.",
+        "legs": "Las piernas quedan estiradas y juntas mientras la cadera se dobla.",
+        "arms": "Los brazos ayudan a girar y luego se abren para controlar la apertura.",
+        "gaze": "Mira por encima del hombro durante el giro y el piso al abrir.",
+        "torso": "El torso se dobla hacia las piernas en el pike y gira desde la cadera."
+      },
+      "steps": [
+        {
+          "title": "Entrada y pique",
+          "body": "Da el paso y despega con los dos pies."
+        },
+        {
+          "title": "Pike",
+          "body": "Dobla la cadera y junta las piernas estiradas mientras empieza el giro."
+        },
+        {
+          "title": "Giro completo",
+          "body": "Completa los 360 grados manteniendo la forma de pike el mayor tiempo posible."
+        },
+        {
+          "title": "Apertura y aterrizaje",
+          "body": "Abre la cadera al ver el piso y cae de pie."
+        }
+      ],
+      "landing": "Cae con las rodillas flexionadas y el pecho arriba. Si llegas sentado, abre la cadera un poco antes.",
+      "mistakes": [
+        "Abrir el pike demasiado pronto.",
+        "Doblar las rodillas para compensar.",
+        "Girar antes de formar el pike.",
+        "Mirar el piso durante el giro."
+      ],
+      "tips": [
+        "Practica el Back Pike para sentir la forma.",
+        "En una cama elastica, gira con el pike abierto y ve cerrando poco a poco.",
+        "Graba el salto para revisar que las piernas queden estiradas."
+      ],
+      "terms": [
+        {
+          "term": "pike",
+          "meaning": "Posicion con la cadera doblada y las piernas estiradas, como una navaja cerrada."
+        },
+        {
+          "term": "full twist",
+          "meaning": "Mortal atras con un giro completo de 360 grados."
+        }
+      ],
+      "prereqNotes": {
+        "fullDoubleleg": "El Full Doubleleg te da el giro completo con las piernas juntas y estiradas.",
+        "backPike": "El Back Pike te ensena a doblar la cadera sin perder la rotacion."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a full turn in a pike shape. The hips fold, the body turns and it opens before landing.",
+      "before": {
+        "prerequisites": "You need the Full Doubleleg and the Back Pike. The first gives you the full turn and the second the pike shape.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a punch and take off from both feet.",
+        "legs": "The legs stay straight and together while the hips fold.",
+        "arms": "The arms help you turn and then open to control the opening.",
+        "gaze": "Look over the shoulder during the turn and at the floor when you open.",
+        "torso": "The torso folds toward the legs in the pike and turns from the hips."
+      },
+      "steps": [
+        {
+          "title": "Entry and punch",
+          "body": "Take the step and take off from both feet."
+        },
+        {
+          "title": "Pike",
+          "body": "Fold the hips and bring the straight legs together as the turn starts."
+        },
+        {
+          "title": "Full turn",
+          "body": "Complete the 360 degrees while keeping the pike shape as long as possible."
+        },
+        {
+          "title": "Open and land",
+          "body": "Open the hips when you see the floor and land on your feet."
+        }
+      ],
+      "landing": "Land with bent knees and the chest up. If you land seated, open the hips a little earlier.",
+      "mistakes": [
+        "Opening the pike too early.",
+        "Bending the knees to compensate.",
+        "Turning before the pike is formed.",
+        "Looking at the floor during the turn."
+      ],
+      "tips": [
+        "Practice the Back Pike to feel the shape.",
+        "On a trampoline, turn with an open pike and close it little by little.",
+        "Record the jump to check that the legs stay straight."
+      ],
+      "terms": [
+        {
+          "term": "pike",
+          "meaning": "A position with the hips folded and the legs straight, like a closed jackknife."
+        },
+        {
+          "term": "full twist",
+          "meaning": "A backward flip with one full 360-degree turn."
+        }
+      ],
+      "prereqNotes": {
+        "fullDoubleleg": "The Full Doubleleg gives you the full turn with the legs straight and together.",
+        "backPike": "The Back Pike teaches you to fold the hips without losing the rotation."
+      }
+    }
+  },
+  "fullShuriken": {
+    "es": "Es un Full Twist que termina con un shuriken, una patada circular corta y cruzada antes de aterrizar.",
+    "en": "It is a Full Twist that finishes with a shuriken, a short crossed circular kick before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un giro completo que enlaza un shuriken. La patada corta sale al final de la rotacion.",
+      "before": {
+        "prerequisites": "Necesitas el Full Twist. Te da el giro completo y la salida.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las piernas se recogen para girar y una sale en un corte circular corto.",
+        "arms": "Los brazos ayudan al giro y acompanan el corte.",
+        "gaze": "Mira por encima del hombro y busca el objetivo al final.",
+        "torso": "El torso gira compacto y se abre en el corte."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Giro completo",
+          "body": "Completa los 360 grados con el cuerpo agrupado."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Lanza una pierna en un corte circular corto y cruzado."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho arriba.",
+      "mistakes": [
+        "Cortar antes de completar el giro.",
+        "Doblar la rodilla en el corte.",
+        "Mirar el piso.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Full Twist hasta que el giro sea estable.",
+        "Marca el shuriken en el aire antes de unirlo.",
+        "Usa una cama elastica para el remate."
+      ],
+      "terms": [
+        {
+          "term": "full twist",
+          "meaning": "Mortal atras con un giro completo de 360 grados."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "Patada circular corta y cruzada que se lanza como un corte."
+        }
+      ],
+      "prereqNotes": {
+        "fullTwist": "El Full Twist te da el giro completo y la altura para lanzar el shuriken."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a full turn that links into a shuriken. The short kick comes out at the end of the rotation.",
+      "before": {
+        "prerequisites": "You need the Full Twist. It gives you the full turn and the exit.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The legs tuck to turn and one comes out in a short circular cut.",
+        "arms": "The arms help the turn and follow the cut.",
+        "gaze": "Look over the shoulder and find the target at the end.",
+        "torso": "The torso turns compact and opens on the cut."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Full turn",
+          "body": "Complete the 360 degrees with the body tucked."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Throw one leg in a short, crossed circular cut."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest up.",
+      "mistakes": [
+        "Cutting before the turn is complete.",
+        "Bending the knee on the cut.",
+        "Looking at the floor.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Full Twist until the turn is stable.",
+        "Mark the shuriken in the air before joining it.",
+        "Use a trampoline for the finish."
+      ],
+      "terms": [
+        {
+          "term": "full twist",
+          "meaning": "A backward flip with one full 360-degree turn."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "A short, crossed circular kick thrown like a cut."
+        }
+      ],
+      "prereqNotes": {
+        "fullTwist": "The Full Twist gives you the full turn and the height to throw the shuriken."
+      }
+    }
+  },
+  "fullSnapuRound": {
+    "es": "Es un Full Snapu que termina con una patada circular antes de aterrizar.",
+    "en": "It is a Full Snapu that finishes with a round kick before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Full Snapu con una patada circular al final. El enganche del snapu se convierte en un remate redondo.",
+      "before": {
+        "prerequisites": "Necesitas el Full Snapu. Te da el giro, el enganche y la inclinacion del cuerpo.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "La pierna de enganche se extiende y luego remata en un arco circular.",
+        "arms": "Los brazos abren el giro y acompanan la patada.",
+        "gaze": "Mira por encima del hombro y busca el objetivo al patear.",
+        "torso": "El torso gira con el pecho algo atras y se abre en el remate."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Full Snapu",
+          "body": "Completa el giro y el enganche con el cuerpo inclinado."
+        },
+        {
+          "title": "Patada circular",
+          "body": "Convierte el enganche en un arco circular hacia el objetivo."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho arriba.",
+      "mistakes": [
+        "Doblar la rodilla en la patada.",
+        "No completar el giro.",
+        "Perder la inclinacion del snapu.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Full Snapu hasta que el enganche sea estable.",
+        "Marca la patada circular sin giro antes de unirla.",
+        "Usa una cama elastica para la rotacion."
+      ],
+      "terms": [
+        {
+          "term": "snapu",
+          "meaning": "Patada de gancho con giro y el cuerpo inclinado hacia atras."
+        },
+        {
+          "term": "round kick",
+          "meaning": "Patada que describe un arco circular con la pierna extendida."
+        }
+      ],
+      "prereqNotes": {
+        "fullSnapu": "El Full Snapu te da el giro, el enganche y la inclinacion para el remate."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Full Snapu with a round kick at the end. The snapu hook becomes a circular strike.",
+      "before": {
+        "prerequisites": "You need the Full Snapu. It gives you the turn, the hook and the body lean.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The hooking leg extends and then finishes in a circular arc.",
+        "arms": "The arms open the turn and follow the kick.",
+        "gaze": "Look over the shoulder and find the target when you kick.",
+        "torso": "The torso turns with the chest slightly back and opens on the strike."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Full Snapu",
+          "body": "Complete the turn and the hook with the body leaning."
+        },
+        {
+          "title": "Round kick",
+          "body": "Turn the hook into a circular arc toward the target."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with a soft knee."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest up.",
+      "mistakes": [
+        "Bending the knee on the kick.",
+        "Not completing the turn.",
+        "Losing the snapu lean.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Full Snapu until the hook is stable.",
+        "Mark the round kick without the turn before joining it.",
+        "Use a trampoline for the rotation."
+      ],
+      "terms": [
+        {
+          "term": "snapu",
+          "meaning": "A hooking kick with a turn and the body leaning back."
+        },
+        {
+          "term": "round kick",
+          "meaning": "A kick that draws a circular arc with the leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "fullSnapu": "The Full Snapu gives you the turn, the hook and the lean for the strike."
+      }
+    }
+  },
+  "fullSwipeLateRound": {
+    "es": "Es un Full Swipe que termina con una patada circular tardia. El barrido y el remate llegan al final de la rotacion.",
+    "en": "It is a Full Swipe that finishes with a late round kick. The sweep and the strike arrive at the end of the rotation.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un giro completo con barrido y patada circular al final. La pierna barre y luego remata.",
+      "before": {
+        "prerequisites": "Necesitas el Full Late Round y el Full Swipe. El primero te da el remate tardio y el segundo el barrido.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Una pierna barre extendida y luego remata en un arco circular.",
+        "arms": "Los brazos ayudan al giro y se abren para equilibrar el barrido.",
+        "gaze": "Mira por encima del hombro y sigue la pierna en el remate.",
+        "torso": "El torso gira compacto y se abre en la patada."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Giro y swipe",
+          "body": "Completa el giro completo y pasa una pierna extendida en un barrido."
+        },
+        {
+          "title": "Late round",
+          "body": "Al final de la caida, remata con una patada circular."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho arriba.",
+      "mistakes": [
+        "Barrer y patear al mismo tiempo.",
+        "Lanzar la patada antes de terminar el giro.",
+        "Doblar la rodilla en el barrido.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Full Swipe y el Full Late Round por separado.",
+        "Une primero el barrido y despues suma la patada.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "full swipe",
+          "meaning": "Giro completo con un barrido de pierna extendida."
+        },
+        {
+          "term": "late round",
+          "meaning": "Patada circular que se lanza al final de la caida."
+        }
+      ],
+      "prereqNotes": {
+        "fullLateRound": "El Full Late Round te da el giro y el remate circular tardio.",
+        "fullSwipe": "El Full Swipe te da el barrido y el control de la pierna extendida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a full turn with a sweep and a round kick at the end. The leg sweeps and then strikes.",
+      "before": {
+        "prerequisites": "You need the Full Late Round and the Full Swipe. The first gives you the late strike and the second the sweep.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "One leg sweeps extended and then finishes in a circular arc.",
+        "arms": "The arms help the turn and open to balance the sweep.",
+        "gaze": "Look over the shoulder and follow the leg on the strike.",
+        "torso": "The torso turns compact and opens on the kick."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Turn and swipe",
+          "body": "Complete the full turn and pass one extended leg in a sweep."
+        },
+        {
+          "title": "Late round",
+          "body": "At the end of the fall, finish with a round kick."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with a soft knee."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest up.",
+      "mistakes": [
+        "Sweeping and kicking at the same time.",
+        "Throwing the kick before the turn is complete.",
+        "Bending the knee on the sweep.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Full Swipe and the Full Late Round separately.",
+        "Join the sweep first and then add the kick.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "full swipe",
+          "meaning": "A full turn with a sweep of the extended leg."
+        },
+        {
+          "term": "late round",
+          "meaning": "A round kick thrown at the end of the fall."
+        }
+      ],
+      "prereqNotes": {
+        "fullLateRound": "The Full Late Round gives you the turn and the late circular strike.",
+        "fullSwipe": "The Full Swipe gives you the sweep and control of the extended leg."
+      }
+    }
+  },
+  "fullTwist": {
+    "es": "Es un mortal hacia atras con un giro completo de 360 grados. Es la base de muchos trucos con giro.",
+    "en": "It is a backward flip with a full 360-degree turn. It is the base of many twisting tricks.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Back Tuck con un giro completo. El cuerpo gira apretado en el aire y aterriza de frente.",
+      "before": {
+        "prerequisites": "Necesitas el Arabian. Te da la mezcla de rotacion hacia atras y giro que se necesita para el Full Twist.",
+        "space": "Colchoneta amplia y blanda."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue con los dos pies o de un pie.",
+        "legs": "Las piernas se recogen para girar y se mantienen juntas.",
+        "arms": "Los brazos se pegan al cuerpo para acelerar el giro y se abren al final.",
+        "gaze": "Mira por encima del hombro durante el giro y al frente al aterrizar.",
+        "torso": "El torso se mantiene compacto y gira como un bloque."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega con altura."
+        },
+        {
+          "title": "Subida y giro",
+          "body": "Sube el pecho y empieza a girar el cuerpo sobre el eje vertical."
+        },
+        {
+          "title": "Cierra el giro",
+          "body": "Manten los brazos cerca y completa los 360 grados con el cuerpo agrupado."
+        },
+        {
+          "title": "Apertura y aterrizaje",
+          "body": "Abre el cuerpo al ver el piso y cae de pie."
+        }
+      ],
+      "landing": "Cae con las rodillas flexionadas y el pecho arriba. Termina mirando hacia donde empezaste.",
+      "mistakes": [
+        "Girar con los brazos abiertos y quedarse corto.",
+        "No completar los 360 grados.",
+        "Mirar el piso durante el giro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Arabian y el Back Tuck por separado.",
+        "En una cama elastica, gira con los brazos pegados y revisa el punto de salida.",
+        "Cuenta el giro en voz alta para completar los 360 grados."
+      ],
+      "terms": [
+        {
+          "term": "full twist",
+          "meaning": "Mortal atras con un giro completo de 360 grados."
+        },
+        {
+          "term": "spot",
+          "meaning": "Punto fijo al que miras para orientarte en el aire."
+        }
+      ],
+      "prereqNotes": {
+        "arabian": "El Arabian te da la mezcla de rotacion y giro que necesita el Full Twist."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Back Tuck with a full turn. The body turns tightly in the air and lands facing forward.",
+      "before": {
+        "prerequisites": "You need the Arabian. It gives you the mix of backward rotation and twist that the Full Twist needs.",
+        "space": "A large, soft mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from both feet or one foot.",
+        "legs": "The legs tuck to turn and stay together.",
+        "arms": "The arms stay close to the body to speed up the turn and open at the end.",
+        "gaze": "Look over the shoulder during the turn and forward on landing.",
+        "torso": "The torso stays compact and turns as one block."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off with height."
+        },
+        {
+          "title": "Rise and turn",
+          "body": "Lift the chest and start turning the body on the vertical axis."
+        },
+        {
+          "title": "Close the turn",
+          "body": "Keep the arms close and complete the 360 degrees with the body tucked."
+        },
+        {
+          "title": "Open and land",
+          "body": "Open the body when you see the floor and land on your feet."
+        }
+      ],
+      "landing": "Land with bent knees and the chest up. Finish facing the way you started.",
+      "mistakes": [
+        "Turning with the arms open and falling short.",
+        "Not completing the 360 degrees.",
+        "Looking at the floor during the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Arabian and the Back Tuck separately.",
+        "On a trampoline, turn with the arms close and check the takeoff point.",
+        "Count the turn out loud to complete the 360 degrees."
+      ],
+      "terms": [
+        {
+          "term": "full twist",
+          "meaning": "A backward flip with one full 360-degree turn."
+        },
+        {
+          "term": "spot",
+          "meaning": "A fixed point you look at to stay oriented in the air."
+        }
+      ],
+      "prereqNotes": {
+        "arabian": "The Arabian gives you the mix of rotation and twist that the Full Twist needs."
+      }
+    }
+  },
+  "fullUpTwist": {
+    "es": "Es un Full Up con un giro extra en la bajada. El primer giro empieza en el punto mas alto del salto.",
+    "en": "It is a Full Up with an extra twist on the way down. The first turn starts at the highest point of the jump.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal atras extendido con dos giros. El primero empieza arriba y el segundo se suma al bajar.",
+      "before": {
+        "prerequisites": "Necesitas el Full Up y el Double Full. El primero te da el giro que empieza arriba y el segundo los dos giros.",
+        "space": "Colchoneta amplia o cama elastica."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las piernas se mantienen estiradas y juntas durante el giro.",
+        "arms": "Los brazos ayudan a iniciar el giro y se pegan al cuerpo para acelerar.",
+        "gaze": "Mira por encima del hombro y busca el horizonte al final.",
+        "torso": "El torso se mantiene extendido y gira en dos tiempos."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Giro arriba",
+          "body": "Empieza el primer giro en el punto mas alto del salto."
+        },
+        {
+          "title": "Giro extra abajo",
+          "body": "Suma el segundo giro durante la bajada."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre el cuerpo y cae de pie."
+        }
+      ],
+      "landing": "Cae con las rodillas flexionadas y el pecho arriba. Si el segundo giro se queda corto, no bloquees las piernas.",
+      "mistakes": [
+        "Empezar el primer giro demasiado pronto.",
+        "Perder la extension del cuerpo.",
+        "No completar el segundo giro.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Full Up hasta que el primer giro sea estable.",
+        "En una cama elastica, marca el segundo giro solo en la bajada.",
+        "Usa un punto fijo para controlar la orientacion."
+      ],
+      "terms": [
+        {
+          "term": "full up",
+          "meaning": "Giro que empieza en el punto mas alto del salto, con el cuerpo extendido."
+        },
+        {
+          "term": "layout",
+          "meaning": "Cuerpo estirado en el aire, sin recoger las rodillas."
+        }
+      ],
+      "prereqNotes": {
+        "fullUp": "El Full Up te da el primer giro que empieza arriba y el cuerpo extendido.",
+        "doubleFull": "El Double Full te da la rotacion extra y el control de los dos giros."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an extended backward flip with two turns. The first starts at the top and the second is added on the way down.",
+      "before": {
+        "prerequisites": "You need the Full Up and the Double Full. The first gives you the turn that starts at the top and the second the two turns.",
+        "space": "A large mat or a trampoline."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The legs stay straight and together during the turn.",
+        "arms": "The arms help start the turn and stay close to speed it up.",
+        "gaze": "Look over the shoulder and find the horizon at the end.",
+        "torso": "The torso stays extended and turns in two stages."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Turn at the top",
+          "body": "Start the first turn at the highest point of the jump."
+        },
+        {
+          "title": "Extra turn on the way down",
+          "body": "Add the second turn during the descent."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the body and land on your feet."
+        }
+      ],
+      "landing": "Land with bent knees and the chest up. If the second turn falls short, do not lock the legs.",
+      "mistakes": [
+        "Starting the first turn too early.",
+        "Losing the extension of the body.",
+        "Not completing the second turn.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Full Up until the first turn is stable.",
+        "On a trampoline, mark only the second turn on the way down.",
+        "Use a fixed point to control your orientation."
+      ],
+      "terms": [
+        {
+          "term": "full up",
+          "meaning": "A turn that starts at the highest point of the jump with the body extended."
+        },
+        {
+          "term": "layout",
+          "meaning": "An extended body in the air, without tucking the knees."
+        }
+      ],
+      "prereqNotes": {
+        "fullUp": "The Full Up gives you the first turn that starts at the top and the extended body.",
+        "doubleFull": "The Double Full gives you the extra rotation and control of both turns."
+      }
+    }
+  },
+  "gainerFigure4": {
+    "es": "Es un Gainer con una pierna cruzada sobre la otra formando un cuatro. La rotacion viaja hacia adelante.",
+    "en": "It is a Gainer with one leg crossed over the other to form a figure four. The rotation travels forward.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal hacia atras que viaja adelante y cruza las piernas en el aire. La forma de cuatro marca el salto.",
+      "before": {
+        "prerequisites": "Necesitas el Gainer Flash y el Arabian. El primero te da el despegue de un pie y el segundo la rotacion de frente.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie, con el otro balanceando hacia adelante.",
+        "legs": "Una pierna cruza sobre la otra y forma un cuatro durante el vuelo.",
+        "arms": "Los brazos suben para el salto y se abren para equilibrar el cruce.",
+        "gaze": "Mira hacia adelante al despegar y busca el piso al final.",
+        "torso": "El torso viaja hacia adelante y se mantiene alto, sin echarse atras."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie mientras la otra pierna pasa adelante."
+        },
+        {
+          "title": "Gainer",
+          "body": "Sube y empieza la rotacion hacia atras mientras el cuerpo viaja adelante."
+        },
+        {
+          "title": "Figure 4",
+          "body": "Cruza una pierna sobre la otra y manten la forma de cuatro."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre las piernas y cae de pie."
+        }
+      ],
+      "landing": "Cae con las rodillas flexionadas y el pecho arriba. Si caes de lado, revisa el cruce de piernas.",
+      "mistakes": [
+        "Cruzar las piernas demasiado tarde.",
+        "Saltar hacia atras en vez de viajar adelante.",
+        "Abrir el cuerpo antes de tiempo.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Gainer Flash hasta que el viaje sea estable.",
+        "Marca la forma de cuatro en una cama elastica.",
+        "Graba el salto para revisar el cruce."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "Mortal hacia atras que viaja hacia adelante, con despegue de un pie."
+        },
+        {
+          "term": "figure 4",
+          "meaning": "Posicion con una pierna cruzada sobre la otra, formando un cuatro."
+        }
+      ],
+      "prereqNotes": {
+        "gainerFlash": "El Gainer Flash te da el despegue de un pie y el viaje hacia adelante.",
+        "arabian": "El Arabian te da la rotacion de frente y el control del giro."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backward flip that travels forward and crosses the legs in the air. The figure four marks the jump.",
+      "before": {
+        "prerequisites": "You need the Gainer Flash and the Arabian. The first gives you the one-foot takeoff and the second the forward rotation.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot while the other swings forward.",
+        "legs": "One leg crosses over the other and forms a four during the flight.",
+        "arms": "The arms rise for the jump and open to balance the cross.",
+        "gaze": "Look forward on takeoff and find the floor at the end.",
+        "torso": "The torso travels forward and stays tall, without falling back."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot while the other leg passes forward."
+        },
+        {
+          "title": "Gainer",
+          "body": "Rise and start the backward rotation while the body travels forward."
+        },
+        {
+          "title": "Figure 4",
+          "body": "Cross one leg over the other and hold the figure-four shape."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the legs and land on your feet."
+        }
+      ],
+      "landing": "Land with bent knees and the chest up. If you land sideways, check the leg cross.",
+      "mistakes": [
+        "Crossing the legs too late.",
+        "Jumping backward instead of traveling forward.",
+        "Opening the body too early.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Gainer Flash until the forward travel is stable.",
+        "Mark the figure-four shape on a trampoline.",
+        "Record the jump to check the cross."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "A backward flip that travels forward, with a one-foot takeoff."
+        },
+        {
+          "term": "figure 4",
+          "meaning": "A position with one leg crossed over the other, forming a four."
+        }
+      ],
+      "prereqNotes": {
+        "gainerFlash": "The Gainer Flash gives you the one-foot takeoff and the forward travel.",
+        "arabian": "The Arabian gives you the forward rotation and control of the turn."
+      }
+    }
+  },
+  "gainerRocketboi": {
+    "es": "Es un Gainer en el que las piernas se disparan hacia arriba en forma de rocketboi. El cuerpo viaja hacia adelante.",
+    "en": "It is a Gainer where the legs shoot upward in a rocketboi shape. The body travels forward.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal hacia atras con despegue de un pie en el que las piernas suben estiradas. La forma rocketboi marca el vuelo.",
+      "before": {
+        "prerequisites": "Necesitas el Gainer Flash y el Rocketboi. El primero te da el despegue y el segundo la forma de piernas.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las dos piernas suben estiradas y juntas, como un cohete.",
+        "arms": "Los brazos suben con el salto y se quedan cerca del cuerpo.",
+        "gaze": "Mira hacia adelante al despegar y busca el piso al final.",
+        "torso": "El torso se alarga y viaja hacia adelante con las piernas arriba."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Rocketboi",
+          "body": "Lanza las dos piernas estiradas hacia arriba mientras empieza la rotacion."
+        },
+        {
+          "title": "Vuelo",
+          "body": "Manten el cuerpo alargado y las piernas juntas durante la rotacion."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja las piernas y cae de pie."
+        }
+      ],
+      "landing": "Cae con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Doblar las rodillas en la forma de cohete.",
+        "Perder el viaje hacia adelante.",
+        "Abrir el cuerpo demasiado pronto.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica la forma rocketboi en el aire sin girar.",
+        "Despues unela al Gainer Flash.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "Mortal hacia atras que viaja hacia adelante, con despegue de un pie."
+        },
+        {
+          "term": "rocketboi",
+          "meaning": "Forma en el aire con las dos piernas estiradas hacia arriba y el cuerpo alargado."
+        }
+      ],
+      "prereqNotes": {
+        "gainerFlash": "El Gainer Flash te da el despegue de un pie y el viaje hacia adelante.",
+        "rocketboi": "El Rocketboi te da la forma de piernas estiradas y el cuerpo alargado."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backward flip with a one-foot takeoff where the legs shoot up straight. The rocketboi shape marks the flight.",
+      "before": {
+        "prerequisites": "You need the Gainer Flash and the Rocketboi. The first gives you the takeoff and the second the leg shape.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "Both legs shoot up straight and together, like a rocket.",
+        "arms": "The arms rise with the jump and stay close to the body.",
+        "gaze": "Look forward on takeoff and find the floor at the end.",
+        "torso": "The torso stretches and travels forward with the legs up."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Rocketboi",
+          "body": "Shoot both straight legs upward as the rotation starts."
+        },
+        {
+          "title": "Flight",
+          "body": "Keep the body long and the legs together through the rotation."
+        },
+        {
+          "title": "Landing",
+          "body": "Bring the legs down and land on your feet."
+        }
+      ],
+      "landing": "Land with bent knees and the chest up.",
+      "mistakes": [
+        "Bending the knees in the rocket shape.",
+        "Losing the forward travel.",
+        "Opening the body too early.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the rocketboi shape in the air without turning.",
+        "Then join it to the Gainer Flash.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "A backward flip that travels forward, with a one-foot takeoff."
+        },
+        {
+          "term": "rocketboi",
+          "meaning": "An air shape with both legs straight up and the body stretched."
+        }
+      ],
+      "prereqNotes": {
+        "gainerFlash": "The Gainer Flash gives you the one-foot takeoff and the forward travel.",
+        "rocketboi": "The Rocketboi gives you the straight-leg shape and the stretched body."
+      }
+    }
+  },
+  "gainerSidewinder": {
+    "es": "Es un Gainer que enlaza un sidewinder, un barrido lateral. La rotacion viaja hacia adelante y una pierna barre al costado.",
+    "en": "It is a Gainer that links into a sidewinder, a lateral sweep. The rotation travels forward and one leg sweeps to the side.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal hacia atras con despegue de un pie y un barrido lateral. El sidewinder lo acerca a un corkscrew.",
+      "before": {
+        "prerequisites": "Necesitas el Gainer Hook. Te da el despegue, la rotacion y el enganche lateral.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Una pierna barre hacia el costado mientras el cuerpo gira.",
+        "arms": "Los brazos ayudan a la rotacion y se abren para el barrido.",
+        "gaze": "Mira por encima del hombro y sigue la pierna que barre.",
+        "torso": "El torso gira y se inclina hacia el lado del barrido."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Gainer",
+          "body": "Sube y empieza la rotacion hacia atras viajando adelante."
+        },
+        {
+          "title": "Sidewinder",
+          "body": "Barre una pierna extendida hacia el costado durante el giro."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cierra el barrido y cae de pie."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el barrido te lleva de lado, da un paso para cerrar.",
+      "mistakes": [
+        "Barrer demasiado tarde.",
+        "Perder el viaje hacia adelante.",
+        "Doblar la rodilla en el barrido.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Gainer Hook hasta que la rotacion sea estable.",
+        "Marca el sidewinder en el aire antes de unirlo.",
+        "Usa una cama elastica para el barrido."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "Mortal hacia atras que viaja hacia adelante, con despegue de un pie."
+        },
+        {
+          "term": "sidewinder",
+          "meaning": "Barrido lateral de la pierna extendida durante un giro."
+        }
+      ],
+      "prereqNotes": {
+        "gainerHook": "El Gainer Hook te da el despegue, la rotacion y la base del enganche lateral."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backward flip with a one-foot takeoff and a lateral sweep. The sidewinder brings it close to a corkscrew.",
+      "before": {
+        "prerequisites": "You need the Gainer Hook. It gives you the takeoff, the rotation and the lateral hook base.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "One leg sweeps to the side while the body turns.",
+        "arms": "The arms help the rotation and open for the sweep.",
+        "gaze": "Look over the shoulder and follow the sweeping leg.",
+        "torso": "The torso turns and leans toward the side of the sweep."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Gainer",
+          "body": "Rise and start the backward rotation while traveling forward."
+        },
+        {
+          "title": "Sidewinder",
+          "body": "Sweep one extended leg to the side during the turn."
+        },
+        {
+          "title": "Landing",
+          "body": "Close the sweep and land on your feet."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the sweep pulls you sideways, take a step to close.",
+      "mistakes": [
+        "Sweeping too late.",
+        "Losing the forward travel.",
+        "Bending the knee on the sweep.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Gainer Hook until the rotation is stable.",
+        "Mark the sidewinder in the air before joining it.",
+        "Use a trampoline for the sweep."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "A backward flip that travels forward, with a one-foot takeoff."
+        },
+        {
+          "term": "sidewinder",
+          "meaning": "A lateral sweep of the extended leg during a turn."
+        }
+      ],
+      "prereqNotes": {
+        "gainerHook": "The Gainer Hook gives you the takeoff, the rotation and the base of the lateral hook."
+      }
+    }
+  },
+  "gainerTuck": {
+    "es": "Es un Back Tuck con despegue de un pie que viaja hacia adelante. Es la puerta de entrada a los gainers.",
+    "en": "It is a Back Tuck with a one-foot takeoff that travels forward. It is the entry point to gainers.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal hacia atras que gana terreno hacia adelante. Despegas de un pie, giras y aterrizas con los dos pies.",
+      "before": {
+        "prerequisites": "Necesitas el Back Tuck. Te da la rotacion hacia atras y el tuck.",
+        "space": "Colchoneta amplia y blanda."
+      },
+      "body": {
+        "feet": "Entrada con un paso y despegue de un pie; el otro se balancea hacia adelante.",
+        "legs": "La pierna libre pasa adelante y luego se recoge con la otra en el tuck.",
+        "arms": "Los brazos suben con el salto y se cierran para girar.",
+        "gaze": "Mira al frente al despegar y busca el piso al final.",
+        "torso": "El torso viaja hacia adelante y se redondea en el tuck."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie mientras la otra pierna pasa adelante."
+        },
+        {
+          "title": "Subida",
+          "body": "Sube con el pecho y empieza la rotacion hacia atras."
+        },
+        {
+          "title": "Tuck",
+          "body": "Recoge las dos rodillas al pecho mientras el cuerpo viaja adelante."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre el tuck y cae con los dos pies."
+        }
+      ],
+      "landing": "Cae con los dos pies, las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Despegar con los dos pies.",
+        "Quedarse parado en vez de viajar adelante.",
+        "Abrir el tuck demasiado pronto.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Back Tuck normal hasta que sea estable.",
+        "Marca el viaje hacia adelante con un salto de un pie sin girar.",
+        "Usa una cama elastica para sentir el gainer."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "Mortal hacia atras que viaja hacia adelante, con despegue de un pie."
+        },
+        {
+          "term": "tuck",
+          "meaning": "Posicion redondeada con las rodillas al pecho y el torso compacto."
+        }
+      ],
+      "prereqNotes": {
+        "backTuck": "El Back Tuck te da la rotacion hacia atras y la forma del tuck."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backward flip that gains ground forward. You take off from one foot, turn and land on both feet.",
+      "before": {
+        "prerequisites": "You need the Back Tuck. It gives you the backward rotation and the tuck.",
+        "space": "A large, soft mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot; the other swings forward.",
+        "legs": "The free leg passes forward and then tucks with the other one.",
+        "arms": "The arms rise with the jump and close to turn.",
+        "gaze": "Look forward on takeoff and find the floor at the end.",
+        "torso": "The torso travels forward and rounds in the tuck."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot while the other leg passes forward."
+        },
+        {
+          "title": "Rise",
+          "body": "Lift the chest and start the backward rotation."
+        },
+        {
+          "title": "Tuck",
+          "body": "Pull both knees to the chest while the body travels forward."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the tuck and land on both feet."
+        }
+      ],
+      "landing": "Land on both feet with bent knees and the chest up.",
+      "mistakes": [
+        "Taking off from both feet.",
+        "Staying in place instead of traveling forward.",
+        "Opening the tuck too early.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the normal Back Tuck until it is stable.",
+        "Mark the forward travel with a one-foot jump without turning.",
+        "Use a trampoline to feel the gainer."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "A backward flip that travels forward, with a one-foot takeoff."
+        },
+        {
+          "term": "tuck",
+          "meaning": "A rounded shape with the knees to the chest and the torso compact."
+        }
+      ],
+      "prereqNotes": {
+        "backTuck": "The Back Tuck gives you the backward rotation and the tuck shape."
+      }
+    }
+  }
+}

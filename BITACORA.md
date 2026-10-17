@@ -470,3 +470,18 @@ Este archivo se rellena a medida que se trabaja en issues y tasks. Cada entrada 
 - Pruebas: migración aditiva aplicada y verificada en la base; 569 videos demo y 15 tutoriales; 17 trucos con detalle estructurado. Typecheck, lint, i18n, unitarios y E2E en verde. Prueba en navegador real en escritorio y 390x600: el detalle muestra el resumen, requisitos con la nota del Tornado, pasos, aterrizaje, errores, tips, glosario y ruta de aprendizaje; las pestañas Ejecución/Tutorial funcionan; antes de tocar el tutorial no hay iframe ni recursos de YouTube; al abrirlo carga `youtube-nocookie` con el video de Nelson Zuniga y el crédito a DREDNTapparel; sin errores de consola ni desborde horizontal. El CI del PR #1 quedó en verde (lint/build, unitarias, i18n, E2E y GitGuardian).
 - Pendientes y riesgos: las olas de los 570 trucos y la búsqueda masiva de tutoriales quedan para la siguiente fase, con revisión humana del contenido; `docs/docs-agents/tutoriales-faltantes.md` es la lista de trabajo para que el usuario pase links. El deploy y la migración de `main` corren por los workflows después del merge. El build de producción quedó delegado al gancho pre-push.
 - Referencias: `docs/docs-agents/reglas-contenido-trucos.md`, `docs/docs-agents/fases.md` (Fase 45), `docs/docs-agents/tutoriales-faltantes.md`, PR #1.
+
+## Tarea: "cómo se hace" detallado del catálogo completo y tutoriales de los 553 (sin issue)
+
+- Issue: no aplica (continuación de la Fase 45, pedido del usuario).
+- Título: "Cómo se hace" detallado de los 553 trucos restantes y tutoriales externos best-effort.
+- Qué pedía: completar el "cómo se hace" detallado de todo el catálogo y sumar tutoriales externos con la regla conservadora de menores.
+- Fecha de inicio: 2026-10-17.
+- Estado actual: completada y validada; pendiente el merge a main.
+- Autor del registro: Leonardo Retamal (@leonardoretamal).
+- Acciones: 6 agentes en paralelo escribieron el detalle de 553 trucos (92 o 93 cada uno) en 40 archivos `packages/db/src/seed/how-to/wave-*.json`; un track de 6 agentes buscó tutoriales para los 553 y agregó 136 tutoriales seguros (151 en total con el piloto). Los pendientes quedaron en `docs/docs-agents/tutoriales-faltantes.md` (419). Se validó el contrato HowToDetail v1, la paridad es/en, los `prereqNotes` contra `trick_relations` y la ausencia de em dash, en dash y emojis. `db:how-to` tardó 40 s y dejó 570/570 trucos con detalle; `db:tutorial-videos` tardó 2 s y sembró 151 tutoriales.
+- Archivos tocados: `packages/db/src/seed/how-to/wave-*.json` (40), `packages/db/src/seed/tutorial-sources/tutorial-wave-*.json` (6), `docs/docs-agents/tutoriales-faltantes.md`, `BITACORA.md`.
+- Comandos relevantes: `pnpm --filter @tricking/db db:how-to`, `db:tutorial-videos`, `pnpm exec tsx` con el esquema Zod para validar los 553 detalles, `prettier --check`, typecheck, lint, tests y el gancho pre-push.
+- Pruebas: validación Zod de los 553 detalles es/en y cobertura 570/570 con detalle; 151 tutoriales; 419 pendientes listados; `/api/tricks/arabian` en el dev server responde con el detalle nuevo; el CI del PR queda como cierre.
+- Pendientes y riesgos: revisión humana de los candidatos marcados por los agentes (canales pequeños o de gimnasia, videos de trampolín y un título con posibles menores descartado); 419 trucos sin tutorial quedan con la lista lista para que el usuario pase links; el merge a main lo autoriza el usuario.
+- Referencias: `docs/docs-agents/reglas-contenido-trucos.md`, `docs/docs-agents/tutoriales-faltantes.md`, PR.

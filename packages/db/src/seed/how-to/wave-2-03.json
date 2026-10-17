@@ -1,0 +1,2317 @@
+{
+  "xOutFull": {
+    "es": "Es un full con las piernas abiertas en equis en el aire y un giro extra.",
+    "en": "It is a full with the legs open in an X in the air and an extra twist.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un full con las piernas en equis. Las piernas se abren y se cierran mientras el cuerpo completa el giro completo y aterriza de pie.",
+      "before": {
+        "prerequisites": "Necesitas el x-out y el full twist. El primero te da la apertura de piernas en equis y el segundo el giro completo.",
+        "space": "Colchoneta amplia y rasa, con recorrido para el pique."
+      },
+      "body": {
+        "feet": "Despegue de un pie; las piernas se abren en equis durante el giro.",
+        "legs": "Las piernas se abren amplias en equis y se cierran para completar el mortal con giro.",
+        "arms": "Los brazos se abren con las piernas y se recogen para cerrar el giro.",
+        "gaze": "Mira por encima del hombro y sigue el cierre de las piernas.",
+        "torso": "El tronco gira firme y el abdomen junta las piernas al cerrar la equis."
+      },
+      "steps": [
+        {
+          "title": "Pique",
+          "body": "Da el paso de pique y sube en full."
+        },
+        {
+          "title": "Apertura en equis",
+          "body": "Abre las piernas en equis en el punto alto."
+        },
+        {
+          "title": "Cierre",
+          "body": "Cierra las piernas mientras completas el giro."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas, absorbiendo el giro.",
+      "mistakes": [
+        "Abrir poco y perder la equis.",
+        "Cerrar tarde y no completar el giro.",
+        "Mirar el piso durante el giro."
+      ],
+      "tips": [
+        "Practica el x-out sin giro hasta que la apertura sea clara.",
+        "Marca la equis a baja altura antes de subir el giro."
+      ],
+      "terms": [
+        {
+          "term": "x-out",
+          "meaning": "Apertura de piernas en equis en el aire."
+        },
+        {
+          "term": "full",
+          "meaning": "Giro atras de 360 grados."
+        }
+      ],
+      "prereqNotes": {
+        "xOut": "Te da la apertura de piernas en equis.",
+        "fullTwist": "Te da el giro completo del aire."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a full with the legs in an X in the air. The legs open and close while the body completes the twist and lands.",
+      "before": {
+        "prerequisites": "You need the x-out and the full twist. The first gives you the X opening and the second the complete turn.",
+        "space": "A wide, flat mat with room for the punch."
+      },
+      "body": {
+        "feet": "Takeoff from one foot; the legs open in an X during the spin.",
+        "legs": "The legs open wide in an X and close to complete the flip with a twist.",
+        "arms": "The arms open with the legs and tuck to close the spin.",
+        "gaze": "Look over the shoulder and follow the closing of the legs.",
+        "torso": "The torso turns firmly and the core brings the legs together on the X close."
+      },
+      "steps": [
+        {
+          "title": "Punch",
+          "body": "Take the punch step and rise in a full."
+        },
+        {
+          "title": "X opening",
+          "body": "Open the legs in an X at the high point."
+        },
+        {
+          "title": "Close",
+          "body": "Close the legs while completing the spin."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with soft knees."
+        }
+      ],
+      "landing": "Land on the feet with bent knees, absorbing the spin.",
+      "mistakes": [
+        "Opening only a little and losing the X.",
+        "Closing late and not completing the spin.",
+        "Looking at the floor during the spin."
+      ],
+      "tips": [
+        "Practice the x-out without a spin until the opening is clear.",
+        "Mark the X at low height before raising the spin."
+      ],
+      "terms": [
+        {
+          "term": "x-out",
+          "meaning": "An X-shaped leg opening in the air."
+        },
+        {
+          "term": "full",
+          "meaning": "A backward 360-degree spin."
+        }
+      ],
+      "prereqNotes": {
+        "xOut": "It gives you the X-shaped leg opening.",
+        "fullTwist": "It gives you the complete air turn."
+      }
+    }
+  },
+  "frontHalf": {
+    "es": "Es un mortal de frente con media vuelta en el aire.",
+    "en": "It is a front flip with a half turn in the air.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal de frente con media vuelta. Entras con carrera y pique, haces el mortal de frente y giras media vuelta para caer de espaldas a la salida.",
+      "before": {
+        "prerequisites": "Necesitas el front tuck. Ese mortal de frente te da la base sobre la que se agrega la media vuelta.",
+        "space": "Colchoneta amplia y rasa, con recorrido de carrera y un colchon detras para la caida."
+      },
+      "body": {
+        "feet": "Despegue de un pie o de los dos tras el pique; el cuerpo gira media vuelta al caer.",
+        "legs": "Las rodillas se agrupan en el mortal de frente y luego la cadera suma la media vuelta.",
+        "arms": "Los brazos ayudan al pique y acompanan la media vuelta.",
+        "gaze": "Mira al frente al entrar y por encima del hombro al girar.",
+        "torso": "El tronco se agrupa en el mortal de frente y gira media vuelta antes de caer."
+      },
+      "steps": [
+        {
+          "title": "Carrera y pique",
+          "body": "Entra con carrera y un pique hacia adelante."
+        },
+        {
+          "title": "Mortal de frente",
+          "body": "Haz el mortal de frente agrupando las rodillas."
+        },
+        {
+          "title": "Media vuelta",
+          "body": "Suma media vuelta en el aire con la cadera."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza mirando hacia atras, con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie mirando hacia atras, con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Girar antes del pico y frenar el mortal.",
+        "Quedar corto en la media vuelta.",
+        "Mirar el piso al girar."
+      ],
+      "tips": [
+        "Practica el front tuck hasta que el agrupado sea firme.",
+        "Suma la media vuelta a baja altura antes de subir."
+      ],
+      "terms": [
+        {
+          "term": "front tuck",
+          "meaning": "Mortal de frente agrupado."
+        },
+        {
+          "term": "pique",
+          "meaning": "Paso con el que plantas un pie para saltar."
+        }
+      ],
+      "prereqNotes": {
+        "frontTuck": "Te da el mortal de frente sobre el que se suma la media vuelta."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a front flip with a half turn. You enter with a run and a punch, do the front flip and turn a half twist to land facing away from the takeoff.",
+      "before": {
+        "prerequisites": "You need the front tuck. That front flip gives you the base the half turn is added to.",
+        "space": "A wide, flat mat with runway and a mat behind for the landing."
+      },
+      "body": {
+        "feet": "Takeoff from one foot or both after the punch; the body turns a half twist on landing.",
+        "legs": "The knees tuck in the front flip and then the hips add the half turn.",
+        "arms": "The arms help the punch and follow the half turn.",
+        "gaze": "Look forward on entry and over the shoulder as you turn.",
+        "torso": "The torso tucks in the front flip and turns a half twist before landing."
+      },
+      "steps": [
+        {
+          "title": "Run and punch",
+          "body": "Enter with a run and a punch forward."
+        },
+        {
+          "title": "Front flip",
+          "body": "Do the front flip, tucking the knees."
+        },
+        {
+          "title": "Half turn",
+          "body": "Add a half turn in the air with the hips."
+        },
+        {
+          "title": "Landing",
+          "body": "Land facing backward, with soft knees."
+        }
+      ],
+      "landing": "Land on the feet facing backward, knees bent and chest up.",
+      "mistakes": [
+        "Turning before the peak and slowing the flip.",
+        "Coming up short on the half turn.",
+        "Looking at the floor while turning."
+      ],
+      "tips": [
+        "Practice the front tuck until the tuck is firm.",
+        "Add the half turn at low height before going higher."
+      ],
+      "terms": [
+        {
+          "term": "front tuck",
+          "meaning": "A tucked front flip."
+        },
+        {
+          "term": "punch",
+          "meaning": "A step where you plant one foot to jump."
+        }
+      ],
+      "prereqNotes": {
+        "frontTuck": "It gives you the front flip that the half turn is added to."
+      }
+    }
+  },
+  "handcuff360DiveRoll": {
+    "es": "Es un dive roll con un giro completo de 360 grados y las manos juntas detras de la espalda.",
+    "en": "It is a dive roll with a full 360-degree twist and the hands clasped behind the back.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un dive roll de 360 con las manos en posicion handcuff. Te lanzas con las manos juntas atras, agregas un giro completo y ruedas por el hombro hasta quedar de pie.",
+      "before": {
+        "prerequisites": "Necesitas el dive roll. Ese rollo de entrada te da la base sobre la que se agrega el giro de 360 grados.",
+        "space": "Colchoneta larga, amplia y rasa, con recorrido de carrera y espacio para rodar."
+      },
+      "body": {
+        "feet": "Carrera de entrada; el cuerpo pasa del pique al rollo por el hombro.",
+        "legs": "Las piernas se recogen en el aire y guian el rollo por el hombro y la espalda.",
+        "arms": "Las manos van juntas detras de la espalda, en posicion handcuff, sin apoyarse.",
+        "gaze": "Mira por encima del hombro hacia donde ruedas para proteger el cuello.",
+        "torso": "El tronco gira 360 grados en el aire y luego se redondea en el rollo."
+      },
+      "steps": [
+        {
+          "title": "Carrera",
+          "body": "Corre hacia adelante con las manos juntas detras de la espalda."
+        },
+        {
+          "title": "Lanzamiento",
+          "body": "Lanzate hacia adelante y sube las piernas."
+        },
+        {
+          "title": "Giro",
+          "body": "Agrega un giro completo de 360 grados en el aire."
+        },
+        {
+          "title": "Rollo",
+          "body": "Rueda por el hombro y la espalda hasta quedar de pie."
+        }
+      ],
+      "landing": "Termina de pie tras el rollo, con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Apoyar las manos y romper la posicion handcuff.",
+        "Girar de mas y caer sobre el cuello.",
+        "Mirar el piso y no por encima del hombro."
+      ],
+      "tips": [
+        "Practica el dive roll normal hasta que sea fluido.",
+        "Sumerjete con la cabeza bien apartada para rodar por el hombro."
+      ],
+      "terms": [
+        {
+          "term": "dive roll",
+          "meaning": "Rollo en el que te lanzas hacia adelante y ruedas por el hombro."
+        },
+        {
+          "term": "handcuff",
+          "meaning": "Posicion con las manos juntas detras de la espalda."
+        }
+      ],
+      "prereqNotes": {
+        "diveRoll": "Te da el rollo de entrada sobre el que se agrega el giro completo."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a 360 dive roll with the hands in the handcuff position. You dive with the hands clasped behind, add a full twist and roll over the shoulder until standing.",
+      "before": {
+        "prerequisites": "You need the dive roll. That entry roll gives you the base the 360 twist is added to.",
+        "space": "A long, wide, flat mat with runway and room to roll."
+      },
+      "body": {
+        "feet": "Running entry; the body goes from the punch into the shoulder roll.",
+        "legs": "The legs tuck in the air and guide the roll over the shoulder and back.",
+        "arms": "The hands stay clasped behind the back, in the handcuff position, without planting.",
+        "gaze": "Look over the shoulder toward where you roll to protect the neck.",
+        "torso": "The torso twists 360 degrees in the air and then rounds for the roll."
+      },
+      "steps": [
+        {
+          "title": "Run",
+          "body": "Run forward with the hands clasped behind the back."
+        },
+        {
+          "title": "Dive",
+          "body": "Dive forward and lift the legs."
+        },
+        {
+          "title": "Twist",
+          "body": "Add a full 360-degree twist in the air."
+        },
+        {
+          "title": "Roll",
+          "body": "Roll over the shoulder and back until standing."
+        }
+      ],
+      "landing": "Finish standing after the roll, knees bent and chest up.",
+      "mistakes": [
+        "Planting the hands and breaking the handcuff position.",
+        "Over-rotating and landing on the neck.",
+        "Looking at the floor instead of over the shoulder."
+      ],
+      "tips": [
+        "Practice the plain dive roll until it is fluid.",
+        "Dive with the head well out of the way to roll over the shoulder."
+      ],
+      "terms": [
+        {
+          "term": "dive roll",
+          "meaning": "A roll where you dive forward and roll over the shoulder."
+        },
+        {
+          "term": "handcuff",
+          "meaning": "A position with the hands clasped behind the back."
+        }
+      ],
+      "prereqNotes": {
+        "diveRoll": "It gives you the entry roll that the full twist is added to."
+      }
+    }
+  },
+  "rodeoJanitorTwist": {
+    "es": "Es un janitor twist con un agarre tipo rodeo antes del giro.",
+    "en": "It is a janitor twist with a rodeo grab before the twist.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un janitor twist con agarre rodeo. Das un paso, pateas una pierna para arrancar el giro y agregas un giro desviado antes de caer.",
+      "before": {
+        "prerequisites": "Necesitas el janitor twist. Sobre ese giro se monta el agarre de pierna tipo rodeo.",
+        "space": "Colchoneta amplia y rasa, con recorrido para el pique."
+      },
+      "body": {
+        "feet": "Despegue de un pie; una pierna se patea y luego se agarra en el giro.",
+        "legs": "La pierna de pateo arranca el giro y se acerca al cuerpo como en un rodeo.",
+        "arms": "Un brazo agarra la pierna; el otro abre el giro.",
+        "gaze": "Mira por encima del hombro y sigue la direccion del giro.",
+        "torso": "El tronco gira desviado y el abdomen sostiene el agarre."
+      },
+      "steps": [
+        {
+          "title": "Paso y patada",
+          "body": "Da un paso y patea una pierna para arrancar el giro."
+        },
+        {
+          "title": "Agarre",
+          "body": "Acerca la pierna al cuerpo, estilo rodeo."
+        },
+        {
+          "title": "Giro desviado",
+          "body": "Gira el cuerpo con el agarre antes de caer."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas, absorbiendo el giro.",
+      "mistakes": [
+        "Abrir la mano y perder el agarre.",
+        "Girar de frente y perder el eje del janitor.",
+        "Mirar el piso en el giro."
+      ],
+      "tips": [
+        "Practica el janitor twist antes de sumar el agarre.",
+        "Marca el agarre a baja altura hasta que sea estable."
+      ],
+      "terms": [
+        {
+          "term": "janitor twist",
+          "meaning": "Giro en el que una pierna barre y arranca la rotacion."
+        },
+        {
+          "term": "rodeo",
+          "meaning": "Agarre de pierna en el aire durante un giro."
+        }
+      ],
+      "prereqNotes": {
+        "janitorTwist": "Te da el giro de base sobre el que se monta el agarre."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a janitor twist with a rodeo grab before the twist.",
+      "before": {
+        "prerequisites": "You need the janitor twist. On that spin you mount the rodeo leg grab.",
+        "space": "A wide, flat mat with room for the punch."
+      },
+      "body": {
+        "feet": "Takeoff from one foot; one leg kicks and is then grabbed in the spin.",
+        "legs": "The kicking leg starts the spin and comes in toward the body as in a rodeo.",
+        "arms": "One arm grabs the leg; the other opens the spin.",
+        "gaze": "Look over the shoulder and follow the direction of the spin.",
+        "torso": "The torso spins off-axis and the core holds the grab."
+      },
+      "steps": [
+        {
+          "title": "Step and kick",
+          "body": "Take a step and kick one leg to start the spin."
+        },
+        {
+          "title": "Grab",
+          "body": "Bring the leg in toward the body, rodeo style."
+        },
+        {
+          "title": "Off-axis spin",
+          "body": "Turn the body with the grab before landing."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with soft knees."
+        }
+      ],
+      "landing": "Land on the feet with bent knees, absorbing the spin.",
+      "mistakes": [
+        "Opening the hand and losing the grab.",
+        "Turning forward and losing the janitor axis.",
+        "Looking at the floor during the spin."
+      ],
+      "tips": [
+        "Practice the janitor twist before adding the grab.",
+        "Mark the grab at low height until it is stable."
+      ],
+      "terms": [
+        {
+          "term": "janitor twist",
+          "meaning": "A spin where a leg sweeps and starts the rotation."
+        },
+        {
+          "term": "rodeo",
+          "meaning": "A leg grab in the air during a spin."
+        }
+      ],
+      "prereqNotes": {
+        "janitorTwist": "It gives you the base spin that the grab rides on."
+      }
+    }
+  },
+  "websterHyperhook": {
+    "es": "Es un webster que salta de un pie con la pierna libre al frente y remata en hyperhook.",
+    "en": "It is a webster that jumps from one foot with the free leg forward and finishes in a hyperhook.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un webster con remate hyperhook. Saltas de un pie con la pierna libre al frente, giras el mortal de frente y enganchas esa pierna antes de caer.",
+      "before": {
+        "prerequisites": "Necesitas el webster half. Ese salto de frente te da la base del mortal sobre la que se monta el gancho.",
+        "space": "Colchoneta amplia y rasa, con recorrido para el pique."
+      },
+      "body": {
+        "feet": "Despegue de un pie con la pierna libre extendida al frente; esa misma pierna remata el gancho.",
+        "legs": "La pierna libre arranca extendida al frente y luego se engancha en el giro.",
+        "arms": "Los brazos ayudan al salto y se recogen para el gancho.",
+        "gaze": "Mira al frente al saltar y sigue la pierna del gancho al girar.",
+        "torso": "El tronco gira de frente y arquea al enganchar la pierna."
+      },
+      "steps": [
+        {
+          "title": "Salto",
+          "body": "Salta desde un solo pie con la pierna libre extendida al frente."
+        },
+        {
+          "title": "Mortal de frente",
+          "body": "Gira el mortal de frente con esa pierna."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Engancha la pierna con la cadera abierta."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con la rodilla flexionada."
+        }
+      ],
+      "landing": "Cae de pie con la rodilla del gancho flexionada y el pecho arriba.",
+      "mistakes": [
+        "Perder la pierna extendida al frente.",
+        "Ganchar con la rodilla doblada.",
+        "Mirar el piso en el giro."
+      ],
+      "tips": [
+        "Practica el webster half hasta que el salto sea firme.",
+        "Marca el gancho a media altura antes de buscar el remate."
+      ],
+      "terms": [
+        {
+          "term": "webster",
+          "meaning": "Salto de un pie con la pierna libre extendida al frente y mortal de frente."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Gancho de pierna con la cadera abierta."
+        }
+      ],
+      "prereqNotes": {
+        "websterHalf": "Te da el salto y el mortal de frente sobre los que se monta el gancho."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a webster with a hyperhook finish. You jump from one foot with the free leg forward, spin the front flip and hook that leg before landing.",
+      "before": {
+        "prerequisites": "You need the webster half. That forward jump gives you the flip base the hook rides on.",
+        "space": "A wide, flat mat with room for the punch."
+      },
+      "body": {
+        "feet": "Takeoff from one foot with the free leg extended forward; that same leg finishes the hook.",
+        "legs": "The free leg starts extended forward and then hooks in the spin.",
+        "arms": "The arms help the jump and tuck for the hook.",
+        "gaze": "Look forward on the jump and follow the hooking leg as you turn.",
+        "torso": "The torso turns forward and arches when hooking the leg."
+      },
+      "steps": [
+        {
+          "title": "Jump",
+          "body": "Jump from one foot with the free leg extended forward."
+        },
+        {
+          "title": "Front flip",
+          "body": "Spin the front flip with that leg."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Hook the leg with the hip open."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with the knee bent."
+        }
+      ],
+      "landing": "Land on the feet with the hook-side knee bent and the chest up.",
+      "mistakes": [
+        "Losing the leg extended forward.",
+        "Hooking with a bent knee.",
+        "Looking at the floor during the spin."
+      ],
+      "tips": [
+        "Practice the webster half until the jump is firm.",
+        "Mark the hook at medium height before reaching for the finish."
+      ],
+      "terms": [
+        {
+          "term": "webster",
+          "meaning": "A one-foot jump with the free leg extended forward and a front flip."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A leg hook with the hip open."
+        }
+      ],
+      "prereqNotes": {
+        "websterHalf": "It gives you the jump and the front flip that the hook rides on."
+      }
+    }
+  },
+  "aerialScissor": {
+    "es": "Es un aerial con una tijera de piernas ejecutada en el punto mas alto del flip.",
+    "en": "It is an aerial with a leg scissor executed at the highest point of the flip.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un aerial con cruce de tijera. Sales de lado y en el aire cruzas y vuelves a abrir las piernas antes de caer sobre una pierna.",
+      "before": {
+        "prerequisites": "Necesitas el aerial mega. Ese aerial te da la base para cruzar las piernas en el aire.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado para el paso lateral."
+      },
+      "body": {
+        "feet": "Despegue de un pie hacia el costado; las piernas cruzan y abren en el aire.",
+        "legs": "Las piernas cruzan en tijera y se vuelven a abrir antes de caer sobre una pierna.",
+        "arms": "Los brazos abren el aerial y acompanan el cruce.",
+        "gaze": "Mira al costado y luego al horizonte para ubicar la caida.",
+        "torso": "El tronco gira de costado y el abdomen sostiene el cruce de piernas."
+      },
+      "steps": [
+        {
+          "title": "Paso lateral",
+          "body": "Da un paso al costado para entrar al aerial."
+        },
+        {
+          "title": "Aerial",
+          "body": "Sube en aerial, con el cuerpo de costado."
+        },
+        {
+          "title": "Tijera",
+          "body": "Cruza y abre las piernas en el punto alto."
+        },
+        {
+          "title": "Caida",
+          "body": "Cae primero sobre una pierna con la rodilla flexionada."
+        }
+      ],
+      "landing": "Cae sobre una pierna, con la rodilla flexionada y el pecho arriba. La otra pierna llega despues.",
+      "mistakes": [
+        "Cruzar las piernas tarde y perder la tijera.",
+        "Caer sobre las dos piernas y perder el aerial.",
+        "Mirar el piso durante el cruce."
+      ],
+      "tips": [
+        "Practica el aerial hasta que el eje lateral sea estable.",
+        "Marca el cruce a baja altura antes de subirlo."
+      ],
+      "terms": [
+        {
+          "term": "aerial",
+          "meaning": "Mortal lateral sin manos que despega de un pie."
+        },
+        {
+          "term": "scissor",
+          "meaning": "Tijera: cruzar y abrir las piernas en el aire."
+        }
+      ],
+      "prereqNotes": {
+        "aerialMega": "Te da el aerial con el eje y la apertura sobre los que se cruza la tijera."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an aerial with a scissor switch. You step out to the side and cross then reopen the legs in the air before landing on one leg.",
+      "before": {
+        "prerequisites": "You need the aerial mega. That aerial gives you the base to cross the legs in the air.",
+        "space": "A wide, flat mat with space to the side for the lateral step."
+      },
+      "body": {
+        "feet": "Takeoff from one foot to the side; the legs cross and open in the air.",
+        "legs": "The legs cross in a scissor and reopen before landing on one leg.",
+        "arms": "The arms open the aerial and follow the cross.",
+        "gaze": "Look to the side and then to the horizon to spot the landing.",
+        "torso": "The torso turns sideways and the core holds the leg cross."
+      },
+      "steps": [
+        {
+          "title": "Side step",
+          "body": "Take a step to the side to enter the aerial."
+        },
+        {
+          "title": "Aerial",
+          "body": "Rise in an aerial, with the body sideways."
+        },
+        {
+          "title": "Scissor",
+          "body": "Cross and open the legs at the high point."
+        },
+        {
+          "title": "Landing",
+          "body": "Land first on one leg with the knee bent."
+        }
+      ],
+      "landing": "Land on one leg, knee bent and chest up. The other leg arrives after.",
+      "mistakes": [
+        "Crossing the legs late and losing the scissor.",
+        "Landing on both legs and losing the aerial.",
+        "Looking at the floor during the cross."
+      ],
+      "tips": [
+        "Practice the aerial until the lateral axis is stable.",
+        "Mark the cross at low height before raising it."
+      ],
+      "terms": [
+        {
+          "term": "aerial",
+          "meaning": "A no-hands lateral flip that takes off from one foot."
+        },
+        {
+          "term": "scissor",
+          "meaning": "A leg scissor: crossing and opening the legs in the air."
+        }
+      ],
+      "prereqNotes": {
+        "aerialMega": "It gives you the aerial with the axis and opening that the scissor is crossed on."
+      }
+    }
+  },
+  "blasterscoot": {
+    "es": "Es un scoot potente de manga larga: te lanzas con velocidad, plantas las manos y barres las piernas con un empuje explosivo.",
+    "en": "It is a powerful, long-range scoot: you dive with speed, plant the hands and sweep the legs with an explosive push.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un roundkick invertido con apoyo de manos y un giro completo en el suelo. Te lanzas con mas velocidad, plantas las manos y pasas las piernas juntas con un empuje explosivo.",
+      "before": {
+        "prerequisites": "No necesitas otro truco del catalogo, pero conviene dominar el scoot basico y el apoyo de manos antes de sumar velocidad.",
+        "space": "Colchoneta larga, amplia y rasa, con recorrido para la carrera de entrada."
+      },
+      "body": {
+        "feet": "Carrera corta de entrada; las manos se plantan y las piernas barren juntas.",
+        "legs": "Las piernas pasan juntas y estiradas, barriendo cerca del suelo durante el giro.",
+        "arms": "Las manos se plantan para empujar; los brazos sostienen el cuerpo invertido.",
+        "gaze": "Mira por encima del hombro durante el giro y ubica el piso al final.",
+        "torso": "El tronco pasa invertido y se endereza al salir del giro."
+      },
+      "steps": [
+        {
+          "title": "Carrera",
+          "body": "Toma una carrera corta con mas velocidad que en un scoot normal."
+        },
+        {
+          "title": "Plantada",
+          "body": "Planta las manos y sube las caderas."
+        },
+        {
+          "title": "Barrido",
+          "body": "Pasa las piernas juntas y estiradas con un empuje explosivo."
+        },
+        {
+          "title": "Caida",
+          "body": "Endereza el tronco y aterriza de pie."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas, absorbiendo el empuje.",
+      "mistakes": [
+        "Plantar las manos demasiado cerca y frenar el giro.",
+        "Doblar las piernas en el barrido.",
+        "Mirar el piso y perder el giro completo."
+      ],
+      "tips": [
+        "Practica el scoot basico hasta que el barrido sea fluido.",
+        "Suma la velocidad de a poco para no perder el control."
+      ],
+      "terms": [
+        {
+          "term": "scoot",
+          "meaning": "Movimiento con apoyo de manos en el que las piernas barrene el suelo y giras 360 grados."
+        },
+        {
+          "term": "handplant",
+          "meaning": "Apoyo de manos en el piso para pasar el cuerpo."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an inverted roundkick with a handplant and a full turn on the floor. You dive with more speed, plant the hands and pass the legs together with an explosive push.",
+      "before": {
+        "prerequisites": "You do not need another trick from the catalog, but it is worth knowing the basic scoot and the handplant before adding speed.",
+        "space": "A long, wide, flat mat with runway for the entry run."
+      },
+      "body": {
+        "feet": "Short entry run; the hands plant and the legs sweep together.",
+        "legs": "The legs pass together and extended, sweeping near the floor during the turn.",
+        "arms": "The hands plant to push; the arms hold the inverted body.",
+        "gaze": "Look over the shoulder during the turn and spot the floor at the end.",
+        "torso": "The torso passes inverted and straightens as you come out of the turn."
+      },
+      "steps": [
+        {
+          "title": "Run",
+          "body": "Take a short run with more speed than a normal scoot."
+        },
+        {
+          "title": "Plant",
+          "body": "Plant the hands and lift the hips."
+        },
+        {
+          "title": "Sweep",
+          "body": "Pass the legs together and extended with an explosive push."
+        },
+        {
+          "title": "Landing",
+          "body": "Straighten the torso and land on the feet."
+        }
+      ],
+      "landing": "Land on the feet with bent knees, absorbing the push.",
+      "mistakes": [
+        "Planting the hands too close and slowing the turn.",
+        "Bending the legs on the sweep.",
+        "Looking at the floor and losing the full turn."
+      ],
+      "tips": [
+        "Practice the basic scoot until the sweep is fluid.",
+        "Add speed little by little so you keep control."
+      ],
+      "terms": [
+        {
+          "term": "scoot",
+          "meaning": "A handplant move where the legs sweep the floor and you turn 360 degrees."
+        },
+        {
+          "term": "handplant",
+          "meaning": "A hand support on the floor to pass the body."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "butterflyKickScissor": {
+    "es": "Es una patada de mariposa con una tijera: las piernas se cruzan y se intercambian en el aire.",
+    "en": "It is a butterfly kick with a scissor: the legs cross and swap in the air.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada de mariposa con tijera. En el aire las piernas se cruzan y se intercambian antes de abrirse para caer de pie.",
+      "before": {
+        "prerequisites": "Necesitas el butterfly kick. Esa patada de mariposa te da la base para cruzar las piernas.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado."
+      },
+      "body": {
+        "feet": "Despegue de un pie; las piernas se cruzan y se intercambian en el aire.",
+        "legs": "Las piernas de la mariposa se cruzan en tijera y se intercambian antes de abrirse.",
+        "arms": "Los brazos abren la mariposa y acompanan el intercambio.",
+        "gaze": "Mira de costado al entrar y al horizonte al caer.",
+        "torso": "El tronco gira de costado y el abdomen sostiene el cruce."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso de entrada a la patada de mariposa."
+        },
+        {
+          "title": "Mariposa",
+          "body": "Sube en la mariposa con el cuerpo de costado."
+        },
+        {
+          "title": "Tijera",
+          "body": "Cruza e intercambia las piernas en el aire."
+        },
+        {
+          "title": "Caida",
+          "body": "Abre las piernas y aterriza de pie."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Cruzar tarde y perder la tijera.",
+        "Quedar corto en el giro.",
+        "Mirar el piso durante el cruce."
+      ],
+      "tips": [
+        "Practica el butterfly kick hasta que la mariposa sea estable.",
+        "Marca el cruce a baja altura antes de subirlo."
+      ],
+      "terms": [
+        {
+          "term": "butterfly kick",
+          "meaning": "Patada de mariposa con el cuerpo de costado y las piernas describiendo un circulo."
+        },
+        {
+          "term": "scissor",
+          "meaning": "Tijera: cruzar e intercambiar las piernas en el aire."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyKick": "Te da la patada de mariposa sobre la que se cruza la tijera."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a butterfly kick with a scissor. In the air the legs cross and swap before opening to land on the feet.",
+      "before": {
+        "prerequisites": "You need the butterfly kick. That butterfly kick gives you the base to cross the legs.",
+        "space": "A wide, flat mat with space to the side."
+      },
+      "body": {
+        "feet": "Takeoff from one foot; the legs cross and swap in the air.",
+        "legs": "The butterfly legs cross in a scissor and swap before opening.",
+        "arms": "The arms open the butterfly and follow the swap.",
+        "gaze": "Look to the side on entry and to the horizon on landing.",
+        "torso": "The torso turns sideways and the core holds the cross."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the entry step into the butterfly kick."
+        },
+        {
+          "title": "Butterfly",
+          "body": "Rise in the butterfly with the body sideways."
+        },
+        {
+          "title": "Scissor",
+          "body": "Cross and swap the legs in the air."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the legs and land on the feet."
+        }
+      ],
+      "landing": "Land on the feet with bent knees and the chest up.",
+      "mistakes": [
+        "Crossing late and losing the scissor.",
+        "Coming up short in the turn.",
+        "Looking at the floor during the cross."
+      ],
+      "tips": [
+        "Practice the butterfly kick until the butterfly is stable.",
+        "Mark the cross at low height before raising it."
+      ],
+      "terms": [
+        {
+          "term": "butterfly kick",
+          "meaning": "A sideways kick where the body turns and the legs trace a circle."
+        },
+        {
+          "term": "scissor",
+          "meaning": "A leg scissor: crossing and swapping the legs in the air."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyKick": "It gives you the butterfly kick that the scissor is crossed on."
+      }
+    }
+  },
+  "butterflyTwistDoubleRound": {
+    "es": "Es un butterfly twist con dos patadas round encadenadas antes de aterrizar.",
+    "en": "It is a butterfly twist with two chained round kicks before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un b-twist con doble round. Tras el giro de 360 grados la pierna lanza dos patadas circulares encadenadas antes de aterrizar de pie.",
+      "before": {
+        "prerequisites": "Necesitas el butterfly twist round. Ese b-twist con una patada te da la base para la segunda patada.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado para las patadas."
+      },
+      "body": {
+        "feet": "Despegue de un pie; la pierna lanza dos patadas circulares encadenadas.",
+        "legs": "Tras el giro la pierna dispara dos round kicks seguidos sin tocar el piso.",
+        "arms": "Los brazos cierran el giro y se recogen entre las dos patadas.",
+        "gaze": "Mira por encima del hombro y sigue las dos patadas.",
+        "torso": "El tronco gira sobre el eje del b-twist y sostiene las dos patadas."
+      },
+      "steps": [
+        {
+          "title": "Paso",
+          "body": "Da el paso de entrada al butterfly twist."
+        },
+        {
+          "title": "Giro",
+          "body": "Completa los 360 grados del b-twist."
+        },
+        {
+          "title": "Doble round",
+          "body": "Lanza dos patadas circulares encadenadas."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas, absorbiendo el giro y las patadas.",
+      "mistakes": [
+        "Lanzar la segunda patada floja o descolgada.",
+        "Bajar el pecho entre las patadas.",
+        "Mirar el piso en el giro."
+      ],
+      "tips": [
+        "Consolida el b-twist con una patada antes de sumar la segunda.",
+        "Marca las dos patadas a media altura hasta que salgan encadenadas."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: giro de 360 grados con el cuerpo casi horizontal."
+        },
+        {
+          "term": "round kick",
+          "meaning": "Patada circular con la pierna estirada."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistRound": "Te da el b-twist con una patada sobre el que se encadena la segunda."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a b-twist with a double round. After the 360-degree turn the leg throws two chained round kicks before landing on the feet.",
+      "before": {
+        "prerequisites": "You need the butterfly twist round. That b-twist with one kick gives you the base for the second kick.",
+        "space": "A wide, flat mat with space to the side for the kicks."
+      },
+      "body": {
+        "feet": "Takeoff from one foot; the leg throws two chained round kicks.",
+        "legs": "After the turn the leg fires two round kicks in a row without touching the floor.",
+        "arms": "The arms close the spin and tuck between the two kicks.",
+        "gaze": "Look over the shoulder and follow both kicks.",
+        "torso": "The torso turns over the b-twist axis and carries the two kicks."
+      },
+      "steps": [
+        {
+          "title": "Step",
+          "body": "Take the entry step into the butterfly twist."
+        },
+        {
+          "title": "Turn",
+          "body": "Complete the 360 degrees of the b-twist."
+        },
+        {
+          "title": "Double round",
+          "body": "Throw two chained round kicks."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with soft knees."
+        }
+      ],
+      "landing": "Land on the feet with bent knees, absorbing the spin and the kicks.",
+      "mistakes": [
+        "Throwing the second kick weak or loose.",
+        "Dropping the chest between the kicks.",
+        "Looking at the floor during the spin."
+      ],
+      "tips": [
+        "Nail the b-twist with one kick before adding the second.",
+        "Mark both kicks at medium height until they come out chained."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: a 360-degree spin with the body almost horizontal."
+        },
+        {
+          "term": "round kick",
+          "meaning": "A circular kick with the leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistRound": "It gives you the b-twist with one kick that the second is chained onto."
+      }
+    }
+  },
+  "butterflyTwistHyperhook": {
+    "es": "Es un butterfly twist que remata en hyperhook con un giro extra de la pierna.",
+    "en": "It is a butterfly twist that finishes in a hyperhook with extra rotation of the leg.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un b-twist que remata en hyperhook. Tras el giro la pierna remata en gancho con un giro extra antes de aterrizar de pie.",
+      "before": {
+        "prerequisites": "Necesitas el butterfly twist hyper. Ese b-twist con remate te da la base para el gancho final.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado para el gancho."
+      },
+      "body": {
+        "feet": "Despegue de un pie; la pierna del gancho sella la caida.",
+        "legs": "Despues del giro la pierna sale en gancho extendido con un giro extra de cadera.",
+        "arms": "Los brazos cierran el giro y se recogen para el gancho.",
+        "gaze": "Mira por encima del hombro y sigue la pierna del gancho.",
+        "torso": "El tronco gira sobre el eje del b-twist y abre el gancho al final."
+      },
+      "steps": [
+        {
+          "title": "Paso",
+          "body": "Da el paso de entrada al butterfly twist."
+        },
+        {
+          "title": "Giro",
+          "body": "Completa los 360 grados del b-twist."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Remata con el gancho extendido y un giro extra de cadera."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con la rodilla flexionada."
+        }
+      ],
+      "landing": "Cae sobre la pierna del gancho y baja la otra. Absorbe flexionando la rodilla.",
+      "mistakes": [
+        "Ganchar con la pierna doblada.",
+        "Perder el giro extra y quedar corto.",
+        "Mirar el piso en el remate."
+      ],
+      "tips": [
+        "Consolida el b-twist basico antes de sumar el gancho.",
+        "Marca el gancho a media altura hasta que sea estable."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: giro de 360 grados con el cuerpo casi horizontal."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Gancho de pierna con la cadera abierta."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistHyper": "Te da el b-twist con remate sobre el que se monta el gancho final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a b-twist that finishes in a hyperhook. After the turn the leg finishes in a hook with extra rotation and you land on your feet.",
+      "before": {
+        "prerequisites": "You need the butterfly twist hyper. That b-twist with a finish gives you the base for the final hook.",
+        "space": "A wide, flat mat with space to the side for the hook."
+      },
+      "body": {
+        "feet": "Takeoff from one foot; the hook leg seals the landing.",
+        "legs": "After the turn the leg comes out in an extended hook with extra hip rotation.",
+        "arms": "The arms close the spin and tuck for the hook.",
+        "gaze": "Look over the shoulder and follow the hooking leg.",
+        "torso": "The torso turns over the b-twist axis and opens the hook at the end."
+      },
+      "steps": [
+        {
+          "title": "Step",
+          "body": "Take the entry step into the butterfly twist."
+        },
+        {
+          "title": "Turn",
+          "body": "Complete the 360 degrees of the b-twist."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Finish with the extended hook and extra hip rotation."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with the knee bent."
+        }
+      ],
+      "landing": "You land on the hook leg and lower the other. Absorb by bending the knee.",
+      "mistakes": [
+        "Hooking with a bent leg.",
+        "Losing the extra rotation and coming up short.",
+        "Looking at the floor on the finish."
+      ],
+      "tips": [
+        "Nail the basic b-twist before adding the hook.",
+        "Mark the hook at medium height until it is stable."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: a 360-degree spin with the body almost horizontal."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A leg hook with the hip open."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistHyper": "It gives you the b-twist with a finish that the final hook rides on."
+      }
+    }
+  },
+  "butterflyTwistShurikenHyperhook": {
+    "es": "Es un butterfly twist con un shuriken que termina en hyperhook.",
+    "en": "It is a butterfly twist with a shuriken that finishes in a hyperhook.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un b-twist con shuriken y hyperhook. Tras el giro la pierna lanza un corte exterior y remata en gancho con giro extra antes de caer.",
+      "before": {
+        "prerequisites": "Necesitas el butterfly twist shuriken y el butterfly twist hyperhook. El primero te da el corte y el segundo el remate en gancho.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado para el corte y el gancho."
+      },
+      "body": {
+        "feet": "Despegue de un pie; la pierna hace el corte y luego el gancho.",
+        "legs": "Tras el giro la pierna lanza un corte exterior amplio y remata en gancho con giro extra.",
+        "arms": "Los brazos cierran el giro y se recogen para el corte y el gancho.",
+        "gaze": "Mira por encima del hombro y sigue la pierna en cada fase.",
+        "torso": "El tronco gira sobre el eje del b-twist y encadena corte y gancho."
+      },
+      "steps": [
+        {
+          "title": "Paso",
+          "body": "Da el paso de entrada al butterfly twist."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Lanza el corte exterior con la pierna."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Remata en gancho con giro extra."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con la rodilla flexionada."
+        }
+      ],
+      "landing": "Cae sobre la pierna del gancho y baja la otra. Absorbe flexionando la rodilla.",
+      "mistakes": [
+        "Cortar y ganchar con la pierna doblada.",
+        "Perder el giro entre el corte y el gancho.",
+        "Mirar el piso en el remate."
+      ],
+      "tips": [
+        "Consolida el b-twist shuriken antes de sumar el gancho.",
+        "Marca la cadena corte y gancho a media altura."
+      ],
+      "terms": [
+        {
+          "term": "shuriken",
+          "meaning": "Corte exterior amplio con la pierna estirada."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Gancho de pierna con la cadera abierta."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistShuriken": "Te da el corte exterior dentro del b-twist.",
+        "butterflyTwistHyperhook": "Te da el remate en gancho sobre el que se encadena el corte."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a b-twist with a shuriken and a hyperhook. After the turn the leg throws an outside cut and finishes in a hook with extra rotation before landing.",
+      "before": {
+        "prerequisites": "You need the butterfly twist shuriken and the butterfly twist hyperhook. The first gives you the cut and the second the hook finish.",
+        "space": "A wide, flat mat with space to the side for the cut and the hook."
+      },
+      "body": {
+        "feet": "Takeoff from one foot; the leg does the cut and then the hook.",
+        "legs": "After the turn the leg throws a wide outside cut and finishes in a hook with extra rotation.",
+        "arms": "The arms close the spin and tuck for the cut and the hook.",
+        "gaze": "Look over the shoulder and follow the leg in each phase.",
+        "torso": "The torso turns over the b-twist axis and chains the cut and the hook."
+      },
+      "steps": [
+        {
+          "title": "Step",
+          "body": "Take the entry step into the butterfly twist."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Throw the outside cut with the leg."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Finish in a hook with extra rotation."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with the knee bent."
+        }
+      ],
+      "landing": "You land on the hook leg and lower the other. Absorb by bending the knee.",
+      "mistakes": [
+        "Cutting and hooking with a bent leg.",
+        "Losing the spin between the cut and the hook.",
+        "Looking at the floor on the finish."
+      ],
+      "tips": [
+        "Nail the b-twist shuriken before adding the hook.",
+        "Mark the cut-and-hook chain at medium height."
+      ],
+      "terms": [
+        {
+          "term": "shuriken",
+          "meaning": "A wide outside cut with the leg extended."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A leg hook with the hip open."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistShuriken": "It gives you the outside cut inside the b-twist.",
+        "butterflyTwistHyperhook": "It gives you the hook finish that the cut is chained onto."
+      }
+    }
+  },
+  "cartwheel": {
+    "es": "Es una rueda lateral: apoyas una mano y luego la otra mientras el cuerpo pasa de lado.",
+    "en": "It is a sideways cartwheel: you plant one hand then the other while the body passes to the side.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una rueda lateral. Apoyas una mano y luego la otra mientras el cuerpo pasa de lado con las piernas abiertas y cae de pie.",
+      "before": {
+        "prerequisites": "No necesitas otro truco. Es una de las entradas basicas del tricking, conviene practicarla despacio.",
+        "space": "Colchoneta firme y rasa, con espacio al costado para pasar."
+      },
+      "body": {
+        "feet": "Una mano y luego la otra se apoyan; los pies pasan por arriba, uno despues del otro.",
+        "legs": "Las piernas se abren y pasan de lado, una primero y la otra despues.",
+        "arms": "Las manos se apoyan una despues de la otra y empujan el cuerpo de lado.",
+        "gaze": "Mira al piso entre las manos al pasar y al frente al caer.",
+        "torso": "El tronco pasa invertido de costado y se endereza al caer."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da un paso al costado y baja la primera mano."
+        },
+        {
+          "title": "Apoyo",
+          "body": "Apoya la segunda mano y sube las caderas."
+        },
+        {
+          "title": "Paso de lado",
+          "body": "Pasa las piernas abiertas de costado, una despues de la otra."
+        },
+        {
+          "title": "Caida",
+          "body": "Baja un pie y luego el otro, con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae pie tras pie, con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Apoyar las manos demasiado juntas y frenar el paso.",
+        "No subir las caderas y quedar bajo.",
+        "Mirar al frente y perder el apoyo."
+      ],
+      "tips": [
+        "Practica el paso de lado despacio antes de sumar velocidad.",
+        "Marca las manos en el piso para sentir la linea."
+      ],
+      "terms": [
+        {
+          "term": "cartwheel",
+          "meaning": "Rueda lateral con apoyo de manos y el cuerpo pasando de costado."
+        },
+        {
+          "term": "apoyo",
+          "meaning": "El punto donde la mano toca el piso."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a sideways cartwheel. You plant one hand then the other as the body passes to the side with the legs split, and come down on your feet.",
+      "before": {
+        "prerequisites": "You do not need another trick. It is one of the basic entries of tricking, and it is worth practicing slowly.",
+        "space": "A firm, flat mat with space to the side to pass through."
+      },
+      "body": {
+        "feet": "One hand and then the other plant; the feet pass over, one after the other.",
+        "legs": "The legs split and pass to the side, one first and then the other.",
+        "arms": "The hands plant one after the other and push the body sideways.",
+        "gaze": "Look at the floor between the hands as you pass, and forward on landing.",
+        "torso": "The torso passes inverted sideways and straightens on landing."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take a step to the side and lower the first hand."
+        },
+        {
+          "title": "Plant",
+          "body": "Plant the second hand and lift the hips."
+        },
+        {
+          "title": "Side pass",
+          "body": "Pass the split legs sideways, one after the other."
+        },
+        {
+          "title": "Landing",
+          "body": "Lower one foot then the other, with soft knees."
+        }
+      ],
+      "landing": "Land foot after foot, with bent knees and the chest up.",
+      "mistakes": [
+        "Planting the hands too close and slowing the pass.",
+        "Not lifting the hips and staying low.",
+        "Looking forward and losing the support."
+      ],
+      "tips": [
+        "Practice the side pass slowly before adding speed.",
+        "Mark the hands on the floor to feel the line."
+      ],
+      "terms": [
+        {
+          "term": "cartwheel",
+          "meaning": "A sideways wheel with hand support and the body passing to the side."
+        },
+        {
+          "term": "plant",
+          "meaning": "The point where the hand touches the floor."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "doubleButterflyTwistRound": {
+    "es": "Es un doble butterfly twist que remata con una patada round antes de aterrizar.",
+    "en": "It is a double butterfly twist that finishes with a round kick before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble b-twist que remata en patada circular. Tras las dos vueltas la pierna lanza un round kick antes de aterrizar de pie.",
+      "before": {
+        "prerequisites": "Necesitas el butterfly twist round y el doble butterfly twist. El primero te da la patada y el segundo la segunda vuelta.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado para la patada."
+      },
+      "body": {
+        "feet": "Despegue de un pie; la pierna remata la patada al final de las dos vueltas.",
+        "legs": "Tras las dos vueltas la pierna se extiende en una patada circular.",
+        "arms": "Los brazos cierran las dos vueltas y se abren para la patada.",
+        "gaze": "Mira por encima del hombro y sigue la pierna de la patada.",
+        "torso": "El tronco gira sobre el eje del b-twist y sostiene la patada final."
+      },
+      "steps": [
+        {
+          "title": "Paso",
+          "body": "Da el paso de entrada al b-twist."
+        },
+        {
+          "title": "Doble vuelta",
+          "body": "Completa las dos vueltas del b-twist."
+        },
+        {
+          "title": "Round",
+          "body": "Extiende la pierna en patada circular."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas, absorbiendo las dos vueltas.",
+      "mistakes": [
+        "Quedar corto en la segunda vuelta y no llegar a la patada.",
+        "Patear con la rodilla doblada.",
+        "Bajar el pecho antes de la patada."
+      ],
+      "tips": [
+        "Consolida el b-twist round antes de sumar la segunda vuelta.",
+        "Haz la patada a media altura hasta que la caida sea estable."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: giro de 360 grados con el cuerpo casi horizontal."
+        },
+        {
+          "term": "double b-twist",
+          "meaning": "Dos vueltas encadenadas del b-twist."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistRound": "Te da la patada dentro del giro.",
+        "doubleButterflyTwist": "Te da la segunda vuelta de base."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a double b-twist that finishes in a round kick. After the two turns the leg throws a round kick before landing on your feet.",
+      "before": {
+        "prerequisites": "You need the butterfly twist round and the double butterfly twist. The first gives you the kick and the second the second turn.",
+        "space": "A wide, flat mat with space to the side for the kick."
+      },
+      "body": {
+        "feet": "Takeoff from one foot; the leg finishes the kick at the end of the two turns.",
+        "legs": "After the two turns the leg extends in a round kick.",
+        "arms": "The arms close the two turns and open for the kick.",
+        "gaze": "Look over the shoulder and follow the kicking leg.",
+        "torso": "The torso turns over the b-twist axis and carries the final kick."
+      },
+      "steps": [
+        {
+          "title": "Step",
+          "body": "Take the entry step into the b-twist."
+        },
+        {
+          "title": "Double turn",
+          "body": "Complete the two turns of the b-twist."
+        },
+        {
+          "title": "Round",
+          "body": "Extend the leg in a round kick."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with soft knees."
+        }
+      ],
+      "landing": "Land on the feet with bent knees, absorbing the two turns.",
+      "mistakes": [
+        "Coming up short on the second turn and missing the kick.",
+        "Kicking with a bent knee.",
+        "Dropping the chest before the kick."
+      ],
+      "tips": [
+        "Nail the b-twist round before adding the second turn.",
+        "Throw the kick at medium height until the landing is stable."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: a 360-degree spin with the body almost horizontal."
+        },
+        {
+          "term": "double b-twist",
+          "meaning": "Two chained turns of the b-twist."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistRound": "It gives you the kick inside the spin.",
+        "doubleButterflyTwist": "It gives you the base second turn."
+      }
+    }
+  },
+  "grandMasterScoot": {
+    "es": "Es un scoot avanzado de gran potencia, con empuje fuerte y poco apoyo de manos.",
+    "en": "It is an advanced, powerful scoot with a strong push and little hand support.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un scoot avanzado tipo grand master. Te lanzas con mas potencia, plantas las manos y pasas las piernas con un empuje fuerte antes de caer de pie.",
+      "before": {
+        "prerequisites": "Necesitas el masterscoot. Esa version del scoot te da la base para sumar potencia y reducir el apoyo de manos.",
+        "space": "Colchoneta larga, amplia y rasa, con recorrido para la carrera."
+      },
+      "body": {
+        "feet": "Carrera corta y potente; las manos apenas rozan el piso para empujar.",
+        "legs": "Las piernas pasan juntas y estiradas con un empuje fuerte y rapido.",
+        "arms": "Los brazos empujan el cuerpo para pasar el giro con poca ayuda de manos.",
+        "gaze": "Mira por encima del hombro durante el giro y ubica el piso al final.",
+        "torso": "El tronco pasa invertido y se endereza con el empuje del abdomen y las caderas."
+      },
+      "steps": [
+        {
+          "title": "Carrera",
+          "body": "Toma una carrera corta con mas potencia."
+        },
+        {
+          "title": "Plantada",
+          "body": "Planta las manos con un apoyo rapido y ligero."
+        },
+        {
+          "title": "Empuje",
+          "body": "Pasa las piernas juntas con un empuje fuerte."
+        },
+        {
+          "title": "Caida",
+          "body": "Endereza el tronco y aterriza de pie."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas, absorbiendo el empuje.",
+      "mistakes": [
+        "Apoyar demasiado las manos y frenar el giro.",
+        "Doblar las piernas en el paso.",
+        "Mirar el piso y perder el giro completo."
+      ],
+      "tips": [
+        "Consolida el masterscoot antes de sumar potencia.",
+        "Practica el empuje de caderas sin apoyar tanto las manos."
+      ],
+      "terms": [
+        {
+          "term": "masterscoot",
+          "meaning": "Version del scoot con mas potencia y mas giro."
+        },
+        {
+          "term": "scoot",
+          "meaning": "Movimiento con apoyo de manos en el que giras 360 grados."
+        }
+      ],
+      "prereqNotes": {
+        "masterscoot": "Te da la base del scoot avanzado sobre la que se suma la potencia."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an advanced grand master style scoot. You dive with more power, plant the hands and pass the legs with a strong push before landing on the feet.",
+      "before": {
+        "prerequisites": "You need the masterscoot. That scoot version gives you the base to add power and reduce the hand support.",
+        "space": "A long, wide, flat mat with runway for the run."
+      },
+      "body": {
+        "feet": "Short, powerful run; the hands barely graze the floor to push.",
+        "legs": "The legs pass together and extended with a strong, fast push.",
+        "arms": "The arms push the body through the turn with little help from the hands.",
+        "gaze": "Look over the shoulder during the turn and spot the floor at the end.",
+        "torso": "The torso passes inverted and straightens with the push of the core and hips."
+      },
+      "steps": [
+        {
+          "title": "Run",
+          "body": "Take a short run with more power."
+        },
+        {
+          "title": "Plant",
+          "body": "Plant the hands with a quick, light support."
+        },
+        {
+          "title": "Push",
+          "body": "Pass the legs together with a strong push."
+        },
+        {
+          "title": "Landing",
+          "body": "Straighten the torso and land on the feet."
+        }
+      ],
+      "landing": "Land on the feet with bent knees, absorbing the push.",
+      "mistakes": [
+        "Leaning on the hands too much and slowing the turn.",
+        "Bending the legs on the pass.",
+        "Looking at the floor and losing the full turn."
+      ],
+      "tips": [
+        "Nail the masterscoot before adding power.",
+        "Practice the hip push without leaning on the hands so much."
+      ],
+      "terms": [
+        {
+          "term": "masterscoot",
+          "meaning": "A scoot version with more power and more spin."
+        },
+        {
+          "term": "scoot",
+          "meaning": "A handplant move where you turn 360 degrees."
+        }
+      ],
+      "prereqNotes": {
+        "masterscoot": "It gives you the advanced scoot base that the power is added to."
+      }
+    }
+  },
+  "headstand": {
+    "es": "Es un equilibrio invertido sostenido sobre la cabeza y las manos.",
+    "en": "It is an inverted balance supported on the head and hands.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una parada de cabeza. Apoyas la cabeza y las manos, subes las caderas y alineas el cuerpo hacia arriba antes de bajar las piernas juntas.",
+      "before": {
+        "prerequisites": "No necesitas otro truco. Conviene tener algo de fuerza de brazos y de abdomen para sostener la posicion.",
+        "space": "Colchoneta firme (o el piso), con una pared cerca para apoyarse al empezar."
+      },
+      "body": {
+        "feet": "Los pies caminan hacia la cabeza; la base son la cabeza y las manos.",
+        "legs": "Las piernas suben juntas y se mantienen extendidas o recogidas segun la variante.",
+        "arms": "Las manos forman un triangulo con la cabeza y empujan para sostener el cuerpo.",
+        "gaze": "Mira al piso entre las manos al subir y al frente en la posicion final.",
+        "torso": "Las caderas quedan apiladas sobre los hombros y los hombros sobre la base; el abdomen firme sostiene la linea."
+      },
+      "steps": [
+        {
+          "title": "Base",
+          "body": "Apoya la cabeza en el piso y las manos a los lados formando un triangulo."
+        },
+        {
+          "title": "Subida",
+          "body": "Acerca los pies y eleva las caderas."
+        },
+        {
+          "title": "Alineacion",
+          "body": "Apila las caderas sobre los hombros y los hombros sobre la base."
+        },
+        {
+          "title": "Bajada",
+          "body": "Baja descendiendo las piernas juntas y con control."
+        }
+      ],
+      "landing": "Baja con control, apoyando primero un pie y luego el otro, y recupera de pie sin dar un golpe.",
+      "mistakes": [
+        "Apoyar la cabeza muy adelante y arquear la espalda.",
+        "Empujar poco con las manos y cargar el cuello.",
+        "Abrir las piernas y perder el equilibrio."
+      ],
+      "tips": [
+        "Practica con una pared cerca para sentir la linea.",
+        "Aprieta el abdomen y empuja el piso con las manos para sostener."
+      ],
+      "terms": [
+        {
+          "term": "headstand",
+          "meaning": "Equilibrio invertido sobre la cabeza y las manos."
+        },
+        {
+          "term": "base",
+          "meaning": "El triangulo que forman la cabeza y las manos en el piso."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a headstand. You place the head and hands, lift the hips and align the body upward before lowering the legs together.",
+      "before": {
+        "prerequisites": "You do not need another trick. It helps to have some arm and core strength to hold the position.",
+        "space": "A firm mat (or the floor), with a wall nearby to lean on at first."
+      },
+      "body": {
+        "feet": "The feet walk in toward the head; the base is the head and hands.",
+        "legs": "The legs rise together and stay extended or tucked depending on the variation.",
+        "arms": "The hands form a triangle with the head and push to hold the body.",
+        "gaze": "Look at the floor between the hands as you rise, and forward in the final position.",
+        "torso": "The hips stack over the shoulders and the shoulders over the base; a firm core holds the line."
+      },
+      "steps": [
+        {
+          "title": "Base",
+          "body": "Place the head on the floor and the hands beside it forming a triangle."
+        },
+        {
+          "title": "Rise",
+          "body": "Walk the feet in and lift the hips."
+        },
+        {
+          "title": "Align",
+          "body": "Stack the hips over the shoulders and the shoulders over the base."
+        },
+        {
+          "title": "Come down",
+          "body": "Lower the legs together and under control."
+        }
+      ],
+      "landing": "Come down under control, planting one foot and then the other, and recover to standing without a jolt.",
+      "mistakes": [
+        "Placing the head too far forward and arching the back.",
+        "Pushing little with the hands and loading the neck.",
+        "Opening the legs and losing balance."
+      ],
+      "tips": [
+        "Practice with a wall nearby to feel the line.",
+        "Tighten the core and push the floor with the hands to hold."
+      ],
+      "terms": [
+        {
+          "term": "headstand",
+          "meaning": "An inverted balance on the head and hands."
+        },
+        {
+          "term": "base",
+          "meaning": "The triangle formed by the head and hands on the floor."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "macaron": {
+    "es": "Es un aerial agrupado que, con un pseudo flip extra, aterriza en hyperhook.",
+    "en": "It is a tucked aerial that, with an extra pseudo flip, lands in a hyperhook.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un truco con giro y patada de composicion propia. Das el paso de impulso, giras el cuerpo y barres la pierna en el aire antes de caer de pie.",
+      "before": {
+        "prerequisites": "Necesitas el aerial. Ese mortal lateral te da la base para el giro y el barrido de pierna del macaron.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado."
+      },
+      "body": {
+        "feet": "Despegue de un pie de costado; la pierna barre al final del giro.",
+        "legs": "El cuerpo gira agrupado y una pierna barre en el aire antes de la caida.",
+        "arms": "Los brazos abren el giro y se recogen para el barrido.",
+        "gaze": "Mira de costado al entrar y sigue la pierna del barrido.",
+        "torso": "El tronco gira agrupado y el abdomen sostiene el barrido final."
+      },
+      "steps": [
+        {
+          "title": "Paso",
+          "body": "Da el paso de impulso de costado."
+        },
+        {
+          "title": "Giro agrupado",
+          "body": "Gira el cuerpo agrupado, tipo aerial."
+        },
+        {
+          "title": "Barrido",
+          "body": "Barre la pierna en el aire antes de caer."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con la rodilla flexionada y el pecho arriba, absorbiendo el giro.",
+      "mistakes": [
+        "Abrir el agrupado antes de tiempo.",
+        "Barrear con la pierna doblada.",
+        "Mirar el piso durante el giro."
+      ],
+      "tips": [
+        "Practica el aerial agrupado antes de sumar el barrido.",
+        "Marca el barrido a baja altura hasta que sea estable."
+      ],
+      "terms": [
+        {
+          "term": "macaron",
+          "meaning": "Aerial agrupado con giro y barrido de pierna."
+        },
+        {
+          "term": "aerial",
+          "meaning": "Mortal lateral sin manos."
+        }
+      ],
+      "prereqNotes": {
+        "aerial": "Te da el mortal lateral agrupado sobre el que se monta el barrido."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a move with a twist and a kick of its own form. You take the setup step, turn the body and sweep the leg in the air before landing on your feet.",
+      "before": {
+        "prerequisites": "You need the aerial. That lateral flip gives you the base for the turn and the leg sweep of the macaron.",
+        "space": "A wide, flat mat with space to the side."
+      },
+      "body": {
+        "feet": "Takeoff from one foot to the side; the leg sweeps at the end of the turn.",
+        "legs": "The body turns tucked and one leg sweeps in the air before the landing.",
+        "arms": "The arms open the turn and tuck for the sweep.",
+        "gaze": "Look to the side on entry and follow the sweeping leg.",
+        "torso": "The torso turns tucked and the core carries the final sweep."
+      },
+      "steps": [
+        {
+          "title": "Step",
+          "body": "Take the side setup step."
+        },
+        {
+          "title": "Tucked turn",
+          "body": "Turn the body tucked, aerial style."
+        },
+        {
+          "title": "Sweep",
+          "body": "Sweep the leg in the air before landing."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with soft knees."
+        }
+      ],
+      "landing": "Land on the feet with the knee bent and the chest up, absorbing the spin.",
+      "mistakes": [
+        "Opening the tuck too early.",
+        "Sweeping with a bent leg.",
+        "Looking at the floor during the spin."
+      ],
+      "tips": [
+        "Practice the tucked aerial before adding the sweep.",
+        "Mark the sweep at low height until it is stable."
+      ],
+      "terms": [
+        {
+          "term": "macaron",
+          "meaning": "A tucked aerial with a turn and a leg sweep."
+        },
+        {
+          "term": "aerial",
+          "meaning": "A no-hands lateral flip."
+        }
+      ],
+      "prereqNotes": {
+        "aerial": "It gives you the tucked lateral flip that the sweep rides on."
+      }
+    }
+  },
+  "oneHandedCartwheel": {
+    "es": "Es una rueda con una sola mano, sin apoyar la otra.",
+    "en": "It is a one-handed cartwheel, without planting the other hand.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una rueda con una sola mano. Apoyas una mano, giras de lado con las piernas abiertas y pasas sin tocar el suelo con la otra antes de caer.",
+      "before": {
+        "prerequisites": "Necesitas el cartwheel. La rueda normal te da el paso de lado y la linea sobre la que se quita una mano.",
+        "space": "Colchoneta firme y rasa, con espacio al costado."
+      },
+      "body": {
+        "feet": "Una sola mano se apoya; la otra queda libre durante todo el paso.",
+        "legs": "Las piernas se abren y pasan de lado como en la rueda normal.",
+        "arms": "El brazo que se apoya empuja; el otro se extiende para equilibrar.",
+        "gaze": "Mira al piso junto a la mano de apoyo y al frente al caer.",
+        "torso": "El tronco pasa invertido de costado y se endereza al caer."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da un paso al costado y baja una sola mano."
+        },
+        {
+          "title": "Apoyo",
+          "body": "Apoyate en esa mano y sube las caderas."
+        },
+        {
+          "title": "Paso",
+          "body": "Pasa las piernas abiertas sin tocar el suelo con la otra mano."
+        },
+        {
+          "title": "Caida",
+          "body": "Baja un pie y luego el otro con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae pie tras pie, con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Apoyar la segunda mano por costumbre.",
+        "No subir las caderas y quedar bajo.",
+        "Mirar al frente y perder el apoyo."
+      ],
+      "tips": [
+        "Practica la rueda normal hasta que sea fluida.",
+        "Prueba a levantar la segunda mano un poco antes de quitarla del todo."
+      ],
+      "terms": [
+        {
+          "term": "cartwheel",
+          "meaning": "Rueda lateral con apoyo de manos."
+        },
+        {
+          "term": "apoyo",
+          "meaning": "El punto donde la mano toca el piso."
+        }
+      ],
+      "prereqNotes": {
+        "cartwheel": "Te da el paso de lado y la linea para quitar una mano."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a one-handed cartwheel. You plant a single hand, turn the body to the side with the legs split and pass through without touching down with the other hand before landing on your feet.",
+      "before": {
+        "prerequisites": "You need the cartwheel. The normal wheel gives you the side pass and the line for removing one hand.",
+        "space": "A firm, flat mat with space to the side."
+      },
+      "body": {
+        "feet": "A single hand plants; the other stays free through the whole pass.",
+        "legs": "The legs split and pass to the side as in a normal cartwheel.",
+        "arms": "The planting arm pushes; the other extends to balance.",
+        "gaze": "Look at the floor next to the planting hand and forward on landing.",
+        "torso": "The torso passes inverted sideways and straightens on landing."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take a step to the side and lower a single hand."
+        },
+        {
+          "title": "Plant",
+          "body": "Support on that hand and lift the hips."
+        },
+        {
+          "title": "Pass",
+          "body": "Pass the split legs without touching the floor with the other hand."
+        },
+        {
+          "title": "Landing",
+          "body": "Lower one foot then the other with soft knees."
+        }
+      ],
+      "landing": "Land foot after foot, with bent knees and the chest up.",
+      "mistakes": [
+        "Planting the second hand out of habit.",
+        "Not lifting the hips and staying low.",
+        "Looking forward and losing the support."
+      ],
+      "tips": [
+        "Practice the normal cartwheel until it is fluid.",
+        "Try lifting the second hand a little before removing it completely."
+      ],
+      "terms": [
+        {
+          "term": "cartwheel",
+          "meaning": "A sideways wheel with hand support."
+        },
+        {
+          "term": "plant",
+          "meaning": "The point where the hand touches the floor."
+        }
+      ],
+      "prereqNotes": {
+        "cartwheel": "It gives you the side pass and the line for removing one hand."
+      }
+    }
+  },
+  "roundoff": {
+    "es": "Es una rueda que cierra con chasquido y aterriza de pie mirando al frente.",
+    "en": "It is a cartwheel that snaps shut and lands on both feet facing forward.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una rueda que cierra con chasquido. Apoyas las manos, juntas las piernas en el aire y caes de pie mirando al frente.",
+      "before": {
+        "prerequisites": "Necesitas el cartwheel. La rueda normal te da el paso de lado que se cierra en el roundoff.",
+        "space": "Colchoneta firme y rasa, con espacio al costado y hacia adelante."
+      },
+      "body": {
+        "feet": "Las manos se apoyan; los pies se juntan en el aire y caen juntos.",
+        "legs": "Las piernas pasan abiertas y luego se juntan rapido, con chasquido, para caer juntas.",
+        "arms": "Las manos se apoyan una tras otra, empujan y se levantan para dejar pasar el cuerpo.",
+        "gaze": "Mira al piso entre las manos al pasar y al frente al caer.",
+        "torso": "El tronco pasa invertido y gira para que la caida quede mirando al frente."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da un paso al costado y baja la primera mano."
+        },
+        {
+          "title": "Apoyo",
+          "body": "Apoya la segunda mano y sube las caderas."
+        },
+        {
+          "title": "Cierre",
+          "body": "Junta las piernas con un chasquido en el aire."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie mirando al frente, con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae con los dos pies juntos, mirando al frente, con las rodillas flexionadas.",
+      "mistakes": [
+        "No juntar las piernas y caer abierto.",
+        "Apoyar las manos demasiado lejos y frenar el cierre.",
+        "Mirar al frente durante el apoyo y perder la linea."
+      ],
+      "tips": [
+        "Practica el paso de lado hasta que sea fluido.",
+        "Marca el chasquido de las piernas a baja altura."
+      ],
+      "terms": [
+        {
+          "term": "roundoff",
+          "meaning": "Rueda que junta las piernas en el aire y cae de pie mirando al frente."
+        },
+        {
+          "term": "chasquido",
+          "meaning": "El cierre rapido que juntan las piernas en el aire."
+        }
+      ],
+      "prereqNotes": {
+        "cartwheel": "Te da el paso de lado que se cierra en el roundoff."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a cartwheel that snaps shut. You plant the hands, bring the legs together in the air and land on both feet facing forward.",
+      "before": {
+        "prerequisites": "You need the cartwheel. The normal wheel gives you the side pass that snaps shut in the roundoff.",
+        "space": "A firm, flat mat with space to the side and forward."
+      },
+      "body": {
+        "feet": "The hands plant; the feet snap together in the air and land together.",
+        "legs": "The legs pass split and then snap together fast to land together.",
+        "arms": "The hands plant one after the other, push and lift to let the body pass.",
+        "gaze": "Look at the floor between the hands on the pass and forward on landing.",
+        "torso": "The torso passes inverted and turns so the landing faces forward."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take a step to the side and lower the first hand."
+        },
+        {
+          "title": "Plant",
+          "body": "Plant the second hand and lift the hips."
+        },
+        {
+          "title": "Snap",
+          "body": "Bring the legs together with a snap in the air."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on both feet facing forward, with soft knees."
+        }
+      ],
+      "landing": "Land on both feet together, facing forward, with bent knees.",
+      "mistakes": [
+        "Not bringing the legs together and landing split.",
+        "Planting the hands too far and slowing the snap.",
+        "Looking forward during the plant and losing the line."
+      ],
+      "tips": ["Practice the side pass until it is fluid.", "Mark the leg snap at low height."],
+      "terms": [
+        {
+          "term": "roundoff",
+          "meaning": "A wheel that snaps the legs together in the air and lands on both feet facing forward."
+        },
+        {
+          "term": "snap",
+          "meaning": "The fast close that brings the legs together in the air."
+        }
+      ],
+      "prereqNotes": {
+        "cartwheel": "It gives you the side pass that snaps shut in the roundoff."
+      }
+    }
+  },
+  "takDoubleFull": {
+    "es": "Es un takuraba con doble giro: barres la pierna en arco y giras 720 grados antes de caer.",
+    "en": "It is a takuraba with a double twist: you sweep the leg in an arc and turn 720 degrees before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un takuraba con doble giro. Tras el impulso barres la pierna en arco y giras 720 grados antes de aterrizar de pie.",
+      "before": {
+        "prerequisites": "Necesitas el tak full y el doble full. El primero te da el barrido con giro completo y el segundo la segunda vuelta.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado y recorrido para el barrido."
+      },
+      "body": {
+        "feet": "Despegue de un pie con barrido de pierna en arco.",
+        "legs": "La pierna barre en arco y el cuerpo completa las dos vueltas en el aire.",
+        "arms": "Los brazos recogidos aceleran las dos vueltas.",
+        "gaze": "Mira por encima del hombro y ubica el piso al final de la segunda vuelta.",
+        "torso": "El tronco gira sobre el eje del tak y sostiene las dos vueltas."
+      },
+      "steps": [
+        {
+          "title": "Impulso",
+          "body": "Da el paso y arranca el barrido de pierna."
+        },
+        {
+          "title": "Tak full",
+          "body": "Barre la pierna en arco con giro completo."
+        },
+        {
+          "title": "Doble vuelta",
+          "body": "Suma la segunda vuelta del giro."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas, absorbiendo el giro doble.",
+      "mistakes": [
+        "Quedar corto en la segunda vuelta.",
+        "Perder el barrido de la pierna.",
+        "Mirar el piso durante el giro."
+      ],
+      "tips": [
+        "Consolida el tak full antes de sumar la segunda vuelta.",
+        "Cuenta las dos vueltas en voz alta para no quedar corto."
+      ],
+      "terms": [
+        {
+          "term": "takuraba",
+          "meaning": "Giro de entrada en el que barres la pierna en arco."
+        },
+        {
+          "term": "tak full",
+          "meaning": "Takuraba con giro completo de 360 grados."
+        }
+      ],
+      "prereqNotes": {
+        "takFull": "Te da el barrido con giro completo.",
+        "doubleFull": "Te da la base de la segunda vuelta."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a takuraba with a double twist. After the setup you sweep the leg in an arc and turn 720 degrees before landing on your feet.",
+      "before": {
+        "prerequisites": "You need the tak full and the double full. The first gives you the sweep with a full twist and the second the second turn.",
+        "space": "A wide, flat mat with space to the side and room for the sweep."
+      },
+      "body": {
+        "feet": "Takeoff from one foot with an arc leg sweep.",
+        "legs": "The leg sweeps in an arc and the body completes the two turns in the air.",
+        "arms": "The tucked arms speed up the two turns.",
+        "gaze": "Look over the shoulder and spot the floor at the end of the second turn.",
+        "torso": "The torso turns over the tak axis and carries the two turns."
+      },
+      "steps": [
+        {
+          "title": "Setup",
+          "body": "Take the step and start the leg sweep."
+        },
+        {
+          "title": "Tak full",
+          "body": "Sweep the leg in an arc with a full twist."
+        },
+        {
+          "title": "Double turn",
+          "body": "Add the second turn of the spin."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with soft knees."
+        }
+      ],
+      "landing": "Land on the feet with bent knees, absorbing the double spin.",
+      "mistakes": [
+        "Coming up short on the second turn.",
+        "Losing the leg sweep.",
+        "Looking at the floor during the spin."
+      ],
+      "tips": [
+        "Nail the tak full before adding the second turn.",
+        "Count the two turns out loud so you do not come up short."
+      ],
+      "terms": [
+        {
+          "term": "takuraba",
+          "meaning": "An entry spin where you sweep the leg in an arc."
+        },
+        {
+          "term": "tak full",
+          "meaning": "A takuraba with a full 360-degree twist."
+        }
+      ],
+      "prereqNotes": {
+        "takFull": "It gives you the sweep with a full twist.",
+        "doubleFull": "It gives you the base for the second turn."
+      }
+    }
+  },
+  "takFullHyperhook": {
+    "es": "Es un tak full que remata en hyperhook despues del barrido con giro completo.",
+    "en": "It is a tak full that finishes in a hyperhook after the sweeping full twist.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un tak full que remata en hyperhook. Tras el barrido con giro completo la pierna remata en gancho con giro extra antes de caer.",
+      "before": {
+        "prerequisites": "Necesitas el tak full y el full hyperhook. El primero te da el barrido con giro y el segundo el remate en gancho extendido.",
+        "space": "Colchoneta amplia y rasa, con espacio al costado para el gancho."
+      },
+      "body": {
+        "feet": "Despegue de un pie con barrido de arco; la pierna del gancho sella la caida.",
+        "legs": "La pierna barre en arco durante el giro y al final remata en gancho extendido.",
+        "arms": "Los brazos cierran el giro y se recogen para el gancho.",
+        "gaze": "Mira por encima del hombro y sigue la pierna del gancho.",
+        "torso": "El tronco gira sobre el eje del tak y abre el gancho al final."
+      },
+      "steps": [
+        {
+          "title": "Impulso",
+          "body": "Da el paso y arranca el barrido de pierna."
+        },
+        {
+          "title": "Tak full",
+          "body": "Barre la pierna con giro completo."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Remata en gancho extendido con giro extra."
+        },
+        {
+          "title": "Caida",
+          "body": "Aterriza de pie con la rodilla flexionada."
+        }
+      ],
+      "landing": "Cae sobre la pierna del gancho y baja la otra. Absorbe flexionando la rodilla.",
+      "mistakes": [
+        "Ganchar con la pierna doblada.",
+        "Perder el giro antes del gancho.",
+        "Mirar el piso en el remate."
+      ],
+      "tips": [
+        "Consolida el tak full antes de sumar el gancho.",
+        "Marca el gancho a media altura hasta que sea estable."
+      ],
+      "terms": [
+        {
+          "term": "takuraba",
+          "meaning": "Giro de entrada en el que barres la pierna en arco."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Gancho de pierna con la cadera abierta."
+        }
+      ],
+      "prereqNotes": {
+        "takFull": "Te da el barrido con giro completo.",
+        "fullHyperhook": "Te da el remate en gancho extendido."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a tak full that finishes in a hyperhook. After the sweeping full twist the leg finishes in a hook with extra rotation before landing.",
+      "before": {
+        "prerequisites": "You need the tak full and the full hyperhook. The first gives you the sweep with a twist and the second the extended hook finish.",
+        "space": "A wide, flat mat with space to the side for the hook."
+      },
+      "body": {
+        "feet": "Takeoff from one foot with an arc sweep; the hook leg seals the landing.",
+        "legs": "The leg sweeps in an arc during the turn and at the end finishes in an extended hook.",
+        "arms": "The arms close the spin and tuck for the hook.",
+        "gaze": "Look over the shoulder and follow the hooking leg.",
+        "torso": "The torso turns over the tak axis and opens the hook at the end."
+      },
+      "steps": [
+        {
+          "title": "Setup",
+          "body": "Take the step and start the leg sweep."
+        },
+        {
+          "title": "Tak full",
+          "body": "Sweep the leg with a full twist."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Finish in an extended hook with extra rotation."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the feet with the knee bent."
+        }
+      ],
+      "landing": "You land on the hook leg and lower the other. Absorb by bending the knee.",
+      "mistakes": [
+        "Hooking with a bent leg.",
+        "Losing the spin before the hook.",
+        "Looking at the floor on the finish."
+      ],
+      "tips": [
+        "Nail the tak full before adding the hook.",
+        "Mark the hook at medium height until it is stable."
+      ],
+      "terms": [
+        {
+          "term": "takuraba",
+          "meaning": "An entry spin where you sweep the leg in an arc."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A leg hook with the hip open."
+        }
+      ],
+      "prereqNotes": {
+        "takFull": "It gives you the sweep with a full twist.",
+        "fullHyperhook": "It gives you the extended hook finish."
+      }
+    }
+  }
+}
