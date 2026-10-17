@@ -1,3 +1,4 @@
+import type { HowToDetail } from '@tricking/shared/how-to';
 import { and, asc, count, desc, eq, ilike, inArray, isNull, or, sql } from 'drizzle-orm';
 
 import { getDb } from '../client';
@@ -91,6 +92,8 @@ export interface KojoTechnique {
 export interface TrickDetail extends TrickListItem {
   howTo: string | null;
   howToEs: string | null;
+  howToData: HowToDetail | null;
+  howToDataEs: HowToDetail | null;
   loopkicksNotes: string | null;
   loopkicksNotesEs: string | null;
   kojoTechniques: KojoTechnique[];
@@ -241,6 +244,8 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
       descriptionEs: tricks.descriptionEs,
       howTo: tricks.howTo,
       howToEs: tricks.howToEs,
+      howToData: tricks.howToData,
+      howToDataEs: tricks.howToDataEs,
       difficulty: tricks.difficulty,
       section: tricks.section,
       loopkicksSlug: tricks.loopkicksSlug,
@@ -315,6 +320,8 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     descriptionEs: trick.descriptionEs,
     howTo: trick.howTo,
     howToEs: trick.howToEs,
+    howToData: trick.howToData,
+    howToDataEs: trick.howToDataEs,
     difficulty: trick.difficulty,
     section: trick.section,
     loopkicksSlug: trick.loopkicksSlug,

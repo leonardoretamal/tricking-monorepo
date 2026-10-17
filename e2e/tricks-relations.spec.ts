@@ -9,11 +9,11 @@ test.describe('relaciones de truco', () => {
     await expect(page.getByRole('heading', { level: 1, name: 'Aerial' })).toBeVisible();
 
     const prereqHeading = page.getByRole('heading', { name: 'Prerrequisitos' });
-    const nextHeading = page.getByRole('heading', { name: 'Siguientes trucos' });
+    const nextHeading = page.getByRole('heading', { name: 'Siguientes' });
     await expect(prereqHeading).toBeVisible();
     await expect(nextHeading).toBeVisible();
 
-    const nextSection = page.locator('section', { has: nextHeading });
-    await expect(nextSection.getByRole('link').first()).toBeVisible();
+    const nextNav = page.getByRole('navigation', { name: 'Siguientes' });
+    await expect(nextNav.getByRole('link').first()).toBeVisible();
   });
 });

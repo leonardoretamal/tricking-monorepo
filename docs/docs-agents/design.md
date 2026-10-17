@@ -146,6 +146,19 @@ Colores propios de los bloques destacados de Tips:
 - Regla de oro: ámbar advertencia con ícono de alerta.
 - Resumen corto: neutro con borde de acento.
 
+## Layout del detalle de truco
+
+Orden de los bloques del detalle, mobile-first (en móvil se apila en ese orden):
+
+1. Encabezado del truco: título y badges de categoría y dificultad.
+2. Bloque superior: el vídeo del truco y el resumen del "cómo se hace" lado a lado en escritorio y apilados en móvil. El vídeo lleva las pestañas accesibles "Ejecución" y "Tutorial" (ver `docs/docs-agents/reglas-frontend.md`).
+3. "Cómo se hace" a ancho completo: el detalle estructurado (resumen, preparación, ejes del cuerpo, paso a paso, aterrizaje, errores, tips y glosario). Si no hay detalle estructurado, cae al resumen de texto plano.
+4. Ruta de aprendizaje: prerequisitos (con su nota), truco actual y siguientes, enlazados al detalle de cada uno.
+5. Acordeones "Loopkicks" y "Kojo", uno debajo del otro, con su crédito.
+6. Relacionados: variaciones, transiciones y posturas.
+
+Los bloques usan las superficies y utilidades del tema (`.tb-surface`, tarjetas y badges); no se escriben colores sueltos. El detalle mantiene una sola llamada a la acción principal.
+
 ## Contraste WCAG AA
 
 Los colores de dificultad y de categoría se usan como texto de badge. El texto es el propio token y el fondo es el fondo efectivo de `.tb-badge` (`color-mix(in srgb, currentColor 12%, transparent)`), que se apoya en `base-100` (#F7F6F3 claro, #07080D oscuro) o `base-200` (#FFFFFF claro, #0F1220 oscuro). Se midió con la fórmula de luminancia relativa de WCAG 2.1 y se toma el peor caso entre las dos bases.

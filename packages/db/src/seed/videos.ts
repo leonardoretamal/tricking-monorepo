@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
-import { and, inArray, isNotNull, isNull } from 'drizzle-orm';
+import { and, eq, inArray, isNotNull, isNull } from 'drizzle-orm';
 
 import { getDb } from '../client';
 import { tricks, videos, type NewVideo } from '../schema';
@@ -137,12 +137,16 @@ async function main(): Promise<void> {
     return;
   }
 
-  // Reemplazo acotado a los videos de truco (tutorial_id nulo) de los trucos sembrados,
-  // para que correr la semilla dos veces no duplique filas ni borre videos de tutoriales.
-  // El driver neon-http no soporta transacciones, asi que el borrado y la insercion van
-  // secuenciales e idempotentes.
+  // Reemplazo acotado a los videos demo (Loopkicks) de los trucos sembrados: `role='demo'`
+  // deja intactos los tutoriales externos (`role='tutorial'`) y `tutorial_id` nulo evita
+  // tocar los videos ligados a un tutorial. El driver neon-http no soporta transacciones,
+  // asi que el borrado y la insercion van secuenciales e idempotentes.
   for (const batch of chunk(affectedTrickIds, 500)) {
-    await db.delete(videos).where(and(inArray(videos.trickId, batch), isNull(videos.tutorialId)));
+    await db
+      .delete(videos)
+      .where(
+        and(inArray(videos.trickId, batch), isNull(videos.tutorialId), eq(videos.role, 'demo')),
+      );
   }
 
   for (const batch of chunk(rows, INSERT_BATCH_SIZE)) {

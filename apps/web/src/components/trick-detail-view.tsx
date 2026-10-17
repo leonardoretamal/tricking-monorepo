@@ -2,16 +2,32 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { Accordion, categoryBadgeColor, RelatedItems, type AccordionItem } from '@tricking/ui';
+import type { HowToDetail } from '@tricking/shared';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { ProgressControl } from '@/components/progress-control';
+import { TrickHowTo } from '@/components/trick-how-to';
+import { TrickLearningPath } from '@/components/trick-learning-path';
 import { TrickVideoPlayer } from '@/components/trick-video-player';
 import { Link } from '@/i18n/navigation';
 import { pickDescription } from '@/lib/description';
 import { fetchTrick } from '@/lib/trick-api';
-import type { TrickDetail, TrickRelated } from '@/lib/trick-schemas';
+import type { TrickDetail } from '@/lib/trick-schemas';
 import type { Section } from '@/lib/sections';
+
+// Elige el detalle estructurado segun el locale (el espanol vive en `...Es`); si falta uno,
+// cae al otro y, si no hay ninguno, devuelve null y la vista usa el texto plano.
+function pickHowToDetail(
+  locale: string,
+  detail: HowToDetail | null | undefined,
+  detailEs: HowToDetail | null | undefined,
+): HowToDetail | null {
+  if (locale.startsWith('es')) {
+    return detailEs ?? detail ?? null;
+  }
+  return detail ?? null;
+}
 
 interface TrickDetailViewProps {
   trick: TrickDetail;
@@ -38,6 +54,10 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
   });
 
   const howTo = pickDescription(locale, data.howTo, data.howToEs);
+  const howToDetail = pickHowToDetail(locale, data.howToData, data.howToDataEs);
+  // El resumen que va arriba junto al video: el detalle estructurado si existe y, si no, el
+  // resumen de texto plano de siempre.
+  const summary = howToDetail?.summary ?? howTo ?? t('detail.noHowTo');
   const description = pickDescription(locale, data.description, data.descriptionEs);
   // La nota de Loopkicks es texto de ellos; la traduccion al espanol es una cortesia.
   // En espanol se usa la traduccion con fallback al original; en ingles, el original.
@@ -66,21 +86,6 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
     badge: t(`detail.stanceKind.${item.kind}`),
   }));
   const hasRelated = variationItems.length + transitionItems.length + stanceItems.length > 0;
-
-  const renderRelated = (items: TrickRelated[]) => (
-    <ul className="flex flex-wrap gap-2">
-      {items.map((item) => (
-        <li key={item.id}>
-          <Link
-            href={`/tricks/${item.section ?? section}/${item.id}`}
-            className="inline-flex items-center rounded-full border border-border bg-base-300/60 px-3 py-1 text-sm text-base-content transition-colors hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          >
-            {item.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  );
 
   const loopkicksContent = (
     <div className="flex flex-col gap-3">
@@ -185,9 +190,7 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
 
         <section className="tb-surface flex flex-col gap-3 p-5">
           <h2 className="tb-display text-xl text-base-content">{t('detail.howTo')}</h2>
-          <p className="text-base leading-relaxed text-base-content/80">
-            {howTo ?? t('detail.noHowTo')}
-          </p>
+          <p className="text-base leading-relaxed text-base-content/80">{summary}</p>
           {description ? (
             <div className="mt-1 flex flex-col gap-1 border-t border-border pt-4">
               <h3 className="text-xs font-semibold uppercase tracking-wide text-base-content/60">
@@ -199,6 +202,21 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
         </section>
       </div>
 
+      {howToDetail ? (
+        <section className="tb-surface flex flex-col gap-4 p-5 sm:p-6">
+          <h2 className="tb-display text-xl text-base-content">{t('detail.howToDetailed')}</h2>
+          <TrickHowTo detail={howToDetail} fallback={howTo} omit={['summary']} />
+        </section>
+      ) : null}
+
+      <TrickLearningPath
+        currentName={data.name}
+        prereqs={data.prereqs}
+        nextTricks={data.nextTricks}
+        prereqNotes={howToDetail?.prereqNotes ?? {}}
+        fallbackSection={section}
+      />
+
       <section className="flex flex-col gap-3">
         <h2 className="tb-display text-xl text-base-content">{t('detail.versionsTitle')}</h2>
         <Accordion
@@ -208,20 +226,6 @@ export function TrickDetailView({ trick, section, sectionTitle }: TrickDetailVie
           className="tb-surface px-2"
         />
       </section>
-
-      {data.prereqs.length > 0 ? (
-        <section className="tb-surface flex flex-col gap-3 p-5">
-          <h2 className="tb-display text-lg text-base-content">{t('detail.prereqs')}</h2>
-          {renderRelated(data.prereqs)}
-        </section>
-      ) : null}
-
-      {data.nextTricks.length > 0 ? (
-        <section className="tb-surface flex flex-col gap-3 p-5">
-          <h2 className="tb-display text-lg text-base-content">{t('detail.nextTricks')}</h2>
-          {renderRelated(data.nextTricks)}
-        </section>
-      ) : null}
 
       {hasRelated ? (
         <section className="tb-surface flex flex-col gap-4 p-5">
