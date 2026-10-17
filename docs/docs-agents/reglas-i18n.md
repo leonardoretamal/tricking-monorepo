@@ -26,6 +26,9 @@ Propósito: definir la librería de i18n, los idiomas soportados, la organizaci�
 
 - El contenido técnico se traduce.
 - Los nombres de trucos en inglés se mantienen porque son términos estándar del deporte (por ejemplo b-twist, aerial, raiz, cheat kick).
+- El "cómo se hace" estructurado (contrato HowToDetail v1) se guarda por idioma en `tricks.how_to_data` (inglés) y `tricks.how_to_data_es` (español). Los dos idiomas llevan el mismo detalle: resumen, ejes del cuerpo, pasos, aterrizaje, errores, tips y glosario. Si falta el detalle de un idioma, la interfaz cae al resumen de texto plano de ese idioma. Ver `docs/docs-agents/reglas-contenido-trucos.md`.
+- El glosario de términos del "cómo se hace" es contenido propio y se traduce es/en; los términos en inglés que son nombres de trucos o de técnica se mantienen y se explican en su entrada del glosario.
+- Los tutoriales externos llevan `videos.language` (`es` o `en`). La interfaz prefiere el tutorial en español y cae al inglés si no hay uno en español; si no hay ninguno, muestra "Sin tutorial todavía".
 - De Kojo se toman los nombres de técnicas (términos en inglés que se mantienen) y tips PROPIOS del proyecto, traducidos es/en. Sus vídeos no se usan.
 - Los textos de cookies se traducen con i18n si aplica.
 

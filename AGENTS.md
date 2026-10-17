@@ -8,7 +8,7 @@ Si una regla nueva aparece, primero se declara en su documento referenciado y de
 
 Tricking Monorepo es un sitio web de tricking que reúne:
 
-- Los trucos de Loopkicks (loopkickstricking.com): vertical kicks, backward, forward, inside, outside, variations, transitions, stances y la explore page. Es la fuente primaria del contenido y de la clasificación de trucos, y se obtiene por scraping. Sus vídeos son contenido gratuito: se muestran desde su URL original, sin descargarlos ni almacenarlos. Los vídeos de otros creadores (YouTube, Vimeo, Dailymotion) se incrustan o enlazan con crédito a su autor y enlace al original, nunca se re-hospedan y nunca se admite un vídeo que involucre a menores de edad (ver `docs/docs-agents/reglas-legal.md`).
+- Los trucos de Loopkicks (loopkickstricking.com): vertical kicks, backward, forward, inside, outside, variations, transitions, stances y la explore page. Es la fuente primaria del contenido y de la clasificación de trucos, y se obtiene por scraping. Sus vídeos son contenido gratuito: se muestran desde su URL original, sin descargarlos ni almacenarlos. Los vídeos de otros creadores (YouTube, Vimeo, Dailymotion, TikTok) se incrustan o enlazan con crédito a su autor y enlace al original, nunca se re-hospedan y nunca se admite un vídeo que involucre a menores de edad (ver `docs/docs-agents/reglas-legal.md`).
 - El conocimiento de técnica de Kojo's Trick Lab: los nombres de trucos/técnicas que enseña y sus tips. Se obtiene de la API pública de `kojostricklab.com` (el sitio es una SPA; scraping web con cheerio como respaldo, Instagram con insta-fetcher como respaldo opcional). De Kojo NO se usan sus vídeos.
 - Una sección de tips técnicos sobre mirada y ejecución, contenido propio curado por el usuario y cargado manualmente en la base de datos en la Fase 16.
 
@@ -53,6 +53,7 @@ Una vez que el usuario elige o el agente decide por defecto, la decisión se reg
 - Si una regla choca con otra, se avisa y se propone la resolución.
 - Si una regla ya está cubierta por otra anterior, no se duplica, se referencia.
 - Se espera siempre por condición real, nunca por tiempo fijo. Prohibido `sleep N` "por si acaso". Se espera con `curl --retry`, `until curl -sf`, `grep -q`, `gh pr checks --watch`, monitores de eventos o comandos en background. El `sleep` solo es el intervalo corto dentro de un sondeo con condición y tope. Topes por defecto: 5 minutos general, 60 a 120 segundos local. Al llegar al tope o sin avance en 2 minutos, se diagnostica primero y, si no hay nada que arreglar, se pregunta al usuario. En modo autónomo decide el orquestador y registra la decisión. Una suite de tests o E2E no dura más de 5 minutos, corre en background, con `timeout 300` y log.
+- Toda decisión que requiera elegir entre opciones se presenta con el selector de la sesión, nunca como pregunta abierta en el chat. Si la sesión no ofrece selector, se ofrecen opciones numeradas y se espera la respuesta del usuario.
 
 ## 4. Prohibición de marcas, firmas y rastros de IA
 
@@ -102,6 +103,8 @@ Documentos que viven en `docs/docs-agents/`:
 - `docs/docs-agents/reglas-ci.md`: estándares de CI.
 - `docs/docs-agents/reglas-validacion.md`: validación al cierre con subagentes.
 - `docs/docs-agents/reglas-i18n.md`: reglas de internacionalización.
+- `docs/docs-agents/reglas-contenido-trucos.md`: reglas del contenido propio de trucos ("cómo se hace" estructurado) y de los tutoriales externos.
+- `docs/docs-agents/tutoriales-faltantes.md`: lista de trabajo de los trucos sin tutorial o con candidato no encontrado; la mantienen las tareas de contenido.
 - `docs/docs-agents/reglas-secretos.md`: secretos y `.env.example`.
 - `docs/docs-agents/reglas-cookies.md`: cookies y consentimiento.
 - `docs/docs-agents/reglas-legal.md`: legal y cumplimiento.
@@ -225,6 +228,8 @@ tricking-monorepo/
       reglas-ci.md
       reglas-validacion.md
       reglas-i18n.md
+      reglas-contenido-trucos.md
+      tutoriales-faltantes.md
       reglas-secretos.md
       reglas-cookies.md
       reglas-legal.md

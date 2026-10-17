@@ -4,7 +4,7 @@ Estado de las fases y subfases del monorepo. Este documento es el lugar donde vi
 
 El proyecto se organiza por secciones de contenido, no por capas técnicas. Cada sección de Loopkicks es una fase. Cada fase se cierra con build de producción verificado, subagentes de validación ejecutados y actualización de este documento.
 
-Última actualización: 2026-10-06.
+Última actualización: 2026-10-17.
 
 ## Reglas de fases
 
@@ -749,6 +749,28 @@ Criterio de cierre: los trucos con candidato aprobado muestran el vídeo con cr�
 Dependencias: ninguna dependencia npm nueva. Sin variables nuevas.
 
 Notas: Dailymotion y Vimeo no dieron resultados útiles para estos trucos (buscadores con ruido); en la práctica la fuente es YouTube. Quedan candidatos flojos en Donkey Kick y Triple Butterfly Twist. Los trucos básicos de gimnasia tienen muchos canales con menores, por eso el filtro reduce las opciones.
+
+## Fase 45: "Cómo se hace" detallado y tutoriales externos
+
+Estado: en curso.
+
+Objetivo: llevar el "cómo se hace" de cada truco a un detalle estructurado en español e inglés y sumar tutoriales externos por truco (con fachada al clic, crédito y sin re-hospedar), reestructurando el detalle del truco. Es el trabajo que sigue a la Fase 24 (descripción propia) y a la Fase 44 (vídeos externos de los trucos faltantes).
+
+- 45.1. Contrato HowToDetail v1 (jsonb por idioma) y Zod compartido en `packages/shared/src/how-to.ts`: `summary`, `before` (prerequisitos y espacio), `body` (pies, piernas, brazos, mirada, torso), `steps`, `landing`, `mistakes`, `tips`, `terms` y `prereqNotes`.
+- 45.2. Migración aditiva: `tricks.how_to_data`/`how_to_data_es` (jsonb) y `videos.role` (default `demo`) más `videos.language`; `provider` acepta `tiktok`. `how_to`/`how_to_es` quedan como resumen y fallback.
+- 45.3. API y Zod: `getTrickById` devuelve `howToData`/`howToDataEs`; `/api/videos` expone `role` y `language`.
+- 45.4. Semillas idempotentes: `db:how-to` acepta `detailEs`/`detailEn`; `db:tutorial-videos` carga tutoriales externos (`role='tutorial'`); `db:video-sources` carga los demos (`role='demo'`).
+- 45.5. Detalle reestructurado: vídeo y resumen arriba, "cómo se hace" a ancho completo, ruta de aprendizaje, y acordeones Loopkicks y Kojo debajo. Componente de "cómo se hace" con fallback al texto plano y componente de ruta de aprendizaje.
+- 45.6. Reproductor con pestañas accesibles "Ejecución" y "Tutorial", fachada que carga el iframe solo al clic, crédito al autor y a la plataforma y preferencia por el tutorial en español.
+- 45.7. Guía del contenido (modelo, estilo, prerequisitos, búsqueda de tutoriales, criterios de menores y formato de semillas) en `docs/docs-agents/reglas-contenido-trucos.md`; regla de selector en la sección 3 de `AGENTS.md`.
+- 45.8. Tutoriales del piloto (Wackknife y su familia, más algunos básicos y populares) con la búsqueda priorizada; lista de pendientes en `docs/docs-agents/tutoriales-faltantes.md`.
+- 45.9. Verificación en navegador real (escritorio y 390x600), subagentes de cierre y build delegado al gancho pre-push.
+
+Criterio de cierre: el detalle del truco muestra el "cómo se hace" estructurado es/en (con fallback), la ruta de aprendizaje y los acordeones; los trucos con candidato seguro muestran el tutorial con crédito, con la fachada al clic y sin re-hospedar; los trucos sin candidato seguro conservan el estado vacío y quedan anotados en `tutoriales-faltantes.md`; sin vídeos con menores; subagentes en verde y build delegado al gancho pre-push.
+
+Dependencias: ninguna dependencia npm nueva y sin variables de entorno nuevas. Reutiliza `videos` de la Fase 44 y el "cómo se hace" de la Fase 24.
+
+Notas: la corrida se organiza en una sola rama compartida y un solo PR a `main`. Las unidades son: A (datos, migración, API y seeds), B (UI, después de A), C (documentación y regla de selector) y D (tutoriales del piloto y MD de faltantes). El alcance de esta fase es el técnico completo, el piloto de Wackknife y su familia, y la guía; las olas de los 570 trucos y los tutoriales masivos quedan para la siguiente fase. La revisión legal de tutoriales es conservadora (canales oficiales o reconocidos, sin menores visibles) con muestreo del usuario.
 
 ## Fases de la sección 28 no activadas
 

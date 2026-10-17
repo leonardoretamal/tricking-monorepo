@@ -203,6 +203,14 @@ Planificadas el 2026-10-05 por decisión del usuario. Ninguna se implementa toda
 - Presentación: fachada que carga el iframe recién al clic (con `youtube-nocookie`), modo enlace para lo no embebible y crédito por autor y plataforma. Al no cargar terceros hasta el clic, no activa cookies no esenciales (ver `reglas-cookies.md`).
 - Carga: semilla idempotente `db:video-sources` desde `packages/db/src/seed/video-sources/`. Sin dependencias npm nuevas y sin variables nuevas.
 
+## Fase 45 ("cómo se hace" detallado y tutoriales externos)
+
+- Contrato HowToDetail v1: columnas jsonb nulables `tricks.how_to_data` (inglés) y `tricks.how_to_data_es` (español), con versión `1`; el Zod compartido vive en `packages/shared/src/how-to.ts` y se exporta desde `packages/shared/src/index.ts`. Las columnas de texto `tricks.how_to`/`how_to_es` se mantienen como resumen, fallback y para SEO. `prereqNotes` se valida contra `trick_relations` (solo claves que sean prerequisito real). El detalle es `version`, `summary`, `before`, `body`, `steps`, `landing`, `mistakes`, `tips`, `terms` y `prereqNotes`.
+- Videos: `videos.role` text not null default `'demo'` (`demo` | `tutorial`) y `videos.language` text nulable (`es` | `en`); `videos.provider` acepta `loopkicks`, `youtube`, `vimeo`, `dailymotion` y `tiktok`. `GET /api/videos` expone `role` y `language`; el reproductor agrupa por rol y prefiere el tutorial `es` sobre el `en`.
+- Carga: `db:how-to` acepta entradas con `detailEs` y `detailEn`, valida con Zod y escribe las columnas jsonb (si no hay detalle, deja las columnas null y no rompe); `db:tutorial-videos` lee `packages/db/src/seed/tutorial-sources/*.json`, valida, borra solo los tutoriales de los trucos afectados e inserta con `role='tutorial'` y `language`; `db:video-sources` inserta los demos (`role='demo'`) y borra solo demos externos. Todos idempotentes.
+- Migración aditiva nueva; sin dependencias npm nuevas y sin variables de entorno nuevas.
+- El detalle del truco se reordena y se documenta en `docs/docs-agents/design.md`; las reglas de contenido y de búsqueda de tutoriales viven en `docs/docs-agents/reglas-contenido-trucos.md`.
+
 ## Notas sobre decisiones no aplicables
 
 - Autenticación: no aplica en el producto. Todo el contenido es público y visible sin login; el estado del usuario (última posición, filtros, favoritos locales) vive en el cliente con Zustand y localStorage, no en una cuenta.

@@ -155,6 +155,18 @@ Las peticiones HTTP lanzadas desde componentes con alta probabilidad de desmonta
 - Los componentes no se llenan de cientos o miles de líneas.
 - Se usa una arquitectura de componente padre, componentes hijos y nietos, con responsabilidades atómicas.
 
+## Pestañas accesibles y fachada de vídeo
+
+El detalle de truco agrupa los vídeos por rol con pestañas ("Ejecución" para las demos y "Tutorial" para los tutoriales externos).
+
+- Las pestañas son accesibles: `role="tablist"` en el contenedor, `role="tab"` con `aria-selected` y `aria-controls` en cada pestaña, `role="tabpanel"` con `aria-labelledby` en el panel, navegación con flechas, Home y End, y foco visible.
+- La pestaña activa por defecto es "Ejecución". La pestaña "Tutorial" se oculta cuando el truco no tiene tutoriales; no se muestra una pestaña vacía. Si no hay ningún vídeo, se muestra el estado vacío reutilizado.
+- Cuando hay tutoriales en español e inglés, se prefiere el español y se cae al inglés si no existe.
+- Fachada de vídeo: el iframe de terceros se monta recién al clic del usuario. Antes del clic no se pide la portada ni ningún recurso del proveedor, para no instalar cookies no esenciales ni sumar peso (ver `docs/docs-agents/reglas-cookies.md`).
+- Cuando la plataforma bloquea el embed en dominios de terceros, la fachada ofrece un enlace a la página original; nunca se fuerza el embed roto.
+- La ficha muestra siempre el crédito al autor y a la plataforma, con enlace al original (ver `docs/docs-agents/reglas-legal.md`).
+- Las pestañas, la fachada y el enlace son operables por teclado y tacto, y se verifican en móvil con viewport 390x600.
+
 ## Errores de validación en formularios
 
 - Todo error de validación se muestra al usuario; nunca se oculta ni se silencia.
