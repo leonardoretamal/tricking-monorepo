@@ -1,7 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
-import { and, inArray, isNotNull } from 'drizzle-orm';
+import { and, eq, inArray, isNotNull } from 'drizzle-orm';
 
 import { getDb } from '../client';
 import { tricks, videos, type NewVideo } from '../schema';
@@ -15,8 +15,9 @@ import { loadEnvFile } from './load-env';
 //
 // Fuente: todos los *.json de `seed/video-sources/`. Cada entrada:
 //   { trickId, provider, url, embedUrl, author, title, kind, aspect }
-// Idempotente: reemplaza solo los videos de terceros de los trucos del JSON; no toca las
-// filas de Loopkicks (provider 'loopkicks') ni los videos de tutoriales.
+// Idempotente: reemplaza solo los videos demo de terceros (`role='demo'`) de los trucos del
+// JSON; no toca las filas de Loopkicks (provider 'loopkicks') ni los tutoriales externos
+// (`role='tutorial'`, que los siembra `tutorial-sources.ts`).
 //
 // Regla dura (reglas-legal.md): prohibido admitir videos que involucren a menores. Esta
 // semilla no lo valida sola; lo valida una persona al aprobar cada candidato.
@@ -33,9 +34,11 @@ interface SourceVideo {
 }
 
 const SOURCES_DIR = new URL('./video-sources/', import.meta.url);
-const PROVIDERS = new Set(['youtube', 'vimeo', 'dailymotion']);
+const PROVIDERS = new Set(['youtube', 'vimeo', 'dailymotion', 'tiktok']);
 const KINDS = new Set(['file', 'iframe', 'link']);
 const ASPECTS = new Set(['16:9', '9:16']);
+// Solo demos: los tutoriales externos los maneja `tutorial-sources.ts` (`role='tutorial'`).
+const DEMO_PROVIDERS = ['youtube', 'vimeo', 'dailymotion', 'tiktok'];
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -151,6 +154,8 @@ async function main(): Promise<void> {
       title: entry.title,
       kind: entry.kind,
       aspect: entry.aspect,
+      role: 'demo',
+      language: null,
     });
     affected.push(entry.trickId);
   }
@@ -160,16 +165,17 @@ async function main(): Promise<void> {
     return;
   }
 
-  // Borrado acotado a los videos de terceros de los trucos del JSON (nunca los de Loopkicks
-  // ni los de tutoriales). El driver neon-http no soporta transacciones: borrado e insercion
-  // van secuenciales e idempotentes.
+  // Borrado acotado a los videos demo de terceros de los trucos del JSON (nunca los de
+  // Loopkicks ni los tutoriales, que tienen `role='tutorial'`). El driver neon-http no
+  // soporta transacciones: borrado e insercion van secuenciales e idempotentes.
   await db
     .delete(videos)
     .where(
       and(
         inArray(videos.trickId, affected),
+        eq(videos.role, 'demo'),
         isNotNull(videos.provider),
-        inArray(videos.provider, ['youtube', 'vimeo', 'dailymotion']),
+        inArray(videos.provider, DEMO_PROVIDERS),
       ),
     );
 

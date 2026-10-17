@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 
 // GET /api/videos?trickId=: devuelve los videos vigentes de un truco. La URL de
 // reproduccion ya viene resuelta desde la base (R2 o fuente externa); aqui solo se
-// normaliza la forma publica y se registra el trace_id.
+// normaliza la forma publica (incluido `role` y `language`) y se registra el trace_id.
 
 export async function GET(request: Request) {
   const traceId = newTraceId();
@@ -35,12 +35,16 @@ export async function GET(request: Request) {
         row.provider === 'loopkicks' ||
         row.provider === 'youtube' ||
         row.provider === 'vimeo' ||
-        row.provider === 'dailymotion'
+        row.provider === 'dailymotion' ||
+        row.provider === 'tiktok'
           ? row.provider
           : null;
       const kind: 'file' | 'iframe' | 'link' =
         row.kind === 'iframe' || row.kind === 'link' ? row.kind : 'file';
       const aspect: '16:9' | '9:16' = row.aspect === '9:16' ? '9:16' : '16:9';
+      const role: 'demo' | 'tutorial' = row.role === 'tutorial' ? 'tutorial' : 'demo';
+      const language: 'es' | 'en' | null =
+        row.language === 'es' || row.language === 'en' ? row.language : null;
       return [
         {
           id: row.id,
@@ -55,6 +59,8 @@ export async function GET(request: Request) {
           title: row.title,
           kind,
           aspect,
+          role,
+          language,
         },
       ];
     });

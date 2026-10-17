@@ -1,3 +1,4 @@
+import type { HowToDetail } from '@tricking/shared/how-to';
 import { relations, sql } from 'drizzle-orm';
 import {
   type AnyPgColumn,
@@ -5,6 +6,7 @@ import {
   customType,
   index,
   integer,
+  jsonb,
   pgTable,
   primaryKey,
   serial,
@@ -95,8 +97,12 @@ export const tricks = pgTable(
     descriptionEs: text('description_es'),
     // Descripcion PROPIA (contenido original, no de las fuentes) de como se hace el truco.
     // La escribe el autor del proyecto; sirve en el detalle y en la ficha del tutorial.
+    // El texto plano es el resumen y el respaldo; el detalle estructurado vive en
+    // `howToData`/`howToDataEs` (contrato HowToDetail v1, compartido en @tricking/shared).
     howTo: text('how_to'),
     howToEs: text('how_to_es'),
+    howToData: jsonb('how_to_data').$type<HowToDetail | null>(),
+    howToDataEs: jsonb('how_to_data_es').$type<HowToDetail | null>(),
     difficulty: smallint('difficulty'),
     section: text('section'),
     loopkicksSlug: text('loopkicks_slug').unique(),
@@ -264,7 +270,7 @@ export const videos = pgTable(
     durationSeconds: integer('duration_seconds'),
     status: text('status').notNull().default('pending'),
     // Fase 44: origen y forma de presentacion de videos de fuentes externas.
-    // `provider` es loopkicks, youtube, vimeo o dailymotion; `kind` es 'file'
+    // `provider` es loopkicks, youtube, vimeo, dailymotion o tiktok; `kind` es 'file'
     // (archivo directo, <video>), 'iframe' (embed con fachada al clic) o 'link'
     // (tarjeta con enlace); `aspect` es '16:9' o '9:16' (verticales tipo short).
     provider: text('provider'),
@@ -273,6 +279,10 @@ export const videos = pgTable(
     title: text('title'),
     kind: text('kind'),
     aspect: text('aspect'),
+    // Rol del video: 'demo' (ejecucion del truco) o 'tutorial' (explicacion externa).
+    // `language` es 'es' o 'en' y solo aplica a los tutoriales.
+    role: text('role').notNull().default('demo'),
+    language: text('language'),
     deletedAt: timestamp('deleted_at', { withTimezone: true }),
     ...timestamps,
   },

@@ -27,6 +27,7 @@ const PROVIDER_LABEL: Record<VideoProvider, string> = {
   youtube: 'YouTube',
   vimeo: 'Vimeo',
   dailymotion: 'Dailymotion',
+  tiktok: 'TikTok',
 };
 
 function pickPlayable(videos: VideoItem[]): VideoItem | null {

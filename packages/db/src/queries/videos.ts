@@ -21,6 +21,8 @@ export interface VideoForTrick {
   title: string | null;
   kind: string | null;
   aspect: string | null;
+  role: string;
+  language: string | null;
 }
 
 export async function listVideosForTrick(trickId: string): Promise<VideoForTrick[]> {
@@ -41,6 +43,8 @@ export async function listVideosForTrick(trickId: string): Promise<VideoForTrick
       title: videos.title,
       kind: videos.kind,
       aspect: videos.aspect,
+      role: videos.role,
+      language: videos.language,
     })
     .from(videos)
     .where(and(eq(videos.trickId, trickId), isNull(videos.deletedAt)))

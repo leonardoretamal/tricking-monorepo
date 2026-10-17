@@ -1,7 +1,10 @@
+import { howToDetailSchema } from '@tricking/shared';
 import { z } from 'zod';
 
 // Esquemas de las respuestas de /api/tricks. El cliente valida con Zod lo que recibe
 // (y lo que se rehidrata desde el cache persistido) en vez de confiar en un cast.
+// `howToData`/`howToDataEs` son el detalle estructurado del "como se hace" (HowToDetail v1);
+// se marcan nullish para que un detalle cacheado sin el campo siga validando.
 
 export const trickListItemSchema = z.object({
   id: z.string(),
@@ -77,6 +80,8 @@ export const trickRelationsSchema = z.object({
 export const trickDetailSchema = trickListItemSchema.extend({
   howTo: z.string().nullable(),
   howToEs: z.string().nullable(),
+  howToData: howToDetailSchema.nullish(),
+  howToDataEs: howToDetailSchema.nullish(),
   loopkicksNotes: z.string().nullable(),
   loopkicksNotesEs: z.string().nullable(),
   kojoTechniques: z.array(kojoTechniqueSchema),

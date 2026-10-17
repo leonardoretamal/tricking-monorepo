@@ -37,6 +37,21 @@ describe('trickSchemas', () => {
       ...listItem,
       howTo: null,
       howToEs: 'Paso el peso y giro.',
+      howToData: null,
+      howToDataEs: {
+        version: 1,
+        summary: 'Giro con patada.',
+        before: { prerequisites: 'Dominar el back handspring.', space: 'Colchoneta amplia.' },
+        body: {
+          feet: 'Empuje con la punta.',
+          legs: 'Piernas juntas.',
+          arms: 'Brazos abiertos.',
+          gaze: 'Mira por encima del hombro.',
+          torso: 'Torso compacto.',
+        },
+        steps: [{ title: 'Carrera', body: 'Impulso en linea recta.' }],
+        landing: 'Rodillas flexionadas.',
+      },
       loopkicksNotes: 'An Arabian starts with a backflip.',
       loopkicksNotesEs: 'Un Arabian empieza con un backflip.',
       kojoTechniques: [],
@@ -45,5 +60,7 @@ describe('trickSchemas', () => {
     });
     expect(parsed.prereqs[0]?.id).toBe('tornado');
     expect(parsed.howToEs).toBe('Paso el peso y giro.');
+    expect(parsed.howToDataEs?.summary).toBe('Giro con patada.');
+    expect(parsed.howToData).toBeNull();
   });
 });

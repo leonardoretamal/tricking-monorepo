@@ -33,10 +33,12 @@
     "db:manual-tricks": "tsx src/seed/manual-tricks.ts",
     "db:translate-loopkicks": "tsx src/seed/translate-loopkicks.ts",
     "db:loopkicks-notes-es": "tsx src/seed/apply-loopkicks-notes-es.ts",
-    "db:video-sources": "tsx src/seed/video-sources.ts"
+    "db:video-sources": "tsx src/seed/video-sources.ts",
+    "db:tutorial-videos": "tsx src/seed/tutorial-sources.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",
+    "@tricking/shared": "workspace:*",
     "@trickingapi/tricks-core-data": "^0.1.3",
     "@trickingapi/tricking-ts": "^0.1.4",
     "drizzle-orm": "^0.45.3"
