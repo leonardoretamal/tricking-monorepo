@@ -1,0 +1,2010 @@
+{
+  "tornado": {
+    "es": "Es una patada de giro de 360 grados. Das un paso, saltas, giras todo el cuerpo y pateas con la pierna de adelante en un arco redondo. Es la base de los cheat kicks como el Wackknife.",
+    "en": "It is a 360-degree spinning kick. You take a step, jump, turn the whole body and kick with the lead leg in a round arc. It is the base of cheat kicks such as the Wackknife.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada de giro de 360 grados. Das un paso, saltas, giras todo el cuerpo y pateas con la pierna de adelante en un arco redondo.",
+      "before": {
+        "prerequisites": "No necesitas otro truco del catálogo. Si es tu primera vez, practica primero el giro sin patear.",
+        "space": "Un espacio libre de unos 4 pasos, con colchoneta o césped. Empieza sin correr."
+      },
+      "body": {
+        "feet": "Pie de apoyo adelante y pie de pateo atrás, separados al ancho de la cadera. El peso arranca en la pierna de atrás.",
+        "legs": "La pierna de pateo sale estirada y barre en arco; la pierna de apoyo se queda flexionada y gira con la cadera.",
+        "arms": "El brazo contrario a la pierna de pateo abre el giro; el otro se recoge cerca del pecho para no frenar la rotación.",
+        "gaze": "Mira el objetivo al patear y el horizonte al caer. No mires el piso.",
+        "torso": "El torso gira con las caderas y se mantiene alto, sin inclinarse hacia adelante."
+      },
+      "steps": [
+        {
+          "title": "Paso de entrada",
+          "body": "Da un paso corto con el pie de apoyo y carga el peso en la pierna de atrás. El pie de pateo queda listo para salir."
+        },
+        {
+          "title": "Salto y giro",
+          "body": "Empuja con las dos piernas, sube y gira las caderas. El brazo contrario a la pierna de pateo abre el giro."
+        },
+        {
+          "title": "Patada redonda",
+          "body": "Estira la pierna de pateo y describí un arco redondo a la altura del pecho o la cara. La pierna de apoyo se queda flexionada."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja sobre el pie de despegue con la rodilla blanda y el pecho arriba. La otra pierna queda lista para seguir."
+        }
+      ],
+      "landing": "Cae sobre el pie de despegue con la rodilla flexionada y el pecho arriba. Si caes con el pecho abajo, mira al horizonte y aprieta el abdomen.",
+      "mistakes": [
+        "Saltar hacia adelante en vez de hacia arriba: el giro necesita altura.",
+        "Patear con la rodilla doblada: la pierna sale estirada y se recoge después.",
+        "Mirar el piso: la mirada se va al horizonte al girar.",
+        "No abrir el brazo: sin el brazo contrario el giro se queda corto."
+      ],
+      "tips": [
+        "Practica primero el giro de 360 grados sin patear.",
+        "Después suma la patada a media altura, sin buscar fuerza.",
+        "Marca la patada en un saco o en una pared acolchada para sentir la altura."
+      ],
+      "terms": [
+        {
+          "term": "cheat kick",
+          "meaning": "Patada en la que giras las caderas antes de patear, por eso el giro se siente corto."
+        },
+        {
+          "term": "patada redonda",
+          "meaning": "Patada que describe un arco circular con la pierna estirada."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a 360-degree spinning kick. You take a step, jump, turn the whole body and kick with the lead leg in a round arc.",
+      "before": {
+        "prerequisites": "You do not need another trick from the catalog. If it is your first time, practice the turn without the kick first.",
+        "space": "A clear space of about 4 steps, with a mat or grass. Start without running."
+      },
+      "body": {
+        "feet": "Lead foot forward and kicking foot back, about hip-width apart. The weight starts on the back leg.",
+        "legs": "The kicking leg extends and sweeps in an arc; the support leg stays bent and turns with the hips.",
+        "arms": "The arm opposite the kicking leg opens the turn; the other arm tucks near the chest so it does not slow the rotation.",
+        "gaze": "Look at the target when you kick and at the horizon when you land. Do not look at the floor.",
+        "torso": "The torso turns with the hips and stays tall, without leaning forward."
+      },
+      "steps": [
+        {
+          "title": "Entry step",
+          "body": "Take a short step with the support foot and load the weight on the back leg. The kicking foot is ready to leave."
+        },
+        {
+          "title": "Jump and turn",
+          "body": "Push with both legs, rise and turn the hips. The arm opposite the kicking leg opens the turn."
+        },
+        {
+          "title": "Round kick",
+          "body": "Extend the kicking leg and draw a round arc at chest or face height. The support leg stays bent."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on the takeoff foot with a soft knee and the chest up. The other leg is ready to continue."
+        }
+      ],
+      "landing": "Land on the takeoff foot with the knee bent and the chest up. If the chest drops, look at the horizon and tighten the core.",
+      "mistakes": [
+        "Jumping forward instead of up: the turn needs height.",
+        "Kicking with a bent knee: the leg extends and then tucks.",
+        "Looking at the floor: the gaze goes to the horizon as you turn.",
+        "Not opening the arm: without the opposite arm the turn falls short."
+      ],
+      "tips": [
+        "Practice the 360-degree turn without the kick first.",
+        "Then add the kick at medium height, without forcing power.",
+        "Mark the kick on a bag or a padded wall to feel the height."
+      ],
+      "terms": [
+        {
+          "term": "cheat kick",
+          "meaning": "A kick where you turn the hips before kicking, so the turn feels short."
+        },
+        {
+          "term": "round kick",
+          "meaning": "A kick that draws a circular arc with the leg extended."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "wackknife": {
+    "es": "Es una patada de giro corta, de media vuelta, en la que las piernas se cruzan y se abren como una navaja. No es un tornado completo: el cuerpo gira menos y la patada sale con la pierna estirada.",
+    "en": "It is a short half-turn spinning kick where the legs cross and open like a knife. It is not a full tornado: the body turns less and the kick comes out with the leg extended.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada de giro corta, de media vuelta, en la que las piernas se cruzan y se abren como una navaja. El cuerpo gira menos que en un tornado y la patada sale con la pierna estirada.",
+      "before": {
+        "prerequisites": "Necesitas el Tornado. El Tornado te da el giro de cadera y la altura; el Wackknife es ese mismo impulso con menos giro y la pierna más estirada.",
+        "space": "Un espacio libre de unos 4 pasos, con colchoneta o césped. Empieza sin correr y con el pie de pateo atrás."
+      },
+      "body": {
+        "feet": "Pie de apoyo adelante y pie de pateo atrás, separados al ancho de la cadera. El peso arranca en la pierna de atrás.",
+        "legs": "La pierna de pateo sale estirada y pasa por delante; la otra se recoge o patea hacia atrás para cerrar la tijera.",
+        "arms": "El brazo contrario a la pierna de pateo abre el giro; el otro se recoge cerca del pecho para no frenar la rotación.",
+        "gaze": "Mira el punto donde vas a patear al empezar; al girar, busca el horizonte para aterrizar.",
+        "torso": "El torso se mantiene alto y gira con las caderas. No te inclines hacia el piso."
+      },
+      "steps": [
+        {
+          "title": "Prepara el paso",
+          "body": "Da un paso corto con el pie de apoyo y carga el peso en la pierna de atrás. El pie de pateo queda listo para salir."
+        },
+        {
+          "title": "Salta y gira",
+          "body": "Empuja con las dos piernas, sube y gira las caderas media vuelta mientras el brazo contrario abre el giro."
+        },
+        {
+          "title": "Patea en navaja",
+          "body": "Estira la pierna de pateo como una navaja y recoge la otra. El cuerpo forma una tijera: una pierna adelante y la otra atrás."
+        },
+        {
+          "title": "Aterriza",
+          "body": "Baja sobre el pie de despegue con la rodilla flexionada y el pecho arriba. La otra pierna queda lista para el siguiente paso."
+        }
+      ],
+      "landing": "Cae sobre el pie de despegue con la rodilla blanda. Si caes con el pecho abajo, mira al horizonte y aprieta el abdomen antes del contacto.",
+      "mistakes": [
+        "Saltar hacia adelante en vez de hacia arriba: el Wackknife se arma con altura, no con distancia.",
+        "Patear con la rodilla doblada: la pierna sale estirada y se recoge después.",
+        "Mirar el piso: la mirada se va al horizonte al girar.",
+        "No abrir el brazo: sin el brazo contrario el giro se queda corto.",
+        "Girar como un tornado completo: el Wackknife es media vuelta, no 360 grados."
+      ],
+      "tips": [
+        "Practica primero el Tornado y exagera la tijera en el aire.",
+        "Marca la patada en un saco o en una pared acolchada para sentir la altura.",
+        "Cuenta las patadas en voz alta: el Wackknife tiene dos o tres según cómo las cuentes; lo importante es la forma de navaja, no el número."
+      ],
+      "terms": [
+        {
+          "term": "cheat kick",
+          "meaning": "Patada en la que giras las caderas antes de patear, por eso el giro se siente corto."
+        },
+        {
+          "term": "jackknife",
+          "meaning": "Forma de tijera: una pierna va adelante y la otra atrás, como una navaja que se abre."
+        },
+        {
+          "term": "tornado",
+          "meaning": "Patada de giro de 360 grados que sirve de base para los cheat kicks."
+        }
+      ],
+      "prereqNotes": {
+        "tornado": "Sin el Tornado no tienes el giro ni la altura; el Wackknife es ese mismo movimiento con la pierna estirada y menos rotación."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a short half-turn spinning kick where the legs cross and open like a knife. The body turns less than in a tornado and the kick comes out with the leg extended.",
+      "before": {
+        "prerequisites": "You need the Tornado. The Tornado gives you the hip turn and the height; the Wackknife is that same impulse with less turn and a straighter leg.",
+        "space": "A clear space of about 4 steps, with a mat or grass. Start without running and with the kicking foot back."
+      },
+      "body": {
+        "feet": "Lead foot forward and kicking foot back, about hip-width apart. The weight starts on the back leg.",
+        "legs": "The kicking leg extends and passes in front; the other leg tucks or kicks back to close the scissor.",
+        "arms": "The arm opposite the kicking leg opens the turn; the other arm tucks near the chest so it does not slow the rotation.",
+        "gaze": "Look at the point you are going to kick at the start; as you turn, find the horizon to land.",
+        "torso": "The torso stays tall and turns with the hips. Do not lean toward the floor."
+      },
+      "steps": [
+        {
+          "title": "Set up the step",
+          "body": "Take a short step with the support foot and load the weight on the back leg. The kicking foot is ready to leave."
+        },
+        {
+          "title": "Jump and turn",
+          "body": "Push with both legs, rise and turn the hips half a turn while the opposite arm opens the turn."
+        },
+        {
+          "title": "Kick like a knife",
+          "body": "Extend the kicking leg like a knife and tuck the other leg. The body forms a scissor: one leg forward and the other back."
+        },
+        {
+          "title": "Land",
+          "body": "Come down on the takeoff foot with the knee bent and the chest up. The other leg is ready for the next step."
+        }
+      ],
+      "landing": "Land on the takeoff foot with a soft knee. If the chest drops, look at the horizon and tighten the core before contact.",
+      "mistakes": [
+        "Jumping forward instead of up: the Wackknife is built with height, not distance.",
+        "Kicking with a bent knee: the leg extends and then tucks.",
+        "Looking at the floor: the gaze goes to the horizon as you turn.",
+        "Not opening the arm: without the opposite arm the turn falls short.",
+        "Turning like a full tornado: the Wackknife is a half turn, not 360 degrees."
+      ],
+      "tips": [
+        "Practice the Tornado first and exaggerate the scissor in the air.",
+        "Mark the kick on a bag or a padded wall to feel the height.",
+        "Count the kicks out loud: the Wackknife has two or three depending on how you count them; the knife shape matters more than the number."
+      ],
+      "terms": [
+        {
+          "term": "cheat kick",
+          "meaning": "A kick where you turn the hips before kicking, so the turn feels short."
+        },
+        {
+          "term": "jackknife",
+          "meaning": "A scissor shape: one leg forward and the other back, like a knife opening."
+        },
+        {
+          "term": "tornado",
+          "meaning": "A 360-degree spinning kick that is the base for cheat kicks."
+        }
+      ],
+      "prereqNotes": {
+        "tornado": "Without the Tornado you do not have the turn or the height; the Wackknife is that same movement with a straighter leg and less rotation."
+      }
+    }
+  },
+  "fullWackknife": {
+    "es": "Es un mortal atrás con un giro completo de 360 grados que termina en una patada de navaja antes de aterrizar. Primero haces el mortal con giro y, cuando ya ves el piso, abres el cuerpo y pateas.",
+    "en": "It is a backflip with a full 360-degree twist that finishes in a knife kick before landing. First you do the flip with the twist and, once you see the floor, you open the body and kick.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal atrás con un giro completo de 360 grados que termina en una patada de navaja antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Full Twist (mortal atrás con 360 grados) y el Wackknife. El Full Twist te da la rotación y la orientación; el Wackknife te da la forma de la patada.",
+        "space": "Colchoneta amplia o cama elástica. Es un truco avanzado: no lo intentes en piso duro sin supervisión."
+      },
+      "body": {
+        "feet": "Entrada con un pique. El pie de pateo queda atrás y el peso pasa por la pierna de impulso.",
+        "legs": "En el aire, una pierna se recoge para el mortal y al final se estira para la navaja; la otra se abre para cerrar la tijera.",
+        "arms": "Los brazos ayudan a girar y a agrupar el cuerpo; al abrir la navaja, el brazo contrario a la pierna de pateo se abre.",
+        "gaze": "Durante el mortal buscas el piso por encima del hombro; al abrir la navaja, miras el horizonte.",
+        "torso": "El torso se agrupa para girar y se abre al final, sin perder el pecho arriba."
+      },
+      "steps": [
+        {
+          "title": "Entrada y mortal",
+          "body": "Da el pique, sube y arranca el mortal atrás. Agrupa el cuerpo para girar."
+        },
+        {
+          "title": "Giro completo",
+          "body": "Completa los 360 grados del Full Twist. La mirada pasa por encima del hombro para ubicar el piso."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "Cuando ya ves el piso, abre el cuerpo y estira la pierna de pateo como una navaja. La otra pierna se abre para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas y el pecho arriba. Si abres tarde, la patada se queda corta."
+        }
+      ],
+      "landing": "Aterriza de pie con las rodillas flexionadas y el pecho arriba. Si sientes que caes hacia atrás, abre la navaja un poco antes.",
+      "mistakes": [
+        "Abrir la navaja demasiado tarde: la pierna no llega a estirarse.",
+        "No completar el giro: el cuerpo queda de lado y la patada sale torcida.",
+        "Recoger la pierna de pateo: la navaja necesita la pierna estirada.",
+        "Mirar el piso durante toda la caída: la mirada se levanta al horizonte al abrir."
+      ],
+      "tips": [
+        "Practica el Full Twist hasta aterrizar de pie con control.",
+        "Después marca la navaja en una cama elástica o con un compañero.",
+        "Une las dos partes solo cuando el giro ya tenga altura y orientación."
+      ],
+      "terms": [
+        {
+          "term": "full twist",
+          "meaning": "Mortal atrás con un giro completo de 360 grados."
+        },
+        {
+          "term": "tuck",
+          "meaning": "Agrupar las rodillas contra el pecho para girar más rápido."
+        },
+        {
+          "term": "layout",
+          "meaning": "Mortal con el cuerpo estirado, sin agrupar las rodillas."
+        },
+        {
+          "term": "spot",
+          "meaning": "Ubicar un punto con la mirada para orientarte en el aire."
+        }
+      ],
+      "prereqNotes": {
+        "fullTwist": "El Full Twist te da el giro completo y la orientación en el aire; sin él no llegas a la posición de la navaja.",
+        "wackknife": "El Wackknife aporta la forma de la patada y el tiempo para abrir el cuerpo al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backflip with a full 360-degree twist that finishes in a knife kick before landing.",
+      "before": {
+        "prerequisites": "You need the Full Twist (backflip with a 360-degree twist) and the Wackknife. The Full Twist gives you the rotation and orientation; the Wackknife gives you the kick shape.",
+        "space": "A large mat or a trampoline. This is an advanced trick: do not try it on hard floor without supervision."
+      },
+      "body": {
+        "feet": "Enter with a punch. The kicking foot stays back and the weight passes through the takeoff leg.",
+        "legs": "In the air, one leg tucks for the flip and at the end it extends for the knife kick; the other leg opens to close the scissor.",
+        "arms": "The arms help you turn and tuck; when you open the knife kick, the arm opposite the kicking leg opens.",
+        "gaze": "During the flip you look for the floor over the shoulder; when you open the knife kick, you look at the horizon.",
+        "torso": "The torso tucks to turn and opens at the end, without letting the chest drop."
+      },
+      "steps": [
+        {
+          "title": "Entry and flip",
+          "body": "Punch, rise and start the backflip. Tuck the body to turn."
+        },
+        {
+          "title": "Full twist",
+          "body": "Complete the 360 degrees of the Full Twist. The gaze passes over the shoulder to find the floor."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "Once you see the floor, open the body and extend the kicking leg like a knife. The other leg opens to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet with soft knees and the chest up. If you open late, the kick falls short."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If you feel yourself falling backward, open the knife kick a little earlier.",
+      "mistakes": [
+        "Opening the knife kick too late: the leg does not have time to extend.",
+        "Not completing the twist: the body stays sideways and the kick comes out crooked.",
+        "Tucking the kicking leg: the knife kick needs the leg extended.",
+        "Looking at the floor the whole way down: the gaze lifts to the horizon when you open."
+      ],
+      "tips": [
+        "Practice the Full Twist until you land on your feet with control.",
+        "Then mark the knife kick on a trampoline or with a partner.",
+        "Join both parts only when the twist has height and orientation."
+      ],
+      "terms": [
+        {
+          "term": "full twist",
+          "meaning": "A backflip with a full 360-degree twist."
+        },
+        {
+          "term": "tuck",
+          "meaning": "Pulling the knees to the chest to turn faster."
+        },
+        {
+          "term": "layout",
+          "meaning": "A flip with the body extended, without tucking the knees."
+        },
+        {
+          "term": "spot",
+          "meaning": "Finding a point with your eyes to orient yourself in the air."
+        }
+      ],
+      "prereqNotes": {
+        "fullTwist": "The Full Twist gives you the full turn and orientation in the air; without it you cannot reach the knife kick position.",
+        "wackknife": "The Wackknife gives you the kick shape and the timing to open the body at the end."
+      }
+    }
+  },
+  "corkscrewWackknife": {
+    "es": "Es un corkscrew (mortal atrás con un giro completo sobre un eje inclinado) que termina en Wackknife. El cuerpo gira como un sacacorchos y, al final, la pierna sale estirada.",
+    "en": "It is a corkscrew (backflip with a full twist on a tilted axis) that finishes in a Wackknife. The body turns like a corkscrew and, at the end, the leg extends.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un corkscrew que termina en Wackknife. El cuerpo gira sobre un eje inclinado y al final abre la pierna en forma de navaja.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew y el Wackknife. El Corkscrew te da el giro inclinado; el Wackknife te da la patada final.",
+        "space": "Colchoneta amplia o cama elástica. Es un truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada con pique. El pie de pateo queda atrás.",
+        "legs": "La pierna de pateo se recoge para el corkscrew y se estira al final; la otra se abre para cerrar la tijera.",
+        "arms": "El brazo de la mano de giro ayuda a inclinar el eje; el otro se recoge y se abre al final.",
+        "gaze": "Mira por encima del hombro durante el giro y al horizonte al abrir la navaja.",
+        "torso": "El torso se inclina con el eje del corkscrew y se endereza al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el mortal atrás con el cuerpo agrupado."
+        },
+        {
+          "title": "Giro inclinado",
+          "body": "Gira sobre el eje inclinado del corkscrew. La mirada pasa por encima del hombro."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "Al ver el piso, estira la pierna de pateo y abre la otra para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con la rodilla flexionada y el pecho arriba."
+        }
+      ],
+      "landing": "Cae de pie con la rodilla flexionada y el pecho arriba. Si caes de lado, revisa que el eje del giro no se haya aplanado.",
+      "mistakes": [
+        "Girar plano en vez de inclinar el eje.",
+        "Abrir la navaja tarde.",
+        "Perder la mirada por encima del hombro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Corkscrew solo hasta aterrizar con control.",
+        "Después marca la navaja en una cama elástica.",
+        "Une las partes cuando el giro ya tenga altura."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "Mortal atrás con un giro completo sobre un eje inclinado, como un sacacorchos."
+        },
+        {
+          "term": "eje inclinado",
+          "meaning": "Línea imaginaria sobre la que gira el cuerpo, inclinada respecto a la vertical."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "El Corkscrew te da el giro inclinado y la orientación; sin él no llegas a la salida.",
+        "wackknife": "El Wackknife aporta la forma de la patada y el tiempo para abrir el cuerpo."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a corkscrew that finishes in a Wackknife. The body turns on a tilted axis and at the end the leg opens like a knife.",
+      "before": {
+        "prerequisites": "You need the Corkscrew and the Wackknife. The Corkscrew gives you the tilted turn; the Wackknife gives you the final kick.",
+        "space": "A large mat or a trampoline. This is an advanced trick."
+      },
+      "body": {
+        "feet": "Enter with a punch. The kicking foot stays back.",
+        "legs": "The kicking leg tucks for the corkscrew and extends at the end; the other leg opens to close the scissor.",
+        "arms": "The lead arm helps tilt the axis; the other arm tucks and opens at the end.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you open the knife kick.",
+        "torso": "The torso tilts with the corkscrew axis and straightens at the end."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Punch and start the backflip with the body tucked."
+        },
+        {
+          "title": "Tilted turn",
+          "body": "Turn on the tilted corkscrew axis. The gaze passes over the shoulder."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "When you see the floor, extend the kicking leg and open the other leg to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with the knee bent and the chest up."
+        }
+      ],
+      "landing": "Land on your feet with the knee bent and the chest up. If you land sideways, check that the turn axis did not flatten.",
+      "mistakes": [
+        "Turning flat instead of tilting the axis.",
+        "Opening the knife kick late.",
+        "Losing the gaze over the shoulder.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Corkscrew alone until you land with control.",
+        "Then mark the knife kick on a trampoline.",
+        "Join the parts when the turn has height."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "A backflip with a full twist on a tilted axis, like a corkscrew."
+        },
+        {
+          "term": "tilted axis",
+          "meaning": "An imaginary line the body turns around, tilted from vertical."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "The Corkscrew gives you the tilted turn and orientation; without it you cannot reach the exit.",
+        "wackknife": "The Wackknife gives you the kick shape and the timing to open the body."
+      }
+    }
+  },
+  "doubleCorkscrewWackknife": {
+    "es": "Es un doble corkscrew, dos giros sobre el eje inclinado, que termina en Wackknife. Es un truco de élite: primero necesitas el Corkscrew Wackknife.",
+    "en": "It is a double corkscrew, two turns on the tilted axis, that finishes in a Wackknife. It is an elite trick: you need the Corkscrew Wackknife first.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble corkscrew que termina en Wackknife. El cuerpo da dos giros sobre el eje inclinado y al final abre la pierna en forma de navaja.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew Wackknife y el Double Corkscrew. El primero te da la salida; el segundo te da los dos giros.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión."
+      },
+      "body": {
+        "feet": "Entrada con pique. El pie de pateo queda atrás.",
+        "legs": "Las piernas se recogen para los dos giros y al final una se estira para la navaja.",
+        "arms": "Los brazos ayudan a mantener el eje inclinado y a abrir la navaja al final.",
+        "gaze": "La mirada pasa por encima del hombro en cada giro y busca el horizonte al abrir.",
+        "torso": "El torso se mantiene agrupado durante los giros y se abre al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el mortal atrás."
+        },
+        {
+          "title": "Doble corkscrew",
+          "body": "Completa los dos giros sobre el eje inclinado sin perder la altura."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "Al ver el piso, estira la pierna de pateo y abre la otra para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas y el pecho arriba."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el segundo giro se queda corto, no fuerces la patada.",
+      "mistakes": [
+        "Apurar el segundo giro y perder la altura.",
+        "Abrir la navaja antes de terminar los dos giros.",
+        "Perder el eje inclinado.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Corkscrew Wackknife hasta que sea cómodo.",
+        "Después entrena el Double Corkscrew solo.",
+        "Une los dos cuando el segundo giro ya tenga altura."
+      ],
+      "terms": [
+        {
+          "term": "double corkscrew",
+          "meaning": "Dos giros completos sobre el eje inclinado del corkscrew."
+        },
+        {
+          "term": "eje inclinado",
+          "meaning": "Línea imaginaria sobre la que gira el cuerpo, inclinada respecto a la vertical."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewWackknife": "El Corkscrew Wackknife te da la salida y la forma de la patada con un solo giro.",
+        "doubleCorkscrew": "El Double Corkscrew te da los dos giros necesarios para llegar a la navaja."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a double corkscrew that finishes in a Wackknife. The body makes two turns on the tilted axis and at the end the leg opens like a knife.",
+      "before": {
+        "prerequisites": "You need the Corkscrew Wackknife and the Double Corkscrew. The first gives you the exit; the second gives you the two turns.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "Enter with a punch. The kicking foot stays back.",
+        "legs": "The legs tuck for the two turns and at the end one extends for the knife kick.",
+        "arms": "The arms help keep the tilted axis and open the knife kick at the end.",
+        "gaze": "The gaze passes over the shoulder on each turn and finds the horizon when you open.",
+        "torso": "The torso stays tucked during the turns and opens at the end."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Punch and start the backflip."
+        },
+        {
+          "title": "Double corkscrew",
+          "body": "Complete the two turns on the tilted axis without losing height."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "When you see the floor, extend the kicking leg and open the other leg to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees and the chest up."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the second turn falls short, do not force the kick.",
+      "mistakes": [
+        "Rushing the second turn and losing height.",
+        "Opening the knife kick before finishing the two turns.",
+        "Losing the tilted axis.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Corkscrew Wackknife until it feels comfortable.",
+        "Then train the Double Corkscrew alone.",
+        "Join them when the second turn has height."
+      ],
+      "terms": [
+        {
+          "term": "double corkscrew",
+          "meaning": "Two full turns on the tilted corkscrew axis."
+        },
+        {
+          "term": "tilted axis",
+          "meaning": "An imaginary line the body turns around, tilted from vertical."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewWackknife": "The Corkscrew Wackknife gives you the exit and the kick shape with a single turn.",
+        "doubleCorkscrew": "The Double Corkscrew gives you the two turns needed to reach the knife kick."
+      }
+    }
+  },
+  "gainerWackknife": {
+    "es": "Es un gainer, un mortal atrás que viaja hacia adelante, con una patada de navaja en el punto más alto. La entrada va hacia adelante, pero el giro es hacia atrás.",
+    "en": "It is a gainer, a backflip that travels forward, with a knife kick at the highest point. The entry goes forward, but the rotation is backward.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un gainer con una patada de navaja en el punto más alto. La entrada va hacia adelante y el giro es hacia atrás.",
+      "before": {
+        "prerequisites": "Necesitas el Gainer Flash y el Wackknife. El Gainer Flash te da la entrada y la altura; el Wackknife te da la patada.",
+        "space": "Colchoneta amplia o cama elástica. No lo intentes en piso duro."
+      },
+      "body": {
+        "feet": "Entrada corriendo o con pique. El pie de pateo queda atrás.",
+        "legs": "Una pierna patea hacia atrás para el gainer y la otra se recoge; al final, la pierna de la navaja se estira.",
+        "arms": "Los brazos suben para el gainer y se abren para la navaja.",
+        "gaze": "Mira el horizonte al entrar; durante el gainer busca el piso por encima del hombro; al abrir, vuelve al horizonte.",
+        "torso": "El torso viaja hacia adelante y gira hacia atrás; al final se abre."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Corre o da un pique hacia adelante y prepara el despegue."
+        },
+        {
+          "title": "Gainer",
+          "body": "Salta hacia adelante y gira hacia atrás. Agrupa el cuerpo para completar el mortal."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "En el punto más alto, estira la pierna de pateo y abre la otra para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con la rodilla blanda y el pecho arriba."
+        }
+      ],
+      "landing": "Cae de pie con la rodilla blanda y el pecho arriba. No frenes el pecho hacia adelante.",
+      "mistakes": [
+        "Saltar hacia atrás en vez de hacia adelante.",
+        "Patear demasiado temprano, antes de llegar al punto alto.",
+        "Mirar el piso en la entrada.",
+        "Abrir la navaja con la pierna doblada."
+      ],
+      "tips": [
+        "Practica el Gainer Flash hasta aterrizar con control.",
+        "Después marca la navaja en una cama elástica.",
+        "Une las partes cuando el gainer ya tenga altura."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "Mortal atrás que viaja hacia adelante."
+        },
+        {
+          "term": "gainer flash",
+          "meaning": "Gainer con el cuerpo estirado, sin agrupar las rodillas."
+        }
+      ],
+      "prereqNotes": {
+        "gainerFlash": "El Gainer Flash te da la entrada hacia adelante y la altura para abrir la navaja.",
+        "wackknife": "El Wackknife aporta la forma de la patada y el tiempo para abrir el cuerpo."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a gainer with a knife kick at the highest point. The entry goes forward and the rotation is backward.",
+      "before": {
+        "prerequisites": "You need the Gainer Flash and the Wackknife. The Gainer Flash gives you the entry and height; the Wackknife gives you the kick.",
+        "space": "A large mat or a trampoline. Do not try it on hard floor."
+      },
+      "body": {
+        "feet": "Enter running or with a punch. The kicking foot stays back.",
+        "legs": "One leg kicks back for the gainer and the other tucks; at the end, the knife-kick leg extends.",
+        "arms": "The arms rise for the gainer and open for the knife kick.",
+        "gaze": "Look at the horizon on the entry; during the gainer look for the floor over the shoulder; when you open, return to the horizon.",
+        "torso": "The torso travels forward and turns backward; at the end it opens."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Run or punch forward and prepare the takeoff."
+        },
+        {
+          "title": "Gainer",
+          "body": "Jump forward and rotate backward. Tuck the body to complete the flip."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "At the highest point, extend the kicking leg and open the other leg to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with a soft knee and the chest up."
+        }
+      ],
+      "landing": "Land on your feet with a soft knee and the chest up. Do not let the chest fall forward.",
+      "mistakes": [
+        "Jumping backward instead of forward.",
+        "Kicking too early, before the highest point.",
+        "Looking at the floor on the entry.",
+        "Opening the knife kick with a bent leg."
+      ],
+      "tips": [
+        "Practice the Gainer Flash until you land with control.",
+        "Then mark the knife kick on a trampoline.",
+        "Join the parts when the gainer has height."
+      ],
+      "terms": [
+        {
+          "term": "gainer",
+          "meaning": "A backflip that travels forward."
+        },
+        {
+          "term": "gainer flash",
+          "meaning": "A gainer with the body extended, without tucking the knees."
+        }
+      ],
+      "prereqNotes": {
+        "gainerFlash": "The Gainer Flash gives you the forward entry and the height to open the knife kick.",
+        "wackknife": "The Wackknife gives you the kick shape and the timing to open the body."
+      }
+    }
+  },
+  "butterflyTwistWackknife": {
+    "es": "Es un butterfly twist (b-twist) que antes de aterrizar suma una patada de navaja. El cuerpo gira horizontal y al final la pierna sale estirada.",
+    "en": "It is a butterfly twist (b-twist) that adds a knife kick before landing. The body turns horizontally and at the end the leg extends.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un b-twist que termina en Wackknife antes de aterrizar. El giro es horizontal y la patada sale al final.",
+      "before": {
+        "prerequisites": "Necesitas el Butterfly Twist Doubleleg y el Wackknife. El b-twist te da el giro horizontal; el Wackknife te da la patada final.",
+        "space": "Colchoneta amplia. Es un truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada con paso y giro. El pie de pateo queda atrás.",
+        "legs": "En el b-twist las piernas se abren en el aire; al final una se estira para la navaja.",
+        "arms": "Los brazos abren el giro horizontal; al final el brazo contrario a la patada se abre.",
+        "gaze": "Mira por encima del hombro durante el giro y al horizonte al aterrizar.",
+        "torso": "El torso se mantiene horizontal durante el b-twist y se endereza al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso de entrada y prepara el giro horizontal."
+        },
+        {
+          "title": "B-twist",
+          "body": "Salta y gira el cuerpo en horizontal. Las piernas se abren para el giro."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "Antes de aterrizar, estira la pierna de pateo y abre la otra para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas y el pecho arriba."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si caes de lado, revisa la altura del giro.",
+      "mistakes": [
+        "Perder la horizontal del b-twist.",
+        "Abrir la navaja tarde.",
+        "Mirar el piso durante el giro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el b-twist hasta aterrizar con control.",
+        "Después marca la navaja en una cama elástica.",
+        "Une las partes cuando el giro horizontal sea estable."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: giro horizontal del cuerpo con las piernas abiertas."
+        },
+        {
+          "term": "horizontal",
+          "meaning": "El cuerpo gira acostado en el aire, no de pie."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistDoubleleg": "El B-twist Doubleleg te da el giro horizontal y la salida con las piernas abiertas.",
+        "wackknife": "El Wackknife aporta la forma de la patada y el tiempo para abrir el cuerpo."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a b-twist that finishes in a Wackknife before landing. The turn is horizontal and the kick comes out at the end.",
+      "before": {
+        "prerequisites": "You need the Butterfly Twist Doubleleg and the Wackknife. The b-twist gives you the horizontal turn; the Wackknife gives you the final kick.",
+        "space": "A large mat. This is an advanced trick."
+      },
+      "body": {
+        "feet": "Enter with a step and a turn. The kicking foot stays back.",
+        "legs": "In the b-twist the legs open in the air; at the end one extends for the knife kick.",
+        "arms": "The arms open the horizontal turn; at the end the arm opposite the kick opens.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you land.",
+        "torso": "The torso stays horizontal during the b-twist and straightens at the end."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the entry step and prepare the horizontal turn."
+        },
+        {
+          "title": "B-twist",
+          "body": "Jump and turn the body horizontally. The legs open for the turn."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "Before landing, extend the kicking leg and open the other leg to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees and the chest up."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If you land sideways, check the height of the turn.",
+      "mistakes": [
+        "Losing the horizontal position of the b-twist.",
+        "Opening the knife kick late.",
+        "Looking at the floor during the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the b-twist until you land with control.",
+        "Then mark the knife kick on a trampoline.",
+        "Join the parts when the horizontal turn is stable."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: a horizontal body turn with the legs open."
+        },
+        {
+          "term": "horizontal",
+          "meaning": "The body turns lying down in the air, not standing up."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwistDoubleleg": "The B-twist Doubleleg gives you the horizontal turn and the exit with the legs open.",
+        "wackknife": "The Wackknife gives you the kick shape and the timing to open the body."
+      }
+    }
+  },
+  "takFullWackknife": {
+    "es": "Es un Tak Full, un mortal atrás con giro completo que sale de una entrada lateral, que termina en Wackknife. El giro y la patada se suman antes de aterrizar.",
+    "en": "It is a Tak Full, a backflip with a full twist that comes from a lateral entry, finishing in a Wackknife. The turn and the kick are added before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Tak Full que termina en Wackknife. La entrada es lateral, el giro es completo y la patada sale al final.",
+      "before": {
+        "prerequisites": "Necesitas el Tak Full y el Full Wackknife. El Tak Full te da la entrada y el giro; el Full Wackknife te da la salida.",
+        "space": "Colchoneta amplia o cama elástica. Es un truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada lateral con un paso. El pie de pateo queda atrás.",
+        "legs": "La pierna de pateo se recoge para el mortal y se estira al final; la otra se abre.",
+        "arms": "Los brazos ayudan a girar y a abrir la navaja al final.",
+        "gaze": "Mira por encima del hombro durante el giro y al horizonte al abrir.",
+        "torso": "El torso se agrupa para girar y se abre al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada lateral",
+          "body": "Da el paso lateral y prepara el despegue del Tak Full."
+        },
+        {
+          "title": "Mortal con giro",
+          "body": "Sube, agrupa el cuerpo y completa el giro de 360 grados."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "Al ver el piso, estira la pierna de pateo y abre la otra para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas y el pecho arriba."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el giro se queda corto, no fuerces la patada.",
+      "mistakes": [
+        "Perder el ángulo de la entrada lateral.",
+        "No completar el giro.",
+        "Abrir la navaja tarde.",
+        "Mirar el piso durante la caída."
+      ],
+      "tips": [
+        "Practica el Tak Full hasta aterrizar con control.",
+        "Después marca la navaja en una cama elástica.",
+        "Une las partes cuando el giro sea estable."
+      ],
+      "terms": [
+        {
+          "term": "tak",
+          "meaning": "Entrada lateral que se usa para armar el Tak Full."
+        },
+        {
+          "term": "tak full",
+          "meaning": "Mortal atrás con giro completo que sale de una entrada lateral."
+        }
+      ],
+      "prereqNotes": {
+        "takFull": "El Tak Full te da la entrada lateral y el giro completo.",
+        "fullWackknife": "El Full Wackknife te da la salida con la patada de navaja."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Tak Full that finishes in a Wackknife. The entry is lateral, the turn is full and the kick comes out at the end.",
+      "before": {
+        "prerequisites": "You need the Tak Full and the Full Wackknife. The Tak Full gives you the entry and the turn; the Full Wackknife gives you the exit.",
+        "space": "A large mat or a trampoline. This is an advanced trick."
+      },
+      "body": {
+        "feet": "Lateral entry with one step. The kicking foot stays back.",
+        "legs": "The kicking leg tucks for the flip and extends at the end; the other leg opens.",
+        "arms": "The arms help you turn and open the knife kick at the end.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you open.",
+        "torso": "The torso tucks to turn and opens at the end."
+      },
+      "steps": [
+        {
+          "title": "Lateral entry",
+          "body": "Take the lateral step and prepare the Tak Full takeoff."
+        },
+        {
+          "title": "Flip with a twist",
+          "body": "Rise, tuck the body and complete the 360-degree turn."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "When you see the floor, extend the kicking leg and open the other leg to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees and the chest up."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the turn falls short, do not force the kick.",
+      "mistakes": [
+        "Losing the angle of the lateral entry.",
+        "Not completing the turn.",
+        "Opening the knife kick late.",
+        "Looking at the floor during the fall."
+      ],
+      "tips": [
+        "Practice the Tak Full until you land with control.",
+        "Then mark the knife kick on a trampoline.",
+        "Join the parts when the turn is stable."
+      ],
+      "terms": [
+        {
+          "term": "tak",
+          "meaning": "A lateral entry used to set up the Tak Full."
+        },
+        {
+          "term": "tak full",
+          "meaning": "A backflip with a full twist that comes from a lateral entry."
+        }
+      ],
+      "prereqNotes": {
+        "takFull": "The Tak Full gives you the lateral entry and the full turn.",
+        "fullWackknife": "The Full Wackknife gives you the exit with the knife kick."
+      }
+    }
+  },
+  "sailorMoonWackknife": {
+    "es": "Es un Sailor Moon, un giro horizontal con patada, combinado con un Wackknife antes de aterrizar. El cuerpo gira y la pierna sale estirada en la parte final.",
+    "en": "It is a Sailor Moon, a horizontal turn with a kick, combined with a Wackknife before landing. The body turns and the leg extends in the final part.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Sailor Moon combinado con Wackknife. El giro es horizontal y la patada de navaja sale antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Sailor Moon y el Wackknife. El Sailor Moon te da el giro con patada; el Wackknife te da la salida.",
+        "space": "Colchoneta amplia. Es un truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada con paso y giro. El pie de pateo queda atrás.",
+        "legs": "Las piernas se abren en el giro horizontal; al final una se estira para la navaja.",
+        "arms": "Los brazos abren el giro y se recogen al final para no frenar la patada.",
+        "gaze": "Mira por encima del hombro durante el giro y al horizonte al aterrizar.",
+        "torso": "El torso gira en horizontal y se endereza al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso de entrada y prepara el giro horizontal."
+        },
+        {
+          "title": "Sailor Moon",
+          "body": "Salta y gira el cuerpo en horizontal con la patada del Sailor Moon."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "Antes de aterrizar, estira la pierna de pateo y abre la otra para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas y el pecho arriba."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si caes de lado, revisa la altura del giro.",
+      "mistakes": [
+        "Perder la horizontal del Sailor Moon.",
+        "Abrir la navaja tarde.",
+        "Mirar el piso durante el giro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Sailor Moon hasta aterrizar con control.",
+        "Después marca la navaja en una cama elástica.",
+        "Une las partes cuando el giro sea estable."
+      ],
+      "terms": [
+        {
+          "term": "sailor moon",
+          "meaning": "Giro horizontal con patada que se usa como base de esta variante."
+        }
+      ],
+      "prereqNotes": {
+        "sailorMoon": "El Sailor Moon te da el giro horizontal con patada.",
+        "wackknife": "El Wackknife aporta la forma de la patada final y el tiempo para abrir el cuerpo."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Sailor Moon combined with a Wackknife. The turn is horizontal and the knife kick comes out before landing.",
+      "before": {
+        "prerequisites": "You need the Sailor Moon and the Wackknife. The Sailor Moon gives you the turn with a kick; the Wackknife gives you the exit.",
+        "space": "A large mat. This is an advanced trick."
+      },
+      "body": {
+        "feet": "Enter with a step and a turn. The kicking foot stays back.",
+        "legs": "The legs open in the horizontal turn; at the end one extends for the knife kick.",
+        "arms": "The arms open the turn and tuck at the end so they do not slow the kick.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you land.",
+        "torso": "The torso turns horizontally and straightens at the end."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the entry step and prepare the horizontal turn."
+        },
+        {
+          "title": "Sailor Moon",
+          "body": "Jump and turn the body horizontally with the Sailor Moon kick."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "Before landing, extend the kicking leg and open the other leg to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees and the chest up."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If you land sideways, check the height of the turn.",
+      "mistakes": [
+        "Losing the horizontal position of the Sailor Moon.",
+        "Opening the knife kick late.",
+        "Looking at the floor during the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Sailor Moon until you land with control.",
+        "Then mark the knife kick on a trampoline.",
+        "Join the parts when the turn is stable."
+      ],
+      "terms": [
+        {
+          "term": "sailor moon",
+          "meaning": "A horizontal turn with a kick that is the base of this variation."
+        }
+      ],
+      "prereqNotes": {
+        "sailorMoon": "The Sailor Moon gives you the horizontal turn with a kick.",
+        "wackknife": "The Wackknife gives you the final kick shape and the timing to open the body."
+      }
+    }
+  },
+  "wackknifeTurbo": {
+    "es": "Es un Wackknife que aterriza de frente sobre las dos piernas (frontside). Cambia la salida: en vez de caer en un pie, abres las dos piernas y caes con los dos pies.",
+    "en": "It is a Wackknife that lands facing forward on both legs (frontside). The exit changes: instead of landing on one foot, you open both legs and land on both feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Wackknife que aterriza de frente sobre las dos piernas. La patada es la misma, pero la salida abre las dos piernas.",
+      "before": {
+        "prerequisites": "Necesitas el Wackknife. Primero domina la patada y la caída en un pie.",
+        "space": "Un espacio libre de unos 4 pasos, con colchoneta."
+      },
+      "body": {
+        "feet": "Entrada como en el Wackknife: pie de apoyo adelante y pie de pateo atrás.",
+        "legs": "La pierna de pateo se estira y la otra se abre al final para que las dos lleguen al piso.",
+        "arms": "El brazo contrario abre el giro; al final los dos brazos ayudan a equilibrar la caída de frente.",
+        "gaze": "Mira el objetivo al patear y el horizonte al abrir las piernas.",
+        "torso": "El torso se mantiene alto y de frente al aterrizar."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y carga el peso como en el Wackknife."
+        },
+        {
+          "title": "Patada",
+          "body": "Salta, gira media vuelta y estira la pierna de pateo."
+        },
+        {
+          "title": "Abre las piernas",
+          "body": "En vez de caer en un pie, abre la otra pierna y prepara los dos pies para el piso."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae de frente sobre los dos pies, con las rodillas flexionadas y el pecho arriba."
+        }
+      ],
+      "landing": "Cae de frente sobre los dos pies, con las rodillas blandas y el pecho arriba.",
+      "mistakes": [
+        "Caer en un solo pie por costumbre.",
+        "Abrir las piernas demasiado tarde.",
+        "Aterrizar con el pecho abajo.",
+        "Perder la patada por pensar solo en la caída."
+      ],
+      "tips": [
+        "Practica la salida de frente sin la patada, como un salto con las dos piernas.",
+        "Después suma la patada.",
+        "Usa una colchoneta para sentir la caída de frente."
+      ],
+      "terms": [
+        {
+          "term": "turbo",
+          "meaning": "Salida que aterriza de frente sobre las dos piernas."
+        },
+        {
+          "term": "frontside",
+          "meaning": "De frente, mirando hacia adelante al aterrizar."
+        }
+      ],
+      "prereqNotes": {
+        "wackknife": "El Wackknife te da la patada y el giro; el Turbo solo cambia la salida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Wackknife that lands facing forward on both legs. The kick is the same, but the exit opens both legs.",
+      "before": {
+        "prerequisites": "You need the Wackknife. First master the kick and the one-foot landing.",
+        "space": "A clear space of about 4 steps, with a mat."
+      },
+      "body": {
+        "feet": "Entry like the Wackknife: lead foot forward and kicking foot back.",
+        "legs": "The kicking leg extends and the other opens at the end so both legs reach the floor.",
+        "arms": "The opposite arm opens the turn; at the end both arms help balance the forward landing.",
+        "gaze": "Look at the target when you kick and at the horizon when you open the legs.",
+        "torso": "The torso stays tall and faces forward on landing."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and load the weight like the Wackknife."
+        },
+        {
+          "title": "Kick",
+          "body": "Jump, turn half a turn and extend the kicking leg."
+        },
+        {
+          "title": "Open the legs",
+          "body": "Instead of landing on one foot, open the other leg and prepare both feet for the floor."
+        },
+        {
+          "title": "Landing",
+          "body": "Land facing forward on both feet, with bent knees and the chest up."
+        }
+      ],
+      "landing": "Land facing forward on both feet, with soft knees and the chest up.",
+      "mistakes": [
+        "Landing on one foot out of habit.",
+        "Opening the legs too late.",
+        "Landing with the chest down.",
+        "Losing the kick because you only think about the landing."
+      ],
+      "tips": [
+        "Practice the forward exit without the kick, like a two-foot jump.",
+        "Then add the kick.",
+        "Use a mat to feel the forward landing."
+      ],
+      "terms": [
+        {
+          "term": "turbo",
+          "meaning": "An exit that lands facing forward on both legs."
+        },
+        {
+          "term": "frontside",
+          "meaning": "Facing forward when you land."
+        }
+      ],
+      "prereqNotes": {
+        "wackknife": "The Wackknife gives you the kick and the turn; the Turbo only changes the exit."
+      }
+    }
+  },
+  "wackknifeDoubleleg": {
+    "es": "Es un Wackknife que termina con un doubleleg: las dos piernas se extienden al frente antes de aterrizar.",
+    "en": "It is a Wackknife that finishes with a doubleleg: both legs extend forward before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Wackknife que cambia la salida por un doubleleg, con las dos piernas extendidas al frente.",
+      "before": {
+        "prerequisites": "Necesitas el Wackknife. El doubleleg es la salida, no la patada.",
+        "space": "Un espacio libre de unos 4 pasos, con colchoneta."
+      },
+      "body": {
+        "feet": "Entrada como en el Wackknife.",
+        "legs": "La pierna de pateo se estira y al final las dos piernas se extienden al frente.",
+        "arms": "El brazo contrario abre el giro; al final los brazos ayudan a equilibrar la salida.",
+        "gaze": "Mira el objetivo al patear y el horizonte al extender las piernas.",
+        "torso": "El torso se mantiene alto y se inclina un poco hacia atrás en la salida."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y carga el peso como en el Wackknife."
+        },
+        {
+          "title": "Patada",
+          "body": "Salta, gira media vuelta y estira la pierna de pateo."
+        },
+        {
+          "title": "Doubleleg",
+          "body": "Extiende las dos piernas al frente y prepara la caída."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae con las rodillas blandas, controlando la salida."
+        }
+      ],
+      "landing": "Cae con las rodillas flexionadas y el pecho arriba, sin dejar que las piernas se bloqueen.",
+      "mistakes": [
+        "Extender las piernas demasiado tarde.",
+        "Bloquear las rodillas en la caída.",
+        "Perder la patada por pensar en el doubleleg.",
+        "Caer con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el doubleleg solo, desde un salto.",
+        "Después únelo al Wackknife.",
+        "Usa una colchoneta para la caída."
+      ],
+      "terms": [
+        {
+          "term": "doubleleg",
+          "meaning": "Salida con las dos piernas extendidas al frente."
+        }
+      ],
+      "prereqNotes": {
+        "wackknife": "El Wackknife te da la patada y el giro; el doubleleg solo cambia la salida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Wackknife that changes the exit to a doubleleg, with both legs extended forward.",
+      "before": {
+        "prerequisites": "You need the Wackknife. The doubleleg is the exit, not the kick.",
+        "space": "A clear space of about 4 steps, with a mat."
+      },
+      "body": {
+        "feet": "Entry like the Wackknife.",
+        "legs": "The kicking leg extends and at the end both legs extend forward.",
+        "arms": "The opposite arm opens the turn; at the end the arms help balance the exit.",
+        "gaze": "Look at the target when you kick and at the horizon when you extend the legs.",
+        "torso": "The torso stays tall and leans slightly back on the exit."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and load the weight like the Wackknife."
+        },
+        {
+          "title": "Kick",
+          "body": "Jump, turn half a turn and extend the kicking leg."
+        },
+        {
+          "title": "Doubleleg",
+          "body": "Extend both legs forward and prepare the landing."
+        },
+        {
+          "title": "Landing",
+          "body": "Land with soft knees, controlling the exit."
+        }
+      ],
+      "landing": "Land with bent knees and the chest up, without locking the legs.",
+      "mistakes": [
+        "Extending the legs too late.",
+        "Locking the knees on landing.",
+        "Losing the kick because you think about the doubleleg.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the doubleleg alone from a jump.",
+        "Then join it to the Wackknife.",
+        "Use a mat for the landing."
+      ],
+      "terms": [
+        {
+          "term": "doubleleg",
+          "meaning": "An exit with both legs extended forward."
+        }
+      ],
+      "prereqNotes": {
+        "wackknife": "The Wackknife gives you the kick and the turn; the doubleleg only changes the exit."
+      }
+    }
+  },
+  "wackknifeRound": {
+    "es": "Es un Wackknife que cambia la patada final por una patada redonda (round kick) antes de aterrizar.",
+    "en": "It is a Wackknife that changes the final kick to a round kick before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Wackknife que termina con una patada redonda antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Wackknife y sentir la patada redonda.",
+        "space": "Un espacio libre de unos 4 pasos, con colchoneta."
+      },
+      "body": {
+        "feet": "Entrada como en el Wackknife.",
+        "legs": "La pierna de pateo describe un arco redondo en vez de la navaja recta.",
+        "arms": "El brazo contrario abre el giro y acompaña la patada redonda.",
+        "gaze": "Mira el objetivo al patear y el horizonte al caer.",
+        "torso": "El torso gira con la cadera y se mantiene alto."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y carga el peso como en el Wackknife."
+        },
+        {
+          "title": "Giro",
+          "body": "Salta y gira media vuelta."
+        },
+        {
+          "title": "Patada redonda",
+          "body": "En vez de la navaja, describe un arco redondo con la pierna estirada."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja sobre el pie de despegue con la rodilla flexionada."
+        }
+      ],
+      "landing": "Cae sobre el pie de despegue con la rodilla blanda y el pecho arriba.",
+      "mistakes": [
+        "Patear con la rodilla doblada.",
+        "Abrir el arco demasiado tarde.",
+        "Mirar el piso.",
+        "Perder el giro por buscar la patada."
+      ],
+      "tips": [
+        "Practica la patada redonda en el aire antes de unirla.",
+        "Después haz el Wackknife normal y cambia solo la patada.",
+        "Marca el arco en un saco."
+      ],
+      "terms": [
+        {
+          "term": "round kick",
+          "meaning": "Patada que describe un arco circular con la pierna estirada."
+        }
+      ],
+      "prereqNotes": {
+        "wackknife": "El Wackknife te da la entrada y el giro; solo cambia la forma de la patada."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Wackknife that finishes with a round kick before landing.",
+      "before": {
+        "prerequisites": "You need the Wackknife and a feel for the round kick.",
+        "space": "A clear space of about 4 steps, with a mat."
+      },
+      "body": {
+        "feet": "Entry like the Wackknife.",
+        "legs": "The kicking leg draws a round arc instead of the straight knife shape.",
+        "arms": "The opposite arm opens the turn and follows the round kick.",
+        "gaze": "Look at the target when you kick and at the horizon when you land.",
+        "torso": "The torso turns with the hips and stays tall."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and load the weight like the Wackknife."
+        },
+        {
+          "title": "Turn",
+          "body": "Jump and turn half a turn."
+        },
+        {
+          "title": "Round kick",
+          "body": "Instead of the knife shape, draw a round arc with the extended leg."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on the takeoff foot with the knee bent."
+        }
+      ],
+      "landing": "Land on the takeoff foot with a soft knee and the chest up.",
+      "mistakes": [
+        "Kicking with a bent knee.",
+        "Opening the arc too late.",
+        "Looking at the floor.",
+        "Losing the turn because you chase the kick."
+      ],
+      "tips": [
+        "Practice the round kick in the air before joining it.",
+        "Then do the normal Wackknife and change only the kick.",
+        "Mark the arc on a bag."
+      ],
+      "terms": [
+        {
+          "term": "round kick",
+          "meaning": "A kick that draws a circular arc with the leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "wackknife": "The Wackknife gives you the entry and the turn; only the kick shape changes."
+      }
+    }
+  },
+  "wackestKnife": {
+    "es": "Es un Wackknife con un hyperhook extra: después de la navaja, la pierna sigue y engancha con un latigazo.",
+    "en": "It is a Wackknife with an extra hyperhook: after the knife kick, the leg keeps going and hooks with a whip.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Wackknife que suma un hyperhook al final. La pierna no se detiene en la navaja: sigue y engancha.",
+      "before": {
+        "prerequisites": "Necesitas el Wackknife y sentir el hyperhook.",
+        "space": "Un espacio libre de unos 4 pasos, con colchoneta."
+      },
+      "body": {
+        "feet": "Entrada como en el Wackknife.",
+        "legs": "La pierna de pateo hace la navaja y sigue con un latigazo hacia adentro para el hyperhook.",
+        "arms": "El brazo contrario abre el giro y acompaña el latigazo final.",
+        "gaze": "Mira el objetivo al patear y el horizonte al caer.",
+        "torso": "El torso gira con la cadera y se mantiene alto."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y carga el peso como en el Wackknife."
+        },
+        {
+          "title": "Navaja",
+          "body": "Salta, gira media vuelta y estira la pierna de pateo."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Sin detener la pierna, engancha con un latigazo hacia adentro."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja sobre el pie de despegue con la rodilla flexionada."
+        }
+      ],
+      "landing": "Cae sobre el pie de despegue con la rodilla blanda y el pecho arriba.",
+      "mistakes": [
+        "Detener la pierna después de la navaja.",
+        "Doblar la rodilla en el enganche.",
+        "Perder la mirada.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el hyperhook en el aire antes de unirlo.",
+        "Después haz el Wackknife normal y agrega el latigazo.",
+        "Marca el enganche en un saco."
+      ],
+      "terms": [
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de enganche con latigazo, parecida a un gancho que vuelve hacia adentro."
+        }
+      ],
+      "prereqNotes": {
+        "wackknife": "El Wackknife te da la entrada y la navaja; el hyperhook es la continuación de la pierna."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Wackknife that adds a hyperhook at the end. The leg does not stop at the knife kick: it keeps going and hooks.",
+      "before": {
+        "prerequisites": "You need the Wackknife and a feel for the hyperhook.",
+        "space": "A clear space of about 4 steps, with a mat."
+      },
+      "body": {
+        "feet": "Entry like the Wackknife.",
+        "legs": "The kicking leg does the knife kick and continues with a whip inward for the hyperhook.",
+        "arms": "The opposite arm opens the turn and follows the final whip.",
+        "gaze": "Look at the target when you kick and at the horizon when you land.",
+        "torso": "The torso turns with the hips and stays tall."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and load the weight like the Wackknife."
+        },
+        {
+          "title": "Knife kick",
+          "body": "Jump, turn half a turn and extend the kicking leg."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Without stopping the leg, hook with a whip inward."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on the takeoff foot with the knee bent."
+        }
+      ],
+      "landing": "Land on the takeoff foot with a soft knee and the chest up.",
+      "mistakes": [
+        "Stopping the leg after the knife kick.",
+        "Bending the knee on the hook.",
+        "Losing the gaze.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the hyperhook in the air before joining it.",
+        "Then do the normal Wackknife and add the whip.",
+        "Mark the hook on a bag."
+      ],
+      "terms": [
+        {
+          "term": "hyperhook",
+          "meaning": "A hooking kick with a whip, like a hook that comes back inward."
+        }
+      ],
+      "prereqNotes": {
+        "wackknife": "The Wackknife gives you the entry and the knife kick; the hyperhook is the continuation of the leg."
+      }
+    }
+  },
+  "backside1260Wackknife": {
+    "es": "Es un backside 1260, tres giros y medio en el aire, que termina en Wackknife. Es un truco de élite: primero necesitas el Backside 1260.",
+    "en": "It is a backside 1260, three and a half turns in the air, that finishes in a Wackknife. It is an elite trick: you need the Backside 1260 first.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un backside 1260 que termina en Wackknife. El cuerpo da tres giros y medio y al final la pierna sale en navaja.",
+      "before": {
+        "prerequisites": "Necesitas el Backside 1260 y el Wackknife. El primero te da los giros; el segundo, la salida.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión."
+      },
+      "body": {
+        "feet": "Entrada con pique. El pie de pateo queda atrás.",
+        "legs": "Las piernas se recogen para los giros y al final una se estira para la navaja.",
+        "arms": "Los brazos ayudan a mantener el eje y a abrir la navaja.",
+        "gaze": "La mirada busca un punto fijo al final de cada giro y el horizonte al abrir.",
+        "torso": "El torso se mantiene agrupado durante los giros y se abre al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el salto."
+        },
+        {
+          "title": "Tres giros y medio",
+          "body": "Completa el backside 1260 sin perder la altura."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "Al ver el piso, estira la pierna de pateo y abre la otra para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas y el pecho arriba."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si la rotación se queda corta, no fuerces la patada.",
+      "mistakes": [
+        "Perder el eje en los giros.",
+        "Abrir la navaja tarde.",
+        "No tener altura suficiente.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Backside 1260 solo hasta aterrizar con control.",
+        "Después marca la navaja en una cama elástica.",
+        "Une las partes cuando los giros sean estables."
+      ],
+      "terms": [
+        {
+          "term": "backside",
+          "meaning": "Giro que se arma hacia atrás."
+        },
+        {
+          "term": "1260",
+          "meaning": "Tres giros y medio de 360 grados."
+        }
+      ],
+      "prereqNotes": {
+        "backside1260": "El Backside 1260 te da los tres giros y medio y la altura.",
+        "wackknife": "El Wackknife aporta la forma de la patada final y el tiempo para abrir el cuerpo."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backside 1260 that finishes in a Wackknife. The body makes three and a half turns and at the end the leg opens like a knife.",
+      "before": {
+        "prerequisites": "You need the Backside 1260 and the Wackknife. The first gives you the turns; the second gives you the exit.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "Enter with a punch. The kicking foot stays back.",
+        "legs": "The legs tuck for the turns and at the end one extends for the knife kick.",
+        "arms": "The arms help keep the axis and open the knife kick.",
+        "gaze": "The gaze finds a fixed point at the end of each turn and the horizon when you open.",
+        "torso": "The torso stays tucked during the turns and opens at the end."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Punch and start the jump."
+        },
+        {
+          "title": "Three and a half turns",
+          "body": "Complete the backside 1260 without losing height."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "When you see the floor, extend the kicking leg and open the other leg to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees and the chest up."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the rotation falls short, do not force the kick.",
+      "mistakes": [
+        "Losing the axis during the turns.",
+        "Opening the knife kick late.",
+        "Not having enough height.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Backside 1260 alone until you land with control.",
+        "Then mark the knife kick on a trampoline.",
+        "Join the parts when the turns are stable."
+      ],
+      "terms": [
+        {
+          "term": "backside",
+          "meaning": "A turn that is set up backward."
+        },
+        {
+          "term": "1260",
+          "meaning": "Three and a half 360-degree turns."
+        }
+      ],
+      "prereqNotes": {
+        "backside1260": "The Backside 1260 gives you the three and a half turns and the height.",
+        "wackknife": "The Wackknife gives you the final kick shape and the timing to open the body."
+      }
+    }
+  },
+  "fullWackknifeRound": {
+    "es": "Es un Full Wackknife que termina con una patada redonda antes de aterrizar.",
+    "en": "It is a Full Wackknife that finishes with a round kick before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Full Wackknife que cambia la navaja final por una patada redonda.",
+      "before": {
+        "prerequisites": "Necesitas el Full Wackknife. La base es el mortal con giro completo.",
+        "space": "Colchoneta amplia o cama elástica."
+      },
+      "body": {
+        "feet": "Entrada con pique.",
+        "legs": "La pierna de pateo describe un arco redondo al final del giro.",
+        "arms": "Los brazos ayudan a girar y acompañan la patada redonda.",
+        "gaze": "Mira por encima del hombro durante el giro y al horizonte al patear.",
+        "torso": "El torso se agrupa para girar y se abre al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada y giro",
+          "body": "Da el pique y completa el Full Twist."
+        },
+        {
+          "title": "Patada redonda",
+          "body": "Al ver el piso, describe un arco redondo con la pierna estirada."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Abrir el arco tarde.",
+        "No completar el giro.",
+        "Mirar el piso.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Full Wackknife normal.",
+        "Después cambia solo la patada por el arco redondo.",
+        "Usa una cama elástica."
+      ],
+      "terms": [
+        {
+          "term": "round kick",
+          "meaning": "Patada que describe un arco circular con la pierna estirada."
+        }
+      ],
+      "prereqNotes": {
+        "fullWackknife": "El Full Wackknife te da el mortal con giro y la salida; solo cambia la patada final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Full Wackknife that changes the final knife kick to a round kick.",
+      "before": {
+        "prerequisites": "You need the Full Wackknife. The base is the flip with a full twist.",
+        "space": "A large mat or a trampoline."
+      },
+      "body": {
+        "feet": "Enter with a punch.",
+        "legs": "The kicking leg draws a round arc at the end of the turn.",
+        "arms": "The arms help you turn and follow the round kick.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you kick.",
+        "torso": "The torso tucks to turn and opens at the end."
+      },
+      "steps": [
+        {
+          "title": "Entry and turn",
+          "body": "Punch and complete the Full Twist."
+        },
+        {
+          "title": "Round kick",
+          "body": "When you see the floor, draw a round arc with the extended leg."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up.",
+      "mistakes": [
+        "Opening the arc late.",
+        "Not completing the turn.",
+        "Looking at the floor.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the normal Full Wackknife.",
+        "Then change only the kick to the round arc.",
+        "Use a trampoline."
+      ],
+      "terms": [
+        {
+          "term": "round kick",
+          "meaning": "A kick that draws a circular arc with the leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "fullWackknife": "The Full Wackknife gives you the flip with the twist and the exit; only the final kick changes."
+      }
+    }
+  },
+  "fullWackknifeHyperhook": {
+    "es": "Es un Full Wackknife que termina con un hyperhook: la pierna sigue después de la navaja y engancha.",
+    "en": "It is a Full Wackknife that finishes with a hyperhook: the leg keeps going after the knife kick and hooks.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Full Wackknife que suma un hyperhook al final del giro.",
+      "before": {
+        "prerequisites": "Necesitas el Full Wackknife y sentir el hyperhook.",
+        "space": "Colchoneta amplia o cama elástica."
+      },
+      "body": {
+        "feet": "Entrada con pique.",
+        "legs": "La pierna de pateo hace la navaja y sigue con un latigazo hacia adentro.",
+        "arms": "Los brazos ayudan a girar y acompañan el enganche.",
+        "gaze": "Mira por encima del hombro durante el giro y al horizonte al enganchar.",
+        "torso": "El torso se agrupa para girar y se abre al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada y giro",
+          "body": "Da el pique y completa el Full Twist."
+        },
+        {
+          "title": "Navaja y hyperhook",
+          "body": "Estira la pierna en navaja y, sin detenerla, engancha con un latigazo."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Detener la pierna después de la navaja.",
+        "No completar el giro.",
+        "Mirar el piso.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Full Wackknife normal.",
+        "Después agrega el latigazo del hyperhook.",
+        "Usa una cama elástica."
+      ],
+      "terms": [
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de enganche con latigazo, parecida a un gancho que vuelve hacia adentro."
+        }
+      ],
+      "prereqNotes": {
+        "fullWackknife": "El Full Wackknife te da el mortal con giro y la navaja; el hyperhook es la continuación."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Full Wackknife that adds a hyperhook at the end of the turn.",
+      "before": {
+        "prerequisites": "You need the Full Wackknife and a feel for the hyperhook.",
+        "space": "A large mat or a trampoline."
+      },
+      "body": {
+        "feet": "Enter with a punch.",
+        "legs": "The kicking leg does the knife kick and continues with a whip inward.",
+        "arms": "The arms help you turn and follow the hook.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you hook.",
+        "torso": "The torso tucks to turn and opens at the end."
+      },
+      "steps": [
+        {
+          "title": "Entry and turn",
+          "body": "Punch and complete the Full Twist."
+        },
+        {
+          "title": "Knife kick and hyperhook",
+          "body": "Extend the leg in the knife kick and, without stopping it, hook with a whip."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up.",
+      "mistakes": [
+        "Stopping the leg after the knife kick.",
+        "Not completing the turn.",
+        "Looking at the floor.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the normal Full Wackknife.",
+        "Then add the hyperhook whip.",
+        "Use a trampoline."
+      ],
+      "terms": [
+        {
+          "term": "hyperhook",
+          "meaning": "A hooking kick with a whip, like a hook that comes back inward."
+        }
+      ],
+      "prereqNotes": {
+        "fullWackknife": "The Full Wackknife gives you the flip with the twist and the knife kick; the hyperhook is the continuation."
+      }
+    }
+  },
+  "rodeoFullWackknife": {
+    "es": "Es un Full Wackknife con un agarre de rodeo: la mano pasa por detrás de la cadera durante el giro y la patada sale al final.",
+    "en": "It is a Full Wackknife with a rodeo grab: the hand passes behind the hip during the turn and the kick comes out at the end.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Full Wackknife con agarre de rodeo. El agarre cambia el eje del giro y la patada sale al final.",
+      "before": {
+        "prerequisites": "Necesitas el Rodeo Full y el Full Wackknife. El Rodeo Full te da el agarre; el Full Wackknife te da la salida.",
+        "space": "Colchoneta amplia o cama elástica. Es un truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada con pique.",
+        "legs": "La pierna de pateo se recoge para el giro y se estira al final.",
+        "arms": "Una mano pasa por detrás de la cadera para el agarre de rodeo; la otra ayuda a girar.",
+        "gaze": "Mira por encima del hombro durante el giro y al horizonte al abrir.",
+        "torso": "El torso se agrupa y se inclina con el agarre; al final se abre."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el pique y arranca el mortal con giro."
+        },
+        {
+          "title": "Agarre de rodeo",
+          "body": "Pasa la mano por detrás de la cadera y usa el agarre para mantener el eje."
+        },
+        {
+          "title": "Abre la navaja",
+          "body": "Al ver el piso, estira la pierna de pateo y abre la otra para cerrar la tijera."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Soltar el agarre demasiado pronto.",
+        "Perder el eje del giro.",
+        "Abrir la navaja tarde.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Rodeo Full hasta aterrizar con control.",
+        "Después marca la navaja en una cama elástica.",
+        "Une las partes cuando el agarre sea estable."
+      ],
+      "terms": [
+        {
+          "term": "rodeo",
+          "meaning": "Agarre que pasa por detrás de la cadera durante el giro."
+        }
+      ],
+      "prereqNotes": {
+        "rodeoFull": "El Rodeo Full te da el agarre y el eje del giro.",
+        "fullWackknife": "El Full Wackknife te da la salida con la patada de navaja."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Full Wackknife with a rodeo grab. The grab changes the axis of the turn and the kick comes out at the end.",
+      "before": {
+        "prerequisites": "You need the Rodeo Full and the Full Wackknife. The Rodeo Full gives you the grab; the Full Wackknife gives you the exit.",
+        "space": "A large mat or a trampoline. This is an advanced trick."
+      },
+      "body": {
+        "feet": "Enter with a punch.",
+        "legs": "The kicking leg tucks for the turn and extends at the end.",
+        "arms": "One hand passes behind the hip for the rodeo grab; the other helps you turn.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you open.",
+        "torso": "The torso tucks and tilts with the grab; at the end it opens."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Punch and start the flip with a twist."
+        },
+        {
+          "title": "Rodeo grab",
+          "body": "Pass the hand behind the hip and use the grab to keep the axis."
+        },
+        {
+          "title": "Open the knife kick",
+          "body": "When you see the floor, extend the kicking leg and open the other leg to close the scissor."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up.",
+      "mistakes": [
+        "Releasing the grab too early.",
+        "Losing the axis of the turn.",
+        "Opening the knife kick late.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Rodeo Full until you land with control.",
+        "Then mark the knife kick on a trampoline.",
+        "Join the parts when the grab is stable."
+      ],
+      "terms": [
+        {
+          "term": "rodeo",
+          "meaning": "A grab that passes behind the hip during the turn."
+        }
+      ],
+      "prereqNotes": {
+        "rodeoFull": "The Rodeo Full gives you the grab and the axis of the turn.",
+        "fullWackknife": "The Full Wackknife gives you the exit with the knife kick."
+      }
+    }
+  }
+}
