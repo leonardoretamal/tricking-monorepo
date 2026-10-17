@@ -1,0 +1,1190 @@
+{
+  "raizHyperhook": {
+    "es": "Es una raiz que aterriza en hyper con un gancho al final. Se entra como la raiz y, en la caída, se lanza el hook exterior para caer sobre el pie contrario.",
+    "en": "It is a Raiz that lands in hyper with a hook at the end. You enter like the raiz and, on the way down, throw the outside hook to land on the opposite foot.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una raiz que aterriza en hyper con un gancho al final. Se entra como la raiz y, en la caída, se lanza el hook exterior para caer sobre el pie contrario.",
+      "before": {
+        "prerequisites": "Necesitas la Raiz y el Cheat 720. La primera te da el giro invertido y el segundo la rotación extra para llegar al hook.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie con el paso de la raiz y aterrizas en hyper sobre el pie contrario.",
+        "legs": "La pierna barre en el giro invertido y al final el hook exterior sale abajo.",
+        "arms": "Los brazos abren el giro y se recogen para el hook.",
+        "gaze": "Mira por encima del hombro durante el giro y al objetivo en el hook.",
+        "torso": "El tronco gira invertido y se firme en el gancho."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y arranca la raiz con el giro invertido."
+        },
+        {
+          "title": "Giro",
+          "body": "Completa el giro de la raiz."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Lanza el hook exterior en la caída."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza en hyper sobre el pie contrario."
+        }
+      ],
+      "landing": "Aterriza en hyper sobre el pie contrario, con el pecho arriba. Si el hook sale corto, lánzalo un poco antes.",
+      "mistakes": [
+        "Perder el giro invertido.",
+        "Lanzar el hook con la rodilla doblada.",
+        "Caer con el pecho abajo."
+      ],
+      "tips": [
+        "Practica la Raiz hasta que el giro invertido sea sólido.",
+        "Marca el hook exterior a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "raiz",
+          "meaning": "Giro invertido que sale del gumbi, parecido a un sacacorchos."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de gancho que sale con la pierna extendida y giro extra en el remate."
+        }
+      ],
+      "prereqNotes": {
+        "raiz": "La Raiz te da el giro invertido que sirve de entrada.",
+        "cheat720": "El Cheat 720 te da la rotación extra que permite llegar al hook."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Raiz that lands in hyper with a hook at the end. You enter like the raiz and, on the way down, throw the outside hook to land on the opposite foot.",
+      "before": {
+        "prerequisites": "You need the Raiz and the Cheat 720. The first gives you the inverted turn and the second the extra rotation to reach the hook.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot with the raiz step and land in hyper on the opposite foot.",
+        "legs": "The leg sweeps in the inverted turn and at the end the outside hook comes out low.",
+        "arms": "The arms open the turn and tuck for the hook.",
+        "gaze": "Look over the shoulder during the turn and at the target on the hook.",
+        "torso": "The torso turns inverted and stays firm on the hook."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and start the raiz with the inverted turn."
+        },
+        {
+          "title": "Turn",
+          "body": "Complete the raiz turn."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Throw the outside hook on the way down."
+        },
+        {
+          "title": "Landing",
+          "body": "Land in hyper on the opposite foot."
+        }
+      ],
+      "landing": "Land in hyper on the opposite foot, with the chest up. If the hook falls short, throw it a little earlier.",
+      "mistakes": [
+        "Losing the inverted turn.",
+        "Throwing the hook with a bent knee.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Raiz until the inverted turn is solid.",
+        "Mark the outside hook at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "raiz",
+          "meaning": "An inverted turn that comes out of the gumbi, similar to a corkscrew."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hook kick that comes out with the leg extended and extra rotation on the finish."
+        }
+      ],
+      "prereqNotes": {
+        "raiz": "The Raiz gives you the inverted turn used as the entry.",
+        "cheat720": "The Cheat 720 gives you the extra rotation that lets you reach the hook."
+      }
+    }
+  },
+  "rodeoSnapu": {
+    "es": "Es un snapu al que se le suma el arqueo y la toma de piernas del rodeo. Se lanza el round kick, se agarran las piernas mientras gira el cuerpo y se aterriza de pie.",
+    "en": "It is a Snapu with the arch and leg grab of a rodeo. You throw the round kick, grab the legs as the body twists and land on your feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un snapu al que se le suma el arqueo y la toma de piernas del rodeo. Se lanza el round kick, se agarran las piernas mientras gira el cuerpo y se aterriza de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Snapu. Ese truco te da el remate con el twist; aquí se agrega el arqueo y el agarre de piernas del rodeo.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie y aterrizas sobre una pierna.",
+        "legs": "Las piernas se recogen y se agarran con la mano durante el arqueo.",
+        "arms": "Una mano agarra las piernas y la otra abre el giro.",
+        "gaze": "Mira por encima del hombro durante el giro y el objetivo al patear.",
+        "torso": "El tronco se arquea y gira mientras la mano agarra las piernas."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y arranca el giro."
+        },
+        {
+          "title": "Round kick",
+          "body": "Lanza la patada circular."
+        },
+        {
+          "title": "Agarre",
+          "body": "Agarra las piernas mientras el cuerpo se arquea."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de pie sobre una pierna con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre una pierna con la rodilla flexionada y el pecho arriba. Suelta el agarre a tiempo para no frenar la caída.",
+      "mistakes": [
+        "Agarra demasiado tarde.",
+        "Perder el arqueo del tronco.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Snapu hasta que el giro sea sólido.",
+        "Marca el agarre de piernas a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "snapu",
+          "meaning": "Sideswipe con un twist extra antes de aterrizar."
+        },
+        {
+          "term": "rodeo",
+          "meaning": "Arqueo del cuerpo con agarre de piernas, típico de las variantes de rodeo."
+        }
+      ],
+      "prereqNotes": {
+        "snapu": "El Snapu te da el remate con el twist; el rodeo sumó el arqueo y el agarre de piernas."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Snapu with the arch and leg grab of a rodeo. You throw the round kick, grab the legs as the body twists and land on your feet.",
+      "before": {
+        "prerequisites": "You need the Snapu. That trick gives you the finish with the twist; here you add the arch and leg grab of the rodeo.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot and land on one leg.",
+        "legs": "The legs tuck and are grabbed with the hand during the arch.",
+        "arms": "One hand grabs the legs and the other opens the turn.",
+        "gaze": "Look over the shoulder during the turn and at the target when you kick.",
+        "torso": "The torso arches and turns as the hand grabs the legs."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and start the turn."
+        },
+        {
+          "title": "Round kick",
+          "body": "Throw the round kick."
+        },
+        {
+          "title": "Grab",
+          "body": "Grab the legs as the body arches."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on one leg with soft knees."
+        }
+      ],
+      "landing": "Land on one leg with the knee bent and the chest up. Release the grab in time so it does not slow the landing.",
+      "mistakes": [
+        "Grabbing too late.",
+        "Losing the arch of the torso.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Snapu until the turn is solid.",
+        "Mark the leg grab at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "snapu",
+          "meaning": "A sideswipe with an extra twist before landing."
+        },
+        {
+          "term": "rodeo",
+          "meaning": "A body arch with a leg grab, typical of the rodeo variations."
+        }
+      ],
+      "prereqNotes": {
+        "snapu": "The Snapu gives you the finish with the twist; the rodeo added the arch and the leg grab."
+      }
+    }
+  },
+  "sailorMoonHyperhook": {
+    "es": "Es un sailor moon que cae en hyper con un gancho. Se empuja con la mano, se barre la pierna y se lanza el hook exterior al aterrizar.",
+    "en": "It is a Sailor Moon that lands in hyper with a hook. You push off the hand, sweep the leg and throw the outside hook on landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un sailor moon que cae en hyper con un gancho. Se empuja con la mano, se barre la pierna y se lanza el hook exterior al aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Sailor Moon. Ese truco te da el giro horizontal con apoyo de mano; aquí el remate es un gancho exterior.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie y aterrizas en hyper sobre el pie contrario.",
+        "legs": "La pierna barre en el giro y al final el hook exterior sale abajo.",
+        "arms": "Una mano apoya y empuja; los brazos ayudan al giro y al hook.",
+        "gaze": "Mira el punto de apoyo y luego al objetivo en el hook.",
+        "torso": "El tronco gira en horizontal y se firme en el gancho."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y apoya la mano para el sailor moon."
+        },
+        {
+          "title": "Giro",
+          "body": "Gira el cuerpo en horizontal con el impulso de la mano."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Lanza el hook exterior al aterrizar."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza en hyper sobre el pie contrario."
+        }
+      ],
+      "landing": "Aterriza en hyper sobre el pie contrario, con el pecho arriba. Si el hook sale corto, lánzalo un poco antes.",
+      "mistakes": [
+        "Apoyar la mano demasiado lejos.",
+        "Perder la horizontal del giro.",
+        "Caer con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Sailor Moon hasta que el giro sea sólido.",
+        "Marca el hook exterior a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "sailor moon",
+          "meaning": "Giro horizontal con apoyo de mano y patada."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de gancho que sale con la pierna extendida y giro extra en el remate."
+        }
+      ],
+      "prereqNotes": {
+        "sailorMoon": "El Sailor Moon te da el giro horizontal con el apoyo de mano; el hyperhook agrega el gancho exterior en la caída."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Sailor Moon that lands in hyper with a hook. You push off the hand, sweep the leg and throw the outside hook on landing.",
+      "before": {
+        "prerequisites": "You need the Sailor Moon. That trick gives you the horizontal turn with the hand plant; here the finish is an outside hook.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot and land in hyper on the opposite foot.",
+        "legs": "The leg sweeps in the turn and at the end the outside hook comes out low.",
+        "arms": "One hand plants and pushes; the arms help the turn and the hook.",
+        "gaze": "Look at the plant point and then at the target on the hook.",
+        "torso": "The torso turns horizontally and stays firm on the hook."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and plant the hand for the sailor moon."
+        },
+        {
+          "title": "Turn",
+          "body": "Turn the body horizontally with the push of the hand."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Throw the outside hook on landing."
+        },
+        {
+          "title": "Landing",
+          "body": "Land in hyper on the opposite foot."
+        }
+      ],
+      "landing": "Land in hyper on the opposite foot, with the chest up. If the hook falls short, throw it a little earlier.",
+      "mistakes": [
+        "Planting the hand too far.",
+        "Losing the horizontal position of the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Sailor Moon until the turn is solid.",
+        "Mark the outside hook at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "sailor moon",
+          "meaning": "A horizontal turn with a hand plant and a kick."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hook kick that comes out with the leg extended and extra rotation on the finish."
+        }
+      ],
+      "prereqNotes": {
+        "sailorMoon": "The Sailor Moon gives you the horizontal turn with the hand plant; the hyperhook adds the outside hook on landing."
+      }
+    }
+  },
+  "scrubba": {
+    "es": "Es un gumbi en el que las manos se apoyan en momentos distintos. Se barre una pierna detrás y se van plantando las manos de forma escalonada para completar el giro y caer de pie.",
+    "en": "It is a Gumbi in which the hands plant at different moments. You sweep one leg behind and plant the hands in a staggered way to complete the turn and land on your feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un gumbi en el que las manos se apoyan en momentos distintos. Se barre una pierna detrás y se plantan las manos de forma escalonada para completar el giro y caer de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Sailor Moon y el Touchdown Raiz. Ambos te dan giros con apoyo de manos; aquí el detalle es escalonar los apoyos.",
+        "space": "Colchoneta amplia, con unos 3 o 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie y aterrizas sobre los pies.",
+        "legs": "Una pierna barre por detrás y arriba; la otra sigue el impulso.",
+        "arms": "Las manos se apoyan en momentos distintos: primero una, después la otra.",
+        "gaze": "Mira el primer apoyo y luego al frente al caer.",
+        "torso": "El tronco pasa arqueado por el apoyo y completa el giro."
+      },
+      "steps": [
+        {
+          "title": "Paso",
+          "body": "Da el paso e inclina el peso hacia el lado del giro."
+        },
+        {
+          "title": "Primer apoyo",
+          "body": "Apoya una mano y empieza el barrido."
+        },
+        {
+          "title": "Segundo apoyo",
+          "body": "Apoya la otra mano un momento después, de forma escalonada."
+        },
+        {
+          "title": "Caída",
+          "body": "Completa el giro y aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. El impulso sigue de largo; no frenes a mitad.",
+      "mistakes": [
+        "Apoyar las dos manos juntas: van escalonadas.",
+        "No arquear el tronco.",
+        "Frenar el giro."
+      ],
+      "tips": [
+        "Practica el Gumbi hasta que los apoyos sean fluidos.",
+        "Marca el escalonado de las manos lento sobre colchoneta."
+      ],
+      "terms": [
+        {
+          "term": "gumbi",
+          "meaning": "Cartwheel invertido con manos que sirve de transición."
+        },
+        {
+          "term": "escalonado",
+          "meaning": "Que se hace en momentos distintos, uno después del otro."
+        }
+      ],
+      "prereqNotes": {
+        "sailorMoon": "El Sailor Moon te da el giro con apoyo de manos.",
+        "touchdownRaiz": "El Touchdown Raiz te da otra entrada con apoyo de manos para practicar el giro."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Gumbi in which the hands plant at different moments. You sweep one leg behind and plant the hands in a staggered way to complete the turn and land on your feet.",
+      "before": {
+        "prerequisites": "You need the Sailor Moon and the Touchdown Raiz. Both give you turns with a hand plant; here the detail is staggering the plants.",
+        "space": "A large mat, with about 3 or 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot and land on your feet.",
+        "legs": "One leg sweeps behind and up; the other follows the momentum.",
+        "arms": "The hands plant at different moments: first one, then the other.",
+        "gaze": "Look at the first plant and then ahead when you land.",
+        "torso": "The torso passes arched over the plant and completes the turn."
+      },
+      "steps": [
+        {
+          "title": "Step",
+          "body": "Take the step and lean the weight toward the side of the turn."
+        },
+        {
+          "title": "First plant",
+          "body": "Plant one hand and start the sweep."
+        },
+        {
+          "title": "Second plant",
+          "body": "Plant the other hand a moment later, in a staggered way."
+        },
+        {
+          "title": "Landing",
+          "body": "Complete the turn and land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. The momentum keeps going; do not stop halfway.",
+      "mistakes": [
+        "Planting both hands together: they are staggered.",
+        "Not arching the torso.",
+        "Stopping the turn."
+      ],
+      "tips": [
+        "Practice the Gumbi until the plants are fluid.",
+        "Mark the staggered hands slowly on a mat."
+      ],
+      "terms": [
+        {
+          "term": "gumbi",
+          "meaning": "An inverted cartwheel with hands, used as a transition."
+        },
+        {
+          "term": "staggered",
+          "meaning": "Done at different moments, one after the other."
+        }
+      ],
+      "prereqNotes": {
+        "sailorMoon": "The Sailor Moon gives you the turn with a hand plant.",
+        "touchdownRaiz": "The Touchdown Raiz gives you another hand-plant entry to practice the turn."
+      }
+    }
+  },
+  "snapu": {
+    "es": "Es un sideswipe con un twist adicional antes de aterrizar, también llamado snapuswipe. Se lanza el round kick, se gira el cuerpo y se cae de pie sobre una pierna.",
+    "en": "It is a sideswipe with an extra twist before landing, also called a snapuswipe. You throw the round kick, twist the body and land on one foot.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un sideswipe con un twist adicional antes de aterrizar, también llamado snapuswipe. Se lanza el round kick, se gira el cuerpo y se cae de pie sobre una pierna.",
+      "before": {
+        "prerequisites": "Necesitas el Sideswipe. Ese truco te da el barrido de lado; aquí sumas un twist antes de caer.",
+        "space": "Colchoneta amplia, con unos 3 o 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie y aterrizas sobre una pierna.",
+        "legs": "La pierna lanza el round kick y luego pasa el barrido.",
+        "arms": "Los brazos abren el giro y se recogen para el remate.",
+        "gaze": "Mira por encima del hombro durante el giro y el objetivo al patear.",
+        "torso": "El tronco gira y suma el twist justo antes de aterrizar."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y arranca el sideswipe."
+        },
+        {
+          "title": "Round kick",
+          "body": "Lanza la patada circular."
+        },
+        {
+          "title": "Twist",
+          "body": "Suma el twist con las caderas antes de caer."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de pie sobre una pierna con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre una pierna con la rodilla flexionada y el pecho arriba. Si caes de lado, gira un poco más con la cadera.",
+      "mistakes": [
+        "No sumar el twist: es lo que distingue al snapu.",
+        "Patear con la rodilla doblada.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Sideswipe hasta que el barrido sea sólido.",
+        "Marca el twist extra a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "sideswipe",
+          "meaning": "Barrido de lado con la pierna, parecido a un round kick bajo de costado."
+        },
+        {
+          "term": "snapu",
+          "meaning": "Sideswipe con un twist extra antes de aterrizar."
+        }
+      ],
+      "prereqNotes": {
+        "sideswipe": "El Sideswipe te da el barrido de lado; el snapu agrega el twist antes de aterrizar."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a sideswipe with an extra twist before landing, also called a snapuswipe. You throw the round kick, twist the body and land on one foot.",
+      "before": {
+        "prerequisites": "You need the Sideswipe. That trick gives you the side sweep; here you add a twist before landing.",
+        "space": "A large mat, with about 3 or 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot and land on one leg.",
+        "legs": "The leg throws the round kick and then passes through the sweep.",
+        "arms": "The arms open the turn and tuck for the finish.",
+        "gaze": "Look over the shoulder during the turn and at the target when you kick.",
+        "torso": "The torso turns and adds the twist just before landing."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and start the sideswipe."
+        },
+        {
+          "title": "Round kick",
+          "body": "Throw the round kick."
+        },
+        {
+          "title": "Twist",
+          "body": "Add the twist with the hips before landing."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on one leg with soft knees."
+        }
+      ],
+      "landing": "Land on one leg with the knee bent and the chest up. If you land sideways, turn a little more with the hips.",
+      "mistakes": [
+        "Not adding the twist: it is what makes it a snapu.",
+        "Kicking with a bent knee.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Sideswipe until the sweep is solid.",
+        "Mark the extra twist at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "sideswipe",
+          "meaning": "A side leg sweep, similar to a low round kick to the side."
+        },
+        {
+          "term": "snapu",
+          "meaning": "A sideswipe with an extra twist before landing."
+        }
+      ],
+      "prereqNotes": {
+        "sideswipe": "The Sideswipe gives you the side sweep; the snapu adds the twist before landing."
+      }
+    }
+  },
+  "spyderTwist": {
+    "es": "Es un spyder con un twist extra. Se entra con el aplanado horizontal del spyder y se suma el giro para caer de pie tras completar la rotación.",
+    "en": "It is a Spyder with an extra twist. You enter with the horizontal flattening of the spyder and add the turn to land on your feet after completing the rotation.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un spyder con un twist extra. Se entra con el aplanado horizontal del spyder y se suma el giro para caer de pie tras completar la rotación.",
+      "before": {
+        "prerequisites": "Necesitas el Spyder y el Butterfly Twist. El primero te da el aplanado horizontal y el segundo el giro en el aire.",
+        "space": "Colchoneta amplia, con unos 3 o 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie y aterrizas sobre los pies.",
+        "legs": "Las piernas se extienden en el aplanado horizontal y giran con el twist.",
+        "arms": "Los brazos abren el giro y se recogen para acelerarlo.",
+        "gaze": "Mira por encima del hombro durante el giro y el horizonte al caer.",
+        "torso": "El tronco se aplana en horizontal y suma el giro."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y arranca el spyder."
+        },
+        {
+          "title": "Aplanado",
+          "body": "Extiende el cuerpo en horizontal como en el spyder."
+        },
+        {
+          "title": "Twist",
+          "body": "Suma el giro sobre el eje con las caderas."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si caes de lado, revisa la horizontal del aplanado.",
+      "mistakes": [
+        "Perder el aplanado horizontal.",
+        "Girar con la espalda en vez de con las caderas.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Spyder hasta que el aplanado sea estable.",
+        "Marca el twist a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "spyder",
+          "meaning": "Movimiento que aplana el cuerpo en horizontal en el aire."
+        },
+        {
+          "term": "twist",
+          "meaning": "Giro sobre el eje del cuerpo."
+        }
+      ],
+      "prereqNotes": {
+        "spyder": "El Spyder te da el aplanado horizontal de la entrada.",
+        "butterflyTwist": "El Butterfly Twist te da el giro en el aire que se suma al aplanado."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Spyder with an extra twist. You enter with the horizontal flattening of the spyder and add the turn to land on your feet after completing the rotation.",
+      "before": {
+        "prerequisites": "You need the Spyder and the Butterfly Twist. The first gives you the horizontal flattening and the second the air turn.",
+        "space": "A large mat, with about 3 or 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot and land on your feet.",
+        "legs": "The legs extend in the horizontal flattening and turn with the twist.",
+        "arms": "The arms open the turn and tuck to speed it up.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you land.",
+        "torso": "The torso flattens horizontally and adds the turn."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and start the spyder."
+        },
+        {
+          "title": "Flatten",
+          "body": "Extend the body horizontally as in the spyder."
+        },
+        {
+          "title": "Twist",
+          "body": "Add the turn on the axis with the hips."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If you land sideways, check the horizontal position of the flattening.",
+      "mistakes": [
+        "Losing the horizontal flattening.",
+        "Turning with the back instead of the hips.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Spyder until the flattening is stable.",
+        "Mark the twist at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "spyder",
+          "meaning": "A move that flattens the body horizontally in the air."
+        },
+        {
+          "term": "twist",
+          "meaning": "A turn on the body axis."
+        }
+      ],
+      "prereqNotes": {
+        "spyder": "The Spyder gives you the horizontal flattening on the entry.",
+        "butterflyTwist": "The Butterfly Twist gives you the air turn added to the flattening."
+      }
+    }
+  },
+  "touchdownRaizTwist": {
+    "es": "Es un touchdown raiz con un twist extra que aterriza en complete. Se apoya la mano al despegar y se suma el giro en el aire antes de caer de frente sobre los pies.",
+    "en": "It is a Touchdown Raiz with an extra twist that lands in complete. You plant the hand on takeoff and add the turn in the air before landing facing forward on your feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un touchdown raiz con un twist extra que aterriza en complete. Se apoya la mano al despegar y se suma el giro en el aire antes de caer de frente sobre los pies.",
+      "before": {
+        "prerequisites": "Necesitas el Touchdown Raiz y el Snapu. El primero te da la entrada con el apoyo de mano y el segundo el twist extra.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie con el apoyo de la mano y aterrizas de frente.",
+        "legs": "Las piernas pasan por encima en el giro y caen en postura complete.",
+        "arms": "Una mano apoya y empuja; la otra ayuda al giro.",
+        "gaze": "Mira el punto de apoyo y luego al frente al caer.",
+        "torso": "El tronco pasa redondo por el apoyo y suma el twist."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y apoya la mano como en el touchdown raiz."
+        },
+        {
+          "title": "Apoyo",
+          "body": "Empuja con la mano y sube el cuerpo."
+        },
+        {
+          "title": "Twist",
+          "body": "Suma el giro en el aire con las caderas."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de frente sobre los pies en postura complete."
+        }
+      ],
+      "landing": "Aterriza de frente con las rodillas flexionadas y el pecho arriba, con los pies alineados en postura complete.",
+      "mistakes": [
+        "Apoyar la mano demasiado lejos.",
+        "No sumar el twist.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Touchdown Raiz hasta que el apoyo sea sólido.",
+        "Marca el twist a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "touchdown raiz",
+          "meaning": "Entrada con apoyo de mano que pasa por encima y cae al frente."
+        },
+        {
+          "term": "complete",
+          "meaning": "Postura de aterrizaje de frente, con los dos pies alineados."
+        }
+      ],
+      "prereqNotes": {
+        "touchdownRaiz": "El Touchdown Raiz te da la entrada con el apoyo de mano.",
+        "snapu": "El Snapu te da el twist extra que se suma en el aire."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Touchdown Raiz with an extra twist that lands in complete. You plant the hand on takeoff and add the turn in the air before landing facing forward on your feet.",
+      "before": {
+        "prerequisites": "You need the Touchdown Raiz and the Snapu. The first gives you the entry with the hand plant and the second the extra twist.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot with the hand plant and land facing forward.",
+        "legs": "The legs pass over in the turn and land in complete stance.",
+        "arms": "One hand plants and pushes; the other helps the turn.",
+        "gaze": "Look at the plant point and then ahead when you land.",
+        "torso": "The torso passes round over the plant and adds the twist."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and plant the hand as in the touchdown raiz."
+        },
+        {
+          "title": "Plant",
+          "body": "Push with the hand and rise."
+        },
+        {
+          "title": "Twist",
+          "body": "Add the turn in the air with the hips."
+        },
+        {
+          "title": "Landing",
+          "body": "Land facing forward on your feet in complete stance."
+        }
+      ],
+      "landing": "Land facing forward with bent knees and the chest up, with the feet aligned in complete stance.",
+      "mistakes": [
+        "Planting the hand too far.",
+        "Not adding the twist.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Touchdown Raiz until the plant is solid.",
+        "Mark the twist at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "touchdown raiz",
+          "meaning": "A hand-plant entry that passes over the top and lands facing forward."
+        },
+        {
+          "term": "complete",
+          "meaning": "A landing stance facing forward, with both feet aligned."
+        }
+      ],
+      "prereqNotes": {
+        "touchdownRaiz": "The Touchdown Raiz gives you the entry with the hand plant.",
+        "snapu": "The Snapu gives you the extra twist added in the air."
+      }
+    }
+  },
+  "backside1080Shuriken": {
+    "es": "Es un backside 1080 rematado con un latigazo seco tipo shuriken. El cuerpo gira tres vueltas alejándose del lado de la patada y el golpe final sale con recámara corta.",
+    "en": "It is a Backside 1080 finished with a sharp shuriken-style snap. The body turns three rotations away from the kicking side and the final strike fires from a short chamber.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un backside 1080 rematado con un latigazo seco tipo shuriken. El cuerpo gira tres vueltas alejándose del lado de la patada y el golpe final sale con recámara corta.",
+      "before": {
+        "prerequisites": "Necesitas el Backside 1080 y el Pop 360. El primero te da las tres vueltas y el segundo el remate con el latigazo.",
+        "space": "Colchoneta amplia, con unos 4 o 5 pasos. Es un truco de giro alto."
+      },
+      "body": {
+        "feet": "Empiezas desde postura backside y despegas de un pie.",
+        "legs": "La pierna de remate sale con recámara corta y un latigazo seco.",
+        "arms": "Los brazos abren el giro y se recogen para acelerarlo.",
+        "gaze": "Mira por encima del hombro durante las vueltas y al objetivo en el remate.",
+        "torso": "El tronco gira tres vueltas con el eje firme."
+      },
+      "steps": [
+        {
+          "title": "Entrada backside",
+          "body": "Empieza en postura backside y arranca el giro."
+        },
+        {
+          "title": "Tres vueltas",
+          "body": "Encadena las tres vueltas alejándote del lado de la patada."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Suelta el latigazo seco con recámara corta."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de pateo con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de pateo con la rodilla flexionada y el pecho arriba. Si pierdes el eje, practica el Backside 1080 hasta que sea sólido.",
+      "mistakes": [
+        "Perder la orientación en la tercera vuelta.",
+        "Patear con la pierna relajada: el latigazo es seco.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Backside 1080 hasta que las tres vueltas sean estables.",
+        "Marca el latigazo del shuriken a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "backside",
+          "meaning": "Dirección de giro en la que el cuerpo se aleja del lado de la patada."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "Patada en la que la pierna sale con una recámara corta y un latigazo seco."
+        },
+        {
+          "term": "recámara",
+          "meaning": "Recogida breve de la pierna antes de estirarla en la patada."
+        }
+      ],
+      "prereqNotes": {
+        "backside1080": "El Backside 1080 te da las tres vueltas alejándote del lado de la patada.",
+        "pop360": "El Pop 360 te da la base del remate con el latigazo seco."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Backside 1080 finished with a sharp shuriken-style snap. The body turns three rotations away from the kicking side and the final strike fires from a short chamber.",
+      "before": {
+        "prerequisites": "You need the Backside 1080 and the Pop 360. The first gives you the three rotations and the second the snapping finish.",
+        "space": "A large mat, with about 4 or 5 steps. This is a high-spin trick."
+      },
+      "body": {
+        "feet": "You start in backside stance and take off from one foot.",
+        "legs": "The finishing leg fires from a short chamber with a sharp snap.",
+        "arms": "The arms open the turn and tuck to speed it up.",
+        "gaze": "Look over the shoulder during the rotations and at the target on the finish.",
+        "torso": "The torso turns three rotations with the axis firm."
+      },
+      "steps": [
+        {
+          "title": "Backside entry",
+          "body": "Start in backside stance and begin the turn."
+        },
+        {
+          "title": "Three rotations",
+          "body": "Chain the three rotations away from the kicking side."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Fire the sharp snap from a short chamber."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the kicking foot with soft knees."
+        }
+      ],
+      "landing": "Land on the kicking foot with the knee bent and the chest up. If you lose the axis, practice the Backside 1080 until it is solid.",
+      "mistakes": [
+        "Losing orientation on the third rotation.",
+        "Kicking with a loose leg: the snap is sharp.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Backside 1080 until the three rotations are stable.",
+        "Mark the shuriken snap at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "backside",
+          "meaning": "A spin direction in which the body turns away from the kicking side."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "A kick in which the leg fires from a short chamber with a sharp snap."
+        },
+        {
+          "term": "chamber",
+          "meaning": "A brief tuck of the leg before extending it in the kick."
+        }
+      ],
+      "prereqNotes": {
+        "backside1080": "The Backside 1080 gives you the three rotations away from the kicking side.",
+        "pop360": "The Pop 360 gives you the base of the finish with the sharp snap."
+      }
+    }
+  },
+  "backside1620": {
+    "es": "Es una patada vertical de cuatro giros y medio, 1620 grados, en dirección backside. El cuerpo encadena las vueltas alejándose del lado de la patada y patea a mitad del giro.",
+    "en": "It is a vertical kick of four and a half rotations, 1620 degrees, in the backside direction. The body chains the turns away from the kicking side and strikes mid-spin.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada vertical de cuatro giros y medio, 1620 grados, en dirección backside. El cuerpo encadena las vueltas alejándose del lado de la patada y patea a mitad del giro.",
+      "before": {
+        "prerequisites": "Necesitas el Backside 1440. Ese truco te da las cuatro vueltas; aquí sumas media vuelta más.",
+        "space": "Colchoneta amplia, con unos 4 o 5 pasos. Es una de las rotaciones más altas de la familia."
+      },
+      "body": {
+        "feet": "Empiezas desde postura backside y despegas de un pie.",
+        "legs": "La pierna de pateo sale a mitad del giro, con la rodilla controlada.",
+        "arms": "Los brazos abren el giro y se recogen cerca del pecho para acelerarlo.",
+        "gaze": "Mira por encima del hombro durante las vueltas y al objetivo al patear.",
+        "torso": "El tronco gira cuatro vueltas y media con el eje firme."
+      },
+      "steps": [
+        {
+          "title": "Entrada backside",
+          "body": "Empieza en postura backside y arranca el giro."
+        },
+        {
+          "title": "Vueltas",
+          "body": "Encadena las vueltas alejándote del lado de la patada."
+        },
+        {
+          "title": "Patada",
+          "body": "Patea a mitad del giro con la pierna controlada."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de despegue con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de despegue con la rodilla flexionada y el pecho arriba. Si pierdes el eje, practica el Backside 1440 hasta que sea sólido.",
+      "mistakes": [
+        "Perder la orientación por tantas vueltas.",
+        "Patear con la pierna suelta.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Backside 1440 hasta que las vueltas sean estables.",
+        "Suma la media vuelta extra solo cuando tengas el control."
+      ],
+      "terms": [
+        {
+          "term": "backside",
+          "meaning": "Dirección de giro en la que el cuerpo se aleja del lado de la patada."
+        },
+        {
+          "term": "vertical kick",
+          "meaning": "Patada de giro que no lleva mortal, con el cuerpo de pie girando."
+        }
+      ],
+      "prereqNotes": {
+        "backside1440": "El Backside 1440 te da las cuatro vueltas; el 1620 agrega media vuelta más sobre el mismo giro."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a vertical kick of four and a half rotations, 1620 degrees, in the backside direction. The body chains the turns away from the kicking side and strikes mid-spin.",
+      "before": {
+        "prerequisites": "You need the Backside 1440. That trick gives you the four rotations; here you add half a turn more.",
+        "space": "A large mat, with about 4 or 5 steps. It is one of the highest spins in the family."
+      },
+      "body": {
+        "feet": "You start in backside stance and take off from one foot.",
+        "legs": "The kicking leg comes out mid-spin, with the knee controlled.",
+        "arms": "The arms open the turn and tuck near the chest to speed it up.",
+        "gaze": "Look over the shoulder during the rotations and at the target when you kick.",
+        "torso": "The torso turns four and a half rotations with the axis firm."
+      },
+      "steps": [
+        {
+          "title": "Backside entry",
+          "body": "Start in backside stance and begin the turn."
+        },
+        {
+          "title": "Rotations",
+          "body": "Chain the rotations away from the kicking side."
+        },
+        {
+          "title": "Kick",
+          "body": "Kick mid-spin with the leg controlled."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the takeoff foot with soft knees."
+        }
+      ],
+      "landing": "Land on the takeoff foot with the knee bent and the chest up. If you lose the axis, practice the Backside 1440 until it is solid.",
+      "mistakes": [
+        "Losing orientation from so many rotations.",
+        "Kicking with a loose leg.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Backside 1440 until the rotations are stable.",
+        "Add the extra half turn only once you have control."
+      ],
+      "terms": [
+        {
+          "term": "backside",
+          "meaning": "A spin direction in which the body turns away from the kicking side."
+        },
+        {
+          "term": "vertical kick",
+          "meaning": "A spinning kick with no flip, with the body upright as it turns."
+        }
+      ],
+      "prereqNotes": {
+        "backside1440": "The Backside 1440 gives you the four rotations; the 1620 adds half a turn more on the same spin."
+      }
+    }
+  },
+  "backside900Knife": {
+    "es": "Es un backside 900 en el que el remate se lanza con la pierna estirada y rígida, tipo cuchillo. El giro alejado termina con la pierna recta cortando el aire.",
+    "en": "It is a Backside 900 in which the finish is thrown with the leg straight and rigid, knife style. The away-facing spin ends with the straight leg slicing the air.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un backside 900 en el que el remate se lanza con la pierna estirada y rígida, tipo cuchillo. El giro alejado termina con la pierna recta cortando el aire.",
+      "before": {
+        "prerequisites": "Necesitas el Backside 1080 y el Jackknife. El primero te da las vueltas en dirección backside y el segundo la forma de navaja rígida.",
+        "space": "Colchoneta amplia, con unos 4 o 5 pasos."
+      },
+      "body": {
+        "feet": "Empiezas desde postura backside y despegas de un pie.",
+        "legs": "La pierna de remate sale estirada y rígida, como un cuchillo.",
+        "arms": "Los brazos abren el giro y se recogen para el remate.",
+        "gaze": "Mira por encima del hombro durante las vueltas y al objetivo al cortar.",
+        "torso": "El tronco gira alejándose del lado de la patada con el eje firme."
+      },
+      "steps": [
+        {
+          "title": "Entrada backside",
+          "body": "Empieza en postura backside y arranca el giro."
+        },
+        {
+          "title": "Vueltas",
+          "body": "Encadena las vueltas alejándote del lado de la patada."
+        },
+        {
+          "title": "Cuchillo",
+          "body": "Remata con la pierna estirada y rígida."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de pateo con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de pateo con la rodilla flexionada y el pecho arriba. Si la pierna se dobla, practica el remate estirado a baja altura.",
+      "mistakes": [
+        "Doblar la pierna del remate: el cuchillo va estirado.",
+        "Perder el eje en las vueltas.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Backside 1080 hasta que las vueltas sean estables.",
+        "Marca el remate estirado a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "backside",
+          "meaning": "Dirección de giro en la que el cuerpo se aleja del lado de la patada."
+        },
+        {
+          "term": "jackknife",
+          "meaning": "Forma de navaja: la pierna sale estirada y rígida en el remate."
+        },
+        {
+          "term": "knife",
+          "meaning": "Patada con la pierna estirada y rígida, como un cuchillo."
+        }
+      ],
+      "prereqNotes": {
+        "backside1080": "El Backside 1080 te da las vueltas en dirección backside.",
+        "jackknife": "El Jackknife te da la forma de navaja rígida del remate."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Backside 900 in which the finish is thrown with the leg straight and rigid, knife style. The away-facing spin ends with the straight leg slicing the air.",
+      "before": {
+        "prerequisites": "You need the Backside 1080 and the Jackknife. The first gives you the backside rotations and the second the rigid knife shape.",
+        "space": "A large mat, with about 4 or 5 steps."
+      },
+      "body": {
+        "feet": "You start in backside stance and take off from one foot.",
+        "legs": "The finishing leg comes out straight and rigid, like a knife.",
+        "arms": "The arms open the turn and tuck for the finish.",
+        "gaze": "Look over the shoulder during the rotations and at the target when you cut.",
+        "torso": "The torso turns away from the kicking side with the axis firm."
+      },
+      "steps": [
+        {
+          "title": "Backside entry",
+          "body": "Start in backside stance and begin the turn."
+        },
+        {
+          "title": "Rotations",
+          "body": "Chain the rotations away from the kicking side."
+        },
+        {
+          "title": "Knife",
+          "body": "Finish with the leg straight and rigid."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the kicking foot with soft knees."
+        }
+      ],
+      "landing": "Land on the kicking foot with the knee bent and the chest up. If the leg bends, practice the straight finish at low height.",
+      "mistakes": [
+        "Bending the finishing leg: the knife stays straight.",
+        "Losing the axis during the rotations.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Backside 1080 until the rotations are stable.",
+        "Mark the straight finish at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "backside",
+          "meaning": "A spin direction in which the body turns away from the kicking side."
+        },
+        {
+          "term": "jackknife",
+          "meaning": "A knife shape: the leg comes out straight and rigid on the finish."
+        },
+        {
+          "term": "knife",
+          "meaning": "A kick with the leg straight and rigid, like a knife."
+        }
+      ],
+      "prereqNotes": {
+        "backside1080": "The Backside 1080 gives you the backside rotations.",
+        "jackknife": "The Jackknife gives you the rigid knife shape of the finish."
+      }
+    }
+  }
+}

@@ -1,0 +1,1200 @@
+{
+  "xOut": {
+    "es": "Es un Back Tuck que abre las piernas en una X en el punto mas alto. La patada dividida marca el vuelo y luego cierra para aterrizar.",
+    "en": "It is a Back Tuck that opens the legs in an X at the highest point. The split kick marks the flight and then closes for landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal atras con una apertura de piernas en forma de X. La patada se abre arriba y se cierra antes de caer.",
+      "before": {
+        "prerequisites": "Necesitas el Back Tuck. Te da la rotacion hacia atras y el control del cuerpo en el aire.",
+        "space": "Colchoneta blanda y amplia."
+      },
+      "body": {
+        "feet": "Pies al ancho de los hombros y despegue con los dos pies.",
+        "legs": "Las piernas se abren hacia los lados en el punto mas alto y se cierran para aterrizar.",
+        "arms": "Los brazos suben al despegar y se abren con la X para ayudar a frenar la rotacion.",
+        "gaze": "Mira al frente al despegar y busca el piso al cerrar.",
+        "torso": "El torso sube alto y se abre en la X sin perder la linea."
+      },
+      "steps": [
+        {
+          "title": "Despegue",
+          "body": "Salta con los dos pies y sube el pecho."
+        },
+        {
+          "title": "Abre la X",
+          "body": "En el punto mas alto, abre las piernas hacia los lados y los brazos hacia arriba."
+        },
+        {
+          "title": "Cierra",
+          "body": "Junta las piernas y prepara la caida."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae con los dos pies y las rodillas flexionadas."
+        }
+      ],
+      "landing": "Cae con los dos pies, las rodillas blandas y el pecho arriba.",
+      "mistakes": [
+        "Abrir las piernas demasiado tarde.",
+        "Quedarse abierto y no cerrar.",
+        "Mirar el piso durante la apertura.",
+        "Aterrizar con las piernas rigidas."
+      ],
+      "tips": [
+        "Practica el Back Tuck hasta que sea estable.",
+        "Marca la X en una cama elastica sin girar.",
+        "Abre y cierra rapido para no perder la caida."
+      ],
+      "terms": [
+        {
+          "term": "x-out",
+          "meaning": "Apertura de piernas y brazos en forma de X durante un mortal."
+        },
+        {
+          "term": "tuck",
+          "meaning": "Posicion redondeada con las rodillas al pecho y el torso compacto."
+        }
+      ],
+      "prereqNotes": {
+        "backTuck": "El Back Tuck te da la rotacion hacia atras y la altura para abrir la X."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backward flip with an X-shaped leg opening. The split opens at the top and closes before landing.",
+      "before": {
+        "prerequisites": "You need the Back Tuck. It gives you the backward rotation and control of the body in the air.",
+        "space": "A large, soft mat."
+      },
+      "body": {
+        "feet": "Feet shoulder-width apart and take off from both feet.",
+        "legs": "The legs open to the sides at the highest point and close for landing.",
+        "arms": "The arms rise on takeoff and open with the X to help slow the rotation.",
+        "gaze": "Look forward on takeoff and find the floor when you close.",
+        "torso": "The torso rises tall and opens in the X without losing its line."
+      },
+      "steps": [
+        {
+          "title": "Takeoff",
+          "body": "Jump from both feet and lift the chest."
+        },
+        {
+          "title": "Open the X",
+          "body": "At the highest point, open the legs to the sides and the arms upward."
+        },
+        {
+          "title": "Close",
+          "body": "Bring the legs together and prepare the landing."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on both feet with bent knees."
+        }
+      ],
+      "landing": "Land on both feet with soft knees and the chest up.",
+      "mistakes": [
+        "Opening the legs too late.",
+        "Staying open and not closing.",
+        "Looking at the floor during the opening.",
+        "Landing with stiff legs."
+      ],
+      "tips": [
+        "Practice the Back Tuck until it is stable.",
+        "Mark the X on a trampoline without turning.",
+        "Open and close quickly so you do not lose the landing."
+      ],
+      "terms": [
+        {
+          "term": "x-out",
+          "meaning": "An X-shaped opening of the legs and arms during a flip."
+        },
+        {
+          "term": "tuck",
+          "meaning": "A rounded shape with the knees to the chest and the torso compact."
+        }
+      ],
+      "prereqNotes": {
+        "backTuck": "The Back Tuck gives you the backward rotation and the height to open the X."
+      }
+    }
+  },
+  "frontAxe": {
+    "es": "Es un mortal de frente que termina con una patada de hacha. Una pierna sube estirada y baja como un hacha mientras el cuerpo gira.",
+    "en": "It is a front flip that finishes with an axe kick. One leg rises straight and chops down like an axe while the body turns.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Front Tuck con una patada de hacha al final. La pierna sube y corta hacia abajo antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Front Tuck. Te da la rotacion de frente y la altura.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con carrera corta y pique hacia adelante.",
+        "legs": "Una pierna queda recogida y la otra sube estirada para bajar en hacha.",
+        "arms": "Los brazos ayudan a girar y se abren para equilibrar la patada.",
+        "gaze": "Mira al frente al despegar y sigue el pie en la bajada.",
+        "torso": "El torso rota de frente y se mantiene alto en la patada."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Corre un poco y despega con un pique hacia adelante."
+        },
+        {
+          "title": "Rotacion de frente",
+          "body": "Empieza la rotacion de frente con una pierna recogida."
+        },
+        {
+          "title": "Axe kick",
+          "body": "Sube la otra pierna estirada y bajala como un hacha."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho arriba.",
+      "mistakes": [
+        "Bajar la pierna con la rodilla doblada.",
+        "No completar la rotacion de frente.",
+        "Mirar el piso.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica la patada de hacha de pie antes de unirla.",
+        "Haz primero un Front Tuck y agrega la pierna al final.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "axe kick",
+          "meaning": "Patada que sube estirada y baja como un hacha, con la pierna recta."
+        },
+        {
+          "term": "front tuck",
+          "meaning": "Mortal hacia adelante con las rodillas recogidas al pecho."
+        }
+      ],
+      "prereqNotes": {
+        "frontTuck": "El Front Tuck te da la rotacion de frente y el tiempo para lanzar la pierna."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Front Tuck with an axe kick at the end. The leg rises and chops down before landing.",
+      "before": {
+        "prerequisites": "You need the Front Tuck. It gives you the forward rotation and the height.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a short run and a punch forward.",
+        "legs": "One leg stays tucked and the other rises straight to chop down in an axe kick.",
+        "arms": "The arms help the turn and open to balance the kick.",
+        "gaze": "Look forward on takeoff and follow the foot on the way down.",
+        "torso": "The torso rotates forward and stays tall on the kick."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take a short run and punch forward."
+        },
+        {
+          "title": "Forward rotation",
+          "body": "Start the forward rotation with one leg tucked."
+        },
+        {
+          "title": "Axe kick",
+          "body": "Raise the other leg straight and chop it down like an axe."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest up.",
+      "mistakes": [
+        "Chopping with a bent knee.",
+        "Not completing the forward rotation.",
+        "Looking at the floor.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the axe kick standing before joining it.",
+        "Do a Front Tuck first and add the leg at the end.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "axe kick",
+          "meaning": "A kick that rises straight and chops down like an axe, with the leg straight."
+        },
+        {
+          "term": "front tuck",
+          "meaning": "A forward flip with the knees tucked to the chest."
+        }
+      ],
+      "prereqNotes": {
+        "frontTuck": "The Front Tuck gives you the forward rotation and the timing to throw the leg."
+      }
+    }
+  },
+  "frontXOut": {
+    "es": "Es un mortal de frente que abre las piernas en una X en el punto mas alto. La patada dividida se cierra antes de aterrizar.",
+    "en": "It is a front flip that opens the legs in an X at the highest point. The split closes before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Front Tuck con una apertura de piernas en X. La patada se abre arriba y se cierra para caer.",
+      "before": {
+        "prerequisites": "Necesitas el Front Tuck. Te da la rotacion de frente y la altura.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con carrera corta y pique hacia adelante.",
+        "legs": "Las piernas se abren hacia los lados en el punto mas alto y se cierran.",
+        "arms": "Los brazos suben y se abren con la X.",
+        "gaze": "Mira al frente al despegar y busca el piso al cerrar.",
+        "torso": "El torso rota de frente y se abre en la X sin perder la linea."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Corre un poco y despega con un pique."
+        },
+        {
+          "title": "Rotacion",
+          "body": "Empieza la rotacion de frente y sube el pecho."
+        },
+        {
+          "title": "Abre la X",
+          "body": "Abre las piernas hacia los lados y los brazos hacia arriba."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cierra las piernas y cae con los dos pies."
+        }
+      ],
+      "landing": "Cae con los dos pies, las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Abrir demasiado tarde.",
+        "Quedarse abierto y no cerrar.",
+        "Mirar el piso.",
+        "Aterrizar con las piernas rigidas."
+      ],
+      "tips": [
+        "Practica el Front Tuck hasta que sea estable.",
+        "Marca la X sin girar y luego suma la rotacion.",
+        "Usa una cama elastica para la apertura."
+      ],
+      "terms": [
+        {
+          "term": "x-out",
+          "meaning": "Apertura de piernas y brazos en forma de X durante un mortal."
+        },
+        {
+          "term": "front tuck",
+          "meaning": "Mortal hacia adelante con las rodillas recogidas al pecho."
+        }
+      ],
+      "prereqNotes": {
+        "frontTuck": "El Front Tuck te da la rotacion de frente y la altura para abrir la X."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Front Tuck with an X-shaped leg opening. The split opens at the top and closes for landing.",
+      "before": {
+        "prerequisites": "You need the Front Tuck. It gives you the forward rotation and the height.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a short run and a punch forward.",
+        "legs": "The legs open to the sides at the highest point and then close.",
+        "arms": "The arms rise and open with the X.",
+        "gaze": "Look forward on takeoff and find the floor when you close.",
+        "torso": "The torso rotates forward and opens in the X without losing its line."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take a short run and punch forward."
+        },
+        {
+          "title": "Rotation",
+          "body": "Start the forward rotation and lift the chest."
+        },
+        {
+          "title": "Open the X",
+          "body": "Open the legs to the sides and the arms upward."
+        },
+        {
+          "title": "Landing",
+          "body": "Close the legs and land on both feet."
+        }
+      ],
+      "landing": "Land on both feet with bent knees and the chest up.",
+      "mistakes": [
+        "Opening too late.",
+        "Staying open and not closing.",
+        "Looking at the floor.",
+        "Landing with stiff legs."
+      ],
+      "tips": [
+        "Practice the Front Tuck until it is stable.",
+        "Mark the X without turning and then add the rotation.",
+        "Use a trampoline for the opening."
+      ],
+      "terms": [
+        {
+          "term": "x-out",
+          "meaning": "An X-shaped opening of the legs and arms during a flip."
+        },
+        {
+          "term": "front tuck",
+          "meaning": "A forward flip with the knees tucked to the chest."
+        }
+      ],
+      "prereqNotes": {
+        "frontTuck": "The Front Tuck gives you the forward rotation and the height to open the X."
+      }
+    }
+  },
+  "kipUp": {
+    "es": "Es un movimiento de piso para levantarse desde la espalda. Un latigazo de cadera y un empujon de manos te devuelven de pie.",
+    "en": "It is a floor move to get up from your back. A hip snap and a hand push bring you back to standing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una subida desde la espalda con impulso de cadera. Las manos empujan el piso y los pies caen debajo del cuerpo.",
+      "before": {
+        "prerequisites": "No necesitas un truco previo. Conviene poder rodar hacia atras y sentarte en el piso sin miedo.",
+        "space": "Una colchoneta plana y firme, con espacio libre."
+      },
+      "body": {
+        "feet": "Empieza con los pies planos y las rodillas flexionadas; al final caen debajo del cuerpo.",
+        "legs": "Las rodillas se recogen y luego se lanzan hacia adelante en el latigazo.",
+        "arms": "Las manos empujan el piso al lado de la cabeza para subir el pecho.",
+        "gaze": "Mira al frente o un poco arriba al levantarte.",
+        "torso": "El torso se balancea hacia atras y luego se lanza hacia adelante."
+      },
+      "steps": [
+        {
+          "title": "Posicion",
+          "body": "Acuestate boca arriba con las rodillas recogidas y los pies planos."
+        },
+        {
+          "title": "Balanceo",
+          "body": "Mecete hacia atras para cargar el impulso sin apoyar la cabeza."
+        },
+        {
+          "title": "Latigazo",
+          "body": "Lanza las piernas hacia adelante y empuja el piso con las manos."
+        },
+        {
+          "title": "Subida",
+          "body": "Lleva los pies debajo del cuerpo y sube con el pecho arriba."
+        }
+      ],
+      "landing": "Termina de pie con las rodillas flexionadas y el peso centrado. No dejes que los pies se vayan hacia adelante.",
+      "mistakes": [
+        "No empujar con las manos.",
+        "Lanzar las piernas sin subir el pecho.",
+        "Apoyar la cabeza en el piso.",
+        "Terminar con el peso atras."
+      ],
+      "tips": [
+        "Practica el balanceo y el empujon por separado.",
+        "Usa una colchoneta firme para sentir el apoyo.",
+        "Graba el movimiento para revisar la cadera."
+      ],
+      "terms": [
+        {
+          "term": "kip up",
+          "meaning": "Subida desde la espalda con un latigazo de cadera y un empujon de manos."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a rise from the back with a hip snap. The hands push the floor and the feet land under the body.",
+      "before": {
+        "prerequisites": "You do not need a previous trick. It helps to be able to roll backward and sit on the floor without fear.",
+        "space": "A flat, firm mat with free space."
+      },
+      "body": {
+        "feet": "Start with the feet flat and the knees bent; at the end they land under the body.",
+        "legs": "The knees pull in and then shoot forward in the snap.",
+        "arms": "The hands push the floor beside the head to lift the chest.",
+        "gaze": "Look forward or slightly up as you rise.",
+        "torso": "The torso rocks back and then drives forward."
+      },
+      "steps": [
+        {
+          "title": "Position",
+          "body": "Lie on your back with the knees bent and the feet flat."
+        },
+        {
+          "title": "Rock",
+          "body": "Rock backward to load the momentum without putting the head down."
+        },
+        {
+          "title": "Snap",
+          "body": "Shoot the legs forward and push the floor with the hands."
+        },
+        {
+          "title": "Rise",
+          "body": "Bring the feet under the body and rise with the chest up."
+        }
+      ],
+      "landing": "Finish standing with bent knees and the weight centered. Do not let the feet run away forward.",
+      "mistakes": [
+        "Not pushing with the hands.",
+        "Shooting the legs without lifting the chest.",
+        "Putting the head on the floor.",
+        "Finishing with the weight back."
+      ],
+      "tips": [
+        "Practice the rock and the push separately.",
+        "Use a firm mat to feel the support.",
+        "Record the move to check the hips."
+      ],
+      "terms": [
+        {
+          "term": "kip up",
+          "meaning": "A rise from the back with a hip snap and a hand push."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "websterHalf": {
+    "es": "Es un Webster con media vuelta. Saltas de un pie, giras hacia adelante y sumas media vuelta antes de aterrizar.",
+    "en": "It is a Webster with a half turn. You jump from one foot, rotate forward and add half a turn before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal de frente con despegue de un pie y media vuelta. La rotacion termina mirando hacia atras.",
+      "before": {
+        "prerequisites": "Necesitas el Front Half. Te da la rotacion de frente con media vuelta.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie; la otra pierna se extiende al frente.",
+        "legs": "La pierna libre pasa adelante y luego se recoge para la rotacion.",
+        "arms": "Los brazos suben y ayudan a girar la media vuelta.",
+        "gaze": "Mira al frente al despegar y busca el piso al final.",
+        "torso": "El torso rota de frente y suma el giro en el aire."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie con la otra pierna extendida al frente."
+        },
+        {
+          "title": "Rotacion",
+          "body": "Empieza la rotacion de frente sobre el pie de despegue."
+        },
+        {
+          "title": "Media vuelta",
+          "body": "Suma media vuelta sobre el eje vertical durante el vuelo."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae de pie mirando hacia atras."
+        }
+      ],
+      "landing": "Cae con los dos pies o sobre el pie de apoyo, con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Girar antes de iniciar la rotacion de frente.",
+        "Perder el despegue de un pie.",
+        "Mirar el piso.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Front Half hasta que la media vuelta sea estable.",
+        "Marca el Webster sin giro antes de unir la media vuelta.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "webster",
+          "meaning": "Mortal hacia adelante con despegue de un pie, sin apoyo de manos."
+        },
+        {
+          "term": "front half",
+          "meaning": "Front flip con media vuelta antes de aterrizar."
+        }
+      ],
+      "prereqNotes": {
+        "frontHalf": "El Front Half te da la rotacion de frente y la media vuelta que se suman en el Webster Half."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a forward flip with a one-foot takeoff and a half turn. The rotation finishes facing backward.",
+      "before": {
+        "prerequisites": "You need the Front Half. It gives you the forward rotation with a half turn.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot; the other leg extends forward.",
+        "legs": "The free leg passes forward and then tucks for the rotation.",
+        "arms": "The arms rise and help turn the half twist.",
+        "gaze": "Look forward on takeoff and find the floor at the end.",
+        "torso": "The torso rotates forward and adds the turn in the air."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot with the other leg extended forward."
+        },
+        {
+          "title": "Rotation",
+          "body": "Start the forward rotation over the takeoff foot."
+        },
+        {
+          "title": "Half turn",
+          "body": "Add half a turn on the vertical axis during the flight."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet facing backward."
+        }
+      ],
+      "landing": "Land on both feet or on the support foot, with bent knees and the chest up.",
+      "mistakes": [
+        "Turning before the forward rotation starts.",
+        "Losing the one-foot takeoff.",
+        "Looking at the floor.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Front Half until the half turn is stable.",
+        "Mark the Webster without the turn before adding the half twist.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "webster",
+          "meaning": "A forward flip with a one-foot takeoff and no hand support."
+        },
+        {
+          "term": "front half",
+          "meaning": "A front flip with a half turn before landing."
+        }
+      ],
+      "prereqNotes": {
+        "frontHalf": "The Front Half gives you the forward rotation and the half turn added in the Webster Half."
+      }
+    }
+  },
+  "aerialMega": {
+    "es": "Es un Aerial que aterriza en mega. La pierna delantera queda extendida y el peso se va atras en una postura baja.",
+    "en": "It is an Aerial that lands in mega. The front leg stays extended and the weight goes back in a low stance.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Aerial con salida mega. El cuerpo gira de lado y aterriza en una postura baja y ancha.",
+      "before": {
+        "prerequisites": "Necesitas el Aerial. Te da el giro de lado sin manos y la altura.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso lateral y patada guia.",
+        "legs": "La pierna guia pasa por el aire y al aterrizar queda extendida al frente.",
+        "arms": "Los brazos abren el giro y se estabilizan en la salida.",
+        "gaze": "Mira por encima del hombro y luego al frente al aterrizar.",
+        "torso": "El torso gira de lado y se inclina atras en la salida mega."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso lateral y lanza la pierna guia."
+        },
+        {
+          "title": "Aerial",
+          "body": "Gira de lado sin manos con el cuerpo extendido."
+        },
+        {
+          "title": "Salida mega",
+          "body": "Aterriza con una pierna extendida al frente y el peso atras."
+        },
+        {
+          "title": "Control",
+          "body": "Flexiona la rodilla de atras y manten el pecho arriba."
+        }
+      ],
+      "landing": "Cae en una postura baja y ancha, con la pierna delantera extendida y la de atras flexionada. El peso queda atras.",
+      "mistakes": [
+        "Aterrizar con el peso adelante.",
+        "Doblar la pierna delantera.",
+        "Perder el giro de lado.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Aerial hasta que la salida sea estable.",
+        "Marca la postura mega sin giro.",
+        "Usa una colchoneta para sentir el peso atras."
+      ],
+      "terms": [
+        {
+          "term": "aerial",
+          "meaning": "Mortal de lado sin manos, parecido a una ronda en el aire."
+        },
+        {
+          "term": "mega",
+          "meaning": "Postura baja y ancha, con una pierna extendida y el peso atras."
+        }
+      ],
+      "prereqNotes": {
+        "aerial": "El Aerial te da el giro de lado sin manos y la altura para la salida mega."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an Aerial with a mega exit. The body turns sideways and lands in a low, wide stance.",
+      "before": {
+        "prerequisites": "You need the Aerial. It gives you the sideways turn without hands and the height.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a side step and a lead kick.",
+        "legs": "The lead leg passes through the air and stays extended forward on landing.",
+        "arms": "The arms open the turn and settle on the exit.",
+        "gaze": "Look over the shoulder and then forward on landing.",
+        "torso": "The torso turns sideways and leans back in the mega exit."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the side step and throw the lead leg."
+        },
+        {
+          "title": "Aerial",
+          "body": "Turn sideways with no hands and the body extended."
+        },
+        {
+          "title": "Mega exit",
+          "body": "Land with one leg extended forward and the weight back."
+        },
+        {
+          "title": "Control",
+          "body": "Bend the back knee and keep the chest up."
+        }
+      ],
+      "landing": "Land in a low, wide stance with the front leg extended and the back leg bent. The weight stays back.",
+      "mistakes": [
+        "Landing with the weight forward.",
+        "Bending the front leg.",
+        "Losing the sideways turn.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Aerial until the exit is stable.",
+        "Mark the mega stance without the turn.",
+        "Use a mat to feel the weight back."
+      ],
+      "terms": [
+        {
+          "term": "aerial",
+          "meaning": "A sideways flip with no hands, similar to an airborne cartwheel."
+        },
+        {
+          "term": "mega",
+          "meaning": "A low, wide stance with one leg extended and the weight back."
+        }
+      ],
+      "prereqNotes": {
+        "aerial": "The Aerial gives you the sideways turn without hands and the height for the mega exit."
+      }
+    }
+  },
+  "aerialTwistGumbiHelicoptero": {
+    "es": "Es un Aerial Twist con entrada gumbi que termina en helicoptero. El cuerpo gira en horizontal y suma una rotacion lateral.",
+    "en": "It is an Aerial Twist with a gumbi entry that finishes in a helicoptero. The body turns horizontally and adds a sideways rotation.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Aerial Twist Gumbi con un giro horizontal extra. La mano apoya, el cuerpo gira y termina el helicoptero.",
+      "before": {
+        "prerequisites": "Necesitas el Aerial Twist Gumbi y el Helicoptero. El primero te da la entrada y el segundo el giro horizontal.",
+        "space": "Colchoneta amplia. Es un truco de nivel alto."
+      },
+      "body": {
+        "feet": "Entrada con paso y apoyo de mano, con las piernas barriendo.",
+        "legs": "Las piernas se abren y giran en horizontal como las aspas de un helicoptero.",
+        "arms": "Una mano apoya y ayuda a girar; la otra se abre para el equilibrio.",
+        "gaze": "Mira el piso al apoyar y sigue el giro con la cabeza.",
+        "torso": "El torso se inclina, gira en horizontal y se endereza al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada gumbi",
+          "body": "Da el paso, baja la mano y redondea la espalda."
+        },
+        {
+          "title": "Aerial twist",
+          "body": "Gira el cuerpo hacia atras con la mano apoyada."
+        },
+        {
+          "title": "Helicoptero",
+          "body": "Abre las piernas y sumales un giro horizontal."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cierra las piernas y cae de pie."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el giro horizontal te desequilibra, da un paso.",
+      "mistakes": [
+        "Perder el apoyo de la mano.",
+        "No completar el giro horizontal.",
+        "Mirar el piso todo el tiempo.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Aerial Twist Gumbi hasta que el apoyo sea estable.",
+        "Marca el helicoptero sin giro antes de unirlo.",
+        "Pide supervision para la rotacion."
+      ],
+      "terms": [
+        {
+          "term": "gumbi",
+          "meaning": "Entrada con la espalda redondeada y apoyo de mano, parecida a una ronda baja."
+        },
+        {
+          "term": "helicoptero",
+          "meaning": "Giro horizontal con el cuerpo estirado, como las aspas de un helicoptero."
+        }
+      ],
+      "prereqNotes": {
+        "aerialTwistGumbi": "El Aerial Twist Gumbi te da la entrada con apoyo y el giro hacia atras.",
+        "helicoptero": "El Helicoptero te da el giro horizontal que se suma al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an Aerial Twist Gumbi with an extra horizontal turn. The hand plants, the body turns and the helicoptero finishes.",
+      "before": {
+        "prerequisites": "You need the Aerial Twist Gumbi and the Helicoptero. The first gives you the entry and the second the horizontal turn.",
+        "space": "A large mat. This is a high-level trick."
+      },
+      "body": {
+        "feet": "Enter with a step and a hand plant while the legs sweep.",
+        "legs": "The legs open and turn horizontally like helicopter blades.",
+        "arms": "One hand plants and helps turn; the other opens for balance.",
+        "gaze": "Look at the floor on the plant and follow the turn with the head.",
+        "torso": "The torso tilts, turns horizontally and straightens at the end."
+      },
+      "steps": [
+        {
+          "title": "Gumbi entry",
+          "body": "Take the step, lower the hand and round the back."
+        },
+        {
+          "title": "Aerial twist",
+          "body": "Turn the body backward with the hand planted."
+        },
+        {
+          "title": "Helicoptero",
+          "body": "Open the legs and add a horizontal turn."
+        },
+        {
+          "title": "Landing",
+          "body": "Close the legs and land on your feet."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the horizontal turn pulls you off balance, take a step.",
+      "mistakes": [
+        "Losing the hand support.",
+        "Not completing the horizontal turn.",
+        "Looking at the floor the whole time.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Aerial Twist Gumbi until the support is stable.",
+        "Mark the helicoptero without the turn before joining it.",
+        "Ask for supervision for the rotation."
+      ],
+      "terms": [
+        {
+          "term": "gumbi",
+          "meaning": "An entry with a rounded back and hand support, similar to a low cartwheel."
+        },
+        {
+          "term": "helicoptero",
+          "meaning": "A horizontal turn with the body stretched, like helicopter blades."
+        }
+      ],
+      "prereqNotes": {
+        "aerialTwistGumbi": "The Aerial Twist Gumbi gives you the supported entry and the backward turn.",
+        "helicoptero": "The Helicoptero gives you the horizontal turn added at the end."
+      }
+    }
+  },
+  "butterflyKickLateHook": {
+    "es": "Es una Butterfly Kick con un enganche tardio. La patada sale al final del vuelo y aterrizas en semi.",
+    "en": "It is a Butterfly Kick with a late hook. The kick comes out at the end of the flight and you land in semi.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada de mariposa que suma un enganche final. La pierna libre engancha cuando el cuerpo ya va bajando.",
+      "before": {
+        "prerequisites": "Necesitas el Butterfly Kick. Te da el vuelo horizontal y la tijera.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las piernas hacen la tijera de la mariposa y una engancha al final.",
+        "arms": "Los brazos abren el vuelo y se recogen para el enganche.",
+        "gaze": "Mira por encima del hombro y sigue la pierna al enganchar.",
+        "torso": "El torso se mantiene horizontal y se inclina en el enganche."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Butterfly",
+          "body": "Haz la tijera con el cuerpo horizontal."
+        },
+        {
+          "title": "Late hook",
+          "body": "Al final del vuelo, engancha con la pierna libre."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae en semi con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae en una postura semi, con una pierna adelante y la rodilla flexionada. Manten el pecho arriba.",
+      "mistakes": [
+        "Enganchar antes de terminar el vuelo.",
+        "Perder la horizontal.",
+        "Doblar la rodilla en el enganche.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Butterfly Kick hasta que el vuelo sea estable.",
+        "Marca el enganche tardio por separado.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "butterfly kick",
+          "meaning": "Patada con el cuerpo horizontal y las piernas en tijera."
+        },
+        {
+          "term": "hook",
+          "meaning": "Patada de gancho que pasa de lado y engancha hacia adentro."
+        },
+        {
+          "term": "semi",
+          "meaning": "Postura de aterrizaje intermedia, con una pierna adelante y el cuerpo algo girado."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyKick": "El Butterfly Kick te da el vuelo horizontal y la tijera sobre la que se suma el enganche."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Butterfly Kick with a late hook. The kick comes out at the end of the flight and you land in semi.",
+      "before": {
+        "prerequisites": "You need the Butterfly Kick. It gives you the horizontal flight and the scissor.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The legs make the butterfly scissor and one hooks at the end.",
+        "arms": "The arms open the flight and tuck for the hook.",
+        "gaze": "Look over the shoulder and follow the leg on the hook.",
+        "torso": "The torso stays horizontal and tilts on the hook."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Butterfly",
+          "body": "Make the scissor with the body horizontal."
+        },
+        {
+          "title": "Late hook",
+          "body": "At the end of the flight, hook with the free leg."
+        },
+        {
+          "title": "Landing",
+          "body": "Land in semi with a soft knee."
+        }
+      ],
+      "landing": "Land in a semi stance with one leg forward and the knee bent. Keep the chest up.",
+      "mistakes": [
+        "Hooking before the flight is done.",
+        "Losing the horizontal position.",
+        "Bending the knee on the hook.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Butterfly Kick until the flight is stable.",
+        "Mark the late hook separately.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "butterfly kick",
+          "meaning": "A kick with the body horizontal and the legs in a scissor."
+        },
+        {
+          "term": "hook",
+          "meaning": "A hooking kick that passes to the side and comes inward."
+        },
+        {
+          "term": "semi",
+          "meaning": "An intermediate landing stance with one leg forward and the body slightly turned."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyKick": "The Butterfly Kick gives you the horizontal flight and the scissor used for the hook."
+      }
+    }
+  },
+  "butterflyTwistAxe": {
+    "es": "Es un Butterfly Twist que termina con una patada de hacha. Despues del giro horizontal, la pierna sube y baja como un hacha.",
+    "en": "It is a Butterfly Twist that finishes with an axe kick. After the horizontal turn, the leg rises and chops down like an axe.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un b-twist con una patada de hacha al final. El giro horizontal se remata con la pierna estirada.",
+      "before": {
+        "prerequisites": "Necesitas el Butterfly Twist. Te da el giro horizontal y la salida.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las piernas se abren para el giro y una sube estirada para el hacha.",
+        "arms": "Los brazos abren el giro y se equilibran en la patada.",
+        "gaze": "Mira por encima del hombro y sigue el pie en la bajada.",
+        "torso": "El torso gira horizontal y se endereza para la patada."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Butterfly Twist",
+          "body": "Completa el giro horizontal con las piernas abiertas."
+        },
+        {
+          "title": "Axe kick",
+          "body": "Sube una pierna estirada y bajala como un hacha."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae de pie con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho arriba.",
+      "mistakes": [
+        "Bajar la pierna con la rodilla doblada.",
+        "No completar el giro.",
+        "Mirar el piso.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Butterfly Twist hasta aterrizar con control.",
+        "Marca el hacha sin giro antes de unirla.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: giro horizontal del cuerpo con las piernas abiertas."
+        },
+        {
+          "term": "axe kick",
+          "meaning": "Patada que sube estirada y baja como un hacha."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwist": "El Butterfly Twist te da el giro horizontal y la altura para la patada final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a b-twist with an axe kick at the end. The horizontal turn finishes with the straight leg chopping down.",
+      "before": {
+        "prerequisites": "You need the Butterfly Twist. It gives you the horizontal turn and the exit.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The legs open for the turn and one rises straight for the axe kick.",
+        "arms": "The arms open the turn and balance the kick.",
+        "gaze": "Look over the shoulder and follow the foot on the way down.",
+        "torso": "The torso turns horizontally and straightens for the kick."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Butterfly Twist",
+          "body": "Complete the horizontal turn with the legs open."
+        },
+        {
+          "title": "Axe kick",
+          "body": "Raise one straight leg and chop it down like an axe."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet with a soft knee."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest up.",
+      "mistakes": [
+        "Chopping with a bent knee.",
+        "Not completing the turn.",
+        "Looking at the floor.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Butterfly Twist until you land with control.",
+        "Mark the axe kick without the turn before joining it.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: a horizontal body turn with the legs open."
+        },
+        {
+          "term": "axe kick",
+          "meaning": "A kick that rises straight and chops down like an axe."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwist": "The Butterfly Twist gives you the horizontal turn and the height for the final kick."
+      }
+    }
+  },
+  "butterflyTwistHyper": {
+    "es": "Es un Butterfly Twist que aterriza en hyper. Despues del giro horizontal, una pierna queda extendida y el pecho va atras.",
+    "en": "It is a Butterfly Twist that lands in hyper. After the horizontal turn, one leg stays extended and the chest goes back.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un b-twist con salida hyper. El giro se completa y el cuerpo se abre hacia atras al caer.",
+      "before": {
+        "prerequisites": "Necesitas el Butterfly Twist. Te da el giro horizontal y la salida.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las piernas se abren para girar y una queda extendida en la salida.",
+        "arms": "Los brazos abren el giro y ayudan a mantener el pecho atras.",
+        "gaze": "Mira por encima del hombro y busca el horizonte al aterrizar.",
+        "torso": "El torso gira horizontal y se inclina hacia atras en la salida."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Butterfly Twist",
+          "body": "Completa el giro horizontal con las piernas abiertas."
+        },
+        {
+          "title": "Salida hyper",
+          "body": "Inclina el pecho atras y extiende una pierna."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae sobre el pie de apoyo con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho atras. Si te vas de espaldas, da un paso.",
+      "mistakes": [
+        "Perder la horizontal del giro.",
+        "No extender la pierna en la salida.",
+        "Mirar el piso.",
+        "Aterrizar con el pecho adelante."
+      ],
+      "tips": [
+        "Practica el Butterfly Twist hasta aterrizar con control.",
+        "Marca la salida hyper sin giro.",
+        "Usa una cama elastica para unir las partes."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: giro horizontal del cuerpo con las piernas abiertas."
+        },
+        {
+          "term": "hyper",
+          "meaning": "Postura de aterrizaje abierta, con el pecho atras y una pierna extendida."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwist": "El Butterfly Twist te da el giro horizontal y el control para abrir la salida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a b-twist with a hyper exit. The turn is completed and the body opens backward on landing.",
+      "before": {
+        "prerequisites": "You need the Butterfly Twist. It gives you the horizontal turn and the exit.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The legs open for the turn and one stays extended on the exit.",
+        "arms": "The arms open the turn and help keep the chest back.",
+        "gaze": "Look over the shoulder and find the horizon on landing.",
+        "torso": "The torso turns horizontally and leans back on the exit."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Butterfly Twist",
+          "body": "Complete the horizontal turn with the legs open."
+        },
+        {
+          "title": "Hyper exit",
+          "body": "Lean the chest back and extend one leg."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the support foot with a soft knee."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest back. If you drift backward, take a step.",
+      "mistakes": [
+        "Losing the horizontal position of the turn.",
+        "Not extending the leg on the exit.",
+        "Looking at the floor.",
+        "Landing with the chest forward."
+      ],
+      "tips": [
+        "Practice the Butterfly Twist until you land with control.",
+        "Mark the hyper exit without the turn.",
+        "Use a trampoline to join the parts."
+      ],
+      "terms": [
+        {
+          "term": "b-twist",
+          "meaning": "Butterfly twist: a horizontal body turn with the legs open."
+        },
+        {
+          "term": "hyper",
+          "meaning": "An open landing position with the chest back and one leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "butterflyTwist": "The Butterfly Twist gives you the horizontal turn and the control to open the exit."
+      }
+    }
+  }
+}

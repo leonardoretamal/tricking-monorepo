@@ -1,0 +1,1238 @@
+{
+  "arabian": {
+    "es": "Es un mortal de frente con media vuelta temprana. Sales hacia adelante, giras media vuelta apenas despegas y terminas la rotacion de frente.",
+    "en": "It is a front flip with an early half twist. You travel forward, turn half a turn right after takeoff and finish the forward rotation.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal de frente que suma media vuelta al inicio. La rotacion termina de frente y aterrizas mirando hacia donde empezaste.",
+      "before": {
+        "prerequisites": "Necesitas el Front Tuck y el Back Tuck. El Front Tuck te ensena la rotacion de frente y el Back Tuck te da comodidad para estar de cabeza.",
+        "space": "Colchoneta amplia y blanda, con unos 5 pasos libres al frente."
+      },
+      "body": {
+        "feet": "Entra con un paso y un pique con los dos pies, viajando hacia adelante.",
+        "legs": "Despues de la media vuelta, recoge las rodillas hacia el pecho y mantenlas juntas.",
+        "arms": "Sube los brazos al despegar, usalos para girar la media vuelta y luego abrazate las espinillas.",
+        "gaze": "Mira al frente al despegar y busca el piso cuando la rotacion de frente ya esta armada.",
+        "torso": "El torso se inclina hacia adelante y se redondea en el tuck; no lo dejes caer hacia atras."
+      },
+      "steps": [
+        {
+          "title": "Entrada y pique",
+          "body": "Da un paso, junta los pies en un pique y salta hacia adelante."
+        },
+        {
+          "title": "Media vuelta temprana",
+          "body": "Apenas despegas, gira media vuelta sobre el eje vertical mientras el cuerpo empieza a rotar de frente."
+        },
+        {
+          "title": "Tuck de frente",
+          "body": "Recoge las rodillas al pecho y completa la rotacion con el cuerpo redondeado."
+        },
+        {
+          "title": "Apertura y aterrizaje",
+          "body": "Abre las piernas cuando veas el piso y cae con los dos pies."
+        }
+      ],
+      "landing": "Aterriza con los dos pies, rodillas flexionadas y el pecho arriba. Absorbe el golpe sin bloquear las piernas.",
+      "mistakes": [
+        "Hacer la media vuelta tarde, cuando el cuerpo ya esta de cabeza.",
+        "Saltar hacia atras en vez de viajar hacia adelante.",
+        "Abrir el tuck antes de tiempo y quedar corto de rotacion.",
+        "Mirar el piso demasiado pronto y perder la altura."
+      ],
+      "tips": [
+        "Practica el Front Tuck y marca la media vuelta justo al despegar.",
+        "En una cama elastica, exagera el viaje hacia adelante con una media vuelta lenta.",
+        "Usa un punto fijo al frente para controlar la direccion."
+      ],
+      "terms": [
+        {
+          "term": "punch",
+          "meaning": "Impulso de despegue con los dos pies juntos despues de un paso o una ronda."
+        },
+        {
+          "term": "tuck",
+          "meaning": "Posicion redondeada con las rodillas al pecho y el torso compacto."
+        },
+        {
+          "term": "half twist",
+          "meaning": "Media vuelta de 180 grados sobre el eje vertical."
+        }
+      ],
+      "prereqNotes": {
+        "frontTuck": "El Front Tuck te da la rotacion de frente y la sensacion de abrir a tiempo.",
+        "backTuck": "El Back Tuck te entrena para estar de cabeza y controlar el espacio aereo."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a front flip with an early half twist. The rotation finishes forward and you land facing the way you started.",
+      "before": {
+        "prerequisites": "You need the Front Tuck and the Back Tuck. The Front Tuck teaches the forward rotation and the Back Tuck makes you comfortable upside down.",
+        "space": "A large, soft mat with about 5 free steps in front."
+      },
+      "body": {
+        "feet": "Enter with a step and a two-foot punch, traveling forward.",
+        "legs": "After the half twist, pull the knees to the chest and keep them together.",
+        "arms": "Raise the arms on takeoff, use them to turn the half twist and then hug your shins.",
+        "gaze": "Look forward on takeoff and find the floor once the forward rotation is set.",
+        "torso": "The torso leans forward and rounds in the tuck; do not let it fall backward."
+      },
+      "steps": [
+        {
+          "title": "Entry and punch",
+          "body": "Take a step, bring the feet together in a punch and jump forward."
+        },
+        {
+          "title": "Early half twist",
+          "body": "As soon as you leave the floor, turn half a turn on the vertical axis while the body starts rotating forward."
+        },
+        {
+          "title": "Forward tuck",
+          "body": "Pull the knees to the chest and finish the rotation with the body rounded."
+        },
+        {
+          "title": "Open and land",
+          "body": "Open the legs when you see the floor and land on both feet."
+        }
+      ],
+      "landing": "Land on both feet with bent knees and the chest up. Absorb the impact without locking the legs.",
+      "mistakes": [
+        "Doing the half twist late, when the body is already upside down.",
+        "Jumping backward instead of traveling forward.",
+        "Opening the tuck too early and running out of rotation.",
+        "Looking at the floor too soon and losing height."
+      ],
+      "tips": [
+        "Practice the Front Tuck and mark the half twist right at takeoff.",
+        "On a trampoline, exaggerate the forward travel with a slow half twist.",
+        "Pick a fixed point in front to control the direction."
+      ],
+      "terms": [
+        {
+          "term": "punch",
+          "meaning": "A two-foot takeoff push after a step or a roundoff."
+        },
+        {
+          "term": "tuck",
+          "meaning": "A rounded shape with the knees to the chest and the torso compact."
+        },
+        {
+          "term": "half twist",
+          "meaning": "A 180-degree turn on the vertical axis."
+        }
+      ],
+      "prereqNotes": {
+        "frontTuck": "The Front Tuck gives you the forward rotation and the timing to open.",
+        "backTuck": "The Back Tuck trains you to be upside down and to control your air awareness."
+      }
+    }
+  },
+  "arabianScissorHyperhook": {
+    "es": "Es un Arabian Scissor que termina en hyperhook. La media vuelta inicial lleva a una tijera y la pierna engancha antes de aterrizar.",
+    "en": "It is an Arabian Scissor that finishes in a hyperhook. The early half twist leads to a scissor and the leg hooks before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Arabian Scissor con un enganche final. La tijera abre las piernas y una de ellas sigue hasta el hyperhook.",
+      "before": {
+        "prerequisites": "Necesitas el Full Hyperhook y el Arabian Scissor. El primero te da el enganche y el segundo la entrada con tijera.",
+        "space": "Colchoneta amplia. Es un truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada con paso y pique hacia adelante, como en el Arabian.",
+        "legs": "Las piernas se abren en tijera durante la rotacion y una sigue hasta el enganche.",
+        "arms": "Los brazos ayudan a la media vuelta y se abren para equilibrar la tijera.",
+        "gaze": "Mira al frente al despegar, luego busca el piso y el punto de la patada.",
+        "torso": "El torso rota de frente y se abre al final para dejar pasar la pierna."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y el pique viajando hacia adelante."
+        },
+        {
+          "title": "Media vuelta con tijera",
+          "body": "Gira media vuelta temprano y abre las piernas en tijera mientras completas la rotacion."
+        },
+        {
+          "title": "Enganche",
+          "body": "Lleva una pierna extendida hacia el objetivo y engancha con el pie antes de bajar."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae sobre el pie de apoyo con la rodilla blanda y el pecho arriba."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada. Si el enganche te desequilibra, apoya la otra pierna para cerrar.",
+      "mistakes": [
+        "Abrir la tijera cuando ya estas bajando.",
+        "Enganchar con la rodilla doblada.",
+        "Perder la media vuelta por buscar la patada.",
+        "Aterrizar de espaldas."
+      ],
+      "tips": [
+        "Practica el Arabian Scissor hasta aterrizar con control.",
+        "Despues marca solo el hyperhook en el aire.",
+        "Usa una cama elastica para unir la tijera y el enganche."
+      ],
+      "terms": [
+        {
+          "term": "scissor",
+          "meaning": "Tijera: las piernas se abren y se cruzan en el aire."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de enganche que termina con la pierna extendida y el pecho hacia atras."
+        },
+        {
+          "term": "hyper",
+          "meaning": "Postura de aterrizaje abierta, con el pecho atras y una pierna extendida."
+        }
+      ],
+      "prereqNotes": {
+        "fullHyperhook": "El Full Hyperhook te da la forma del enganche y la salida con el pecho atras.",
+        "arabianScissor": "El Arabian Scissor te da la entrada con media vuelta y la tijera en el aire."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an Arabian Scissor with a final hook. The scissor opens the legs and one of them keeps going into the hyperhook.",
+      "before": {
+        "prerequisites": "You need the Full Hyperhook and the Arabian Scissor. The first gives you the hook and the second gives you the scissor entry.",
+        "space": "A large mat. This is an advanced trick."
+      },
+      "body": {
+        "feet": "Enter with a step and a punch forward, as in the Arabian.",
+        "legs": "The legs open in a scissor during the rotation and one keeps going into the hook.",
+        "arms": "The arms help the half twist and open to balance the scissor.",
+        "gaze": "Look forward on takeoff, then find the floor and the target of the kick.",
+        "torso": "The torso rotates forward and opens at the end to let the leg pass."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and punch while traveling forward."
+        },
+        {
+          "title": "Half twist with a scissor",
+          "body": "Turn half a turn early and open the legs in a scissor as you finish the rotation."
+        },
+        {
+          "title": "Hook",
+          "body": "Send one extended leg toward the target and hook with the foot before coming down."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the support foot with a soft knee and the chest up."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee. If the hook pulls you off balance, touch down with the other leg to close.",
+      "mistakes": [
+        "Opening the scissor when you are already coming down.",
+        "Hooking with a bent knee.",
+        "Losing the half twist because you chase the kick.",
+        "Landing on your back."
+      ],
+      "tips": [
+        "Practice the Arabian Scissor until you land with control.",
+        "Then mark only the hyperhook in the air.",
+        "Use a trampoline to join the scissor and the hook."
+      ],
+      "terms": [
+        {
+          "term": "scissor",
+          "meaning": "A shape where the legs open and cross in the air."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hooking kick that ends with the leg extended and the chest leaning back."
+        },
+        {
+          "term": "hyper",
+          "meaning": "An open landing position with the chest back and one leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "fullHyperhook": "The Full Hyperhook gives you the hook shape and the exit with the chest back.",
+        "arabianScissor": "The Arabian Scissor gives you the half-twist entry and the scissor in the air."
+      }
+    }
+  },
+  "backtuck": {
+    "es": "Es el mortal hacia atras basico. Saltas con los dos pies, giras en el aire con el cuerpo redondeado y aterrizas de pie.",
+    "en": "It is the basic backward flip. You jump with both feet, turn in the air with a rounded body and land on your feet.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un mortal hacia atras con despegue de dos pies. La clave es subir primero y recoger las rodillas despues.",
+      "before": {
+        "prerequisites": "No necesitas un truco previo, pero conviene sentir el salto vertical y la caida con las rodillas blandas.",
+        "space": "Colchoneta blanda y amplia, con un companero o entrenador cerca."
+      },
+      "body": {
+        "feet": "Pies al ancho de los hombros, despegue con los dos pies y el peso en la parte delantera.",
+        "legs": "Empuja el piso, lleva las rodillas al pecho y mantenlas juntas.",
+        "arms": "Sube los brazos rectos al despegar y abrazate las espinillas para acelerar.",
+        "gaze": "Mira al frente o un poco arriba al despegar; no mires el piso hasta que veas el aterrizaje.",
+        "torso": "El torso sube primero y luego se redondea; no te eches hacia atras con el pecho."
+      },
+      "steps": [
+        {
+          "title": "Base y despegue",
+          "body": "Ponte con los pies al ancho de los hombros, flexiona un poco las rodillas y empuja el piso hacia arriba."
+        },
+        {
+          "title": "Subida",
+          "body": "Sube con el pecho y los brazos hacia arriba antes de empezar a girar."
+        },
+        {
+          "title": "Tuck",
+          "body": "Cuando estes en el aire, recoge las rodillas al pecho y abrazate las espinillas."
+        },
+        {
+          "title": "Apertura y caida",
+          "body": "Abre el cuerpo al ver el piso y baja con los dos pies."
+        }
+      ],
+      "landing": "Cae con la planta completa, las rodillas flexionadas y el pecho arriba. Absorbe el golpe y termina de pie.",
+      "mistakes": [
+        "Saltar hacia atras en vez de saltar hacia arriba.",
+        "Abrir el tuck demasiado pronto.",
+        "Mirar el piso durante toda la rotacion.",
+        "Aterrizar con las piernas rigidas."
+      ],
+      "tips": [
+        "Practica muchos saltos verticales antes de girar.",
+        "En una cama elastica, haz la forma del tuck sin girar y luego suma la rotacion.",
+        "Pide a alguien que te acompanie y graba el salto para revisar la altura."
+      ],
+      "terms": [
+        {
+          "term": "tuck",
+          "meaning": "Posicion redondeada con las rodillas al pecho y el torso compacto."
+        },
+        {
+          "term": "spot",
+          "meaning": "Punto fijo al que miras para orientarte en el aire."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backward flip with a two-foot takeoff. The key is to rise first and pull the knees in after.",
+      "before": {
+        "prerequisites": "You do not need a previous trick, but you should feel comfortable with a vertical jump and a soft-knee landing.",
+        "space": "A large, soft mat with a partner or coach nearby."
+      },
+      "body": {
+        "feet": "Feet shoulder-width apart, take off from both feet with the weight on the front of the feet.",
+        "legs": "Push the floor, pull the knees to the chest and keep them together.",
+        "arms": "Raise the arms straight on takeoff and hug your shins to speed up.",
+        "gaze": "Look forward or slightly up on takeoff; do not look at the floor until you see the landing.",
+        "torso": "The torso rises first and then rounds; do not throw the chest backward."
+      },
+      "steps": [
+        {
+          "title": "Stance and takeoff",
+          "body": "Stand with the feet shoulder-width apart, bend the knees a little and push the floor upward."
+        },
+        {
+          "title": "Rise",
+          "body": "Rise with the chest and arms up before you start turning."
+        },
+        {
+          "title": "Tuck",
+          "body": "Once in the air, pull the knees to the chest and hug your shins."
+        },
+        {
+          "title": "Open and land",
+          "body": "Open the body when you see the floor and come down on both feet."
+        }
+      ],
+      "landing": "Land with the whole foot, bent knees and the chest up. Absorb the impact and finish standing.",
+      "mistakes": [
+        "Jumping backward instead of jumping up.",
+        "Opening the tuck too early.",
+        "Looking at the floor during the whole rotation.",
+        "Landing with stiff legs."
+      ],
+      "tips": [
+        "Practice plenty of vertical jumps before you add rotation.",
+        "On a trampoline, make the tuck shape without turning and then add the rotation.",
+        "Ask someone to stay close and record the jump so you can check the height."
+      ],
+      "terms": [
+        {
+          "term": "tuck",
+          "meaning": "A rounded shape with the knees to the chest and the torso compact."
+        },
+        {
+          "term": "spot",
+          "meaning": "A fixed point you look at to stay oriented in the air."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "backwardRoll": {
+    "es": "Es una vuelta hacia atras sobre los hombros que termina de pie. Sirve para aprender a rodar y a controlar el cuerpo cerca del piso.",
+    "en": "It is a backward roll over the shoulders that finishes on your feet. It teaches you to roll and control your body close to the floor.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una vuelta hacia atras con las manos al lado de la cabeza. Ruedas sobre los hombros y empujas el piso para levantarte.",
+      "before": {
+        "prerequisites": "No necesitas un truco previo. Conviene poder sentarte en cuclillas y rodar sin miedo.",
+        "space": "Una colchoneta blanda y plana, con espacio libre alrededor."
+      },
+      "body": {
+        "feet": "Empieza en cuclillas con los pies juntos y el peso adelante.",
+        "legs": "Manten las rodillas flexionadas y pegadas al pecho durante la vuelta.",
+        "arms": "Manos al lado de la cabeza con las palmas hacia arriba; empujan el piso al final.",
+        "gaze": "Mira el pecho al empezar y manten la cabeza metida durante la vuelta.",
+        "torso": "Redondea la espalda y rueda sobre los hombros, nunca sobre la nuca."
+      },
+      "steps": [
+        {
+          "title": "Cuclillas y menton",
+          "body": "Ponte en cuclillas, mete el menton al pecho y lleva las manos al lado de la cabeza."
+        },
+        {
+          "title": "Rodar",
+          "body": "Dejate caer hacia atras y rueda sobre los hombros altos, manteniendo el cuerpo redondeado."
+        },
+        {
+          "title": "Empujar",
+          "body": "Cuando las caderas pasen sobre la cabeza, empuja el piso con las manos."
+        },
+        {
+          "title": "Levantarse",
+          "body": "Lleva los pies debajo del cuerpo y termina de pie."
+        }
+      ],
+      "landing": "Termina sobre la punta de los pies, con las rodillas flexionadas y el pecho arriba. No dejes caer el peso hacia atras.",
+      "mistakes": [
+        "Rodar sobre la nuca en vez de sobre los hombros.",
+        "Soltar las manos y no empujar el piso.",
+        "Abrir las piernas durante la vuelta.",
+        "Levantarse con el pecho abajo."
+      ],
+      "tips": [
+        "Practica la vuelta despacio en una colchoneta blanda.",
+        "Marca el empujon de manos antes de intentar levantarte sin impulso.",
+        "Mira un punto al frente al terminar para no caer hacia atras."
+      ],
+      "terms": [
+        {
+          "term": "vuelta sobre los hombros",
+          "meaning": "Rodar por la espalda alta sin apoyar la cabeza en el piso."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backward roll with the hands beside the head. You roll over the shoulders and push the floor to stand up.",
+      "before": {
+        "prerequisites": "You do not need a previous trick. It helps to be able to sit in a squat and roll without fear.",
+        "space": "A soft, flat mat with free space around it."
+      },
+      "body": {
+        "feet": "Start in a squat with the feet together and the weight forward.",
+        "legs": "Keep the knees bent and close to the chest during the roll.",
+        "arms": "Hands beside the head with the palms up; they push the floor at the end.",
+        "gaze": "Look at your chest at the start and keep the head tucked during the roll.",
+        "torso": "Round the back and roll over the shoulders, never over the neck."
+      },
+      "steps": [
+        {
+          "title": "Squat and chin tuck",
+          "body": "Squat down, tuck your chin to your chest and bring the hands beside your head."
+        },
+        {
+          "title": "Roll",
+          "body": "Sit back and roll over the upper shoulders, keeping the body rounded."
+        },
+        {
+          "title": "Push",
+          "body": "When the hips pass over the head, push the floor with the hands."
+        },
+        {
+          "title": "Stand up",
+          "body": "Bring the feet under the body and finish standing."
+        }
+      ],
+      "landing": "Finish on the balls of the feet with bent knees and the chest up. Do not let the weight fall backward.",
+      "mistakes": [
+        "Rolling over the neck instead of the shoulders.",
+        "Letting go of the hands and not pushing the floor.",
+        "Opening the legs during the roll.",
+        "Standing up with the chest down."
+      ],
+      "tips": [
+        "Practice the roll slowly on a soft mat.",
+        "Mark the hand push before you try to stand without momentum.",
+        "Look at a point in front as you finish so you do not fall backward."
+      ],
+      "terms": [
+        {
+          "term": "shoulder roll",
+          "meaning": "Rolling over the upper back without putting the head on the floor."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "corkscrewCrowdAwakener": {
+    "es": "Es un Corkscrew que termina con un crowd awakener, una patada abierta y baja antes de aterrizar.",
+    "en": "It is a Corkscrew that finishes with a crowd awakener, an open low kick before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Corkscrew con una patada abierta al final. El giro completo se remata con un split antes de caer.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew. El Corkscrew te da el giro completo y la salida.",
+        "space": "Colchoneta amplia, con espacio libre al frente."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las piernas se recogen para el giro y al final se abren en split.",
+        "arms": "Los brazos ayudan a girar y se abren al final para el split.",
+        "gaze": "Mira por encima del hombro durante el giro y el objetivo al patear.",
+        "torso": "El torso gira agrupado y se abre en el remate."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie para arrancar el Corkscrew."
+        },
+        {
+          "title": "Giro",
+          "body": "Completa el giro completo con el cuerpo agrupado."
+        },
+        {
+          "title": "Crowd awakener",
+          "body": "Al final del giro, abre las dos piernas en una patada baja y amplia."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cierra las piernas y cae de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el split te frena, abre menos las piernas.",
+      "mistakes": [
+        "Abrir el split antes de completar el giro.",
+        "No completar el Corkscrew.",
+        "Mirar el piso durante el giro.",
+        "Caer con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Corkscrew hasta aterrizar con control.",
+        "Marca el split en el aire antes de unirlo al giro.",
+        "Usa una cama elastica para sentir el remate."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "Mortal atras con giro completo, con el cuerpo mas horizontal que en un Full Twist."
+        },
+        {
+          "term": "crowd awakener",
+          "meaning": "Patada abierta y baja que se lanza al final para rematar el truco."
+        },
+        {
+          "term": "split",
+          "meaning": "Apertura de las piernas hacia los lados."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "El Corkscrew te da el giro completo y la altura para rematar con el split."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Corkscrew with an open kick at the end. The full turn is finished with a split before landing.",
+      "before": {
+        "prerequisites": "You need the Corkscrew. The Corkscrew gives you the full turn and the exit.",
+        "space": "A large mat with free space in front."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The legs tuck for the turn and open in a split at the end.",
+        "arms": "The arms help you turn and open at the end for the split.",
+        "gaze": "Look over the shoulder during the turn and at the target when you kick.",
+        "torso": "The torso turns tucked and opens on the finish."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and leave the floor from one foot to start the Corkscrew."
+        },
+        {
+          "title": "Turn",
+          "body": "Complete the full turn with the body tucked."
+        },
+        {
+          "title": "Crowd awakener",
+          "body": "At the end of the turn, open both legs in a low, wide kick."
+        },
+        {
+          "title": "Landing",
+          "body": "Close the legs and land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the split slows you down, open the legs less.",
+      "mistakes": [
+        "Opening the split before the turn is complete.",
+        "Not finishing the Corkscrew.",
+        "Looking at the floor during the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Corkscrew until you land with control.",
+        "Mark the split in the air before adding it to the turn.",
+        "Use a trampoline to feel the finish."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "A backward flip with a full turn, more horizontal than a Full Twist."
+        },
+        {
+          "term": "crowd awakener",
+          "meaning": "An open, low kick thrown at the end to finish the trick."
+        },
+        {
+          "term": "split",
+          "meaning": "Opening the legs to the sides."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "The Corkscrew gives you the full turn and the height to finish with the split."
+      }
+    }
+  },
+  "corkscrewDoublelegLateRound": {
+    "es": "Es un Corkscrew Doubleleg que termina con una patada circular tardia. El giro y las dos piernas se completan antes del remate.",
+    "en": "It is a Corkscrew Doubleleg that finishes with a late round kick. The turn and both legs finish before the strike.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Corkscrew Doubleleg con una patada circular al final. La salida de dos piernas se cambia por un remate circular.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew y el Corkscrew Doubleleg. El primero te da el giro y el segundo la salida con las dos piernas.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las dos piernas se extienden para el doubleleg y una remata en patada circular.",
+        "arms": "Los brazos ayudan al giro y acompasan el remate.",
+        "gaze": "Mira por encima del hombro y busca el objetivo al final.",
+        "torso": "El torso gira agrupado y se abre en el remate."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie para arrancar el Corkscrew."
+        },
+        {
+          "title": "Doubleleg",
+          "body": "Completa el giro y extiende las dos piernas al frente."
+        },
+        {
+          "title": "Late round",
+          "body": "En la ultima parte de la caida, lanza una pierna en patada circular."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con la rodilla blanda y el pecho arriba."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada. Si la patada te desequilibra, apoya la otra pierna.",
+      "mistakes": [
+        "Lanzar la patada antes de terminar el giro.",
+        "Extender las piernas demasiado tarde.",
+        "Mirar el piso.",
+        "Caer con el pecho abajo."
+      ],
+      "tips": [
+        "Domina el Corkscrew Doubleleg antes de sumar la patada.",
+        "Practica la patada tardia sola, al final de un salto.",
+        "Une las partes cuando el giro sea estable."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "Mortal atras con giro completo, con el cuerpo mas horizontal que en un Full Twist."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "Salida con las dos piernas extendidas al frente."
+        },
+        {
+          "term": "late round",
+          "meaning": "Patada circular que se lanza al final de la caida, cuando el giro casi termino."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "El Corkscrew te da el giro completo y la altura del salto.",
+        "corkscrewDoubleleg": "El Corkscrew Doubleleg te da la salida con las dos piernas y el control de la caida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Corkscrew Doubleleg with a late circular kick. The two-leg exit is replaced by a late strike.",
+      "before": {
+        "prerequisites": "You need the Corkscrew and the Corkscrew Doubleleg. The first gives you the turn and the second the two-leg exit.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "Both legs extend for the doubleleg and one finishes with a round kick.",
+        "arms": "The arms help the turn and follow the strike.",
+        "gaze": "Look over the shoulder and find the target at the end.",
+        "torso": "The torso turns tucked and opens on the strike."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and leave the floor from one foot to start the Corkscrew."
+        },
+        {
+          "title": "Doubleleg",
+          "body": "Complete the turn and extend both legs forward."
+        },
+        {
+          "title": "Late round",
+          "body": "In the last part of the fall, throw one leg in a round kick."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with a soft knee and the chest up."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee. If the kick pulls you off balance, touch down with the other leg.",
+      "mistakes": [
+        "Throwing the kick before the turn is complete.",
+        "Extending the legs too late.",
+        "Looking at the floor.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Master the Corkscrew Doubleleg before adding the kick.",
+        "Practice the late kick alone at the end of a jump.",
+        "Join the parts when the turn is stable."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "A backward flip with a full turn, more horizontal than a Full Twist."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "An exit with both legs extended forward."
+        },
+        {
+          "term": "late round",
+          "meaning": "A round kick thrown at the end of the fall, when the turn is almost done."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "The Corkscrew gives you the full turn and the jump height.",
+        "corkscrewDoubleleg": "The Corkscrew Doubleleg gives you the two-leg exit and control of the landing."
+      }
+    }
+  },
+  "corkscrewRound": {
+    "es": "Es un Corkscrew que termina con una patada circular antes de aterrizar. El giro se convierte en un remate redondo.",
+    "en": "It is a Corkscrew that ends in a round kick before landing. The turn becomes a circular strike.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Corkscrew con una patada circular al final. Se puede ver como un Swing 900 invertido.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew. Te da el giro completo y la salida para rematar.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las piernas se recogen para el giro y una se extiende en arco circular al final.",
+        "arms": "Los brazos abren el giro y acompanan la patada.",
+        "gaze": "Mira por encima del hombro y busca el objetivo al patear.",
+        "torso": "El torso gira agrupado y se abre en el remate."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Giro",
+          "body": "Completa el Corkscrew con el cuerpo agrupado."
+        },
+        {
+          "title": "Patada circular",
+          "body": "Extiende una pierna y describe un arco circular hacia el objetivo."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas y el pecho arriba."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho arriba.",
+      "mistakes": [
+        "Lanzar la patada antes de completar el giro.",
+        "Patear con la rodilla doblada.",
+        "Mirar el piso.",
+        "Caer con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Corkscrew hasta que el giro sea estable.",
+        "Marca la patada circular en el aire antes de unirla.",
+        "Usa una cama elastica para el remate."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "Mortal atras con giro completo, con el cuerpo mas horizontal que en un Full Twist."
+        },
+        {
+          "term": "round kick",
+          "meaning": "Patada que describe un arco circular con la pierna extendida."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "El Corkscrew te da el giro completo y la altura para lanzar la patada al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Corkscrew with a round kick at the end. It can be seen as an inverted Swing 900.",
+      "before": {
+        "prerequisites": "You need the Corkscrew. It gives you the full turn and the exit for the strike.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The legs tuck for the turn and one extends in a circular arc at the end.",
+        "arms": "The arms open the turn and follow the kick.",
+        "gaze": "Look over the shoulder and find the target when you kick.",
+        "torso": "The torso turns tucked and opens on the strike."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Turn",
+          "body": "Complete the Corkscrew with the body tucked."
+        },
+        {
+          "title": "Round kick",
+          "body": "Extend one leg and draw a circular arc toward the target."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees and the chest up."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest up.",
+      "mistakes": [
+        "Throwing the kick before the turn is complete.",
+        "Kicking with a bent knee.",
+        "Looking at the floor.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Corkscrew until the turn is stable.",
+        "Mark the round kick in the air before joining it.",
+        "Use a trampoline for the finish."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "A backward flip with a full turn, more horizontal than a Full Twist."
+        },
+        {
+          "term": "round kick",
+          "meaning": "A kick that draws a circular arc with the leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "The Corkscrew gives you the full turn and the height to throw the kick at the end."
+      }
+    }
+  },
+  "corkscrewSnapuHyper": {
+    "es": "Es un Corkscrew Snapu que aterriza en hyper. El giro pasa por el hombro y la pierna enganchada sale extendida.",
+    "en": "It is a Corkscrew Snapu that lands in hyper. The turn passes over the shoulder and the hooking leg swings out extended.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Corkscrew Snapu con salida hyper. El cuerpo se inclina atras y la pierna engancha antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew Snapu. Te da el giro, el enganche y la inclinacion del cuerpo.",
+        "space": "Colchoneta amplia. Es un truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "La pierna de enganche sale extendida y la otra se recoge para aterrizar.",
+        "arms": "Los brazos abren el giro y ayudan a mantener el pecho atras.",
+        "gaze": "Mira por encima del hombro y busca el horizonte al aterrizar.",
+        "torso": "El torso gira agrupado y se inclina hacia atras en la salida."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Giro y enganche",
+          "body": "Completa el giro y lanza la pierna en un enganche extendido."
+        },
+        {
+          "title": "Salida hyper",
+          "body": "Inclina el pecho hacia atras y manten la pierna de enganche extendida."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cae sobre el pie de apoyo con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho atras. Si pierdes el equilibrio, da un paso para recuperarlo.",
+      "mistakes": [
+        "Doblar la rodilla en el enganche.",
+        "No completar el giro.",
+        "Perder la inclinacion hacia atras.",
+        "Mirar el piso al aterrizar."
+      ],
+      "tips": [
+        "Practica el Corkscrew Snapu hasta que el enganche sea estable.",
+        "Marca la salida hyper sin giro para sentir el pecho atras.",
+        "Usa una cama elastica para unir las partes."
+      ],
+      "terms": [
+        {
+          "term": "snapu",
+          "meaning": "Patada de gancho con giro y el cuerpo inclinado hacia atras."
+        },
+        {
+          "term": "hyper",
+          "meaning": "Postura de aterrizaje abierta, con el pecho atras y una pierna extendida."
+        },
+        {
+          "term": "corkscrew",
+          "meaning": "Mortal atras con giro completo, con el cuerpo mas horizontal que en un Full Twist."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewSnapu": "El Corkscrew Snapu te da el giro, el enganche y la inclinacion que necesita la salida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Corkscrew Snapu with a hyper exit. The body leans back and the hooking leg swings out before landing.",
+      "before": {
+        "prerequisites": "You need the Corkscrew Snapu. It gives you the turn, the hook and the body lean.",
+        "space": "A large mat. This is an advanced trick."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The hooking leg swings out extended and the other tucks to land.",
+        "arms": "The arms open the turn and help keep the chest back.",
+        "gaze": "Look over the shoulder and find the horizon on landing.",
+        "torso": "The torso turns tucked and leans back on the exit."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Turn and hook",
+          "body": "Complete the turn and swing the leg out in an extended hook."
+        },
+        {
+          "title": "Hyper exit",
+          "body": "Lean the chest back and keep the hooking leg extended."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the support foot with a soft knee."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest back. If you lose balance, take a step to recover.",
+      "mistakes": [
+        "Bending the knee on the hook.",
+        "Not completing the turn.",
+        "Losing the backward lean.",
+        "Looking at the floor on landing."
+      ],
+      "tips": [
+        "Practice the Corkscrew Snapu until the hook is stable.",
+        "Mark the hyper exit without the turn to feel the chest back.",
+        "Use a trampoline to join the parts."
+      ],
+      "terms": [
+        {
+          "term": "snapu",
+          "meaning": "A hooking kick with a turn and the body leaning back."
+        },
+        {
+          "term": "hyper",
+          "meaning": "An open landing position with the chest back and one leg extended."
+        },
+        {
+          "term": "corkscrew",
+          "meaning": "A backward flip with a full turn, more horizontal than a Full Twist."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewSnapu": "The Corkscrew Snapu gives you the turn, the hook and the lean that the exit needs."
+      }
+    }
+  },
+  "donutBoy": {
+    "es": "Es un mortal hacia atras con un tuck muy redondo, como un aro. Las rodillas van al pecho y los brazos cierran el circulo.",
+    "en": "It is a backward flip with a very round tuck, like a ring. The knees go to the chest and the arms close the circle.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Back Tuck con forma de dona. La rotacion es muy redonda y se abre justo antes de aterrizar.",
+      "before": {
+        "prerequisites": "No necesitas un truco previo, pero ayuda tener un Back Tuck estable.",
+        "space": "Colchoneta blanda y amplia."
+      },
+      "body": {
+        "feet": "Pies al ancho de los hombros y despegue con los dos pies.",
+        "legs": "Las rodillas suben al pecho y se quedan muy juntas durante la rotacion.",
+        "arms": "Los brazos rodean las piernas y cierran el circulo del donut.",
+        "gaze": "Mira al frente al despegar y busca el piso al final.",
+        "torso": "El torso se redondea mucho y se mantiene compacto."
+      },
+      "steps": [
+        {
+          "title": "Despegue",
+          "body": "Salta con los dos pies y sube el pecho."
+        },
+        {
+          "title": "Cierra el donut",
+          "body": "Lleva las rodillas al pecho y rodealas con los brazos para formar un circulo."
+        },
+        {
+          "title": "Gira",
+          "body": "Manten la forma redonda durante toda la rotacion."
+        },
+        {
+          "title": "Abre y aterriza",
+          "body": "Abre las piernas al ver el piso y cae con los dos pies."
+        }
+      ],
+      "landing": "Cae con las rodillas flexionadas y el pecho arriba. La forma redonda no debe impedirte abrir a tiempo.",
+      "mistakes": [
+        "Abrir el donut demasiado pronto.",
+        "Dejar los brazos sueltos y perder la forma.",
+        "Mirar el piso durante el giro.",
+        "Aterrizar con las piernas rigidas."
+      ],
+      "tips": [
+        "Practica la forma del donut en una cama elastica sin girar.",
+        "Gira despacio y revisa que las rodillas queden al pecho.",
+        "Une la rotacion cuando la forma se sienta comoda."
+      ],
+      "terms": [
+        {
+          "term": "donut boy",
+          "meaning": "Mortal atras con un tuck tan redondo que el cuerpo parece un aro."
+        },
+        {
+          "term": "tuck",
+          "meaning": "Posicion redondeada con las rodillas al pecho y el torso compacto."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Back Tuck with a donut shape. The rotation is very round and opens just before landing.",
+      "before": {
+        "prerequisites": "You do not need a previous trick, but a stable Back Tuck helps.",
+        "space": "A large, soft mat."
+      },
+      "body": {
+        "feet": "Feet shoulder-width apart and take off from both feet.",
+        "legs": "The knees come to the chest and stay close together during the rotation.",
+        "arms": "The arms wrap around the legs and close the donut circle.",
+        "gaze": "Look forward on takeoff and find the floor at the end.",
+        "torso": "The torso rounds a lot and stays compact."
+      },
+      "steps": [
+        {
+          "title": "Takeoff",
+          "body": "Jump from both feet and lift the chest."
+        },
+        {
+          "title": "Close the donut",
+          "body": "Bring the knees to the chest and wrap the arms around them to make a circle."
+        },
+        {
+          "title": "Turn",
+          "body": "Keep the round shape through the whole rotation."
+        },
+        {
+          "title": "Open and land",
+          "body": "Open the legs when you see the floor and land on both feet."
+        }
+      ],
+      "landing": "Land with bent knees and the chest up. The round shape must not stop you from opening in time.",
+      "mistakes": [
+        "Opening the donut too early.",
+        "Leaving the arms loose and losing the shape.",
+        "Looking at the floor during the turn.",
+        "Landing with stiff legs."
+      ],
+      "tips": [
+        "Practice the donut shape on a trampoline without turning.",
+        "Turn slowly and check that the knees stay at the chest.",
+        "Add the rotation when the shape feels comfortable."
+      ],
+      "terms": [
+        {
+          "term": "donut boy",
+          "meaning": "A backward flip with a tuck so round that the body looks like a ring."
+        },
+        {
+          "term": "tuck",
+          "meaning": "A rounded shape with the knees to the chest and the torso compact."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "doubleCorkscrewDoublelegTwist": {
+    "es": "Es un Double Corkscrew Doubleleg con un giro extra, por lo que cuenta como variante de Triple Corkscrew.",
+    "en": "It is a Double Corkscrew Doubleleg with an extra twist, which makes it a Triple Corkscrew variation.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble corkscrew con las piernas recogidas y un giro adicional. La rotacion total es muy alta.",
+      "before": {
+        "prerequisites": "Necesitas el Triple Corkscrew y el Double Corkscrew Doubleleg. El primero te da la rotacion y el segundo la salida con las dos piernas.",
+        "space": "Cama elastica o colchoneta de alto rendimiento, con supervision."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "Las dos piernas se recogen para el doble giro y se extienden para el doubleleg.",
+        "arms": "Los brazos se pegan al cuerpo para acelerar la rotacion y se abren al final.",
+        "gaze": "La mirada busca un punto fijo al final de cada giro y el piso al abrir.",
+        "torso": "El torso se mantiene agrupado y gira como un tornillo."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie con mucha altura."
+        },
+        {
+          "title": "Doble corkscrew",
+          "body": "Completa los dos giros con las piernas recogidas."
+        },
+        {
+          "title": "Giro extra y doubleleg",
+          "body": "Suma el giro adicional y extiende las dos piernas al frente."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae con las rodillas flexionadas y el pecho arriba. Si la rotacion se queda corta, no bloquees las piernas.",
+      "mistakes": [
+        "Perder el eje durante los giros.",
+        "Abrir las piernas antes de completar la rotacion.",
+        "No tener altura suficiente.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Triple Corkscrew hasta aterrizar con control.",
+        "Trabaja el Double Corkscrew Doubleleg por separado.",
+        "Une las partes solo con supervision y en una superficie blanda."
+      ],
+      "terms": [
+        {
+          "term": "double corkscrew",
+          "meaning": "Dos giros completos dentro de un mortal atras."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "Salida con las dos piernas extendidas al frente."
+        },
+        {
+          "term": "triple corkscrew",
+          "meaning": "Tres giros completos dentro de un mortal atras."
+        }
+      ],
+      "prereqNotes": {
+        "tripleCorkscrew": "El Triple Corkscrew te da la rotacion y el eje para sumar el giro extra.",
+        "doubleCorkscrewDoubleleg": "El Double Corkscrew Doubleleg te da la salida con las dos piernas."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a double corkscrew with the legs tucked and an extra twist. The total rotation is very high.",
+      "before": {
+        "prerequisites": "You need the Triple Corkscrew and the Double Corkscrew Doubleleg. The first gives you the rotation and the second the two-leg exit.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "Both legs tuck for the double turn and extend for the doubleleg.",
+        "arms": "The arms stay close to the body to speed up the rotation and open at the end.",
+        "gaze": "The gaze finds a fixed point at the end of each turn and the floor when you open.",
+        "torso": "The torso stays tucked and turns like a screw."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot with plenty of height."
+        },
+        {
+          "title": "Double corkscrew",
+          "body": "Complete the two turns with the legs tucked."
+        },
+        {
+          "title": "Extra twist and doubleleg",
+          "body": "Add the extra twist and extend both legs forward."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land with bent knees and the chest up. If the rotation falls short, do not lock the legs.",
+      "mistakes": [
+        "Losing the axis during the turns.",
+        "Opening the legs before the rotation is complete.",
+        "Not having enough height.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Triple Corkscrew until you land with control.",
+        "Work the Double Corkscrew Doubleleg on its own.",
+        "Join the parts only with supervision and on a soft surface."
+      ],
+      "terms": [
+        {
+          "term": "double corkscrew",
+          "meaning": "Two full turns inside a backward flip."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "An exit with both legs extended forward."
+        },
+        {
+          "term": "triple corkscrew",
+          "meaning": "Three full turns inside a backward flip."
+        }
+      ],
+      "prereqNotes": {
+        "tripleCorkscrew": "The Triple Corkscrew gives you the rotation and the axis for the extra twist.",
+        "doubleCorkscrewDoubleleg": "The Double Corkscrew Doubleleg gives you the two-leg exit."
+      }
+    }
+  }
+}

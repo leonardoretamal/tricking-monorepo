@@ -1,0 +1,2446 @@
+{
+  "arabianHalf": {
+    "es": "Es un Arabian con media vuelta extra. Sales de espaldas: el cuerpo empieza de frente, gira y termina mirando hacia atrás.",
+    "en": "It is an Arabian with a half turn added. You come out backward: the body starts facing forward, turns, and finishes looking backward.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Arabian (mortal de frente que sale de espaldas) al que se le suma media vuelta. El giro se reparte y la salida queda de espaldas.",
+      "before": {
+        "prerequisites": "Necesitas el Arabian y el Full Twist. El Arabian te da el mortal de frente; el Full Twist te da el control del giro completo.",
+        "space": "Colchoneta amplia o cama elástica. Es un truco de rotación, no lo intentes en piso duro sin supervisión."
+      },
+      "body": {
+        "feet": "Entrada corriendo o con pique. El pie de pateo queda atrás y el peso pasa por la pierna de impulso.",
+        "legs": "Las piernas suben juntas para el mortal de frente; al final se abren un poco para recibir la media vuelta.",
+        "arms": "Los brazos suben para armar el salto y luego se recogen cerca del pecho para ayudar a girar.",
+        "gaze": "Mira al frente al entrar y busca el piso por encima del hombro durante el giro.",
+        "torso": "El torso viaja hacia adelante y gira; al final se endereza para caer de espaldas."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Corre o da un pique hacia adelante y sube con el pecho alto. Las dos piernas despegan juntas."
+        },
+        {
+          "title": "Mortal de frente",
+          "body": "Arranca la rotación hacia adelante agrupando las piernas contra el pecho."
+        },
+        {
+          "title": "Suma la media vuelta",
+          "body": "Al terminar el mortal, deja que la cadera siga girando media vuelta más antes de abrir el cuerpo."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre las piernas, busca el piso y baja con las rodillas blandas quedando de espaldas."
+        }
+      ],
+      "landing": "Cae sobre los dos pies con las rodillas flexionadas y el pecho arriba. La mirada queda al frente, aunque el cuerpo mire hacia atrás.",
+      "mistakes": [
+        "Agrupar demasiado y quedarte corto en la media vuelta.",
+        "Abrir el cuerpo antes de completar el giro y caer de lado.",
+        "Mirar el piso en la entrada en vez del frente."
+      ],
+      "tips": [
+        "Practica el Arabian normal hasta que la salida de espaldas sea cómoda.",
+        "Después suma el giro poco a poco, contando la media vuelta en voz alta.",
+        "Usa una cama elástica para sentir la rotación extra sin miedo a la caída."
+      ],
+      "terms": [
+        {
+          "term": "arabian",
+          "meaning": "Mortal de frente que despega de espaldas y aterriza de espaldas, con media vuelta en el aire."
+        },
+        {
+          "term": "full twist",
+          "meaning": "Giro completo de 360 grados sobre el eje del cuerpo."
+        },
+        {
+          "term": "medio giro",
+          "meaning": "Media vuelta, 180 grados de rotación."
+        }
+      ],
+      "prereqNotes": {
+        "arabian": "El Arabian te da el mortal de frente y la salida de espaldas sobre la que se suma el giro.",
+        "fullTwist": "El Full Twist te da el control de la rotación completa, para que la media vuelta extra no desarme el cuerpo."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an Arabian (a front flip that exits backward) with a half turn added. The twist is spread out and the exit stays backward.",
+      "before": {
+        "prerequisites": "You need the Arabian and the Full Twist. The Arabian gives you the front flip; the Full Twist gives you control of the full rotation.",
+        "space": "A large mat or a trampoline. This is a rotation trick, do not try it on hard floor without supervision."
+      },
+      "body": {
+        "feet": "Enter running or with a punch. The kicking foot stays back and the weight passes through the takeoff leg.",
+        "legs": "The legs rise together for the front flip; at the end they open slightly to receive the half turn.",
+        "arms": "The arms rise to set the jump and then tuck near the chest to help the turn.",
+        "gaze": "Look forward on the entry and find the floor over the shoulder during the turn.",
+        "torso": "The torso travels forward and turns; at the end it straightens to land backward."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Run or punch forward and rise with the chest tall. Both legs leave the ground together."
+        },
+        {
+          "title": "Front flip",
+          "body": "Start the forward rotation, tucking the legs to the chest."
+        },
+        {
+          "title": "Add the half turn",
+          "body": "As the flip finishes, let the hips keep turning half a turn more before you open the body."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the legs, find the floor and come down with soft knees, finishing backward."
+        }
+      ],
+      "landing": "Land on both feet with bent knees and the chest up. Your gaze faces forward even though the body faces backward.",
+      "mistakes": [
+        "Tucking too tight and falling short on the half turn.",
+        "Opening the body before the turn is complete and landing sideways.",
+        "Looking at the floor on the entry instead of forward."
+      ],
+      "tips": [
+        "Practice the normal Arabian until the backward exit feels comfortable.",
+        "Then add the turn little by little, counting the half turn out loud.",
+        "Use a trampoline to feel the extra rotation without fear of the landing."
+      ],
+      "terms": [
+        {
+          "term": "arabian",
+          "meaning": "A front flip that takes off backward and lands backward, with a half turn in the air."
+        },
+        {
+          "term": "full twist",
+          "meaning": "A full 360-degree turn around the body axis."
+        },
+        {
+          "term": "half turn",
+          "meaning": "A half rotation, 180 degrees."
+        }
+      ],
+      "prereqNotes": {
+        "arabian": "The Arabian gives you the front flip and the backward exit that the extra turn builds on.",
+        "fullTwist": "The Full Twist gives you control of the full rotation so the extra half turn does not break your body position."
+      }
+    }
+  },
+  "arabianUnhalfInBackOut": {
+    "es": "Es un Arabian que desenrolla la media vuelta hacia el otro lado y suma un backflip. Son dos mortales encadenados con los giros repartidos.",
+    "en": "It is an Arabian that unwinds the half turn the other way and adds a backflip. Two flips are chained with the turns split between them.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Arabian que entra con media vuelta hacia adentro y saca el resto del giro hacia atrás. La cadera separa las dos medias vueltas alrededor del mortal.",
+      "before": {
+        "prerequisites": "Necesitas el Arabian. El Arabian te da el mortal de frente con su media vuelta; acá separas ese giro en dos tramos.",
+        "space": "Colchoneta amplia o cama elástica. Es un truco de rotación doble, con supervisión."
+      },
+      "body": {
+        "feet": "Entrada con pique. El pie de impulso carga el salto y las piernas despegan juntas.",
+        "legs": "Las piernas se agrupan para el primer mortal y se vuelven a agrupar para el segundo.",
+        "arms": "Los brazos suben para el salto y se recogen cerca del torso para sostener las dos rotaciones.",
+        "gaze": "Mira al frente al entrar y busca el piso sobre el hombro al salir del segundo mortal.",
+        "torso": "El torso viaja hacia adelante y se mantiene agrupado entre los dos mortales."
+      },
+      "steps": [
+        {
+          "title": "Entrada con media vuelta adentro",
+          "body": "Da el pique y arranca el mortal de frente girando media vuelta hacia adentro."
+        },
+        {
+          "title": "Primer mortal",
+          "body": "Completa la rotación agrupando las piernas contra el pecho."
+        },
+        {
+          "title": "Backflip de salida",
+          "body": "Encadena un segundo mortal hacia atrás mientras el giro restante sale en la salida."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre las piernas y baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae sobre los dos pies con las rodillas flexionadas y el pecho arriba. Si la cadena se corta, es mejor aterrizar seguro que forzar la segunda rotación.",
+      "mistakes": [
+        "Perder la cadera entre los dos mortales.",
+        "Girar todo de una vez en vez de repartir las medias vueltas.",
+        "Mirar el piso y perder la orientación."
+      ],
+      "tips": [
+        "Entrena el segundo mortal (backflip) por separado hasta dominarlo.",
+        "Después practica el Arabian y marca la media vuelta como una pausa.",
+        "Usa una cama elástica para encadenar las dos rotaciones."
+      ],
+      "terms": [
+        {
+          "term": "unhalf",
+          "meaning": "Media vuelta que se desenrolla en el sentido opuesto a la entrada."
+        },
+        {
+          "term": "back out",
+          "meaning": "Salida con un mortal hacia atrás al final del truco."
+        }
+      ],
+      "prereqNotes": {
+        "arabian": "El Arabian te da el mortal de frente y la media vuelta; acá repartes ese giro en dos tramos."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is an Arabian that enters with a half turn inward and brings the rest of the turn back on the way out. The hips split the two half turns around the flip.",
+      "before": {
+        "prerequisites": "You need the Arabian. The Arabian gives you the front flip with its half turn; here you split that turn into two parts.",
+        "space": "A large mat or a trampoline. This is a double-rotation trick, with supervision."
+      },
+      "body": {
+        "feet": "Enter with a punch. The takeoff leg loads the jump and the legs leave the ground together.",
+        "legs": "The legs tuck for the first flip and tuck again for the second.",
+        "arms": "The arms rise for the jump and tuck near the torso to support both rotations.",
+        "gaze": "Look forward on the entry and find the floor over the shoulder as you exit the second flip.",
+        "torso": "The torso travels forward and stays tucked between the two flips."
+      },
+      "steps": [
+        {
+          "title": "Entry with inward half turn",
+          "body": "Punch and start the front flip while turning a half turn inward."
+        },
+        {
+          "title": "First flip",
+          "body": "Complete the rotation, tucking the legs to the chest."
+        },
+        {
+          "title": "Backflip exit",
+          "body": "Chain a second flip backward while the rest of the turn comes out on the exit."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the legs and come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on both feet with bent knees and the chest up. If the chain breaks, a safe landing beats forcing the second rotation.",
+      "mistakes": [
+        "Losing the hips between the two flips.",
+        "Turning all at once instead of splitting the half turns.",
+        "Looking at the floor and losing orientation."
+      ],
+      "tips": [
+        "Train the second flip (the backflip) on its own until you own it.",
+        "Then practice the Arabian and mark the half turn like a pause.",
+        "Use a trampoline to chain the two rotations."
+      ],
+      "terms": [
+        {
+          "term": "unhalf",
+          "meaning": "A half turn that unwinds in the opposite direction of the entry."
+        },
+        {
+          "term": "back out",
+          "meaning": "An exit with a backward flip at the end of the trick."
+        }
+      ],
+      "prereqNotes": {
+        "arabian": "The Arabian gives you the front flip and the half turn; here you split that turn into two parts."
+      }
+    }
+  },
+  "backWalkover": {
+    "es": "Es un walkover hacia atrás: vas de un pie, pasas por el parado de manos y caes en un pie. Es de los trucos más fáciles para empezar.",
+    "en": "It is a backward walkover: you go from one foot, pass through a handstand and land on one foot. It is one of the easiest tricks to start with.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un walkover hacia atrás. Desde un pie llevas las manos al piso, pateas la pierna libre por encima y terminas de pie con el pecho arriba.",
+      "before": {
+        "prerequisites": "No necesitas otro truco del catálogo. Conviene saber hacer la vertical (parado de manos) aunque sea apoyado en una pared.",
+        "space": "Colchoneta o césped, un espacio libre de unos 3 pasos. Nada de piso duro al empezar."
+      },
+      "body": {
+        "feet": "Un pie adelante con el peso cargado y el otro listo para patear. El pie de apoyo empuja el piso.",
+        "legs": "La pierna libre sube estirada por encima de la cabeza; la de apoyo se estira cuando llegas al parado de manos.",
+        "arms": "Los brazos van atrás y llegan al piso con los codos firmes, luego empujan para devolverte de pie.",
+        "gaze": "Mira atrás, al lugar donde vas a apoyar las manos, y después al piso entre las manos.",
+        "torso": "El torso se arquea hacia atrás y pasa por la vertical, sin encogerse."
+      },
+      "steps": [
+        {
+          "title": "Prepara el pie",
+          "body": "Pon un pie adelante, carga el peso y lleva el pecho un poco atrás."
+        },
+        {
+          "title": "Manos al piso",
+          "body": "Baja las manos al piso detrás de ti y patea la pierna libre hacia arriba."
+        },
+        {
+          "title": "Parado de manos",
+          "body": "Pasa por la vertical con las piernas abiertas, una adelante y otra atrás."
+        },
+        {
+          "title": "Baja la primera pierna",
+          "body": "Deja caer la primera pierna al piso y empuja con las manos para volver a pararte."
+        }
+      ],
+      "landing": "Cae sobre un pie con la rodilla flexionada y el pecho arriba. La otra pierna baja después, lista para seguir.",
+      "mistakes": [
+        "Encoger el pecho y no llegar a la vertical.",
+        "Doblar los codos cuando las manos tocan el piso.",
+        "Patear la pierna hacia adelante en vez de hacia arriba."
+      ],
+      "tips": [
+        "Practica primero el parado de manos contra una pared.",
+        "Después haz el walkover bien lento, marcando cada fase.",
+        "Usa una colchoneta gruesa para perder el miedo a ir hacia atrás."
+      ],
+      "terms": [
+        {
+          "term": "walkover",
+          "meaning": "Pasar de un pie a otro por el parado de manos, sin dar una vuelta completa."
+        },
+        {
+          "term": "parado de manos",
+          "meaning": "Posición vertical apoyado en las manos, con el cuerpo estirado hacia arriba."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a backward walkover. From one foot you reach the hands to the floor, kick the free leg over and finish standing with the chest up.",
+      "before": {
+        "prerequisites": "You do not need another trick from the catalog. It helps to know a handstand, even against a wall.",
+        "space": "A mat or grass, a clear space of about 3 steps. Not hard floor at the start."
+      },
+      "body": {
+        "feet": "One foot forward with the weight loaded and the other ready to kick. The support foot pushes the floor.",
+        "legs": "The free leg rises straight above the head; the support leg extends when you reach the handstand.",
+        "arms": "The arms reach back to the floor with firm elbows, then push to bring you back up.",
+        "gaze": "Look back at the spot where your hands will land, then at the floor between the hands.",
+        "torso": "The torso arches back and passes through the vertical, without shrinking."
+      },
+      "steps": [
+        {
+          "title": "Set the foot",
+          "body": "Place one foot forward, load the weight and bring the chest slightly back."
+        },
+        {
+          "title": "Hands to the floor",
+          "body": "Lower the hands to the floor behind you and kick the free leg up."
+        },
+        {
+          "title": "Handstand",
+          "body": "Pass through the vertical with the legs split, one forward and one back."
+        },
+        {
+          "title": "Bring the first leg down",
+          "body": "Let the first leg drop to the floor and push with the hands to stand back up."
+        }
+      ],
+      "landing": "Land on one foot with the knee bent and the chest up. The other leg comes down next, ready to continue.",
+      "mistakes": [
+        "Shrinking the chest and never reaching the vertical.",
+        "Bending the elbows when the hands touch the floor.",
+        "Kicking the leg forward instead of up."
+      ],
+      "tips": [
+        "Practice the handstand against a wall first.",
+        "Then do the walkover very slowly, marking each phase.",
+        "Use a thick mat to lose the fear of going backward."
+      ],
+      "terms": [
+        {
+          "term": "walkover",
+          "meaning": "Moving from one foot to the other through a handstand, without a full rotation."
+        },
+        {
+          "term": "handstand",
+          "meaning": "A vertical position supported on the hands, with the body straight up."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "boxcutterTurbo": {
+    "es": "Es un Boxcutter que aterriza de frente sobre los dos pies. La patada es la misma, pero el giro se acelera al final y la salida es turbo.",
+    "en": "It is a Boxcutter that lands facing forward on both feet. The kick is the same, but the turn speeds up at the end and the exit is turbo.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un boxcutter en versión turbo, con el giro acelerado y tardío. El corte de la pierna llega al final de una rotación rápida y el aterrizaje absorbe el impulso.",
+      "before": {
+        "prerequisites": "Necesitas el Boxcutter. Primero domina la patada y el aterrizaje normal antes de cambiar la salida.",
+        "space": "Colchoneta amplia. El giro es rápido, conviene espacio para no chocar con nada."
+      },
+      "body": {
+        "feet": "Entrada con un paso y despegue de un pie. El pie de pateo queda atrás.",
+        "legs": "La pierna de pateo corta en diagonal; al final las dos piernas preparan la caída de frente.",
+        "arms": "El brazo contrario abre el giro y ayuda a acelerarlo; al final los dos brazos equilibran la caída.",
+        "gaze": "Mira el objetivo durante el corte y el horizonte al abrir la salida.",
+        "torso": "El torso se mantiene alto y firme para que el giro no se desarme."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da un paso corto y despega de un pie con el cuerpo listo para girar."
+        },
+        {
+          "title": "Corte del boxcutter",
+          "body": "Gira y corta el aire con la pierna en diagonal, como la hoja de un cuchillo."
+        },
+        {
+          "title": "Acelera el giro",
+          "body": "Deja que la rotación siga rápida y tardía hasta completar el corte."
+        },
+        {
+          "title": "Aterrizaje turbo",
+          "body": "Abre las dos piernas y cae de frente sobre los dos pies con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de frente sobre los dos pies, con las rodillas flexionadas y el pecho arriba. Absorbe el impulso dejando que las rodillas acompañen.",
+      "mistakes": [
+        "Frenar el giro antes del corte y quedarte a medio camino.",
+        "Caer en un solo pie por costumbre.",
+        "Aterrizar con las rodillas bloqueadas."
+      ],
+      "tips": [
+        "Practica la salida turbo sola, como un salto de dos pies.",
+        "Después sumale el corte del boxcutter.",
+        "Usa una colchoneta para sentir la caída de frente con el giro rápido."
+      ],
+      "terms": [
+        {
+          "term": "boxcutter",
+          "meaning": "Patada de giro en la que la pierna corta el aire en diagonal, como una hoja."
+        },
+        {
+          "term": "turbo",
+          "meaning": "Salida que aterriza de frente sobre las dos piernas."
+        },
+        {
+          "term": "frontside",
+          "meaning": "De frente, mirando hacia adelante al aterrizar."
+        }
+      ],
+      "prereqNotes": {
+        "boxcutter": "El Boxcutter te da la patada de corte y el giro; el Turbo solo cambia la salida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a boxcutter in the turbo version, with an accelerated late turn. The leg cut arrives at the end of a fast rotation and the landing absorbs the momentum.",
+      "before": {
+        "prerequisites": "You need the Boxcutter. First master the kick and the normal landing before changing the exit.",
+        "space": "A large mat. The turn is fast, so leave room so you do not hit anything."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot. The kicking foot stays back.",
+        "legs": "The kicking leg cuts on a diagonal; at the end both legs prepare the forward landing.",
+        "arms": "The opposite arm opens and speeds up the turn; at the end both arms balance the landing.",
+        "gaze": "Look at the target during the cut and at the horizon when you open the exit.",
+        "torso": "The torso stays tall and firm so the turn does not break down."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take a short step and take off from one foot with the body ready to turn."
+        },
+        {
+          "title": "Boxcutter cut",
+          "body": "Turn and cut the air with the leg on a diagonal, like the blade of a knife."
+        },
+        {
+          "title": "Speed up the turn",
+          "body": "Let the rotation stay fast and late until the cut is complete."
+        },
+        {
+          "title": "Turbo landing",
+          "body": "Open both legs and land facing forward on both feet with soft knees."
+        }
+      ],
+      "landing": "Land facing forward on both feet, with bent knees and the chest up. Absorb the momentum by letting the knees follow.",
+      "mistakes": [
+        "Braking the turn before the cut and getting stuck halfway.",
+        "Landing on one foot out of habit.",
+        "Landing with locked knees."
+      ],
+      "tips": [
+        "Practice the turbo exit alone, like a two-foot jump.",
+        "Then add the boxcutter cut.",
+        "Use a mat to feel the forward landing with the fast turn."
+      ],
+      "terms": [
+        {
+          "term": "boxcutter",
+          "meaning": "A spinning kick where the leg cuts the air on a diagonal, like a blade."
+        },
+        {
+          "term": "turbo",
+          "meaning": "An exit that lands facing forward on both legs."
+        },
+        {
+          "term": "frontside",
+          "meaning": "Facing forward when you land."
+        }
+      ],
+      "prereqNotes": {
+        "boxcutter": "The Boxcutter gives you the cutting kick and the turn; the Turbo only changes the exit."
+      }
+    }
+  },
+  "corkscrewCrowdAwakenerKnife": {
+    "es": "Es un corkscrew que abre las piernas como un crowd awakener y remata con un hyperhook. El giro es inclinado y el remate es un latigazo de pierna estirada.",
+    "en": "It is a corkscrew that opens the legs like a crowd awakener and finishes with a hyperhook. The turn is tilted and the finish is a whip with the leg extended.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un corkscrew crowd awakener con pierna de cuchillo. El giro se enlaza con un remate recto de pierna y el aterrizaje cierra el movimiento.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew Swipeknife. Ese truco te da el giro inclinado con el barrido y la pierna de cuchillo.",
+        "space": "Colchoneta amplia o cama elástica. Es un truco avanzado de alta rotación."
+      },
+      "body": {
+        "feet": "Entrada con un pie y salto alto. El pie de pateo queda atrás.",
+        "legs": "La pierna hace el barrido del corkscrew y al final se estira rígida en el remate de cuchillo.",
+        "arms": "Un brazo abre el giro inclinado; al final los dos brazos acompañan el latigazo.",
+        "gaze": "Mira por encima del hombro durante el giro y el horizonte al rematar.",
+        "torso": "El torso se inclina con el eje del corkscrew y se abre en el remate."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y salta alto, arrancando el corkscrew con el cuerpo agrupado."
+        },
+        {
+          "title": "Giro inclinado",
+          "body": "Gira sobre el eje inclinado y abre las piernas como un crowd awakener en el aire."
+        },
+        {
+          "title": "Remate de cuchillo",
+          "body": "Cuando ves el piso, estira la pierna y engánchala con un latigazo, tipo hyperhook."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas, controlando la salida."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el giro se queda corto, no fuerces el remate.",
+      "mistakes": [
+        "Aplanar el eje del giro y perder el corkscrew.",
+        "Rematar con la pierna doblada.",
+        "Abrir las piernas demasiado tarde."
+      ],
+      "tips": [
+        "Practica el Corkscrew Swipeknife hasta que sea cómodo.",
+        "Después marca el remate de cuchillo en una cama elástica.",
+        "Une las dos partes cuando el giro ya tenga altura."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "Mortal atrás con giro completo sobre un eje inclinado, como un sacacorchos."
+        },
+        {
+          "term": "crowd awakener",
+          "meaning": "Apertura amplia de piernas en el aire, tipo split kick."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de enganche con latigazo, con la pierna estirada y la cadera abierta."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewSwipeknife": "El Corkscrew Swipeknife te da el giro inclinado con barrido y la pierna de cuchillo; acá solo agregas la apertura y el remate."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a corkscrew crowd awakener with a knife leg. The spin links into a straight leg finish and the landing closes the move.",
+      "before": {
+        "prerequisites": "You need the Corkscrew Swipeknife. That trick gives you the tilted turn with the sweep and the knife leg.",
+        "space": "A large mat or a trampoline. This is an advanced high-rotation trick."
+      },
+      "body": {
+        "feet": "Enter on one foot with a high jump. The kicking foot stays back.",
+        "legs": "The leg does the corkscrew sweep and at the end extends rigid in the knife finish.",
+        "arms": "One arm opens the tilted turn; at the end both arms follow the whip.",
+        "gaze": "Look over the shoulder during the turn and at the horizon when you finish.",
+        "torso": "The torso tilts with the corkscrew axis and opens on the finish."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and jump high, starting the corkscrew with the body tucked."
+        },
+        {
+          "title": "Tilted turn",
+          "body": "Turn on the tilted axis and open the legs like a crowd awakener in the air."
+        },
+        {
+          "title": "Knife finish",
+          "body": "When you see the floor, extend the leg and hook it with a whip, like a hyperhook."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees, controlling the exit."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the turn falls short, do not force the finish.",
+      "mistakes": [
+        "Flattening the turn axis and losing the corkscrew.",
+        "Finishing with a bent leg.",
+        "Opening the legs too late."
+      ],
+      "tips": [
+        "Practice the Corkscrew Swipeknife until it feels comfortable.",
+        "Then mark the knife finish on a trampoline.",
+        "Join the parts when the turn has height."
+      ],
+      "terms": [
+        {
+          "term": "corkscrew",
+          "meaning": "A backflip with a full twist on a tilted axis, like a corkscrew."
+        },
+        {
+          "term": "crowd awakener",
+          "meaning": "A wide leg opening in the air, like a split kick."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hooking kick with a whip, with the leg extended and the hip open."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewSwipeknife": "The Corkscrew Swipeknife gives you the tilted turn with the sweep and the knife leg; here you only add the opening and the finish."
+      }
+    }
+  },
+  "corkscrewFeilong": {
+    "es": "Es un corkscrew recostado que remata en Feilong, una patada externa seguida de una interna. La pierna viaja larga y el cuerpo casi acostado.",
+    "en": "It is a laid-back corkscrew that finishes in a Feilong, an outside kick followed by an inside kick. The leg travels long and the body is almost lying down.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un corkscrew en versión feilong, recostado y con la pierna larga. El giro pasa sobre la cabeza casi acostado y el cuerpo aterriza de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew Shuriken, el Corkscrew Round y el Pop Feilong. El primero da el giro y el barrido; el segundo enseña el remate circular; el tercero, la forma del feilong.",
+        "space": "Colchoneta amplia o cama elástica. Truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada de un pie con salto alto. El pie de pateo arranca atrás.",
+        "legs": "La pierna se abre larga y estirada y dibuja primero la patada externa y luego la interna del feilong.",
+        "arms": "Los brazos ayudan a inclinar el eje y se abren al rematar.",
+        "gaze": "Durante el giro la mirada pasa sobre la cabeza y al final busca el piso.",
+        "torso": "El torso se inclina y casi se acuesta para dejar pasar la pierna larga."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube alto, arrancando el corkscrew."
+        },
+        {
+          "title": "Giro recostado",
+          "body": "Pasa el giro sobre la cabeza con el cuerpo inclinado y la pierna larga."
+        },
+        {
+          "title": "Remate Feilong",
+          "body": "Encadena la patada externa y luego la interna con el cuerpo recostado."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Endereza el torso y baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si quedas de lado, revisa que el torso no se haya aplanado.",
+      "mistakes": [
+        "Quedarte a medio giro y no llegar a la posición recostada.",
+        "Doblar la pierna del feilong.",
+        "Mirar el piso y perder el eje."
+      ],
+      "tips": [
+        "Practica el Feilong por separado hasta que las dos patadas se encadenen.",
+        "Después haz el Corkscrew y agrega el remate.",
+        "Usa una cama elástica para sentir la posición recostada."
+      ],
+      "terms": [
+        {
+          "term": "feilong",
+          "meaning": "Remate de dos patadas encadenadas: una externa y después una interna."
+        },
+        {
+          "term": "patada externa",
+          "meaning": "Patada que golpea con el borde externo del pie."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewShuriken": "El Corkscrew Shuriken te da el giro inclinado y el barrido circular que arranca el remate.",
+        "corkscrewRound": "El Corkscrew Round te enseña a rematar el corkscrew con una patada circular.",
+        "popFeilong": "El Pop Feilong te da la forma del feilong, la secuencia externa más interna."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a corkscrew in the feilong version, laid back with a long leg. The spin passes over the head almost lying down and the body lands on the feet.",
+      "before": {
+        "prerequisites": "You need the Corkscrew Shuriken, the Corkscrew Round and the Pop Feilong. The first gives the turn and the sweep; the second teaches the circular finish; the third gives the feilong shape.",
+        "space": "A large mat or a trampoline. An advanced trick."
+      },
+      "body": {
+        "feet": "One-foot entry with a high jump. The kicking foot starts back.",
+        "legs": "The leg opens long and extended and draws the outside kick first, then the inside kick of the feilong.",
+        "arms": "The arms help tilt the axis and open on the finish.",
+        "gaze": "During the turn the gaze passes over the head and at the end finds the floor.",
+        "torso": "The torso tilts and almost lies down to let the long leg through."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise high, starting the corkscrew."
+        },
+        {
+          "title": "Laid-back turn",
+          "body": "Pass the turn over the head with the body tilted and the leg long."
+        },
+        {
+          "title": "Feilong finish",
+          "body": "Chain the outside kick and then the inside kick with the body laid back."
+        },
+        {
+          "title": "Landing",
+          "body": "Straighten the torso and come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If you end up sideways, check that the torso did not flatten out.",
+      "mistakes": [
+        "Getting stuck halfway and never reaching the laid-back position.",
+        "Bending the leg of the feilong.",
+        "Looking at the floor and losing the axis."
+      ],
+      "tips": [
+        "Practice the Feilong on its own until the two kicks chain together.",
+        "Then do the Corkscrew and add the finish.",
+        "Use a trampoline to feel the laid-back position."
+      ],
+      "terms": [
+        {
+          "term": "feilong",
+          "meaning": "A two-kick finish chained together: an outside kick and then an inside kick."
+        },
+        {
+          "term": "outside kick",
+          "meaning": "A kick that strikes with the outer edge of the foot."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewShuriken": "The Corkscrew Shuriken gives you the tilted turn and the circular sweep that starts the finish.",
+        "corkscrewRound": "The Corkscrew Round teaches you to finish the corkscrew with a circular kick.",
+        "popFeilong": "The Pop Feilong gives you the feilong shape, the outside then inside sequence."
+      }
+    }
+  },
+  "corkscrewShurikenKyro": {
+    "es": "Es un corkscrew shuriken con media vuelta extra que aterriza de espaldas sobre los dos pies. El giro se retuerce y el remate en estrella cierra el movimiento.",
+    "en": "It is a corkscrew shuriken with an extra half turn that lands backward on both feet. The turn twists and the star finish closes the move.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un corkscrew shuriken en versión kyro. El giro y el corte se encadenan con un eje retorcido y el aterrizaje cierra de espaldas.",
+      "before": {
+        "prerequisites": "Necesitas el Shuriken Cutter y el Corkscrew Kyro. El Shuriken Cutter te da el remate en estrella; el Corkscrew Kyro te da el giro extra y la salida de espaldas.",
+        "space": "Colchoneta amplia o cama elástica. Truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada de un pie con salto alto. El pie de pateo arranca atrás.",
+        "legs": "La pierna hace el corte del shuriken y la otra se abre para la media vuelta extra.",
+        "arms": "Un brazo abre el giro y el otro cierra el corte en estrella.",
+        "gaze": "Mira por encima del hombro durante el giro y el horizonte en la salida.",
+        "torso": "El torso se retuerce con el eje y se endereza al aterrizar de espaldas."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube, arrancando el corkscrew."
+        },
+        {
+          "title": "Giro retorcido",
+          "body": "Gira sobre el eje inclinado y retuerce el cuerpo para sumar media vuelta."
+        },
+        {
+          "title": "Corte shuriken",
+          "body": "Abre las piernas como estrella ninja y corta el aire."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja sobre los dos pies, de espaldas, con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae sobre los dos pies con las rodillas flexionadas y el pecho arriba, quedando de espaldas. Si la rotación no alcanza, no fuerces el corte.",
+      "mistakes": [
+        "Perder el eje retorcido y girar plano.",
+        "No completar la media vuelta y caer de lado.",
+        "Abrir el corte demasiado tarde."
+      ],
+      "tips": [
+        "Practica el Corkscrew Kyro hasta dominar la salida de espaldas.",
+        "Después agrega el corte del Shuriken Cutter.",
+        "Usa una cama elástica para la rotación extra."
+      ],
+      "terms": [
+        {
+          "term": "shuriken",
+          "meaning": "Patada circular externa con la pierna, con forma de estrella ninja."
+        },
+        {
+          "term": "kyro",
+          "meaning": "Variante con media vuelta extra que aterriza de espaldas sobre los dos pies."
+        }
+      ],
+      "prereqNotes": {
+        "shurikenCutter": "El Shuriken Cutter te da el corte en estrella con el que rematas.",
+        "corkscrewKyro": "El Corkscrew Kyro te da el giro extra y la salida de espaldas."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a corkscrew shuriken in the kyro version. The spin and the cut chain with a twisted axis and the landing closes backward.",
+      "before": {
+        "prerequisites": "You need the Shuriken Cutter and the Corkscrew Kyro. The Shuriken Cutter gives you the star finish; the Corkscrew Kyro gives you the extra turn and the backward exit.",
+        "space": "A large mat or a trampoline. An advanced trick."
+      },
+      "body": {
+        "feet": "One-foot entry with a high jump. The kicking foot starts back.",
+        "legs": "The leg does the shuriken cut and the other opens for the extra half turn.",
+        "arms": "One arm opens the turn and the other closes the star cut.",
+        "gaze": "Look over the shoulder during the turn and at the horizon on the exit.",
+        "torso": "The torso twists with the axis and straightens as you land backward."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise, starting the corkscrew."
+        },
+        {
+          "title": "Twisted turn",
+          "body": "Turn on the tilted axis and twist the body to add the half turn."
+        },
+        {
+          "title": "Shuriken cut",
+          "body": "Open the legs like a ninja star and cut the air."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on both feet, backward, with soft knees."
+        }
+      ],
+      "landing": "Land on both feet with bent knees and the chest up, finishing backward. If the rotation does not get there, do not force the cut.",
+      "mistakes": [
+        "Losing the twisted axis and turning flat.",
+        "Not completing the half turn and landing sideways.",
+        "Opening the cut too late."
+      ],
+      "tips": [
+        "Practice the Corkscrew Kyro until the backward exit is solid.",
+        "Then add the Shuriken Cutter cut.",
+        "Use a trampoline for the extra rotation."
+      ],
+      "terms": [
+        {
+          "term": "shuriken",
+          "meaning": "A circular outside kick with the leg, shaped like a ninja star."
+        },
+        {
+          "term": "kyro",
+          "meaning": "A variation with an extra half turn that lands backward on both feet."
+        }
+      ],
+      "prereqNotes": {
+        "shurikenCutter": "The Shuriken Cutter gives you the star cut you finish with.",
+        "corkscrewKyro": "The Corkscrew Kyro gives you the extra turn and the backward exit."
+      }
+    }
+  },
+  "corkscrewSwipeLateRound": {
+    "es": "Es un corkscrew con un swipe que baja en barrido y remata con una patada circular tardía. La patada llega al final del giro.",
+    "en": "It is a corkscrew with a swipe that drops into a sweep and finishes with a late round kick. The kick arrives at the end of the turn.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un corkscrew con swipe y patada circular tardía. El giro baja en un barrido y la patada redonda llega al final de la rotación.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew Swipe. Ese truco te da el giro inclinado con el barrido base.",
+        "space": "Colchoneta amplia o cama elástica. Truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada de un pie con salto alto. El pie de pateo queda atrás.",
+        "legs": "La pierna barre en el swipe y, al final, describe el arco circular de la round tardía.",
+        "arms": "Un brazo abre el giro y el otro acompaña el remate circular.",
+        "gaze": "Mira por encima del hombro durante el giro y el objetivo al patear.",
+        "torso": "El torso se inclina con el eje y se abre en el remate."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube alto, arrancando el corkscrew."
+        },
+        {
+          "title": "Swipe",
+          "body": "Baja el cuerpo y barre la pierna en el giro inclinado."
+        },
+        {
+          "title": "Round tardía",
+          "body": "Al final de la rotación, describe un arco circular con la pierna estirada."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas, controlando el impulso."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si la patada llega tarde, revisa que el barrido no te haya bajado demasiado.",
+      "mistakes": [
+        "Bajar demasiado en el swipe y no llegar a la patada.",
+        "Patear con la rodilla doblada.",
+        "Perder el eje del giro."
+      ],
+      "tips": [
+        "Practica el Corkscrew Swipe hasta dominar el barrido.",
+        "Después marca solo la round tardía al final.",
+        "Une las partes cuando el giro tenga altura."
+      ],
+      "terms": [
+        {
+          "term": "swipe",
+          "meaning": "Barrido de pierna con la que pasas por encima o por el costado."
+        },
+        {
+          "term": "late round",
+          "meaning": "Patada circular que se lanza al final de la rotación, cuando el giro ya casi termino."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewSwipe": "El Corkscrew Swipe te da el giro inclinado con el barrido base; acá solo sumas el remate circular tardío."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a corkscrew with a swipe and a late round kick. The spin drops into a sweep and the round kick arrives at the end of the rotation.",
+      "before": {
+        "prerequisites": "You need the Corkscrew Swipe. That trick gives you the tilted turn with the base sweep.",
+        "space": "A large mat or a trampoline. An advanced trick."
+      },
+      "body": {
+        "feet": "One-foot entry with a high jump. The kicking foot stays back.",
+        "legs": "The leg sweeps in the swipe and, at the end, draws the circular arc of the late round.",
+        "arms": "One arm opens the turn and the other follows the circular finish.",
+        "gaze": "Look over the shoulder during the turn and at the target when you kick.",
+        "torso": "The torso tilts with the axis and opens on the finish."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise high, starting the corkscrew."
+        },
+        {
+          "title": "Swipe",
+          "body": "Drop the body and sweep the leg in the tilted turn."
+        },
+        {
+          "title": "Late round",
+          "body": "At the end of the rotation, draw a circular arc with the extended leg."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees, controlling the momentum."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the kick arrives late, check that the sweep did not drop you too low.",
+      "mistakes": [
+        "Dropping too low in the swipe and missing the kick.",
+        "Kicking with a bent knee.",
+        "Losing the axis of the turn."
+      ],
+      "tips": [
+        "Practice the Corkscrew Swipe until the sweep is solid.",
+        "Then mark just the late round at the end.",
+        "Join the parts when the turn has height."
+      ],
+      "terms": [
+        {
+          "term": "swipe",
+          "meaning": "A leg sweep that takes you over or past the side."
+        },
+        {
+          "term": "late round",
+          "meaning": "A circular kick thrown at the end of the rotation, when the turn is almost done."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrewSwipe": "The Corkscrew Swipe gives you the tilted turn with the base sweep; here you only add the late circular finish."
+      }
+    }
+  },
+  "doubleArabian": {
+    "es": "Es un Arabian con un segundo mortal de frente antes de aterrizar. Son dos rotaciones de frente que salen de espaldas.",
+    "en": "It is an Arabian with a second front flip before landing. Two forward rotations that exit backward.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble mortal de frente que entra de espaldas y sale de espaldas, con media vuelta en la segunda rotación.",
+      "before": {
+        "prerequisites": "Necesitas el Arabian. Primero domina el mortal de frente con su media vuelta antes de sumar una segunda rotación.",
+        "space": "Colchoneta amplia o cama elástica, con supervisión. Es un truco de élite."
+      },
+      "body": {
+        "feet": "Entrada de espaldas con pique. Las dos piernas despegan juntas.",
+        "legs": "Las piernas suben y se agrupan para el primer mortal y se vuelven a agrupar para el segundo.",
+        "arms": "Los brazos suben para el salto y se recogen cerca del pecho para sostener las dos rotaciones.",
+        "gaze": "Mira al frente al entrar y busca el piso sobre el hombro en la salida.",
+        "torso": "El torso viaja hacia adelante y se mantiene agrupado entre los dos mortales."
+      },
+      "steps": [
+        {
+          "title": "Entrada de espaldas",
+          "body": "Da el pique y sube con el pecho alto, listo para girar hacia adelante."
+        },
+        {
+          "title": "Primer mortal",
+          "body": "Agrupa las piernas contra el pecho y completa la primera rotación de frente."
+        },
+        {
+          "title": "Segundo mortal con media vuelta",
+          "body": "Encadena la segunda rotación y agrega la media vuelta para salir de espaldas."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre las piernas y baja de pie con las rodillas blandas, quedando de espaldas."
+        }
+      ],
+      "landing": "Cae sobre los dos pies con las rodillas flexionadas y el pecho arriba. No fuerces la segunda rotación si la altura no alcanza.",
+      "mistakes": [
+        "Agrupar demasiado tarde y perder la segunda vuelta.",
+        "Soltar la cadena entre las dos rotaciones.",
+        "Mirar el piso en vez del frente en la entrada."
+      ],
+      "tips": [
+        "Practica el Arabian simple hasta que sea muy cómodo.",
+        "Después entrena el doble mortal de frente en una cama elástica.",
+        "Une los dos movimientos cuando el primero tenga altura de sobra."
+      ],
+      "terms": [
+        {
+          "term": "arabian",
+          "meaning": "Mortal de frente que despega de espaldas y aterriza de espaldas, con media vuelta en el aire."
+        },
+        {
+          "term": "doble mortal",
+          "meaning": "Dos rotaciones completas encadenadas antes de aterrizar."
+        }
+      ],
+      "prereqNotes": {
+        "arabian": "El Arabian te da la rotación de frente y la salida de espaldas; el Double Arabian repite esa rotación una vez más."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a double front flip that enters backward and exits backward, with a half turn on the second rotation.",
+      "before": {
+        "prerequisites": "You need the Arabian. First master the front flip with its half turn before adding a second rotation.",
+        "space": "A large mat or a trampoline, with supervision. This is an elite trick."
+      },
+      "body": {
+        "feet": "Backward entry with a punch. Both legs leave the ground together.",
+        "legs": "The legs rise and tuck for the first flip and tuck again for the second.",
+        "arms": "The arms rise for the jump and tuck near the chest to support both rotations.",
+        "gaze": "Look forward on the entry and find the floor over the shoulder on the exit.",
+        "torso": "The torso travels forward and stays tucked between the two flips."
+      },
+      "steps": [
+        {
+          "title": "Backward entry",
+          "body": "Punch and rise with the chest tall, ready to turn forward."
+        },
+        {
+          "title": "First flip",
+          "body": "Tuck the legs to the chest and complete the first forward rotation."
+        },
+        {
+          "title": "Second flip with half turn",
+          "body": "Chain the second rotation and add the half turn to exit backward."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the legs and come down on your feet with soft knees, finishing backward."
+        }
+      ],
+      "landing": "Land on both feet with bent knees and the chest up. Do not force the second rotation if the height is not there.",
+      "mistakes": [
+        "Tucking too late and losing the second rotation.",
+        "Breaking the chain between the two rotations.",
+        "Looking at the floor instead of forward on the entry."
+      ],
+      "tips": [
+        "Practice the simple Arabian until it feels very comfortable.",
+        "Then train the double front flip on a trampoline.",
+        "Join the two moves when the first has height to spare."
+      ],
+      "terms": [
+        {
+          "term": "arabian",
+          "meaning": "A front flip that takes off backward and lands backward, with a half turn in the air."
+        },
+        {
+          "term": "double flip",
+          "meaning": "Two full rotations chained before landing."
+        }
+      ],
+      "prereqNotes": {
+        "arabian": "The Arabian gives you the forward rotation and the backward exit; the Double Arabian repeats that rotation one more time."
+      }
+    }
+  },
+  "doubleCorkscrewShuriken": {
+    "es": "Es un doble corkscrew que remata con un shuriken, una patada externa en estrella. El cuerpo da dos giros inclinados y abre las piernas al final.",
+    "en": "It is a double corkscrew that finishes with a shuriken, an outside star kick. The body makes two tilted turns and opens the legs at the end.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble corkscrew que termina con un shuriken en postura completa. Abre brazos y piernas como estrella ninja y aterriza de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Double Corkscrew y el Corkscrew Shuriken. El primero te da los dos giros inclinados; el segundo, el remate en estrella.",
+        "space": "Colchoneta amplia o cama elástica, con supervisión. Truco de élite."
+      },
+      "body": {
+        "feet": "Entrada con un paso y salto muy alto. El pie de pateo queda atrás.",
+        "legs": "Las piernas giran agrupadas en los dos corkscrews y al final se abren en estrella.",
+        "arms": "Los brazos acompañan los giros y se abren en el remate.",
+        "gaze": "La mirada pasa por encima del hombro en los giros y busca el piso en el remate.",
+        "torso": "El torso se mantiene agrupado y retorcido hasta abrirse al final."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube muy alto para tener espacio para dos giros."
+        },
+        {
+          "title": "Doble corkscrew",
+          "body": "Completa los dos giros inclinados sin perder la altura ni el eje."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Abre brazos y piernas como estrella ninja y corta el aire."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Cierra las piernas y baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el segundo giro se queda corto, aterriza seguro en vez de forzar el shuriken.",
+      "mistakes": [
+        "Apurar los dos giros y perder altura.",
+        "Aplanar el eje y convertirlo en un giro plano.",
+        "Abrir el shuriken demasiado tarde."
+      ],
+      "tips": [
+        "Practica el Double Corkscrew solo hasta aterrizar con control.",
+        "Después marca el shuriken por separado.",
+        "Une las partes cuando los dos giros sean estables."
+      ],
+      "terms": [
+        {
+          "term": "double corkscrew",
+          "meaning": "Dos giros completos sobre el eje inclinado del corkscrew."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "Patada circular externa con la pierna, con forma de estrella ninja."
+        },
+        {
+          "term": "complete",
+          "meaning": "Postura de aterrizaje de frente, con el cuerpo alineado."
+        }
+      ],
+      "prereqNotes": {
+        "doubleCorkscrew": "El Double Corkscrew te da los dos giros inclinados y la altura.",
+        "corkscrewShuriken": "El Corkscrew Shuriken te da el remate en estrella."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a double corkscrew that finishes with a shuriken in complete stance. It opens the arms and legs like a ninja star and lands on the feet.",
+      "before": {
+        "prerequisites": "You need the Double Corkscrew and the Corkscrew Shuriken. The first gives you the two tilted turns; the second gives you the star finish.",
+        "space": "A large mat or a trampoline, with supervision. An elite trick."
+      },
+      "body": {
+        "feet": "Enter with a step and a very high jump. The kicking foot stays back.",
+        "legs": "The legs turn tucked in the two corkscrews and at the end open into a star.",
+        "arms": "The arms follow the turns and open on the finish.",
+        "gaze": "The gaze passes over the shoulder during the turns and finds the floor on the finish.",
+        "torso": "The torso stays tucked and twisted until it opens at the end."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise very high to have room for two turns."
+        },
+        {
+          "title": "Double corkscrew",
+          "body": "Complete the two tilted turns without losing height or the axis."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Open the arms and legs like a ninja star and cut the air."
+        },
+        {
+          "title": "Landing",
+          "body": "Close the legs and come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the second turn falls short, land safely instead of forcing the shuriken.",
+      "mistakes": [
+        "Rushing the two turns and losing height.",
+        "Flattening the axis and turning it into a flat spin.",
+        "Opening the shuriken too late."
+      ],
+      "tips": [
+        "Practice the Double Corkscrew alone until you land with control.",
+        "Then mark the shuriken on its own.",
+        "Join the parts when the two turns are stable."
+      ],
+      "terms": [
+        {
+          "term": "double corkscrew",
+          "meaning": "Two full turns on the tilted corkscrew axis."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "A circular outside kick with the leg, shaped like a ninja star."
+        },
+        {
+          "term": "complete",
+          "meaning": "A forward landing stance with the body aligned."
+        }
+      ],
+      "prereqNotes": {
+        "doubleCorkscrew": "The Double Corkscrew gives you the two tilted turns and the height.",
+        "corkscrewShuriken": "The Corkscrew Shuriken gives you the star finish."
+      }
+    }
+  },
+  "doubleFullDoublelegDoubleTwist": {
+    "es": "Es un Double Full Doubleleg con dos giros extra antes de aterrizar. Suma 720 grados y dos twists más, con las dos piernas juntas.",
+    "en": "It is a Double Full Doubleleg with two extra twists before landing. It adds 720 degrees plus two more twists, with both legs together.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble full de 720 grados con las dos piernas recogidas, al que se le suman dos giros extra antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Quad Full y el Double Full Doubleleg Twist. El Quad Full te da los cuatro giros; el Double Full Doubleleg Twist te da el patrón con las piernas juntas.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión. Truco de élite."
+      },
+      "body": {
+        "feet": "Entrada con un paso y salto muy alto. Las dos piernas despegan juntas.",
+        "legs": "Las piernas se mantienen recogidas y juntas durante todos los giros.",
+        "arms": "Los brazos se recogen cerca del pecho para acelerar y sostener la rotación.",
+        "gaze": "La mirada busca un punto fijo en cada vuelta y el piso al final.",
+        "torso": "El torso se mantiene agrupado y firme durante toda la rotación."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube muy alto, listo para girar muchas veces."
+        },
+        {
+          "title": "Doble full",
+          "body": "Completa los 720 grados con las dos piernas juntas."
+        },
+        {
+          "title": "Dos giros extra",
+          "body": "Suma dos twists más sobre el mismo eje sin perder la altura."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre las piernas y baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. No fuerces los giros extra si la altura no alcanza.",
+      "mistakes": [
+        "Abrir las piernas antes de terminar los giros.",
+        "Perder el eje y caer de lado.",
+        "Apurar la rotación y bajar antes de tiempo."
+      ],
+      "tips": [
+        "Practica el Quad Full hasta que los cuatro giros sean cómodos.",
+        "Después entrena el Double Full Doubleleg Twist por separado.",
+        "Une los dos cuando la altura sobre."
+      ],
+      "terms": [
+        {
+          "term": "double full",
+          "meaning": "Dos giros completos, 720 grados."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "Las dos piernas juntas y estiradas, como una sola."
+        },
+        {
+          "term": "twist",
+          "meaning": "Giro sobre el eje del cuerpo."
+        }
+      ],
+      "prereqNotes": {
+        "quadFull": "El Quad Full te da los cuatro giros necesarios y la técnica para no perder el eje.",
+        "doubleFullDoublelegTwist": "El Double Full Doubleleg Twist te da el patrón con las piernas juntas sobre el que se suman los giros extra."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a 720-degree double full with both legs tucked, adding two extra twists before landing.",
+      "before": {
+        "prerequisites": "You need the Quad Full and the Double Full Doubleleg Twist. The Quad Full gives you the four turns; the Double Full Doubleleg Twist gives you the pattern with the legs together.",
+        "space": "A trampoline or a high-performance mat, with supervision. An elite trick."
+      },
+      "body": {
+        "feet": "Enter with a step and a very high jump. Both legs leave the ground together.",
+        "legs": "The legs stay tucked and together through all the turns.",
+        "arms": "The arms tuck near the chest to speed up and support the rotation.",
+        "gaze": "The gaze finds a fixed point on each turn and the floor at the end.",
+        "torso": "The torso stays tucked and firm through the whole rotation."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise very high, ready to turn many times."
+        },
+        {
+          "title": "Double full",
+          "body": "Complete the 720 degrees with both legs together."
+        },
+        {
+          "title": "Two extra turns",
+          "body": "Add two more twists on the same axis without losing height."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the legs and come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. Do not force the extra turns if the height is not there.",
+      "mistakes": [
+        "Opening the legs before finishing the turns.",
+        "Losing the axis and landing sideways.",
+        "Rushing the rotation and coming down too early."
+      ],
+      "tips": [
+        "Practice the Quad Full until the four turns feel comfortable.",
+        "Then train the Double Full Doubleleg Twist on its own.",
+        "Join the two when the height is to spare."
+      ],
+      "terms": [
+        {
+          "term": "double full",
+          "meaning": "Two full turns, 720 degrees."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "Both legs together and extended, as one."
+        },
+        {
+          "term": "twist",
+          "meaning": "A turn around the body axis."
+        }
+      ],
+      "prereqNotes": {
+        "quadFull": "The Quad Full gives you the four turns you need and the skill to keep the axis.",
+        "doubleFullDoublelegTwist": "The Double Full Doubleleg Twist gives you the legs-together pattern that the extra turns build on."
+      }
+    }
+  },
+  "doubleFullShurikenHyperhook": {
+    "es": "Es un doble full de 720 grados que abre a estrella ninja y termina enganchando la pierna en hiperextensión. Es un truco de élite.",
+    "en": "It is a 720-degree double full that opens into a ninja star and finishes by hooking the leg in hyperextension. An elite trick.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble full de 720 grados que abre brazos y piernas como estrella ninja y remata con un hyperhook antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Double Full Hyperhook y el Full Shuriken Hyperhook. El primero te da los dos giros con el gancho; el segundo, la forma de estrella con el remate.",
+        "space": "Cama elástica o colchoneta amplia, con supervisión. Truco de élite."
+      },
+      "body": {
+        "feet": "Entrada con un paso y salto muy alto. Las dos piernas despegan juntas.",
+        "legs": "Las piernas giran recogidas y al final se abren, con una enganchando en hiperextensión.",
+        "arms": "Los brazos se recogen para girar y se abren en estrella al final.",
+        "gaze": "La mirada pasa por encima del hombro en los giros y busca el piso en el remate.",
+        "torso": "El torso se mantiene agrupado y se arquea al enganchar."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube muy alto para dos giros completos."
+        },
+        {
+          "title": "Doble full",
+          "body": "Completa los 720 grados sin perder el eje."
+        },
+        {
+          "title": "Estrella ninja",
+          "body": "Abre brazos y piernas como estrella ninja en el aire."
+        },
+        {
+          "title": "Hyperhook y aterrizaje",
+          "body": "Arquea la espalda, engancha una pierna en hiperextensión y baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el gancho no sale, aterriza seguro sin forzar la pierna.",
+      "mistakes": [
+        "Perder la altura antes de abrir la estrella.",
+        "Enganchar con la rodilla doblada.",
+        "Mirar el piso durante los giros."
+      ],
+      "tips": [
+        "Practica el Double Full Hyperhook hasta dominar los dos giros con el gancho.",
+        "Después marca la apertura en estrella.",
+        "Une las partes cuando el doble full sea estable."
+      ],
+      "terms": [
+        {
+          "term": "double full",
+          "meaning": "Dos giros completos, 720 grados."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de enganche con la pierna estirada y la cadera abierta."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "Apertura de brazos y piernas en forma de estrella ninja."
+        }
+      ],
+      "prereqNotes": {
+        "doubleFullHyperhook": "El Double Full Hyperhook te da los dos giros completos con el gancho final.",
+        "fullShurikenHyperhook": "El Full Shuriken Hyperhook te da la forma de estrella con el remate enganchado."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a 720-degree double full that opens the arms and legs like a ninja star and finishes with a hyperhook before landing.",
+      "before": {
+        "prerequisites": "You need the Double Full Hyperhook and the Full Shuriken Hyperhook. The first gives you the two turns with the hook; the second gives you the star shape with the finish.",
+        "space": "A trampoline or a large mat, with supervision. An elite trick."
+      },
+      "body": {
+        "feet": "Enter with a step and a very high jump. Both legs leave the ground together.",
+        "legs": "The legs turn tucked and at the end open, with one hooking in hyperextension.",
+        "arms": "The arms tuck to turn and open into a star at the end.",
+        "gaze": "The gaze passes over the shoulder during the turns and finds the floor on the finish.",
+        "torso": "The torso stays tucked and arches on the hook."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise very high for two full turns."
+        },
+        {
+          "title": "Double full",
+          "body": "Complete the 720 degrees without losing the axis."
+        },
+        {
+          "title": "Ninja star",
+          "body": "Open the arms and legs like a ninja star in the air."
+        },
+        {
+          "title": "Hyperhook and landing",
+          "body": "Arch the back, hook one leg in hyperextension and come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the hook does not come out, land safely without forcing the leg.",
+      "mistakes": [
+        "Losing height before opening the star.",
+        "Hooking with a bent knee.",
+        "Looking at the floor during the turns."
+      ],
+      "tips": [
+        "Practice the Double Full Hyperhook until the two turns with the hook are solid.",
+        "Then mark the star opening.",
+        "Join the parts when the double full is stable."
+      ],
+      "terms": [
+        {
+          "term": "double full",
+          "meaning": "Two full turns, 720 degrees."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hooking kick with the leg extended and the hip open."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "An opening of arms and legs in the shape of a ninja star."
+        }
+      ],
+      "prereqNotes": {
+        "doubleFullHyperhook": "The Double Full Hyperhook gives you the two full turns with the final hook.",
+        "fullShurikenHyperhook": "The Full Shuriken Hyperhook gives you the star shape with the hooked finish."
+      }
+    }
+  },
+  "doubleFullInBackOut": {
+    "es": "Es un doble mortal atrás en el que el primer giro lleva dos fulles y el segundo sale recto. Termina de pie mirando al frente.",
+    "en": "It is a double backflip where the first rotation carries two fulls and the second comes out straight. It finishes on the feet facing forward.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble mortal atrás: la primera rotación lleva 720 grados y la segunda sale recta antes de aterrizar de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Full-In Back-Out. Ese truco te da el patrón de un full en la primera rotación con salida recta en la segunda.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión. Truco de élite."
+      },
+      "body": {
+        "feet": "Entrada con paso o pique. Las dos piernas despegan juntas.",
+        "legs": "Las piernas se agrupan para la primera rotación y se vuelven a agrupar para la segunda.",
+        "arms": "Los brazos suben para el salto y se recogen para sostener las dos rotaciones.",
+        "gaze": "La mirada pasa por encima del hombro en la primera vuelta y busca el piso en la salida recta.",
+        "torso": "El torso se agrupa para la primera rotación y se abre en la segunda."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso o el pique y sube en un doble mortal atrás."
+        },
+        {
+          "title": "Primer giro con doble full",
+          "body": "En la primera rotación completa los dos fulles de 720 grados."
+        },
+        {
+          "title": "Salida recta",
+          "body": "En la segunda rotación deja el cuerpo recto, sin giro lateral."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre las piernas y baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si la segunda rotación se queda corta, aterriza seguro sin forzarla.",
+      "mistakes": [
+        "Seguir girando en la segunda rotación y quedar de lado.",
+        "Perder la altura después del primer giro.",
+        "Abrir las piernas antes de tiempo."
+      ],
+      "tips": [
+        "Practica el Full-In Back-Out hasta que la salida recta sea cómoda.",
+        "Después entrena el doble mortal atrás simple.",
+        "Une los dos cuando el primer giro tenga altura de sobra."
+      ],
+      "terms": [
+        {
+          "term": "full in back out",
+          "meaning": "Doble mortal en el que la primera rotación lleva un giro completo y la segunda sale recta."
+        },
+        {
+          "term": "in back out",
+          "meaning": "Patrón de giro en la entrada y salida recta hacia atrás."
+        }
+      ],
+      "prereqNotes": {
+        "fullInBackOut": "El Full-In Back-Out te da el patrón de un full en la primera rotación con salida recta en la segunda; acá la primera rotación lleva dos."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a double backflip: the first rotation carries 720 degrees and the second comes out straight before landing on the feet.",
+      "before": {
+        "prerequisites": "You need the Full-In Back-Out. That trick gives you the pattern of a full on the first rotation with a straight exit on the second.",
+        "space": "A trampoline or a high-performance mat, with supervision. An elite trick."
+      },
+      "body": {
+        "feet": "Enter with a step or a punch. Both legs leave the ground together.",
+        "legs": "The legs tuck for the first rotation and tuck again for the second.",
+        "arms": "The arms rise for the jump and tuck to support both rotations.",
+        "gaze": "The gaze passes over the shoulder on the first turn and finds the floor on the straight exit.",
+        "torso": "The torso tucks for the first rotation and opens on the second."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step or punch and rise in a double backflip."
+        },
+        {
+          "title": "First rotation with a double full",
+          "body": "On the first rotation, complete the two fulls of 720 degrees."
+        },
+        {
+          "title": "Straight exit",
+          "body": "On the second rotation, keep the body straight with no sideways turn."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the legs and come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the second rotation falls short, land safely without forcing it.",
+      "mistakes": [
+        "Continuing to turn on the second rotation and ending up sideways.",
+        "Losing height after the first rotation.",
+        "Opening the legs too early."
+      ],
+      "tips": [
+        "Practice the Full-In Back-Out until the straight exit is comfortable.",
+        "Then train the simple double backflip.",
+        "Join the two when the first rotation has height to spare."
+      ],
+      "terms": [
+        {
+          "term": "full in back out",
+          "meaning": "A double flip where the first rotation carries a full turn and the second comes out straight."
+        },
+        {
+          "term": "in back out",
+          "meaning": "A pattern of turning on the way in and coming out straight backward."
+        }
+      ],
+      "prereqNotes": {
+        "fullInBackOut": "The Full-In Back-Out gives you the pattern of a full on the first rotation with a straight exit on the second; here the first rotation carries two."
+      }
+    }
+  },
+  "dragonflyCorkscrewDoubleleg": {
+    "es": "Es un dragonfly con el cuerpo horizontal que enlaza un corkscrew doubleleg. Una pierna viaja extendida como libélula y al final las dos se juntan.",
+    "en": "It is a dragonfly with a horizontal body that links into a corkscrew doubleleg. One leg travels extended like a dragonfly and at the end both come together.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un dragonfly que enlaza un corkscrew doubleleg. El cuerpo pasa horizontal, el giro sobre la cabeza lleva las dos piernas juntas y aterriza de pie.",
+      "before": {
+        "prerequisites": "Necesitas el Dragonfly Corkscrew y el Corkscrew Doubleleg. El primero te da la posición de libélula con el giro; el segundo, el patrón de las dos piernas juntas.",
+        "space": "Colchoneta amplia o cama elástica. Truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada de un pie con el cuerpo horizontal desde el despegue. El pie de pateo queda atrás.",
+        "legs": "Una pierna va extendida como libélula durante el giro y al final se junta con la otra.",
+        "arms": "Los brazos abren el giro y ayudan a mantener el cuerpo acostado.",
+        "gaze": "La mirada pasa de lado sobre el hombro durante el giro y busca el piso al final.",
+        "torso": "El torso viaja horizontal y se mantiene largo durante la rotación."
+      },
+      "steps": [
+        {
+          "title": "Entrada horizontal",
+          "body": "Da el paso y despega con el cuerpo horizontal, una pierna extendida como libélula."
+        },
+        {
+          "title": "Giro con la libélula",
+          "body": "Gira sobre la cabeza manteniendo la pierna larga y el cuerpo acostado."
+        },
+        {
+          "title": "Enlaza el doubleleg",
+          "body": "Junta las dos piernas extendidas al final del giro."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas, absorbiendo el giro."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el cuerpo se endereza antes de tiempo, la libélula se pierde.",
+      "mistakes": [
+        "Enderezar el torso y perder la posición horizontal.",
+        "Doblar la pierna de la libélula.",
+        "No juntar las piernas a tiempo para el aterrizaje."
+      ],
+      "tips": [
+        "Practica el Dragonfly Corkscrew hasta que la posición horizontal sea estable.",
+        "Después agrega el doubleleg al final.",
+        "Usa una cama elástica para la caída."
+      ],
+      "terms": [
+        {
+          "term": "dragonfly",
+          "meaning": "Posición con una pierna extendida y el cuerpo horizontal, como una libélula."
+        },
+        {
+          "term": "corkscrew",
+          "meaning": "Giro completo sobre un eje inclinado, como un sacacorchos."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "Las dos piernas juntas y estiradas, como una sola."
+        }
+      ],
+      "prereqNotes": {
+        "dragonflyCorkscrew": "El Dragonfly Corkscrew te da la posición horizontal de libélula con el giro.",
+        "corkscrewDoubleleg": "El Corkscrew Doubleleg te da el patrón de las dos piernas juntas para cerrar."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a dragonfly that links into a corkscrew doubleleg. The body passes horizontally, the spin over the head carries both legs together and it lands on the feet.",
+      "before": {
+        "prerequisites": "You need the Dragonfly Corkscrew and the Corkscrew Doubleleg. The first gives you the dragonfly position with the turn; the second gives you the legs-together pattern.",
+        "space": "A large mat or a trampoline. An advanced trick."
+      },
+      "body": {
+        "feet": "One-foot entry with the body horizontal from the takeoff. The kicking foot stays back.",
+        "legs": "One leg travels extended like a dragonfly during the turn and at the end joins the other.",
+        "arms": "The arms open the turn and help keep the body lying flat.",
+        "gaze": "The gaze passes sideways over the shoulder during the turn and finds the floor at the end.",
+        "torso": "The torso travels horizontally and stays long through the rotation."
+      },
+      "steps": [
+        {
+          "title": "Horizontal entry",
+          "body": "Take the step and take off with the body horizontal, one leg extended like a dragonfly."
+        },
+        {
+          "title": "Turn with the dragonfly",
+          "body": "Turn over the head keeping the leg long and the body lying flat."
+        },
+        {
+          "title": "Link the doubleleg",
+          "body": "Bring both extended legs together at the end of the turn."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees, absorbing the turn."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the body straightens too early, the dragonfly is lost.",
+      "mistakes": [
+        "Straightening the torso and losing the horizontal position.",
+        "Bending the dragonfly leg.",
+        "Not bringing the legs together in time for the landing."
+      ],
+      "tips": [
+        "Practice the Dragonfly Corkscrew until the horizontal position is stable.",
+        "Then add the doubleleg at the end.",
+        "Use a trampoline for the landing."
+      ],
+      "terms": [
+        {
+          "term": "dragonfly",
+          "meaning": "A position with one leg extended and the body horizontal, like a dragonfly."
+        },
+        {
+          "term": "corkscrew",
+          "meaning": "A full turn on a tilted axis, like a corkscrew."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "Both legs together and extended, as one."
+        }
+      ],
+      "prereqNotes": {
+        "dragonflyCorkscrew": "The Dragonfly Corkscrew gives you the horizontal dragonfly position with the turn.",
+        "corkscrewDoubleleg": "The Corkscrew Doubleleg gives you the legs-together pattern to close."
+      }
+    }
+  },
+  "dragonflyDoubleCorkscrewHyperhook": {
+    "es": "Es un doble corkscrew con una pierna extendida como libélula que termina enganchando en hiperextensión. Truco de élite.",
+    "en": "It is a double corkscrew with one leg extended like a dragonfly that finishes by hooking in hyperextension. An elite trick.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un doble corkscrew con una pierna extendida como libélula. Al final arquea la espalda y engancha una pierna en hiperextensión antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Corkscrew y el Sheep Shearer. El Corkscrew te da el giro inclinado; el Sheep Shearer te da el patrón del gancho con la pierna extendida.",
+        "space": "Cama elástica o colchoneta de alto rendimiento, con supervisión."
+      },
+      "body": {
+        "feet": "Entrada de un pie con salto alto. El pie de pateo queda atrás.",
+        "legs": "Una pierna viaja extendida como libélula durante los dos giros y al final engancha.",
+        "arms": "Los brazos abren y sostienen los giros; al final acompañan el enganche.",
+        "gaze": "La mirada pasa por encima del hombro en los giros y busca el piso en el remate.",
+        "torso": "El torso se mantiene agrupado y se arquea al enganchar."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube alto, arrancando el corkscrew con una pierna extendida."
+        },
+        {
+          "title": "Doble corkscrew",
+          "body": "Completa los dos giros inclinados manteniendo la pierna de libélula."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Al final arquea la espalda y engancha la pierna en hiperextensión."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas, controlando la salida."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el gancho no sale, aterriza seguro sin forzar la pierna.",
+      "mistakes": [
+        "Perder la pierna extendida durante los giros.",
+        "Aplanar el eje y girar plano.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el doble corkscrew solo hasta dominarlo.",
+        "Después agrega la pierna de libélula y el gancho.",
+        "Usa una cama elástica para la rotación doble."
+      ],
+      "terms": [
+        {
+          "term": "dragonfly",
+          "meaning": "Posición con una pierna extendida y el cuerpo horizontal, como una libélula."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de enganche con la pierna estirada y la cadera abierta."
+        },
+        {
+          "term": "sheep shearer",
+          "meaning": "Truco con salto y una patada de gancho de pierna extendida."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "El Corkscrew te da el giro inclinado base sobre el que se monta la libélula.",
+        "sheepShearer": "El Sheep Shearer te da el patrón del gancho con la pierna extendida que se usa al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a double corkscrew with one leg extended like a dragonfly that finishes by hooking in hyperextension.",
+      "before": {
+        "prerequisites": "You need the Corkscrew and the Sheep Shearer. The Corkscrew gives you the tilted turn; the Sheep Shearer gives you the extended-leg hook pattern.",
+        "space": "A trampoline or a high-performance mat, with supervision."
+      },
+      "body": {
+        "feet": "One-foot entry with a high jump. The kicking foot stays back.",
+        "legs": "One leg travels extended like a dragonfly through the two turns and at the end hooks.",
+        "arms": "The arms open and support the turns; at the end they follow the hook.",
+        "gaze": "The gaze passes over the shoulder during the turns and finds the floor on the finish.",
+        "torso": "The torso stays tucked and arches on the hook."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise high, starting the corkscrew with one leg extended."
+        },
+        {
+          "title": "Double corkscrew",
+          "body": "Complete the two tilted turns keeping the dragonfly leg."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "At the end, arch the back and hook the leg in hyperextension."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees, controlling the exit."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the hook does not come out, land safely without forcing the leg.",
+      "mistakes": [
+        "Losing the extended leg during the turns.",
+        "Flattening the axis and turning flat.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the double corkscrew alone until it is solid.",
+        "Then add the dragonfly leg and the hook.",
+        "Use a trampoline for the double rotation."
+      ],
+      "terms": [
+        {
+          "term": "dragonfly",
+          "meaning": "A position with one leg extended and the body horizontal, like a dragonfly."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hooking kick with the leg extended and the hip open."
+        },
+        {
+          "term": "sheep shearer",
+          "meaning": "A trick with a jump and an extended-leg hook kick."
+        }
+      ],
+      "prereqNotes": {
+        "corkscrew": "The Corkscrew gives you the base tilted turn the dragonfly is mounted on.",
+        "sheepShearer": "The Sheep Shearer gives you the extended-leg hook pattern used at the end."
+      }
+    }
+  },
+  "filipino": {
+    "es": "Es un Full con giro y medio que termina en un mortal de frente. Se puede pensar como un Arabian con un giro extra antes de girar.",
+    "en": "It is a Full with one and a half turns that finishes in a front flip. It can be thought of as an Arabian with an extra spin before flipping.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un giro y medio que termina en un mortal de frente. La cadera viaja hacia atrás, patea la pierna libre y cae de pie sobre las dos piernas.",
+      "before": {
+        "prerequisites": "Necesitas el Full Hyper y el Arabian. El Full Hyper te da el giro completo; el Arabian te da la rotación de frente con la que cierra.",
+        "space": "Colchoneta amplia o cama elástica. Truco de rotación."
+      },
+      "body": {
+        "feet": "Despegue de un pie con la cadera viajando hacia atrás. El pie de impulso empuja fuerte.",
+        "legs": "La pierna libre cruza el cuerpo en la entrada y luego las dos se agrupan para el mortal.",
+        "arms": "Los brazos ayudan a iniciar el giro y luego se recogen para el mortal.",
+        "gaze": "La mirada pasa por encima del hombro en el giro y busca el piso antes de caer.",
+        "torso": "El torso gira con la cadera y se agrupa para el mortal de frente."
+      },
+      "steps": [
+        {
+          "title": "Entrada con giro",
+          "body": "Despega de un pie con la cadera hacia atrás y patea la pierna libre cruzando el cuerpo."
+        },
+        {
+          "title": "Giro y medio",
+          "body": "Completa el giro y medio manteniendo la cadera en el eje."
+        },
+        {
+          "title": "Mortal de frente",
+          "body": "Encadena un mortal de frente agrupando las piernas contra el pecho."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Abre las piernas y baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie sobre las dos piernas con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Perder la cadera durante el giro y quedarte corto.",
+        "Abrir las piernas antes de completar el mortal.",
+        "Mirar el piso en la entrada."
+      ],
+      "tips": [
+        "Practica el giro y medio solo, sin el mortal.",
+        "Después suma el mortal de frente.",
+        "Usa una cama elástica para encadenar las dos rotaciones."
+      ],
+      "terms": [
+        {
+          "term": "full hyper",
+          "meaning": "Giro completo con la espalda arqueada y la cadera abierta."
+        },
+        {
+          "term": "arabian",
+          "meaning": "Mortal de frente que despega de espaldas y aterriza de espaldas."
+        }
+      ],
+      "prereqNotes": {
+        "fullHyper": "El Full Hyper te da el giro completo con la espalda arqueada que arranca el Filipino.",
+        "arabian": "El Arabian te da la rotación de frente con la que cierra el truco."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a turn and a half that finishes in a front flip. The hips travel backward, you kick the free leg across and land on both feet.",
+      "before": {
+        "prerequisites": "You need the Full Hyper and the Arabian. The Full Hyper gives you the full turn; the Arabian gives you the forward rotation it closes with.",
+        "space": "A large mat or a trampoline. A rotation trick."
+      },
+      "body": {
+        "feet": "Take off from one foot with the hips traveling backward. The takeoff leg pushes hard.",
+        "legs": "The free leg crosses the body on the entry and then both tuck for the flip.",
+        "arms": "The arms help start the turn and then tuck for the flip.",
+        "gaze": "The gaze passes over the shoulder during the turn and finds the floor before landing.",
+        "torso": "The torso turns with the hips and tucks for the front flip."
+      },
+      "steps": [
+        {
+          "title": "Entry with a turn",
+          "body": "Take off from one foot with the hips going backward and kick the free leg across the body."
+        },
+        {
+          "title": "Turn and a half",
+          "body": "Complete the turn and a half keeping the hips on the axis."
+        },
+        {
+          "title": "Front flip",
+          "body": "Chain a front flip, tucking the legs to the chest."
+        },
+        {
+          "title": "Landing",
+          "body": "Open the legs and come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on both feet with bent knees and the chest up.",
+      "mistakes": [
+        "Losing the hips during the turn and falling short.",
+        "Opening the legs before completing the flip.",
+        "Looking at the floor on the entry."
+      ],
+      "tips": [
+        "Practice the turn and a half alone, without the flip.",
+        "Then add the front flip.",
+        "Use a trampoline to chain the two rotations."
+      ],
+      "terms": [
+        {
+          "term": "full hyper",
+          "meaning": "A full turn with the back arched and the hip open."
+        },
+        {
+          "term": "arabian",
+          "meaning": "A front flip that takes off backward and lands backward."
+        }
+      ],
+      "prereqNotes": {
+        "fullHyper": "The Full Hyper gives you the full turn with the arched back that starts the Filipino.",
+        "arabian": "The Arabian gives you the forward rotation the trick closes with."
+      }
+    }
+  },
+  "fullCobraTwist": {
+    "es": "Es un Full Cobra con una rotación extra antes de aterrizar, lo que lo vuelve una variación del doble full. El cuerpo se enrosca de lado durante el giro.",
+    "en": "It is a Full Cobra with an extra rotation before landing, making it a double full variation. The body coils to the side during the turn.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un full con torsión de cobra. El cuerpo se enrosca de lado mientras completa el giro y el aterrizaje busca el piso de frente.",
+      "before": {
+        "prerequisites": "Necesitas el Full Cobra y el Double Full. El Full Cobra te da la torsión de lado; el Double Full te da el patrón de los dos giros.",
+        "space": "Colchoneta amplia o cama elástica. Truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada de un pie con salto alto. El pie de pateo queda atrás.",
+        "legs": "Las piernas se recogen y se enroscan con el torso durante el giro.",
+        "arms": "Los brazos ayudan a enroscar el cuerpo de lado y a sostener el giro extra.",
+        "gaze": "La mirada pasa de lado sobre el hombro durante el giro.",
+        "torso": "El torso se enrosca hacia un costado y se desenrosca al aterrizar."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube, arrancando el full."
+        },
+        {
+          "title": "Torsión de cobra",
+          "body": "Enrosca el torso y las piernas hacia un costado mientras giras."
+        },
+        {
+          "title": "Giro extra",
+          "body": "Suma la rotación extra sin perder el enrosque."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Desenrosca y baja de pie de frente, con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie de frente, con las rodillas flexionadas y el pecho arriba. Si el enrosque se suelta, cae seguro.",
+      "mistakes": [
+        "No enroscar de lado y girar como un full normal.",
+        "Soltar la torsión antes de completar el giro extra.",
+        "Mirar el piso y perder el eje."
+      ],
+      "tips": [
+        "Practica el Full Cobra hasta que la torsión sea natural.",
+        "Después suma la rotación extra.",
+        "Usa una cama elástica para la salida."
+      ],
+      "terms": [
+        {
+          "term": "cobra twist",
+          "meaning": "Torsión del cuerpo hacia un costado mientras gira, como el enrosque de una cobra."
+        },
+        {
+          "term": "double full",
+          "meaning": "Dos giros completos, 720 grados."
+        }
+      ],
+      "prereqNotes": {
+        "fullCobra": "El Full Cobra te da la torsión de lado sobre la que se monta el giro extra.",
+        "doubleFull": "El Double Full te da el patrón de dos giros para sostener la rotación."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a full with a cobra twist. The body coils to the side while completing the turn and the landing finds the floor facing forward.",
+      "before": {
+        "prerequisites": "You need the Full Cobra and the Double Full. The Full Cobra gives you the side coil; the Double Full gives you the two-turn pattern.",
+        "space": "A large mat or a trampoline. An advanced trick."
+      },
+      "body": {
+        "feet": "One-foot entry with a high jump. The kicking foot stays back.",
+        "legs": "The legs tuck and coil with the torso during the turn.",
+        "arms": "The arms help coil the body to the side and support the extra turn.",
+        "gaze": "The gaze passes sideways over the shoulder during the turn.",
+        "torso": "The torso coils to one side and uncoils on landing."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise, starting the full."
+        },
+        {
+          "title": "Cobra coil",
+          "body": "Coil the torso and legs to one side while you turn."
+        },
+        {
+          "title": "Extra turn",
+          "body": "Add the extra rotation without losing the coil."
+        },
+        {
+          "title": "Landing",
+          "body": "Uncoil and come down on your feet facing forward, with soft knees."
+        }
+      ],
+      "landing": "Land on your feet facing forward, with bent knees and the chest up. If the coil releases, land safely.",
+      "mistakes": [
+        "Not coiling to the side and turning like a normal full.",
+        "Releasing the coil before completing the extra turn.",
+        "Looking at the floor and losing the axis."
+      ],
+      "tips": [
+        "Practice the Full Cobra until the coil feels natural.",
+        "Then add the extra rotation.",
+        "Use a trampoline for the exit."
+      ],
+      "terms": [
+        {
+          "term": "cobra twist",
+          "meaning": "A twist of the body to one side as it turns, like a cobra coiling."
+        },
+        {
+          "term": "double full",
+          "meaning": "Two full turns, 720 degrees."
+        }
+      ],
+      "prereqNotes": {
+        "fullCobra": "The Full Cobra gives you the side coil the extra turn is mounted on.",
+        "doubleFull": "The Double Full gives you the two-turn pattern to support the rotation."
+      }
+    }
+  },
+  "fullDoublelegHyperhook": {
+    "es": "Es un Full Doubleleg que remata en hyperhook. El giro completo se hace con las dos piernas juntas y el gancho sale justo antes de caer.",
+    "en": "It is a Full Doubleleg that finishes in a hyperhook. The full turn is done with both legs together and the hook comes out just before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un full doubleleg que termina en hyperhook. La doble pierna completa el giro y el gancho extendido sale justo antes del aterrizaje.",
+      "before": {
+        "prerequisites": "Necesitas el Full Doubleleg y el Full Hyperhook. El primero te da el giro con las piernas juntas; el segundo, la forma del gancho.",
+        "space": "Colchoneta amplia o cama elástica. Truco avanzado."
+      },
+      "body": {
+        "feet": "Entrada de un pie con salto alto. El pie de pateo queda atrás.",
+        "legs": "Las dos piernas viajan juntas y estiradas durante el giro y al final una engancha.",
+        "arms": "Los brazos se recogen para girar y acompañan el gancho.",
+        "gaze": "La mirada pasa por encima del hombro en el giro y busca el piso al enganchar.",
+        "torso": "El torso se mantiene firme durante el giro y se arquea al enganchar."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube, arrancando el full con las piernas juntas."
+        },
+        {
+          "title": "Full doubleleg",
+          "body": "Completa los 360 grados manteniendo las dos piernas extendidas y juntas."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Justo antes de caer, engancha una pierna en hiperextensión."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si el gancho no sale, aterriza seguro.",
+      "mistakes": [
+        "Abrir las piernas antes de terminar el giro.",
+        "Enganchar con la rodilla doblada.",
+        "Perder el eje y caer de lado."
+      ],
+      "tips": [
+        "Practica el Full Doubleleg solo hasta que las piernas queden juntas.",
+        "Después agrega el gancho final.",
+        "Usa una cama elástica para la salida."
+      ],
+      "terms": [
+        {
+          "term": "doubleleg",
+          "meaning": "Las dos piernas juntas y estiradas, como una sola."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de enganche con la pierna estirada y la cadera abierta."
+        }
+      ],
+      "prereqNotes": {
+        "fullDoubleleg": "El Full Doubleleg te da el giro completo con las dos piernas juntas.",
+        "fullHyperhook": "El Full Hyperhook te da la forma del gancho al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a full doubleleg that ends in a hyperhook. The double leg completes the turn and the extended hook swings out just before landing.",
+      "before": {
+        "prerequisites": "You need the Full Doubleleg and the Full Hyperhook. The first gives you the turn with the legs together; the second gives you the hook shape.",
+        "space": "A large mat or a trampoline. An advanced trick."
+      },
+      "body": {
+        "feet": "One-foot entry with a high jump. The kicking foot stays back.",
+        "legs": "Both legs travel together and extended during the turn and at the end one hooks.",
+        "arms": "The arms tuck to turn and follow the hook.",
+        "gaze": "The gaze passes over the shoulder during the turn and finds the floor on the hook.",
+        "torso": "The torso stays firm during the turn and arches on the hook."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise, starting the full with the legs together."
+        },
+        {
+          "title": "Full doubleleg",
+          "body": "Complete the 360 degrees keeping both legs extended and together."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Just before landing, hook one leg in hyperextension."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If the hook does not come out, land safely.",
+      "mistakes": [
+        "Opening the legs before finishing the turn.",
+        "Hooking with a bent knee.",
+        "Losing the axis and landing sideways."
+      ],
+      "tips": [
+        "Practice the Full Doubleleg alone until the legs stay together.",
+        "Then add the final hook.",
+        "Use a trampoline for the exit."
+      ],
+      "terms": [
+        {
+          "term": "doubleleg",
+          "meaning": "Both legs together and extended, as one."
+        },
+        {
+          "term": "hyperhook",
+          "meaning": "A hooking kick with the leg extended and the hip open."
+        }
+      ],
+      "prereqNotes": {
+        "fullDoubleleg": "The Full Doubleleg gives you the full turn with both legs together.",
+        "fullHyperhook": "The Full Hyperhook gives you the hook shape at the end."
+      }
+    }
+  },
+  "fullFeilongDouble": {
+    "es": "Es un Full Feilong con una patada extra que aterriza en mega. El cuerpo gira con una pierna extendida como dragón y suma una patada más.",
+    "en": "It is a Full Feilong with an extra kick that lands in mega. The body turns with one leg extended like a dragon and adds one more kick.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un full con forma de feilong, con una pierna extendida como dragón. Completa el giro doble y suma una patada extra antes de aterrizar en mega.",
+      "before": {
+        "prerequisites": "Necesitas el Full Feilong. Ese truco te da el giro completo con la pierna de dragón; acá sumas la patada extra.",
+        "space": "Colchoneta amplia o cama elástica. Truco de élite."
+      },
+      "body": {
+        "feet": "Entrada con un paso y salto alto. El pie de pateo queda atrás.",
+        "legs": "Una pierna viaja extendida como dragón durante el giro y agrega la patada extra al final.",
+        "arms": "Los brazos abren el giro y acompañan las patadas.",
+        "gaze": "La mirada pasa por encima del hombro en el giro y busca el piso al rematar.",
+        "torso": "El torso se inclina y se mantiene largo durante el giro."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube, arrancando el full con la pierna de dragón."
+        },
+        {
+          "title": "Giro feilong",
+          "body": "Completa el giro manteniendo la pierna extendida como dragón."
+        },
+        {
+          "title": "Patada extra",
+          "body": "Suma la patada extra al final de la rotación."
+        },
+        {
+          "title": "Aterrizaje mega",
+          "body": "Aterriza en postura mega, con la pierna estirada y las rodillas blandas."
+        }
+      ],
+      "landing": "Cae en postura mega, con la pierna estirada y el pecho arriba. Si la rotación se queda corta, no fuerces la patada.",
+      "mistakes": [
+        "Doblar la pierna del feilong.",
+        "Perder altura en el giro doble.",
+        "Abrir el remate demasiado tarde."
+      ],
+      "tips": [
+        "Practica el Full Feilong hasta dominar el giro con la pierna extendida.",
+        "Después agrega la patada extra.",
+        "Usa una cama elástica para la caída."
+      ],
+      "terms": [
+        {
+          "term": "feilong",
+          "meaning": "Remate con pierna extendida y forma de dragón, con patadas encadenadas."
+        },
+        {
+          "term": "mega",
+          "meaning": "Postura de aterrizaje con la pierna bien estirada y abierta."
+        }
+      ],
+      "prereqNotes": {
+        "fullFeilong": "El Full Feilong te da el giro completo con la pierna extendida de dragón; acá solo sumas la patada extra."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a full shaped like a feilong, with one leg extended like a dragon. It completes the double turn and adds one more kick before landing in mega.",
+      "before": {
+        "prerequisites": "You need the Full Feilong. That trick gives you the full turn with the dragon leg; here you add the extra kick.",
+        "space": "A large mat or a trampoline. An elite trick."
+      },
+      "body": {
+        "feet": "Enter with a step and a high jump. The kicking foot stays back.",
+        "legs": "One leg travels extended like a dragon during the turn and adds the extra kick at the end.",
+        "arms": "The arms open the turn and follow the kicks.",
+        "gaze": "The gaze passes over the shoulder during the turn and finds the floor on the finish.",
+        "torso": "The torso tilts and stays long during the turn."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise, starting the full with the dragon leg."
+        },
+        {
+          "title": "Feilong turn",
+          "body": "Complete the turn keeping the leg extended like a dragon."
+        },
+        {
+          "title": "Extra kick",
+          "body": "Add the extra kick at the end of the rotation."
+        },
+        {
+          "title": "Mega landing",
+          "body": "Land in mega stance, with the leg extended and soft knees."
+        }
+      ],
+      "landing": "Land in mega stance, with the leg extended and the chest up. If the rotation falls short, do not force the kick.",
+      "mistakes": [
+        "Bending the feilong leg.",
+        "Losing height on the double turn.",
+        "Opening the finish too late."
+      ],
+      "tips": [
+        "Practice the Full Feilong until the turn with the extended leg is solid.",
+        "Then add the extra kick.",
+        "Use a trampoline for the landing."
+      ],
+      "terms": [
+        {
+          "term": "feilong",
+          "meaning": "A finish with an extended leg in a dragon shape, with chained kicks."
+        },
+        {
+          "term": "mega",
+          "meaning": "A landing stance with the leg fully extended and open."
+        }
+      ],
+      "prereqNotes": {
+        "fullFeilong": "The Full Feilong gives you the full turn with the extended dragon leg; here you only add the extra kick."
+      }
+    }
+  },
+  "fullHyperhookTurbo": {
+    "es": "Es un Full Hyperhook que aterriza de frente sobre los dos pies. El gancho es el mismo, pero la salida es turbo.",
+    "en": "It is a Full Hyperhook that lands facing forward on both feet. The hook is the same, but the exit is turbo.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un full hyperhook en versión turbo, con el gancho tardío y acelerado. El giro completo se acelera y el gancho sale al final antes del aterrizaje.",
+      "before": {
+        "prerequisites": "Necesitas el Full Hyperhook. Primero domina el giro con el gancho antes de cambiar la salida.",
+        "space": "Colchoneta amplia. El giro es rápido, deja espacio libre."
+      },
+      "body": {
+        "feet": "Entrada de un pie con salto alto. El pie de pateo queda atrás.",
+        "legs": "Las piernas giran recogidas y al final una engancha; las dos preparan la caída de frente.",
+        "arms": "Los brazos se recogen para girar y acompañan el gancho.",
+        "gaze": "La mirada pasa por encima del hombro y busca el horizonte al enganchar.",
+        "torso": "El torso se mantiene alto y firme durante el giro rápido."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y sube, arrancando el full."
+        },
+        {
+          "title": "Giro acelerado",
+          "body": "Completa los 360 grados dejando que el giro se acelere al final."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Engancha una pierna en hiperextensión justo antes de caer."
+        },
+        {
+          "title": "Aterrizaje turbo",
+          "body": "Cae de frente sobre los dos pies con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de frente sobre los dos pies, con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Frenar el giro antes del gancho.",
+        "Caer en un solo pie por costumbre.",
+        "Aterrizar con las rodillas bloqueadas."
+      ],
+      "tips": [
+        "Practica la salida turbo sola, como un salto de dos pies.",
+        "Después agrega el giro y el gancho.",
+        "Usa una colchoneta para la caída de frente."
+      ],
+      "terms": [
+        {
+          "term": "hyperhook",
+          "meaning": "Patada de enganche con la pierna estirada y la cadera abierta."
+        },
+        {
+          "term": "turbo",
+          "meaning": "Salida que aterriza de frente sobre las dos piernas."
+        }
+      ],
+      "prereqNotes": {
+        "fullHyperhook": "El Full Hyperhook te da el giro completo con el gancho; el Turbo solo cambia la salida."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a full hyperhook in the turbo version, with a late accelerated hook. The full turn speeds up and the hook swings out at the end before landing.",
+      "before": {
+        "prerequisites": "You need the Full Hyperhook. First master the turn with the hook before changing the exit.",
+        "space": "A large mat. The turn is fast, leave room."
+      },
+      "body": {
+        "feet": "One-foot entry with a high jump. The kicking foot stays back.",
+        "legs": "The legs turn tucked and at the end one hooks; both prepare the forward landing.",
+        "arms": "The arms tuck to turn and follow the hook.",
+        "gaze": "The gaze passes over the shoulder and finds the horizon on the hook.",
+        "torso": "The torso stays tall and firm during the fast turn."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and rise, starting the full."
+        },
+        {
+          "title": "Accelerated turn",
+          "body": "Complete the 360 degrees, letting the turn speed up at the end."
+        },
+        {
+          "title": "Hyperhook",
+          "body": "Hook one leg in hyperextension just before landing."
+        },
+        {
+          "title": "Turbo landing",
+          "body": "Land facing forward on both feet with soft knees."
+        }
+      ],
+      "landing": "Land facing forward on both feet, with bent knees and the chest up.",
+      "mistakes": [
+        "Braking the turn before the hook.",
+        "Landing on one foot out of habit.",
+        "Landing with locked knees."
+      ],
+      "tips": [
+        "Practice the turbo exit alone, like a two-foot jump.",
+        "Then add the turn and the hook.",
+        "Use a mat for the forward landing."
+      ],
+      "terms": [
+        {
+          "term": "hyperhook",
+          "meaning": "A hooking kick with the leg extended and the hip open."
+        },
+        {
+          "term": "turbo",
+          "meaning": "An exit that lands facing forward on both legs."
+        }
+      ],
+      "prereqNotes": {
+        "fullHyperhook": "The Full Hyperhook gives you the full turn with the hook; the Turbo only changes the exit."
+      }
+    }
+  }
+}

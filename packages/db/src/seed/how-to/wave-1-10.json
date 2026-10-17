@@ -1,0 +1,362 @@
+{
+  "popFeilongKnife": {
+    "es": "Es un Pop Feilong que termina en navaja. El barrido final se hace con la pierna estirada y rigida.",
+    "en": "It is a Pop Feilong that finishes with a knife kick. The final sweep is done with the leg straight and rigid.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Pop Feilong con navaja final. El giro se extiende en el aire y la pierna recta cierra el arco.",
+      "before": {
+        "prerequisites": "Necesitas el Pop Feilong. Te da el despegue, el giro y el barrido de base.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con un pop corto y despegue con los dos pies.",
+        "legs": "La pierna final se mantiene estirada y rigida como una navaja.",
+        "arms": "Los brazos ayudan a girar y se recogen para no frenar la pierna.",
+        "gaze": "Mira por encima del hombro y sigue la pierna en el arco.",
+        "torso": "El torso gira y se inclina con el corte de la pierna."
+      },
+      "steps": [
+        {
+          "title": "Pop",
+          "body": "Da un paso corto y despega con los dos pies."
+        },
+        {
+          "title": "Feilong",
+          "body": "Completa el giro y el barrido del Pop Feilong."
+        },
+        {
+          "title": "Navaja",
+          "body": "Cierra el arco con la pierna estirada y rigida."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho arriba.",
+      "mistakes": [
+        "Doblar la rodilla en la navaja.",
+        "Cerrar el arco demasiado tarde.",
+        "Perder el giro.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Pop Feilong hasta que el giro sea estable.",
+        "Marca la pierna estirada de pie antes de unirla.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "feilong",
+          "meaning": "Barrido giratorio con la pierna que cruza el cuerpo."
+        },
+        {
+          "term": "knife",
+          "meaning": "Barrido con la pierna estirada y rigida, como una navaja."
+        }
+      ],
+      "prereqNotes": {
+        "popFeilong": "El Pop Feilong te da el despegue, el giro y el barrido que se cierra con la pierna recta."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Pop Feilong that finishes with a knife kick. The final sweep is done with the leg straight and rigid.",
+      "before": {
+        "prerequisites": "You need the Pop Feilong. It gives you the takeoff, the turn and the base sweep.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a short pop and take off from both feet.",
+        "legs": "The final leg stays straight and rigid like a knife.",
+        "arms": "The arms help turn and tuck so they do not slow the leg.",
+        "gaze": "Look over the shoulder and follow the leg on the arc.",
+        "torso": "The torso turns and tilts with the leg cut."
+      },
+      "steps": [
+        {
+          "title": "Pop",
+          "body": "Take a short step and take off from both feet."
+        },
+        {
+          "title": "Feilong",
+          "body": "Complete the turn and the Pop Feilong sweep."
+        },
+        {
+          "title": "Knife",
+          "body": "Close the arc with the leg straight and rigid."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with a soft knee."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest up.",
+      "mistakes": [
+        "Bending the knee on the knife.",
+        "Closing the arc too late.",
+        "Losing the turn.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Pop Feilong until the turn is stable.",
+        "Mark the straight leg standing before joining it.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "feilong",
+          "meaning": "A spinning sweep with the leg that crosses the body."
+        },
+        {
+          "term": "knife",
+          "meaning": "A sweep with the leg straight and rigid, like a knife."
+        }
+      ],
+      "prereqNotes": {
+        "popFeilong": "The Pop Feilong gives you the takeoff, the turn and the sweep that closes with the straight leg."
+      }
+    }
+  },
+  "swing900": {
+    "es": "Es una patada vertical de dos giros y medio, 900 grados, con entrada de swing. El swing impulsa el salto y el giro encadena las rotaciones.",
+    "en": "It is a vertical kick with two and a half turns, 900 degrees, with a swing entry. The swing drives the jump and the turn chains the rotations.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada vertical de 900 grados con entrada de swing. Se puede ver como un Corkscrew Round vertical.",
+      "before": {
+        "prerequisites": "Necesitas el Backside 900. Te da dos giros y medio y la base del remate.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con swing de pierna y despegue de un pie.",
+        "legs": "La pierna atacante sale en una patada interior al final del giro.",
+        "arms": "Los brazos ayudan a mantener el eje y a acompanar el remate.",
+        "gaze": "La mirada gira con el cuerpo y busca el objetivo al patear.",
+        "torso": "El torso gira compacto y se abre en la patada interior."
+      },
+      "steps": [
+        {
+          "title": "Swing",
+          "body": "Da el paso y haz el swing de entrada."
+        },
+        {
+          "title": "Giros",
+          "body": "Salta y encadena los dos giros y medio."
+        },
+        {
+          "title": "Patada interior",
+          "body": "Lanza la patada interior al final del giro."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Perder el swing de entrada.",
+        "Doblar la rodilla en la patada.",
+        "No completar los giros.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Backside 900 hasta que los giros sean estables.",
+        "Marca la patada interior de pie.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "swing",
+          "meaning": "Entrada con un balanceo amplio de la pierna que arma el giro."
+        },
+        {
+          "term": "inside kick",
+          "meaning": "Patada que cruza el cuerpo hacia adentro, con la pierna extendida."
+        }
+      ],
+      "prereqNotes": {
+        "backside900": "El Backside 900 te da los dos giros y medio y el eje para sumar la patada interior con swing."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a 900-degree vertical kick with a swing entry. It can be seen as a vertical Corkscrew Round.",
+      "before": {
+        "prerequisites": "You need the Backside 900. It gives you the two and a half turns and the base strike.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a leg swing and take off from one foot.",
+        "legs": "The attacking leg comes out in an inside kick at the end of the turn.",
+        "arms": "The arms help keep the axis and follow the strike.",
+        "gaze": "The gaze turns with the body and finds the target on the kick.",
+        "torso": "The torso turns compact and opens on the inside kick."
+      },
+      "steps": [
+        {
+          "title": "Swing",
+          "body": "Take the step and make the entry swing."
+        },
+        {
+          "title": "Turns",
+          "body": "Jump and chain the two and a half turns."
+        },
+        {
+          "title": "Inside kick",
+          "body": "Throw the inside kick at the end of the turn."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with a soft knee."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up.",
+      "mistakes": [
+        "Losing the entry swing.",
+        "Bending the knee on the kick.",
+        "Not completing the turns.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Backside 900 until the turns are stable.",
+        "Mark the inside kick standing.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "swing",
+          "meaning": "An entry with a wide leg swing that sets up the turn."
+        },
+        {
+          "term": "inside kick",
+          "meaning": "A kick that crosses the body inward with the leg extended."
+        }
+      ],
+      "prereqNotes": {
+        "backside900": "The Backside 900 gives you the two and a half turns and the axis for the inside kick with the swing."
+      }
+    }
+  },
+  "twistKnife": {
+    "es": "Es un Jackknife con una patada de giro en vez de una patada circular. La cadera y los hombros giran en direcciones opuestas y la pierna recta corta el aire.",
+    "en": "It is a Jackknife with a twist kick instead of a round kick. The hips and shoulders turn in opposite directions and the straight leg cuts the air.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un Jackknife con una patada de giro de pierna recta. El torso se retuerce y la pierna corta en el aire.",
+      "before": {
+        "prerequisites": "Necesitas el Jackknife. Te da el giro, la pierna estirada y la salida.",
+        "space": "Colchoneta amplia."
+      },
+      "body": {
+        "feet": "Entrada con paso y despegue de un pie.",
+        "legs": "La pierna de pateo se mantiene estirada y corta con el borde del pie.",
+        "arms": "Los brazos ayudan al giro y se recogen para no frenar la pierna.",
+        "gaze": "Mira por encima del hombro y sigue la pierna al cortar.",
+        "torso": "El torso se retuerce: la cadera y los hombros giran en direcciones opuestas."
+      },
+      "steps": [
+        {
+          "title": "Entrada",
+          "body": "Da el paso y despega de un pie."
+        },
+        {
+          "title": "Giro",
+          "body": "Gira el cuerpo como en un Jackknife."
+        },
+        {
+          "title": "Twist kick",
+          "body": "Corta con la pierna estirada usando el borde del pie."
+        },
+        {
+          "title": "Aterrizaje",
+          "body": "Baja de pie con la rodilla blanda."
+        }
+      ],
+      "landing": "Cae sobre el pie de apoyo con la rodilla flexionada y el pecho arriba.",
+      "mistakes": [
+        "Doblar la rodilla en el corte.",
+        "No retorcer el torso.",
+        "Cortar demasiado tarde.",
+        "Mirar el piso."
+      ],
+      "tips": [
+        "Practica el Jackknife hasta que el giro sea estable.",
+        "Marca el twist kick de pie antes de unirlo.",
+        "Usa una cama elastica para la altura."
+      ],
+      "terms": [
+        {
+          "term": "jackknife",
+          "meaning": "Patada con la pierna estirada y el torso inclinado, como una navaja que se abre."
+        },
+        {
+          "term": "twist kick",
+          "meaning": "Patada que golpea con el borde del pie mientras el torso se retuerce."
+        }
+      ],
+      "prereqNotes": {
+        "jackknife": "El Jackknife te da el giro, la pierna estirada y la base del corte."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Jackknife with a straight-leg twist kick. The torso twists and the leg cuts through the air.",
+      "before": {
+        "prerequisites": "You need the Jackknife. It gives you the turn, the straight leg and the exit.",
+        "space": "A large mat."
+      },
+      "body": {
+        "feet": "Enter with a step and take off from one foot.",
+        "legs": "The kicking leg stays straight and cuts with the edge of the foot.",
+        "arms": "The arms help turn and tuck so they do not slow the leg.",
+        "gaze": "Look over the shoulder and follow the leg on the cut.",
+        "torso": "The torso twists: the hips and shoulders turn in opposite directions."
+      },
+      "steps": [
+        {
+          "title": "Entry",
+          "body": "Take the step and take off from one foot."
+        },
+        {
+          "title": "Turn",
+          "body": "Turn the body like a Jackknife."
+        },
+        {
+          "title": "Twist kick",
+          "body": "Cut with the straight leg using the edge of the foot."
+        },
+        {
+          "title": "Landing",
+          "body": "Come down on your feet with a soft knee."
+        }
+      ],
+      "landing": "Land on the support foot with a bent knee and the chest up.",
+      "mistakes": [
+        "Bending the knee on the cut.",
+        "Not twisting the torso.",
+        "Cutting too late.",
+        "Looking at the floor."
+      ],
+      "tips": [
+        "Practice the Jackknife until the turn is stable.",
+        "Mark the twist kick standing before joining it.",
+        "Use a trampoline for height."
+      ],
+      "terms": [
+        {
+          "term": "jackknife",
+          "meaning": "A kick with the leg straight and the torso tilted, like a jackknife opening."
+        },
+        {
+          "term": "twist kick",
+          "meaning": "A kick that strikes with the edge of the foot while the torso twists."
+        }
+      ],
+      "prereqNotes": {
+        "jackknife": "The Jackknife gives you the turn, the straight leg and the base of the cut."
+      }
+    }
+  }
+}

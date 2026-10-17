@@ -1,0 +1,1168 @@
+{
+  "cheat1260Double": {
+    "es": "Es un cheat 1260 en el que se lanzan dos patadas con la misma pierna dentro de las tres vueltas y media. El giro reparte el primer golpe y el segundo.",
+    "en": "It is a Cheat 1260 in which two kicks are thrown with the same leg inside the three and a half turns. The spin spreads the first strike and the second.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un cheat 1260 en el que se lanzan dos patadas con la misma pierna dentro de las tres vueltas y media. El giro reparte el primer golpe y el segundo.",
+      "before": {
+        "prerequisites": "Necesitas el Cheat 1260. Ese truco te da las tres vueltas y media desde el paso de cheat; aquí agregas la segunda patada.",
+        "space": "Colchoneta amplia, con unos 4 o 5 pasos. Es un truco de giro alto."
+      },
+      "body": {
+        "feet": "Despegas de un pie con el paso de cheat y giras.",
+        "legs": "La misma pierna lanza las dos patadas dentro del giro: una al principio y otra al final.",
+        "arms": "Los brazos abren el giro y se recogen para acelerarlo.",
+        "gaze": "Mira por encima del hombro durante las vueltas y al objetivo en cada patada.",
+        "torso": "El tronco gira tres vueltas y media con el eje firme."
+      },
+      "steps": [
+        {
+          "title": "Paso de cheat",
+          "body": "Da el paso de cheat y arranca el giro."
+        },
+        {
+          "title": "Primera patada",
+          "body": "Lanza la primera patada dentro del giro."
+        },
+        {
+          "title": "Segunda patada",
+          "body": "Repite con la misma pierna en el remate."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de despegue con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de despegue con la rodilla flexionada y el pecho arriba. Si pierdes el eje, practica el Cheat 1260 hasta que sea sólido.",
+      "mistakes": [
+        "Perder el eje entre las dos patadas.",
+        "Patear con la pierna suelta.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Cheat 1260 hasta que las vueltas sean estables.",
+        "Marca las dos patadas a baja altura antes de unirlas."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "Entrada en la que giras las caderas antes de saltar, por eso el giro se siente corto."
+        },
+        {
+          "term": "recámara",
+          "meaning": "Recogida breve de la pierna antes de estirarla en la patada."
+        }
+      ],
+      "prereqNotes": {
+        "cheat1260": "El Cheat 1260 te da las tres vueltas y media desde el paso de cheat; aquí se agrega una segunda patada con la misma pierna."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Cheat 1260 in which two kicks are thrown with the same leg inside the three and a half turns. The spin spreads the first strike and the second.",
+      "before": {
+        "prerequisites": "You need the Cheat 1260. That trick gives you the three and a half turns from the cheat step; here you add the second kick.",
+        "space": "A large mat, with about 4 or 5 steps. This is a high-spin trick."
+      },
+      "body": {
+        "feet": "You take off from one foot with the cheat step and turn.",
+        "legs": "The same leg throws both kicks inside the turn: one early and one at the end.",
+        "arms": "The arms open the turn and tuck to speed it up.",
+        "gaze": "Look over the shoulder during the rotations and at the target on each kick.",
+        "torso": "The torso turns three and a half rotations with the axis firm."
+      },
+      "steps": [
+        {
+          "title": "Cheat step",
+          "body": "Take the cheat step and begin the turn."
+        },
+        {
+          "title": "First kick",
+          "body": "Throw the first kick inside the turn."
+        },
+        {
+          "title": "Second kick",
+          "body": "Repeat with the same leg on the finish."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the takeoff foot with soft knees."
+        }
+      ],
+      "landing": "Land on the takeoff foot with the knee bent and the chest up. If you lose the axis, practice the Cheat 1260 until it is solid.",
+      "mistakes": [
+        "Losing the axis between the two kicks.",
+        "Kicking with a loose leg.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Cheat 1260 until the rotations are stable.",
+        "Mark the two kicks at low height before joining them."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "An entry where you turn the hips before jumping, so the turn feels short."
+        },
+        {
+          "term": "chamber",
+          "meaning": "A brief tuck of the leg before extending it in the kick."
+        }
+      ],
+      "prereqNotes": {
+        "cheat1260": "The Cheat 1260 gives you the three and a half turns from the cheat step; here you add a second kick with the same leg."
+      }
+    }
+  },
+  "cheat720Double": {
+    "es": "Es una patada de dos giros, 720 grados, desde un paso de cheat, con dos patadas de la misma pierna. La primera patada es solo un chamber extendido y la segunda remata.",
+    "en": "It is a two-rotation kick, 720 degrees, from a cheat step, with two kicks from the same leg. The first kick is just a straightened chamber and the second finishes.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada de dos giros, 720 grados, desde un paso de cheat, con dos patadas de la misma pierna. La primera es solo un chamber extendido y la segunda remata.",
+      "before": {
+        "prerequisites": "Necesitas el Cheat 720. Ese truco te da los dos giros desde el paso de cheat; aquí agregas la segunda patada.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie con el paso de cheat y giras.",
+        "legs": "La misma pierna extiende la primera patada, casi como una recámara, y remata con la segunda.",
+        "arms": "Los brazos abren los giros y se recogen para acelerarlos.",
+        "gaze": "Mira por encima del hombro durante los giros y al objetivo en la segunda patada.",
+        "torso": "El tronco gira 720 grados con el eje firme."
+      },
+      "steps": [
+        {
+          "title": "Paso de cheat",
+          "body": "Da el paso de cheat y arranca el giro."
+        },
+        {
+          "title": "Primera patada",
+          "body": "Extiende la pierna en una recámara larga."
+        },
+        {
+          "title": "Segunda patada",
+          "body": "Remata con la segunda patada de la misma pierna."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de despegue con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de despegue con la rodilla flexionada y el pecho arriba. Si el giro se corta, gíralo un poco antes.",
+      "mistakes": [
+        "Convertir la primera patada en un golpe fuerte: es más bien una recámara extendida.",
+        "Perder el eje.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Cheat 720 hasta que los dos giros sean estables.",
+        "Marca las dos patadas a baja altura antes de unirlas."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "Entrada en la que giras las caderas antes de saltar, por eso el giro se siente corto."
+        },
+        {
+          "term": "chamber",
+          "meaning": "Recogida breve de la pierna antes de estirarla en la patada."
+        }
+      ],
+      "prereqNotes": {
+        "cheat720": "El Cheat 720 te da los dos giros desde el paso de cheat; aquí se agrega una segunda patada con la misma pierna."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a two-rotation kick, 720 degrees, from a cheat step, with two kicks from the same leg. The first is just a straightened chamber and the second finishes.",
+      "before": {
+        "prerequisites": "You need the Cheat 720. That trick gives you the two turns from the cheat step; here you add the second kick.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot with the cheat step and turn.",
+        "legs": "The same leg extends the first kick, almost like a chamber, and finishes with the second.",
+        "arms": "The arms open the turns and tuck to speed them up.",
+        "gaze": "Look over the shoulder during the turns and at the target on the second kick.",
+        "torso": "The torso turns 720 degrees with the axis firm."
+      },
+      "steps": [
+        {
+          "title": "Cheat step",
+          "body": "Take the cheat step and begin the turn."
+        },
+        {
+          "title": "First kick",
+          "body": "Extend the leg in a long chamber."
+        },
+        {
+          "title": "Second kick",
+          "body": "Finish with the second kick from the same leg."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the takeoff foot with soft knees."
+        }
+      ],
+      "landing": "Land on the takeoff foot with the knee bent and the chest up. If the turn cuts off, start it a little earlier.",
+      "mistakes": [
+        "Turning the first kick into a hard strike: it is more of a straightened chamber.",
+        "Losing the axis.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Cheat 720 until the two turns are stable.",
+        "Mark the two kicks at low height before joining them."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "An entry where you turn the hips before jumping, so the turn feels short."
+        },
+        {
+          "term": "chamber",
+          "meaning": "A brief tuck of the leg before extending it in the kick."
+        }
+      ],
+      "prereqNotes": {
+        "cheat720": "The Cheat 720 gives you the two turns from the cheat step; here you add a second kick with the same leg."
+      }
+    }
+  },
+  "cheat900Double": {
+    "es": "Es un cheat 900 en el que se lanzan dos patadas con la misma pierna dentro de los dos giros y medio. El giro reparte el primer golpe y el segundo.",
+    "en": "It is a Cheat 900 in which two kicks are thrown with the same leg inside the two and a half turns. The spin spreads the first strike and the second.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un cheat 900 en el que se lanzan dos patadas con la misma pierna dentro de los dos giros y medio. El giro reparte el primer golpe y el segundo.",
+      "before": {
+        "prerequisites": "Necesitas el Cheat 900. Ese truco te da los dos giros y medio desde el paso de cheat; aquí agregas la segunda patada.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie con el paso de cheat y giras.",
+        "legs": "La misma pierna lanza las dos patadas dentro del giro.",
+        "arms": "Los brazos abren el giro y se recogen para acelerarlo.",
+        "gaze": "Mira por encima del hombro durante las vueltas y al objetivo en cada patada.",
+        "torso": "El tronco gira dos vueltas y media con el eje firme."
+      },
+      "steps": [
+        {
+          "title": "Paso de cheat",
+          "body": "Da el paso de cheat y arranca el giro."
+        },
+        {
+          "title": "Primera patada",
+          "body": "Lanza la primera patada dentro del giro."
+        },
+        {
+          "title": "Segunda patada",
+          "body": "Repite con la misma pierna en el remate."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de despegue con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de despegue con la rodilla flexionada y el pecho arriba. Si pierdes el eje, practica el Cheat 900 hasta que sea sólido.",
+      "mistakes": [
+        "Perder el eje entre las dos patadas.",
+        "Patear con la pierna suelta.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Cheat 900 hasta que las vueltas sean estables.",
+        "Marca las dos patadas a baja altura antes de unirlas."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "Entrada en la que giras las caderas antes de saltar, por eso el giro se siente corto."
+        },
+        {
+          "term": "inside kick",
+          "meaning": "Patada que cruza hacia adentro, con el pie pasando por delante del cuerpo."
+        }
+      ],
+      "prereqNotes": {
+        "cheat900": "El Cheat 900 te da los dos giros y medio desde el paso de cheat; aquí se agrega una segunda patada con la misma pierna."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Cheat 900 in which two kicks are thrown with the same leg inside the two and a half turns. The spin spreads the first strike and the second.",
+      "before": {
+        "prerequisites": "You need the Cheat 900. That trick gives you the two and a half turns from the cheat step; here you add the second kick.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot with the cheat step and turn.",
+        "legs": "The same leg throws both kicks inside the turn.",
+        "arms": "The arms open the turn and tuck to speed it up.",
+        "gaze": "Look over the shoulder during the rotations and at the target on each kick.",
+        "torso": "The torso turns two and a half rotations with the axis firm."
+      },
+      "steps": [
+        {
+          "title": "Cheat step",
+          "body": "Take the cheat step and begin the turn."
+        },
+        {
+          "title": "First kick",
+          "body": "Throw the first kick inside the turn."
+        },
+        {
+          "title": "Second kick",
+          "body": "Repeat with the same leg on the finish."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the takeoff foot with soft knees."
+        }
+      ],
+      "landing": "Land on the takeoff foot with the knee bent and the chest up. If you lose the axis, practice the Cheat 900 until it is solid.",
+      "mistakes": [
+        "Losing the axis between the two kicks.",
+        "Kicking with a loose leg.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Cheat 900 until the rotations are stable.",
+        "Mark the two kicks at low height before joining them."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "An entry where you turn the hips before jumping, so the turn feels short."
+        },
+        {
+          "term": "inside kick",
+          "meaning": "A kick that crosses inward, with the foot passing in front of the body."
+        }
+      ],
+      "prereqNotes": {
+        "cheat900": "The Cheat 900 gives you the two and a half turns from the cheat step; here you add a second kick with the same leg."
+      }
+    }
+  },
+  "cheat900Feilong": {
+    "es": "Es un cheat 900 con remate feilong: tras los dos giros y medio, la patada se prolonga en un barrido de dragón inclinado atrás.",
+    "en": "It is a Cheat 900 with a feilong finish: after the two and a half turns, the kick extends into a dragon sweep leaning back.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un cheat 900 con remate feilong. Tras los dos giros y medio, la patada se prolonga en un barrido de dragón con el cuerpo inclinado atrás.",
+      "before": {
+        "prerequisites": "Necesitas el Cheat 900. Ese truco te da los dos giros y medio; aquí el remate se alarga en un barrido de dragón.",
+        "space": "Colchoneta amplia, con unos 4 o 5 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie con el paso de cheat y giras.",
+        "legs": "La pierna de remate se prolonga en un barrido largo mientras el cuerpo se inclina atrás.",
+        "arms": "Los brazos abren los giros y se abren al final para el barrido.",
+        "gaze": "Mira por encima del hombro durante las vueltas y al objetivo en el barrido.",
+        "torso": "El tronco gira y se inclina atrás en el remate del feilong."
+      },
+      "steps": [
+        {
+          "title": "Paso de cheat",
+          "body": "Da el paso de cheat y arranca el giro."
+        },
+        {
+          "title": "Dos giros y medio",
+          "body": "Completa los giros con el torso apretado."
+        },
+        {
+          "title": "Feilong",
+          "body": "Prolonga la patada en un barrido de dragón, inclinando el tronco atrás."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de pateo con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de pateo con la rodilla flexionada y el pecho arriba. Si el barrido sale corto, extiéndelo un poco antes.",
+      "mistakes": [
+        "No inclinar el tronco: el feilong necesita ese ángulo.",
+        "Cortar el giro antes de tiempo.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Cheat 900 hasta que las vueltas sean estables.",
+        "Marca el barrido del feilong a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "Entrada en la que giras las caderas antes de saltar, por eso el giro se siente corto."
+        },
+        {
+          "term": "feilong",
+          "meaning": "Barrido de pierna con el cuerpo inclinado atrás."
+        }
+      ],
+      "prereqNotes": {
+        "cheat900": "El Cheat 900 te da los dos giros y medio; el feilong agrega el barrido largo con el cuerpo inclinado atrás."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Cheat 900 with a feilong finish. After the two and a half turns, the kick extends into a dragon sweep with the body leaning back.",
+      "before": {
+        "prerequisites": "You need the Cheat 900. That trick gives you the two and a half turns; here the finish stretches into a dragon sweep.",
+        "space": "A large mat, with about 4 or 5 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot with the cheat step and turn.",
+        "legs": "The finishing leg stretches into a long sweep as the body leans back.",
+        "arms": "The arms open the turns and open at the end for the sweep.",
+        "gaze": "Look over the shoulder during the rotations and at the target on the sweep.",
+        "torso": "The torso turns and leans back on the feilong finish."
+      },
+      "steps": [
+        {
+          "title": "Cheat step",
+          "body": "Take the cheat step and begin the turn."
+        },
+        {
+          "title": "Two and a half turns",
+          "body": "Complete the turns with the torso tight."
+        },
+        {
+          "title": "Feilong",
+          "body": "Stretch the kick into a dragon sweep, leaning the torso back."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the kicking foot with soft knees."
+        }
+      ],
+      "landing": "Land on the kicking foot with the knee bent and the chest up. If the sweep falls short, extend it a little earlier.",
+      "mistakes": [
+        "Not leaning the torso: the feilong needs that angle.",
+        "Cutting the turn too early.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Cheat 900 until the rotations are stable.",
+        "Mark the feilong sweep at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "An entry where you turn the hips before jumping, so the turn feels short."
+        },
+        {
+          "term": "feilong",
+          "meaning": "A leg sweep with the body leaning back."
+        }
+      ],
+      "prereqNotes": {
+        "cheat900": "The Cheat 900 gives you the two and a half turns; the feilong adds the long sweep with the body leaning back."
+      }
+    }
+  },
+  "cheat900Sidekick": {
+    "es": "Es un cheat 900 que termina con una patada lateral. Tras los dos giros y medio, la cadera se abre y el golpe sale con el borde del pie.",
+    "en": "It is a Cheat 900 that ends with a side kick. After the two and a half turns, the hip opens and the strike lands with the edge of the foot.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un cheat 900 que termina con una patada lateral. Tras los dos giros y medio, la cadera se abre y el golpe sale con el borde del pie.",
+      "before": {
+        "prerequisites": "Necesitas el Cheat 900. Ese truco te da los dos giros y medio; aquí el remate es una patada lateral.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de un pie con el paso de cheat y giras.",
+        "legs": "La pierna de remate se abre de lado y golpea con el borde del pie.",
+        "arms": "Los brazos abren los giros y se recogen para el remate.",
+        "gaze": "Mira por encima del hombro durante las vueltas y al objetivo en la patada.",
+        "torso": "El tronco gira y se abre de lado en el remate."
+      },
+      "steps": [
+        {
+          "title": "Paso de cheat",
+          "body": "Da el paso de cheat y arranca el giro."
+        },
+        {
+          "title": "Dos giros y medio",
+          "body": "Completa los giros con el torso apretado."
+        },
+        {
+          "title": "Sidekick",
+          "body": "Abre la cadera y golpea con el borde del pie."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de pateo con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de pateo con la rodilla flexionada y el pecho arriba. Si el remate sale corto, ábrelo un poco antes.",
+      "mistakes": [
+        "Rematar con la rodilla doblada: la patada lateral va estirada.",
+        "Cortar el giro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Cheat 900 hasta que las vueltas sean estables.",
+        "Marca la patada lateral a baja altura antes de unirla."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "Entrada en la que giras las caderas antes de saltar, por eso el giro se siente corto."
+        },
+        {
+          "term": "sidekick",
+          "meaning": "Patada lateral que golpea con el borde del pie y la cadera abierta."
+        }
+      ],
+      "prereqNotes": {
+        "cheat900": "El Cheat 900 te da los dos giros y medio; el sidekick es el remate lateral que se agrega al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Cheat 900 that ends with a side kick. After the two and a half turns, the hip opens and the strike lands with the edge of the foot.",
+      "before": {
+        "prerequisites": "You need the Cheat 900. That trick gives you the two and a half turns; here the finish is a side kick.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from one foot with the cheat step and turn.",
+        "legs": "The finishing leg opens to the side and strikes with the edge of the foot.",
+        "arms": "The arms open the turns and tuck for the finish.",
+        "gaze": "Look over the shoulder during the rotations and at the target on the kick.",
+        "torso": "The torso turns and opens to the side on the finish."
+      },
+      "steps": [
+        {
+          "title": "Cheat step",
+          "body": "Take the cheat step and begin the turn."
+        },
+        {
+          "title": "Two and a half turns",
+          "body": "Complete the turns with the torso tight."
+        },
+        {
+          "title": "Sidekick",
+          "body": "Open the hip and strike with the edge of the foot."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the kicking foot with soft knees."
+        }
+      ],
+      "landing": "Land on the kicking foot with the knee bent and the chest up. If the finish falls short, open it a little earlier.",
+      "mistakes": [
+        "Finishing with a bent knee: the side kick goes straight.",
+        "Cutting the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Cheat 900 until the rotations are stable.",
+        "Mark the side kick at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "cheat",
+          "meaning": "An entry where you turn the hips before jumping, so the turn feels short."
+        },
+        {
+          "term": "sidekick",
+          "meaning": "A side kick that strikes with the edge of the foot and the hip open."
+        }
+      ],
+      "prereqNotes": {
+        "cheat900": "The Cheat 900 gives you the two and a half turns; the sidekick is the side finish added at the end."
+      }
+    }
+  },
+  "hookKick": {
+    "es": "Es una patada vertical en la que una pierna traza un arco por encima de la cabeza. Apoyas el pie de sostén, subes la pierna con la rodilla algo flexionada y la trazas en gancho.",
+    "en": "It is a vertical kick in which one leg traces an arc over the head. You plant the support foot, swing the leg up with the knee slightly bent and hook it across.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada vertical en la que una pierna traza un arco por encima de la cabeza. Apoyas el pie de sostén, subes la pierna y la trazas en gancho.",
+      "before": {
+        "prerequisites": "No necesitas otro truco del catálogo. Ayuda tener flexibilidad de cadera y buen equilibrio.",
+        "space": "Un espacio libre de unos 2 pasos, con colchoneta o césped."
+      },
+      "body": {
+        "feet": "El pie de sostén queda firme y en el piso; el otro se levanta en la patada.",
+        "legs": "La pierna de la patada sube con la rodilla algo flexionada y traza un gancho amplio.",
+        "arms": "Los brazos se abren un poco para mantener el equilibrio.",
+        "gaze": "Mira al frente o al punto de la patada y no pierdas el equilibrio.",
+        "torso": "El tronco se mantiene alto y se inclina apenas hacia el lado opuesto."
+      },
+      "steps": [
+        {
+          "title": "Apoyo",
+          "body": "Planta el pie de sostén y abre un poco los brazos."
+        },
+        {
+          "title": "Subida",
+          "body": "Sube la pierna de la patada por encima de la cabeza."
+        },
+        {
+          "title": "Gancho",
+          "body": "Traza el arco en gancho hacia el costado."
+        },
+        {
+          "title": "Caída",
+          "body": "Baja la pierna y vuelve a apoyar con el pecho arriba."
+        }
+      ],
+      "landing": "Aterriza de nuevo sobre el pie de sostén, con la rodilla blanda y el pecho arriba. Si te inclinas, aprieta el abdomen y mira al horizonte.",
+      "mistakes": [
+        "Doblar demasiado la rodilla: el gancho pierde amplitud.",
+        "Perder el equilibrio del pie de sostén.",
+        "Bajar el pecho: el tronco se mantiene alto."
+      ],
+      "tips": [
+        "Practica el gancho a media altura antes de subirlo.",
+        "Marca la patada en un saco o en una pared acolchada para sentir el arco."
+      ],
+      "terms": [
+        {
+          "term": "hook",
+          "meaning": "Patada que sube y traza un arco en gancho hacia el costado."
+        },
+        {
+          "term": "arco",
+          "meaning": "Trayectoria curva que describe la pierna en la patada."
+        }
+      ],
+      "prereqNotes": {}
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a vertical kick in which one leg traces an arc over the head. You plant the support foot, swing the leg up and hook it across.",
+      "before": {
+        "prerequisites": "You do not need another trick from the catalog. Hip flexibility and good balance help.",
+        "space": "A clear space of about 2 steps, with a mat or grass."
+      },
+      "body": {
+        "feet": "The support foot stays firm on the floor; the other rises in the kick.",
+        "legs": "The kicking leg rises with the knee slightly bent and traces a wide hook.",
+        "arms": "The arms open a little to keep the balance.",
+        "gaze": "Look ahead or at the kick point and do not lose your balance.",
+        "torso": "The torso stays tall and tilts only slightly to the opposite side."
+      },
+      "steps": [
+        {
+          "title": "Plant",
+          "body": "Plant the support foot and open the arms a little."
+        },
+        {
+          "title": "Rise",
+          "body": "Raise the kicking leg over the head."
+        },
+        {
+          "title": "Hook",
+          "body": "Trace the hook arc to the side."
+        },
+        {
+          "title": "Landing",
+          "body": "Bring the leg down and plant again with the chest up."
+        }
+      ],
+      "landing": "Land again on the support foot, with a soft knee and the chest up. If you tilt, tighten the core and look at the horizon.",
+      "mistakes": [
+        "Bending the knee too much: the hook loses width.",
+        "Losing the balance on the support foot.",
+        "Dropping the chest: the torso stays tall."
+      ],
+      "tips": [
+        "Practice the hook at medium height before raising it.",
+        "Mark the kick on a bag or a padded wall to feel the arc."
+      ],
+      "terms": [
+        {
+          "term": "hook",
+          "meaning": "A kick that rises and traces a hooking arc to the side."
+        },
+        {
+          "term": "arc",
+          "meaning": "The curved path the leg draws in the kick."
+        }
+      ],
+      "prereqNotes": {}
+    }
+  },
+  "parafuso": {
+    "es": "Es una patada giratoria tipo sacacorchos: un tornado en el que el torso agrega una rotación extra, por lo que el giro sale más apretado y veloz. Entras con un paso y azotas la pierna de ataque antes de aterrizar.",
+    "en": "It is a screw-style spinning kick: a tornado in which the torso adds an extra rotation so the spin comes out tighter and faster. You step in and whip the attacking leg through before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada giratoria tipo sacacorchos: un tornado en el que el torso agrega una rotación extra y el giro sale más apretado y veloz. Entras con un paso y azotas la pierna antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Tornado. Ese truco te da el giro de patada; aquí el torso suma una rotación extra.",
+        "space": "Un espacio libre de unos 3 o 4 pasos, con colchoneta."
+      },
+      "body": {
+        "feet": "Pie de apoyo adelante y pie de pateo atrás; el peso arranca atrás.",
+        "legs": "La pierna de ataque sale estirada y azota en un latigazo; la de apoyo gira flexionada.",
+        "arms": "El brazo contrario a la pierna de pateo abre el giro; el otro se recoge al pecho.",
+        "gaze": "Mira el objetivo al patear y el horizonte al caer.",
+        "torso": "El torso agrega una rotación extra sobre el giro del tornado y se mantiene alto."
+      },
+      "steps": [
+        {
+          "title": "Paso de entrada",
+          "body": "Da un paso corto y carga el peso en la pierna de atrás."
+        },
+        {
+          "title": "Salto y giro",
+          "body": "Empuja con las dos piernas y gira las caderas."
+        },
+        {
+          "title": "Rotación extra",
+          "body": "Suma la rotación extra del torso para apretar el giro."
+        },
+        {
+          "title": "Patada",
+          "body": "Azota la pierna de ataque en un latigazo y aterriza de pie."
+        }
+      ],
+      "landing": "Cae sobre el pie de despegue con la rodilla flexionada y el pecho arriba. Si caes con el pecho abajo, mira al horizonte y aprieta el abdomen.",
+      "mistakes": [
+        "No sumar la rotación extra: sin ella es un tornado.",
+        "Patear con la rodilla doblada.",
+        "Mirar el piso al girar."
+      ],
+      "tips": [
+        "Practica el Tornado hasta que el giro sea sólido.",
+        "Marca la rotación extra del torso a baja altura antes de unirla."
+      ],
+      "terms": [
+        {
+          "term": "parafuso",
+          "meaning": "Patada giratoria que agrega una rotación extra del torso, como un sacacorchos."
+        },
+        {
+          "term": "tornado",
+          "meaning": "Patada de giro de 360 grados que sirve de base."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "Las dos piernas pasan juntas y estiradas, como una sola."
+        }
+      ],
+      "prereqNotes": {
+        "tornado": "El Tornado te da el giro de la patada; el parafuso le agrega una rotación extra del torso."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a screw-style spinning kick: a tornado in which the torso adds an extra rotation so the spin comes out tighter and faster. You step in and whip the leg before landing.",
+      "before": {
+        "prerequisites": "You need the Tornado. That trick gives you the spinning kick; here the torso adds an extra rotation.",
+        "space": "A clear space of about 3 or 4 steps, with a mat."
+      },
+      "body": {
+        "feet": "Lead support foot forward and kicking foot back; the weight starts on the back leg.",
+        "legs": "The attacking leg extends and snaps through; the support leg turns bent.",
+        "arms": "The arm opposite the kicking leg opens the turn; the other tucks to the chest.",
+        "gaze": "Look at the target when you kick and at the horizon when you land.",
+        "torso": "The torso adds an extra rotation on top of the tornado turn and stays tall."
+      },
+      "steps": [
+        {
+          "title": "Entry step",
+          "body": "Take a short step and load the weight on the back leg."
+        },
+        {
+          "title": "Jump and turn",
+          "body": "Push with both legs and turn the hips."
+        },
+        {
+          "title": "Extra rotation",
+          "body": "Add the extra torso rotation to tighten the spin."
+        },
+        {
+          "title": "Kick",
+          "body": "Snap the attacking leg through and land on your feet."
+        }
+      ],
+      "landing": "Land on the takeoff foot with the knee bent and the chest up. If the chest drops, look at the horizon and tighten the core.",
+      "mistakes": [
+        "Not adding the extra rotation: without it, it is a tornado.",
+        "Kicking with a bent knee.",
+        "Looking at the floor as you turn."
+      ],
+      "tips": [
+        "Practice the Tornado until the turn is solid.",
+        "Mark the extra torso rotation at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "parafuso",
+          "meaning": "A spinning kick that adds an extra torso rotation, like a corkscrew."
+        },
+        {
+          "term": "tornado",
+          "meaning": "A 360-degree spinning kick that serves as the base."
+        },
+        {
+          "term": "doubleleg",
+          "meaning": "Both legs pass together and extended, as if they were one."
+        }
+      ],
+      "prereqNotes": {
+        "tornado": "The Tornado gives you the spinning kick; the parafuso adds an extra torso rotation."
+      }
+    }
+  },
+  "pop1260": {
+    "es": "Es una patada vertical de tres giros y medio, 1260 grados, desde un salto recto. Saltas, encadenas las rotaciones con el torso apretado y pateas a mitad del giro.",
+    "en": "It is a vertical kick of three and a half rotations, 1260 degrees, from a straight jump. You jump, chain the rotations with a tight torso and kick mid-spin.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada vertical de tres giros y medio, 1260 grados, desde un salto recto. Saltas, encadenas las rotaciones con el torso apretado y pateas a mitad del giro.",
+      "before": {
+        "prerequisites": "Necesitas el Pop 1080. Ese truco te da las tres vueltas desde el salto recto; aquí sumas media vuelta más.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de los dos pies con un salto recto desde postura frontside.",
+        "legs": "La pierna de pateo sale a mitad del giro, con la rodilla controlada.",
+        "arms": "Los brazos abren el giro y se recogen cerca del pecho para acelerarlo.",
+        "gaze": "Mira por encima del hombro durante las vueltas y al objetivo al patear.",
+        "torso": "El tronco gira tres vueltas y media con el eje firme."
+      },
+      "steps": [
+        {
+          "title": "Salto",
+          "body": "Despega de los dos pies con un salto recto."
+        },
+        {
+          "title": "Vueltas",
+          "body": "Encadena las rotaciones con el torso apretado."
+        },
+        {
+          "title": "Patada",
+          "body": "Patea a mitad del giro con la pierna controlada."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza de pie con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae de pie con las rodillas flexionadas y el pecho arriba. Si pierdes el eje, practica el Pop 1080 hasta que sea sólido.",
+      "mistakes": [
+        "Perder la orientación por tantas vueltas.",
+        "Patear con la pierna suelta.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Pop 1080 hasta que las vueltas sean estables.",
+        "Suma la media vuelta extra solo cuando tengas el control."
+      ],
+      "terms": [
+        {
+          "term": "pop",
+          "meaning": "Salto recto que se usa como entrada, sin paso de cheat."
+        },
+        {
+          "term": "vertical kick",
+          "meaning": "Patada de giro que no lleva mortal, con el cuerpo de pie girando."
+        }
+      ],
+      "prereqNotes": {
+        "pop1080": "El Pop 1080 te da las tres vueltas desde el salto recto; el 1260 agrega media vuelta más sobre el mismo giro."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a vertical kick of three and a half rotations, 1260 degrees, from a straight jump. You jump, chain the rotations with a tight torso and kick mid-spin.",
+      "before": {
+        "prerequisites": "You need the Pop 1080. That trick gives you the three rotations from the straight jump; here you add half a turn more.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from both feet with a straight jump from frontside stance.",
+        "legs": "The kicking leg comes out mid-spin, with the knee controlled.",
+        "arms": "The arms open the turn and tuck near the chest to speed it up.",
+        "gaze": "Look over the shoulder during the rotations and at the target when you kick.",
+        "torso": "The torso turns three and a half rotations with the axis firm."
+      },
+      "steps": [
+        {
+          "title": "Jump",
+          "body": "Take off from both feet with a straight jump."
+        },
+        {
+          "title": "Rotations",
+          "body": "Chain the rotations with the torso tight."
+        },
+        {
+          "title": "Kick",
+          "body": "Kick mid-spin with the leg controlled."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on your feet with soft knees."
+        }
+      ],
+      "landing": "Land on your feet with bent knees and the chest up. If you lose the axis, practice the Pop 1080 until it is solid.",
+      "mistakes": [
+        "Losing orientation from so many rotations.",
+        "Kicking with a loose leg.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Pop 1080 until the rotations are stable.",
+        "Add the extra half turn only once you have control."
+      ],
+      "terms": [
+        {
+          "term": "pop",
+          "meaning": "A straight jump used as an entry, without a cheat step."
+        },
+        {
+          "term": "vertical kick",
+          "meaning": "A spinning kick with no flip, with the body upright as it turns."
+        }
+      ],
+      "prereqNotes": {
+        "pop1080": "The Pop 1080 gives you the three rotations from the straight jump; the 1260 adds half a turn more on the same spin."
+      }
+    }
+  },
+  "pop360Shuriken": {
+    "es": "Es un pop 360 en el que la patada se lanza como un shuriken: la pierna sale con una recámara corta y un latigazo rápido de gancho. Saltas, giras y sueltas el golpe seco en el aire antes de aterrizar.",
+    "en": "It is a Pop 360 in which the kick is thrown like a shuriken: the leg fires from a short chamber with a quick hook-like snap. You jump, spin and release the sharp strike in the air before landing.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un pop 360 en el que la patada se lanza como un shuriken: la pierna sale con una recámara corta y un latigazo rápido de gancho. Saltas, giras y sueltas el golpe seco en el aire antes de aterrizar.",
+      "before": {
+        "prerequisites": "Necesitas el Pop 360. Ese truco te da el salto recto con el giro de 360 grados; aquí el remate es un shuriken.",
+        "space": "Un espacio libre de unos 3 o 4 pasos, con colchoneta."
+      },
+      "body": {
+        "feet": "Despegas de los dos pies desde postura frontside.",
+        "legs": "La pierna de remate sale con recámara corta y un latigazo rápido de gancho.",
+        "arms": "Los brazos abren el giro y se recogen para acelerarlo.",
+        "gaze": "Mira por encima del hombro durante el giro y al objetivo en el remate.",
+        "torso": "El tronco gira 360 grados con el eje firme y se inclina apenas en el golpe."
+      },
+      "steps": [
+        {
+          "title": "Salto",
+          "body": "Despega de los dos pies con un salto recto."
+        },
+        {
+          "title": "Giro",
+          "body": "Gira el cuerpo 360 grados."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Suelta el latigazo de gancho con recámara corta."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza en postura complete con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza en postura complete, de frente y con los pies alineados, con las rodillas flexionadas y el pecho arriba.",
+      "mistakes": [
+        "Patear con la pierna relajada: el shuriken es un latigazo seco.",
+        "Perder el eje del giro.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Pop 360 hasta que el giro sea sólido.",
+        "Marca el latigazo del shuriken a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "pop",
+          "meaning": "Salto recto que se usa como entrada, sin paso de cheat."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "Patada en la que la pierna sale con una recámara corta y un latigazo seco."
+        }
+      ],
+      "prereqNotes": {
+        "pop360": "El Pop 360 te da el salto recto con el giro de 360 grados; el shuriken es el remate que se agrega al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Pop 360 in which the kick is thrown like a shuriken: the leg fires from a short chamber with a quick hook-like snap. You jump, spin and release the sharp strike in the air before landing.",
+      "before": {
+        "prerequisites": "You need the Pop 360. That trick gives you the straight jump with the 360-degree turn; here the finish is a shuriken.",
+        "space": "A clear space of about 3 or 4 steps, with a mat."
+      },
+      "body": {
+        "feet": "You take off from both feet from frontside stance.",
+        "legs": "The finishing leg fires from a short chamber with a quick hook-like snap.",
+        "arms": "The arms open the turn and tuck to speed it up.",
+        "gaze": "Look over the shoulder during the turn and at the target on the finish.",
+        "torso": "The torso turns 360 degrees with the axis firm and tilts only slightly on the strike."
+      },
+      "steps": [
+        {
+          "title": "Jump",
+          "body": "Take off from both feet with a straight jump."
+        },
+        {
+          "title": "Turn",
+          "body": "Turn the body 360 degrees."
+        },
+        {
+          "title": "Shuriken",
+          "body": "Release the hook snap from a short chamber."
+        },
+        {
+          "title": "Landing",
+          "body": "Land in complete stance with soft knees."
+        }
+      ],
+      "landing": "Land in complete stance, facing forward with the feet aligned, with bent knees and the chest up.",
+      "mistakes": [
+        "Kicking with a loose leg: the shuriken is a sharp snap.",
+        "Losing the axis of the turn.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Pop 360 until the turn is solid.",
+        "Mark the shuriken snap at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "pop",
+          "meaning": "A straight jump used as an entry, without a cheat step."
+        },
+        {
+          "term": "shuriken",
+          "meaning": "A kick in which the leg fires from a short chamber with a sharp snap."
+        }
+      ],
+      "prereqNotes": {
+        "pop360": "The Pop 360 gives you the straight jump with the 360-degree turn; the shuriken is the finish added at the end."
+      }
+    }
+  },
+  "popFeilong": {
+    "es": "Es un pop con remate feilong: tras el salto, la patada giratoria se prolonga en un barrido de dragón con el cuerpo inclinado atrás. El giro sale volando en un arco descendente.",
+    "en": "It is a pop with a feilong finish: after the jump, the spinning kick extends into a dragon sweep with the body leaning back. The spin flies through in a descending arc.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un pop con remate feilong. Tras el salto, la patada giratoria se prolonga en un barrido de dragón con el cuerpo inclinado atrás y el giro sale en un arco descendente.",
+      "before": {
+        "prerequisites": "Necesitas el Pop 360 Shuriken y el Pop Tornado. El primero te da el salto con remate y el segundo el giro desde el pop.",
+        "space": "Colchoneta amplia, con unos 4 pasos."
+      },
+      "body": {
+        "feet": "Despegas de los dos pies con un salto recto.",
+        "legs": "La pierna de remate se prolonga en un barrido largo mientras el cuerpo se inclina atrás.",
+        "arms": "Los brazos abren el giro y se abren al final para el barrido.",
+        "gaze": "Mira por encima del hombro durante el giro y al objetivo en el barrido.",
+        "torso": "El tronco gira y se inclina atrás en el remate del feilong."
+      },
+      "steps": [
+        {
+          "title": "Salto",
+          "body": "Despega de los dos pies con un salto recto."
+        },
+        {
+          "title": "Giro",
+          "body": "Gira el cuerpo mientras sube la patada."
+        },
+        {
+          "title": "Feilong",
+          "body": "Prolonga la patada en un barrido de dragón inclinando el tronco atrás."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de pateo con las rodillas blandas."
+        }
+      ],
+      "landing": "Aterriza sobre el pie de pateo con la rodilla flexionada y el pecho arriba. El giro desciende en arco; absorbe con la rodilla.",
+      "mistakes": [
+        "No inclinar el tronco: el feilong necesita ese ángulo.",
+        "Cortar el giro antes de tiempo.",
+        "Aterrizar con el pecho abajo."
+      ],
+      "tips": [
+        "Practica el Pop 360 Shuriken hasta que el salto sea sólido.",
+        "Marca el barrido del feilong a baja altura antes de unirlo."
+      ],
+      "terms": [
+        {
+          "term": "pop",
+          "meaning": "Salto recto que se usa como entrada, sin paso de cheat."
+        },
+        {
+          "term": "feilong",
+          "meaning": "Barrido de pierna con el cuerpo inclinado atrás."
+        }
+      ],
+      "prereqNotes": {
+        "pop360Shuriken": "El Pop 360 Shuriken te da el salto con el remate.",
+        "popTornado": "El Pop Tornado te da el giro desde el pop que sirve de base al feilong."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a pop with a feilong finish. After the jump, the spinning kick extends into a dragon sweep with the body leaning back and the spin flies through in a descending arc.",
+      "before": {
+        "prerequisites": "You need the Pop 360 Shuriken and the Pop Tornado. The first gives you the jump with a finish and the second the turn from the pop.",
+        "space": "A large mat, with about 4 steps."
+      },
+      "body": {
+        "feet": "You take off from both feet with a straight jump.",
+        "legs": "The finishing leg stretches into a long sweep as the body leans back.",
+        "arms": "The arms open the turn and open at the end for the sweep.",
+        "gaze": "Look over the shoulder during the turn and at the target on the sweep.",
+        "torso": "The torso turns and leans back on the feilong finish."
+      },
+      "steps": [
+        {
+          "title": "Jump",
+          "body": "Take off from both feet with a straight jump."
+        },
+        {
+          "title": "Turn",
+          "body": "Turn the body as the kick rises."
+        },
+        {
+          "title": "Feilong",
+          "body": "Stretch the kick into a dragon sweep, leaning the torso back."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the kicking foot with soft knees."
+        }
+      ],
+      "landing": "Land on the kicking foot with the knee bent and the chest up. The spin comes down in an arc; absorb with the knee.",
+      "mistakes": [
+        "Not leaning the torso: the feilong needs that angle.",
+        "Cutting the turn too early.",
+        "Landing with the chest down."
+      ],
+      "tips": [
+        "Practice the Pop 360 Shuriken until the jump is solid.",
+        "Mark the feilong sweep at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "pop",
+          "meaning": "A straight jump used as an entry, without a cheat step."
+        },
+        {
+          "term": "feilong",
+          "meaning": "A leg sweep with the body leaning back."
+        }
+      ],
+      "prereqNotes": {
+        "pop360Shuriken": "The Pop 360 Shuriken gives you the jump with a finish.",
+        "popTornado": "The Pop Tornado gives you the turn from the pop that serves as the base for the feilong."
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "swing360": {
+    "es": "Es una patada vertical de 360 grados que entra con un paso de swing: balanceas la pierna libre hacia adelante y usas ese envión para abrir la cadera y elevar el giro. La pierna de ataque corta en el aire y aterrizas sobre el pie de despegue.",
+    "en": "It is a 360-degree vertical kick entered with a swing step: you swing the free leg forward and use that momentum to open the hips and lift the spin. The kicking leg slices across the air and you land on the takeoff foot.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es una patada vertical de 360 grados que entra con un paso de swing. Balanceas la pierna libre, elevas el giro con ese envión y aterrizas sobre el pie de despegue.",
+      "before": {
+        "prerequisites": "Necesitas el Pop 360. Ese truco te da el salto recto con el giro de 360 grados; aquí la entrada es un paso de swing.",
+        "space": "Un espacio libre de unos 3 o 4 pasos, con colchoneta."
+      },
+      "body": {
+        "feet": "Pie de apoyo adelante y pie de pateo atrás; el peso arranca atrás.",
+        "legs": "La pierna libre se balancea adelante y la de ataque corta en el aire con la rodilla controlada.",
+        "arms": "El brazo contrario a la pierna de pateo abre el giro; el otro se recoge al pecho.",
+        "gaze": "Mira el objetivo al patear y el horizonte al caer.",
+        "torso": "El tronco se mantiene alto y aprovecha el envión del swing para abrir la cadera."
+      },
+      "steps": [
+        {
+          "title": "Paso de swing",
+          "body": "Da el paso y balancea la pierna libre hacia adelante."
+        },
+        {
+          "title": "Envíon",
+          "body": "Usa el balanceo para abrir la cadera y despegar."
+        },
+        {
+          "title": "Patada",
+          "body": "Corta el aire con la pierna de ataque durante el giro."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de despegue con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae sobre el pie de despegue con la rodilla flexionada y el pecho arriba. Si el giro se corta, aprovecha más el envión del balanceo.",
+      "mistakes": [
+        "No usar el balanceo: el swing da la mitad del impulso.",
+        "Patear con la rodilla doblada.",
+        "Mirar el piso al girar."
+      ],
+      "tips": [
+        "Practica el Pop 360 hasta que el giro sea sólido.",
+        "Marca el balanceo de la pierna sin patear antes de unir la patada."
+      ],
+      "terms": [
+        {
+          "term": "swing",
+          "meaning": "Balanceo de la pierna libre hacia adelante que da impulso al giro."
+        },
+        {
+          "term": "pop",
+          "meaning": "Salto recto que se usa como entrada, sin paso de cheat."
+        },
+        {
+          "term": "skip hook",
+          "meaning": "Gancho con un paso de entrada, del que este truco toma la forma."
+        }
+      ],
+      "prereqNotes": {
+        "pop360": "El Pop 360 te da el salto recto con el giro de 360 grados; el swing 360 lo entra con un balanceo que eleva el giro."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a 360-degree vertical kick entered with a swing step. You swing the free leg, lift the spin with that momentum and land on the takeoff foot.",
+      "before": {
+        "prerequisites": "You need the Pop 360. That trick gives you the straight jump with the 360-degree turn; here the entry is a swing step.",
+        "space": "A clear space of about 3 or 4 steps, with a mat."
+      },
+      "body": {
+        "feet": "Lead support foot forward and kicking foot back; the weight starts on the back leg.",
+        "legs": "The free leg swings forward and the attacking leg slices through the air with the knee controlled.",
+        "arms": "The arm opposite the kicking leg opens the turn; the other tucks to the chest.",
+        "gaze": "Look at the target when you kick and at the horizon when you land.",
+        "torso": "The torso stays tall and uses the swing momentum to open the hips."
+      },
+      "steps": [
+        {
+          "title": "Swing step",
+          "body": "Take the step and swing the free leg forward."
+        },
+        {
+          "title": "Momentum",
+          "body": "Use the swing to open the hips and take off."
+        },
+        {
+          "title": "Kick",
+          "body": "Slice across the air with the attacking leg during the turn."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the takeoff foot with soft knees."
+        }
+      ],
+      "landing": "Land on the takeoff foot with the knee bent and the chest up. If the turn cuts off, use more of the swing momentum.",
+      "mistakes": [
+        "Not using the swing: the swing provides half the impulse.",
+        "Kicking with a bent knee.",
+        "Looking at the floor as you turn."
+      ],
+      "tips": [
+        "Practice the Pop 360 until the turn is solid.",
+        "Mark the leg swing without kicking before adding the kick."
+      ],
+      "terms": [
+        {
+          "term": "swing",
+          "meaning": "A forward swing of the free leg that gives momentum to the turn."
+        },
+        {
+          "term": "pop",
+          "meaning": "A straight jump used as an entry, without a cheat step."
+        },
+        {
+          "term": "skip hook",
+          "meaning": "A hook with an entry step, from which this trick takes its shape."
+        }
+      ],
+      "prereqNotes": {
+        "pop360": "The Pop 360 gives you the straight jump with the 360-degree turn; the swing 360 enters it with a swing that lifts the spin."
+      }
+    }
+  },
+  "tornadoSidekick": {
+    "es": "Es un tornado que termina con una patada lateral. Tras el giro de 360 grados, la cadera se abre y el golpe sale con el borde del pie; el remate lateral cierra la rotación.",
+    "en": "It is a Tornado that ends with a side kick. After the 360-degree turn, the hip opens and the strike lands with the edge of the foot; the side kick closes the rotation.",
+    "detailEs": {
+      "version": 1,
+      "summary": "Es un tornado que termina con una patada lateral. Tras el giro de 360 grados, la cadera se abre y el golpe sale con el borde del pie.",
+      "before": {
+        "prerequisites": "Necesitas el Tornado. Ese truco te da el giro de 360 grados; aquí el remate es una patada lateral.",
+        "space": "Un espacio libre de unos 3 o 4 pasos, con colchoneta."
+      },
+      "body": {
+        "feet": "Pie de apoyo adelante y pie de pateo atrás; el peso arranca atrás.",
+        "legs": "Tras el giro, la pierna de remate se abre de lado y golpea con el borde del pie.",
+        "arms": "El brazo contrario a la pierna de pateo abre el giro; el otro se recoge al pecho.",
+        "gaze": "Mira el objetivo al patear y el horizonte al caer.",
+        "torso": "El tronco gira con las caderas y se abre de lado en el remate."
+      },
+      "steps": [
+        {
+          "title": "Paso de entrada",
+          "body": "Da un paso corto y carga el peso en la pierna de atrás."
+        },
+        {
+          "title": "Salto y giro",
+          "body": "Empuja con las dos piernas y gira las caderas."
+        },
+        {
+          "title": "Sidekick",
+          "body": "Abre la cadera y golpea con el borde del pie."
+        },
+        {
+          "title": "Caída",
+          "body": "Aterriza sobre el pie de despegue con las rodillas blandas."
+        }
+      ],
+      "landing": "Cae sobre el pie de despegue con la rodilla flexionada y el pecho arriba. Si el remate sale corto, ábrelo un poco antes.",
+      "mistakes": [
+        "Rematar con la rodilla doblada: la patada lateral va estirada.",
+        "Mirar el piso al girar.",
+        "No cerrar la rotación con el remate."
+      ],
+      "tips": [
+        "Practica el Tornado hasta que el giro sea sólido.",
+        "Marca la patada lateral a baja altura antes de unirla."
+      ],
+      "terms": [
+        {
+          "term": "tornado",
+          "meaning": "Patada de giro de 360 grados que sirve de base."
+        },
+        {
+          "term": "sidekick",
+          "meaning": "Patada lateral que golpea con el borde del pie y la cadera abierta."
+        }
+      ],
+      "prereqNotes": {
+        "tornado": "El Tornado te da el giro de 360 grados; el sidekick es el remate lateral que se agrega al final."
+      }
+    },
+    "detailEn": {
+      "version": 1,
+      "summary": "It is a Tornado that ends with a side kick. After the 360-degree turn, the hip opens and the strike lands with the edge of the foot.",
+      "before": {
+        "prerequisites": "You need the Tornado. That trick gives you the 360-degree turn; here the finish is a side kick.",
+        "space": "A clear space of about 3 or 4 steps, with a mat."
+      },
+      "body": {
+        "feet": "Lead support foot forward and kicking foot back; the weight starts on the back leg.",
+        "legs": "After the turn, the finishing leg opens to the side and strikes with the edge of the foot.",
+        "arms": "The arm opposite the kicking leg opens the turn; the other tucks to the chest.",
+        "gaze": "Look at the target when you kick and at the horizon when you land.",
+        "torso": "The torso turns with the hips and opens to the side on the finish."
+      },
+      "steps": [
+        {
+          "title": "Entry step",
+          "body": "Take a short step and load the weight on the back leg."
+        },
+        {
+          "title": "Jump and turn",
+          "body": "Push with both legs and turn the hips."
+        },
+        {
+          "title": "Sidekick",
+          "body": "Open the hip and strike with the edge of the foot."
+        },
+        {
+          "title": "Landing",
+          "body": "Land on the takeoff foot with soft knees."
+        }
+      ],
+      "landing": "Land on the takeoff foot with the knee bent and the chest up. If the finish falls short, open it a little earlier.",
+      "mistakes": [
+        "Finishing with a bent knee: the side kick goes straight.",
+        "Looking at the floor as you turn.",
+        "Not closing the rotation with the finish."
+      ],
+      "tips": [
+        "Practice the Tornado until the turn is solid.",
+        "Mark the side kick at low height before joining it."
+      ],
+      "terms": [
+        {
+          "term": "tornado",
+          "meaning": "A 360-degree spinning kick that serves as the base."
+        },
+        {
+          "term": "sidekick",
+          "meaning": "A side kick that strikes with the edge of the foot and the hip open."
+        }
+      ],
+      "prereqNotes": {
+        "tornado": "The Tornado gives you the 360-degree turn; the sidekick is the side finish added at the end."
+      }
+    }
+  }
+}
