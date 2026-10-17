@@ -1,92 +1,431 @@
 # Tutoriales externos faltantes
 
-Lista de trabajo de los trucos del piloto de tutoriales (familia de Wackknife y trucos basicos y populares) que todavia no tienen un tutorial externo aprobado. La mantienen las tareas de contenido. Es la referencia para que el usuario pase enlaces manualmente cuando los tenga.
+Lista de trabajo de los trucos sin un tutorial externo aprobado. La mantienen las tareas de contenido. Es la referencia para que el usuario pase enlaces manualmente: cuando tengas un link de YouTube, Vimeo, Dailymotion o TikTok, pasalo y se valida con oEmbed y se agrega a la semilla con `db:tutorial-videos`.
 
-Este documento esta referenciado desde `AGENTS.md`. No se duplica su contenido en otros documentos.
+Este documento esta referenciado desde `AGENTS.md`. Cada linea es `- <id> | <nombre> | <seccion> | <consulta intentada y motivo>`.
 
-## Como se armaron los tutoriales aprobados
+Proceso aplicado: consulta exacta `<nombre> tricking tutorial`, primero en espanol y luego en ingles, con variantes por sitio; metadata validada con oEmbed del proveedor, sin API keys. Criterio conservador: solo canales oficiales o reconocidos, que ensenen el truco y sin menores visibles; ante duda, el truco queda aca.
 
-Proceso aplicado en la corrida de contenido:
+Total de trucos sin tutorial aprobado: 419. Los aprobados viven en `packages/db/src/seed/tutorial-sources/*.json` (151 cubiertos en total).
 
-1. Consulta exacta por truco: `<nombre> tricking tutorial`, primero en espanol (`tutorial <nombre> tricking espanol` y variantes) y luego en ingles.
-2. Variantes por sitio cuando la busqueda general no daba un canal claro (por ejemplo `site:youtube.com`, o el nombre del truco con `b-kick`, `btwist`, `backflip`).
-3. Validacion de la metadata con oEmbed del proveedor, sin API keys: `https://www.youtube.com/oembed?url=<url>&format=json` (y equivalentes de Vimeo, Dailymotion y TikTok). Se confirmo titulo y autor reales antes de guardar.
-4. Criterios de seguridad (regla conservadora de `reglas-legal.md` y `reglas-contenido-trucos.md`): solo canales oficiales o reconocidos de la comunidad, que ensenen el truco y sin menores visibles. Ante cualquier duda, el candidato no se incluye.
-5. Los aprobados quedan en `packages/db/src/seed/tutorial-sources/*.json` y se siembran con `role='tutorial'` y su `language`.
+## Pendientes
 
-Nota sobre el idioma: se buscó primero en espanol en todos los casos. Para la familia de Wackknife y para los basicos del piloto, los resultados en espanol fueron canales pequenos o no verificables (motivacion, parkour amateur), que no cumplen el criterio de "canal reconocido". Por eso los tutoriales aprobados quedaron en ingles. Los candidatos en espanol encontrados quedan abajo como sugerencia para que el usuario los revise y decida.
-
-## Trucos del piloto sin tutorial aprobado
-
-Columna `Enlace`: vacia. El usuario puede pegar una URL de YouTube, Vimeo, Dailymotion o TikTok y la tarea de contenido la valida con oEmbed y la agrega a la semilla.
-
-### Familia de Wackknife
-
-| Truco                      | trickId                    | Seccion        | Consultas intentadas                                                                         | Resultado                                                                                        | Enlace |
-| -------------------------- | -------------------------- | -------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------ |
-| Wackknife Round            | `wackknifeRound`           | vertical-kicks | `wackknife round tricking tutorial`, `wackknife round turbo doubleleg tricking tutorial`     | Sin tutorial dedicado. Solo aparece el tutorial general de Wack-Knife y las fichas de Loopkicks. |        |
-| Wackknife Turbo            | `wackknifeTurbo`           | vertical-kicks | `wackknife turbo tricking tutorial`, `wackknife round turbo doubleleg tricking tutorial`     | Sin tutorial dedicado. Ficha de Loopkicks sin video de ensenanza propio.                         |        |
-| Wackknife Doubleleg        | `wackknifeDoubleleg`       | vertical-kicks | `wackknife doubleleg tricking tutorial`, `wackknife round turbo doubleleg tricking tutorial` | Sin tutorial dedicado. Los resultados apuntan a double leg generico, no al Wackknife.            |        |
-| Backside 1260 Wackknife    | `backside1260Wackknife`    | vertical-kicks | `backside 1260 wackknife tricking tutorial`                                                  | Sin tutorial dedicado. Truco muy avanzado y poco documentado en video.                           |        |
-| Full Wackknife             | `fullWackknife`            | backward       | `full wackknife tricking tutorial`                                                           | Sin tutorial dedicado. Solo fichas de Loopkicks y el tutorial general de Wack-Knife.             |        |
-| Full Wackknife Round       | `fullWackknifeRound`       | backward       | `full wackknife round tricking tutorial`                                                     | Sin tutorial dedicado.                                                                           |        |
-| Full Wackknife Hyperhook   | `fullWackknifeHyperhook`   | backward       | `full wackknife hyperhook tricking tutorial`                                                 | Sin tutorial dedicado. Ficha de Loopkicks sin video de ensenanza propio.                         |        |
-| Corkscrew Wackknife        | `corkscrewWackknife`       | backward       | `corkscrew wackknife tricking tutorial`                                                      | Sin tutorial dedicado. Aparecen tutoriales de corkscrew y de Wackknife por separado.             |        |
-| Double Corkscrew Wackknife | `doubleCorkscrewWackknife` | backward       | `double corkscrew wackknife tricking tutorial`                                               | Sin tutorial dedicado.                                                                           |        |
-| Rodeo Full Wackknife       | `rodeoFullWackknife`       | backward       | `rodeo full wackknife tricking tutorial`                                                     | Sin tutorial dedicado.                                                                           |        |
-| Gainer Wackknife           | `gainerWackknife`          | backward       | `gainer wackknife tricking tutorial`                                                         | Sin tutorial dedicado. Aparecen tutoriales de gainer o de gainer flash, no del Wackknife.        |        |
-| Butterfly Twist Wackknife  | `butterflyTwistWackknife`  | inside         | `butterfly twist wackknife tricking tutorial`                                                | Sin tutorial dedicado. Hay tutoriales de b-twist y de Wackknife por separado.                    |        |
-| Tak Full Wackknife         | `takFullWackknife`         | inside         | `tak full wackknife tricking tutorial`                                                       | Sin tutorial dedicado.                                                                           |        |
-| Sailor Moon Wackknife      | `sailorMoonWackknife`      | outside        | `sailor moon wackknife tricking tutorial`                                                    | Sin tutorial dedicado.                                                                           |        |
-| Wackest Knife              | `wackestKnife`             | vertical-kicks | `wackest knife tricking tutorial`                                                            | Sin tutorial dedicado.                                                                           |        |
-| Crackknife                 | `crackknife`               | outside        | `crackknife tricking tutorial`                                                               | Sin tutorial dedicado.                                                                           |        |
-
-### Basicos y populares
-
-Todos los trucos basicos y populares elegidos en el piloto quedaron con tutorial aprobado (ver la seccion siguiente). Si se suman mas trucos populares en la proxima ola, se agregan a esta tabla.
-
-## Tutoriales aprobados en el piloto
-
-Estos ya estan en `packages/db/src/seed/tutorial-sources/` y se siembran con `language: 'en'`. Todos son de canales reconocidos y el truco es el tema central del video.
-
-| Truco           | trickId          | Autor                  | Video                                          |
-| --------------- | ---------------- | ---------------------- | ---------------------------------------------- |
-| Wackknife       | `wackknife`      | Mastering Tricking 22  | Wack-Knife (The Mastering Series)              |
-| Tornado         | `tornado`        | Thomas Inauen          | How To Tornado Kick - In 3 Steps For Beginners |
-| Butterfly Kick  | `butterflyKick`  | Ronnie Street Stunts   | How To BUTTERFLY KICK - Free Running Tutorial  |
-| Butterfly Twist | `butterflyTwist` | Ginger Ninja Trickster | Butterfly Twist Tutorial (B-Twist)             |
-| Back Tuck       | `backTuck`       | Ginger Ninja Trickster | Back Flip (Back Tuck) Tutorial                 |
-| Aerial          | `aerial`         | Mastering Tricking 22  | Easy How To Aerial                             |
-| Roundoff        | `roundoff`       | Strength Project       | How to do a Round Off Tutorial                 |
-| 540             | `540`            | Ginger Ninja Trickster | Taekwondo 540 Kick Tutorial                    |
-| Corkscrew       | `corkscrew`      | Kojos Trick Lab        | CORK TUTORIAL                                  |
-| Gainer Flash    | `gainerFlash`    | Zak Ferguson           | How to Gainer Flash                            |
-| Double Full     | `doubleFull`     | Plan Zero              | How to Double Full (Backflip 720)              |
-| Raiz            | `raiz`           | Johzuke                | Raiz and Touchdown Raiz                        |
-| Scoot           | `scoot`          | Ronnie Street Stunts   | How To SCOOT                                   |
-| Front Tuck      | `frontTuck`      | Hadyn Wiseman          | How To Frontflip For Beginners                 |
-| Sideflip        | `sideflip`       | Omar Zaki              | SIDEFLIP Tutorial                              |
-
-## Candidatos en espanol para revisar
-
-Se encontraron, pero NO se incluyeron por no ser un canal claramente reconocido de tricking (regla conservadora). El usuario puede revisarlos y, si los aprueba, pasarlos para agregarlos.
-
-| Truco      | Consulta                                          | Candidato                                    | Canal                  |
-| ---------- | ------------------------------------------------- | -------------------------------------------- | ---------------------- |
-| Back Tuck  | `tutorial mortal atras backflip tricking espanol` | Como hacer un mortal hacia atras paso a paso | KALISTENIKA MOTIVACION |
-| Back Tuck  | `tutorial mortal atras backflip tricking espanol` | Tutorial de Mortal Hacia Atras               | Sport Ranger Moves     |
-| Back Tuck  | `tutorial mortal atras backflip tricking espanol` | Tutorial del Backflip en 4 pasos             | ElMuni Parkour         |
-| 540        | `como hacer 540 kick tutorial espanol tricking`   | Como dominar la 540 Kick                     | Mauchas Tkd            |
-| 540        | `como hacer 540 kick tutorial espanol tricking`   | Aprende como hacer la patada 540             | RUNFIT                 |
-| Front Tuck | `tutorial dart flip front tuck espanol acrobacia` | Frontflip Tutorial #2 (espanol)              | Shifer                 |
-| Aerial     | `tutorial aerial tricking espanol como hacer`     | Tutorial Aerial en 30 segundos               | Instagram (reel)       |
-
-Nota: para la familia de Wackknife no se encontro ningun candidato en espanol; la busqueda devolvio solo el tutorial en ingles y fichas de Loopkicks.
-
-## Como agregar un tutorial
-
-1. Validar el enlace con oEmbed del proveedor (titulo y autor reales, sin API key).
-2. Confirmar que es un canal oficial o reconocido, que ensena el truco y que no aparecen menores visibles. Ante duda, no se agrega.
-3. Agregar la entrada en `packages/db/src/seed/tutorial-sources/*.json` con los campos `trickId`, `provider`, `url`, `embedUrl`, `author`, `title`, `language`, `kind` y `aspect`.
-4. Al aprobarlo, quitar la fila de este documento o marcar el estado como listo.
-5. Sembrar con el script de tutoriales del paquete de base de datos.
+- arabianAxe | Arabian Axe | backward | `Arabian Axe tricking tutorial espanol`, `Arabian Axe tricking tutorial` | Solo aparecen tutoriales de Axe Aerial/Axe Kick y de Arabian por separado, ninguno del truco completo.
+- arabianPikeSnapu | Arabian Pike Snapu | backward | `arabian pike snapu tricking tutorial` | Variante compuesta muy especifica; sin tutorial dedicado ni canal reconocido.
+- arabianScissor | Arabian Scissor | backward | Arabian Scissor tricking tutorial | Sin tutorial dedicado; solo Gainer Scissor (tips) y Arabian base
+- arabianScissorHalf | Arabian Scissor Half | backward | `arabian scissor half tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo clips y el Arabian general de Johzuke.
+- arabianScissorHyperhook | Arabian Scissor Hyperhook | backward | Arabian Scissor Hyperhook tricking tutorial | sin tutorial dedicado; solo hay tutoriales de Full Hyperhook, no del scissor
+- arabianScissorRound | Arabian Scissor Round | backward | `Arabian Scissor Round tricking tutorial espanol`, `Arabian Scissor Round tricking tutorial` | Solo resultados de cart arabian scissor o demostraciones; no hay tutorial del Arabian Scissor Round.
+- arabianUnhalfInBackOut | Arabian Unhalf-In Back-Out | backward | `arabian unhalf-in back-out tricking tutorial` | solo hay breakdowns de "Best of Tricking" (recopilacion), sin tutorial dedicado
+- arabianXOut | Arabian X-Out | backward | `arabian x-out tricking tutorial` | Variante compuesta; solo fichas y demostraciones, sin tutorial.
+- backInRocketboiOut | Back-In Rocketboi-Out | backward | `back-in rocketboi-out tricking tutorial` | Truco de nicho; sin resultados de ensenanza.
+- backInSquirrelOut | Back-In Squirrel-Out | backward | Back-In Squirrel-Out tricking tutorial | Sin tutorial dedicado; solo Back Tuck base y fichas de enciclopedia
+- boxcutterTurbo | Boxcutter Turbo | backward | `boxcutter turbo tricking tutorial` | hay tutoriales de boxcutter y cork hyperhook, ninguno de la variante turbo
+- bridge | Bridge | backward | `bridge tricking tutorial`, `bridge pose tricking tutorial` | Solo tutorial de gimnasia (GymnasticsHQ); canal no de tricking y riesgo de menores en contenido de gimnasia, descartado por precaucion.
+- brokenFull | Broken Full | backward | Broken Full tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia y resultado ajeno (Broken Soul Full)
+- corkscrewCrowdAwakenerHyper | Corkscrew Crowd Awakener Hyper | backward | `Corkscrew Crowd Awakener Hyper tricking tutorial espanol`, `Corkscrew Crowd Awakener Hyper tricking tutorial` | Existe tutorial de Crowd Awakener Cork y de Hypercork, pero no de la variante con hyperhook.
+- corkscrewCrowdAwakenerKnife | Corkscrew Crowd Awakener Knife | backward | `corkscrew crowd awakener knife tricking tutorial` | hay "Cork Crowd Awakener" (Johzuke), sin la variante knife
+- corkscrewCrowdAwakenerRound | Corkscrew Crowd Awakener Round | backward | `corkscrew crowd awakener round tricking tutorial` | Compuesto; solo crowd awakener base, sin la variante corkscrew round.
+- corkscrewDoubleleg | Corkscrew Doubleleg | backward | Corkscrew Doubleleg tricking tutorial | Solo Corkscrew D-Leg Twist (BAHT), que es la variante con Twist; sin tutorial del Corkscrew Doubleleg exacto
+- corkscrewDoublelegHyperhook | Corkscrew Doubleleg Hyperhook | backward | `corkscrew doubleleg hyperhook tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado; solo corkscrew y hyperhook por separado.
+- corkscrewDoublelegLateRound | Corkscrew Doubleleg Late Round | backward | Corkscrew Doubleleg Late Round tricking tutorial | sin tutorial dedicado; aparece Corkscrew D-Leg base, no la variante Late Round
+- corkscrewFeilongKnife | Corkscrew Feilong Knife | backward | `corkscrew feilong knife tricking tutorial` | Compuesto; sin tutorial dedicado.
+- corkscrewKyro | Corkscrew Kyro | backward | Corkscrew Kyro tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia y resultados del Corkscrew base
+- corkscrewMcDirty | Corkscrew McDirty | backward | `corkscrew mcdirty tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo corkscrew generico.
+- corkscrewSidewinder | Corkscrew Sidewinder | backward | `corkscrew sidewinder tricking tutorial` | "Sidewinder" devuelve contenido ajeno (combate, montanas rusas); sin tutorial de tricking.
+- corkscrewSkullsnapper | Corkscrew Skullsnapper | backward | Corkscrew Skullsnapper tricking tutorial | Sin tutorial dedicado; solo Corkscrew base (Alex Destreza) y fichas de enciclopedia
+- corkscrewSnapuHyper | Corkscrew Snapu Hyper | backward | Corkscrew Snapu Hyper tricking tutorial | sin tutorial dedicado; solo resultados de cork base
+- corkscrewSwipe | Corkscrew Swipe | backward | `Corkscrew Swipe tricking tutorial espanol`, `Corkscrew Swipe tricking tutorial` | Solo demos (Tricktionary2) y tutoriales de corkscrew base; sin tutorial del corkscrew swipe.
+- corkscrewSwipeLateRound | Corkscrew Swipe Late Round | backward | `corkscrew swipe late round tricking tutorial` | solo breakdowns; hay cork swipe knife, no late round
+- corkscrewSwipeLateSwipe | Corkscrew Swipe Late Swipe | backward | `corkscrew swipe late swipe tricking tutorial` | Compuesto; sin tutorial dedicado.
+- corkscrewSwipeknife | Corkscrew Swipeknife | backward | Corkscrew Swipeknife tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- corkscrewWackknife | Corkscrew Wackknife | backward | Sin candidato seguro detectado; falta buscar o pasar el link.
+- donutBoyHyperhook | Donut Boy Hyperhook | backward | `Donut Boy Hyperhook tricking tutorial espanol`, `Donut Boy Hyperhook tricking tutorial` | Hay tutorial del Donut Boy y de full hyperhook por separado, no de la variante donut boy + hyperhook.
+- doubleCorkscrewDoubleleg | Double Corkscrew Doubleleg | backward | `double corkscrew doubleleg tricking tutorial espanol` / `... tutorial` | Solo tutoriales de double cork o de double leg por separado, no el compuesto.
+- doubleCorkscrewDoublelegTwist | Double Corkscrew Doubleleg Twist | backward | Double Corkscrew Doubleleg Twist tricking tutorial | sin tutorial dedicado; solo Corkscrew D-Leg Twist simple
+- doubleCorkscrewRound | Double Corkscrew Round | backward | `Double Corkscrew Round tricking tutorial espanol`, `Double Corkscrew Round tricking tutorial` | Hay tutorial de double corkscrew, pero ninguno que enseñe la salida con round kick.
+- doubleCorkscrewShuriken | Double Corkscrew Shuriken | backward | `double corkscrew shuriken tricking tutorial` | solo "shuriken cork" (una rotacion) y resultados de origami
+- doubleCorkscrewShurikenCutter | Double Corkscrew Shuriken Cutter | backward | `double corkscrew shuriken cutter tricking tutorial` | Solo existe shuriken cutter de un corkscrew; sin tutorial del doble corkscrew.
+- doubleCorkscrewSnapu | Double Corkscrew Snapu | backward | Double Corkscrew Snapu tricking tutorial | Solo Cork Snapu por separado (Johzuke); sin tutorial del Double Corkscrew Snapu
+- doubleCorkscrewWackknife | Double Corkscrew Wackknife | backward | Sin candidato seguro detectado; falta buscar o pasar el link.
+- doubleFullCrowdAwakener | Double Full Crowd Awakener | backward | Double Full Crowd Awakener tricking tutorial | sin tutorial dedicado; hay Cart Full Crowd Awakener y breakdowns
+- doubleFullDoubleleg | Double Full Doubleleg | backward | `Double Full Doubleleg tricking tutorial espanol`, `Double Full Doubleleg tricking tutorial` | El tutorial de Full Doubleleg no cubre el doble full; no hay tutorial del double full doubleleg.
+- doubleFullDoublelegDoubleTwist | Double Full Doubleleg Double Twist | backward | `double full doubleleg double twist tricking tutorial` | solo progresiones y compilaciones
+- doubleFullDoublelegTwist | Double Full Doubleleg Twist | backward | `double full doubleleg twist tricking tutorial` | Solo fichas de Loopkicks; sin tutorial en video.
+- doubleFullHyperhook | Double Full Hyperhook | backward | Double Full Hyperhook tricking tutorial | Tutorial encontrado (Mastering Tricking 22) con menores visibles en segundo plano; se descarta por la regla conservadora
+- doubleFullMcDirty | Double Full McDirty | backward | `double full mcdirty tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo double full generico.
+- doubleFullRound | Double Full Round | backward | Double Full Round tricking tutorial | sin tutorial dedicado; aparece Doble Full base, no con round kick
+- doubleFullShurikane | Double Full Shurikane | backward | `Double Full Shurikane tricking tutorial espanol`, `Double Full Shurikane tricking tutorial` | Solo showcases de Best of Tricking; sin tutorial dedicado.
+- doubleFullShurikenHyperhook | Double Full Shuriken Hyperhook | backward | `double full shuriken hyperhook tricking tutorial` | hay shuriken hyperhook (Kiyoshiro), sin la version full
+- doubleFullShurikenHyperhookTurbo | Double Full Shuriken Hyperhook Turbo | backward | `double full shuriken hyperhook turbo tricking tutorial` | Compuesto muy avanzado; sin tutorial.
+- doubleFullSnapu | Double Full Snapu | backward | Double Full Snapu tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- doubleFullSnapuTwist | Double Full Snapu Twist | backward | `double full snapu twist tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- doubleFullSwipe | Double Full Swipe | backward | Double Full Swipe tricking tutorial | sin tutorial dedicado; hay Full Snapu y Swipe base
+- doubleFullSwipeknife | Double Full Swipeknife | backward | `Double Full Swipeknife tricking tutorial espanol`, `Double Full Swipeknife tricking tutorial` | Solo clips y showcases; sin tutorial dedicado.
+- doubleFullInBackOut | Double Full-In Back-Out | backward | `double full in back out tricking tutorial` | hay full-in back-out (Jimmy Xiong), sin la version double dedicada
+- doubleGainer | Double Gainer | backward | `double gainer tricking tutorial` | Solo shorts y fichas de Loopkicks; sin tutorial completo de canal reconocido.
+- doubleNike | Double Nike | backward | `double nike tricking tutorial espanol` / `... tutorial` | Solo showcases de short; ningun tutorial que ensene el double nike.
+- dragonflyBoxcutter | Dragonfly Boxcutter | backward | Dragonfly Boxcutter tricking tutorial | sin tutorial dedicado; solo demos (Taka) y Swing/Dragonfly general
+- dragonflyCorkscrew | Dragonfly Corkscrew | backward | `Dragonfly Corkscrew tricking tutorial espanol`, `Dragonfly Corkscrew tricking tutorial` | Tutoriales de dragonfly twist y de corkscrew por separado; ninguno del dragonfly corkscrew.
+- dragonflyCorkscrewDoubleleg | Dragonfly Corkscrew Doubleleg | backward | `dragonfly corkscrew doubleleg tricking tutorial` | hay dragonfly swing y corkscrew d-leg por separado, no el combinado
+- dragonflyCorkscrewFeilongKnife | Dragonfly Corkscrew Feilong Knife | backward | `dragonfly corkscrew feilong knife tricking tutorial` | Compuesto; sin tutorial.
+- dragonflyCorkscrewSidewinderLateRound | Dragonfly Corkscrew Sidewinder Late Round | backward | `dragonfly corkscrew sidewinder late round tricking tutorial espanol` / `... tutorial` | Compuesto muy avanzado, sin tutorial dedicado.
+- dragonflyCorkscrewSwipeknife | Dragonfly Corkscrew Swipeknife | backward | Dragonfly Corkscrew Swipeknife tricking tutorial | sin tutorial dedicado; hay Cork Swipe Knife base
+- dragonflyDoubleCorkscrew | Dragonfly Double Corkscrew | backward | `Dragonfly Double Corkscrew tricking tutorial espanol`, `Dragonfly Double Corkscrew tricking tutorial` | Solo tutoriales de double corkscrew base y showcases; sin variante dragonfly.
+- dragonflyDoubleCorkscrewHyperhook | Dragonfly Double Corkscrew Hyperhook | backward | `dragonfly double corkscrew hyperhook tricking tutorial` | solo breakdowns
+- dragonflyDoubleCorkscrewRound | Dragonfly Double Corkscrew Round | backward | `dragonfly double corkscrew round tricking tutorial` | Compuesto; sin tutorial.
+- dragonflyHyperhook | Dragonfly Hyperhook | backward | Dragonfly Hyperhook tricking tutorial | Solo Dragonfly Boxcutter (Kyle Bregenzer), que es la variante Cork; sin tutorial de la variante Hyperhook
+- dragonflyMoonkick | Dragonfly Moonkick | backward | `dragonfly moonkick tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo clips y moonkick general.
+- dragonflyShurikenCutter | Dragonfly Shuriken Cutter | backward | Dragonfly Shuriken Cutter tricking tutorial | sin tutorial dedicado; hay Shuriken Cutter base, no la variante Dragonfly
+- dragonflyTripleCorkscrew | Dragonfly Triple Corkscrew | backward | `Dragonfly Triple Corkscrew tricking tutorial espanol`, `Dragonfly Triple Corkscrew tricking tutorial` | Solo showcases/progresiones de Best of Tricking; sin tutorial.
+- filipino | Filipino | backward | `filipino tricking tutorial` | resultados no relacionados (idiomas, arroz); sin tutorial de tricking
+- flashHelicoptero | Flash Helicoptero | backward | `flash helicoptero tricking tutorial` | Solo helicoptero base; sin tutorial de la variante flash.
+- flashKnife | Flash Knife | backward | `flash knife tricking tutorial espanol` / `... tutorial` | La busqueda devuelve trucos de cuchillo real, no el truco de tricking.
+- frappe | Frappe | backward | Frappe tricking tutorial | sin tutorial dedicado; solo un showcase (Shosei Iwamoto) y resultados de ballet
+- fullCrowdAwakener | Full Crowd Awakener | backward | `full crowd awakener tricking tutorial` | Solo crowd awakener base; sin la variante full.
+- fullCrowdAwakenerSnapu | Full Crowd Awakener Snapu | backward | Full Crowd Awakener Snapu tricking tutorial | Solo Cart/Cork Crowd Awakener y Full Crowd Awakener In Dleg Out; sin la variante Snapu
+- fullDoublelegDoubleTwist | Full Doubleleg Double Twist | backward | Full Doubleleg Double Twist tricking tutorial | sin resultados
+- fullDoublelegHawkeye | Full Doubleleg Hawkeye | backward | `Full Doubleleg Hawkeye tricking tutorial espanol`, `Full Doubleleg Hawkeye tricking tutorial` | Tutorial de full doubleleg sin la salida hawkeye; no hay tutorial de la variante.
+- fullDoublelegHyperhook | Full Doubleleg Hyperhook | backward | `full doubleleg hyperhook tricking tutorial` | hay full hyperhook y full dleg por separado, no el combinado
+- fullDoublelegTwist | Full Doubleleg Twist | backward | `full doubleleg twist tricking tutorial` | Solo fichas de Loopkicks; sin tutorial.
+- fullDoublelegTwistDoubleleg | Full Doubleleg Twist Doubleleg | backward | Full Doubleleg Twist Doubleleg tricking tutorial | Solo Double Leg base y Doubleleg Double Twist; sin la variante pedida
+- fullDown | Full Down | backward | `full down tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo full generico y breakdowns.
+- fullElbowGumbi | Full Elbow Gumbi | backward | Full Elbow Gumbi tricking tutorial | sin tutorial dedicado; solo tutoriales de Gumbi base
+- fullFeilong | Full Feilong | backward | `Full Feilong tricking tutorial espanol`, `Full Feilong tricking tutorial` | Solo breakdowns de Best of Tricking; sin tutorial del full feilong.
+- fullFeilongDouble | Full Feilong Double | backward | `full feilong double tricking tutorial` | solo breakdowns
+- fullFeilongKnife | Full Feilong Knife | backward | `full feilong knife tricking tutorial` | Solo jackknife/feilong base; sin la variante full.
+- fullFeilongLateSwipeknife | Full Feilong Late Swipeknife | backward | Full Feilong Late Swipeknife tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia
+- fullGumbi | Full Gumbi | backward | `full gumbi tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo gumbi general.
+- fullHyperhookTurbo | Full Hyperhook Turbo | backward | `full hyperhook turbo tricking tutorial` | tutoriales de full hyperhook sin la variante turbo
+- fullKyro | Full Kyro | backward | `full kyro tricking tutorial` | Sin resultados de tricking (el termino devuelve kickflip de skateboard).
+- fullLateRound | Full Late Round | backward | Full Late Round tricking tutorial | Sin tutorial dedicado; solo Cart Full Round (truco distinto) y fichas de enciclopedia
+- fullMcDirty | Full McDirty | backward | `full mcdirty tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado (el nombre "mcdirty" aparece poco documentado).
+- fullPike | Full Pike | backward | Full Pike tricking tutorial | sin tutorial dedicado; hay pike de gimnasia y backend pike, no el truco
+- fullPikeRound | Full Pike Round | backward | `Full Pike Round tricking tutorial espanol`, `Full Pike Round tricking tutorial` | Solo clips de round off pike backflip; sin tutorial del full pike round.
+- fullRocketboi | Full Rocketboi | backward | `full rocketboi tricking tutorial` | hay "RocketBoi tutorial" (Trickbox) y scoot full, sin full rocketboi dedicado
+- fullRound | Full Round | backward | `full round kick tricking tutorial` | Solo round kick/roundhouse de taekwondo; sin tutorial del full round.
+- fullScissor | Full Scissor | backward | Full Scissor tricking tutorial | Sin tutorial dedicado; solo Gainer Scissor (tips) y fichas de enciclopedia
+- fullShurikane | Full Shurikane | backward | `full shurikane tricking tutorial espanol` / `... tutorial` | Solo full shuriken cutter y shuriken por separado, no el shurikane.
+- fullSnapuDoubleleg | Full Snapu Doubleleg | backward | `full snapu doubleleg tricking tutorial` | Solo full snapu base; sin la variante doubleleg.
+- fullSnapuHyper | Full Snapu Hyper | backward | Full Snapu Hyper tricking tutorial | Solo Full Snapu (Zak Ferguson); no la variante Hyper
+- fullSnapuHyperhook | Full Snapu Hyperhook | backward | `full snapu hyperhook tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado; full snapu y full hyperhook por separado.
+- fullSnapuRound | Full Snapu Round | backward | Full Snapu Round tricking tutorial | sin tutorial dedicado; hay Full Snapu base
+- fullSnapuSnapu | Full Snapu Snapu | backward | `Full Snapu Snapu tricking tutorial espanol`, `Full Snapu Snapu tricking tutorial` | Existe tutorial de full snapu, pero no del full snapu snapu.
+- fullSnapuSwipe | Full Snapu Swipe | backward | `full snapu swipe tricking tutorial` | hay snapuswipe y full snapu por separado, sin el combinado
+- fullSnapuTwist | Full Snapu Twist | backward | `full snapu twist tricking tutorial` | Solo full snapu base; sin la variante twist.
+- fullSnapuInBackOut | Full Snapu-In Back-Out | backward | Full Snapu-In Back-Out tricking tutorial | Sin tutorial dedicado; solo Full Snapu y combo breakdowns
+- fullSwipe | Full Swipe | backward | `full swipe tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo swipe y sideswipe.
+- fullSwipeLateRound | Full Swipe Late Round | backward | Full Swipe Late Round tricking tutorial | sin tutorial dedicado; hay Sideswipe Late 9 y GMS
+- fullSwipeknife | Full Swipeknife | backward | `Full Swipeknife tricking tutorial espanol`, `Full Swipeknife tricking tutorial` | Tutoriales de swipeknife y de full por separado; ninguno del full swipeknife.
+- fullTaiFighter | Full Tai Fighter | backward | `full tai fighter tricking tutorial` | sin resultados relacionados (aparecen peleas de TIE fighter)
+- fullTaiFighterKnife | Full Tai Fighter Knife | backward | `full tai fighter knife tricking tutorial` | Compuesto; sin tutorial.
+- fullTaiFighterHyperhook | Full Tai-Fighter Hyperhook | backward | Full Tai-Fighter Hyperhook tricking tutorial | Sin tutorial dedicado; solo Full Hyperhook base
+- fullTeradaGrab | Full Terada Grab | backward | `full terada grab tricking tutorial espanol` / `... tutorial` | Solo terada grab simple, no la version full.
+- fullUp | Full Up | backward | `Full Up tricking tutorial espanol`, `Full Up tricking tutorial` | Solo el tutorial general de FULL VARIATIONS; sin tutorial dedicado al full up.
+- fullUpCrowdAwakener | Full Up Crowd Awakener | backward | `full up crowd awakener tricking tutorial` | hay cart full crowd awakener, sin la version full up
+- fullUpDoubleleg | Full Up Doubleleg | backward | `full up doubleleg tricking tutorial` | Compuesto; sin tutorial.
+- fullUpHyperhook | Full Up Hyperhook | backward | Full Up Hyperhook tricking tutorial | Solo Full Hyperhook (Johzuke, Zak Ferguson); no la variante Full Up
+- fullUpRocketboiTwist | Full Up Rocketboi Twist | backward | `full up rocketboi twist tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- fullUpTwist | Full Up Twist | backward | Full Up Twist tricking tutorial | sin tutorial dedicado; solo Twisting/Full Twist base
+- fullWackknife | Full Wackknife | backward | Sin candidato seguro detectado; falta buscar o pasar el link.
+- fullWackknifeHyperhook | Full Wackknife Hyperhook | backward | Sin candidato seguro detectado; falta buscar o pasar el link.
+- fullWackknifeRound | Full Wackknife Round | backward | Sin candidato seguro detectado; falta buscar o pasar el link.
+- fullInBackOut | Full-In Back-Out | backward | `Full-In Back-Out tricking tutorial espanol`, `Full-In Back-Out tricking tutorial` | Solo vlogs y progresiones personales; sin tutorial de enseñanza.
+- fullInBackOutHyper | Full-In Back-Out Hyper | backward | `full in back out hyper tricking tutorial` | hay full-in back-out (Jimmy Xiong), sin la variante hyper
+- gainerArabian | Gainer Arabian | backward | Gainer Arabian tricking tutorial | Solo tutorial de un canal no reconocido (Flipping Awesome Tricks); se descarta
+- gainerArabianGrabCrowdAwakener | Gainer Arabian Grab Crowd Awakener | backward | `gainer arabian grab crowd awakener tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado; solo gainer y crowd awakener por separado.
+- gainerFigure4 | Gainer Figure 4 | backward | Gainer Figure 4 tricking tutorial | solo candidato en polaco (Trickbox Project), idioma no soportado (solo es/en)
+- gainerFigure4Sidekick | Gainer Figure 4 Sidekick | backward | `Gainer Figure 4 Sidekick tricking tutorial espanol`, `Gainer Figure 4 Sidekick tricking tutorial` | Existe un tutorial dedicado en polaco, idioma no admitido por el esquema (es/en).
+- gainerHelicoptero | Gainer Helicoptero | backward | `gainer helicoptero tricking tutorial` | Solo helicoptero base; sin la variante gainer.
+- gainerLateRound | Gainer Late Round | backward | `gainer late round tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo gainer generico.
+- gainerRocketboi | Gainer Rocketboi | backward | Gainer Rocketboi tricking tutorial | sin tutorial dedicado; solo Gainer base y Cheat Gainer
+- gainerScissorLateRound | Gainer Scissor Late Round | backward | `gainer scissor late round tricking tutorial` | hay gainer scissor (Johzuke), sin late round
+- gainerScissorRound | Gainer Scissor Round | backward | `gainer scissor tricking tutorial` | Existe tutorial de Gainer Scissor base, pero no se pudo confirmar que la variante "Round" sea la misma; pendiente por duda.
+- gainerScissorSwipe | Gainer Scissor Swipe | backward | Gainer Scissor Swipe tricking tutorial | Solo Gainer Scissor (tips, Mastering Tricking 22); no la variante Swipe
+- gainerScissorTwist | Gainer Scissor Twist | backward | `gainer scissor twist tricking tutorial espanol` / `... tutorial` | Hay tutorial de gainer scissor, no de la version con twist.
+- gainerSwitchHalf | Gainer Switch Half | backward | `gainer switch half tricking tutorial` | hay gainer switch, sin la variante half
+- gainerSwitchHawkeye | Gainer Switch Hawkeye | backward | `gainer switch hawkeye tricking tutorial` | Compuesto; sin tutorial.
+- gainerSwitchHyperhook | Gainer Switch Hyperhook | backward | Gainer Switch Hyperhook tricking tutorial | Solo Gainer Switch base (Kojos Trick Lab, Johzuke); no la variante Hyperhook
+- gainerTriple | Gainer Triple | backward | `gainer triple tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo gainer y triple full por separado.
+- gainerWackknife | Gainer Wackknife | backward | Sin candidato seguro detectado; falta buscar o pasar el link.
+- gainerXOut | Gainer X-Out | backward | `Gainer X-Out tricking tutorial espanol`, `Gainer X-Out tricking tutorial` | Solo clips de progreso y demos; sin tutorial del gainer x-out.
+- gainerInShantOut | Gainer-In Shant-Out | backward | `gainer in shant out tricking tutorial` | hay cheat o slant gainer (GNT), sin el shant-out
+- handcuffCorkscrew | Handcuff Corkscrew | backward | `handcuff corkscrew tricking tutorial` | Sin resultados de tricking (aparece Houdini y corkscrew base).
+- ironmanFullSnapu | Ironman Full Snapu | backward | Ironman Full Snapu tricking tutorial | Solo Full Ironman (T-man Tricking); no la variante con Snapu
+- kickFull | Kick Full | backward | Kick Full tricking tutorial | sin tutorial dedicado; solo Flash Kick y Full Hyperhook
+- kickFullDoubleleg | Kick Full Doubleleg | backward | `Kick Full Doubleleg tricking tutorial espanol`, `Kick Full Doubleleg tricking tutorial` | Tutoriales de kick full y de doubleleg por separado; ninguno del kick full doubleleg.
+- kickFullSnapu | Kick Full Snapu | backward | `kick full snapu tricking tutorial` | sin tutorial dedicado
+- lonestar | Lonestar | backward | `lonestar tricking tutorial` | Sin resultados de tricking (solo camiones, GPS y puzzles).
+- lonestarHyperhook | Lonestar Hyperhook | backward | Lonestar Hyperhook tricking tutorial | Solo Lonestar base (Trickbox Project); no la variante Hyperhook
+- lonestarScissor | Lonestar Scissor | backward | `lonestar scissor tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; hay "Lonestar tutorial" suelto y scissor generico.
+- lonestarTwist | Lonestar Twist | backward | Lonestar Twist tricking tutorial | sin tutorial dedicado; solo breakdown sin ensenanza
+- outstretchedBoxcutter | Outstretched Boxcutter | backward | `outstretched boxcutter tricking tutorial` | hay boxcutter, sin la variante outstretched
+- outstretchedCorkscrew | Outstretched Corkscrew | backward | `outstretched corkscrew tricking tutorial` | Solo fichas de Loopkicks; sin tutorial.
+- peterPanDoubleCorkscrew | Peter Pan Double Corkscrew | backward | Peter Pan Double Corkscrew tricking tutorial | Sin tutorial dedicado; solo Double Corkscrew generico
+- popDonutBoy | Pop Donut Boy | backward | `pop donut boy tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo el Donut Boy de Mastering Tricking, no el pop.
+- popDonutBoyRound | Pop Donut Boy Round | backward | Pop Donut Boy Round tricking tutorial | sin tutorial dedicado; hay Donut Boy base
+- popcorn | Popcorn | backward | `Popcorn tricking tutorial espanol`, `Popcorn tricking tutorial` | La búsqueda devuelve trucos de skate o magia; no hay tutorial de tricking del popcorn.
+- popcornHyper | Popcorn Hyper | backward | `popcorn hyper tricking tutorial` | resultados no relacionados (palomitas de maiz)
+- quadCorkscrew | Quad Corkscrew | backward | `quad corkscrew tricking tutorial` | Sin tutorial de tricking (contenido de ski/doblados ajenos).
+- quadFull | Quad Full | backward | Quad Full tricking tutorial | Sin tutorial dedicado; solo foros y contenido de gimnasia
+- rocketboiFullDoublelegRocketboi | Rocketboi Full Doubleleg Rocketboi | backward | Rocketboi Full Doubleleg Rocketboi tricking tutorial | sin tutorial dedicado; solo breakdowns
+- rocketboiRound | Rocketboi Round | backward | `Rocketboi Round tricking tutorial espanol`, `Rocketboi Round tricking tutorial` | Sin resultados del truco; solo tutorials de round kick y de backside 900.
+- rocketboiScissorSnapu | Rocketboi Scissor Snapu | backward | `rocketboi scissor snapu tricking tutorial` | hay snapuswipe y rocketboi por separado, sin el combinado
+- rocketboiScissorSwitch | Rocketboi Scissor Switch | backward | `rocketboi scissor switch tricking tutorial` | Truco de nicho; sin tutorial.
+- rodeoBackflip | Rodeo Backflip | backward | Rodeo Backflip tricking tutorial | Solo contenido de snowboard; sin tutorial de tricking
+- rodeoBackflipFullDown | Rodeo Backflip Full Down | backward | `rodeo backflip full down tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- rodeoBoxcutter | Rodeo Boxcutter | backward | Rodeo Boxcutter tricking tutorial | sin tutorial dedicado; hay Boxcutter base y Cork Hyperhook
+- rodeoCorkscrewShurikenCutter | Rodeo Corkscrew Shuriken Cutter | backward | `rodeo corkscrew shuriken cutter tricking tutorial` | hay shuriken cutter variation (Mastering), sin el rodeo cork
+- rodeoCorkscrewSnapu | Rodeo Corkscrew Snapu | backward | `rodeo corkscrew snapu tricking tutorial` | Compuesto; sin tutorial.
+- rodeoCorkscrewTwist | Rodeo Corkscrew Twist | backward | Rodeo Corkscrew Twist tricking tutorial | Sin tutorial dedicado; solo Rodeo Cork base
+- rodeoFull | Rodeo Full | backward | `rodeo full tricking tutorial espanol` / `... tutorial` | Solo rodeo cork; no aparece la version full dedicada.
+- rodeoFullDoubleleg | Rodeo Full Doubleleg | backward | Rodeo Full Doubleleg tricking tutorial | sin tutorial dedicado; hay Rodeo Cork y Cart Full Double Leg
+- rodeoFullHyperhook | Rodeo Full Hyperhook | backward | `Rodeo Full Hyperhook tricking tutorial espanol`, `Rodeo Full Hyperhook tricking tutorial` | Tutoriales de full hyperhook y de rodeo por separado; ninguno del rodeo full hyperhook.
+- rodeoFullRound | Rodeo Full Round | backward | `rodeo full round tricking tutorial` | hay rodeo cork, sin full round
+- rodeoFullShuriken | Rodeo Full Shuriken | backward | `rodeo full shuriken tricking tutorial` | Compuesto; sin tutorial.
+- rodeoFullSnapu | Rodeo Full Snapu | backward | Rodeo Full Snapu tricking tutorial | Sin tutorial dedicado; solo resultados de danza/snowboard
+- rodeoFullWackknife | Rodeo Full Wackknife | backward | Sin candidato seguro detectado; falta buscar o pasar el link.
+- rodeoGainerSwitch | Rodeo Gainer Switch | backward | `rodeo gainer switch tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo gainer switch simple.
+- shattermoon | Shattermoon | backward | Shattermoon tricking tutorial | sin tutorial dedicado; solo breakdown sin ensenanza
+- sheepShearer | Sheep Shearer | backward | `Sheep Shearer tricking tutorial espanol`, `Sheep Shearer tricking tutorial` | La búsqueda devuelve esquila de ovejas; no hay tutorial de tricking del sheep shearer.
+- shurikane | Shurikane | backward | `shurikane tricking tutorial` | resultados de origami; sin tutorial dedicado
+- shurikaneLateHook | Shurikane Late Hook | backward | `shurikane late hook tricking tutorial` | Sin tutorial dedicado.
+- shurikenCutterScissor | Shuriken Cutter Scissor | backward | `shuriken cutter scissor tricking tutorial espanol` / `... tutorial` | Hay shuriken cutter, no la variante scissor dedicada.
+- slice | Slice | backward | Slice tricking tutorial | resultados ajenos al tricking (magia con cartas); sin tutorial dedicado
+- straddleCorkscrew | Straddle Corkscrew | backward | `straddle corkscrew tricking tutorial` | hay corkscrew generico, sin straddle
+- teradaFull | Terada Full | backward | `terada full tricking tutorial` | Solo contenido general de Steve Terada, sin tutorial del Terada Full.
+- teradaGrabInShantOut | Terada Grab In Shant Out | backward | `terada grab in shant out tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado; solo terada grab simple.
+- touchdownCorkscrew | Touchdown Corkscrew | backward | Touchdown Corkscrew tricking tutorial | sin tutorial dedicado; solo Cork base y Touchdown Raiz
+- touchdownFull | Touchdown Full | backward | `Touchdown Full tricking tutorial espanol`, `Touchdown Full tricking tutorial` | Tutoriales de touchdown raiz y de doble full; ninguno del touchdown full.
+- touchdownQuat | Touchdown Quat | backward | `touchdown quat tricking tutorial` | resultados no relacionados; sin tutorial
+- tripleCorkscrew | Triple Corkscrew | backward | `triple corkscrew tricking tutorial` | Sin tutorial de tricking (contenido de ski/cork ajeno).
+- tripleCorkscrewRound | Triple Corkscrew Round | backward | Triple Corkscrew Round tricking tutorial | Solo Triple Corkscrew (BAHT); no la variante con Round
+- tripleFlashKickFull | Triple Flash Kick Full | backward | `triple flash kick full tricking tutorial espanol` / `... tutorial` | Solo clips de triple flash kick; ningun tutorial que lo ensene.
+- tripleFullHyper | Triple Full Hyper | backward | `Triple Full Hyper tricking tutorial espanol`, `Triple Full Hyper tricking tutorial` | Solo showcases/progresiones de Best of Tricking; sin tutorial.
+- tripleFullHyperhook | Triple Full Hyperhook | backward | `triple full hyperhook tricking tutorial` | solo progresiones (Best of Tricking)
+- tripleFullRound | Triple Full Round | backward | `triple full round tricking tutorial` | Compuesto; sin tutorial.
+- tripleFullShurikenHyperhook | Triple Full Shuriken Hyperhook | backward | Triple Full Shuriken Hyperhook tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- xOutFull | X-Out Full | backward | `X-Out Full tricking tutorial espanol`, `X-Out Full tricking tutorial` | No hay tutorial del x-out full; solo de x-out backflip y de full por separado.
+- xOutInBackOut | X-Out-In Back-Out | backward | `x out in back out tricking tutorial` | hay x-out backflip (Johzuke, VincaniTV), sin el in-back-out
+- frontAxe | Front Axe | forward | Front Axe tricking tutorial | sin tutorial dedicado; aparece Webster Axe Kick, no el frontflip con axe
+- frontPike | Front Pike | forward | `front pike tricking tutorial` | Solo tutoriales de clavados/gimnasia, no de tricking.
+- frontXOut | Front X-Out | forward | Front X-Out tricking tutorial | sin tutorial dedicado; solo X-Out de backflip
+- handcuff360DiveRoll | Handcuff 360 Dive Roll | forward | `Handcuff 360 Dive Roll tricking tutorial espanol`, `Handcuff 360 Dive Roll tricking tutorial` | Hay tutoriales de 360 dive roll, pero ninguno en la posición handcuff.
+- janitorFlip | Janitor Flip | forward | `janitor flip tricking tutorial` | Sin resultados de tricking (la palabra devuelve otro contenido).
+- janitorScissorTwist | Janitor Scissor Twist | forward | Janitor Scissor Twist tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- janitorTwist | Janitor Twist | forward | `janitor twist tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado conocido.
+- rodeoJanitorTwist | Rodeo Janitor Twist | forward | `Rodeo Janitor Twist tricking tutorial espanol`, `Rodeo Janitor Twist tricking tutorial` | Solo tutorials de rodeo cork o de btwist; sin el janitor twist con agarre rodeo.
+- supermanFront | Superman Front | forward | `superman front tricking tutorial` | Solo ejercicios y contenido de Superman; sin tutorial del truco.
+- websterHalf | Webster Half | forward | Webster Half tricking tutorial | sin tutorial dedicado; hay Webster y Loser base
+- websterHyperhook | Webster Hyperhook | forward | `Webster Hyperhook tricking tutorial espanol`, `Webster Hyperhook tricking tutorial` | Tutoriales de webster base y de full hyperhook; ninguno del webster hyperhook.
+- websterXOut | Webster X-Out | forward | `webster x out tricking tutorial` | hay webster (teamFarang, Alex Destreza, Johzuke), sin la variante x-out
+- aerialHelicoptero | Aerial Helicoptero | inside | Aerial Helicoptero tricking tutorial | Solo Helicoptero base y su variacion (Johzuke); sin tutorial del Aerial Helicoptero
+- aerialSidewinder | Aerial Sidewinder | inside | `aerial sidewinder tricking tutorial` | hay b-kick y gainer sidewinder (BAHT), sin aerial sidewinder dedicado
+- aerialTwistDoubleleg | Aerial Twist Doubleleg | inside | Aerial Twist Doubleleg tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- aerialTwistGumbiHelicoptero | Aerial Twist Gumbi Helicoptero | inside | Aerial Twist Gumbi Helicoptero tricking tutorial | sin tutorial dedicado; hay Aerial Twist y Au Helicoptero por separado
+- butterKnife | Butter Knife | inside | `butter knife tricking tutorial` | solo navajas mariposa (balisong); sin tutorial de tricking
+- butterflyKickHelicoptero | Butterfly Kick Helicoptero | inside | Butterfly Kick Helicoptero tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia y B-Kick base
+- butterflyKickHelicopteroRound | Butterfly Kick Helicoptero Round | inside | `butterfly kick helicoptero round tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- butterflyKickLateHook | Butterfly Kick Late Hook | inside | Butterfly Kick Late Hook tricking tutorial | sin tutorial dedicado; hay B-Kick y Hook Kick base
+- butterflyKickScissor | Butterfly Kick Scissor | inside | `Butterfly Kick Scissor tricking tutorial espanol`, `Butterfly Kick Scissor tricking tutorial` | Tutoriales de butterfly kick base; ninguno con la tijera.
+- butterflyKickSwitch | Butterfly Kick Switch | inside | `butterfly kick switch tricking tutorial` | hay butterfly kick, sin el switch
+- butterflyKickSwitchHyperhook | Butterfly Kick Switch Hyperhook | inside | `butterfly kick switch hyperhook tricking tutorial` | Solo butterfly kick base; sin la variante switch hyperhook.
+- butterflyKickTeradaGrab | Butterfly Kick Terada Grab | inside | Butterfly Kick Terada Grab tricking tutorial | Sin tutorial dedicado; solo Terada Grab y B-Kick por separado
+- butterflyTwistAxe | Butterfly Twist Axe | inside | Butterfly Twist Axe tricking tutorial | sin tutorial dedicado; solo B-Twist base
+- butterflyTwistDoubleRound | Butterfly Twist Double Round | inside | `Butterfly Twist Double Round tricking tutorial espanol`, `Butterfly Twist Double Round tricking tutorial` | Existe tutorial de butterfly twist round; ninguno con dos round kicks.
+- butterflyTwistDoubleleg | Butterfly Twist Doubleleg | inside | `butterfly twist doubleleg tricking tutorial` | hay double b-twist, sin el doubleleg
+- butterflyTwistDoublelegTwist | Butterfly Twist Doubleleg Twist | inside | `butterfly twist doubleleg twist tricking tutorial` | Solo b-twist/double b-twist base; sin la variante doubleleg twist.
+- butterflyTwistFeilongSwipe | Butterfly Twist Feilong Swipe | inside | Butterfly Twist Feilong Swipe tricking tutorial | Sin tutorial dedicado; solo B-Twist base y fichas de enciclopedia
+- butterflyTwistHawkeye | Butterfly Twist Hawkeye | inside | `butterfly twist hawkeye tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo b-twist general.
+- butterflyTwistKnife | Butterfly Twist Knife | inside | `butterfly twist knife tricking tutorial` | resultados de balisong; sin tutorial
+- butterflyTwistRoundLateRound | Butterfly Twist Round Late Round | inside | Butterfly Twist Round Late Round tricking tutorial | Sin tutorial dedicado; solo B-Twist Round base
+- butterflyTwistShurikane | Butterfly Twist Shurikane | inside | `butterfly twist shurikane tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- butterflyTwistShurikenTwist | Butterfly Twist Shuriken Twist | inside | `butterfly twist shuriken twist tricking tutorial` | hay shuriken twist (The Tricking Academy), sin b-twist shuriken twist
+- butterflyTwistSnapu | Butterfly Twist Snapu | inside | `butterfly twist snapu tricking tutorial` | Solo full snapu base; sin la variante de butterfly twist.
+- butterflyTwistSwipe | Butterfly Twist Swipe | inside | Butterfly Twist Swipe tricking tutorial | Sin tutorial dedicado; solo B-Twist base y Hyperswipe (truco distinto)
+- butterflyTwistTwistKick | Butterfly Twist Twist-Kick | inside | `butterfly twist twist-kick tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- butterflyTwistWackknife | Butterfly Twist Wackknife | inside | Sin candidato seguro detectado; falta buscar o pasar el link.
+- butterflyTwistIn | Butterfly Twist-In | inside | Butterfly Twist-In tricking tutorial | sin tutorial dedicado; solo B-Twist base
+- cartwheelLateSwipe | Cartwheel Late Swipe | inside | `cartwheel late swipe tricking tutorial` | sin tutorial dedicado
+- doubleAerialTwist | Double Aerial Twist | inside | Double Aerial Twist tricking tutorial | Solo tutoriales de canales no reconocidos (Kdon, Gravity Master); se descarta
+- doubleButterflyTwistHyper | Double Butterfly Twist Hyper | inside | Double Butterfly Twist Hyper tricking tutorial | sin tutorial dedicado; hay Double B-Twist y Hyper B-Twist por separado
+- doubleButterflyTwistRound | Double Butterfly Twist Round | inside | `Double Butterfly Twist Round tricking tutorial espanol`, `Double Butterfly Twist Round tricking tutorial` | Existen tutoriales de double b-twist y de b-twist round; ninguno de la variante doble con round.
+- doubleButterflyTwistSnapu | Double Butterfly Twist Snapu | inside | `double butterfly twist snapu tricking tutorial` | hay double b-twist, sin el snapu
+- doublePeterPanButterflyTwist | Double Peter Pan Butterfly Twist | inside | `double peter pan butterfly twist tricking tutorial` | Solo double b-twist base; la variante Peter Pan no tiene tutorial dedicado.
+- grandMasterArabian | Grand Master Arabian | inside | Grand Master Arabian tricking tutorial | Solo Grand Master Swipe (prereq) y Arabian base; sin tutorial de la variante
+- grandMasterRocketboi | Grand Master Rocketboi | inside | `grand master rocketboi tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; hay rocketboi simple y grandmaster swipe.
+- grandMasterScissor | Grand Master Scissor | inside | Grand Master Scissor tricking tutorial | sin tutorial dedicado; hay Grand Master Swipe y Scissor base
+- grandMasterScoot | Grand Master Scoot | inside | `Grand Master Scoot tricking tutorial espanol`, `Grand Master Scoot tricking tutorial` | Tutoriales de master scoot y de grand master swipe; ninguno del grand master scoot.
+- grandMasterSwipeknife | Grand Master Swipeknife | inside | `grand master swipe tricking tutorial` | Existe tutorial de Grand Master Swipe, pero no se pudo confirmar que la variante "Swipeknife" sea la misma; pendiente por duda.
+- grandMasterTwist | Grand Master Twist | inside | Grand Master Twist tricking tutorial | Solo Grand Master Swipe (prereq); sin tutorial de la variante
+- grandMasterTwistDoubleleg | Grand Master Twist Doubleleg | inside | `grand master twist doubleleg tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- helicopteroEKick | Helicoptero E-Kick | inside | `helicoptero e-kick tricking tutorial` | Solo helicoptero y e-kick base por separado; sin la combinacion.
+- kaydem | Kaydem | inside | Kaydem tricking tutorial | sin tutorial dedicado; solo la progresion de Aerial de Loopkicks (texto)
+- macaron | Macaron | inside | `Macaron tricking tutorial espanol`, `Macaron tricking tutorial` | La búsqueda devuelve recetas de macarons; no hay tutorial de tricking del macaron.
+- masterscootTwist | Masterscoot Twist | inside | `masterscoot twist tricking tutorial` | Solo master scoot base; sin la variante twist.
+- masterswipeHelicoptero | Masterswipe Helicoptero | inside | `masterswipe helicoptero tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; hay masterswipe y helicoptero por separado.
+- oneElbowCartwheelTwist | One-Elbow Cartwheel Twist | inside | One-Elbow Cartwheel Twist tricking tutorial | sin tutorial dedicado; hay cartwheel full/one hand, no one-elbow
+- oneHandedCartwheelTwist | One-Handed Cartwheel Twist | inside | `one handed cartwheel twist tricking tutorial` | hay one-handed cartwheel y cartwheel full twist; el video dedicado es de un canal no reconocido
+- palmkickKyro | Palmkick Kyro | inside | Palmkick Kyro tricking tutorial | Solo tutorial de Palmkick (canal coreano); sin la variante Kyro
+- palmkickScissorSwipe | Palmkick Scissor Swipe | inside | `palmkick scissor swipe tricking tutorial espanol` / `... tutorial` | Solo un "Trick Breakdown" (showcase), no un tutorial.
+- rodeoGrandMasterSwipe | Rodeo Grand Master Swipe | inside | Rodeo Grand Master Swipe tricking tutorial | sin tutorial dedicado; hay Grand Master Swipe base
+- scootHyper | Scoot Hyper | inside | `scoot hyper tricking tutorial` | Sin tutorial del hyper (solo scoot base).
+- scootTwist | Scoot Twist | inside | Scoot Twist tricking tutorial | Solo Scoot base (Mastering Tricking 22); sin la variante Twist
+- sidewinder | Sidewinder | inside | `sidewinder tricking tutorial espanol` / `... tutorial` / `btwist sidewinder tutorial` | Solo variantes (B-Kick Sidewinder, Gainer Sidewinder) y contenido de yoyo/skate; no el sidewinder simple.
+- sketchdownRaiz | Sketchdown Raiz | inside | Sketchdown Raiz tricking tutorial | sin tutorial dedicado; hay Raiz y Touchdown Raiz
+- takDoubleFull | Tak Double Full | inside | `Tak Double Full tricking tutorial espanol`, `Tak Double Full tricking tutorial` | Tutoriales de tak full y de double full por separado; ninguno del tak double full.
+- takDoubleFullHyper | Tak Double Full Hyper | inside | `tak double full hyper tricking tutorial` | hay tak full hyperhook, sin el double
+- takDoubleFullHyperhook | Tak Double Full Hyperhook | inside | `tak double full hyperhook tricking tutorial` | Compuesto; sin tutorial.
+- takDoubleFullRound | Tak Double Full Round | inside | Tak Double Full Round tricking tutorial | Sin tutorial dedicado; solo Tak Double Full base y fichas de enciclopedia
+- takDoubleFullTouchdown | Tak Double Full Touchdown | inside | `tak double full touchdown tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- takFull | Tak Full | inside | Tak Full tricking tutorial | sin tutorial dedicado; hay Tak Full Hyperhook y Tak/Tak 9
+- takFullKyro | Tak Full Kyro | inside | `tak full kyro tricking tutorial` | hay tak full hyperhook, sin el kyro
+- takFullPizzaboy | Tak Full Pizzaboy | inside | `tak full pizzaboy tricking tutorial` | Compuesto; sin tutorial.
+- takFullRound | Tak Full Round | inside | Tak Full Round tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia
+- takFullShurikenHyperhook | Tak Full Shuriken Hyperhook | inside | `tak full shuriken hyperhook tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- takFullSwipe | Tak Full Swipe | inside | Tak Full Swipe tricking tutorial | sin tutorial dedicado; hay Tak Full Hyperhook y SnapuSwipe
+- takFullWackknife | Tak Full Wackknife | inside | Sin candidato seguro detectado; falta buscar o pasar el link.
+- takRodeoFull | Tak Rodeo Full | inside | `Tak Rodeo Full tricking tutorial espanol`, `Tak Rodeo Full tricking tutorial` | Solo clips y showcases de Best of Tricking; sin tutorial del tak rodeo full.
+- takTripleFull | Tak Triple Full | inside | `tak triple full tricking tutorial` | solo progresiones de tak full
+- takuraba | Takuraba | inside | `takuraba tricking tutorial` | Solo fichas de Loopkicks; sin tutorial.
+- takurabaScissor | Takuraba Scissor | inside | Takuraba Scissor tricking tutorial | Sin tutorial dedicado; solo Takuraba base
+- touchdownButterflyTwist | Touchdown Butterfly Twist | inside | Touchdown Butterfly Twist tricking tutorial | sin tutorial dedicado; hay Touchdown Raiz y B-Twist
+- touchdownTakFull | Touchdown Tak Full | inside | `Touchdown Tak Full tricking tutorial espanol`, `Touchdown Tak Full tricking tutorial` | Tutoriales de tak full hyperhook y de touchdown raiz; ninguno del touchdown tak full.
+- touchdownWrapFull | Touchdown Wrap Full | inside | `touchdown wrap full tricking tutorial` | hay touchdown raiz y wrap full por separado
+- touchupDoubleButterflyTwist | Touchup Double Butterfly Twist | inside | `touchup double butterfly twist tricking tutorial` | Compuesto; sin tutorial.
+- touchupTripleButterflyTwist | Touchup Triple Butterfly Twist | inside | Touchup Triple Butterfly Twist tricking tutorial | Sin tutorial dedicado; solo Triple Butterfly Twist y fichas de enciclopedia
+- tripleAerialTwist | Triple Aerial Twist | inside | `triple aerial twist tricking tutorial espanol` / `... tutorial` | Solo clips; ningun tutorial que ensene el triple atwist.
+- tripleButterflyTwist | Triple Butterfly Twist | inside | Triple Butterfly Twist tricking tutorial | sin tutorial dedicado; hay Double B-Twist
+- wrapArabian | Wrap Arabian | inside | `Wrap Arabian tricking tutorial espanol`, `Wrap Arabian tricking tutorial` | Tutorial del wrap full y de arabian por separado; ninguno del wrap arabian.
+- wrapArabianScissor | Wrap Arabian Scissor | inside | `wrap arabian scissor tricking tutorial` | sin resultados relacionados
+- wrapDoubleFull | Wrap Double Full | inside | `wrap double full tricking tutorial` | Sin tutorial del wrap.
+- wrapDoubleFullMega | Wrap Double Full Mega | inside | Wrap Double Full Mega tricking tutorial | Sin tutorial dedicado; solo Wrap Full/Wrap Double Full y fichas de enciclopedia
+- wrapDoubleFullSnapu | Wrap Double Full Snapu | inside | `wrap double full snapu tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- wrapFullDoubleleg | Wrap Full Doubleleg | inside | `Wrap Full Doubleleg tricking tutorial espanol`, `Wrap Full Doubleleg tricking tutorial` | Tutoriales de wrap full y de double leg por separado; ninguno del wrap full doubleleg.
+- wrapFullHyper | Wrap Full Hyper | inside | `wrap full hyper tricking tutorial` | hay wrap full (Henri Heikkinen, Kyle Spevak), sin la variante hyper
+- wrapFullHyperhook | Wrap Full Hyperhook | inside | `wrap full hyperhook tricking tutorial` | Sin tutorial del wrap.
+- wrapFullLateRound | Wrap Full Late Round | inside | Wrap Full Late Round tricking tutorial | Sin tutorial dedicado; solo Wrap Full base
+- wrapFullPike | Wrap Full Pike | inside | `wrap full pike tricking tutorial espanol` / `... tutorial` | Hay wrap full simple, no la version pike dedicada.
+- wrapFullRound | Wrap Full Round | inside | Wrap Full Round tricking tutorial | sin tutorial dedicado; hay Wrap Full base
+- wrapFullShurikane | Wrap Full Shurikane | inside | `Wrap Full Shurikane tricking tutorial espanol`, `Wrap Full Shurikane tricking tutorial` | Solo showcases; sin tutorial del wrap full shurikane.
+- wrapFullShurikenHyperhook | Wrap Full Shuriken Hyperhook | inside | `wrap full shuriken hyperhook tricking tutorial` | hay wrap full y shuriken hyperhook por separado
+- wrapFullSnapu | Wrap Full Snapu | inside | `wrap full snapu tricking tutorial` | Sin tutorial del wrap.
+- wrapFullSwipe | Wrap Full Swipe | inside | Wrap Full Swipe tricking tutorial | Sin tutorial dedicado; solo Wrap Full y Cart Full Swipe base
+- wrapFullSwipeknife | Wrap Full Swipeknife | inside | `wrap full swipeknife tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- wrapTripleFull | Wrap Triple Full | inside | Wrap Triple Full tricking tutorial | sin tutorial dedicado; solo tips de Wrap Triple Full
+- brokenScrubba | Broken Scrubba | outside | `Broken Scrubba tricking tutorial espanol`, `Broken Scrubba tricking tutorial` | El candidato "Full Broken" enseña otro truco (full broken), no el broken scrubba.
+- cheat720TwistBroken | Cheat 720 Twist Broken | outside | Cheat 720 Twist Broken tricking tutorial | Sin tutorial dedicado; solo Cheat 720 Twist y fichas de enciclopedia
+- cheat720TwistHyperhook | Cheat 720 Twist Hyperhook | outside | `cheat 720 twist hyperhook tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- crackknife | Crackknife | outside | `Crackknife tricking tutorial espanol`, `Crackknife tricking tutorial` | Solo showcases de Best of Tricking; sin tutorial del crackknife.
+- doubleDoubleleg | Double Doubleleg | outside | `double doubleleg tricking tutorial` | hay double leg y variaciones (Johzuke, GNT), sin double doubleleg
+- doublelegDoubleTwist | Doubleleg Double Twist | outside | `doubleleg double twist tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo double leg y double twist por separado.
+- doublelegRodeo | Doubleleg Rodeo | outside | Doubleleg Rodeo tricking tutorial | sin tutorial dedicado; hay Double Leg base
+- doublelegSidekick | Doubleleg Sidekick | outside | `Doubleleg Sidekick tricking tutorial espanol`, `Doubleleg Sidekick tricking tutorial` | Tutoriales de doubleleg base; ninguno que enseñe la salida con patada lateral.
+- doublelegTwistRound | Doubleleg Twist Round | outside | `doubleleg twist round tricking tutorial` | Solo double leg base; sin la variante twist round.
+- doublelegXOut | Doubleleg X-Out | outside | Doubleleg X-Out tricking tutorial | Sin tutorial dedicado; solo Double Leg base (varias fuentes)
+- doublelegXOutHyperhook | Doubleleg X-Out Hyperhook | outside | `doubleleg x-out hyperhook tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- envergadoDoubleTwist | Envergado Double Twist | outside | `envergado double twist tricking tutorial` | hay envergado (BAHT), sin el double twist
+- envergadoTwist | Envergado Twist | outside | `envergado twist tricking tutorial` | Solo envergado base; sin la variante twist.
+- feilongSnapu | Feilong Snapu | outside | Feilong Snapu tricking tutorial | Solo Cork Feilong (Mikael Combate); no la variante Snapu
+- lotusCrowdAwakener | Lotus Crowd Awakener | outside | Lotus Crowd Awakener tricking tutorial | sin tutorial dedicado; hay Crowd Awakener base
+- lotusDoublelegHyperhook | Lotus Doubleleg Hyperhook | outside | `lotus doubleleg hyperhook tricking tutorial` | hay lotus doubleleg (TrickStrong), sin el hyperhook
+- lotusLateRound | Lotus Late Round | outside | `lotus late round tricking tutorial` | "Lotus" devuelve contenido de pole/yoga; sin tutorial de tricking del lotus late round.
+- lotusRodeo | Lotus Rodeo | outside | Lotus Rodeo tricking tutorial | Sin tutorial dedicado; solo Lotus Doubleleg y fichas de enciclopedia
+- lotusShuriken | Lotus Shuriken | outside | `lotus shuriken tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado.
+- popSnapu | Pop Snapu | outside | `Pop Snapu tricking tutorial espanol`, `Pop Snapu tricking tutorial` | Tutoriales de snapuswipe y de pop 360; ninguno del pop snapu.
+- popSwipeknife | Pop Swipeknife | outside | `pop swipeknife tricking tutorial` | hay cork swipe knife (BAHT), sin el pop
+- popTaiFighter | Pop Tai Fighter | outside | `pop tai fighter tricking tutorial` | Sin tutorial dedicado.
+- raizHyperhook | Raiz Hyperhook | outside | `raiz hyperhook tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado; raiz y hyperhook por separado.
+- raizHyperhookTurbo | Raiz Hyperhook Turbo | outside | Raiz Hyperhook Turbo tricking tutorial | sin tutorial dedicado; hay Raiz y Hyperhook por separado
+- raizShurikane | Raiz Shurikane | outside | `raiz shurikane tricking tutorial` | hay raiz (Johzuke), sin el shurikane
+- raizIn | Raiz-In | outside | `raiz in tricking tutorial` | Solo raiz base; sin la variante inward.
+- reversao | Reversao | outside | Reversao tricking tutorial | Solo shorts de canales no verificables (BBOY SNACK, StreetBallNinja); se descarta
+- rodeoSnapu | Rodeo Snapu | outside | `rodeo snapu tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- sailorGumbi | Sailor Gumbi | outside | Sailor Gumbi tricking tutorial | sin tutorial dedicado; hay Gumbi base
+- sailorMoonDoubleleg | Sailor Moon Doubleleg | outside | `sailor moon doubleleg tricking tutorial` | hay sailor moon base, sin el doubleleg
+- sailorMoonDoublelegTwist | Sailor Moon Doubleleg Twist | outside | `sailor moon doubleleg twist tricking tutorial` | Solo sailor moon base; sin la variante doubleleg twist.
+- sailorMoonHawkeye | Sailor Moon Hawkeye | outside | Sailor Moon Hawkeye tricking tutorial | Sin tutorial dedicado; solo Sailor Moon base
+- sailorMoonHyperhook | Sailor Moon Hyperhook | outside | `sailor moon hyperhook tricking tutorial espanol` / `... tutorial` | Hay sailor moon simple, no la version hyperhook dedicada.
+- sailorMoonLateRound | Sailor Moon Late Round | outside | Sailor Moon Late Round tricking tutorial | sin tutorial dedicado; hay Sailor Moon base
+- sailorMoonReversao | Sailor Moon Reversao | outside | `Sailor Moon Reversao tricking tutorial espanol`, `Sailor Moon Reversao tricking tutorial` | Un candidato dedicado pero en japonés (con algo de inglés); idioma no admitido.
+- sailorMoonRound | Sailor Moon Round | outside | `sailor moon round tricking tutorial` | hay sailor moon base, sin el round
+- sailorMoonSnapu | Sailor Moon Snapu | outside | `sailor moon snapu tricking tutorial` | Solo sailor moon base; sin la variante snapu.
+- sailorMoonTwist | Sailor Moon Twist | outside | Sailor Moon Twist tricking tutorial | Sin tutorial dedicado; solo Sailor Moon base (Dan Thatcher) y fichas de enciclopedia
+- sailorMoonWackknife | Sailor Moon Wackknife | outside | Sin candidato seguro detectado; falta buscar o pasar el link.
+- scrubba | Scrubba | outside | `scrubba tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo clips de "Scrubba Snapu".
+- sideflipRound | Sideflip Round | outside | `Sideflip Round tricking tutorial espanol`, `Sideflip Round tricking tutorial` | Tutoriales de sideflip; ninguno con la round kick. El único candidato con el nombre exacto era de un canal no reconocido (posible menor), se descartó por regla conservadora.
+- sideswipeLateRound | Sideswipe Late Round | outside | `sideswipe late round tricking tutorial` | Solo sideswipe base; sin la variante late round.
+- sideswipeLateSwipe | Sideswipe Late Swipe | outside | Sideswipe Late Swipe tricking tutorial | Solo el Sideswipe base (Kojos Trick Lab) y Sideswipe Late 9 (Johzuke), no la variante Late Swipe; sin candidato exacto
+- snapuDoubleleg | Snapu Doubleleg | outside | Snapu Doubleleg tricking tutorial | sin tutorial dedicado; hay Snapu y Double Leg base
+- snapuHyperhook | Snapu Hyperhook | outside | `Snapu Hyperhook tricking tutorial espanol`, `Snapu Hyperhook tricking tutorial` | Solo showcases y breakdowns; sin tutorial del snapu hyperhook.
+- snapuRound | Snapu Round | outside | `snapu round tricking tutorial` | hay snapu y full snapu, sin el round
+- snapuTwist | Snapu Twist | outside | `snapu twist tricking tutorial` | Solo full snapu base; sin la variante twist.
+- swipeknifeTurbo | Swipeknife Turbo | outside | `swipeknife turbo tricking tutorial` | hay swipeknife, sin el turbo
+- touchdownRaizRoll | Touchdown Raiz Roll | outside | Touchdown Raiz Roll tricking tutorial | Sin tutorial dedicado; solo Touchdown Raiz base (varias fuentes)
+- touchdownRaizTwist | Touchdown Raiz Twist | outside | `touchdown raiz twist tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo touchdown raiz y raiz twist por separado.
+- 540Gyro | 540 Gyro | vertical-kicks | `540 gyro tricking tutorial` | el unico dedicado es de un canal no reconocido (kaskasismerimang)
+- 540Gyroknife | 540 Gyroknife | vertical-kicks | `540 gyroknife tricking tutorial` | Sin tutorial dedicado.
+- backside1080Shuriken | Backside 1080 Shuriken | vertical-kicks | `backside 1080 shuriken tricking tutorial espanol` / `... tutorial` | Hay backside 1080 y shuriken por separado, no el compuesto.
+- backside1260Feilong | Backside 1260 Feilong | vertical-kicks | `Backside 1260 Feilong tricking tutorial espanol`, `Backside 1260 Feilong tricking tutorial` | Sin tutorial del truco; solo clips y un tutorial de backside 1260 sin feilong.
+- backside1260FeilongKnife | Backside 1260 Feilong Knife | vertical-kicks | `backside 1260 feilong knife tricking tutorial` | solo showcases; BAHT tiene backside 1260 sin feilong knife
+- backside1260Knife | Backside 1260 Knife | vertical-kicks | `backside 1260 knife tricking tutorial` | Sin tutorial (truco muy avanzado y poco documentado).
+- backside1260Wackknife | Backside 1260 Wackknife | vertical-kicks | Sin candidato seguro detectado; falta buscar o pasar el link.
+- backside1440 | Backside 1440 | vertical-kicks | Backside 1440 tricking tutorial | Solo contenido de snowboard; sin tutorial de tricking
+- backside1620 | Backside 1620 | vertical-kicks | `backside 1620 tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo showcases y "Cheat 1620".
+- backside900Feilong | Backside 900 Feilong | vertical-kicks | `backside 900 feilong tricking tutorial` | hay backside 900 (HwarangSam, Johzuke); "BS 900 Fei Long" es demo, no tutorial
+- backside900Gyro | Backside 900 Gyro | vertical-kicks | `backside 900 gyro tricking tutorial` | Solo backside 900 base; sin la variante gyro.
+- backside900Hyper | Backside 900 Hyper | vertical-kicks | Backside 900 Hyper tricking tutorial | Solo Backside 900 base (BAHT, HwarangSam, Johzuke); no la variante Hyper
+- backside900Knife | Backside 900 Knife | vertical-kicks | `backside 900 knife tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; hay backside 900 simple.
+- backside900Sidekick | Backside 900 Sidekick | vertical-kicks | Backside 900 Sidekick tricking tutorial | sin tutorial dedicado; hay Backside 900 base, no con side kick
+- cheat1080Double | Cheat 1080 Double | vertical-kicks | `cheat 1080 double tricking tutorial` | hay cheat 1080 y cheat 900 double, sin el cheat 1080 double
+- cheat1080Shuriken | Cheat 1080 Shuriken | vertical-kicks | `cheat 1080 shuriken tricking tutorial` | Compuesto; sin tutorial.
+- cheat1260 | Cheat 1260 | vertical-kicks | Cheat 1260 tricking tutorial | Solo Backside 1260 (BAHT); no hay tutorial del Cheat 1260
+- cheat1260Double | Cheat 1260 Double | vertical-kicks | `cheat 1260 double tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; hay cheat 900 double y backside 1260.
+- cheat1260Doubleleg | Cheat 1260 Doubleleg | vertical-kicks | Cheat 1260 Doubleleg tricking tutorial | sin tutorial dedicado; hay Cheat 900 Doubleleg/Parafuso
+- cheat1260Hyper | Cheat 1260 Hyper | vertical-kicks | `Cheat 1260 Hyper tricking tutorial espanol`, `Cheat 1260 Hyper tricking tutorial` | Sin tutorial del cheat 1260 (ni con hyper); solo cheat hyper full y cheat hyper 360.
+- cheat1440 | Cheat 1440 | vertical-kicks | `cheat 1440 tutorial` | solo showcases (Best of Tricking)
+- cheat1620 | Cheat 1620 | vertical-kicks | `cheat 1620 tricking tutorial` | Sin tutorial (truco muy avanzado).
+- cheat720Shuriken | Cheat 720 Shuriken | vertical-kicks | Cheat 720 Shuriken tricking tutorial | sin tutorial dedicado; hay Cheat 720 y Shuriken variation
+- cheat720Turbo | Cheat 720 Turbo | vertical-kicks | `Cheat 720 Turbo tricking tutorial espanol`, `Cheat 720 Turbo tricking tutorial` | Tutoriales de cheat 720 base; ninguno con aterrizaje turbo.
+- cheat900CrowdAwakener | Cheat 900 Crowd Awakener | vertical-kicks | `cheat 900 crowd awakener tricking tutorial` | Solo cheat 900 y crowd awakener base; sin la combinacion.
+- cheat900CrowdAwakenerKnife | Cheat 900 Crowd Awakener Knife | vertical-kicks | Cheat 900 Crowd Awakener Knife tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- cheat900DoubleHyper | Cheat 900 Double Hyper | vertical-kicks | Cheat 900 Double Hyper tricking tutorial | sin tutorial dedicado; hay Cheat 900 base y showcase
+- cheat900DoubleKnife | Cheat 900 Double Knife | vertical-kicks | `Cheat 900 Double Knife tricking tutorial espanol`, `Cheat 900 Double Knife tricking tutorial` | Existe tutorial de cheat 900 double, pero no de la variante con knife/hyperhook.
+- cheat900DoubleTaiFighter | Cheat 900 Double Tai Fighter | vertical-kicks | `cheat 900 double tai fighter tricking tutorial` | hay cheat 900 double (Johzuke), sin el tai fighter
+- cheat900Doubleleg | Cheat 900 Doubleleg | vertical-kicks | `cheat 900 doubleleg tricking tutorial` | Solo cheat 900 base; sin la variante doubleleg.
+- cheat900DoublelegTwist | Cheat 900 Doubleleg Twist | vertical-kicks | Cheat 900 Doubleleg Twist tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- cheat900Feilong | Cheat 900 Feilong | vertical-kicks | `cheat 900 feilong tricking tutorial espanol` / `... tutorial` | Compuesto sin tutorial dedicado.
+- cheat900Gyro | Cheat 900 Gyro | vertical-kicks | Cheat 900 Gyro tricking tutorial | sin tutorial dedicado; hay Cheat 900 base
+- cheat900Hyper | Cheat 900 Hyper | vertical-kicks | `Cheat 900 Hyper tricking tutorial espanol`, `Cheat 900 Hyper tricking tutorial` | Solo una progresión de intentos (no tutorial) y el tutorial de cheat 900 base.
+- cheat900Knife | Cheat 900 Knife | vertical-kicks | `cheat 900 knife tricking tutorial` | hay cheat 900, sin el knife
+- cheat900Paraknife | Cheat 900 Paraknife | vertical-kicks | `cheat 900 paraknife tricking tutorial` | Compuesto; sin tutorial.
+- cheat900Rodeo | Cheat 900 Rodeo | vertical-kicks | Cheat 900 Rodeo tricking tutorial | Solo tutoriales del Cheat 900 base, no de la variante Rodeo
+- cheat900Sidekick | Cheat 900 Sidekick | vertical-kicks | `cheat 900 sidekick tricking tutorial espanol` / `... tutorial` | Hay cheat 900 simple, no la version sidekick dedicada.
+- crowdAwakenerKnife | Crowd Awakener Knife | vertical-kicks | `crowd awakener knife tricking tutorial` | Solo crowd awakener base; sin la variante knife.
+- donkeyKick | Donkey Kick | vertical-kicks | Donkey Kick tricking tutorial | Solo resultados de fitness (no tricking); sin tutorial del truco de tricking
+- jackknife1080 | Jackknife 1080 | vertical-kicks | `jackknife 1080 tricking tutorial` | hay jackknife base, sin el 1080
+- jackknifeShuriken | Jackknife Shuriken | vertical-kicks | `jackknife shuriken tricking tutorial` | Solo jackknife base (el tutorial de Johzuke cubre jackknife y feilong knife, no shuriken).
+- jackknifeTurbo | Jackknife Turbo | vertical-kicks | Jackknife Turbo tricking tutorial | Solo tutoriales del Jackknife base, no de la variante Turbo
+- parafusoGyro | Parafuso Gyro | vertical-kicks | Parafuso Gyro tricking tutorial | sin tutorial dedicado; hay Parafuso base
+- parafusoHawkeye | Parafuso Hawkeye | vertical-kicks | `Parafuso Hawkeye tricking tutorial espanol`, `Parafuso Hawkeye tricking tutorial` | Tutoriales de parafuso y de envergado; ninguno con la salida hawkeye.
+- parafusoTwistKick | Parafuso Twist-Kick | vertical-kicks | `parafuso twist kick tricking tutorial` | hay parafuso base (HwarangSam), sin el twist-kick dedicado
+- paraknife | Paraknife | vertical-kicks | `paraknife tricking tutorial` | Sin resultados de tricking (aparece cuchillos de cocina).
+- pop1080 | Pop 1080 | vertical-kicks | Pop 1080 tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- pop1260 | Pop 1260 | vertical-kicks | `pop 1260 tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado; solo backside 1260 y pop kick sueltos.
+- pop1440 | Pop 1440 | vertical-kicks | Pop 1440 tricking tutorial | sin tutorial dedicado; solo breakdowns (Wrap 1440)
+- pop360GyroDoubleleg | Pop 360 Gyro Doubleleg | vertical-kicks | `pop 360 gyro doubleleg tricking tutorial` | Compuesto; sin tutorial.
+- pop360GyroRound | Pop 360 Gyro Round | vertical-kicks | Pop 360 Gyro Round tricking tutorial | Solo tutorial de un canal no reconocido (Pandinus LR) y showcases; se descarta
+- pop360Shuriken | Pop 360 Shuriken | vertical-kicks | `pop 360 shuriken tricking tutorial espanol` / `... tutorial` | Solo pop 360 y pop shuriken por separado; el compuesto solo en portugues.
+- pop900 | Pop 900 | vertical-kicks | `pop 900 tricking tutorial` | Sin tutorial dedicado del pop 900 (solo backside 900/pop tornado base).
+- pop900Hyper | Pop 900 Hyper | vertical-kicks | Pop 900 Hyper tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- swing1080 | Swing 1080 | vertical-kicks | `swing 1080 tricking tutorial` | Solo swing 900 base; sin la variante 1080.
+- swing1260 | Swing 1260 | vertical-kicks | Swing 1260 tricking tutorial | Solo Backside 1260 (BAHT); no hay tutorial del Swing 1260
+- swing360 | Swing 360 | vertical-kicks | `swing 360 tricking tutorial espanol` / `... tutorial` / `swing 360 tricking kick tutorial` | La busqueda devuelve swing 360 de calistenia (barra), no de tricking; sin tutorial dedicado del truco.
+- swing900Knife | Swing 900 Knife | vertical-kicks | `Swing 900 Knife tricking tutorial espanol`, `Swing 900 Knife tricking tutorial` | Tutoriales de swing 900 y de 900 kicks; ninguno con el knife final.
+- tornadoDouble | Tornado Double | vertical-kicks | `tornado double kick tricking tutorial` | Solo tornado base; sin tutorial de la variante doble.
+- tornadoHawkeye | Tornado Hawkeye | vertical-kicks | Tornado Hawkeye tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia (Loopkicks/TrickAtlas) o resultados del truco base
+- twistKnife | Twist Knife | vertical-kicks | Twist Knife tricking tutorial | resultados ajenos (cuchillos reales); sin tutorial dedicado
+- wackestKnife | Wackest Knife | vertical-kicks | Sin candidato seguro detectado; falta buscar o pasar el link.
+- wackknifeDoubleleg | Wackknife Doubleleg | vertical-kicks | Sin candidato seguro detectado; falta buscar o pasar el link.
+- wackknifeRound | Wackknife Round | vertical-kicks | Sin candidato seguro detectado; falta buscar o pasar el link.
+- wackknifeTurbo | Wackknife Turbo | vertical-kicks | Sin candidato seguro detectado; falta buscar o pasar el link.

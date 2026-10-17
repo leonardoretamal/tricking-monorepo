@@ -1,0 +1,178 @@
+[
+  {
+    "trickId": "backHandspring",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=qxsxHQZfEY4",
+    "embedUrl": "https://www.youtube.com/embed/qxsxHQZfEY4",
+    "author": "Mastering Tricking 22",
+    "title": "A Complete Back Handspring Walkthrough & Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "doubleCorkscrew",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=QmJsZ_9rzbM",
+    "embedUrl": "https://www.youtube.com/embed/QmJsZ_9rzbM",
+    "author": "Ginger Ninja Trickster",
+    "title": "Double Corkscrew Tutorial | How to JJ Battell",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "doubleLayout",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=Pe3zQh9saFI",
+    "embedUrl": "https://www.youtube.com/embed/Pe3zQh9saFI",
+    "author": "World Gymnastics Channel",
+    "title": "Elements of Tumbling - DOUBLE LAYOUT",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "dragonflyCorkscrewRound",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=7lHZasdHS2c",
+    "embedUrl": "https://www.youtube.com/embed/7lHZasdHS2c",
+    "author": "Mastering Tricking 22",
+    "title": "How to Dragonfly Cork Round | Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "flashKick",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=O4N6r0z5nBw",
+    "embedUrl": "https://www.youtube.com/embed/O4N6r0z5nBw",
+    "author": "Ninjatic",
+    "title": "HOW TO FLASHKICK | TRICKING TUTORIAL",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "gainerHook",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=9ExAxIHMHUw",
+    "embedUrl": "https://www.youtube.com/embed/9ExAxIHMHUw",
+    "author": "Johzuke",
+    "title": "Moon Kick / Gainer Hook - Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "shurikenCutter",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=oYpBbKnD6iA",
+    "embedUrl": "https://www.youtube.com/embed/oYpBbKnD6iA",
+    "author": "Mastering Tricking 22",
+    "title": "The Shuriken Cutter Variation Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "teradaGrab",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=ygRFCxOA5as",
+    "embedUrl": "https://www.youtube.com/embed/ygRFCxOA5as",
+    "author": "Johzuke",
+    "title": "Terada Grab - Short Tricking Tutorial #tricking",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "9:16"
+  },
+  {
+    "trickId": "diveRoll",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=GHGUNOrW9RE",
+    "embedUrl": "https://www.youtube.com/embed/GHGUNOrW9RE",
+    "author": "Ronnie Street Stunts",
+    "title": "How to DIVE ROLL - Parkour Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "webster",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=uSKVz11JWR0",
+    "embedUrl": "https://www.youtube.com/embed/uSKVz11JWR0",
+    "author": "Plan Zero",
+    "title": "LEARN HOW TO WEBSTER! | Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "illusionTwist",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=o5NsU2CU4bU",
+    "embedUrl": "https://www.youtube.com/embed/o5NsU2CU4bU",
+    "author": "Kojos Trick Lab",
+    "title": "HOW TO ILLUSION TWIST l Deep Dive",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "masterswipe",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=Zt77Q-_umJE",
+    "embedUrl": "https://www.youtube.com/embed/Zt77Q-_umJE",
+    "author": "Zak Ferguson",
+    "title": "How To Do A Master Swipe | A step by step Master Swipe Tutorial for Tricking",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "doubleleg",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=QYFvMaHK26o",
+    "embedUrl": "https://www.youtube.com/embed/QYFvMaHK26o",
+    "author": "Ronnie Street Stunts",
+    "title": "How to DOUBLE LEG - Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "spyder",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=iOl0tIdLAk8",
+    "embedUrl": "https://www.youtube.com/embed/iOl0tIdLAk8",
+    "author": "Mastering Tricking 22",
+    "title": "Spyder Tutorial With Tips on Spyder Twist | Tricking Transitions",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "backside1080",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=PLPyqSWTF5U",
+    "embedUrl": "https://www.youtube.com/embed/PLPyqSWTF5U",
+    "author": "MartialClub",
+    "title": "MARTIAL ARTS KICKING | BACKSIDE 1080 | TRICKING TUTORIAL",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "cheat720",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=rDiMmo9mS1A",
+    "embedUrl": "https://www.youtube.com/embed/rDiMmo9mS1A",
+    "author": "Johzuke",
+    "title": "Cheat 720 / 540 Hook - Tricking Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  }
+]
