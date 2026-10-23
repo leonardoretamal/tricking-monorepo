@@ -7,6 +7,7 @@ import {
 
 export interface TricksQuery {
   section?: string;
+  subcategory?: string;
   q?: string;
   category?: string;
   difficulty?: number;

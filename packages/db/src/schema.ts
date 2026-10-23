@@ -105,6 +105,10 @@ export const tricks = pgTable(
     howToDataEs: jsonb('how_to_data_es').$type<HowToDetail | null>(),
     difficulty: smallint('difficulty'),
     section: text('section'),
+    // Subfiltro de la seccion (por ejemplo "pop" en vertical-kicks o "corkscrew" en
+    // backward). Sale de la clasificacion por nombre de Loopkicks y se aplica con el
+    // script `db:subcategories`; null cuando el truco no cae en ningun subfiltro.
+    subcategory: text('subcategory'),
     loopkicksSlug: text('loopkicks_slug').unique(),
     // Descripcion tecnica publicada por Loopkicks en su ficha de truco (texto de ellos).
     // Se muestra citada, con credito y enlace a su ficha. La traduccion al espanol es una
@@ -124,6 +128,7 @@ export const tricks = pgTable(
   (table) => [
     index('tricks_name_idx').on(table.name),
     index('tricks_section_idx').on(table.section),
+    index('tricks_subcategory_idx').on(table.subcategory),
     index('tricks_search_vector_idx').using('gin', table.searchVector),
   ],
 );

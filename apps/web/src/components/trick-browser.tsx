@@ -14,6 +14,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
 
 import { TrickCard } from '@/components/trick-card';
+import { TrickSubcategoryFilter } from '@/components/trick-subcategory-filter';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { pickDescription } from '@/lib/description';
 import { columnsForWidth, shouldVirtualize } from '@/lib/trick-grid';
@@ -31,6 +32,7 @@ const CARD_ESTIMATE_SIZE = 250;
 export interface TrickFilters {
   q?: string;
   section?: Section;
+  sub?: string;
   difficulty?: number;
   sort: string;
   page: number;
@@ -52,6 +54,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   const filters: TrickFilters = {
     q: initial.q,
     section: initial.section ?? section,
+    sub: initial.sub,
     difficulty: initial.difficulty,
     sort: initial.sort,
     page: initial.page,
@@ -68,6 +71,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     const params = new URLSearchParams();
     if (next.q) params.set('q', next.q);
     if (next.section) params.set('section', next.section);
+    if (next.sub) params.set('sub', next.sub);
     if (next.difficulty !== undefined) params.set('difficulty', String(next.difficulty));
     if (next.sort && next.sort !== 'name-asc') params.set('sort', next.sort);
     if (next.page > 1) params.set('page', String(next.page));
@@ -80,6 +84,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     setQInput('');
     applyFilter({
       q: undefined,
+      sub: undefined,
       difficulty: undefined,
       sort: 'name-asc',
       pageSize: DEFAULT_PAGE_SIZE,
@@ -101,8 +106,21 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   }, [qInput, initial.q]);
 
   const query = useQuery({
-    queryKey: ['tricks', activeSection ?? 'all', filters],
-    queryFn: ({ signal }) => fetchTricks(filters, signal),
+    queryKey: ['tricks', activeSection ?? 'all', filters.sub ?? 'all', filters],
+    // La URL usa `sub`, pero la API recibe el nombre completo `subcategory`.
+    queryFn: ({ signal }) =>
+      fetchTricks(
+        {
+          section: filters.section,
+          subcategory: filters.sub,
+          q: filters.q,
+          difficulty: filters.difficulty,
+          sort: filters.sort,
+          page: filters.page,
+          pageSize: filters.pageSize,
+        },
+        signal,
+      ),
     placeholderData: keepPreviousData,
   });
 
@@ -141,6 +159,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
 
   const hasActiveFilters =
     Boolean(filters.q) ||
+    Boolean(filters.sub) ||
     initial.section !== undefined ||
     filters.difficulty !== undefined ||
     filters.sort !== 'name-asc';
@@ -216,6 +235,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
                   applyFilter({
                     section:
                       event.target.value === '' ? undefined : (event.target.value as Section),
+                    sub: undefined,
                   })
                 }
               >
@@ -227,6 +247,14 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
                 ))}
               </select>
             </label>
+          ) : null}
+
+          {activeSection !== undefined ? (
+            <TrickSubcategoryFilter
+              section={activeSection}
+              value={filters.sub}
+              onChange={(sub) => applyFilter({ sub })}
+            />
           ) : null}
 
           <label className="flex flex-col gap-1.5 text-sm font-medium text-base-content/80">

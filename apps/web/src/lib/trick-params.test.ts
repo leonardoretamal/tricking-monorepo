@@ -31,4 +31,25 @@ describe('parseTrickFilters', () => {
   it('toma el primer valor cuando el parametro es un arreglo', () => {
     expect(parseTrickFilters({ q: ['tornado', 'otro'] }).q).toBe('tornado');
   });
+
+  it('acepta un subfiltro valido cuando no hay seccion', () => {
+    expect(parseTrickFilters({ sub: 'corkscrew' }).sub).toBe('corkscrew');
+  });
+
+  it('descarta un subfiltro desconocido', () => {
+    expect(parseTrickFilters({ sub: 'patada' }).sub).toBeUndefined();
+  });
+
+  it('acepta el subfiltro que pertenece a la seccion del query', () => {
+    expect(parseTrickFilters({ section: 'vertical-kicks', sub: 'cheat' }).sub).toBe('cheat');
+  });
+
+  it('descarta el subfiltro que no pertenece a la seccion del query', () => {
+    expect(parseTrickFilters({ section: 'backward', sub: 'cheat' }).sub).toBeUndefined();
+  });
+
+  it('valida contra la seccion de la ruta cuando llega como pista', () => {
+    expect(parseTrickFilters({ sub: 'gainer' }, 'backward').sub).toBe('gainer');
+    expect(parseTrickFilters({ sub: 'gainer' }, 'inside').sub).toBeUndefined();
+  });
 });

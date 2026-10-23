@@ -45,7 +45,7 @@ export default async function SectionPage({ params, searchParams }: SectionPageP
   setRequestLocale(locale);
 
   const t = await getTranslations('tricks');
-  const filters = parseTrickFilters(await searchParams);
+  const filters = parseTrickFilters(await searchParams, section);
 
   return (
     <section className="flex flex-col gap-6 py-6">

@@ -9,6 +9,7 @@ const listItem = {
   descriptionEs: null,
   difficulty: 3,
   section: 'vertical-kicks',
+  subcategory: null,
   loopkicksSlug: 'tornado',
   categories: ['VERT_KICK'],
 };
