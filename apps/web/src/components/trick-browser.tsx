@@ -21,6 +21,7 @@ import { columnsForWidth, shouldVirtualize } from '@/lib/trick-grid';
 import { fetchTricks } from '@/lib/trick-api';
 import type { TrickListItem } from '@/lib/trick-schemas';
 import { DEFAULT_SECTION, SECTIONS, type Section } from '@/lib/sections';
+import { useTricksViewState } from '@/lib/use-tricks-view-state';
 
 const PAGE_SIZES = [24, 48, 100];
 const DEFAULT_PAGE_SIZE = 24;
@@ -50,6 +51,13 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [qInput, setQInput] = useState(initial.q ?? '');
+  const qInputDirtyRef = useRef(false);
+
+  // Al volver del detalle, la busqueda restaurada llega por la URL y actualiza initial.q.
+  // Sin esto el input se quedaria con el valor del primer render.
+  useEffect(() => {
+    setQInput(initial.q ?? '');
+  }, [initial.q]);
 
   const filters: TrickFilters = {
     q: initial.q,
@@ -95,6 +103,9 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   };
 
   useEffect(() => {
+    if (!qInputDirtyRef.current) {
+      return;
+    }
     const handle = setTimeout(() => {
       const current = initial.q ?? '';
       if (current !== qInput) {
@@ -155,6 +166,14 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     estimateSize: () => CARD_ESTIMATE_SIZE,
     lanes: columns,
     overscan: 4,
+  });
+
+  useTricksViewState({
+    pathname,
+    filters,
+    applyFilter,
+    queryReady: Boolean(data) && !query.isFetching,
+    scrollElement: gridRef,
   });
 
   const hasActiveFilters =
@@ -218,7 +237,10 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
               <input
                 type="search"
                 value={qInput}
-                onChange={(event) => setQInput(event.target.value)}
+                onChange={(event) => {
+                  qInputDirtyRef.current = true;
+                  setQInput(event.target.value);
+                }}
                 placeholder={t('filters.searchPlaceholder')}
                 className="input input-bordered w-full bg-base-100 pl-9 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               />
