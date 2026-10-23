@@ -17,7 +17,9 @@ test.describe('seccion forward', () => {
   });
 
   test('una sola pagina no muestra controles de paginacion', async ({ page }) => {
-    await page.goto('/es/tricks/forward');
+    // El catalogo de forward crecio por encima del tamano de pagina por defecto (24).
+    // Con pageSize=100 entra en una sola pagina y la prueba sigue midiendo lo mismo.
+    await page.goto('/es/tricks/forward?pageSize=100');
     await expect(page.locator('a[href*="/tricks/forward/"]').first()).toBeVisible();
     await expect(page.getByRole('button', { name: 'Siguiente' })).toHaveCount(0);
   });
