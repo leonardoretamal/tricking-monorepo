@@ -20,16 +20,41 @@ import {
 } from '@tricking/db';
 import { z } from 'zod';
 
+import { isSubcategory, isSubcategoryForSection } from './sections';
+
 // Validacion estricta de los parametros de listado antes de tocar la base de datos.
-export const tricksQuerySchema = z.object({
-  section: z.enum(TRICK_SECTIONS).optional(),
-  category: z.string().trim().min(1).max(64).optional(),
-  difficulty: z.coerce.number().int().min(0).max(5).optional(),
-  q: z.string().trim().min(1).max(100).optional(),
-  sort: z.enum(TRICK_SORTS).default('name-asc'),
-  page: z.coerce.number().int().min(1).default(1),
-  pageSize: z.coerce.number().int().min(1).max(MAX_PAGE_SIZE).default(DEFAULT_PAGE_SIZE),
-});
+// `subcategory` se valida contra los slugs conocidos y, cuando viene la seccion, contra
+// los subfiltros de esa seccion (un slug de otra seccion se rechaza).
+export const tricksQuerySchema = z
+  .object({
+    section: z.enum(TRICK_SECTIONS).optional(),
+    subcategory: z
+      .string()
+      .trim()
+      .min(1)
+      .max(32)
+      .refine(isSubcategory, { message: 'subcategoria desconocida' })
+      .optional(),
+    category: z.string().trim().min(1).max(64).optional(),
+    difficulty: z.coerce.number().int().min(0).max(5).optional(),
+    q: z.string().trim().min(1).max(100).optional(),
+    sort: z.enum(TRICK_SORTS).default('name-asc'),
+    page: z.coerce.number().int().min(1).default(1),
+    pageSize: z.coerce.number().int().min(1).max(MAX_PAGE_SIZE).default(DEFAULT_PAGE_SIZE),
+  })
+  .superRefine((value, ctx) => {
+    if (
+      value.section !== undefined &&
+      value.subcategory !== undefined &&
+      !isSubcategoryForSection(value.section, value.subcategory)
+    ) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['subcategory'],
+        message: 'la subcategoria no corresponde a la seccion',
+      });
+    }
+  });
 
 export const variationsQuerySchema = z.object({
   kind: z.enum(VARIATION_KINDS).optional(),

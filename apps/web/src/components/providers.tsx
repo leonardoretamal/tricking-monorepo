@@ -12,9 +12,8 @@ const MAX_AGE_MS = 24 * 60 * 60 * 1000;
 // Version del contrato de las respuestas cacheadas. Se sube cuando cambia la forma de
 // una respuesta cacheada (o la peticion que la produce) para que la cache persistida
 // vieja se descarte en vez de rehidratarse con datos obsoletos (regla de validar datos
-// rehidratados). Ultimo cambio: el grafo de Explorar ahora pide 80 nodos en vez del
-// default de la API.
-const CACHE_BUSTER = '2026-10-07-explore-graph-80';
+// rehidratados). Ultimo cambio: el listado de trucos agrega `subcategory` en cada item.
+const CACHE_BUSTER = '2026-10-23-trick-subcategory';
 
 export function Providers({ children }: { children: ReactNode }) {
   const [queryClient] = useState(

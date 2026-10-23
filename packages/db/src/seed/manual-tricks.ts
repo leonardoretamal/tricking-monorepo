@@ -4,16 +4,24 @@ import { fileURLToPath } from 'node:url';
 import { sql } from 'drizzle-orm';
 
 import { getDb } from '../client';
-import { categories, trickCategories, tricks } from '../schema';
+import {
+  categories,
+  trickCategories,
+  trickRelations,
+  tricks,
+  type NewTrickRelation,
+} from '../schema';
 import { loadEnvFile } from './load-env';
+import { findTrickInText, normalizeKey } from './normalize';
 
 // Trucos nuevos de dificultad basica/facil (Fase 25) que no vienen de ninguna fuente. El
 // contenido (descripcion y "como se hace") es ORIGINAL del proyecto, escrito a mano y con
 // su version en espanol. Los datos viven en `manual-tricks/tricks.json`.
 //
 // Idempotente y sin transacciones (el driver neon-http no las soporta): los trucos y las
-// categorias se hacen upsert por su clave natural y el enlace truco-categoria se inserta
-// con onConflictDoNothing, todo en secuencia.
+// categorias se hacen upsert por su clave natural, el enlace truco-categoria se inserta
+// con onConflictDoNothing y las relaciones (prereqs/nextTricks) tambien, sin borrar las
+// relaciones ajenas que ya existan.
 
 interface ManualTrickSeed {
   id: string;
@@ -21,6 +29,8 @@ interface ManualTrickSeed {
   section: string;
   difficulty: number;
   category: string;
+  prereqs: string[];
+  nextTricks: string[];
   description: string;
   descriptionEs: string;
   howTo: string;
@@ -41,6 +51,24 @@ function readRequiredString(record: Record<string, unknown>, key: string, index:
     throw new Error(`El truco en la posicion ${index} no tiene un ${key} valido.`);
   }
   return value.trim();
+}
+
+function readStringArray(record: Record<string, unknown>, key: string, index: number): string[] {
+  const value = record[key];
+  if (value === undefined) {
+    return [];
+  }
+  if (!Array.isArray(value)) {
+    throw new Error(`El truco en la posicion ${index} tiene un ${key} que no es un arreglo.`);
+  }
+  return value.map((item, itemIndex) => {
+    if (typeof item !== 'string' || item.trim() === '') {
+      throw new Error(
+        `El truco en la posicion ${index} tiene un ${key} invalido en la posicion ${itemIndex}.`,
+      );
+    }
+    return item.trim();
+  });
 }
 
 function parseTricks(raw: unknown): ManualTrickSeed[] {
@@ -70,6 +98,8 @@ function parseTricks(raw: unknown): ManualTrickSeed[] {
       section,
       difficulty,
       category: readRequiredString(entry, 'category', index),
+      prereqs: readStringArray(entry, 'prereqs', index),
+      nextTricks: readStringArray(entry, 'nextTricks', index),
       description: readRequiredString(entry, 'description', index),
       descriptionEs: readRequiredString(entry, 'descriptionEs', index),
       howTo: readRequiredString(entry, 'howTo', index),
@@ -157,6 +187,80 @@ async function main(): Promise<void> {
     return { trickId: trick.id, categoryId };
   });
   await db.insert(trickCategories).values(links).onConflictDoNothing();
+
+  // Relaciones: los nombres del JSON se resuelven contra TODO el catalogo (no solo los
+  // trucos manuales) con el mismo patron de normalizacion que usa la semilla de
+  // TrickingAPI. Primero se intenta una coincidencia exacta y solo despues la busqueda
+  // por subcadena, para no confundir "Backward Roll" con "Backward Shoulder Roll".
+  const allTricks = await db.select({ id: tricks.id, name: tricks.name }).from(tricks);
+  const seedIds = new Set(seedTricks.map((trick) => trick.id));
+  const nameToId = new Map<string, string>();
+
+  for (const row of allTricks) {
+    const key = normalizeKey(row.name);
+    if (key === '') {
+      continue;
+    }
+    const existing = nameToId.get(key);
+    // Ante nombres duplicados en el catalogo, se prefiere el id que pertenece a esta semilla.
+    if (existing === undefined || (!seedIds.has(existing) && seedIds.has(row.id))) {
+      nameToId.set(key, row.id);
+    }
+  }
+
+  const namesByLength = [...nameToId.keys()].sort((a, b) => b.length - a.length);
+  const resolveTrick = (value: string): string | null => {
+    const exact = nameToId.get(normalizeKey(value));
+    if (exact !== undefined) {
+      return exact;
+    }
+    return findTrickInText(value, nameToId, namesByLength);
+  };
+
+  const relationRows = new Map<string, NewTrickRelation>();
+  const unresolved: string[] = [];
+
+  for (const trick of seedTricks) {
+    const groups: { names: string[]; kind: 'prereq' | 'next' }[] = [
+      { names: trick.prereqs, kind: 'prereq' },
+      { names: trick.nextTricks, kind: 'next' },
+    ];
+    for (const group of groups) {
+      for (const name of group.names) {
+        const relatedId = resolveTrick(name);
+        if (relatedId === null) {
+          unresolved.push(`${trick.id} -> ${name} (${group.kind})`);
+          continue;
+        }
+        if (relatedId === trick.id) {
+          unresolved.push(`${trick.id} -> ${name} (${group.kind}, apunta a si mismo)`);
+          continue;
+        }
+        relationRows.set(`${trick.id}|${relatedId}|${group.kind}`, {
+          trickId: trick.id,
+          relatedId,
+          kind: group.kind,
+        });
+      }
+    }
+  }
+
+  if (relationRows.size > 0) {
+    await db
+      .insert(trickRelations)
+      .values([...relationRows.values()])
+      .onConflictDoNothing();
+  }
+
+  const relationCount = [...relationRows.values()].filter((row) => row.kind === 'prereq').length;
+  console.log(
+    `Relaciones manuales aplicadas: ${relationRows.size} filas (${relationCount} prereq, ${
+      relationRows.size - relationCount
+    } next).`,
+  );
+  if (unresolved.length > 0) {
+    console.log(`Referencias sin resolver (${unresolved.length}): ${unresolved.join(', ')}`);
+  }
 
   console.log(
     `Trucos manuales aplicados: ${seedTricks.length} trucos, ${categorySlugs.length} categorias, ${links.length} enlaces truco-categoria.`,

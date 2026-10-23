@@ -17,10 +17,19 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'invalid_query', traceId }, { status: 400 });
     }
 
-    const { section, category, difficulty, q, sort, page, pageSize } = parsed.data;
-    const result = await listTricks({ section, category, difficulty, q, sort, page, pageSize });
+    const { section, subcategory, category, difficulty, q, sort, page, pageSize } = parsed.data;
+    const result = await listTricks({
+      section,
+      subcategory,
+      category,
+      difficulty,
+      q,
+      sort,
+      page,
+      pageSize,
+    });
 
-    logger.info({ traceId, section, total: result.total, page }, 'listado de trucos');
+    logger.info({ traceId, section, subcategory, total: result.total, page }, 'listado de trucos');
 
     return NextResponse.json({ ...result, traceId });
   } catch (error) {

@@ -13,6 +13,7 @@ export const trickListItemSchema = z.object({
   descriptionEs: z.string().nullable(),
   difficulty: z.number().nullable(),
   section: z.string().nullable(),
+  subcategory: z.string().nullable(),
   loopkicksSlug: z.string().nullable(),
   categories: z.array(z.string()),
 });

@@ -36,6 +36,7 @@ export const MAX_TRICKS_BY_IDS = 600;
 
 export interface ListTricksParams {
   section?: TrickSection;
+  subcategory?: string;
   category?: string;
   difficulty?: number;
   q?: string;
@@ -51,6 +52,7 @@ export interface TrickListItem {
   descriptionEs: string | null;
   difficulty: number | null;
   section: string | null;
+  subcategory: string | null;
   loopkicksSlug: string | null;
   categories: string[];
 }
@@ -149,6 +151,9 @@ export async function listTricks(params: ListTricksParams): Promise<PaginatedTri
   if (params.section !== undefined) {
     conditions.push(eq(tricks.section, params.section));
   }
+  if (params.subcategory !== undefined) {
+    conditions.push(eq(tricks.subcategory, params.subcategory));
+  }
   if (params.difficulty !== undefined) {
     conditions.push(eq(tricks.difficulty, params.difficulty));
   }
@@ -185,6 +190,7 @@ export async function listTricks(params: ListTricksParams): Promise<PaginatedTri
       descriptionEs: tricks.descriptionEs,
       difficulty: tricks.difficulty,
       section: tricks.section,
+      subcategory: tricks.subcategory,
       loopkicksSlug: tricks.loopkicksSlug,
     })
     .from(tricks)
@@ -248,6 +254,7 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
       howToDataEs: tricks.howToDataEs,
       difficulty: tricks.difficulty,
       section: tricks.section,
+      subcategory: tricks.subcategory,
       loopkicksSlug: tricks.loopkicksSlug,
       loopkicksNotes: tricks.loopkicksNotes,
       loopkicksNotesEs: tricks.loopkicksNotesEs,
@@ -324,6 +331,7 @@ export async function getTrickById(id: string): Promise<TrickDetail | null> {
     howToDataEs: trick.howToDataEs,
     difficulty: trick.difficulty,
     section: trick.section,
+    subcategory: trick.subcategory,
     loopkicksSlug: trick.loopkicksSlug,
     loopkicksNotes: trick.loopkicksNotes,
     loopkicksNotesEs: trick.loopkicksNotesEs,

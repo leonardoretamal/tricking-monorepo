@@ -1,0 +1,90 @@
+[
+  {
+    "trickId": "shoulderRoll",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=m-rIsUMjq5U",
+    "embedUrl": "https://www.youtube.com/embed/m-rIsUMjq5U",
+    "author": "Origins Parkour",
+    "title": "Ultimate Parkour Roll Tutorial (Learn how to roll on hard ground!)",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "backwardShoulderRoll",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=cxG9CGLhoPY",
+    "embedUrl": "https://www.youtube.com/embed/cxG9CGLhoPY",
+    "author": "Move With Mendoza",
+    "title": "Back Shoulder Roll Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "coindrop",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=Kxe-rqJpWLk",
+    "embedUrl": "https://www.youtube.com/embed/Kxe-rqJpWLk",
+    "author": "Johzuke",
+    "title": "Coindrop Tutorial (Tricking)",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "turtle",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=hBdeCxhHv1c",
+    "embedUrl": "https://www.youtube.com/embed/hBdeCxhHv1c",
+    "author": "Vitality",
+    "title": "How To TURTLE FREEZE | Beginner Breakdance Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "crabWalk",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=CPhP6Fgg8_U",
+    "embedUrl": "https://www.youtube.com/embed/CPhP6Fgg8_U",
+    "author": "VincaniTV",
+    "title": "How To Crab Walk | Intermediate Breaking Tutorial | Baby Steps For Beginners",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "backExtensionRoll",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=a1mVzDjll1w",
+    "embedUrl": "https://www.youtube.com/embed/a1mVzDjll1w",
+    "author": "holtstumblingclinic",
+    "title": "Straight-Armed Back Extension Roll Tutorial: BEST Exercises and Drills",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "bridge",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=KR9HZBIY_gk",
+    "embedUrl": "https://www.youtube.com/embed/KR9HZBIY_gk",
+    "author": "NeoMotion Academy",
+    "title": "How to do a Bridge - Learn Tricking",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "16:9"
+  },
+  {
+    "trickId": "donkeyKick",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/watch?v=yZYWBaPPxiA",
+    "embedUrl": "https://www.youtube.com/embed/yZYWBaPPxiA",
+    "author": "Kaio",
+    "title": "How to Break Dance DONKEY - Easy Tutorial",
+    "language": "en",
+    "kind": "iframe",
+    "aspect": "9:16"
+  }
+]

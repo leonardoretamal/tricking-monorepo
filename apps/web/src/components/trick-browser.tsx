@@ -11,25 +11,29 @@ import {
 } from '@tricking/ui';
 import { ChevronLeft, ChevronRight, Search, SlidersHorizontal, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { useEffect, useRef, useState, type RefObject } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { TrickCard } from '@/components/trick-card';
+import { TrickSubcategoryFilter } from '@/components/trick-subcategory-filter';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { pickDescription } from '@/lib/description';
+import { columnsForWidth, shouldVirtualize } from '@/lib/trick-grid';
 import { fetchTricks } from '@/lib/trick-api';
 import type { TrickListItem } from '@/lib/trick-schemas';
 import { DEFAULT_SECTION, SECTIONS, type Section } from '@/lib/sections';
+import { useTricksViewState } from '@/lib/use-tricks-view-state';
 
 const PAGE_SIZES = [24, 48, 100];
 const DEFAULT_PAGE_SIZE = 24;
-const VIRTUALIZE_THRESHOLD = 60;
 // Altura estimada de la tarjeta rediseñada mas el pie del control de progreso (Fase 21).
-// Se usa para las filas del listado virtualizado; si queda corta, las tarjetas se solapan.
+// Solo se usa en la rama virtualizada (salvaguarda para conteos mucho mayores a 200).
+// Si queda corta, las tarjetas se solapan.
 const CARD_ESTIMATE_SIZE = 250;
 
 export interface TrickFilters {
   q?: string;
   section?: Section;
+  sub?: string;
   difficulty?: number;
   sort: string;
   page: number;
@@ -41,37 +45,24 @@ interface TrickBrowserProps {
   initial: TrickFilters;
 }
 
-function useGridColumns(ref: RefObject<HTMLDivElement | null>): number {
-  const [columns, setColumns] = useState(1);
-
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) {
-      return;
-    }
-    const update = () => {
-      const width = element.clientWidth;
-      setColumns(width >= 1024 ? 3 : width >= 640 ? 2 : 1);
-    };
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, [ref]);
-
-  return columns;
-}
-
 export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   const t = useTranslations('tricks');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [qInput, setQInput] = useState(initial.q ?? '');
+  const qInputDirtyRef = useRef(false);
+
+  // Al volver del detalle, la busqueda restaurada llega por la URL y actualiza initial.q.
+  // Sin esto el input se quedaria con el valor del primer render.
+  useEffect(() => {
+    setQInput(initial.q ?? '');
+  }, [initial.q]);
 
   const filters: TrickFilters = {
     q: initial.q,
     section: initial.section ?? section,
+    sub: initial.sub,
     difficulty: initial.difficulty,
     sort: initial.sort,
     page: initial.page,
@@ -88,6 +79,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     const params = new URLSearchParams();
     if (next.q) params.set('q', next.q);
     if (next.section) params.set('section', next.section);
+    if (next.sub) params.set('sub', next.sub);
     if (next.difficulty !== undefined) params.set('difficulty', String(next.difficulty));
     if (next.sort && next.sort !== 'name-asc') params.set('sort', next.sort);
     if (next.page > 1) params.set('page', String(next.page));
@@ -100,6 +92,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     setQInput('');
     applyFilter({
       q: undefined,
+      sub: undefined,
       difficulty: undefined,
       sort: 'name-asc',
       pageSize: DEFAULT_PAGE_SIZE,
@@ -110,6 +103,9 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   };
 
   useEffect(() => {
+    if (!qInputDirtyRef.current) {
+      return;
+    }
     const handle = setTimeout(() => {
       const current = initial.q ?? '';
       if (current !== qInput) {
@@ -121,27 +117,68 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
   }, [qInput, initial.q]);
 
   const query = useQuery({
-    queryKey: ['tricks', activeSection ?? 'all', filters],
-    queryFn: ({ signal }) => fetchTricks(filters, signal),
+    queryKey: ['tricks', activeSection ?? 'all', filters.sub ?? 'all', filters],
+    // La URL usa `sub`, pero la API recibe el nombre completo `subcategory`.
+    queryFn: ({ signal }) =>
+      fetchTricks(
+        {
+          section: filters.section,
+          subcategory: filters.sub,
+          q: filters.q,
+          difficulty: filters.difficulty,
+          sort: filters.sort,
+          page: filters.page,
+          pageSize: filters.pageSize,
+        },
+        signal,
+      ),
     placeholderData: keepPreviousData,
   });
 
-  const gridRef = useRef<HTMLDivElement>(null);
-  const columns = useGridColumns(gridRef);
   const data = query.data;
   const items = data?.items ?? [];
-  const shouldVirtualize = items.length > VIRTUALIZE_THRESHOLD;
+  const virtualizeItems = shouldVirtualize(items.length);
+
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [columns, setColumns] = useState(1);
+
+  // El contenedor de la grilla se monta recien cuando llegan los datos. Por eso el
+  // efecto depende de items.length y de virtualizeItems: medir solo al montar dejaba
+  // columns en 1 y la rama virtualizada pintaba las tarjetas a todo el ancho.
+  useEffect(() => {
+    if (!virtualizeItems || items.length === 0) {
+      return;
+    }
+    const element = gridRef.current;
+    if (!element) {
+      return;
+    }
+    const update = () => setColumns(columnsForWidth(element.clientWidth));
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [items.length, virtualizeItems]);
 
   const virtualizer = useVirtualizer({
-    count: shouldVirtualize ? items.length : 0,
+    count: virtualizeItems ? items.length : 0,
     getScrollElement: () => gridRef.current,
     estimateSize: () => CARD_ESTIMATE_SIZE,
     lanes: columns,
     overscan: 4,
   });
 
+  useTricksViewState({
+    pathname,
+    filters,
+    applyFilter,
+    queryReady: Boolean(data) && !query.isFetching,
+    scrollElement: gridRef,
+  });
+
   const hasActiveFilters =
     Boolean(filters.q) ||
+    Boolean(filters.sub) ||
     initial.section !== undefined ||
     filters.difficulty !== undefined ||
     filters.sort !== 'name-asc';
@@ -200,7 +237,10 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
               <input
                 type="search"
                 value={qInput}
-                onChange={(event) => setQInput(event.target.value)}
+                onChange={(event) => {
+                  qInputDirtyRef.current = true;
+                  setQInput(event.target.value);
+                }}
                 placeholder={t('filters.searchPlaceholder')}
                 className="input input-bordered w-full bg-base-100 pl-9 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               />
@@ -217,6 +257,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
                   applyFilter({
                     section:
                       event.target.value === '' ? undefined : (event.target.value as Section),
+                    sub: undefined,
                   })
                 }
               >
@@ -228,6 +269,14 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
                 ))}
               </select>
             </label>
+          ) : null}
+
+          {activeSection !== undefined ? (
+            <TrickSubcategoryFilter
+              section={activeSection}
+              value={filters.sub}
+              onChange={(sub) => applyFilter({ sub })}
+            />
           ) : null}
 
           <label className="flex flex-col gap-1.5 text-sm font-medium text-base-content/80">
@@ -322,7 +371,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
       ) : null}
 
       {data && items.length > 0 ? (
-        shouldVirtualize ? (
+        virtualizeItems ? (
           <div ref={gridRef} className="relative h-[70vh] overflow-auto">
             <div style={{ height: virtualizer.getTotalSize(), position: 'relative' }}>
               {virtualizer.getVirtualItems().map((virtualItem) => {
