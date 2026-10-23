@@ -6,7 +6,7 @@ Este documento esta referenciado desde `AGENTS.md`. Cada linea es `- <id> | <nom
 
 Proceso aplicado: consulta exacta `<nombre> tricking tutorial`, primero en espanol y luego en ingles, con variantes por sitio; metadata validada con oEmbed del proveedor, sin API keys. Criterio conservador: solo canales oficiales o reconocidos, que ensenen el truco y sin menores visibles; ante duda, el truco queda aca.
 
-Total de trucos sin tutorial aprobado: 419. Los aprobados viven en `packages/db/src/seed/tutorial-sources/*.json` (151 cubiertos en total).
+Total de trucos sin tutorial aprobado: 419. Los aprobados viven en `packages/db/src/seed/tutorial-sources/*.json` (159 cubiertos en total).
 
 ## Pendientes
 
@@ -21,7 +21,6 @@ Total de trucos sin tutorial aprobado: 419. Los aprobados viven en `packages/db/
 - backInRocketboiOut | Back-In Rocketboi-Out | backward | `back-in rocketboi-out tricking tutorial` | Truco de nicho; sin resultados de ensenanza.
 - backInSquirrelOut | Back-In Squirrel-Out | backward | Back-In Squirrel-Out tricking tutorial | Sin tutorial dedicado; solo Back Tuck base y fichas de enciclopedia
 - boxcutterTurbo | Boxcutter Turbo | backward | `boxcutter turbo tricking tutorial` | hay tutoriales de boxcutter y cork hyperhook, ninguno de la variante turbo
-- bridge | Bridge | backward | `bridge tricking tutorial`, `bridge pose tricking tutorial` | Solo tutorial de gimnasia (GymnasticsHQ); canal no de tricking y riesgo de menores en contenido de gimnasia, descartado por precaucion.
 - brokenFull | Broken Full | backward | Broken Full tricking tutorial | Sin tutorial dedicado; solo fichas de enciclopedia y resultado ajeno (Broken Soul Full)
 - corkscrewCrowdAwakenerHyper | Corkscrew Crowd Awakener Hyper | backward | `Corkscrew Crowd Awakener Hyper tricking tutorial espanol`, `Corkscrew Crowd Awakener Hyper tricking tutorial` | Existe tutorial de Crowd Awakener Cork y de Hypercork, pero no de la variante con hyperhook.
 - corkscrewCrowdAwakenerKnife | Corkscrew Crowd Awakener Knife | backward | `corkscrew crowd awakener knife tricking tutorial` | hay "Cork Crowd Awakener" (Johzuke), sin la variante knife
@@ -208,6 +207,7 @@ Total de trucos sin tutorial aprobado: 419. Los aprobados viven en `packages/db/
 - xOutFull | X-Out Full | backward | `X-Out Full tricking tutorial espanol`, `X-Out Full tricking tutorial` | No hay tutorial del x-out full; solo de x-out backflip y de full por separado.
 - xOutInBackOut | X-Out-In Back-Out | backward | `x out in back out tricking tutorial` | hay x-out backflip (Johzuke, VincaniTV), sin el in-back-out
 - frontAxe | Front Axe | forward | Front Axe tricking tutorial | sin tutorial dedicado; aparece Webster Axe Kick, no el frontflip con axe
+- frontExtensionRoll | Front Extension Roll | forward | `Front Extension Roll tricking tutorial` | Sin tutorial dedicado del truco exacto; los resultados son de back extension roll, forward roll o handstand forward roll, que son otras habilidades.
 - frontPike | Front Pike | forward | `front pike tricking tutorial` | Solo tutoriales de clavados/gimnasia, no de tricking.
 - frontXOut | Front X-Out | forward | Front X-Out tricking tutorial | sin tutorial dedicado; solo X-Out de backflip
 - handcuff360DiveRoll | Handcuff 360 Dive Roll | forward | `Handcuff 360 Dive Roll tricking tutorial espanol`, `Handcuff 360 Dive Roll tricking tutorial` | Hay tutoriales de 360 dive roll, pero ninguno en la posición handcuff.
@@ -216,6 +216,7 @@ Total de trucos sin tutorial aprobado: 419. Los aprobados viven en `packages/db/
 - janitorTwist | Janitor Twist | forward | `janitor twist tricking tutorial espanol` / `... tutorial` | Sin tutorial dedicado conocido.
 - rodeoJanitorTwist | Rodeo Janitor Twist | forward | `Rodeo Janitor Twist tricking tutorial espanol`, `Rodeo Janitor Twist tricking tutorial` | Solo tutorials de rodeo cork o de btwist; sin el janitor twist con agarre rodeo.
 - supermanFront | Superman Front | forward | `superman front tricking tutorial` | Solo ejercicios y contenido de Superman; sin tutorial del truco.
+- swanDive | Swan Dive | forward | `Swan Dive tricking tutorial` | Sin tutorial de piso del truco en un canal reconocido; las busquedas devuelven trampwall, saltos de piscina o gimnasia infantil, descartada por riesgo de menores.
 - websterHalf | Webster Half | forward | Webster Half tricking tutorial | sin tutorial dedicado; hay Webster y Loser base
 - websterHyperhook | Webster Hyperhook | forward | `Webster Hyperhook tricking tutorial espanol`, `Webster Hyperhook tricking tutorial` | Tutoriales de webster base y de full hyperhook; ninguno del webster hyperhook.
 - websterXOut | Webster X-Out | forward | `webster x out tricking tutorial` | hay webster (teamFarang, Alex Destreza, Johzuke), sin la variante x-out
@@ -402,7 +403,6 @@ Total de trucos sin tutorial aprobado: 419. Los aprobados viven en `packages/db/
 - cheat900Rodeo | Cheat 900 Rodeo | vertical-kicks | Cheat 900 Rodeo tricking tutorial | Solo tutoriales del Cheat 900 base, no de la variante Rodeo
 - cheat900Sidekick | Cheat 900 Sidekick | vertical-kicks | `cheat 900 sidekick tricking tutorial espanol` / `... tutorial` | Hay cheat 900 simple, no la version sidekick dedicada.
 - crowdAwakenerKnife | Crowd Awakener Knife | vertical-kicks | `crowd awakener knife tricking tutorial` | Solo crowd awakener base; sin la variante knife.
-- donkeyKick | Donkey Kick | vertical-kicks | Donkey Kick tricking tutorial | Solo resultados de fitness (no tricking); sin tutorial del truco de tricking
 - jackknife1080 | Jackknife 1080 | vertical-kicks | `jackknife 1080 tricking tutorial` | hay jackknife base, sin el 1080
 - jackknifeShuriken | Jackknife Shuriken | vertical-kicks | `jackknife shuriken tricking tutorial` | Solo jackknife base (el tutorial de Johzuke cubre jackknife y feilong knife, no shuriken).
 - jackknifeTurbo | Jackknife Turbo | vertical-kicks | Jackknife Turbo tricking tutorial | Solo tutoriales del Jackknife base, no de la variante Turbo
