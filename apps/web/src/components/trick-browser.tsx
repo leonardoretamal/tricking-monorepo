@@ -11,20 +11,21 @@ import {
 } from '@tricking/ui';
 import { ChevronLeft, ChevronRight, Search, SlidersHorizontal, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { useEffect, useRef, useState, type RefObject } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { TrickCard } from '@/components/trick-card';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { pickDescription } from '@/lib/description';
+import { columnsForWidth, shouldVirtualize } from '@/lib/trick-grid';
 import { fetchTricks } from '@/lib/trick-api';
 import type { TrickListItem } from '@/lib/trick-schemas';
 import { DEFAULT_SECTION, SECTIONS, type Section } from '@/lib/sections';
 
 const PAGE_SIZES = [24, 48, 100];
 const DEFAULT_PAGE_SIZE = 24;
-const VIRTUALIZE_THRESHOLD = 60;
 // Altura estimada de la tarjeta rediseñada mas el pie del control de progreso (Fase 21).
-// Se usa para las filas del listado virtualizado; si queda corta, las tarjetas se solapan.
+// Solo se usa en la rama virtualizada (salvaguarda para conteos mucho mayores a 200).
+// Si queda corta, las tarjetas se solapan.
 const CARD_ESTIMATE_SIZE = 250;
 
 export interface TrickFilters {
@@ -39,27 +40,6 @@ export interface TrickFilters {
 interface TrickBrowserProps {
   section?: Section;
   initial: TrickFilters;
-}
-
-function useGridColumns(ref: RefObject<HTMLDivElement | null>): number {
-  const [columns, setColumns] = useState(1);
-
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) {
-      return;
-    }
-    const update = () => {
-      const width = element.clientWidth;
-      setColumns(width >= 1024 ? 3 : width >= 640 ? 2 : 1);
-    };
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, [ref]);
-
-  return columns;
 }
 
 export function TrickBrowser({ section, initial }: TrickBrowserProps) {
@@ -126,14 +106,33 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
     placeholderData: keepPreviousData,
   });
 
-  const gridRef = useRef<HTMLDivElement>(null);
-  const columns = useGridColumns(gridRef);
   const data = query.data;
   const items = data?.items ?? [];
-  const shouldVirtualize = items.length > VIRTUALIZE_THRESHOLD;
+  const virtualizeItems = shouldVirtualize(items.length);
+
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [columns, setColumns] = useState(1);
+
+  // El contenedor de la grilla se monta recien cuando llegan los datos. Por eso el
+  // efecto depende de items.length y de virtualizeItems: medir solo al montar dejaba
+  // columns en 1 y la rama virtualizada pintaba las tarjetas a todo el ancho.
+  useEffect(() => {
+    if (!virtualizeItems || items.length === 0) {
+      return;
+    }
+    const element = gridRef.current;
+    if (!element) {
+      return;
+    }
+    const update = () => setColumns(columnsForWidth(element.clientWidth));
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [items.length, virtualizeItems]);
 
   const virtualizer = useVirtualizer({
-    count: shouldVirtualize ? items.length : 0,
+    count: virtualizeItems ? items.length : 0,
     getScrollElement: () => gridRef.current,
     estimateSize: () => CARD_ESTIMATE_SIZE,
     lanes: columns,
@@ -322,7 +321,7 @@ export function TrickBrowser({ section, initial }: TrickBrowserProps) {
       ) : null}
 
       {data && items.length > 0 ? (
-        shouldVirtualize ? (
+        virtualizeItems ? (
           <div ref={gridRef} className="relative h-[70vh] overflow-auto">
             <div style={{ height: virtualizer.getTotalSize(), position: 'relative' }}>
               {virtualizer.getVirtualItems().map((virtualItem) => {
